@@ -1,5 +1,7 @@
 Governance Action
+
 Action ID: gov_action1t87n2vjnavthuggyarerafxx8c7n9mu4c7r96qlfp5uggsjdc8dsqymg588
+
 Title: Cardanoの生きがい - Ikigai -
 
 Voting Decision
