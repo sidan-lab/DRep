@@ -9,6 +9,7 @@
 |Vote|⏹️Abstain|
 |Vote Power|289K ADA|
 |Rational|SIDAN Lab is voting to abstain from the info action Should K Increases as this governance action records information on-chain without producing any direct on-chain effects.
+|Link|https://adastat.net/transactions/af7b6a7b73c7374546524d792ae89a48bf55406c3c97c71d86dbb09e7a7409e9
 
 Remark:
 
