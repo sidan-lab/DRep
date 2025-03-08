@@ -1,0 +1,55 @@
+{
+  "@context": {
+    "CIP100": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0100/README.md#",
+    "hashAlgorithm": "CIP100:hashAlgorithm",
+    "body": {
+      "@id": "CIP100:body",
+      "@context": {
+        "references": {
+          "@id": "CIP100:references",
+          "@container": "@set",
+          "@context": {
+            "GovernanceMetadata": "CIP100:GovernanceMetadataReference",
+            "Other": "CIP100:OtherReference",
+            "label": "CIP100:reference-label",
+            "uri": "CIP100:reference-uri",
+            "referenceHash": {
+              "@id": "CIP100:referenceHash",
+              "@context": {
+                "hashDigest": "CIP100:hashDigest",
+                "hashAlgorithm": "CIP100:hashAlgorithm"
+              }
+            }
+          }
+        },
+        "comment": "CIP100:comment",
+        "externalUpdates": {
+          "@id": "CIP100:externalUpdates",
+          "@context": {
+            "title": "CIP100:update-title",
+            "uri": "CIP100:uri"
+          }
+        }
+      }
+    },
+    "authors": {
+      "@id": "CIP100:authors",
+      "@container": "@set",
+      "@context": {
+        "name": "http://xmlns.com/foaf/0.1/name",
+        "witness": {
+          "@id": "CIP100:witness",
+          "@context": {
+            "witnessAlgorithm": "CIP100:witnessAlgorithm",
+            "publicKey": "CIP100:publicKey",
+            "signature": "CIP100:signature"
+          }
+        }
+      }
+    }
+  },
+  "body": {
+    "comment": "SIDAN Lab is voting YES on governance action Decrease Treasury Tax from 20% to 10%. Below are the key reasons supporting this decision:\n\nOptimizing Treasury Management & Budget Efficiency\n\nThe Cardano treasury has accumulated significant funds, yet there is no proven track record of effective fund utilization. Without a clear, efficient use of treasury funds, continuing to accumulate excessive reserves is unnecessary.\nTaxation should be set at the minimum level necessary to sustain the network while ensuring proper allocation of resources.\n\nEnhancing Staking Incentives & Network Security\n\nIncreasing staking rewards encourages more ADA holders to participate in staking, reinforcing network decentralization and security.\nA higher return on staking could attract new users to Cardano, strengthening overall ecosystem growth.\nThis change promotes a sustainable and decentralized governance model, ensuring that resources are distributed efficiently rather than centralized in the treasury.\n\nBy reducing the treasury cut to 10%, we strike a better balance between staking incentives and treasury sustainability."
+  },
+  "hashAlgorithm": "blake2b-256"
+}
