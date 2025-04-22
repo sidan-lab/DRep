@@ -1,0 +1,56 @@
+{
+  "@context": {
+    "CIP100": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0100/README.md#",
+    "hashAlgorithm": "CIP100:hashAlgorithm",
+    "body": {
+      "@id": "CIP100:body",
+      "@context": {
+        "references": {
+          "@id": "CIP100:references",
+          "@container": "@set",
+          "@context": {
+            "GovernanceMetadata": "CIP100:GovernanceMetadataReference",
+            "Other": "CIP100:OtherReference",
+            "label": "CIP100:reference-label",
+            "uri": "CIP100:reference-uri",
+            "referenceHash": {
+              "@id": "CIP100:referenceHash",
+              "@context": {
+                "hashDigest": "CIP100:hashDigest",
+                "hashAlgorithm": "CIP100:hashAlgorithm"
+              }
+            }
+          }
+        },
+        "comment": "CIP100:comment",
+        "externalUpdates": {
+          "@id": "CIP100:externalUpdates",
+          "@context": {
+            "title": "CIP100:update-title",
+            "uri": "CIP100:uri"
+          }
+        }
+      }
+    },
+    "authors": {
+      "@id": "CIP100:authors",
+      "@container": "@set",
+      "@context": {
+        "name": "http://xmlns.com/foaf/0.1/name",
+        "witness": {
+          "@id": "CIP100:witness",
+          "@context": {
+            "witnessAlgorithm": "CIP100:witnessAlgorithm",
+            "publicKey": "CIP100:publicKey",
+            "signature": "CIP100:signature"
+          }
+        }
+      }
+    }
+  },
+  "authors": [],
+  "body": {
+    "comment": "SIDAN Lab has chosen to abstain from voting on the 350M ADA Net Change Limit (NCL) proposal for 2025.\nWe recognize and agree with many of the key arguments in favor of this proposal:\n- Sell pressure concerns are likely overstated, as treasury disbursement and proposal execution occur in phases over time.\n- Setting an NCL is essential to unlock treasury funding and enable proposal review and budgeting under the new governance model.. A delayed NCL or failed vote could cause a 60-day funding freeze, stalling community innovation and disproportionately benefiting large entities with early proposal traction.\nAt the same time, we share several concerns raised by those who voted NO:\n- We believe more governance infrastructure is needed—including clearer treasury oversight, tracking, and community visibility—before approving higher NCLs.\nA Yes vote could be seen as endorsing the current treasury governance structure without addressing its known shortcomings.\nA No vote could unintentionally delay needed funding, harming the same community builders we aim to support.\nGiven the above, SIDAN Lab is abstaining as a signal that:\n- We value progress and funding continuity, but also expect clearer NCL modeling and stronger oversight mechanisms in future treasury actions.\n- We will continue participating actively in treasury governance discussions, and support community-led initiatives to improve transparency, accountability, and access to funding."
+  },
+  "hashAlgorithm": "blake2b-256"
+}
