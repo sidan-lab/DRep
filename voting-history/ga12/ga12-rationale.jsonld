@@ -1,0 +1,56 @@
+{
+  "@context": {
+    "CIP100": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0100/README.md#",
+    "hashAlgorithm": "CIP100:hashAlgorithm",
+    "body": {
+      "@id": "CIP100:body",
+      "@context": {
+        "references": {
+          "@id": "CIP100:references",
+          "@container": "@set",
+          "@context": {
+            "GovernanceMetadata": "CIP100:GovernanceMetadataReference",
+            "Other": "CIP100:OtherReference",
+            "label": "CIP100:reference-label",
+            "uri": "CIP100:reference-uri",
+            "referenceHash": {
+              "@id": "CIP100:referenceHash",
+              "@context": {
+                "hashDigest": "CIP100:hashDigest",
+                "hashAlgorithm": "CIP100:hashAlgorithm"
+              }
+            }
+          }
+        },
+        "comment": "CIP100:comment",
+        "externalUpdates": {
+          "@id": "CIP100:externalUpdates",
+          "@context": {
+            "title": "CIP100:update-title",
+            "uri": "CIP100:uri"
+          }
+        }
+      }
+    },
+    "authors": {
+      "@id": "CIP100:authors",
+      "@container": "@set",
+      "@context": {
+        "name": "http://xmlns.com/foaf/0.1/name",
+        "witness": {
+          "@id": "CIP100:witness",
+          "@context": {
+            "witnessAlgorithm": "CIP100:witnessAlgorithm",
+            "publicKey": "CIP100:publicKey",
+            "signature": "CIP100:signature"
+          }
+        }
+      }
+    }
+  },
+  "authors": [],
+  "body": {
+    "comment": "SIDAN Lab is voting YES on this proposal to set the 2025 Net Change Limit at 200M ADA.\nThis decision reflects our belief that fiscal responsibility, clear prioritization, and trust-building are critical in this early phase of Cardano’s on-chain governance.\nWhy we support this proposal:\n- Capping spending at 200M ADA remains within that safe range, ensuring we do not draw down reserves prematurely.\n- The NCL is not a mandatory budget — it’s a maximum cap, and does not prevent the funding of high-quality proposals. It simply creates a ceiling that encourages discipline and focus.\n- Governance is still stabilizing. At this stage, we believe it's better to proceed cautiously and prove the treasury model works with smaller, more transparent allocations.\n- Without a cap, or with a higher cap, the treasury could be used inefficiently. A 200M limit forces the community to ask: What is essential? What delivers real value?\n- If more funding is genuinely needed later, the NCL can be adjusted through a future governance action. We see this as a checkpoint, not a final lock.\nWe understand this limit may not satisfy all funding ambitions for 2025. However, we believe it will strengthen confidence in the governance process, reduce potential ADA market impact, and provide a more structured budgeting environment for proposals moving forward.\nSIDAN Lab supports strategic investment in Cardano’s growth — but only when paired with clear, predictable, and measured spending limits. For that reason, we vote YES on this NCL proposal."
+  },
+  "hashAlgorithm": "blake2b-256"
+}
