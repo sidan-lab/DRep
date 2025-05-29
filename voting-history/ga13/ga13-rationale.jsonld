@@ -1,0 +1,56 @@
+{
+  "@context": {
+    "CIP100": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0100/README.md#",
+    "hashAlgorithm": "CIP100:hashAlgorithm",
+    "body": {
+      "@id": "CIP100:body",
+      "@context": {
+        "references": {
+          "@id": "CIP100:references",
+          "@container": "@set",
+          "@context": {
+            "GovernanceMetadata": "CIP100:GovernanceMetadataReference",
+            "Other": "CIP100:OtherReference",
+            "label": "CIP100:reference-label",
+            "uri": "CIP100:reference-uri",
+            "referenceHash": {
+              "@id": "CIP100:referenceHash",
+              "@context": {
+                "hashDigest": "CIP100:hashDigest",
+                "hashAlgorithm": "CIP100:hashAlgorithm"
+              }
+            }
+          }
+        },
+        "comment": "CIP100:comment",
+        "externalUpdates": {
+          "@id": "CIP100:externalUpdates",
+          "@context": {
+            "title": "CIP100:update-title",
+            "uri": "CIP100:uri"
+          }
+        }
+      }
+    },
+    "authors": {
+      "@id": "CIP100:authors",
+      "@container": "@set",
+      "@context": {
+        "name": "http://xmlns.com/foaf/0.1/name",
+        "witness": {
+          "@id": "CIP100:witness",
+          "@context": {
+            "witnessAlgorithm": "CIP100:witnessAlgorithm",
+            "publicKey": "CIP100:publicKey",
+            "signature": "CIP100:signature"
+          }
+        }
+      }
+    }
+  },
+  "authors": [],
+  "body": {
+    "comment": "**SIDAN Lab votes YES on the “Amaru Node Development 2025” governance action.**\n\nWe support this proposal as it directly addresses a long-standing risk in the ecosystem — reliance on a single node implementation — by funding the development of a modular, high-performance alternative written in Rust.\n\nWe believe a second, independently maintained node:\n\n- Strengthens the **resilience** and **fault tolerance** of the network\n- Expands **developer accessibility** through modern tooling and better observability\n- Reduces hardware costs for **SPOs**, improving participation at the edge\n- Enables **platform interoperability** with WebAssembly\n- Empower Cardano core infrastructure to access to wider talent pool with alternative implementation of a more modern programming language\n\nWe also appreciate the proposal’s financial transparency:\n\n- Clearly scoped per team member and responsibility\n- Budget guarded by a smart contract with refund logic\n- Quarterly public reporting and demo cadence already in practice\n\nSIDAN Lab is also interested in the possibility of expanding works into alternative Hydra node, where our team can participate in maintenance and collaboration in the future.\n\nFor these reasons, SIDAN Lab votes YES."
+  },
+  "hashAlgorithm": "blake2b-256"
+}
