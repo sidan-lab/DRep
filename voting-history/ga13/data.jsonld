@@ -50,7 +50,7 @@
   },
   "authors": [],
   "body": {
-    "comment": "We support this proposal as it directly addresses a long-standing risk in the ecosystem — reliance on a single node implementation — by funding the development of a modular, high-performance alternative written in Rust."
+    "comment": "We support this proposal as it directly addresses a long-standing risk in the ecosystem — reliance on a single node implementation — by funding the development of a modular, high-performance alternative written in Rust. \n\nWe believe a second, independently maintained node:\n- Strengthens the resilience and fault tolerance of the network\n- Expands developer accessibility through modern tooling and better observability\n- Reduces hardware costs for SPOs, improving participation at the edge\n- Enables platform interoperability with WebAssembly\n- Empower Cardano core infrastructure to access to wider talent pool with alternative implementation of a more modern programming language\n\nWe also appreciate the proposal’s financial transparency:\n\n- Clearly scoped per team member and responsibility\n- Budget guarded by a smart contract with refund logic\n- Quarterly public reporting and demo cadence already in practice\n\nSIDAN Lab is also interested in the possibility of expanding works into alternative Hydra node, where our team can participate in maintenance and collaboration in the future."
   },
   "hashAlgorithm": "blake2b-256"
 }
