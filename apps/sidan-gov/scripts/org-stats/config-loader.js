@@ -1,0 +1,60 @@
+import fs from 'fs';
+import path from 'path';
+
+let config = null;
+
+export function loadConfig() {
+    if (config) {
+        return config;
+    }
+
+    // Try to find the config file in the root of the repository
+    const possiblePaths = [
+        path.join(process.cwd(), 'org-stats-config.json'),
+        path.join(process.cwd(), '..', 'org-stats-config.json'),
+        path.join(process.cwd(), '..', '..', 'org-stats-config.json'),
+        path.join(process.cwd(), '..', '..', '..', 'org-stats-config.json')
+    ];
+
+    let configPath = null;
+    for (const possiblePath of possiblePaths) {
+        if (fs.existsSync(possiblePath)) {
+            configPath = possiblePath;
+            break;
+        }
+    }
+
+    if (!configPath) {
+        throw new Error('Could not find org-stats-config.json in any of the expected locations');
+    }
+
+    try {
+        const configContent = fs.readFileSync(configPath, 'utf8');
+        config = JSON.parse(configContent);
+
+        // Validate required fields
+        if (!config.organization?.name) {
+            throw new Error('Config must contain organization.name');
+        }
+        if (!config.repositories?.main) {
+            throw new Error('Config must contain repositories.main');
+        }
+        if (!config.npmPackages?.core) {
+            throw new Error('Config must contain npmPackages.core');
+        }
+
+        console.log(`Loaded config from: ${configPath}`);
+        console.log(`Organization: ${config.organization.name}`);
+
+        return config;
+    } catch (error) {
+        if (error instanceof SyntaxError) {
+            throw new Error(`Invalid JSON in config file: ${error.message}`);
+        }
+        throw error;
+    }
+}
+
+export function getConfig() {
+    return loadConfig();
+} 
