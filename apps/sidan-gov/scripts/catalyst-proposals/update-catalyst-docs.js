@@ -13,7 +13,7 @@ const repoRoot = getRepoRoot();
 const CATALYST_DATA_PATH = path.join(repoRoot, config.outputPaths.baseDir, config.outputPaths.catalystProposalsDir, 'catalyst-data.json');
 
 // Lido CSRF token for lidonation API calls
-const LIDO_CSRF_TOKEN = '1bFPK309aGzzrR9EWTbGendt8xVApp8GrDBJcv5H';
+const LIDO_CSRF_TOKEN = 'pzWxi5p52Tz9swJ41b4aK73lbv3hX66GJjtsh8eK';
 
 // Get project IDs from environment variable
 const ORG_PROJECT_IDS = process.env.PROJECT_IDS;
