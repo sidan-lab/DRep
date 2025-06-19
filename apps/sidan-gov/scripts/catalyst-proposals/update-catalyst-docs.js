@@ -14,8 +14,8 @@ const CATALYST_DATA_PATH = path.join(config.outputPaths.baseDir, config.outputPa
 const LIDO_CSRF_TOKEN = '1bFPK309aGzzrR9EWTbGendt8xVApp8GrDBJcv5H';
 
 // Get project IDs from environment variable
-const README_PROJECT_IDS = process.env.README_PROJECT_IDS;
-console.log('Project IDs from environment:', README_PROJECT_IDS);
+const ORG_PROJECT_IDS = process.env.PROJECT_IDS;
+console.log('Project IDs from environment:', ORG_PROJECT_IDS);
 
 // Supabase credentials check - we'll use mock data if they're missing
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL2;
@@ -29,8 +29,8 @@ if (!USE_MOCK_DATA) {
 }
 
 // Extract just the project IDs
-const PROJECT_IDS = README_PROJECT_IDS
-    ? README_PROJECT_IDS.split(',').map(id => id.trim())
+const PROJECT_IDS = ORG_PROJECT_IDS
+    ? ORG_PROJECT_IDS.split(',').map(id => id.trim())
     : PROJECTS_INFO.map(project => project.id);
 
 /**
