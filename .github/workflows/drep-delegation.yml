@@ -19,14 +19,14 @@ jobs:
         node-version: '20'
         
     - name: Install dependencies
-      run: npm install
-      working-directory: apps/sidan-gov
+      run: npm ci
+      working-directory: apps/sidan-gov/scripts
       
     - name: Run delegation info script
       env:
         KOIOS_API_KEY: ${{ secrets.KOIOS_API_KEY }}
-      run: node scripts/drep-voting/drep-delegation-info.js
-      working-directory: apps/sidan-gov
+      run: npm run drep-delegation-info
+      working-directory: apps/sidan-gov/scripts
 
     - name: Check for changes
       id: git-check

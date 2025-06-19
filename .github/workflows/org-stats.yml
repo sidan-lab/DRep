@@ -20,16 +20,16 @@ jobs:
           node-version: '20'
           
       - name: Install dependencies
-        run: npm install
-        working-directory: apps/sidan-gov
+        run: npm ci
+        working-directory: apps/sidan-gov/scripts
       
       - name: Generate Current Stats
-        run: node scripts/org-stats/generate-org-stats.js
-        working-directory: apps/sidan-gov
+        run: npm run generate-org-stats
+        working-directory: apps/sidan-gov/scripts
         
       - name: Generate Yearly Stats
-        run: node scripts/org-stats/generate-yearly-stats.js
-        working-directory: apps/sidan-gov
+        run: npm run generate-yearly-stats
+        working-directory: apps/sidan-gov/scripts
         
       - name: Check for changes
         id: git-check

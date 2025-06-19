@@ -134,7 +134,7 @@ async function main() {
     try {
         const data = fs.readFileSync(CATALYST_DATA_PATH, 'utf8');
         existingData = JSON.parse(data);
-    } catch (error) {
+    } catch {
         console.log('No existing catalyst data found, will create new file');
     }
 
