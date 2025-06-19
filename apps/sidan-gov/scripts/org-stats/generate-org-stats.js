@@ -1,4 +1,4 @@
-import { fetchMeshStats, fetchMeshContributors } from './fetch-org-stats-data.js';
+import { fetchSidanStats, fetchSidanContributors } from './fetch-org-stats-data.js';
 import { saveJson } from './generate-org-stats-json.js';
 import { getConfig } from './config-loader.js';
 
@@ -18,8 +18,8 @@ async function main() {
     try {
         console.log(`Starting ${config.organization.displayName} Stats Generation...\n`);
         const [stats, contributors] = await Promise.all([
-            fetchMeshStats(githubToken),
-            fetchMeshContributors(githubToken)
+            fetchSidanStats(githubToken),
+            fetchSidanContributors(githubToken)
         ]);
 
         // Combine stats and contributors data

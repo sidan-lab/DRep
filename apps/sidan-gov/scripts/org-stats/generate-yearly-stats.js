@@ -7,7 +7,7 @@ import { getConfig } from './config-loader.js';
 async function fetchGitHubStats(githubToken) {
     const config = getConfig();
 
-    // Search for @meshsdk/core in package.json
+    // Search for @sidan-lab/sidan-csl-rs-browser in package.json
     const corePackageJsonResponse = await axios.get(
         'https://api.github.com/search/code',
         {
@@ -21,7 +21,7 @@ async function fetchGitHubStats(githubToken) {
         }
     );
 
-    // Search for @meshsdk/core in any file
+    // Search for @sidan-lab/sidan-csl-rs-browser in any file
     const coreAnyFileResponse = await axios.get(
         'https://api.github.com/search/code',
         {
@@ -90,7 +90,7 @@ async function fetchMonthlyDownloads(packageName, year) {
 async function loadPreviousStats(year) {
     const config = getConfig();
     try {
-        const statsPath = path.join(config.outputPaths.baseDir, config.outputPaths.statsDir, `mesh-yearly-stats-${year}.json`);
+        const statsPath = path.join(config.outputPaths.baseDir, config.outputPaths.statsDir, `sidan-yearly-stats-${year}.json`);
         console.log(`Attempting to load previous stats from: ${statsPath}`);
 
         if (fs.existsSync(statsPath)) {
@@ -177,13 +177,7 @@ async function main() {
 
             // Fetch monthly downloads for all packages
             const monthlyDownloads = {
-                core: await fetchMonthlyDownloads(config.npmPackages.core, year),
-                react: await fetchMonthlyDownloads(config.npmPackages.react, year),
-                transaction: await fetchMonthlyDownloads(config.npmPackages.transaction, year),
-                wallet: await fetchMonthlyDownloads(config.npmPackages.wallet, year),
-                provider: await fetchMonthlyDownloads(config.npmPackages.provider, year),
-                coreCsl: await fetchMonthlyDownloads(config.npmPackages.coreCsl, year),
-                coreCst: await fetchMonthlyDownloads(config.npmPackages.coreCst, year)
+                core: await fetchMonthlyDownloads(config.npmPackages.core, year)
             };
 
             // Generate and save JSON stats

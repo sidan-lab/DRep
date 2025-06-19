@@ -6,13 +6,7 @@ export function processYearlyStats(year, monthlyDownloads, githubStats) {
 
     // Calculate yearly totals for each package
     const yearlyTotals = {
-        core: monthlyDownloads.core.reduce((sum, m) => sum + m.downloads, 0),
-        react: monthlyDownloads.react.reduce((sum, m) => sum + m.downloads, 0),
-        transaction: monthlyDownloads.transaction.reduce((sum, m) => sum + m.downloads, 0),
-        wallet: monthlyDownloads.wallet.reduce((sum, m) => sum + m.downloads, 0),
-        provider: monthlyDownloads.provider.reduce((sum, m) => sum + m.downloads, 0),
-        coreCsl: monthlyDownloads.coreCsl.reduce((sum, m) => sum + m.downloads, 0),
-        coreCst: monthlyDownloads.coreCst.reduce((sum, m) => sum + m.downloads, 0)
+        core: monthlyDownloads.core.reduce((sum, m) => sum + m.downloads, 0)
     };
 
     // Process core package monthly downloads with trends

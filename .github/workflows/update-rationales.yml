@@ -20,11 +20,13 @@ jobs:
         
     - name: Install dependencies
       run: npm install
+      working-directory: apps/sidan-gov
       
     - name: Run update rationales script
       env:
         KOIOS_API_KEY: ${{ secrets.KOIOS_API_KEY }}
       run: node scripts/drep-voting/update-rationales.js
+      working-directory: apps/sidan-gov
 
     - name: Check for changes
       id: git-check

@@ -9,13 +9,7 @@
         "dependentsCountRepo": "whisky"
     },
     "npmPackages": {
-        "core": "@sidan-lab/sidan-csl-rs-browser",
-        "react": "@meshsdk/react",
-        "transaction": "@meshsdk/transaction",
-        "wallet": "@meshsdk/wallet",
-        "provider": "@meshsdk/provider",
-        "coreCsl": "@meshsdk/core-csl",
-        "coreCst": "@meshsdk/core-cst"
+        "core": "@sidan-lab/sidan-csl-rs-browser"
     },
     "outputPaths": {
         "baseDir": "sidan-gov-updates",
@@ -27,5 +21,6 @@
     },
     "githubUrls": {
         "dependentsUrl": "https://github.com/sidan-lab/whisky/network/dependents"
-    }
+    },
+    "drepId": "drep1yfjez5zup0gystdvc933w2mn8k64hcy3krvc2namluwjxdcfhm8wd"
 }

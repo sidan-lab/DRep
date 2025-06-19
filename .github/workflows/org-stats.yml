@@ -21,9 +21,7 @@ jobs:
           
       - name: Install dependencies
         run: npm install
-      
-      - name: Copy config file
-        run: cp org-stats-config.json apps/sidan-gov/
+        working-directory: apps/sidan-gov
       
       - name: Generate Current Stats
         run: node scripts/org-stats/generate-org-stats.js

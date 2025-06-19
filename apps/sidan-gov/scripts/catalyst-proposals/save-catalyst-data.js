@@ -1,7 +1,9 @@
 import fs from 'fs';
 import path from 'path';
+import { getConfig } from '../org-stats/config-loader.js';
 
-const DATA_DIR = 'mesh-gov-updates/catalyst-proposals';
+const config = getConfig();
+const DATA_DIR = path.join(config.outputPaths.baseDir, config.outputPaths.catalystProposalsDir);
 
 /**
  * Saves the catalyst data to a JSON file

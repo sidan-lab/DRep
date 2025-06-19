@@ -3,6 +3,7 @@ import axios from 'axios';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { getConfig } from '../org-stats/config-loader.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -10,15 +11,14 @@ const __dirname = path.dirname(__filename);
 // Configuration
 const BASE_URL = 'https://raw.githubusercontent.com/MeshJS/governance/refs/heads/main/vote-context';
 const CURRENT_YEAR = new Date().getFullYear();
-const CONFIG_PATH = path.join(__dirname, '..', '..', 'config.json');
 const missingRationalesPath = path.join(__dirname, '..', '..', 'voting-history', 'missing-voting-rationales', 'rationales.json');
 
-// Load config
-const config = JSON.parse(fs.readFileSync(CONFIG_PATH, 'utf8'));
+// Load config using the config loader
+const config = getConfig();
 const drepId = config.drepId;
 
 if (!drepId) {
-    console.error('DRep ID not found in config.json');
+    console.error('DRep ID not found in config');
     process.exit(1);
 }
 

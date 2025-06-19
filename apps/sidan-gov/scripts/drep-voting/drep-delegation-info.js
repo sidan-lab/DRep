@@ -2,18 +2,14 @@ import 'dotenv/config';
 import axios from 'axios';
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
+import { getConfig } from '../org-stats/config-loader.js';
 
-// Get __dirname equivalent in ES modules
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// Read config file
-const config = JSON.parse(fs.readFileSync('config.json', 'utf8'));
+// Load config using the config loader
+const config = getConfig();
 const drepId = config.drepId;
 
 if (!drepId) {
-    console.error('DRep ID not found in config.json');
+    console.error('DRep ID not found in config');
     process.exit(1);
 }
 
@@ -149,7 +145,7 @@ async function main() {
     const currentEpoch = await getCurrentEpoch();
 
     // Read existing JSON file
-    const outputPath = path.join(__dirname, '..', '..', 'mesh-gov-updates', 'drep-voting', 'drep-delegation-info.json');
+    const outputPath = path.join(config.outputPaths.baseDir, config.outputPaths.drepVotingDir, 'drep-delegation-info.json');
     let existingData = { timeline: { epochs: {} }, drepInfo: null };
     try {
         if (fs.existsSync(outputPath)) {

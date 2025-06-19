@@ -11,7 +11,7 @@ export function generateYearlyStatsJson(year, monthlyDownloads, githubStats) {
 export function saveStatsJson(statsData) {
     const config = getConfig();
     const year = statsData.year;
-    const jsonPath = path.join(config.outputPaths.baseDir, config.outputPaths.statsDir, `mesh-yearly-stats-${year}.json`);
+    const jsonPath = path.join(config.outputPaths.baseDir, config.outputPaths.statsDir, `sidan-yearly-stats-${year}.json`);
     fs.writeFileSync(jsonPath, JSON.stringify(statsData, null, 2));
     console.log(`Saved stats JSON to ${jsonPath}`);
 } 

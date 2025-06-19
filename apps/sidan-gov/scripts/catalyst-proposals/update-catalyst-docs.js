@@ -4,10 +4,11 @@ import { saveCatalystData } from './save-catalyst-data.js';
 import { getProposalMetrics } from './lidApi.js'; // NEW: import our Lido helper
 import fs from 'fs';
 import path from 'path';
+import { getConfig } from '../org-stats/config-loader.js';
 
 // Initialize constants
-const MILESTONES_BASE_URL = 'https://milestones.projectcatalyst.io';
-const CATALYST_DATA_PATH = path.join(process.cwd(), 'mesh-gov-updates', 'catalyst-proposals', 'catalyst-data.json');
+const config = getConfig();
+const CATALYST_DATA_PATH = path.join(config.outputPaths.baseDir, config.outputPaths.catalystProposalsDir, 'catalyst-data.json');
 
 // Lido CSRF token for lidonation API calls
 const LIDO_CSRF_TOKEN = '1bFPK309aGzzrR9EWTbGendt8xVApp8GrDBJcv5H';

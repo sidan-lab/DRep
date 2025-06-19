@@ -22,11 +22,11 @@ async function sendDiscordNotification(message) {
     }
 }
 
-export async function fetchMeshStats(githubToken) {
+export async function fetchSidanStats(githubToken) {
     const config = getConfig();
     console.log('Fetching GitHub statistics...');
 
-    // Search for @meshsdk/core in package.json
+    // Search for @sidan-lab/sidan-csl-rs-browser in package.json
     const corePackageJsonResponse = await axios.get(
         'https://api.github.com/search/code',
         {
@@ -39,7 +39,7 @@ export async function fetchMeshStats(githubToken) {
     );
     console.log('GitHub package.json count:', corePackageJsonResponse.data.total_count);
 
-    // Search for @meshsdk/core in any file
+    // Search for @sidan-lab/sidan-csl-rs-browser in any file
     const coreAnyFileResponse = await axios.get(
         'https://api.github.com/search/code',
         {
@@ -159,12 +159,6 @@ export async function fetchMeshStats(githubToken) {
     const lastYearDownloads = await getDownloads(formatDate(lastYearStart), formatDate(lastYearEnd));
 
     const corePackageDownloads = await axios.get(`https://api.npmjs.org/downloads/point/last-year/${config.npmPackages.core}`);
-    const reactPackageDownloads = await axios.get(`https://api.npmjs.org/downloads/point/last-year/${config.npmPackages.react}`);
-    const transactionPackageDownloads = await axios.get(`https://api.npmjs.org/downloads/point/last-year/${config.npmPackages.transaction}`);
-    const walletPackageDownloads = await axios.get(`https://api.npmjs.org/downloads/point/last-year/${config.npmPackages.wallet}`);
-    const providerPackageDownloads = await axios.get(`https://api.npmjs.org/downloads/point/last-year/${config.npmPackages.provider}`);
-    const coreCslPackageDownloads = await axios.get(`https://api.npmjs.org/downloads/point/last-year/${config.npmPackages.coreCsl}`);
-    const coreCstPackageDownloads = await axios.get(`https://api.npmjs.org/downloads/point/last-year/${config.npmPackages.coreCst}`);
 
     console.log('NPM Downloads:');
     console.log('- Last 24 Hours:', lastDayDownloads);
@@ -172,12 +166,6 @@ export async function fetchMeshStats(githubToken) {
     console.log('- Last Month:', lastMonthDownloads);
     console.log('- Last Year:', lastYearDownloads);
     console.log('- Core Package Last Year:', corePackageDownloads.data.downloads);
-    console.log('- React Package Last Year:', reactPackageDownloads.data.downloads);
-    console.log('- Transaction Package Last Year:', transactionPackageDownloads.data.downloads);
-    console.log('- Wallet Package Last Year:', walletPackageDownloads.data.downloads);
-    console.log('- Provider Package Last Year:', providerPackageDownloads.data.downloads);
-    console.log('- Core CSL Package Last Year:', coreCslPackageDownloads.data.downloads);
-    console.log('- Core CST Package Last Year:', coreCstPackageDownloads.data.downloads);
 
     // Get package version info
     const packageInfo = await axios.get(`https://registry.npmjs.org/${config.npmPackages.core}`);
@@ -200,7 +188,6 @@ export async function fetchMeshStats(githubToken) {
     const oneYearAgoStr = oneYearAgo.toISOString().split('T')[0];
 
     const npmStatUrl = `https://npm-stat.com/charts.html?package=${config.npmPackages.core}&from=${oneYearAgoStr}&to=${currentDateStr}`;
-    const npmStatCompareUrl = `https://npm-stat.com/charts.html?package=${config.npmPackages.core},${config.npmPackages.react}&from=${oneYearAgoStr}&to=${currentDateStr}`;
 
     return {
         github: {
@@ -216,23 +203,16 @@ export async function fetchMeshStats(githubToken) {
                 last_year: lastYearDownloads,
                 core_package_last_12_months: corePackageDownloads.data.downloads
             },
-            react_package_downloads: reactPackageDownloads.data.downloads,
-            transaction_package_downloads: transactionPackageDownloads.data.downloads,
-            wallet_package_downloads: walletPackageDownloads.data.downloads,
-            provider_package_downloads: providerPackageDownloads.data.downloads,
-            core_csl_package_downloads: coreCslPackageDownloads.data.downloads,
-            core_cst_package_downloads: coreCstPackageDownloads.data.downloads,
             latest_version: latestVersion,
             dependents_count: dependentsResponse.data.total
         },
         urls: {
-            npm_stat_url: npmStatUrl,
-            npm_stat_compare_url: npmStatCompareUrl
+            npm_stat_url: npmStatUrl
         }
     };
 }
 
-export async function fetchMeshContributors(githubToken) {
+export async function fetchSidanContributors(githubToken) {
     const config = getConfig();
     console.log('\nFetching repository contributors...');
 

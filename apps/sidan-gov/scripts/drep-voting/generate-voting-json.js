@@ -1,12 +1,10 @@
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+import { getConfig } from '../org-stats/config-loader.js';
 
 export function saveVotingJson(votes, year) {
-    const jsonDir = path.join('mesh-gov-updates', 'drep-voting');
+    const config = getConfig();
+    const jsonDir = path.join(config.outputPaths.baseDir, config.outputPaths.drepVotingDir);
     const jsonPath = path.join(jsonDir, `${year}_voting.json`);
 
     // Create directory if it doesn't exist

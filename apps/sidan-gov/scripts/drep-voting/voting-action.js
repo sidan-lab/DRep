@@ -4,6 +4,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { saveVotingJson } from '../drep-voting/generate-voting-json.js';
+import { getConfig } from '../org-stats/config-loader.js';
 
 // Get __dirname equivalent in ES modules
 const __filename = fileURLToPath(import.meta.url);
@@ -14,10 +15,10 @@ const CONFIG = {
     generateJson: true      // Set to false to skip JSON generation
 };
 
-// Read config file
-const config = JSON.parse(fs.readFileSync('config.json', 'utf8'));
+// Load config using the config loader
+const config = getConfig();
 const drepId = config.drepId;
-const organizationName = config.organizationName;
+const organizationName = config.organization.name;
 
 // Read missing rationales file
 const missingRationalesPath = path.join(__dirname, '..', '..', 'voting-history', 'missing-voting-rationales', 'rationales.json');
@@ -29,48 +30,13 @@ try {
 }
 
 if (!drepId) {
-    console.error('DRep ID not found in config.json');
+    console.error('DRep ID not found in config');
     process.exit(1);
 }
 
 if (!organizationName) {
-    console.error('Organization name not found in config.json');
+    console.error('Organization name not found in config');
     process.exit(1);
-}
-
-// Define the base directory for voting history files
-const votingHistoryDir = path.join('mesh-gov-updates', 'drep-voting', 'markdown');
-
-// Function to read front matter from a file
-function readFrontMatter(filePath) {
-    try {
-        const content = fs.readFileSync(filePath, 'utf8');
-        const frontMatterMatch = content.match(/^---\n([\s\S]*?)\n---/);
-        if (frontMatterMatch) {
-            const frontMatter = frontMatterMatch[1];
-            const yearMatch = frontMatter.match(/title:\s*(\d{4})/);
-            if (yearMatch) {
-                return parseInt(yearMatch[1]);
-            }
-        }
-    } catch (error) {
-        console.warn(`Could not read front matter from ${filePath}:`, error.message);
-    }
-    return null;
-}
-
-// Function to find the correct file for a given year
-function findFileForYear(year) {
-    const files = fs.readdirSync(votingHistoryDir);
-    for (const file of files) {
-        if (file.endsWith('.md')) {
-            const fileYear = readFrontMatter(path.join(votingHistoryDir, file));
-            if (fileYear === year) {
-                return path.join(votingHistoryDir, file);
-            }
-        }
-    }
-    return null;
 }
 
 async function fetchMetadata(metaUrl) {
