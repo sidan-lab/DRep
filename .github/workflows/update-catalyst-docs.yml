@@ -43,13 +43,6 @@ jobs:
         run: |
           cd apps/sidan-gov/scripts
           npm run update-catalyst-docs
-          cd ../../..
-          ls -la
-          ls -la sidan-gov-updates/ || echo "sidan-gov-updates directory not found"
-          ls -la sidan-gov-updates/catalyst-proposals/ || echo "catalyst-proposals directory not found"
-        
-      - name: Create output directory if needed
-        run: mkdir -p sidan-gov-updates/catalyst-proposals
         
       - name: Commit and push if changed
         run: |

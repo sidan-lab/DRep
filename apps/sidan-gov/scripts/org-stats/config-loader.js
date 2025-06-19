@@ -3,17 +3,24 @@ import path from 'path';
 
 let config = null;
 
+export function getRepoRoot() {
+    // Get the repository root directory (3 levels up from scripts directory)
+    return path.resolve(process.cwd(), '..', '..', '..');
+}
+
 export function loadConfig() {
     if (config) {
         return config;
     }
 
     // Try to find the config file in the root of the repository
+    const repoRoot = getRepoRoot();
     const possiblePaths = [
         path.join(process.cwd(), 'org-stats-config.json'),
         path.join(process.cwd(), '..', 'org-stats-config.json'),
         path.join(process.cwd(), '..', '..', 'org-stats-config.json'),
-        path.join(process.cwd(), '..', '..', '..', 'org-stats-config.json')
+        path.join(process.cwd(), '..', '..', '..', 'org-stats-config.json'),
+        path.join(repoRoot, 'org-stats-config.json')
     ];
 
     let configPath = null;
