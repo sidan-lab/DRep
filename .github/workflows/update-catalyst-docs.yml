@@ -22,6 +22,7 @@ jobs:
       NEXT_PUBLIC_MILESTONES_URL: 'https://milestones.projectcatalyst.io'
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       PROJECT_IDS: ${{ secrets.PROJECT_IDS }}
+      LIDO_CSRF_TOKEN: ${{ secrets.LIDO_CSRF_TOKEN }}
       
     steps:
       - name: Checkout repository
