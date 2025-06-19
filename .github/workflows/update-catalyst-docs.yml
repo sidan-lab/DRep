@@ -40,12 +40,24 @@ jobs:
         working-directory: apps/sidan-gov/scripts
         
       - name: Update Catalyst Data
-        run: npm run update-catalyst-docs
-        working-directory: apps/sidan-gov/scripts
+        run: |
+          cd apps/sidan-gov/scripts
+          npm run update-catalyst-docs
+          cd ../../..
+          ls -la
+          ls -la sidan-gov-updates/ || echo "sidan-gov-updates directory not found"
+          ls -la sidan-gov-updates/catalyst-proposals/ || echo "catalyst-proposals directory not found"
+        
+      - name: Create output directory if needed
+        run: mkdir -p sidan-gov-updates/catalyst-proposals
         
       - name: Commit and push if changed
         run: |
           git config --global user.name 'GitHub Actions'
           git config --global user.email 'actions@github.com'
-          git add gov-updates/catalyst-proposals/*.json
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Update Catalyst Proposal Data" && git push) 
+          if [ -d "sidan-gov-updates/catalyst-proposals" ] && [ "$(ls -A sidan-gov-updates/catalyst-proposals/*.json 2>/dev/null)" ]; then
+            git add sidan-gov-updates/catalyst-proposals/*.json
+            git diff --quiet && git diff --staged --quiet || (git commit -m "Update Catalyst Proposal Data" && git push)
+          else
+            echo "No catalyst files found to commit"
+          fi 
