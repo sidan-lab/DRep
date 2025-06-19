@@ -1,4 +1,226 @@
 {
-  "timestamp": "2025-06-19T08:09:48.681Z",
-  "projects": []
+  "timestamp": "2025-06-19T08:13:52.424Z",
+  "projects": [
+    {
+      "projectDetails": {
+        "id": 280,
+        "title": "Aiken Open-Source Smart Contract Library [by MeshJS & TrustLevel]",
+        "budget": 113200,
+        "milestones_qty": 4,
+        "funds_distributed": 113200,
+        "project_id": 1100022,
+        "name": "Aiken Open-Source Smart Contract Library [by MeshJS & TrustLevel]",
+        "category": "",
+        "url": "",
+        "status": "In Progress",
+        "finished": "",
+        "voting": null
+      },
+      "milestonesCompleted": 4
+    },
+    {
+      "projectDetails": {
+        "id": 369,
+        "title": "DeFi Evolution: Pioneering High-Frequency Trading on Cardano",
+        "budget": 100000,
+        "milestones_qty": 5,
+        "funds_distributed": 100000,
+        "project_id": 1100111,
+        "name": "DeFi Evolution: Pioneering High-Frequency Trading on Cardano",
+        "category": "",
+        "url": "",
+        "status": "In Progress",
+        "finished": "",
+        "voting": null
+      },
+      "milestonesCompleted": 5
+    },
+    {
+      "projectDetails": {
+        "id": 399,
+        "title": "Gimbalabs | Genius X - Hong Kong Cardano Developer Series",
+        "budget": 200000,
+        "milestones_qty": 6,
+        "funds_distributed": 200000,
+        "project_id": 1100141,
+        "name": "Gimbalabs | Genius X - Hong Kong Cardano Developer Series",
+        "category": "",
+        "url": "",
+        "status": "In Progress",
+        "finished": "",
+        "voting": null
+      },
+      "milestonesCompleted": 6
+    },
+    {
+      "projectDetails": {
+        "id": 508,
+        "title": "Rust library for easy off-chain transaction building",
+        "budget": 32500,
+        "milestones_qty": 5,
+        "funds_distributed": 32500,
+        "project_id": 1100250,
+        "name": "Rust library for easy off-chain transaction building",
+        "category": "",
+        "url": "",
+        "status": "In Progress",
+        "finished": "",
+        "voting": null
+      },
+      "milestonesCompleted": 5
+    },
+    {
+      "projectDetails": {
+        "id": 515,
+        "title": "SIDAN | Waffle - Hong Kong Cardano Community",
+        "budget": 200000,
+        "milestones_qty": 6,
+        "funds_distributed": 200000,
+        "project_id": 1100257,
+        "name": "SIDAN | Waffle - Hong Kong Cardano Community",
+        "category": "",
+        "url": "",
+        "status": "In Progress",
+        "finished": "",
+        "voting": null
+      },
+      "milestonesCompleted": 6
+    },
+    {
+      "projectDetails": {
+        "id": 654,
+        "title": "DeltaDeFi - Open Source Libraries for High Frequency Trading",
+        "budget": 200000,
+        "milestones_qty": 6,
+        "funds_distributed": 108000,
+        "project_id": 1200096,
+        "name": "DeltaDeFi - Open Source Libraries for High Frequency Trading",
+        "category": "",
+        "url": "",
+        "status": "In Progress",
+        "finished": "",
+        "voting": null
+      },
+      "milestonesCompleted": 1
+    },
+    {
+      "projectDetails": {
+        "id": 655,
+        "title": "DeltaDeFi: Pioneering High-Frequency Trading on Cardano",
+        "budget": 300000,
+        "milestones_qty": 6,
+        "funds_distributed": 255000,
+        "project_id": 1200097,
+        "name": "DeltaDeFi: Pioneering High-Frequency Trading on Cardano",
+        "category": "",
+        "url": "",
+        "status": "In Progress",
+        "finished": "",
+        "voting": null
+      },
+      "milestonesCompleted": 5
+    },
+    {
+      "projectDetails": {
+        "id": 706,
+        "title": "Mesh Software as a Service",
+        "budget": 100000,
+        "milestones_qty": 5,
+        "funds_distributed": 80000,
+        "project_id": 1200148,
+        "name": "Mesh Software as a Service",
+        "category": "",
+        "url": "",
+        "status": "In Progress",
+        "finished": "",
+        "voting": null
+      },
+      "milestonesCompleted": 4
+    },
+    {
+      "projectDetails": {
+        "id": 759,
+        "title": "SIDAN | MeshJS - Advance Cardano SDK in Rust",
+        "budget": 200000,
+        "milestones_qty": 6,
+        "funds_distributed": 168000,
+        "project_id": 1200201,
+        "name": "SIDAN | MeshJS - Advance Cardano SDK in Rust",
+        "category": "",
+        "url": "",
+        "status": "In Progress",
+        "finished": "",
+        "voting": null
+      },
+      "milestonesCompleted": 4
+    },
+    {
+      "projectDetails": {
+        "id": 760,
+        "title": "SIDAN | MeshJS - Cardano Service Layer Framework for DApps",
+        "budget": 200000,
+        "milestones_qty": 6,
+        "funds_distributed": 168000,
+        "project_id": 1200202,
+        "name": "SIDAN | MeshJS - Cardano Service Layer Framework for DApps",
+        "category": "",
+        "url": "",
+        "status": "In Progress",
+        "finished": "",
+        "voting": null
+      },
+      "milestonesCompleted": 5
+    },
+    {
+      "projectDetails": {
+        "id": 802,
+        "title": "Waffle | SIDAN - Hong Kong Cardano Community",
+        "budget": 100000,
+        "milestones_qty": 4,
+        "funds_distributed": 78333.34,
+        "project_id": 1200244,
+        "name": "Waffle | SIDAN - Hong Kong Cardano Community",
+        "category": "",
+        "url": "",
+        "status": "In Progress",
+        "finished": "",
+        "voting": null
+      },
+      "milestonesCompleted": 2
+    },
+    {
+      "projectDetails": {
+        "id": 852,
+        "title": "Cardano Builder Fest Asia by Mesh, Socious, SIDAN, Vietnam Cardano",
+        "budget": 99016,
+        "milestones_qty": 4,
+        "funds_distributed": 84164,
+        "project_id": 1300036,
+        "name": "Cardano Builder Fest Asia by Mesh, Socious, SIDAN, Vietnam Cardano",
+        "category": "",
+        "url": "",
+        "status": "In Progress",
+        "finished": "",
+        "voting": null
+      },
+      "milestonesCompleted": 3
+    },
+    {
+      "projectDetails": {
+        "id": 987,
+        "title": "SIDAN | KnightSafe - Self-custodial Vault for DeFi Trading",
+        "budget": 150000,
+        "milestones_qty": 4,
+        "funds_distributed": 112500,
+        "project_id": 1300171,
+        "name": "SIDAN | KnightSafe - Self-custodial Vault for DeFi Trading",
+        "category": "",
+        "url": "",
+        "status": "In Progress",
+        "finished": "",
+        "voting": null
+      },
+      "milestonesCompleted": 3
+    }
+  ]
 }
