@@ -1,9 +1,11 @@
 import fs from 'fs';
 import path from 'path';
-import { getConfig } from '../org-stats/config-loader.js';
+import { getConfig, getRepoRoot } from '../org-stats/config-loader.js';
 
 const config = getConfig();
-const DATA_DIR = path.join(config.outputPaths.baseDir, config.outputPaths.catalystProposalsDir);
+// Get the repository root directory using the utility function
+const repoRoot = getRepoRoot();
+const DATA_DIR = path.join(repoRoot, config.outputPaths.baseDir, config.outputPaths.catalystProposalsDir);
 
 /**
  * Saves the catalyst data to a JSON file

@@ -4,11 +4,13 @@ import { saveCatalystData } from './save-catalyst-data.js';
 import { getProposalMetrics } from './lidApi.js'; // NEW: import our Lido helper
 import fs from 'fs';
 import path from 'path';
-import { getConfig } from '../org-stats/config-loader.js';
+import { getConfig, getRepoRoot } from '../org-stats/config-loader.js';
 
 // Initialize constants
 const config = getConfig();
-const CATALYST_DATA_PATH = path.join(config.outputPaths.baseDir, config.outputPaths.catalystProposalsDir, 'catalyst-data.json');
+// Get the repository root directory using the utility function
+const repoRoot = getRepoRoot();
+const CATALYST_DATA_PATH = path.join(repoRoot, config.outputPaths.baseDir, config.outputPaths.catalystProposalsDir, 'catalyst-data.json');
 
 // Lido CSRF token for lidonation API calls
 const LIDO_CSRF_TOKEN = '1bFPK309aGzzrR9EWTbGendt8xVApp8GrDBJcv5H';
