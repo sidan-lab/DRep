@@ -20,8 +20,8 @@ const ORG_PROJECT_IDS = process.env.PROJECT_IDS;
 console.log('Project IDs from environment:', ORG_PROJECT_IDS);
 
 // Supabase credentials check - we'll use mock data if they're missing
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL2;
-const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY2;
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 const USE_MOCK_DATA = !supabaseUrl || !supabaseKey;
 
 let supabase;
