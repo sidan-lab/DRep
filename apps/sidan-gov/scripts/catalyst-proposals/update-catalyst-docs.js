@@ -152,14 +152,22 @@ async function main() {
         const projectDetails = await getProposalDetails(projectId);
         if (!projectDetails) continue;
 
-        // === UPDATED: determine fund number from category or URL ===
+        // === UPDATED: determine fund number from category, URL, or project_id ===
         let fundNumber = null;
         const catMatch = projectDetails.category.match(/^F(\d+)/i);
         if (catMatch) {
             fundNumber = catMatch[1];
         } else {
             const urlMatch = projectDetails.url.match(/\/f(\d+)-/i);
-            fundNumber = urlMatch ? urlMatch[1] : null;
+            if (urlMatch) {
+                fundNumber = urlMatch[1];
+            } else if (projectDetails.project_id) {
+                // Fallback: use all digits to the left of the last 5 digits of project_id
+                const pidStr = String(projectDetails.project_id);
+                if (pidStr.length > 5) {
+                    fundNumber = pidStr.substring(0, pidStr.length - 5);
+                }
+            }
         }
 
         // Check if proposal already exists in catalyst-data.json
