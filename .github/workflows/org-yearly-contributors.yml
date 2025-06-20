@@ -20,11 +20,11 @@ jobs:
           
       - name: Install dependencies
         run: npm install
-        working-directory: apps/sidan-gov/scripts
+        working-directory: scripts/sidan-gov
       
       - name: Generate Yearly Contributors Stats
         run: npm run generate-yearly-contributors
-        working-directory: apps/sidan-gov/scripts
+        working-directory: scripts/sidan-gov
         
       - name: Check for changes
         id: git-check

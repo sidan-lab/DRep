@@ -38,11 +38,11 @@ jobs:
           
       - name: Install dependencies
         run: npm install
-        working-directory: apps/sidan-gov/scripts
+        working-directory: scripts/sidan-gov
         
       - name: Update Catalyst Data
         run: |
-          cd apps/sidan-gov/scripts
+          cd scripts/sidan-gov
           npm run update-catalyst-docs
         
       - name: Commit and push if changed
