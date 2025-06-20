@@ -54,8 +54,12 @@ function generateUrlFromTitle(title) {
         .replace(/&/g, 'and')
         // Replace '|' with 'or'
         .replace(/\|/g, 'or')
-        // Remove special characters except spaces, hyphens, and alphanumeric
-        .replace(/[^a-zA-Z0-9\s\-]/g, '')
+        // Replace '[' and ']' with empty string
+        .replace(/[\[\]]/g, '')
+        // Replace multiple spaces, hyphens, or underscores with single space
+        .replace(/[\s\-_]+/g, ' ')
+        // Remove special characters except spaces and alphanumeric
+        .replace(/[^a-zA-Z0-9\s]/g, '')
         // Replace multiple spaces with single space
         .replace(/\s+/g, ' ')
         // Trim whitespace
@@ -64,6 +68,19 @@ function generateUrlFromTitle(title) {
         .replace(/\s/g, '-')
         // Convert to lowercase
         .toLowerCase();
+}
+
+/**
+ * Generates the full Catalyst URL for a project.
+ * @param {string} title - The project title
+ * @param {string} fundNumber - The fund number
+ * @returns {string} - The full URL
+ */
+function generateCatalystUrl(title, fundNumber) {
+    if (!title || !fundNumber) return '';
+
+    const slug = generateUrlFromTitle(title);
+    return `https://projectcatalyst.io/funds/${fundNumber}/cardano-open-developers/${slug}`;
 }
 
 /**
@@ -85,7 +102,7 @@ async function getProposalDetails(projectId) {
                 project_id: mockProject.id,
                 name: mockProject.name,
                 category: mockProject.category,
-                url: generateUrlFromTitle(mockProject.name),
+                url: '', // Will be set later with fund number
                 status: mockProject.status,
                 finished: mockProject.finished,
                 voting: null // ensure voting field exists
@@ -118,7 +135,7 @@ async function getProposalDetails(projectId) {
         ...data,
         name: supplementaryInfo?.name || data.title,
         category: supplementaryInfo?.category || '',
-        url: generateUrlFromTitle(data.title),
+        url: '', // Will be set later with fund number
         status: supplementaryInfo?.status || 'In Progress',
         finished: supplementaryInfo?.finished || '',
         voting: null // placeholder for voting metrics
@@ -193,6 +210,14 @@ async function main() {
                     fundNumber = pidStr.substring(0, pidStr.length - 5);
                 }
             }
+        }
+
+        // Generate the proper Catalyst URL with fund number
+        if (fundNumber && projectDetails.title) {
+            projectDetails.url = generateCatalystUrl(projectDetails.title, fundNumber);
+        } else {
+            // Fallback to just the slug if no fund number
+            projectDetails.url = generateUrlFromTitle(projectDetails.title);
         }
 
         // Check if proposal already exists in catalyst-data.json
