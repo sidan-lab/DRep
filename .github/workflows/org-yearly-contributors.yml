@@ -37,7 +37,7 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add gov-updates/org-stats/contributions/*.json
+          git add sidan-gov-updates/org-stats/contributions/*.json
           git commit -m "Update Org yearly contributors statistics"
           
       - name: Push changes
