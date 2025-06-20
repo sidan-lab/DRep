@@ -90,6 +90,25 @@ function extractCategoryFromChallenges(challenges) {
 }
 
 /**
+ * Extracts fund number from challenges data.
+ * @param {Object} challenges - The challenges object from the database
+ * @returns {string|null} - The fund number or null if not available
+ */
+function extractFundNumberFromChallenges(challenges) {
+    if (!challenges || !challenges.title) {
+        return null;
+    }
+
+    // Extract fund number from challenge title (e.g., "F11: OSDE: ...")
+    const fundMatch = challenges.title.match(/^F(\d+):/i);
+    if (fundMatch) {
+        return fundMatch[1];
+    }
+
+    return null;
+}
+
+/**
  * Generates the full Catalyst URL for a project.
  * @param {string} title - The project title
  * @param {string} fundNumber - The fund number
@@ -155,7 +174,7 @@ async function getProposalDetails(projectId) {
     const enhancedData = {
         ...data,
         name: supplementaryInfo?.name || data.title,
-        category: supplementaryInfo?.category || '',
+        category: data.challenges?.title || supplementaryInfo?.category || '',
         url: supplementaryInfo?.url || data.url || '', // Preserve existing URL from supplementary info or database
         status: supplementaryInfo?.status || 'In Progress',
         finished: supplementaryInfo?.finished || '',
@@ -215,29 +234,41 @@ async function main() {
         const projectDetails = await getProposalDetails(projectId);
         if (!projectDetails) continue;
 
-        // === UPDATED: determine fund number from category, URL, or project_id ===
+        // === UPDATED: determine fund number from challenges, category, URL, or project_id ===
         let fundNumber = null;
 
-        // First, try to get fund number from category (e.g., "F10: OSDE: ...")
-        const catMatch = projectDetails.category.match(/^F(\d+)/i);
-        if (catMatch) {
-            fundNumber = catMatch[1];
-            console.log(`[Fund] Extracted fund number ${fundNumber} from category: ${projectDetails.category}`);
-        } else {
-            // Try to get fund number from existing URL if available
-            if (projectDetails.url && projectDetails.url.includes('/funds/')) {
-                const urlMatch = projectDetails.url.match(/\/funds\/(\d+)\//i);
-                if (urlMatch) {
-                    fundNumber = urlMatch[1];
-                    console.log(`[Fund] Extracted fund number ${fundNumber} from URL: ${projectDetails.url}`);
-                }
-            } else if (projectDetails.project_id) {
-                // Fallback: use all digits to the left of the last 5 digits of project_id
-                const pidStr = String(projectDetails.project_id);
-                if (pidStr.length > 5) {
-                    fundNumber = pidStr.substring(0, pidStr.length - 5);
-                    console.log(`[Fund] Extracted fund number ${fundNumber} from project_id: ${projectDetails.project_id}`);
-                }
+        // First, try to get fund number from challenges data
+        if (projectDetails.challenges) {
+            fundNumber = extractFundNumberFromChallenges(projectDetails.challenges);
+            if (fundNumber) {
+                console.log(`[Fund] Extracted fund number ${fundNumber} from challenges: ${projectDetails.challenges.title}`);
+            }
+        }
+
+        // If not found in challenges, try to get fund number from category (e.g., "F10: OSDE: ...")
+        if (!fundNumber) {
+            const catMatch = projectDetails.category.match(/^F(\d+)/i);
+            if (catMatch) {
+                fundNumber = catMatch[1];
+                console.log(`[Fund] Extracted fund number ${fundNumber} from category: ${projectDetails.category}`);
+            }
+        }
+
+        // If still not found, try to get fund number from existing URL if available
+        if (!fundNumber && projectDetails.url && projectDetails.url.includes('/funds/')) {
+            const urlMatch = projectDetails.url.match(/\/funds\/(\d+)\//i);
+            if (urlMatch) {
+                fundNumber = urlMatch[1];
+                console.log(`[Fund] Extracted fund number ${fundNumber} from URL: ${projectDetails.url}`);
+            }
+        }
+
+        // Last fallback: use all digits to the left of the last 5 digits of project_id
+        if (!fundNumber && projectDetails.project_id) {
+            const pidStr = String(projectDetails.project_id);
+            if (pidStr.length > 5) {
+                fundNumber = pidStr.substring(0, pidStr.length - 5);
+                console.log(`[Fund] Extracted fund number ${fundNumber} from project_id: ${projectDetails.project_id}`);
             }
         }
 
