@@ -45,6 +45,16 @@ jobs:
           cd scripts/sidan-gov
           npm run update-catalyst-docs
         
+      - name: Debug - Check file existence
+        run: |
+          echo "Current directory: $(pwd)"
+          echo "Checking if sidan-gov-updates directory exists:"
+          ls -la sidan-gov-updates/ || echo "sidan-gov-updates directory does not exist"
+          echo "Checking if catalyst-proposals directory exists:"
+          ls -la sidan-gov-updates/catalyst-proposals/ || echo "catalyst-proposals directory does not exist"
+          echo "Checking for JSON files:"
+          find . -name "*.json" -path "*/catalyst-proposals/*" || echo "No JSON files found in catalyst-proposals"
+        
       - name: Commit and push if changed
         run: |
           git config --global user.name 'GitHub Actions'
