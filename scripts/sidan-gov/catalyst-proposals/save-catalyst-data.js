@@ -16,10 +16,15 @@ export async function saveCatalystData(projects) {
     console.log('DEBUG: process.cwd() =', process.cwd());
     console.log('DEBUG: repoRoot =', repoRoot);
     console.log('DEBUG: DATA_DIR =', DATA_DIR);
+    console.log('DEBUG: config.outputPaths.baseDir =', config.outputPaths.baseDir);
+    console.log('DEBUG: config.outputPaths.catalystProposalsDir =', config.outputPaths.catalystProposalsDir);
 
     // Ensure the directory exists
     if (!fs.existsSync(DATA_DIR)) {
+        console.log('DEBUG: Creating directory:', DATA_DIR);
         fs.mkdirSync(DATA_DIR, { recursive: true });
+    } else {
+        console.log('DEBUG: Directory already exists:', DATA_DIR);
     }
 
     // Get current timestamp for filename
@@ -39,4 +44,12 @@ export async function saveCatalystData(projects) {
     // Write the data to file
     fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
     console.log(`Saved catalyst data to ${filePath}`);
+
+    // Verify the file was created
+    if (fs.existsSync(filePath)) {
+        const stats = fs.statSync(filePath);
+        console.log(`DEBUG: File created successfully. Size: ${stats.size} bytes`);
+    } else {
+        console.log('DEBUG: ERROR - File was not created!');
+    }
 }
