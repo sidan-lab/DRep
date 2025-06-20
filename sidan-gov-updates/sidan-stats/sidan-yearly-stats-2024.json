@@ -1,0 +1,147 @@
+{
+  "year": 2024,
+  "yearlyTotals": {
+    "core": 25971
+  },
+  "monthlyDownloads": [
+    {
+      "month": "January",
+      "downloads": 0,
+      "trend": "➡️"
+    },
+    {
+      "month": "February",
+      "downloads": 0,
+      "trend": "➡️"
+    },
+    {
+      "month": "March",
+      "downloads": 376,
+      "trend": "📈"
+    },
+    {
+      "month": "April",
+      "downloads": 690,
+      "trend": "📈"
+    },
+    {
+      "month": "May",
+      "downloads": 786,
+      "trend": "📈"
+    },
+    {
+      "month": "June",
+      "downloads": 1154,
+      "trend": "📈"
+    },
+    {
+      "month": "July",
+      "downloads": 1354,
+      "trend": "📈"
+    },
+    {
+      "month": "August",
+      "downloads": 3257,
+      "trend": "📈"
+    },
+    {
+      "month": "September",
+      "downloads": 2751,
+      "trend": "📉"
+    },
+    {
+      "month": "October",
+      "downloads": 3374,
+      "trend": "📈"
+    },
+    {
+      "month": "November",
+      "downloads": 5362,
+      "trend": "📈"
+    },
+    {
+      "month": "December",
+      "downloads": 6867,
+      "trend": "🔥"
+    }
+  ],
+  "githubStats": [
+    {
+      "month": "January",
+      "projects": 0,
+      "files": 0,
+      "repositories": 0
+    },
+    {
+      "month": "February",
+      "projects": 0,
+      "files": 0,
+      "repositories": 0
+    },
+    {
+      "month": "March",
+      "projects": 0,
+      "files": 0,
+      "repositories": 0
+    },
+    {
+      "month": "April",
+      "projects": 0,
+      "files": 0,
+      "repositories": 0
+    },
+    {
+      "month": "May",
+      "projects": 0,
+      "files": 0,
+      "repositories": 0
+    },
+    {
+      "month": "June",
+      "projects": 0,
+      "files": 0,
+      "repositories": 0
+    },
+    {
+      "month": "July",
+      "projects": 0,
+      "files": 0,
+      "repositories": 0
+    },
+    {
+      "month": "August",
+      "projects": 0,
+      "files": 0,
+      "repositories": 0
+    },
+    {
+      "month": "September",
+      "projects": 0,
+      "files": 0,
+      "repositories": 0
+    },
+    {
+      "month": "October",
+      "projects": 0,
+      "files": 0,
+      "repositories": 0
+    },
+    {
+      "month": "November",
+      "projects": 0,
+      "files": 0,
+      "repositories": 0
+    },
+    {
+      "month": "December",
+      "projects": 0,
+      "files": 0,
+      "repositories": 0
+    }
+  ],
+  "peakMonth": {
+    "name": "December",
+    "downloads": 6867
+  },
+  "lastUpdated": "2025-06-20T09:56:30.226Z"
+}
