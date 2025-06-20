@@ -12,6 +12,11 @@ const DATA_DIR = path.join(repoRoot, config.outputPaths.baseDir, config.outputPa
  * @param {Array} projects - Array of project data
  */
 export async function saveCatalystData(projects) {
+    // Debug output for paths
+    console.log('DEBUG: process.cwd() =', process.cwd());
+    console.log('DEBUG: repoRoot =', repoRoot);
+    console.log('DEBUG: DATA_DIR =', DATA_DIR);
+
     // Ensure the directory exists
     if (!fs.existsSync(DATA_DIR)) {
         fs.mkdirSync(DATA_DIR, { recursive: true });
@@ -20,6 +25,7 @@ export async function saveCatalystData(projects) {
     // Get current timestamp for filename
     const now = new Date();
     const filePath = path.join(DATA_DIR, `catalyst-data.json`);
+    console.log('DEBUG: filePath =', filePath);
 
     // Prepare the data structure
     const data = {
