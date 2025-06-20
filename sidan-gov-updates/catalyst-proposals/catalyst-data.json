@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-06-20T07:53:54.951Z",
+  "timestamp": "2025-06-20T08:04:05.102Z",
   "projects": [
     {
       "projectDetails": {
@@ -16,7 +16,7 @@
           "fund_id": 3
         },
         "name": "Aiken Open-Source Smart Contract Library [by MeshJS & TrustLevel]",
-        "category": "",
+        "category": "F11: Cardano Open: Developers",
         "url": "https://projectcatalyst.io/funds/11/cardano-open-developers/aiken-open-source-smart-contract-library-by-meshjs-and-trustlevel",
         "status": "In Progress",
         "finished": "",
@@ -45,7 +45,7 @@
           "fund_id": 3
         },
         "name": "DeFi Evolution: Pioneering High-Frequency Trading on Cardano",
-        "category": "",
+        "category": "F11: Cardano Use Cases: Concept",
         "url": "https://projectcatalyst.io/funds/11/cardano-use-cases-concept/defi-evolution-pioneering-high-frequency-trading-on-cardano",
         "status": "In Progress",
         "finished": "",
@@ -74,7 +74,7 @@
           "fund_id": 3
         },
         "name": "Gimbalabs | Genius X - Hong Kong Cardano Developer Series",
-        "category": "",
+        "category": "F11: Cardano Open: Developers",
         "url": "https://projectcatalyst.io/funds/11/cardano-open-developers/gimbalabs-or-genius-x-hong-kong-cardano-developer-series",
         "status": "In Progress",
         "finished": "",
@@ -103,7 +103,7 @@
           "fund_id": 3
         },
         "name": "Rust library for easy off-chain transaction building",
-        "category": "",
+        "category": "F11: Cardano Open: Developers",
         "url": "https://projectcatalyst.io/funds/11/cardano-open-developers/rust-library-for-easy-off-chain-transaction-building",
         "status": "In Progress",
         "finished": "",
@@ -132,7 +132,7 @@
           "fund_id": 3
         },
         "name": "SIDAN | Waffle - Hong Kong Cardano Community",
-        "category": "",
+        "category": "F11: Cardano Open: Ecosystem",
         "url": "https://projectcatalyst.io/funds/11/cardano-open-ecosystem/sidan-or-waffle-hong-kong-cardano-community",
         "status": "In Progress",
         "finished": "",
@@ -161,7 +161,7 @@
           "fund_id": 4
         },
         "name": "DeltaDeFi - Open Source Libraries for High Frequency Trading",
-        "category": "",
+        "category": "F12: Cardano Open: Developers",
         "url": "https://projectcatalyst.io/funds/12/cardano-open-developers/deltadefi-open-source-libraries-for-high-frequency-trading",
         "status": "In Progress",
         "finished": "",
@@ -190,7 +190,7 @@
           "fund_id": 4
         },
         "name": "DeltaDeFi: Pioneering High-Frequency Trading on Cardano",
-        "category": "",
+        "category": "F12: Cardano Use Cases: MVP",
         "url": "https://projectcatalyst.io/funds/12/cardano-use-cases-mvp/deltadefi-pioneering-high-frequency-trading-on-cardano",
         "status": "In Progress",
         "finished": "",
@@ -219,7 +219,7 @@
           "fund_id": 4
         },
         "name": "Mesh Software as a Service",
-        "category": "",
+        "category": "F12: Cardano Use Cases: Concept",
         "url": "https://projectcatalyst.io/funds/12/cardano-use-cases-concept/mesh-software-as-a-service",
         "status": "In Progress",
         "finished": "",
@@ -248,7 +248,7 @@
           "fund_id": 4
         },
         "name": "SIDAN | MeshJS - Advance Cardano SDK in Rust",
-        "category": "",
+        "category": "F12: Cardano Open: Developers",
         "url": "https://projectcatalyst.io/funds/12/cardano-open-developers/sidan-or-meshjs-advance-cardano-sdk-in-rust",
         "status": "In Progress",
         "finished": "",
@@ -277,7 +277,7 @@
           "fund_id": 4
         },
         "name": "SIDAN | MeshJS - Cardano Service Layer Framework for DApps",
-        "category": "",
+        "category": "F12: Cardano Open: Developers",
         "url": "https://projectcatalyst.io/funds/12/cardano-open-developers/sidan-or-meshjs-cardano-service-layer-framework-for-dapps",
         "status": "In Progress",
         "finished": "",
@@ -306,7 +306,7 @@
           "fund_id": 4
         },
         "name": "Waffle | SIDAN - Hong Kong Cardano Community",
-        "category": "",
+        "category": "F12: Cardano Open: Ecosystem",
         "url": "https://projectcatalyst.io/funds/12/cardano-open-ecosystem/waffle-or-sidan-hong-kong-cardano-community",
         "status": "In Progress",
         "finished": "",
@@ -335,7 +335,7 @@
           "fund_id": 5
         },
         "name": "Cardano Builder Fest Asia by Mesh, Socious, SIDAN, Vietnam Cardano",
-        "category": "",
+        "category": "F13: Cardano Open: Ecosystem",
         "url": "https://projectcatalyst.io/funds/13/cardano-open-ecosystem/cardano-builder-fest-asia-by-mesh-socious-sidan-vietnam-cardano",
         "status": "In Progress",
         "finished": "",
@@ -364,7 +364,7 @@
           "fund_id": 5
         },
         "name": "SIDAN | KnightSafe - Self-custodial Vault for DeFi Trading",
-        "category": "",
+        "category": "F13: Cardano Use Cases: Concept",
         "url": "https://projectcatalyst.io/funds/13/cardano-use-cases-concept/sidan-or-knightsafe-self-custodial-vault-for-defi-trading",
         "status": "In Progress",
         "finished": "",
