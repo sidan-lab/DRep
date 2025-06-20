@@ -140,7 +140,7 @@ async function getProposalDetails(projectId) {
       budget,
       milestones_qty,
       funds_distributed,
-      challenges,
+      challenges(*),
       project_id
     `)
         .eq('project_id', projectId)
