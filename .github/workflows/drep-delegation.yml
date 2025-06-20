@@ -39,7 +39,7 @@ jobs:
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
-        git add gov-updates/drep-voting/drep-delegation-info.json
+        git add sidan-gov-updates/drep-voting/drep-delegation-info.json
         git commit -m "Update DRep delegation information"
         
     - name: Push changes
