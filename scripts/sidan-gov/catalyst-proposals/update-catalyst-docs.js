@@ -74,13 +74,28 @@ function generateUrlFromTitle(title) {
  * Generates the full Catalyst URL for a project.
  * @param {string} title - The project title
  * @param {string} fundNumber - The fund number
+ * @param {string} category - The project category (optional)
  * @returns {string} - The full URL
  */
-function generateCatalystUrl(title, fundNumber) {
+function generateCatalystUrl(title, fundNumber, category = '') {
     if (!title || !fundNumber) return '';
 
     const slug = generateUrlFromTitle(title);
-    return `https://projectcatalyst.io/funds/${fundNumber}/cardano-open-developers/${slug}`;
+
+    // Generate category slug if available
+    let categorySlug = '';
+    if (category) {
+        // Extract the category part after the fund prefix (e.g., "OSDE: Open Source Dev Ecosystem" from "F10: OSDE: Open Source Dev Ecosystem")
+        const categoryMatch = category.match(/^F\d+:\s*(.+)$/i);
+        if (categoryMatch) {
+            categorySlug = generateUrlFromTitle(categoryMatch[1]);
+        }
+    }
+
+    // If we have a category slug, use it; otherwise fall back to cardano-open-developers
+    const pathSegment = categorySlug || 'cardano-open-developers';
+
+    return `https://projectcatalyst.io/funds/${fundNumber}/${pathSegment}/${slug}`;
 }
 
 /**
@@ -102,7 +117,7 @@ async function getProposalDetails(projectId) {
                 project_id: mockProject.id,
                 name: mockProject.name,
                 category: mockProject.category,
-                url: '', // Will be set later with fund number
+                url: mockProject.url || '', // Preserve existing URL from mock data
                 status: mockProject.status,
                 finished: mockProject.finished,
                 voting: null // ensure voting field exists
@@ -135,7 +150,7 @@ async function getProposalDetails(projectId) {
         ...data,
         name: supplementaryInfo?.name || data.title,
         category: supplementaryInfo?.category || '',
-        url: '', // Will be set later with fund number
+        url: supplementaryInfo?.url || data.url || '', // Preserve existing URL from supplementary info or database
         status: supplementaryInfo?.status || 'In Progress',
         finished: supplementaryInfo?.finished || '',
         voting: null // placeholder for voting metrics
@@ -196,28 +211,44 @@ async function main() {
 
         // === UPDATED: determine fund number from category, URL, or project_id ===
         let fundNumber = null;
+
+        // First, try to get fund number from category (e.g., "F10: OSDE: ...")
         const catMatch = projectDetails.category.match(/^F(\d+)/i);
         if (catMatch) {
             fundNumber = catMatch[1];
+            console.log(`[Fund] Extracted fund number ${fundNumber} from category: ${projectDetails.category}`);
         } else {
-            const urlMatch = projectDetails.url.match(/\/f(\d+)-/i);
-            if (urlMatch) {
-                fundNumber = urlMatch[1];
+            // Try to get fund number from existing URL if available
+            if (projectDetails.url && projectDetails.url.includes('/funds/')) {
+                const urlMatch = projectDetails.url.match(/\/funds\/(\d+)\//i);
+                if (urlMatch) {
+                    fundNumber = urlMatch[1];
+                    console.log(`[Fund] Extracted fund number ${fundNumber} from URL: ${projectDetails.url}`);
+                }
             } else if (projectDetails.project_id) {
                 // Fallback: use all digits to the left of the last 5 digits of project_id
                 const pidStr = String(projectDetails.project_id);
                 if (pidStr.length > 5) {
                     fundNumber = pidStr.substring(0, pidStr.length - 5);
+                    console.log(`[Fund] Extracted fund number ${fundNumber} from project_id: ${projectDetails.project_id}`);
                 }
             }
         }
 
+        if (!fundNumber) {
+            console.log(`[Fund] Could not determine fund number for project ${projectId}`);
+        }
+
         // Generate the proper Catalyst URL with fund number
         if (fundNumber && projectDetails.title) {
-            projectDetails.url = generateCatalystUrl(projectDetails.title, fundNumber);
-        } else {
+            projectDetails.url = generateCatalystUrl(projectDetails.title, fundNumber, projectDetails.category);
+            console.log(`[URL] Generated Catalyst URL for "${projectDetails.title}": ${projectDetails.url}`);
+        } else if (projectDetails.title) {
             // Fallback to just the slug if no fund number
             projectDetails.url = generateUrlFromTitle(projectDetails.title);
+            console.log(`[URL] Generated fallback URL for "${projectDetails.title}": ${projectDetails.url}`);
+        } else {
+            console.log(`[URL] No title available for project ${projectId}, cannot generate URL`);
         }
 
         // Check if proposal already exists in catalyst-data.json
