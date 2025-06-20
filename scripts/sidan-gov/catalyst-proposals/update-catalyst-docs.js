@@ -42,6 +42,31 @@ const PROJECT_IDS = ORG_PROJECT_IDS
     : PROJECTS_INFO.map(project => project.id);
 
 /**
+ * Generates a URL-friendly slug from a project title.
+ * @param {string} title - The project title
+ * @returns {string} - The URL slug
+ */
+function generateUrlFromTitle(title) {
+    if (!title) return '';
+
+    return title
+        // Replace '&' with 'and'
+        .replace(/&/g, 'and')
+        // Replace '|' with 'or'
+        .replace(/\|/g, 'or')
+        // Remove special characters except spaces, hyphens, and alphanumeric
+        .replace(/[^a-zA-Z0-9\s\-]/g, '')
+        // Replace multiple spaces with single space
+        .replace(/\s+/g, ' ')
+        // Trim whitespace
+        .trim()
+        // Replace spaces with hyphens
+        .replace(/\s/g, '-')
+        // Convert to lowercase
+        .toLowerCase();
+}
+
+/**
  * Retrieves the proposal details.
  */
 async function getProposalDetails(projectId) {
@@ -60,7 +85,7 @@ async function getProposalDetails(projectId) {
                 project_id: mockProject.id,
                 name: mockProject.name,
                 category: mockProject.category,
-                url: mockProject.url,
+                url: generateUrlFromTitle(mockProject.name),
                 status: mockProject.status,
                 finished: mockProject.finished,
                 voting: null // ensure voting field exists
@@ -93,7 +118,7 @@ async function getProposalDetails(projectId) {
         ...data,
         name: supplementaryInfo?.name || data.title,
         category: supplementaryInfo?.category || '',
-        url: supplementaryInfo?.url || '',
+        url: generateUrlFromTitle(data.title),
         status: supplementaryInfo?.status || 'In Progress',
         finished: supplementaryInfo?.finished || '',
         voting: null // placeholder for voting metrics
