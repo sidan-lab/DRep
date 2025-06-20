@@ -71,31 +71,36 @@ function generateUrlFromTitle(title) {
 }
 
 /**
+ * Extracts category slug from challenges data.
+ * @param {Object} challenges - The challenges object from the database
+ * @returns {string|null} - The category slug or null if not available
+ */
+function extractCategoryFromChallenges(challenges) {
+    if (!challenges || !challenges.title) {
+        return null;
+    }
+
+    // Remove the fund prefix (e.g., "F11: ") and clean up the title
+    const categoryMatch = challenges.title.match(/^F\d+:\s*(.+)$/i);
+    if (categoryMatch) {
+        return generateUrlFromTitle(categoryMatch[1]);
+    }
+
+    return null;
+}
+
+/**
  * Generates the full Catalyst URL for a project.
  * @param {string} title - The project title
  * @param {string} fundNumber - The fund number
- * @param {string} category - The project category (optional)
+ * @param {string} categorySlug - The category slug (required)
  * @returns {string} - The full URL
  */
-function generateCatalystUrl(title, fundNumber, category = '') {
-    if (!title || !fundNumber) return '';
+function generateCatalystUrl(title, fundNumber, categorySlug) {
+    if (!title || !fundNumber || !categorySlug) return '';
 
     const slug = generateUrlFromTitle(title);
-
-    // Generate category slug if available
-    let categorySlug = '';
-    if (category) {
-        // Extract the category part after the fund prefix (e.g., "OSDE: Open Source Dev Ecosystem" from "F10: OSDE: Open Source Dev Ecosystem")
-        const categoryMatch = category.match(/^F\d+:\s*(.+)$/i);
-        if (categoryMatch) {
-            categorySlug = generateUrlFromTitle(categoryMatch[1]);
-        }
-    }
-
-    // If we have a category slug, use it; otherwise fall back to cardano-open-developers
-    const pathSegment = categorySlug || 'cardano-open-developers';
-
-    return `https://projectcatalyst.io/funds/${fundNumber}/${pathSegment}/${slug}`;
+    return `https://projectcatalyst.io/funds/${fundNumber}/${categorySlug}/${slug}`;
 }
 
 /**
@@ -135,6 +140,7 @@ async function getProposalDetails(projectId) {
       budget,
       milestones_qty,
       funds_distributed,
+      challenges,
       project_id
     `)
         .eq('project_id', projectId)
@@ -239,16 +245,26 @@ async function main() {
             console.log(`[Fund] Could not determine fund number for project ${projectId}`);
         }
 
-        // Generate the proper Catalyst URL with fund number
-        if (fundNumber && projectDetails.title) {
-            projectDetails.url = generateCatalystUrl(projectDetails.title, fundNumber, projectDetails.category);
-            console.log(`[URL] Generated Catalyst URL for "${projectDetails.title}": ${projectDetails.url}`);
-        } else if (projectDetails.title) {
-            // Fallback to just the slug if no fund number
-            projectDetails.url = generateUrlFromTitle(projectDetails.title);
-            console.log(`[URL] Generated fallback URL for "${projectDetails.title}": ${projectDetails.url}`);
+        // Extract category from challenges data
+        let categorySlug = null;
+        if (projectDetails.challenges) {
+            categorySlug = extractCategoryFromChallenges(projectDetails.challenges);
+            if (categorySlug) {
+                console.log(`[Category] Extracted category slug "${categorySlug}" from challenges: ${projectDetails.challenges.title}`);
+            } else {
+                console.log(`[Category] Could not extract category from challenges: ${projectDetails.challenges.title}`);
+            }
         } else {
-            console.log(`[URL] No title available for project ${projectId}, cannot generate URL`);
+            console.log(`[Category] No challenges data available for project ${projectId}`);
+        }
+
+        // Generate the proper Catalyst URL with fund number and category
+        if (fundNumber && projectDetails.title && categorySlug) {
+            projectDetails.url = generateCatalystUrl(projectDetails.title, fundNumber, categorySlug);
+            console.log(`[URL] Generated Catalyst URL for "${projectDetails.title}": ${projectDetails.url}`);
+        } else {
+            console.log(`[URL] Cannot generate URL for "${projectDetails.title}" - missing fund number or category`);
+            projectDetails.url = ''; // Clear URL if we can't generate a proper one
         }
 
         // Check if proposal already exists in catalyst-data.json
