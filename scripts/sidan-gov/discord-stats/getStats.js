@@ -2,11 +2,16 @@
 import { Client, GatewayIntentBits } from 'discord.js'
 import fs from 'fs'
 import path from 'path'
+import { getConfig, getRepoRoot } from '../org-stats/config-loader.js'
 
 // ——— Config from ENV ———
 const DISCORD_TOKEN = process.env.DISCORD_TOKEN
-const GUILD_ID      = process.env.GUILD_ID
-const OUTPUT_FILE   = path.resolve(process.cwd(), 'mesh-gov-updates/discord-stats/stats.json')
+const GUILD_ID = process.env.GUILD_ID
+
+// Get config and repository root
+const config = getConfig();
+const repoRoot = getRepoRoot();
+const OUTPUT_FILE = path.join(repoRoot, config.outputPaths.baseDir, config.outputPaths.discordStatsDir, 'stats.json')
 
 if (!DISCORD_TOKEN || !GUILD_ID) {
   console.error('❌ DISCORD_TOKEN and GUILD_ID must be set')
@@ -14,7 +19,7 @@ if (!DISCORD_TOKEN || !GUILD_ID) {
 }
 
 // ——— Backfill toggle ———
-const BACKFILL      = false     // ← flip to false once your one-off is done
+const BACKFILL = false     // ← flip to false once your one-off is done
 const BACKFILL_YEAR = 2025     // ← year to backfill from January
 
 const client = new Client({
@@ -26,7 +31,7 @@ const client = new Client({
 
 client.once('ready', async () => {
   console.log(`✅ Logged in as ${client.user.tag}`)
-  const guild       = await client.guilds.fetch(GUILD_ID)
+  const guild = await client.guilds.fetch(GUILD_ID)
   const memberCount = guild.memberCount
 
   // collect or load existing stats
@@ -48,7 +53,7 @@ client.once('ready', async () => {
     /** map YYYY-MM → { totalMessages, uniquePosters:Set<userId> } **/
     const buckets = {}
     const startDate = new Date(BACKFILL_YEAR, 0, 1)      // Jan 1, BACKFILL_YEAR
-    const endDate   = new Date(now.getFullYear(), now.getMonth(), 1)  // 1st of current month
+    const endDate = new Date(now.getFullYear(), now.getMonth(), 1)  // 1st of current month
 
     for (const channel of channels) {
       // — process the main channel —
@@ -61,7 +66,7 @@ client.once('ready', async () => {
           const ts = msg.createdAt
           if (ts < startDate) break outer
           if (ts < endDate) {
-            const key = `${ts.getFullYear()}-${String(ts.getMonth()+1).padStart(2,'0')}`
+            const key = `${ts.getFullYear()}-${String(ts.getMonth() + 1).padStart(2, '0')}`
             if (!buckets[key]) buckets[key] = { totalMessages: 0, uniquePosters: new Set() }
             buckets[key].totalMessages++
             if (!msg.author.bot) buckets[key].uniquePosters.add(msg.author.id)
@@ -86,7 +91,7 @@ client.once('ready', async () => {
               const ts = msg.createdAt
               if (ts < startDate) break
               if (ts < endDate) {
-                const key = `${ts.getFullYear()}-${String(ts.getMonth()+1).padStart(2,'0')}`
+                const key = `${ts.getFullYear()}-${String(ts.getMonth() + 1).padStart(2, '0')}`
                 if (!buckets[key]) buckets[key] = { totalMessages: 0, uniquePosters: new Set() }
                 buckets[key].totalMessages++
                 if (!msg.author.bot) buckets[key].uniquePosters.add(msg.author.id)
@@ -108,7 +113,7 @@ client.once('ready', async () => {
               const ts = msg.createdAt
               if (ts < startDate) break
               if (ts < endDate) {
-                const key = `${ts.getFullYear()}-${String(ts.getMonth()+1).padStart(2,'0')}`
+                const key = `${ts.getFullYear()}-${String(ts.getMonth() + 1).padStart(2, '0')}`
                 if (!buckets[key]) buckets[key] = { totalMessages: 0, uniquePosters: new Set() }
                 buckets[key].totalMessages++
                 if (!msg.author.bot) buckets[key].uniquePosters.add(msg.author.id)
@@ -124,8 +129,8 @@ client.once('ready', async () => {
 
     // populate data object per month
     for (let m = 0; m < now.getMonth(); m++) {
-      const dt  = new Date(BACKFILL_YEAR, m, 1)
-      const key = `${dt.getFullYear()}-${String(dt.getMonth()+1).padStart(2,'0')}`
+      const dt = new Date(BACKFILL_YEAR, m, 1)
+      const key = `${dt.getFullYear()}-${String(dt.getMonth() + 1).padStart(2, '0')}`
       const monthStats = buckets[key] || { totalMessages: 0, uniquePosters: new Set() }
       data[key] = {
         memberCount,
@@ -137,9 +142,9 @@ client.once('ready', async () => {
 
   } else {
     // — last-month only —
-    const monthStart = new Date(now.getFullYear(), now.getMonth()-1, 1)
-    const monthEnd   = new Date(now.getFullYear(), now.getMonth(),   1)
-    const key        = `${monthStart.getFullYear()}-${String(monthStart.getMonth()+1).padStart(2,'0')}`
+    const monthStart = new Date(now.getFullYear(), now.getMonth() - 1, 1)
+    const monthEnd = new Date(now.getFullYear(), now.getMonth(), 1)
+    const key = `${monthStart.getFullYear()}-${String(monthStart.getMonth() + 1).padStart(2, '0')}`
 
     let totalMessages = 0
     const uniquePostersSet = new Set()

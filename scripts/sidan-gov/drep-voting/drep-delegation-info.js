@@ -2,10 +2,11 @@ import 'dotenv/config';
 import axios from 'axios';
 import fs from 'fs';
 import path from 'path';
-import { getConfig } from '../org-stats/config-loader.js';
+import { getConfig, getRepoRoot } from '../org-stats/config-loader.js';
 
 // Load config using the config loader
 const config = getConfig();
+const repoRoot = getRepoRoot();
 const drepId = config.drepId;
 
 if (!drepId) {
@@ -145,7 +146,7 @@ async function main() {
     const currentEpoch = await getCurrentEpoch();
 
     // Read existing JSON file
-    const outputPath = path.join(config.outputPaths.baseDir, config.outputPaths.drepVotingDir, 'drep-delegation-info.json');
+    const outputPath = path.join(repoRoot, config.outputPaths.baseDir, config.outputPaths.drepVotingDir, 'drep-delegation-info.json');
     let existingData = { timeline: { epochs: {} }, drepInfo: null };
     try {
         if (fs.existsSync(outputPath)) {

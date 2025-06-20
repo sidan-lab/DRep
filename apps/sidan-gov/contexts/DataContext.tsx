@@ -2,6 +2,7 @@ import React, { createContext, useContext, useEffect, useState } from 'react';
 import fetchData from '../lib/fetchData';
 import { OrgData, CatalystContextData, DRepVotingData, YearlyStats, DiscordStats, ContributorStats, DataContextType, ContributorsData } from '../types';
 import { aggregateContributorStats } from '../utils/contributorStats';
+import config from '../config';
 
 const DataContext = createContext<DataContextType | undefined>(undefined);
 
@@ -15,6 +16,11 @@ const DREP_VOTING_STORAGE_KEY = 'drepVotingData';
 const DISCORD_STATS_STORAGE_KEY = 'discordStats';
 const CONTRIBUTOR_STATS_STORAGE_KEY = 'contributorStats';
 const CONTRIBUTORS_DATA_STORAGE_KEY = 'contributorsData';
+
+// Get configuration values
+const ORGANIZATION_NAME = config.organization.name;
+const GOVERNANCE_REPO = config.repositories.governance;
+const BASE_URL = `https://raw.githubusercontent.com/${ORGANIZATION_NAME}/${GOVERNANCE_REPO}/main/${config.outputPaths.baseDir}`;
 
 // Utility function to check if localStorage is available
 const isLocalStorageAvailable = (): boolean => {
@@ -64,7 +70,7 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
 
     const fetchYearlyStats = async (year: number) => {
         try {
-            return await fetchData(`https://raw.githubusercontent.com/Signius/mesh-automations/main/mesh-gov-updates/mesh-stats/mesh-yearly-stats-${year}.json`);
+            return await fetchData(`${BASE_URL}/${config.outputPaths.statsDir}/sidan-yearly-stats-${year}.json`);
         } catch (error) {
             console.warn(`Failed to fetch stats for year ${year}:`, error);
             return null;
@@ -73,7 +79,7 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
 
     const fetchYearlyVotes = async (year: number) => {
         try {
-            return await fetchData(`https://raw.githubusercontent.com/Signius/mesh-automations/main/mesh-gov-updates/drep-voting/${year}_voting.json`);
+            return await fetchData(`${BASE_URL}/${config.outputPaths.drepVotingDir}/${year}_voting.json`);
         } catch (error) {
             console.warn(`Failed to fetch votes for year ${year}:`, error);
             return null;
@@ -82,7 +88,7 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
 
     const fetchOrgData = async () => {
         try {
-            // console.log('Fetching mesh data...');
+            // console.log('Fetching sidan data...');
             const currentYear = getCurrentYear();
             const startYear = 2024;
             const years = Array.from({ length: currentYear - startYear + 1 }, (_, i) => startYear + i);
@@ -91,7 +97,7 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
             let currentStats;
             try {
                 // console.log('Fetching current stats...');
-                currentStats = await fetchData('https://raw.githubusercontent.com/Signius/mesh-automations/main/mesh-gov-updates/mesh-stats/mesh_stats.json');
+                currentStats = await fetchData(`${BASE_URL}/${config.outputPaths.statsDir}/sidan_stats.json`);
                 // console.log('Current stats fetched:', currentStats);
             } catch (error) {
                 console.error('Error fetching current stats:', error);
@@ -117,7 +123,7 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
 
             // Only save data if we have at least current stats or some yearly stats
             if (!currentStats && Object.keys(yearlyStats).length === 0) {
-                throw new Error('No mesh data available');
+                throw new Error('No sidan data available');
             }
 
             const newData: OrgData = {
@@ -126,13 +132,13 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
                 lastFetched: Date.now()
             };
 
-            // console.log('Setting new mesh data:', newData);
+            // console.log('Setting new sidan data:', newData);
             safeSetItem(ORG_STORAGE_KEY, JSON.stringify(newData));
             setOrgData(newData);
             setError(null);
         } catch (err) {
-            console.error('Error fetching mesh data:', err);
-            setError('Failed to fetch mesh data');
+            console.error('Error fetching sidan data:', err);
+            setError('Failed to fetch sidan data');
             setOrgData(null);
         }
     };
@@ -155,7 +161,7 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
 
             // Fetch delegation data
             // console.log('Fetching delegation data...');
-            const delegationData = await fetchData('https://raw.githubusercontent.com/Signius/mesh-automations/main/mesh-gov-updates/drep-voting/drep-delegation-info.json');
+            const delegationData = await fetchData(`${BASE_URL}/${config.outputPaths.drepVotingDir}/drep-delegation-info.json`);
             // console.log('Received delegation data:', delegationData);
 
             const newData: DRepVotingData = {
@@ -175,7 +181,7 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
 
     const fetchCatalystData = async () => {
         try {
-            const data = await fetchData('https://raw.githubusercontent.com/Signius/mesh-automations/main/mesh-gov-updates/catalyst-proposals/catalyst-data.json');
+            const data = await fetchData(`${BASE_URL}/${config.outputPaths.catalystProposalsDir}/catalyst-data.json`);
             const newData: CatalystContextData = {
                 catalystData: data,
                 lastFetched: Date.now()
@@ -190,7 +196,7 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
 
     const fetchDiscordStats = async () => {
         try {
-            const data = await fetchData('https://raw.githubusercontent.com/Signius/mesh-automations/refs/heads/main/mesh-gov-updates/discord-stats/stats.json');
+            const data = await fetchData(`${BASE_URL}/${config.outputPaths.discordStatsDir}/stats.json`);
             const newData = {
                 stats: data,
                 lastFetched: Date.now()
@@ -211,7 +217,7 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
 
             // Fetch yearly contributor stats
             const yearlyStatsPromises = years.map(year =>
-                fetchData(`https://raw.githubusercontent.com/Signius/mesh-automations/refs/heads/main/mesh-gov-updates/mesh-stats/contributions/contributors-${year}.json`)
+                fetchData(`${BASE_URL}/${config.outputPaths.statsDir}/${config.outputPaths.contributionsDir}/contributors-${year}.json`)
                     .catch(error => {
                         console.warn(`Failed to fetch contributor stats for year ${year}:`, error);
                         return null;
@@ -273,7 +279,7 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
 
         try {
             if (process.env.NEXT_PUBLIC_ENABLE_DEV_CACHE === 'false' || !isLocalStorageAvailable()) {
-                // First fetch mesh data
+                // First fetch sidan data
                 await fetchOrgData();
                 // Then fetch other data
                 await Promise.all([
@@ -293,7 +299,7 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
             const cachedContributorStats = safeGetItem(CONTRIBUTOR_STATS_STORAGE_KEY);
             const cachedContributorsData = safeGetItem(CONTRIBUTORS_DATA_STORAGE_KEY);
 
-            // First handle mesh data
+            // First handle sidan data
             if (cachedOrgData) {
                 const parsed = JSON.parse(cachedOrgData);
                 const cacheAge = Date.now() - parsed.lastFetched;
@@ -346,7 +352,7 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
             // Fetch fresh data if cache is expired or missing
             const fetchPromises = [];
 
-            // Always fetch mesh data first
+            // Always fetch sidan data first
             if (!cachedOrgData || Date.now() - JSON.parse(cachedOrgData).lastFetched >= CACHE_DURATION) {
                 await fetchOrgData();
             }

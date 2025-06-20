@@ -48,8 +48,8 @@ The main configuration file is `org-stats-config.json` located in the root of th
 ```json
 {
   "outputPaths": {
-    "baseDir": "mesh-gov-updates",
-    "statsDir": "mesh-stats",
+    "baseDir": "sidan-gov-updates",
+    "statsDir": "sidan-stats",
     "contributionsDir": "contributions",
     "drepVotingDir": "drep-voting",
     "catalystProposalsDir": "catalyst-proposals",
