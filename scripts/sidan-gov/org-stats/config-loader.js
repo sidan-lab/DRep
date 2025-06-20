@@ -4,8 +4,8 @@ import path from 'path';
 let config = null;
 
 export function getRepoRoot() {
-    // Get the repository root directory (3 levels up from scripts directory)
-    return path.resolve(process.cwd(), '..', '..', '..');
+    // Get the repository root directory (2 levels up from scripts/sidan-gov directory)
+    return path.resolve(process.cwd(), '..', '..');
 }
 
 export function loadConfig() {
