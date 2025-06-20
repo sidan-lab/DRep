@@ -2,7 +2,7 @@ import axios from 'axios';
 import fs from 'fs';
 import path from 'path';
 import * as cheerio from 'cheerio';
-import { getConfig } from './config-loader.js';
+import { getConfig, getRepoRoot } from './config-loader.js';
 
 // Add Discord webhook URL - this should be set as an environment variable
 const DISCORD_WEBHOOK_URL = process.env.DISCORD_WEBHOOK_URL;
@@ -24,26 +24,31 @@ async function sendDiscordNotification(message) {
 
 export async function fetchSidanStats(githubToken) {
     const config = getConfig();
+    const repoRoot = getRepoRoot();
     console.log('Fetching GitHub statistics...');
 
     // Search for @sidan-lab/sidan-csl-rs-browser in package.json
     const corePackageJsonResponse = await axios.get(
         'https://api.github.com/search/code',
         {
-            params: { q: `"${config.npmPackages.core}" in:file filename:package.json` },
+            params: {
+                q: `"${config.npmPackages.core}" in:file filename:package.json`
+            },
             headers: {
                 'Accept': 'application/vnd.github.v3+json',
                 'Authorization': `token ${githubToken}`
             }
         }
     );
-    console.log('GitHub package.json count:', corePackageJsonResponse.data.total_count);
+    console.log('GitHub package.json mentions:', corePackageJsonResponse.data.total_count);
 
     // Search for @sidan-lab/sidan-csl-rs-browser in any file
     const coreAnyFileResponse = await axios.get(
         'https://api.github.com/search/code',
         {
-            params: { q: `"${config.npmPackages.core}"` },
+            params: {
+                q: `"${config.npmPackages.core}"`
+            },
             headers: {
                 'Accept': 'application/vnd.github.v3+json',
                 'Authorization': `token ${githubToken}`
@@ -53,7 +58,7 @@ export async function fetchSidanStats(githubToken) {
     console.log('GitHub total mentions:', coreAnyFileResponse.data.total_count);
 
     // Read core_in_repositories data from file (fallback value)
-    const coreInReposPath = path.join(config.outputPaths.baseDir, config.outputPaths.statsDir, 'core-in-repositories.json');
+    const coreInReposPath = path.join(repoRoot, config.outputPaths.baseDir, config.outputPaths.statsDir, 'core-in-repositories.json');
     let coreInReposData = { last_updated: '', core_in_repositories: 0 };
     if (fs.existsSync(coreInReposPath)) {
         coreInReposData = JSON.parse(fs.readFileSync(coreInReposPath, 'utf8'));

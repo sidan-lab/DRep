@@ -1,10 +1,11 @@
 import fs from 'fs';
 import path from 'path';
-import { getConfig } from '../org-stats/config-loader.js';
+import { getConfig, getRepoRoot } from '../org-stats/config-loader.js';
 
 export function saveVotingJson(votes, year) {
     const config = getConfig();
-    const jsonDir = path.join(config.outputPaths.baseDir, config.outputPaths.drepVotingDir);
+    const repoRoot = getRepoRoot();
+    const jsonDir = path.join(repoRoot, config.outputPaths.baseDir, config.outputPaths.drepVotingDir);
     const jsonPath = path.join(jsonDir, `${year}_voting.json`);
 
     // Create directory if it doesn't exist

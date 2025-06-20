@@ -1,14 +1,15 @@
 import axios from 'axios';
 import fs from 'fs';
 import path from 'path';
-import { getConfig } from './config-loader.js';
+import { getConfig, getRepoRoot } from './config-loader.js';
 
 export async function fetchYearlyContributors(githubToken) {
     const config = getConfig();
+    const repoRoot = getRepoRoot();
     console.log('\nFetching repository contributors...');
 
     // Create contributions directory if it doesn't exist
-    const contributionsDir = path.join(config.outputPaths.baseDir, config.outputPaths.statsDir, config.outputPaths.contributionsDir);
+    const contributionsDir = path.join(repoRoot, config.outputPaths.baseDir, config.outputPaths.statsDir, config.outputPaths.contributionsDir);
     if (!fs.existsSync(contributionsDir)) {
         fs.mkdirSync(contributionsDir, { recursive: true });
     }
