@@ -2,10 +2,11 @@ import axios from 'axios';
 import path from 'path';
 import fs from 'fs';
 import { generateYearlyStatsJson, saveStatsJson } from './generate-yearly-org-stats-json.js';
-import { getConfig } from './config-loader.js';
+import { getConfig, getRepoRoot } from './config-loader.js';
 
 async function fetchGitHubStats(githubToken) {
     const config = getConfig();
+    const repoRoot = getRepoRoot();
 
     // Search for @sidan-lab/sidan-csl-rs-browser in package.json
     const corePackageJsonResponse = await axios.get(
@@ -36,7 +37,7 @@ async function fetchGitHubStats(githubToken) {
     );
 
     // Read core_in_repositories data from file (fallback value)
-    const coreInReposPath = path.join(config.outputPaths.baseDir, config.outputPaths.statsDir, 'core-in-repositories.json');
+    const coreInReposPath = path.join(repoRoot, config.outputPaths.baseDir, config.outputPaths.statsDir, 'core-in-repositories.json');
     let coreInReposData = { last_updated: '', core_in_repositories: 0 };
     if (fs.existsSync(coreInReposPath)) {
         coreInReposData = JSON.parse(fs.readFileSync(coreInReposPath, 'utf8'));
@@ -89,8 +90,9 @@ async function fetchMonthlyDownloads(packageName, year) {
 
 async function loadPreviousStats(year) {
     const config = getConfig();
+    const repoRoot = getRepoRoot();
     try {
-        const statsPath = path.join(config.outputPaths.baseDir, config.outputPaths.statsDir, `sidan-yearly-stats-${year}.json`);
+        const statsPath = path.join(repoRoot, config.outputPaths.baseDir, config.outputPaths.statsDir, `sidan-yearly-stats-${year}.json`);
         console.log(`Attempting to load previous stats from: ${statsPath}`);
 
         if (fs.existsSync(statsPath)) {
