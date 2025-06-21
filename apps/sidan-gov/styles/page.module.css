@@ -142,6 +142,32 @@
     font-size: 0.875rem;
 }
 
+/* Loading and Error States */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0 16px;
+}
+
+.loading {
+    color: #a0aec0;
+    font-size: 1.125rem;
+    text-align: center;
+}
+
+.error {
+    color: #e53e3e;
+    font-size: 1.125rem;
+    text-align: center;
+    background: rgba(229, 62, 62, 0.1);
+    border: 1px solid rgba(229, 62, 62, 0.3);
+    border-radius: 8px;
+    padding: 16px;
+    max-width: 600px;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .main {
