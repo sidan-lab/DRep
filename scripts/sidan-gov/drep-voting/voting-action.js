@@ -155,27 +155,40 @@ async function fetchGovernanceRationale(proposalId, year = null, epoch = null) {
                                     rationale = rationalMatch2[1].trim();
                                     console.log(`Found Rational with non-spaced pattern: ${rationale}`);
                                 } else {
-                                    // If no content on same line, look for multi-line content
-                                    const rationalMatch3 = line.match(/\| Rational\s*\|\s*$/);
-                                    const rationalMatch4 = line.match(/\|Rational\s*\|\s*$/);
-                                    if (rationalMatch3 || rationalMatch4) {
-                                        console.log(`Found multi-line Rational start`);
-                                        // Start collecting multi-line content
-                                        let multiLineRational = '';
-                                        let lineIndex = lines.indexOf(line) + 1;
-                                        while (lineIndex < lines.length) {
-                                            const nextLine = lines[lineIndex];
-                                            if (nextLine.trim().startsWith('|') && nextLine.trim().endsWith('|')) {
-                                                // End of multi-line content
-                                                break;
-                                            }
-                                            multiLineRational += nextLine + '\n';
-                                            lineIndex++;
-                                        }
-                                        rationale = multiLineRational.trim();
-                                        console.log(`Found multi-line Rational: ${rationale}`);
+                                    // Try pattern that doesn't require ending pipe
+                                    const rationalMatch3 = line.match(/\| Rational\s*\|\s*(.+)$/);
+                                    if (rationalMatch3) {
+                                        rationale = rationalMatch3[1].trim();
+                                        console.log(`Found Rational with spaced pattern (no end pipe): ${rationale}`);
                                     } else {
-                                        console.log(`No Rational pattern matched for line: "${line}"`);
+                                        const rationalMatch4 = line.match(/\|Rational\s*\|\s*(.+)$/);
+                                        if (rationalMatch4) {
+                                            rationale = rationalMatch4[1].trim();
+                                            console.log(`Found Rational with non-spaced pattern (no end pipe): ${rationale}`);
+                                        } else {
+                                            // If no content on same line, look for multi-line content
+                                            const rationalMatch5 = line.match(/\| Rational\s*\|\s*$/);
+                                            const rationalMatch6 = line.match(/\|Rational\s*\|\s*$/);
+                                            if (rationalMatch5 || rationalMatch6) {
+                                                console.log(`Found multi-line Rational start`);
+                                                // Start collecting multi-line content
+                                                let multiLineRational = '';
+                                                let lineIndex = lines.indexOf(line) + 1;
+                                                while (lineIndex < lines.length) {
+                                                    const nextLine = lines[lineIndex];
+                                                    if (nextLine.trim().startsWith('|') && nextLine.trim().endsWith('|')) {
+                                                        // End of multi-line content
+                                                        break;
+                                                    }
+                                                    multiLineRational += nextLine + '\n';
+                                                    lineIndex++;
+                                                }
+                                                rationale = multiLineRational.trim();
+                                                console.log(`Found multi-line Rational: ${rationale}`);
+                                            } else {
+                                                console.log(`No Rational pattern matched for line: "${line}"`);
+                                            }
+                                        }
                                     }
                                 }
                             }
