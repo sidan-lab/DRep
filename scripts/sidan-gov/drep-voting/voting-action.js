@@ -104,97 +104,82 @@ async function getProposalDetails(drepId) {
     }
 }
 
-// Function to fetch rationale from Cardano governance repository
+// Function to fetch rationale from SIDAN Lab DRep repository
+// This function searches through ga01-ga50 folders in the voting-history directory
+// and parses markdown tables to find matching rationales by Action ID or Hash
 async function fetchGovernanceRationale(proposalId, year = null, epoch = null) {
     try {
-        const baseUrl = 'https://raw.githubusercontent.com/MeshJS/governance/refs/heads/main/vote-context';
-        console.log(`\nFetching rationale for proposal ${proposalId} (year: ${year}, epoch: ${epoch})`);
+        const baseUrl = `https://raw.githubusercontent.com/${organizationName}/${config.repositories.governance}/refs/heads/main/voting-history`;
+        console.log(`\nFetching rationale for proposal ${proposalId} from SIDAN Lab DRep repository`);
 
-        // Extract the shortened ID (last 4 characters) from the proposal ID
-        const shortenedId = proposalId.slice(-4);
+        // Try to find the rationale by searching through ga folders
+        // We'll search through a reasonable range of ga numbers (ga01 to ga50)
+        for (let gaNumber = 1; gaNumber <= 50; gaNumber++) {
+            const gaFolder = `ga${gaNumber.toString().padStart(2, '0')}`;
+            const rationaleUrl = `${baseUrl}/${gaFolder}/${gaFolder}-rationale.md`;
 
-        // If we have year and epoch, try the direct path first
-        if (year && epoch) {
-            const directUrl = `${baseUrl}/${year}/${epoch}_${shortenedId}/Vote_Context.jsonId`;
             try {
-                const response = await axios.get(directUrl);
+                const response = await axios.get(rationaleUrl);
                 if (response.data) {
-                    try {
-                        // Try to parse the response data if it's a string
-                        const parsedData = typeof response.data === 'string' ? JSON.parse(response.data) : response.data;
-                        if (parsedData?.body?.comment) {
-                            return parsedData.body.comment;
+                    const markdownContent = response.data;
+
+                    // Parse the markdown table to extract information
+                    const lines = markdownContent.split('\n');
+                    let actionId = null;
+                    let rationale = null;
+                    let hash = null;
+
+                    for (const line of lines) {
+                        // Extract Action ID
+                        if (line.includes('Action ID') && line.includes('gov_action')) {
+                            const actionIdMatch = line.match(/gov_action[a-zA-Z0-9]+/);
+                            if (actionIdMatch) {
+                                actionId = actionIdMatch[0];
+                            }
                         }
-                    } catch (parseError) {
-                        console.warn(`Failed to parse response for proposal ${proposalId}:`, parseError.message);
+
+                        // Extract Rational
+                        if (line.includes('Rational') && !line.includes('| Rational |')) {
+                            const rationalMatch = line.match(/\| Rational\s*\|\s*(.+?)\s*\|/);
+                            if (rationalMatch) {
+                                rationale = rationalMatch[1].trim();
+                            }
+                        }
+
+                        // Extract Hash for verification
+                        if (line.includes('Hash') && !line.includes('| Hash |')) {
+                            const hashMatch = line.match(/\| Hash\s*\|\s*([a-fA-F0-9]+)/);
+                            if (hashMatch) {
+                                hash = hashMatch[1];
+                            }
+                        }
+                    }
+
+                    // Check if this rationale matches our proposal
+                    // We can match by action ID or by hash (removing the '00' suffix from proposal hash)
+                    if (actionId && rationale) {
+                        const proposalHashWithoutSuffix = proposalId.replace('00', '');
+
+                        // Check if the action ID or hash matches our proposal
+                        if (actionId === proposalId || (hash && hash.includes(proposalHashWithoutSuffix))) {
+                            console.log(`Found matching rationale in ${gaFolder} for proposal ${proposalId}`);
+                            console.log(`Action ID: ${actionId}, Hash: ${hash}, Rationale: ${rationale}`);
+                            return rationale;
+                        } else {
+                            console.log(`No match in ${gaFolder}: Action ID ${actionId} vs proposal ${proposalId}, Hash ${hash} vs ${proposalHashWithoutSuffix}`);
+                        }
                     }
                 }
             } catch (error) {
-                console.warn(`Direct path not found for proposal ${proposalId}, trying year folders`);
+                // Continue to next ga folder if this one doesn't exist or fails
+                continue;
             }
         }
 
-        // If direct path failed or we don't have year/epoch, try all possible combinations
-        const currentYear = new Date().getFullYear();
-        const years = year ? [year] : [currentYear]; // Only search current year if no year provided
-        const epochs = epoch ? [epoch] : [];
-
-        for (const currentYear of years) {
-            // If we have a specific epoch, try that first
-            if (epochs.length > 0) {
-                for (const currentEpoch of epochs) {
-                    const searchUrl = `${baseUrl}/${currentYear}/${currentEpoch}_${shortenedId}/Vote_Context.jsonId`;
-                    try {
-                        const response = await axios.get(searchUrl);
-                        if (response.data) {
-                            try {
-                                // Try to parse the response data if it's a string
-                                const parsedData = typeof response.data === 'string' ? JSON.parse(response.data) : response.data;
-                                if (parsedData?.body?.comment) {
-                                    return parsedData.body.comment;
-                                }
-                            } catch (parseError) {
-                                console.warn(`Failed to parse response for proposal ${proposalId}:`, parseError.message);
-                                continue;
-                            }
-                        }
-                    } catch (error) {
-                        // Continue to next combination
-                        continue;
-                    }
-                }
-            }
-
-            // If no specific epoch or if specific epoch search failed, try a range of epochs
-            const startEpoch = epoch || 500; // Start from epoch 500 if no specific epoch
-            const endEpoch = epoch || 600;   // End at epoch 600 if no specific epoch
-
-            for (let currentEpoch = startEpoch; currentEpoch <= endEpoch; currentEpoch++) {
-                const searchUrl = `${baseUrl}/${currentYear}/${currentEpoch}_${shortenedId}/Vote_Context.jsonId`;
-                try {
-                    const response = await axios.get(searchUrl);
-                    if (response.data) {
-                        try {
-                            // Try to parse the response data if it's a string
-                            const parsedData = typeof response.data === 'string' ? JSON.parse(response.data) : response.data;
-                            if (parsedData?.body?.comment) {
-                                return parsedData.body.comment;
-                            }
-                        } catch (parseError) {
-                            console.warn(`Failed to parse response for proposal ${proposalId}:`, parseError.message);
-                            continue;
-                        }
-                    }
-                } catch (error) {
-                    // Continue to next epoch
-                    continue;
-                }
-            }
-        }
-
+        console.log(`No matching rationale found for proposal ${proposalId}`);
         return null;
     } catch (error) {
-        console.warn(`Could not fetch rationale from governance repository for proposal ${proposalId}:`, error.message);
+        console.warn(`Could not fetch rationale from SIDAN Lab DRep repository for proposal ${proposalId}:`, error.message);
         return null;
     }
 }
@@ -281,7 +266,7 @@ async function getDRepVotes(drepId) {
                 const year = new Date(processedVote.blockTime).getFullYear();
                 const epoch = proposal.proposed_epoch;
                 rationale = await fetchGovernanceRationale(vote.proposal_id, year, epoch);
-                console.log(`Fetching rationale from governance repository: ${rationale}`);
+                console.log(`Fetching rationale from SIDAN Lab DRep repository: ${rationale}`);
             }
 
             // Add proposal details to vote
