@@ -118,8 +118,6 @@ async function fetchGovernanceRationale(proposalId, year = null, epoch = null) {
             const gaFolder = `ga${gaNumber.toString().padStart(2, '0')}`;
             const rationaleUrl = `${baseUrl}/${gaFolder}/${gaFolder}-rationale.md`;
 
-            console.log(`Checking folder: ${gaFolder} at URL: ${rationaleUrl}`);
-
             try {
                 const response = await axios.get(rationaleUrl);
                 if (response.data) {
@@ -142,34 +140,28 @@ async function fetchGovernanceRationale(proposalId, year = null, epoch = null) {
 
                         // Extract Rational - handle both spaced and non-spaced pipe characters
                         if (line.includes('Rational') && !line.includes('| Rational |')) {
-                            console.log(`Processing Rational line: "${line}"`);
                             // Try to match the rational content on the same line first
                             const rationalMatch = line.match(/\| Rational\s*\|\s*(.+?)\s*\|/);
                             if (rationalMatch) {
                                 rationale = rationalMatch[1].trim();
-                                console.log(`Found Rational with spaced pattern: ${rationale}`);
                             } else {
                                 // Try without spaces around pipe
                                 const rationalMatch2 = line.match(/\|Rational\s*\|\s*(.+?)\s*\|/);
                                 if (rationalMatch2) {
                                     rationale = rationalMatch2[1].trim();
-                                    console.log(`Found Rational with non-spaced pattern: ${rationale}`);
                                 } else {
                                     // Try pattern that doesn't require ending pipe
                                     const rationalMatch3 = line.match(/\| Rational\s*\|\s*(.+)$/);
                                     if (rationalMatch3) {
                                         rationale = rationalMatch3[1].trim();
-                                        console.log(`Found Rational with spaced pattern (no end pipe): ${rationale}`);
                                     } else {
                                         const rationalMatch4 = line.match(/\|Rational\s*\|\s*(.+)$/);
                                         if (rationalMatch4) {
                                             rationale = rationalMatch4[1].trim();
-                                            console.log(`Found Rational with non-spaced pattern (no end pipe): ${rationale}`);
 
                                             // Check if this is the start of multi-line content
                                             // If the line ends with a space or newline, collect subsequent lines
                                             if (line.trim().endsWith(' ') || line.trim().endsWith('')) {
-                                                console.log(`Detected multi-line Rational, collecting subsequent lines`);
                                                 let multiLineRational = rationale;
                                                 let lineIndex = lines.indexOf(line) + 1;
                                                 while (lineIndex < lines.length) {
@@ -189,14 +181,12 @@ async function fetchGovernanceRationale(proposalId, year = null, epoch = null) {
                                                     lineIndex++;
                                                 }
                                                 rationale = multiLineRational.trim();
-                                                console.log(`Found multi-line Rational: ${rationale}`);
                                             }
                                         } else {
                                             // If no content on same line, look for multi-line content
                                             const rationalMatch5 = line.match(/\| Rational\s*\|\s*$/);
                                             const rationalMatch6 = line.match(/\|Rational\s*\|\s*$/);
                                             if (rationalMatch5 || rationalMatch6) {
-                                                console.log(`Found multi-line Rational start`);
                                                 // Start collecting multi-line content
                                                 let multiLineRational = '';
                                                 let lineIndex = lines.indexOf(line) + 1;
@@ -210,9 +200,6 @@ async function fetchGovernanceRationale(proposalId, year = null, epoch = null) {
                                                     lineIndex++;
                                                 }
                                                 rationale = multiLineRational.trim();
-                                                console.log(`Found multi-line Rational: ${rationale}`);
-                                            } else {
-                                                console.log(`No Rational pattern matched for line: "${line}"`);
                                             }
                                         }
                                     }
@@ -243,31 +230,12 @@ async function fetchGovernanceRationale(proposalId, year = null, epoch = null) {
                         // Check if the action ID or hash matches our proposal
                         if (actionId === proposalId || (hash && hash.includes(proposalHashWithoutSuffix))) {
                             console.log(`Found matching rationale in ${gaFolder} for proposal ${proposalId}`);
-                            console.log(`Action ID: ${actionId}, Hash: ${hash}, Rationale: ${rationale}`);
                             return rationale;
-                        } else {
-                            console.log(`No match in ${gaFolder}: Action ID ${actionId} vs proposal ${proposalId}, Hash ${hash} vs ${proposalHashWithoutSuffix}`);
                         }
-                    } else {
-                        console.log(`No Action ID or Rational found in ${gaFolder}`);
-                        console.log(`Parsed Action ID: ${actionId}`);
-                        console.log(`Parsed Rational: ${rationale}`);
-                        console.log(`Parsed Hash: ${hash}`);
-                        // Show first few lines of content for debugging
-                        console.log(`First 5 lines of content:`);
-                        lines.slice(0, 5).forEach((line, index) => {
-                            console.log(`  ${index + 1}: ${line}`);
-                        });
-                        // Show all lines to find the Rational field
-                        console.log(`All lines in content:`);
-                        lines.forEach((line, index) => {
-                            console.log(`  ${index + 1}: ${line}`);
-                        });
                     }
                 }
             } catch (error) {
                 // Continue to next ga folder if this one doesn't exist or fails
-                console.log(`Folder ${gaFolder} not found or error: ${error.message}`);
                 continue;
             }
         }
