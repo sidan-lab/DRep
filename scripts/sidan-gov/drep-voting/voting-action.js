@@ -118,6 +118,8 @@ async function fetchGovernanceRationale(proposalId, year = null, epoch = null) {
             const gaFolder = `ga${gaNumber.toString().padStart(2, '0')}`;
             const rationaleUrl = `${baseUrl}/${gaFolder}/${gaFolder}-rationale.md`;
 
+            console.log(`Checking folder: ${gaFolder} at URL: ${rationaleUrl}`);
+
             try {
                 const response = await axios.get(rationaleUrl);
                 if (response.data) {
@@ -138,19 +140,31 @@ async function fetchGovernanceRationale(proposalId, year = null, epoch = null) {
                             }
                         }
 
-                        // Extract Rational
+                        // Extract Rational - handle both spaced and non-spaced pipe characters
                         if (line.includes('Rational') && !line.includes('| Rational |')) {
                             const rationalMatch = line.match(/\| Rational\s*\|\s*(.+?)\s*\|/);
                             if (rationalMatch) {
                                 rationale = rationalMatch[1].trim();
+                            } else {
+                                // Try without spaces around pipe
+                                const rationalMatch2 = line.match(/\|Rational\s*\|\s*(.+?)\s*\|/);
+                                if (rationalMatch2) {
+                                    rationale = rationalMatch2[1].trim();
+                                }
                             }
                         }
 
-                        // Extract Hash for verification
+                        // Extract Hash for verification - handle both spaced and non-spaced pipe characters
                         if (line.includes('Hash') && !line.includes('| Hash |')) {
                             const hashMatch = line.match(/\| Hash\s*\|\s*([a-fA-F0-9]+)/);
                             if (hashMatch) {
                                 hash = hashMatch[1];
+                            } else {
+                                // Try without spaces around pipe
+                                const hashMatch2 = line.match(/\|Hash\s*\|\s*([a-fA-F0-9]+)/);
+                                if (hashMatch2) {
+                                    hash = hashMatch2[1];
+                                }
                             }
                         }
                     }
@@ -168,10 +182,13 @@ async function fetchGovernanceRationale(proposalId, year = null, epoch = null) {
                         } else {
                             console.log(`No match in ${gaFolder}: Action ID ${actionId} vs proposal ${proposalId}, Hash ${hash} vs ${proposalHashWithoutSuffix}`);
                         }
+                    } else {
+                        console.log(`No Action ID or Rational found in ${gaFolder}`);
                     }
                 }
             } catch (error) {
                 // Continue to next ga folder if this one doesn't exist or fails
+                console.log(`Folder ${gaFolder} not found or error: ${error.message}`);
                 continue;
             }
         }
