@@ -165,6 +165,32 @@ async function fetchGovernanceRationale(proposalId, year = null, epoch = null) {
                                         if (rationalMatch4) {
                                             rationale = rationalMatch4[1].trim();
                                             console.log(`Found Rational with non-spaced pattern (no end pipe): ${rationale}`);
+
+                                            // Check if this is the start of multi-line content
+                                            // If the line ends with a space or newline, collect subsequent lines
+                                            if (line.trim().endsWith(' ') || line.trim().endsWith('')) {
+                                                console.log(`Detected multi-line Rational, collecting subsequent lines`);
+                                                let multiLineRational = rationale;
+                                                let lineIndex = lines.indexOf(line) + 1;
+                                                while (lineIndex < lines.length) {
+                                                    const nextLine = lines[lineIndex];
+                                                    // Stop if we hit another table row (starts and ends with |)
+                                                    if (nextLine.trim().startsWith('|') && nextLine.trim().endsWith('|') && nextLine.includes('|')) {
+                                                        break;
+                                                    }
+                                                    // Stop if we hit an empty line followed by a table row
+                                                    if (nextLine.trim() === '' && lineIndex + 1 < lines.length) {
+                                                        const nextNextLine = lines[lineIndex + 1];
+                                                        if (nextNextLine.trim().startsWith('|') && nextNextLine.trim().endsWith('|')) {
+                                                            break;
+                                                        }
+                                                    }
+                                                    multiLineRational += ' ' + nextLine.trim();
+                                                    lineIndex++;
+                                                }
+                                                rationale = multiLineRational.trim();
+                                                console.log(`Found multi-line Rational: ${rationale}`);
+                                            }
                                         } else {
                                             // If no content on same line, look for multi-line content
                                             const rationalMatch5 = line.match(/\| Rational\s*\|\s*$/);
