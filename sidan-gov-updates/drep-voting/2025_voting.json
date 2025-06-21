@@ -57,7 +57,7 @@
     "proposalType": "InfoAction",
     "proposedEpoch": 556,
     "expirationEpoch": 563,
-    "rationale": "No rationale available"
+    "rationale": "SIDAN Lab is voting NO as the governance action is invalid and there are invalid metadata."
   },
   {
     "proposalId": "gov_action1h4ygjv0hjfj3lmafcm76rpdzcm8vsvj9k5wejn3npyxwxm3fesnqqw9kxxz",
@@ -162,6 +162,6 @@
     "proposalType": "NewConstitution",
     "proposedEpoch": 537,
     "expirationEpoch": 544,
-    "rationale": "No rationale available"
+    "rationale": "The biggest difference between this and the Interim Constitution is the community participation that shaped it. This wasn’t created behind closed doors—it was the result of:The Cardano Constitutional Conventions in Argentina & Keny and 63+ global workshops where people could provide input with discussions and revisions. Meaningful Improvements Over the Interim Constitution. Several key enhancements make this Constitution a significant upgrade: Clear guiding principles to align future governance actions, better treasury oversight to reduce single points of failure and a governance process that prioritizes participation and transparency.This Constitution is a major improvement over the Interim version, and it sets the stage for further governance evolution. Voting Yes was the responsible choice to ensure progress continues."
   }
 ]
