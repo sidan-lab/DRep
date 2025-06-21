@@ -142,6 +142,7 @@ async function fetchGovernanceRationale(proposalId, year = null, epoch = null) {
 
                         // Extract Rational - handle both spaced and non-spaced pipe characters
                         if (line.includes('Rational') && !line.includes('| Rational |')) {
+                            // Try to match the rational content on the same line first
                             const rationalMatch = line.match(/\| Rational\s*\|\s*(.+?)\s*\|/);
                             if (rationalMatch) {
                                 rationale = rationalMatch[1].trim();
@@ -150,6 +151,25 @@ async function fetchGovernanceRationale(proposalId, year = null, epoch = null) {
                                 const rationalMatch2 = line.match(/\|Rational\s*\|\s*(.+?)\s*\|/);
                                 if (rationalMatch2) {
                                     rationale = rationalMatch2[1].trim();
+                                } else {
+                                    // If no content on same line, look for multi-line content
+                                    const rationalMatch3 = line.match(/\| Rational\s*\|\s*$/);
+                                    const rationalMatch4 = line.match(/\|Rational\s*\|\s*$/);
+                                    if (rationalMatch3 || rationalMatch4) {
+                                        // Start collecting multi-line content
+                                        let multiLineRational = '';
+                                        let lineIndex = lines.indexOf(line) + 1;
+                                        while (lineIndex < lines.length) {
+                                            const nextLine = lines[lineIndex];
+                                            if (nextLine.trim().startsWith('|') && nextLine.trim().endsWith('|')) {
+                                                // End of multi-line content
+                                                break;
+                                            }
+                                            multiLineRational += nextLine + '\n';
+                                            lineIndex++;
+                                        }
+                                        rationale = multiLineRational.trim();
+                                    }
                                 }
                             }
                         }
@@ -184,6 +204,14 @@ async function fetchGovernanceRationale(proposalId, year = null, epoch = null) {
                         }
                     } else {
                         console.log(`No Action ID or Rational found in ${gaFolder}`);
+                        console.log(`Parsed Action ID: ${actionId}`);
+                        console.log(`Parsed Rational: ${rationale}`);
+                        console.log(`Parsed Hash: ${hash}`);
+                        // Show first few lines of content for debugging
+                        console.log(`First 5 lines of content:`);
+                        lines.slice(0, 5).forEach((line, index) => {
+                            console.log(`  ${index + 1}: ${line}`);
+                        });
                     }
                 }
             } catch (error) {
