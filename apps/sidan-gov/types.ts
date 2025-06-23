@@ -163,9 +163,24 @@ export interface DRepInfo {
     last_updated: string;
 }
 
+export interface DRepMetadata {
+    objectives: string;
+    motivations: string;
+    qualifications: string;
+    givenName: string;
+    paymentAddress: string;
+    doNotList: boolean;
+    references?: Array<{
+        "@type": string;
+        label: string;
+        uri: string;
+    }>;
+}
+
 export interface DRepDelegationData {
     timeline: DRepTimeline;
     drepInfo: DRepInfo;
+    metadata?: DRepMetadata;
 }
 
 export interface DRepVotingData {
