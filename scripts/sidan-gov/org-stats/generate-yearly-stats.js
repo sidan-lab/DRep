@@ -8,12 +8,16 @@ async function fetchGitHubStats(githubToken) {
     const config = getConfig();
     const repoRoot = getRepoRoot();
 
-    // Search for @sidan-lab/sidan-csl-rs-browser in package.json
+    // Use the first npm package as the main one
+    const mainPkgKey = Object.keys(config.npmPackages)[0];
+    const mainPkgName = config.npmPackages[mainPkgKey];
+
+    // Search for the main package in package.json
     const corePackageJsonResponse = await axios.get(
         'https://api.github.com/search/code',
         {
             params: {
-                q: `"${config.npmPackages.core}" in:file filename:package.json`
+                q: `"${mainPkgName}" in:file filename:package.json`
             },
             headers: {
                 'Accept': 'application/vnd.github.v3+json',
@@ -22,12 +26,12 @@ async function fetchGitHubStats(githubToken) {
         }
     );
 
-    // Search for @sidan-lab/sidan-csl-rs-browser in any file
+    // Search for the main package in any file
     const coreAnyFileResponse = await axios.get(
         'https://api.github.com/search/code',
         {
             params: {
-                q: `"${config.npmPackages.core}"`
+                q: `"${mainPkgName}"`
             },
             headers: {
                 'Accept': 'application/vnd.github.v3+json',
@@ -178,10 +182,10 @@ async function main() {
             }
 
             // Fetch monthly downloads for all packages
-            const monthlyDownloads = {
-                core: await fetchMonthlyDownloads(config.npmPackages.core, year)
-            };
-
+            const monthlyDownloads = {};
+            for (const [key, pkgName] of Object.entries(config.npmPackages)) {
+                monthlyDownloads[key] = await fetchMonthlyDownloads(pkgName, year);
+            }
             // Generate and save JSON stats
             const statsData = generateYearlyStatsJson(year, monthlyDownloads, monthlyGitHubStats);
             saveStatsJson(statsData);

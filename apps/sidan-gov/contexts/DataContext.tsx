@@ -164,9 +164,37 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
             const delegationData = await fetchData(`${BASE_URL}/${config.outputPaths.drepVotingDir}/drep-delegation-info.json`);
             // console.log('Received delegation data:', delegationData);
 
+            // Fetch metadata if meta_url is available
+            let metadata = null;
+            if (delegationData?.drepInfo?.meta_url) {
+                try {
+                    // console.log('Fetching metadata from:', delegationData.drepInfo.meta_url);
+                    const metadataResponse = await fetch(delegationData.drepInfo.meta_url);
+                    if (metadataResponse.ok) {
+                        const metadataData = await metadataResponse.json();
+                        // Extract the relevant fields from the metadata
+                        metadata = {
+                            objectives: metadataData.body?.objectives || '',
+                            motivations: metadataData.body?.motivations || '',
+                            qualifications: metadataData.body?.qualifications || '',
+                            givenName: metadataData.body?.givenName || '',
+                            paymentAddress: metadataData.body?.paymentAddress || '',
+                            doNotList: metadataData.body?.doNotList || false,
+                            references: metadataData.body?.references || []
+                        };
+                        // console.log('Fetched metadata:', metadata);
+                    }
+                } catch (metadataError) {
+                    console.warn('Failed to fetch metadata:', metadataError);
+                }
+            }
+
             const newData: DRepVotingData = {
                 votes: allVotes,
-                delegationData: delegationData || null,
+                delegationData: delegationData ? {
+                    ...delegationData,
+                    metadata
+                } : null,
                 lastFetched: Date.now()
             };
 

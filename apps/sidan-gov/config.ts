@@ -13,7 +13,7 @@ interface OrgStatsConfig {
         dependentsCountRepo: string;
     };
     npmPackages: {
-        core: string;
+        [key: string]: string;
     };
     outputPaths: {
         baseDir: string;

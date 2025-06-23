@@ -2,7 +2,7 @@ import DRepVotingList from '../components/DRepVotingList';
 import { useData } from '../contexts/DataContext';
 import styles from '../styles/Voting.module.css';
 import PageHeader from '../components/PageHeader';
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo } from 'react';
 import { useRouter } from 'next/router';
 import VotingDonutChart from '../components/VotingDonutChart';
 import DelegationGrowthChart from '../components/DelegationGrowthChart';
@@ -11,22 +11,6 @@ import VotingParticipationDonut from '../components/VotingParticipationDonut';
 import DRepMetricsSection from '../components/DRepMetricsSection';
 import { CopyIcon } from '../components/Icons';
 import config from '../config';
-
-interface VoteData {
-    proposalId: string;
-    proposalTxHash: string;
-    proposalIndex: number;
-    voteTxHash: string;
-    blockTime: string;
-    vote: 'Yes' | 'No' | 'Abstain';
-    metaUrl: string | null;
-    metaHash: string | null;
-    proposalTitle: string;
-    proposalType: string;
-    proposedEpoch: number;
-    expirationEpoch: number;
-    rationale: string;
-}
 
 export default function DRepVoting() {
     const { drepVotingData, isLoading, error } = useData();
@@ -170,7 +154,7 @@ export default function DRepVoting() {
             </div>
         );
     }
-console.log('drepVotingData', drepVotingData)
+    console.log('drepVotingData', drepVotingData)
     return (
         <div className={styles.container}>
             <PageHeader
@@ -186,9 +170,10 @@ console.log('drepVotingData', drepVotingData)
             />
 
             <div className={styles.bioSection}>
-                <h2 className={styles.bioTitle}>About {config.organization.displayName} DRep</h2>
+                <h2 className={styles.bioTitle}>{config.organization.displayName} DRep Motivation</h2>
                 <p className={styles.bioContent}>
-                    {config.organization.displayName} is an open-source project focused on building quality developer tools for Web3 builders at the Cardano Ecosystem. The {config.organization.displayName} DRep is operated collectively by core {config.organization.displayName} contributors. Our votes are submitted and signed onchain via a Multisignature account.
+                    {drepVotingData?.delegationData?.metadata?.motivations ||
+                        'No motivations data available from blockchain'}
                 </p>
                 <div className={styles.drepId} onClick={handleCopyDrepId}>
                     <span className={styles.drepIdIndicator}></span>
@@ -207,19 +192,15 @@ console.log('drepVotingData', drepVotingData)
                 <div className={styles.infoCard}>
                     <h3 className={styles.infoCardTitle}>Objectives</h3>
                     <p className={styles.infoCardContent}>
-                        We are a no-drama, no-politics DRep. We dont engage in public disputes nor do we take side with any political entities or parties. We prefer writing code over tweeting, and contributing over disrupting
-                    </p>
-                </div>
-                <div className={styles.infoCard}>
-                    <h3 className={styles.infoCardTitle}>Motivation</h3>
-                    <p className={styles.infoCardContent}>
-                        The biggest threat to Governance is apathy, or worse, uninformed engagement. As long-time Cardano builders, we see it as our responsibility to participate meaningfully in Cardanos governance. It matters to us because we build on it every day
+                        {drepVotingData?.delegationData?.metadata?.objectives ||
+                            'No objectives data available from blockchain'}
                     </p>
                 </div>
                 <div className={styles.infoCard}>
                     <h3 className={styles.infoCardTitle}>Qualification</h3>
                     <p className={styles.infoCardContent}>
-                        We have been building non-stop on Cardano for years. We are experienced developers with a deep personal and professional stake in the ecosystem. Governance affects our work and our future, so we are here to help guide it with integrity and care
+                        {drepVotingData?.delegationData?.metadata?.qualifications ||
+                            'No qualifications data available from blockchain'}
                     </p>
                 </div>
             </div>

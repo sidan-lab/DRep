@@ -97,21 +97,50 @@ export interface CurrentStats {
         core_in_repositories: number;
     };
     npm: {
-        downloads: {
-            core_package_last_12_months: number;
-            last_day: number;
-            last_week: number;
-            last_month: number;
-            last_year: number;
+        sidan_csl_rs_browser: {
+            downloads: {
+                last_12_months: number;
+                last_day: number;
+                last_week: number;
+                last_month: number;
+                last_year: number;
+            };
+            latest_version: string;
+            dependents_count: number;
         };
-        react_package_downloads: number;
-        transaction_package_downloads: number;
-        wallet_package_downloads: number;
-        provider_package_downloads: number;
-        core_csl_package_downloads: number;
-        core_cst_package_downloads: number;
-        latest_version: string;
-        dependents_count: number;
+        sidan_csl_rs_nodejs: {
+            downloads: {
+                last_12_months: number;
+                last_day: number;
+                last_week: number;
+                last_month: number;
+                last_year: number;
+            };
+            latest_version: string;
+            dependents_count: number;
+        };
+        whisky_js_browser: {
+            downloads: {
+                last_12_months: number;
+                last_day: number;
+                last_week: number;
+                last_month: number;
+                last_year: number;
+            };
+            latest_version: string;
+            dependents_count: number;
+        };
+        whisky_js_nodejs: {
+            downloads: {
+                last_12_months: number;
+                last_day: number;
+                last_week: number;
+                last_month: number;
+                last_year: number;
+            };
+            latest_version: string;
+            dependents_count: number;
+        };
     };
     urls: {
         npm_stat_url: string;
@@ -163,9 +192,24 @@ export interface DRepInfo {
     last_updated: string;
 }
 
+export interface DRepMetadata {
+    objectives: string;
+    motivations: string;
+    qualifications: string;
+    givenName: string;
+    paymentAddress: string;
+    doNotList: boolean;
+    references?: Array<{
+        "@type": string;
+        label: string;
+        uri: string;
+    }>;
+}
+
 export interface DRepDelegationData {
     timeline: DRepTimeline;
     drepInfo: DRepInfo;
+    metadata?: DRepMetadata;
 }
 
 export interface DRepVotingData {
@@ -243,7 +287,7 @@ export interface DataContextType {
     refetchData: () => Promise<void>;
 }
 
-export interface MeshStatsViewProps {
+export interface OrgStatsViewProps {
     currentStats: CurrentStats;
     yearlyStats: Record<number, YearlyStats>;
     filteredStats?: FilteredStats;

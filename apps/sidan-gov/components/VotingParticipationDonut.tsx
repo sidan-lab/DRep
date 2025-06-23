@@ -138,8 +138,6 @@ export default function VotingParticipationDonut({ totalProposals, votedProposal
         setActiveSegment(null);
     };
 
-    const participationRate = ((votedProposals / totalProposals) * 100).toFixed(0);
-
     return (
         <div className={styles.donutChartContainer}>
             <div className={styles.chartHeader}>

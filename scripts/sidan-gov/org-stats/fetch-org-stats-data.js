@@ -27,12 +27,16 @@ export async function fetchSidanStats(githubToken) {
     const repoRoot = getRepoRoot();
     console.log('Fetching GitHub statistics...');
 
-    // Search for @sidan-lab/sidan-csl-rs-browser in package.json
+    // GitHub stats (still only for one main package, e.g., csl_rs_browser)
+    // You may want to generalize this too, but for now, keep as is or pick the first package as the main one
+    const mainPkgKey = Object.keys(config.npmPackages)[0];
+    const mainPkgName = config.npmPackages[mainPkgKey];
+
     const corePackageJsonResponse = await axios.get(
         'https://api.github.com/search/code',
         {
             params: {
-                q: `"${config.npmPackages.core}" in:file filename:package.json`
+                q: `"${mainPkgName}" in:file filename:package.json`
             },
             headers: {
                 'Accept': 'application/vnd.github.v3+json',
@@ -42,12 +46,11 @@ export async function fetchSidanStats(githubToken) {
     );
     console.log('GitHub package.json mentions:', corePackageJsonResponse.data.total_count);
 
-    // Search for @sidan-lab/sidan-csl-rs-browser in any file
     const coreAnyFileResponse = await axios.get(
         'https://api.github.com/search/code',
         {
             params: {
-                q: `"${config.npmPackages.core}"`
+                q: `"${mainPkgName}"`
             },
             headers: {
                 'Accept': 'application/vnd.github.v3+json',
@@ -151,68 +154,53 @@ export async function fetchSidanStats(githubToken) {
     const lastYearEnd = new Date(lastYear.getFullYear(), 11, 31); // December 31st of last year
 
     const formatDate = date => date.toISOString().split('T')[0];
-    const getDownloads = async (startDate, endDate) => {
-        const response = await axios.get(
-            `https://api.npmjs.org/downloads/point/${startDate}:${endDate}/${config.npmPackages.core}`
+
+    // Fetch NPM stats for all packages
+    const npmStats = {};
+    for (const [key, pkgName] of Object.entries(config.npmPackages)) {
+        // Downloads
+        const getDownloads = async (startDate, endDate) => {
+            const response = await axios.get(
+                `https://api.npmjs.org/downloads/point/${startDate}:${endDate}/${pkgName}`
+            );
+            return response.data.downloads;
+        };
+        const lastDayDownloads = await getDownloads(formatDate(lastDay), formatDate(currentDate));
+        const lastWeekDownloads = await getDownloads(formatDate(lastWeekStart), formatDate(lastWeekEnd));
+        const lastMonthDownloads = await getDownloads(formatDate(lastMonthStart), formatDate(lastMonthEnd));
+        const lastYearDownloads = await getDownloads(formatDate(lastYearStart), formatDate(lastYearEnd));
+        const yearDownloadsResp = await axios.get(`https://api.npmjs.org/downloads/point/last-year/${pkgName}`);
+        // Version
+        const packageInfo = await axios.get(`https://registry.npmjs.org/${pkgName}`);
+        const latestVersion = packageInfo.data['dist-tags'].latest;
+        // Dependents
+        const dependentsResponse = await axios.get(
+            'https://registry.npmjs.org/-/v1/search',
+            { params: { text: `dependencies:${pkgName}`, size: 1 } }
         );
-        return response.data.downloads;
-    };
-
-    const lastDayDownloads = await getDownloads(formatDate(lastDay), formatDate(currentDate));
-    const lastWeekDownloads = await getDownloads(formatDate(lastWeekStart), formatDate(lastWeekEnd));
-    const lastMonthDownloads = await getDownloads(formatDate(lastMonthStart), formatDate(lastMonthEnd));
-    const lastYearDownloads = await getDownloads(formatDate(lastYearStart), formatDate(lastYearEnd));
-
-    const corePackageDownloads = await axios.get(`https://api.npmjs.org/downloads/point/last-year/${config.npmPackages.core}`);
-
-    console.log('NPM Downloads:');
-    console.log('- Last 24 Hours:', lastDayDownloads);
-    console.log('- Last Week:', lastWeekDownloads);
-    console.log('- Last Month:', lastMonthDownloads);
-    console.log('- Last Year:', lastYearDownloads);
-    console.log('- Core Package Last Year:', corePackageDownloads.data.downloads);
-
-    // Get package version info
-    const packageInfo = await axios.get(`https://registry.npmjs.org/${config.npmPackages.core}`);
-    const latestVersion = packageInfo.data['dist-tags'].latest;
-    console.log('Latest Version:', latestVersion);
-
-    // Get dependents count from the npm registry (separate from the scraped value)
-    const dependentsResponse = await axios.get(
-        'https://registry.npmjs.org/-/v1/search',
-        {
-            params: { text: `dependencies:${config.npmPackages.core}`, size: 1 }
-        }
-    );
-    console.log('Total Dependents from npm:', dependentsResponse.data.total);
-
-    // Create npm-stat URLs
-    const currentDateStr = currentDate.toISOString().split('T')[0];
-    const oneYearAgo = new Date(currentDate);
-    oneYearAgo.setFullYear(oneYearAgo.getFullYear() - 1);
-    const oneYearAgoStr = oneYearAgo.toISOString().split('T')[0];
-
-    const npmStatUrl = `https://npm-stat.com/charts.html?package=${config.npmPackages.core}&from=${oneYearAgoStr}&to=${currentDateStr}`;
-
-    return {
-        github: {
-            core_in_package_json: finalDependentsCount,
-            core_in_any_file: coreAnyFileResponse.data.total_count,
-            core_in_repositories: finalDependentsCount
-        },
-        npm: {
+        npmStats[key] = {
             downloads: {
                 last_day: lastDayDownloads,
                 last_week: lastWeekDownloads,
                 last_month: lastMonthDownloads,
                 last_year: lastYearDownloads,
-                core_package_last_12_months: corePackageDownloads.data.downloads
+                last_12_months: yearDownloadsResp.data.downloads
             },
             latest_version: latestVersion,
             dependents_count: dependentsResponse.data.total
+        };
+    }
+
+    // Compose return object
+    return {
+        github: {
+            core_in_package_json: corePackageJsonResponse.data.total_count,
+            core_in_any_file: coreAnyFileResponse.data.total_count,
+            core_in_repositories: finalDependentsCount
         },
+        npm: npmStats,
         urls: {
-            npm_stat_url: npmStatUrl
+            // Optionally, add npm-stat URLs for each package
         }
     };
 }
