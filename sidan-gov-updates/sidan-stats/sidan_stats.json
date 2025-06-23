@@ -1,38 +1,71 @@
 {
   "github": {
-    "core_in_package_json": 236,
+    "core_in_package_json": 2,
     "core_in_any_file": 51,
     "core_in_repositories": 236
   },
   "npm": {
-    "downloads": {
-      "last_day": 126,
-      "last_week": 895,
-      "last_month": 4842,
-      "last_year": 25971,
-      "core_package_last_12_months": 50319
+    "csl_rs_browser": {
+      "downloads": {
+        "last_day": 24,
+        "last_week": 1045,
+        "last_month": 4842,
+        "last_year": 25971,
+        "last_12_months": 50687
+      },
+      "latest_version": "0.9.21",
+      "dependents_count": 446138
     },
-    "latest_version": "0.9.21",
-    "dependents_count": 445779
+    "csl_rs_nodejs": {
+      "downloads": {
+        "last_day": 25,
+        "last_week": 1059,
+        "last_month": 4740,
+        "last_year": 26085,
+        "last_12_months": 51094
+      },
+      "latest_version": "0.9.21",
+      "dependents_count": 300867
+    },
+    "whisky_js_browser": {
+      "downloads": {
+        "last_day": 8,
+        "last_week": 199,
+        "last_month": 613,
+        "last_year": 0,
+        "last_12_months": 1828
+      },
+      "latest_version": "1.0.6",
+      "dependents_count": 1116127
+    },
+    "whisky_js_nodejs": {
+      "downloads": {
+        "last_day": 7,
+        "last_week": 200,
+        "last_month": 610,
+        "last_year": 0,
+        "last_12_months": 1799
+      },
+      "latest_version": "1.0.6",
+      "dependents_count": 987982
+    }
   },
-  "urls": {
-    "npm_stat_url": "https://npm-stat.com/charts.html?package=@sidan-lab/sidan-csl-rs-browser&from=2024-06-20&to=2025-06-20"
-  },
+  "urls": {},
   "contributors": {
-    "unique_count": 146,
+    "unique_count": 147,
     "contributors": [
       {
         "login": "HinsonSIDAN",
         "avatar_url": "https://avatars.githubusercontent.com/u/90688504?v=4",
-        "commits": 823,
+        "commits": 824,
         "pull_requests": 107,
-        "contributions": 930,
+        "contributions": 931,
         "repositories": [
           {
             "name": "whisky",
-            "commits": 258,
+            "commits": 259,
             "pull_requests": 69,
-            "contributions": 327
+            "contributions": 328
           },
           {
             "name": "mesh",
@@ -2612,10 +2645,25 @@
             "contributions": 1
           }
         ]
+      },
+      {
+        "login": "Andre-Diamond",
+        "avatar_url": "https://avatars.githubusercontent.com/u/32074058?v=4",
+        "commits": 1,
+        "pull_requests": 0,
+        "contributions": 1,
+        "repositories": [
+          {
+            "name": "DRep",
+            "commits": 1,
+            "pull_requests": 0,
+            "contributions": 1
+          }
+        ]
       }
     ],
     "total_pull_requests": 183,
-    "total_commits": 3025,
-    "total_contributions": 3208
+    "total_commits": 3027,
+    "total_contributions": 3210
   }
 }
