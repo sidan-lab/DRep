@@ -5,29 +5,33 @@ export function processYearlyStats(year, monthlyDownloads, githubStats) {
     ];
 
     // Calculate yearly totals for each package
-    const yearlyTotals = {
-        core: monthlyDownloads.core.reduce((sum, m) => sum + m.downloads, 0)
-    };
+    const yearlyTotals = {};
+    for (const [pkgKey, pkgDownloads] of Object.entries(monthlyDownloads)) {
+        yearlyTotals[pkgKey] = pkgDownloads.reduce((sum, m) => sum + m.downloads, 0);
+    }
 
     // Process core package monthly downloads with trends
     const currentDate = new Date();
     const currentYear = currentDate.getFullYear();
     const currentMonth = currentDate.getMonth() + 1;
-    const maxDownloads = Math.max(...monthlyDownloads.core.map(m => m.downloads));
 
-    const processedMonthlyDownloads = monthlyDownloads.core.map(m => {
-        const trend = (year < currentYear || (year === currentYear && m.month <= currentMonth))
-            ? (m.downloads === maxDownloads ? '🔥' :
-                m.downloads > monthlyDownloads.core[m.month - 2]?.downloads ? '📈' :
-                    m.downloads < monthlyDownloads.core[m.month - 2]?.downloads ? '📉' : '➡️')
-            : '➡️';
-
-        return {
-            month: monthNames[m.month - 1],
-            downloads: m.downloads,
-            trend
-        };
-    });
+    // Process monthly downloads for each package
+    const processedMonthlyDownloads = {};
+    for (const [pkgKey, pkgDownloads] of Object.entries(monthlyDownloads)) {
+        const maxDownloads = Math.max(...pkgDownloads.map(m => m.downloads));
+        processedMonthlyDownloads[pkgKey] = pkgDownloads.map(m => {
+            const trend = (year < currentYear || (year === currentYear && m.month <= currentMonth))
+                ? (m.downloads === maxDownloads ? '🔥' :
+                    m.downloads > pkgDownloads[m.month - 2]?.downloads ? '📈' :
+                        m.downloads < pkgDownloads[m.month - 2]?.downloads ? '📉' : '➡️')
+                : '➡️';
+            return {
+                month: monthNames[m.month - 1],
+                downloads: m.downloads,
+                trend
+            };
+        });
+    }
 
     // Process GitHub stats
     const processedGithubStats = monthNames.map(month => {
@@ -48,12 +52,16 @@ export function processYearlyStats(year, monthlyDownloads, githubStats) {
         };
     });
 
-    // Find peak month
-    const maxMonth = monthlyDownloads.core.find(m => m.downloads === maxDownloads);
-    const peakMonth = {
-        name: monthNames[maxMonth.month - 1],
-        downloads: maxDownloads
-    };
+    // Find peak month for each package
+    const peakMonth = {};
+    for (const [pkgKey, pkgDownloads] of Object.entries(monthlyDownloads)) {
+        const maxDownloads = Math.max(...pkgDownloads.map(m => m.downloads));
+        const maxMonth = pkgDownloads.find(m => m.downloads === maxDownloads);
+        peakMonth[pkgKey] = {
+            name: monthNames[maxMonth.month - 1],
+            downloads: maxDownloads
+        };
+    }
 
     return {
         year,

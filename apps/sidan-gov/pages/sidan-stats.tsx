@@ -55,25 +55,20 @@ export default function SidanStats() {
                         <div className={styles.quickActions}>
                             <h2>NPM Package Downloads</h2>
                             <div className={styles.actionGrid}>
-                                <div className={styles.actionCard}>
-                                    <h3>Core Package</h3>
-                                    <p><strong>Last 12 Months:</strong> {currentStats.npm.downloads.core_package_last_12_months.toLocaleString()}</p>
-                                    <p><strong>Last Day:</strong> {currentStats.npm.downloads.last_day.toLocaleString()}</p>
-                                    <p><strong>Last Week:</strong> {currentStats.npm.downloads.last_week.toLocaleString()}</p>
-                                    <p><strong>Last Month:</strong> {currentStats.npm.downloads.last_month.toLocaleString()}</p>
-                                </div>
-                                <div className={styles.actionCard}>
-                                    <h3>React Package</h3>
-                                    <p><strong>Downloads:</strong> {currentStats.npm.react_package_downloads.toLocaleString()}</p>
-                                </div>
-                                <div className={styles.actionCard}>
-                                    <h3>Transaction Package</h3>
-                                    <p><strong>Downloads:</strong> {currentStats.npm.transaction_package_downloads.toLocaleString()}</p>
-                                </div>
-                                <div className={styles.actionCard}>
-                                    <h3>Wallet Package</h3>
-                                    <p><strong>Downloads:</strong> {currentStats.npm.wallet_package_downloads.toLocaleString()}</p>
-                                </div>
+                                {Object.entries(currentStats.npm).map(([key, pkg]) => (
+                                    typeof pkg === 'object' && pkg.downloads && pkg.latest_version !== undefined && pkg.dependents_count !== undefined ? (
+                                        <div className={styles.actionCard} key={key}>
+                                            <h3>{key.replace(/_/g, '-')}</h3>
+                                            <p><strong>Last 12 Months:</strong> {pkg.downloads.last_12_months.toLocaleString()}</p>
+                                            <p><strong>Last Day:</strong> {pkg.downloads.last_day.toLocaleString()}</p>
+                                            <p><strong>Last Week:</strong> {pkg.downloads.last_week.toLocaleString()}</p>
+                                            <p><strong>Last Month:</strong> {pkg.downloads.last_month.toLocaleString()}</p>
+                                            <p><strong>Last Year:</strong> {pkg.downloads.last_year.toLocaleString()}</p>
+                                            <p><strong>Latest Version:</strong> {pkg.latest_version}</p>
+                                            <p><strong>Dependents:</strong> {pkg.dependents_count}</p>
+                                        </div>
+                                    ) : null
+                                ))}
                             </div>
                         </div>
 
@@ -101,9 +96,6 @@ export default function SidanStats() {
                                 <div key={year} className={styles.actionCard}>
                                     <h3>Year {year}</h3>
                                     <p><strong>Core Downloads:</strong> {stats.yearlyTotals.core.toLocaleString()}</p>
-                                    <p><strong>React Downloads:</strong> {stats.yearlyTotals.react.toLocaleString()}</p>
-                                    <p><strong>Transaction Downloads:</strong> {stats.yearlyTotals.transaction.toLocaleString()}</p>
-                                    <p><strong>Wallet Downloads:</strong> {stats.yearlyTotals.wallet.toLocaleString()}</p>
                                     <p><strong>Peak Month:</strong> {stats.peakMonth.name} ({stats.peakMonth.downloads.toLocaleString()})</p>
                                 </div>
                             ))}

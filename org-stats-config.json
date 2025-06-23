@@ -9,7 +9,10 @@
         "dependentsCountRepo": "whisky"
     },
     "npmPackages": {
-        "core": "@sidan-lab/sidan-csl-rs-browser"
+        "csl_rs_browser": "@sidan-lab/sidan-csl-rs-browser",
+        "csl_rs_nodejs": "@sidan-lab/sidan-csl-rs-nodejs",
+        "whisky_js_browser": "@sidan-lab/whisky-js-browser",
+        "whisky_js_nodejs": "@sidan-lab/whisky-js-nodejs"
     },
     "outputPaths": {
         "baseDir": "sidan-gov-updates",

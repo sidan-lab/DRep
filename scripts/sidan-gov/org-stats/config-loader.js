@@ -46,8 +46,8 @@ export function loadConfig() {
         if (!config.repositories?.main) {
             throw new Error('Config must contain repositories.main');
         }
-        if (!config.npmPackages?.core) {
-            throw new Error('Config must contain npmPackages.core');
+        if (!config.npmPackages || Object.keys(config.npmPackages).length === 0) {
+            throw new Error('Config must contain at least one npm package in npmPackages');
         }
 
         console.log(`Loaded config from: ${configPath}`);

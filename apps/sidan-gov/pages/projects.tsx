@@ -98,28 +98,20 @@ export default function Projects() {
                     <div className={styles.quickActions}>
                         <h2>NPM Packages</h2>
                         <div className={styles.actionGrid}>
-                            <div className={styles.actionCard}>
-                                <h3>Core Package</h3>
-                                <p><strong>Latest Version:</strong> {currentStats.npm.latest_version}</p>
-                                <p><strong>Dependents:</strong> {currentStats.npm.dependents_count.toLocaleString()}</p>
-                                <p><strong>Downloads (12 months):</strong> {currentStats.npm.downloads.core_package_last_12_months.toLocaleString()}</p>
-                                <p><strong>NPM:</strong> <a href="https://www.npmjs.com/package/@meshsdk/core" target="_blank" rel="noopener noreferrer">View Package</a></p>
-                            </div>
-                            <div className={styles.actionCard}>
-                                <h3>React Package</h3>
-                                <p><strong>Downloads:</strong> {currentStats.npm.react_package_downloads.toLocaleString()}</p>
-                                <p><strong>NPM:</strong> <a href="https://www.npmjs.com/package/@meshsdk/react" target="_blank" rel="noopener noreferrer">View Package</a></p>
-                            </div>
-                            <div className={styles.actionCard}>
-                                <h3>Transaction Package</h3>
-                                <p><strong>Downloads:</strong> {currentStats.npm.transaction_package_downloads.toLocaleString()}</p>
-                                <p><strong>NPM:</strong> <a href="https://www.npmjs.com/package/@meshsdk/transaction" target="_blank" rel="noopener noreferrer">View Package</a></p>
-                            </div>
-                            <div className={styles.actionCard}>
-                                <h3>Wallet Package</h3>
-                                <p><strong>Downloads:</strong> {currentStats.npm.wallet_package_downloads.toLocaleString()}</p>
-                                <p><strong>NPM:</strong> <a href="https://www.npmjs.com/package/@meshsdk/wallet" target="_blank" rel="noopener noreferrer">View Package</a></p>
-                            </div>
+                            {Object.entries(currentStats.npm).map(([key, pkg]) => (
+                                typeof pkg === 'object' && pkg.downloads && pkg.latest_version !== undefined && pkg.dependents_count !== undefined ? (
+                                    <div className={styles.actionCard} key={key}>
+                                        <h3>{key.replace(/_/g, '-')}</h3>
+                                        <p><strong>Last 12 Months:</strong> {pkg.downloads.last_12_months.toLocaleString()}</p>
+                                        <p><strong>Last Day:</strong> {pkg.downloads.last_day.toLocaleString()}</p>
+                                        <p><strong>Last Week:</strong> {pkg.downloads.last_week.toLocaleString()}</p>
+                                        <p><strong>Last Month:</strong> {pkg.downloads.last_month.toLocaleString()}</p>
+                                        <p><strong>Last Year:</strong> {pkg.downloads.last_year.toLocaleString()}</p>
+                                        <p><strong>Latest Version:</strong> {pkg.latest_version}</p>
+                                        <p><strong>Dependents:</strong> {pkg.dependents_count}</p>
+                                    </div>
+                                ) : null
+                            ))}
                         </div>
                     </div>
                 )}
