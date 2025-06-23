@@ -31,8 +31,11 @@ jobs:
     - name: Check for changes
       id: git-check
       run: |
-        git status --porcelain
-        echo "changes=$(git status --porcelain | wc -l)" >> $GITHUB_OUTPUT
+        # Create .gitignore to exclude node_modules
+        echo "node_modules/" > scripts/sidan-gov/.gitignore
+        # Check for changes in voting files specifically
+        git status --porcelain sidan-gov-updates/drep-voting/*.json
+        echo "changes=$(git status --porcelain sidan-gov-updates/drep-voting/*.json | wc -l)" >> $GITHUB_OUTPUT
 
     - name: Commit files
       if: steps.git-check.outputs.changes > 0
@@ -48,3 +51,8 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         branch: ${{ github.ref }}
+        
+    - name: No changes message
+      if: steps.git-check.outputs.changes == 0
+      run: |
+        echo "No updates needed - voting history is up to date"
