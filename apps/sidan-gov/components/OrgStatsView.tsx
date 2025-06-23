@@ -238,7 +238,7 @@ const CustomSingleLineChart = ({ data, chartId, dataKey, name, stroke, yAxisDoma
 );
 
 const OrgStatsView: FC<OrgStatsViewProps> = ({ currentStats, yearlyStats, discordStats, contributorsData }) => {
-    // Use all Sidan package data
+    // Use all Sidan package data for summary cards
     const packageData = currentStats?.npm
         ? Object.entries(currentStats.npm)
             .filter(([_, pkg]) => pkg && typeof pkg === 'object' && pkg.downloads && pkg.downloads.last_12_months !== undefined)
@@ -251,13 +251,9 @@ const OrgStatsView: FC<OrgStatsViewProps> = ({ currentStats, yearlyStats, discor
     const years = Object.keys(yearlyStats || {}).map(Number).sort((a, b) => b - a);
     const latestYear = years[0];
 
-    // Use all monthly data
-    const monthlyData = latestYear && yearlyStats?.[latestYear]?.monthlyDownloads
-        ? yearlyStats[latestYear].monthlyDownloads.map((month: YearlyStats['monthlyDownloads'][0]) => ({
-            name: month.month,
-            downloads: month.downloads,
-            trend: month.trend
-        }))
+    // Use all monthly data for all packages
+    const monthlyDataByPackage = latestYear && yearlyStats?.[latestYear]?.monthlyDownloads
+        ? Object.entries(yearlyStats[latestYear].monthlyDownloads)
         : [];
 
     // Get the current year's repositories data up to current month
@@ -425,26 +421,17 @@ const OrgStatsView: FC<OrgStatsViewProps> = ({ currentStats, yearlyStats, discor
                 </>
             )}
 
-            {packageData.length > 0 && monthlyData.length > 0 && (
-                <>
-                    <div className={styles.chartsGrid}>
-                        <div className={styles.chartSection}>
-                            <h2>Package Downloads (Last 12 Months)</h2>
+            {monthlyDataByPackage.length > 0 && (
+                <div className={styles.chartsGrid}>
+                    {monthlyDataByPackage.map(([pkgKey, monthlyData]) => (
+                        <div className={styles.chartSection} key={pkgKey}>
+                            <h2>{pkgKey.replace(/_/g, '-')} Monthly Downloads ({latestYear})</h2>
                             <div className={styles.chart}>
-                                <CustomBarChart data={packageData} chartId="package" />
+                                <CustomBarChart data={Array.isArray(monthlyData) ? monthlyData : [monthlyData]} chartId={`monthly-${pkgKey}`} />
                             </div>
                         </div>
-
-                        <div className={styles.chartSection}>
-                            <h2>Monthly Downloads ({latestYear})</h2>
-                            <div className={styles.chart}>
-                                <CustomBarChart data={monthlyData} chartId="monthly" />
-                            </div>
-                        </div>
-
-                    </div>
-                </>
-
+                    ))}
+                </div>
             )}
 
             {currentStats?.github && (
@@ -472,7 +459,7 @@ const OrgStatsView: FC<OrgStatsViewProps> = ({ currentStats, yearlyStats, discor
                 </div>
             )}
 
-            {packageData.length > 0 && monthlyData.length > 0 && (
+            {packageData.length > 0 && monthlyDataByPackage.length > 0 && (
                 <div className={styles.chartSection}>
                     <h2>Repositories that depend on @meshsdk/core ({new Date().getFullYear()})</h2>
                     <div className={styles.chart}>
