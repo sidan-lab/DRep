@@ -176,10 +176,15 @@ async function main() {
     // Update DRep info
     existingData.drepInfo = {
         drepId: drepId,
+        hex: drepInfo?.hex || 'N/A',
+        has_script: drepInfo?.has_script || false,
+        deposit: drepInfo?.deposit || 'N/A',
         amount: drepInfo?.amount || 'N/A',
         active: drepInfo?.active || false,
         registered: drepInfo?.registered || false,
         expires_epoch_no: drepInfo?.expires_epoch_no || 0,
+        meta_url: drepInfo?.meta_url || 'N/A',
+        meta_hash: drepInfo?.meta_hash || 'N/A',
         last_updated: new Date().toISOString()
     };
 
