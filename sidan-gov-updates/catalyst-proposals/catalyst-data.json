@@ -1,6 +1,35 @@
 {
-  "timestamp": "2025-06-24T08:33:36.453Z",
+  "timestamp": "2025-06-24T08:38:05.587Z",
   "projects": [
+    {
+      "projectDetails": {
+        "id": 280,
+        "title": "Aiken Open-Source Smart Contract Library [by MeshJS & TrustLevel]",
+        "budget": 113200,
+        "milestones_qty": 4,
+        "funds_distributed": 113200,
+        "project_id": 1100022,
+        "challenges": {
+          "id": 24,
+          "title": "F11: Cardano Open: Developers",
+          "created_at": "2024-02-16T09:09:45.496157+00:00",
+          "fund_id": 3
+        },
+        "name": "Aiken Open-Source Smart Contract Library [by MeshJS & TrustLevel]",
+        "category": "F11: Cardano Open: Developers",
+        "url": "https://projectcatalyst.io/funds/11/cardano-open-developers/aiken-open-source-smart-contract-library-by-meshjs-and-trustlevel",
+        "status": "In Progress",
+        "finished": "",
+        "voting": {
+          "proposalId": 12851,
+          "yes_votes_count": 286649942,
+          "no_votes_count": null,
+          "abstain_votes_count": 17836629,
+          "unique_wallets": 711
+        }
+      },
+      "milestonesCompleted": 4
+    },
     {
       "projectDetails": {
         "id": 369,
@@ -29,6 +58,35 @@
         }
       },
       "milestonesCompleted": 5
+    },
+    {
+      "projectDetails": {
+        "id": 399,
+        "title": "Gimbalabs | Genius X - Hong Kong Cardano Developer Series",
+        "budget": 200000,
+        "milestones_qty": 6,
+        "funds_distributed": 200000,
+        "project_id": 1100141,
+        "challenges": {
+          "id": 24,
+          "title": "F11: Cardano Open: Developers",
+          "created_at": "2024-02-16T09:09:45.496157+00:00",
+          "fund_id": 3
+        },
+        "name": "Gimbalabs | Genius X - Hong Kong Cardano Developer Series",
+        "category": "F11: Cardano Open: Developers",
+        "url": "https://projectcatalyst.io/funds/11/cardano-open-developers/gimbalabs-or-genius-x-hong-kong-cardano-developer-series",
+        "status": "In Progress",
+        "finished": "",
+        "voting": {
+          "proposalId": 12769,
+          "yes_votes_count": 73661695,
+          "no_votes_count": null,
+          "abstain_votes_count": 21712068,
+          "unique_wallets": 504
+        }
+      },
+      "milestonesCompleted": 6
     },
     {
       "projectDetails": {
@@ -90,6 +148,93 @@
     },
     {
       "projectDetails": {
+        "id": 654,
+        "title": "DeltaDeFi - Open Source Libraries for High Frequency Trading",
+        "budget": 200000,
+        "milestones_qty": 6,
+        "funds_distributed": 108000,
+        "project_id": 1200096,
+        "challenges": {
+          "id": 27,
+          "title": "F12: Cardano Open: Developers",
+          "created_at": "2024-07-17T10:45:44.159083+00:00",
+          "fund_id": 4
+        },
+        "name": "DeltaDeFi - Open Source Libraries for High Frequency Trading",
+        "category": "F12: Cardano Open: Developers",
+        "url": "https://projectcatalyst.io/funds/12/cardano-open-developers/deltadefi-open-source-libraries-for-high-frequency-trading",
+        "status": "In Progress",
+        "finished": "",
+        "voting": {
+          "proposalId": 13555,
+          "yes_votes_count": 116727591,
+          "no_votes_count": null,
+          "abstain_votes_count": 37453998,
+          "unique_wallets": 360
+        }
+      },
+      "milestonesCompleted": 1
+    },
+    {
+      "projectDetails": {
+        "id": 655,
+        "title": "DeltaDeFi: Pioneering High-Frequency Trading on Cardano",
+        "budget": 300000,
+        "milestones_qty": 6,
+        "funds_distributed": 255000,
+        "project_id": 1200097,
+        "challenges": {
+          "id": 30,
+          "title": "F12: Cardano Use Cases: MVP",
+          "created_at": "2024-07-17T10:46:34.67757+00:00",
+          "fund_id": 4
+        },
+        "name": "DeltaDeFi: Pioneering High-Frequency Trading on Cardano",
+        "category": "F12: Cardano Use Cases: MVP",
+        "url": "https://projectcatalyst.io/funds/12/cardano-use-cases-mvp/deltadefi-pioneering-high-frequency-trading-on-cardano",
+        "status": "In Progress",
+        "finished": "",
+        "voting": {
+          "proposalId": 13512,
+          "yes_votes_count": 77215190,
+          "no_votes_count": null,
+          "abstain_votes_count": 45760385,
+          "unique_wallets": 264
+        }
+      },
+      "milestonesCompleted": 5
+    },
+    {
+      "projectDetails": {
+        "id": 706,
+        "title": "Mesh Software as a Service",
+        "budget": 100000,
+        "milestones_qty": 5,
+        "funds_distributed": 80000,
+        "project_id": 1200148,
+        "challenges": {
+          "id": 29,
+          "title": "F12: Cardano Use Cases: Concept",
+          "created_at": "2024-07-17T10:46:18.433857+00:00",
+          "fund_id": 4
+        },
+        "name": "Mesh Software as a Service",
+        "category": "F12: Cardano Use Cases: Concept",
+        "url": "https://projectcatalyst.io/funds/12/cardano-use-cases-concept/mesh-software-as-a-service",
+        "status": "In Progress",
+        "finished": "",
+        "voting": {
+          "proposalId": 13911,
+          "yes_votes_count": 94715061,
+          "no_votes_count": null,
+          "abstain_votes_count": 38790652,
+          "unique_wallets": 262
+        }
+      },
+      "milestonesCompleted": 4
+    },
+    {
+      "projectDetails": {
         "id": 759,
         "title": "SIDAN | MeshJS - Advance Cardano SDK in Rust",
         "budget": 200000,
@@ -145,6 +290,64 @@
         }
       },
       "milestonesCompleted": 5
+    },
+    {
+      "projectDetails": {
+        "id": 802,
+        "title": "Waffle | SIDAN - Hong Kong Cardano Community",
+        "budget": 100000,
+        "milestones_qty": 4,
+        "funds_distributed": 78333.34,
+        "project_id": 1200244,
+        "challenges": {
+          "id": 28,
+          "title": "F12: Cardano Open: Ecosystem",
+          "created_at": "2024-07-17T10:46:02.807983+00:00",
+          "fund_id": 4
+        },
+        "name": "Waffle | SIDAN - Hong Kong Cardano Community",
+        "category": "F12: Cardano Open: Ecosystem",
+        "url": "https://projectcatalyst.io/funds/12/cardano-open-ecosystem/waffle-or-sidan-hong-kong-cardano-community",
+        "status": "In Progress",
+        "finished": "",
+        "voting": {
+          "proposalId": 13990,
+          "yes_votes_count": 56554146,
+          "no_votes_count": null,
+          "abstain_votes_count": 44990922,
+          "unique_wallets": 231
+        }
+      },
+      "milestonesCompleted": 2
+    },
+    {
+      "projectDetails": {
+        "id": 852,
+        "title": "Cardano Builder Fest Asia by Mesh, Socious, SIDAN, Vietnam Cardano",
+        "budget": 99016,
+        "milestones_qty": 4,
+        "funds_distributed": 84164,
+        "project_id": 1300036,
+        "challenges": {
+          "id": 34,
+          "title": "F13: Cardano Open: Ecosystem",
+          "created_at": "2024-12-18T11:32:18.952398+00:00",
+          "fund_id": 5
+        },
+        "name": "Cardano Builder Fest Asia by Mesh, Socious, SIDAN, Vietnam Cardano",
+        "category": "F13: Cardano Open: Ecosystem",
+        "url": "https://projectcatalyst.io/funds/13/cardano-open-ecosystem/cardano-builder-fest-asia-by-mesh-socious-sidan-vietnam-cardano",
+        "status": "In Progress",
+        "finished": "",
+        "voting": {
+          "proposalId": 20990,
+          "yes_votes_count": 332835647,
+          "no_votes_count": null,
+          "abstain_votes_count": 32208642,
+          "unique_wallets": 328
+        }
+      },
+      "milestonesCompleted": 4
     },
     {
       "projectDetails": {
