@@ -5,7 +5,9 @@ on:
     - cron: '20 0 * * 1'  # Runs at 00:20 UTC every Monday
     - cron: '20 0 * * 4'  # Runs at 00:20 UTC every Thursday
   workflow_dispatch:
-
+    
+permissions:
+  contents: write      # allow GITHUB_TOKEN to push
 jobs:
   fetch-delegation-info:
     runs-on: ubuntu-latest
