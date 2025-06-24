@@ -1,0 +1,112 @@
+{
+    "organization": {
+        "name": "sidan-lab",
+        "displayName": "Sidan"
+    },
+    "repositories": {
+        "main": "whisky",
+        "governance": "DRep",
+        "dependentsCountRepo": "whisky"
+    },
+    "npmPackages": {
+        "csl_rs_browser": "@sidan-lab/sidan-csl-rs-browser",
+        "csl_rs_nodejs": "@sidan-lab/sidan-csl-rs-nodejs",
+        "whisky_js_browser": "@sidan-lab/whisky-js-browser",
+        "whisky_js_nodejs": "@sidan-lab/whisky-js-nodejs"
+    },
+    "outputPaths": {
+        "baseDir": "sidan-gov-updates",
+        "statsDir": "sidan-stats",
+        "contributionsDir": "contributions",
+        "drepVotingDir": "drep-voting",
+        "catalystProposalsDir": "catalyst-proposals",
+        "discordStatsDir": "discord-stats"
+    },
+    "githubUrls": {
+        "dependentsUrl": "https://github.com/sidan-lab/whisky/network/dependents"
+    },
+    "builderProjects": [
+        {
+            "id": "b1",
+            "icon": "/blink-labs.png",
+            "url": "https://blinklabs.io/"
+        },
+        {
+            "id": "b2",
+            "icon": "/nmkr.png",
+            "url": "https://www.nmkr.io/"
+        },
+        {
+            "id": "b3",
+            "icon": "/gimbalabs.png",
+            "url": "https://www.gimbalabs.com/gimbalgrid"
+        },
+        {
+            "id": "b4",
+            "icon": "/aiken.png",
+            "url": "https://aiken-lang.org/"
+        },
+        {
+            "id": "b5",
+            "icon": "/socious.png",
+            "url": "https://socious.io/"
+        },
+        {
+            "id": "b6",
+            "icon": "/txpipe.png",
+            "url": "https://txpipe.io/"
+        },
+        {
+            "id": "b7",
+            "icon": "/deltadefi.png",
+            "url": "https://www.deltadefi.io/"
+        },
+        {
+            "id": "b8",
+            "icon": "/mesh-white-txt.png",
+            "url": "https://meshjs.dev/"
+        }
+    ],
+    "highlightedProjects": [
+        {
+            "id": "MeshJS mesh-core",
+            "name": "MeshJS mesh-core",
+            "description": "Collection of comprehensive TypeScript libraries for blockchain development on Cardano.",
+            "icon": "/logo-mesh-white-512x512.png",
+            "url": "https://github.com/MeshJS/mesh-core"
+        }
+    ],
+    "showcaseRepos": [
+        {
+            "name": "cardano-bar",
+            "description": "Cardano development tool set across frameworks & libraries.",
+            "icon": "/180250645.png",
+            "url": "https://github.com/sidan-lab/cardano-bar"
+        },
+        {
+            "name": "whisky",
+            "description": "An open-source Rust library for easy Cardano transaction building and unit testing.",
+            "icon": "/180250645.png",
+            "url": "https://github.com/sidan-lab/whisky"
+        },
+        {
+            "name": "vodka",
+            "description": "Provide utility function for aiken onchain validation and testing utility.",
+            "icon": "/180250645.png",
+            "url": "https://github.com/sidan-lab/vodka"
+        },
+        {
+            "name": "rum",
+            "description": "A golang library for Cardano development, compatible with Mesh and Whisky types.",
+            "icon": "/180250645.png",
+            "url": "https://github.com/sidan-lab/rum"
+        },
+        {
+            "name": "gin",
+            "description": "A python library for Cardano development, compatible with Mesh and Whisky types.",
+            "icon": "/180250645.png",
+            "url": "https://github.com/sidan-lab/gin"
+        }
+    ],
+    "drepId": "drep1yfjez5zup0gystdvc933w2mn8k64hcy3krvc2namluwjxdcfhm8wd"
+}

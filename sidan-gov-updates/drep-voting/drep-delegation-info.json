@@ -1,0 +1,250 @@
+{
+  "timeline": {
+    "epochs": {
+      "509": {
+        "voting_power_lovelace": "31343876857",
+        "total_delegators": 13
+      },
+      "510": {
+        "voting_power_lovelace": "214556147829",
+        "total_delegators": 13
+      },
+      "511": {
+        "voting_power_lovelace": "214559040364",
+        "total_delegators": 13
+      },
+      "512": {
+        "voting_power_lovelace": "214738265171",
+        "total_delegators": 13
+      },
+      "513": {
+        "voting_power_lovelace": "112848555373",
+        "total_delegators": 13
+      },
+      "514": {
+        "voting_power_lovelace": "112848586322",
+        "total_delegators": 13
+      },
+      "515": {
+        "voting_power_lovelace": "95946266851",
+        "total_delegators": 13
+      },
+      "516": {
+        "voting_power_lovelace": "102801607821",
+        "total_delegators": 13
+      },
+      "517": {
+        "voting_power_lovelace": "248813195459",
+        "total_delegators": 13
+      },
+      "518": {
+        "voting_power_lovelace": "248469714618",
+        "total_delegators": 13
+      },
+      "519": {
+        "voting_power_lovelace": "117880579733",
+        "total_delegators": 13
+      },
+      "520": {
+        "voting_power_lovelace": "289198047791",
+        "total_delegators": 13
+      },
+      "521": {
+        "voting_power_lovelace": "289251522202",
+        "total_delegators": 13
+      },
+      "522": {
+        "voting_power_lovelace": "289386752064",
+        "total_delegators": 13
+      },
+      "523": {
+        "voting_power_lovelace": "379176509589",
+        "total_delegators": 13
+      },
+      "524": {
+        "voting_power_lovelace": "349154923655",
+        "total_delegators": 13
+      },
+      "525": {
+        "voting_power_lovelace": "345941985832",
+        "total_delegators": 13
+      },
+      "526": {
+        "voting_power_lovelace": "498026583433",
+        "total_delegators": 13
+      },
+      "527": {
+        "voting_power_lovelace": "498093794999",
+        "total_delegators": 13
+      },
+      "528": {
+        "voting_power_lovelace": "298287600030",
+        "total_delegators": 13
+      },
+      "529": {
+        "voting_power_lovelace": "303033834678",
+        "total_delegators": 13
+      },
+      "530": {
+        "voting_power_lovelace": "302933695766",
+        "total_delegators": 13
+      },
+      "531": {
+        "voting_power_lovelace": "302984424908",
+        "total_delegators": 13
+      },
+      "532": {
+        "voting_power_lovelace": "303099086088",
+        "total_delegators": 13
+      },
+      "533": {
+        "voting_power_lovelace": "307680662147",
+        "total_delegators": 13
+      },
+      "534": {
+        "voting_power_lovelace": "307698327625",
+        "total_delegators": 13
+      },
+      "535": {
+        "voting_power_lovelace": "307878634547",
+        "total_delegators": 13
+      },
+      "536": {
+        "voting_power_lovelace": "353595587788",
+        "total_delegators": 13
+      },
+      "537": {
+        "voting_power_lovelace": "353678953806",
+        "total_delegators": 15
+      },
+      "538": {
+        "voting_power_lovelace": "554791446004",
+        "total_delegators": 15
+      },
+      "539": {
+        "voting_power_lovelace": "554921204753",
+        "total_delegators": 16
+      },
+      "540": {
+        "voting_power_lovelace": "558098908492",
+        "total_delegators": 16
+      },
+      "541": {
+        "voting_power_lovelace": "589535780799",
+        "total_delegators": 18
+      },
+      "542": {
+        "voting_power_lovelace": "592758009781",
+        "total_delegators": 18
+      },
+      "543": {
+        "voting_power_lovelace": "592895043676",
+        "total_delegators": 18
+      },
+      "544": {
+        "voting_power_lovelace": "396296399207",
+        "total_delegators": 19
+      },
+      "545": {
+        "voting_power_lovelace": "403069906896",
+        "total_delegators": 19
+      },
+      "546": {
+        "voting_power_lovelace": "408299588819",
+        "total_delegators": 19
+      },
+      "547": {
+        "voting_power_lovelace": "407904599074",
+        "total_delegators": 20
+      },
+      "548": {
+        "voting_power_lovelace": "451499828291",
+        "total_delegators": 20
+      },
+      "549": {
+        "voting_power_lovelace": "451799623751",
+        "total_delegators": 20
+      },
+      "550": {
+        "voting_power_lovelace": "452252923813",
+        "total_delegators": 20
+      },
+      "551": {
+        "voting_power_lovelace": "452506313221",
+        "total_delegators": 20
+      },
+      "552": {
+        "voting_power_lovelace": "453034015519",
+        "total_delegators": 20
+      },
+      "553": {
+        "voting_power_lovelace": "451451662864",
+        "total_delegators": 20
+      },
+      "554": {
+        "voting_power_lovelace": "465456856087",
+        "total_delegators": 20
+      },
+      "555": {
+        "voting_power_lovelace": "471818643704",
+        "total_delegators": 20
+      },
+      "556": {
+        "voting_power_lovelace": "500280848164",
+        "total_delegators": 20
+      },
+      "557": {
+        "voting_power_lovelace": "501085055497",
+        "total_delegators": 20
+      },
+      "558": {
+        "voting_power_lovelace": "496507350790",
+        "total_delegators": 20
+      },
+      "559": {
+        "voting_power_lovelace": "496507023935",
+        "total_delegators": 21
+      },
+      "560": {
+        "voting_power_lovelace": "20765965318937",
+        "total_delegators": 27
+      },
+      "561": {
+        "voting_power_lovelace": "20790626660594",
+        "total_delegators": 27
+      },
+      "562": {
+        "voting_power_lovelace": "20797716835833",
+        "total_delegators": 27
+      },
+      "563": {
+        "voting_power_lovelace": "20804504833643",
+        "total_delegators": 27
+      },
+      "564": {
+        "voting_power_lovelace": "20811668861485",
+        "total_delegators": 27
+      },
+      "565": {
+        "voting_power_lovelace": "20817842854016",
+        "total_delegators": 28
+      }
+    },
+    "current_epoch": 565,
+    "total_delegators": 28,
+    "total_amount_ada": 20817842.854016
+  },
+  "drepInfo": {
+    "drepId": "drep1yfjez5zup0gystdvc933w2mn8k64hcy3krvc2namluwjxdcfhm8wd",
+    "hex": "6591505c0bd0482dacc163172b733db55be091b0d9854fbbff1d2337",
+    "has_script": false,
+    "deposit": "500000000",
+    "amount": "20817842854016",
+    "active": true,
+    "registered": true,
+    "expires_epoch_no": 582,
+    "meta_url": "https://raw.githubusercontent.com/sidan-lab/DRep/main/sidan-lab.jsonld",
+    "meta_hash": "0e84662b672077968494f620f91e49e3daaf6c983707ae6bd227709dbd453b56",
+    "last_updated": "2025-06-23T05:25:07.342Z"
+  }
+}
