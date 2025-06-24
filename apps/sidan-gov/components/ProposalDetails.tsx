@@ -22,9 +22,7 @@ export function ProposalDetails({
     budget,
     distributed,
     yesVotes,
-    uniqueVoters,
-    milestonesCompleted,
-    totalMilestones
+    uniqueVoters
 }: Props) {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const objective = PROPOSAL_OBJECTIVES[details.projectId];
