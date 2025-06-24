@@ -2,6 +2,7 @@ import { FC, useMemo } from 'react';
 import styles from '../styles/OrgStats.module.css';
 import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Cell, TooltipProps, LineChart, Line } from 'recharts';
 import { YearlyStats, PackageData, OrgStatsViewProps } from '../types';
+import config from '../config';
 
 const formatNumber = (num: number | undefined): string => {
     if (num === undefined) return '0';
@@ -19,23 +20,6 @@ const CustomTooltip = ({ active, payload, label, chartId }: TooltipProps<number,
                 <p className={styles.tooltipValue}>
                     {formatNumber(payload[0].value)} {unit}
                 </p>
-            </div>
-        );
-    }
-    return null;
-};
-
-// Add a new custom tooltip for Discord stats
-const CustomDiscordTooltip = ({ active, payload, label }: TooltipProps<number, string>) => {
-    if (active && payload && payload.length) {
-        return (
-            <div className={styles.customTooltip}>
-                <p className={styles.tooltipLabel}>{label}</p>
-                {payload.map((entry, index) => (
-                    <p key={index} className={styles.tooltipValue}>
-                        {entry.name}: <span style={{ color: entry.stroke }}>{formatNumber(entry.value)}</span>
-                    </p>
-                ))}
             </div>
         );
     }
@@ -153,23 +137,10 @@ const CustomLineChart = ({ data, chartId }: CustomLineChartProps) => (
     </ResponsiveContainer>
 );
 
-interface CustomMultiLineChartProps {
-    data: Array<{
-        month: string;
-        [key: string]: any;
-    }>;
-    chartId: string;
-    lines: Array<{
-        dataKey: string;
-        name: string;
-        stroke: string;
-    }>;
-}
-
 interface CustomSingleLineChartProps {
     data: Array<{
         month: string;
-        [key: string]: any;
+        [key: string]: string | number;
     }>;
     chartId: string;
     dataKey: string;
@@ -238,10 +209,16 @@ const CustomSingleLineChart = ({ data, chartId, dataKey, name, stroke, yAxisDoma
 );
 
 const OrgStatsView: FC<OrgStatsViewProps> = ({ currentStats, yearlyStats, discordStats, contributorsData }) => {
+    // Get the first package from config for the heading
+    const firstPackageName = useMemo(() => {
+        const packageEntries = Object.entries(config.npmPackages);
+        return packageEntries.length > 0 ? packageEntries[0][1] : 'Please update the config.npmPackages';
+    }, []);
+
     // Use all Sidan package data for summary cards
     const packageData = currentStats?.npm
         ? Object.entries(currentStats.npm)
-            .filter(([_, pkg]) => pkg && typeof pkg === 'object' && pkg.downloads && pkg.downloads.last_12_months !== undefined)
+            .filter(([, pkg]) => pkg && typeof pkg === 'object' && pkg.downloads && pkg.downloads.last_12_months !== undefined)
             .map(([key, pkg]) => ({
                 name: key.replace(/_/g, '-'),
                 downloads: pkg.downloads.last_12_months
@@ -409,12 +386,12 @@ const OrgStatsView: FC<OrgStatsViewProps> = ({ currentStats, yearlyStats, discor
         <div data-testid="mesh-stats-view">
             {packageData.length > 0 && (
                 <>
-                    <h2 className={styles.statsHeader}>Sidan NPM Package Downloads</h2>
+                    <h2 className={styles.statsHeader}>{config.organization.displayName} NPM Package Downloads (last 12 months)</h2>
                     <div className={styles.statsGrid}>
                         {packageData.map(pkg => (
                             <div className={styles.stat} key={pkg.name}>
                                 <h3>{pkg.name}</h3>
-                                <p>{formatNumber(pkg.downloads)} (last 12 months)</p>
+                                <p>{formatNumber(pkg.downloads)}</p>
                             </div>
                         ))}
                     </div>
@@ -439,7 +416,7 @@ const OrgStatsView: FC<OrgStatsViewProps> = ({ currentStats, yearlyStats, discor
                     <h2>GitHub Usage</h2>
                     <div className={styles.statsGrid}>
                         <div className={styles.stat}>
-                            <h3>Projects Using Mesh</h3>
+                            <h3>Projects Using {config.organization.displayName}</h3>
                             <p>{formatNumber(currentStats.github.core_in_repositories)}</p>
                         </div>
 
@@ -461,7 +438,7 @@ const OrgStatsView: FC<OrgStatsViewProps> = ({ currentStats, yearlyStats, discor
 
             {packageData.length > 0 && monthlyDataByPackage.length > 0 && (
                 <div className={styles.chartSection}>
-                    <h2>Repositories that depend on @meshsdk/core ({new Date().getFullYear()})</h2>
+                    <h2>Repositories that depend on {firstPackageName} ({new Date().getFullYear()})</h2>
                     <div className={styles.chart}>
                         <CustomLineChart data={repositoriesData} chartId="repositories" />
                     </div>
