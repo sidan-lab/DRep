@@ -5,6 +5,8 @@ on:
     - cron: '0 0 * * 1'  # Run every Monday at midnight UTC
   workflow_dispatch:
 
+permissions:
+  contents: write      # allow GITHUB_TOKEN to push
 jobs:
   fetch-yearly-contributors:
     runs-on: ubuntu-latest

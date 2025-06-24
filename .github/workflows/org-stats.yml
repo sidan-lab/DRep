@@ -4,7 +4,8 @@ on:
   schedule:
     - cron: '0 0 * * 4'  # Run every Thursday at midnight UTC
   workflow_dispatch:
-
+permissions:
+  contents: write      # allow GITHUB_TOKEN to push
 jobs:
   search-mesh-usage:
     runs-on: ubuntu-latest
