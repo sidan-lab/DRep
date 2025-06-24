@@ -26,7 +26,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
-    justify-content: center;
+    justify-content: space-between;
     margin-bottom: 2rem;
 }
 
@@ -48,9 +48,9 @@
     justify-content: center;
     min-height: 120px;
     min-width: 200px;
-    max-width: 260px;
+    max-width: none;
     width: 100%;
-    flex: 1 1 220px;
+    flex: 1 1 200px;
     margin-bottom: 0;
 }
 
@@ -550,7 +550,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
-    justify-content: center;
+    justify-content: space-between;
     margin-bottom: 2rem;
 }
 

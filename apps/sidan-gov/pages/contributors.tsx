@@ -1,14 +1,39 @@
 import { useData } from '../contexts/DataContext';
-import styles from "../styles/page.module.css";
+import styles from '../styles/Contributors.module.css';
 import Image from 'next/image';
+import PageHeader from '../components/PageHeader';
+import ContributorModal from '../components/ContributorModal';
+import { useState } from 'react';
+import { Contributor } from '../types';
+import { FaUsers } from 'react-icons/fa';
+import { VscGitCommit, VscGitPullRequest, VscRepo } from 'react-icons/vsc';
+import ContributionTimeline from '../components/ContributionTimeline';
+
+// Generate a consistent color for a repository
+const getRepoColor = (repoName: string) => {
+    // Generate a hash from the repo name for consistent colors
+    let hash = 0;
+    for (let i = 0; i < repoName.length; i++) {
+        hash = repoName.charCodeAt(i) + ((hash << 5) - hash);
+    }
+    const hue = Math.abs(hash) % 360;
+    return `hsla(${hue}, 70%, 60%, 0.3)`;
+};
 
 export default function Contributors() {
-    const { orgData, contributorsData, contributorStats, isLoading, error } = useData();
+    const { contributorsData, isLoading, error } = useData();
+    const [selectedContributor, setSelectedContributor] = useState<Contributor | null>(null);
 
     if (isLoading) {
         return (
             <div className={styles.container}>
-                <div className={styles.loading}>Loading...</div>
+                <PageHeader
+                    title={<>Mesh <span>Contributors</span></>}
+                    subtitle="Loading contributor data..."
+                />
+                <div className={styles.loadingContainer}>
+                    <div className={styles.loadingSpinner} />
+                </div>
             </div>
         );
     }
@@ -16,126 +41,157 @@ export default function Contributors() {
     if (error) {
         return (
             <div className={styles.container}>
-                <div className={styles.error}>Error: {error}</div>
+                <PageHeader
+                    title={<>Mesh <span>Contributors</span></>}
+                    subtitle="Error loading contributor data"
+                />
+                <div className={styles.errorContainer}>
+                    <p>Error: {error}</p>
+                </div>
             </div>
         );
     }
 
-    const currentContributors = orgData?.currentStats?.contributors?.contributors || [];
-    const allContributors = contributorsData?.contributors || [];
-    const yearlyContributorStats = contributorStats || {};
+    if (!contributorsData) {
+        return (
+            <div className={styles.container}>
+                <PageHeader
+                    title={<>Mesh <span>Contributors</span></>}
+                    subtitle="No contributor data available"
+                />
+                <div className={styles.errorContainer}>
+                    <p>No contributor data is currently available.</p>
+                </div>
+            </div>
+        );
+    }
+
+    // Calculate total unique repositories
+    const uniqueRepos = new Set();
+    contributorsData.contributors.forEach(contributor => {
+        contributor.repositories.forEach(repo => {
+            uniqueRepos.add(repo.name);
+        });
+    });
+    const totalUniqueRepos = uniqueRepos.size;
+
+    const handleCardClick = (contributor: Contributor) => {
+        setSelectedContributor(contributor);
+    };
 
     return (
-        <div className={styles.page}>
-            <main className={styles.main}>
-                <div className={styles.hero}>
-                    <h1 className={styles.title}>Contributors</h1>
-                    <p className={styles.subtitle}>
-                        Meet the amazing contributors who make Sidan possible
-                    </p>
-                </div>
+        <div className={styles.container}>
+            <PageHeader
+                title={<>Mesh <span>Contributors</span></>}
+                subtitle="Mesh is build by many minds and hands, here our Contributors"
+            />
 
-                {/* Stats Section */}
-                <div className={styles.stats}>
-                    <div className={styles.statCard}>
-                        <h3>Total Contributors</h3>
-                        <div className={styles.statNumber}>{allContributors.length}</div>
-                    </div>
-                    <div className={styles.statCard}>
-                        <h3>Total Commits</h3>
-                        <div className={styles.statNumber}>
-                            {allContributors.reduce((sum, contributor) => sum + contributor.commits, 0).toLocaleString()}
+            <div className={styles.summaryContainer}>
+                <div className={styles.summaryCards}>
+                    <div className={`${styles.summaryCard} ${styles.card}`}>
+                        <div className={styles.summaryContent}>
+                            <div className={styles.statColumn}>
+                                <FaUsers className={styles.summaryIcon} />
+                                <p className={styles.statLabel}>Contributors</p>
+                                <p className={styles.summaryNumber}>{contributorsData.unique_count}</p>
+                            </div>
+                            <div className={styles.statColumn}>
+                                <VscRepo className={styles.summaryIcon} />
+                                <p className={styles.statLabel}>Repositories</p>
+                                <p className={styles.summaryNumber}>{totalUniqueRepos}</p>
+                            </div>
                         </div>
                     </div>
-                    <div className={styles.statCard}>
-                        <h3>Total Pull Requests</h3>
-                        <div className={styles.statNumber}>
-                            {allContributors.reduce((sum, contributor) => sum + contributor.pull_requests, 0).toLocaleString()}
+
+                    <div className={`${styles.summaryCard} ${styles.card}`}>
+                        <div className={styles.summaryContent}>
+                            <div className={styles.statColumn}>
+                                <VscGitCommit className={styles.summaryIcon} />
+                                <p className={styles.statLabel}>Commits</p>
+                                <p className={styles.summaryNumber}>{contributorsData.total_commits || 0}</p>
+                            </div>
+                            <div className={styles.statColumn}>
+                                <VscGitPullRequest className={styles.summaryIcon} />
+                                <p className={styles.statLabel}>Pull Requests</p>
+                                <p className={styles.summaryNumber}>{contributorsData.total_pull_requests}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                {/* Top Contributors Section */}
-                <div className={styles.quickActions}>
-                    <h2>Top Contributors</h2>
-                    <div className={styles.actionGrid}>
-                        {allContributors
-                            .sort((a, b) => b.contributions - a.contributions)
-                            .slice(0, 12)
-                            .map((contributor, index) => (
-                                <div key={index} className={styles.actionCard}>
-                                    <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
-                                        <Image
-                                            src={contributor.avatar_url}
-                                            alt={contributor.login}
-                                            width={40}
-                                            height={40}
-                                            style={{ borderRadius: '50%', marginRight: '12px' }}
-                                        />
-                                        <h3 style={{ margin: 0 }}>{contributor.login}</h3>
-                                    </div>
-                                    <p><strong>Commits:</strong> {contributor.commits.toLocaleString()}</p>
-                                    <p><strong>Pull Requests:</strong> {contributor.pull_requests.toLocaleString()}</p>
-                                    <p><strong>Total Contributions:</strong> {contributor.contributions.toLocaleString()}</p>
-                                    <p><strong>Repositories:</strong> {contributor.repositories.length}</p>
-                                    <p><strong>GitHub:</strong> <a href={`https://github.com/${contributor.login}`} target="_blank" rel="noopener noreferrer">View Profile</a></p>
-                                </div>
-                            ))}
-                    </div>
-                </div>
-
-                {/* Yearly Contributor Stats */}
-                {Object.keys(yearlyContributorStats).length > 0 && (
-                    <div className={styles.quickActions}>
-                        <h2>Yearly Contributor Statistics</h2>
-                        <div className={styles.actionGrid}>
-                            {Object.entries(yearlyContributorStats)
-                                .sort(([a], [b]) => parseInt(b) - parseInt(a))
-                                .map(([year, stats]) => (
-                                    <div key={year} className={styles.actionCard}>
-                                        <h3>Year {year}</h3>
-                                        <p><strong>Unique Contributors:</strong> {stats.unique_count}</p>
-                                        <p><strong>Total Commits:</strong> {stats.total_commits.toLocaleString()}</p>
-                                        <p><strong>Total Pull Requests:</strong> {stats.total_pull_requests.toLocaleString()}</p>
-                                        <p><strong>Total Contributions:</strong> {stats.total_contributions.toLocaleString()}</p>
-                                    </div>
-                                ))}
+            <div className={styles.contributorsGrid}>
+                {contributorsData.contributors.map((contributor) => (
+                    <div
+                        key={contributor.login}
+                        className={styles.contributorCard}
+                        onClick={() => handleCardClick(contributor)}
+                        role="button"
+                        tabIndex={0}
+                        onKeyDown={(e) => {
+                            if (e.key === 'Enter' || e.key === ' ') {
+                                handleCardClick(contributor);
+                            }
+                        }}
+                    >
+                        <div className={styles.contributorHeader}>
+                            <Image
+                                src={contributor.avatar_url}
+                                alt={`${contributor.login}'s avatar`}
+                                width={48}
+                                height={48}
+                                className={styles.avatar}
+                            />
+                            <h3 className={styles.username}>{contributor.login}</h3>
                         </div>
-                    </div>
-                )}
+                        <div className={styles.contributorStats}>
+                            <div className={styles.statItem}>
+                                <span className={styles.statLabel}>Commits</span>
+                                <span className={styles.statValue}>{contributor.commits}</span>
+                            </div>
+                            <div className={styles.statItem}>
+                                <span className={styles.statLabel}>PRs</span>
+                                <span className={styles.statValue}>{contributor.pull_requests}</span>
+                            </div>
+                            <div className={styles.statItem}>
+                                <span className={styles.statLabel}>Repos</span>
+                                <span className={styles.statValue}>{contributor.repositories.length}</span>
+                            </div>
+                        </div>
 
-                {/* Repository Contributions */}
-                {currentContributors.length > 0 && (
-                    <div className={styles.quickActions}>
-                        <h2>Repository Contributions</h2>
-                        <div className={styles.actionGrid}>
-                            {currentContributors
-                                .flatMap(contributor => contributor.repositories)
-                                .reduce((acc, repo) => {
-                                    const existing = acc.find(r => r.name === repo.name);
-                                    if (existing) {
-                                        existing.commits += repo.commits;
-                                        existing.pull_requests += repo.pull_requests;
-                                        existing.contributions += repo.contributions;
-                                    } else {
-                                        acc.push({ ...repo });
-                                    }
-                                    return acc;
-                                }, [] as Array<{ name: string; commits: number; pull_requests: number; contributions: number }>)
+                        <div className={styles.timelineContainer}>
+                            <ContributionTimeline
+                                commitTimestamps={contributor.repositories.flatMap(repo => repo.commit_timestamps)}
+                                prTimestamps={contributor.repositories.flatMap(repo => repo.pr_timestamps)}
+                            />
+                        </div>
+
+                        <div className={styles.topRepos}>
+                            {contributor.repositories
                                 .sort((a, b) => b.contributions - a.contributions)
-                                .slice(0, 8)
-                                .map((repo, index) => (
-                                    <div key={index} className={styles.actionCard}>
-                                        <h3>{repo.name}</h3>
-                                        <p><strong>Commits:</strong> {repo.commits.toLocaleString()}</p>
-                                        <p><strong>Pull Requests:</strong> {repo.pull_requests.toLocaleString()}</p>
-                                        <p><strong>Total Contributions:</strong> {repo.contributions.toLocaleString()}</p>
+                                .slice(0, 3)
+                                .map((repo) => (
+                                    <div key={repo.name} className={styles.repoBreakdown}>
+                                        <div
+                                            className={styles.repoColor}
+                                            style={{ backgroundColor: getRepoColor(repo.name) }}
+                                        />
+                                        <div className={styles.repoInfo}>
+                                            <span className={styles.repoName}>{repo.name}</span>
+                                        </div>
                                     </div>
                                 ))}
                         </div>
                     </div>
-                )}
-            </main>
+                ))}
+            </div>
+
+            {selectedContributor && (
+                <ContributorModal
+                    contributor={selectedContributor}
+                    onClose={() => setSelectedContributor(null)}
+                />
+            )}
         </div>
     );
 } 

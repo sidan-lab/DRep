@@ -31,53 +31,62 @@ interface CustomBarChartProps {
     chartId: string;
 }
 
-const CustomBarChart = ({ data, chartId }: CustomBarChartProps) => (
-    <ResponsiveContainer width="100%" height="100%">
-        <BarChart data={data} barGap={8} margin={{ top: 10, right: 10, left: -15, bottom: 0 }}>
-            <defs>
-                <linearGradient id={`barGradient-${chartId}`} x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor="#FFFFFF" stopOpacity="1" />
-                    <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0.5" />
-                </linearGradient>
-            </defs>
-            <CartesianGrid
-                strokeDasharray="3 3"
-                stroke="rgba(255, 255, 255, 0.03)"
-                vertical={false}
-            />
-            <XAxis
-                dataKey="name"
-                axisLine={{ stroke: 'rgba(255, 255, 255, 0.1)' }}
-                tick={{ fill: 'rgba(255, 255, 255, 0.6)', fontSize: 11 }}
-                tickLine={{ stroke: 'rgba(255, 255, 255, 0.1)' }}
-                dy={8}
-            />
-            <YAxis
-                axisLine={{ stroke: 'rgba(255, 255, 255, 0.1)' }}
-                tick={{ fill: 'rgba(255, 255, 255, 0.6)', fontSize: 11 }}
-                tickLine={{ stroke: 'rgba(255, 255, 255, 0.1)' }}
-                tickFormatter={(value) => value >= 1000 ? `${value / 1000}k` : value}
-            />
-            <Tooltip
-                content={<CustomTooltip chartId={chartId} />}
-                cursor={{ fill: 'rgba(255, 255, 255, 0.03)' }}
-            />
-            <Bar
-                dataKey="downloads"
-                fill={`url(#barGradient-${chartId})`}
-                radius={[4, 4, 0, 0]}
-                maxBarSize={40}
-            >
-                {data.map((entry, index) => (
-                    <Cell
-                        key={`cell-${index}`}
-                        fill={`url(#barGradient-${chartId})`}
-                    />
-                ))}
-            </Bar>
-        </BarChart>
-    </ResponsiveContainer>
-);
+const CustomBarChart = ({ data, chartId }: CustomBarChartProps) => {
+    // Function to format month names to 3-letter abbreviations
+    const formatMonthName = (value: string) => {
+        if (!value) return value;
+        return value.substring(0, 3);
+    };
+
+    return (
+        <ResponsiveContainer width="100%" height="100%">
+            <BarChart data={data} barGap={8} margin={{ top: 10, right: 10, left: -15, bottom: 0 }}>
+                <defs>
+                    <linearGradient id={`barGradient-${chartId}`} x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stopColor="#FFFFFF" stopOpacity="1" />
+                        <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0.5" />
+                    </linearGradient>
+                </defs>
+                <CartesianGrid
+                    strokeDasharray="3 3"
+                    stroke="rgba(255, 255, 255, 0.03)"
+                    vertical={false}
+                />
+                <XAxis
+                    dataKey="month"
+                    axisLine={{ stroke: 'rgba(255, 255, 255, 0.1)' }}
+                    tick={{ fill: 'rgba(255, 255, 255, 0.6)', fontSize: 11 }}
+                    tickLine={{ stroke: 'rgba(255, 255, 255, 0.1)' }}
+                    dy={8}
+                    tickFormatter={formatMonthName}
+                />
+                <YAxis
+                    axisLine={{ stroke: 'rgba(255, 255, 255, 0.1)' }}
+                    tick={{ fill: 'rgba(255, 255, 255, 0.6)', fontSize: 11 }}
+                    tickLine={{ stroke: 'rgba(255, 255, 255, 0.1)' }}
+                    tickFormatter={(value) => value >= 1000 ? `${value / 1000}k` : value}
+                />
+                <Tooltip
+                    content={<CustomTooltip chartId={chartId} />}
+                    cursor={{ fill: 'rgba(255, 255, 255, 0.03)' }}
+                />
+                <Bar
+                    dataKey="downloads"
+                    fill={`url(#barGradient-${chartId})`}
+                    radius={[4, 4, 0, 0]}
+                    maxBarSize={40}
+                >
+                    {data.map((entry, index) => (
+                        <Cell
+                            key={`cell-${index}`}
+                            fill={`url(#barGradient-${chartId})`}
+                        />
+                    ))}
+                </Bar>
+            </BarChart>
+        </ResponsiveContainer>
+    );
+};
 
 interface CustomLineChartProps {
     data: Array<{
@@ -87,55 +96,64 @@ interface CustomLineChartProps {
     chartId: string;
 }
 
-const CustomLineChart = ({ data, chartId }: CustomLineChartProps) => (
-    <ResponsiveContainer width="100%" height="100%">
-        <LineChart data={data} margin={{ top: 10, right: 10, left: -15, bottom: 0 }}>
-            <defs>
-                <linearGradient id={`lineGradient-${chartId}`} x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor="#FFFFFF" stopOpacity="1" />
-                    <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0.5" />
-                </linearGradient>
-                <filter id={`glow-${chartId}`}>
-                    <feGaussianBlur stdDeviation="2" result="coloredBlur" />
-                    <feMerge>
-                        <feMergeNode in="coloredBlur" />
-                        <feMergeNode in="SourceGraphic" />
-                    </feMerge>
-                </filter>
-            </defs>
-            <CartesianGrid
-                strokeDasharray="3 3"
-                stroke="rgba(255, 255, 255, 0.03)"
-                vertical={false}
-            />
-            <XAxis
-                dataKey="month"
-                axisLine={{ stroke: 'rgba(255, 255, 255, 0.1)' }}
-                tick={{ fill: 'rgba(255, 255, 255, 0.6)', fontSize: 11 }}
-                tickLine={{ stroke: 'rgba(255, 255, 255, 0.1)' }}
-                dy={8}
-            />
-            <YAxis
-                axisLine={{ stroke: 'rgba(255, 255, 255, 0.1)' }}
-                tick={{ fill: 'rgba(255, 255, 255, 0.6)', fontSize: 11 }}
-                tickLine={{ stroke: 'rgba(255, 255, 255, 0.1)' }}
-            />
-            <Tooltip
-                content={<CustomTooltip chartId={chartId} />}
-                cursor={{ fill: 'rgba(255, 255, 255, 0.03)' }}
-            />
-            <Line
-                type="monotone"
-                dataKey="repositories"
-                stroke={`url(#lineGradient-${chartId})`}
-                strokeWidth={1.5}
-                dot={{ fill: '#FFFFFF', strokeWidth: 1.5, r: 3 }}
-                activeDot={{ r: 4, fill: '#FFFFFF' }}
-                filter={`url(#glow-${chartId})`}
-            />
-        </LineChart>
-    </ResponsiveContainer>
-);
+const CustomLineChart = ({ data, chartId }: CustomLineChartProps) => {
+    // Function to format month names to 3-letter abbreviations
+    const formatMonthName = (value: string) => {
+        if (!value) return value;
+        return value.substring(0, 3);
+    };
+
+    return (
+        <ResponsiveContainer width="100%" height="100%">
+            <LineChart data={data} margin={{ top: 10, right: 10, left: -15, bottom: 0 }}>
+                <defs>
+                    <linearGradient id={`lineGradient-${chartId}`} x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stopColor="#FFFFFF" stopOpacity="1" />
+                        <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0.5" />
+                    </linearGradient>
+                    <filter id={`glow-${chartId}`}>
+                        <feGaussianBlur stdDeviation="2" result="coloredBlur" />
+                        <feMerge>
+                            <feMergeNode in="coloredBlur" />
+                            <feMergeNode in="SourceGraphic" />
+                        </feMerge>
+                    </filter>
+                </defs>
+                <CartesianGrid
+                    strokeDasharray="3 3"
+                    stroke="rgba(255, 255, 255, 0.03)"
+                    vertical={false}
+                />
+                <XAxis
+                    dataKey="month"
+                    axisLine={{ stroke: 'rgba(255, 255, 255, 0.1)' }}
+                    tick={{ fill: 'rgba(255, 255, 255, 0.6)', fontSize: 11 }}
+                    tickLine={{ stroke: 'rgba(255, 255, 255, 0.1)' }}
+                    dy={8}
+                    tickFormatter={formatMonthName}
+                />
+                <YAxis
+                    axisLine={{ stroke: 'rgba(255, 255, 255, 0.1)' }}
+                    tick={{ fill: 'rgba(255, 255, 255, 0.6)', fontSize: 11 }}
+                    tickLine={{ stroke: 'rgba(255, 255, 255, 0.1)' }}
+                />
+                <Tooltip
+                    content={<CustomTooltip chartId={chartId} />}
+                    cursor={{ fill: 'rgba(255, 255, 255, 0.03)' }}
+                />
+                <Line
+                    type="monotone"
+                    dataKey="repositories"
+                    stroke={`url(#lineGradient-${chartId})`}
+                    strokeWidth={1.5}
+                    dot={{ fill: '#FFFFFF', strokeWidth: 1.5, r: 3 }}
+                    activeDot={{ r: 4, fill: '#FFFFFF' }}
+                    filter={`url(#glow-${chartId})`}
+                />
+            </LineChart>
+        </ResponsiveContainer>
+    );
+};
 
 interface CustomSingleLineChartProps {
     data: Array<{
@@ -164,49 +182,58 @@ const CustomDiscordSingleTooltip = ({ active, payload, label }: TooltipProps<num
     return null;
 };
 
-const CustomSingleLineChart = ({ data, chartId, dataKey, name, stroke, yAxisDomain }: CustomSingleLineChartProps) => (
-    <ResponsiveContainer width="100%" height="100%">
-        <LineChart data={data} margin={{ top: 10, right: 10, left: -15, bottom: 0 }}>
-            <defs>
-                <linearGradient id={`lineGradient-${chartId}-${dataKey}`} x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor={stroke} stopOpacity="1" />
-                    <stop offset="100%" stopColor={stroke} stopOpacity="0.5" />
-                </linearGradient>
-            </defs>
-            <CartesianGrid
-                strokeDasharray="3 3"
-                stroke="rgba(255, 255, 255, 0.03)"
-                vertical={false}
-            />
-            <XAxis
-                dataKey="month"
-                axisLine={{ stroke: 'rgba(255, 255, 255, 0.1)' }}
-                tick={{ fill: 'rgba(255, 255, 255, 0.6)', fontSize: 11 }}
-                tickLine={{ stroke: 'rgba(255, 255, 255, 0.1)' }}
-                dy={8}
-            />
-            <YAxis
-                axisLine={{ stroke: 'rgba(255, 255, 255, 0.1)' }}
-                tick={{ fill: 'rgba(255, 255, 255, 0.6)', fontSize: 11 }}
-                tickLine={{ stroke: 'rgba(255, 255, 255, 0.1)' }}
-                domain={yAxisDomain || ['auto', 'auto']}
-            />
-            <Tooltip
-                content={<CustomDiscordSingleTooltip />}
-                cursor={{ fill: 'rgba(255, 255, 255, 0.03)' }}
-            />
-            <Line
-                type="monotone"
-                name={name}
-                dataKey={dataKey}
-                stroke={stroke}
-                strokeWidth={2}
-                dot={{ fill: stroke, strokeWidth: 2 }}
-                activeDot={{ r: 4, fill: stroke }}
-            />
-        </LineChart>
-    </ResponsiveContainer>
-);
+const CustomSingleLineChart = ({ data, chartId, dataKey, name, stroke, yAxisDomain }: CustomSingleLineChartProps) => {
+    // Function to format month names to 3-letter abbreviations
+    const formatMonthName = (value: string) => {
+        if (!value) return value;
+        return value.substring(0, 3);
+    };
+
+    return (
+        <ResponsiveContainer width="100%" height="100%">
+            <LineChart data={data} margin={{ top: 10, right: 10, left: -15, bottom: 0 }}>
+                <defs>
+                    <linearGradient id={`lineGradient-${chartId}-${dataKey}`} x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stopColor={stroke} stopOpacity="1" />
+                        <stop offset="100%" stopColor={stroke} stopOpacity="0.5" />
+                    </linearGradient>
+                </defs>
+                <CartesianGrid
+                    strokeDasharray="3 3"
+                    stroke="rgba(255, 255, 255, 0.03)"
+                    vertical={false}
+                />
+                <XAxis
+                    dataKey="month"
+                    axisLine={{ stroke: 'rgba(255, 255, 255, 0.1)' }}
+                    tick={{ fill: 'rgba(255, 255, 255, 0.6)', fontSize: 11 }}
+                    tickLine={{ stroke: 'rgba(255, 255, 255, 0.1)' }}
+                    dy={8}
+                    tickFormatter={formatMonthName}
+                />
+                <YAxis
+                    axisLine={{ stroke: 'rgba(255, 255, 255, 0.1)' }}
+                    tick={{ fill: 'rgba(255, 255, 255, 0.6)', fontSize: 11 }}
+                    tickLine={{ stroke: 'rgba(255, 255, 255, 0.1)' }}
+                    domain={yAxisDomain || ['auto', 'auto']}
+                />
+                <Tooltip
+                    content={<CustomDiscordSingleTooltip />}
+                    cursor={{ fill: 'rgba(255, 255, 255, 0.03)' }}
+                />
+                <Line
+                    type="monotone"
+                    name={name}
+                    dataKey={dataKey}
+                    stroke={stroke}
+                    strokeWidth={2}
+                    dot={{ fill: stroke, strokeWidth: 2 }}
+                    activeDot={{ r: 4, fill: stroke }}
+                />
+            </LineChart>
+        </ResponsiveContainer>
+    );
+};
 
 const OrgStatsView: FC<OrgStatsViewProps> = ({ currentStats, yearlyStats, discordStats, contributorsData }) => {
     // Get the first package from config for the heading
@@ -381,7 +408,7 @@ const OrgStatsView: FC<OrgStatsViewProps> = ({ currentStats, yearlyStats, discor
         // and round to a nice number
         return Math.floor(min * 0.9 / 100) * 100;
     }, [discordStatsData]);
-
+    console.log(monthlyDataByPackage)
     return (
         <div data-testid="mesh-stats-view">
             {packageData.length > 0 && (
