@@ -1,10 +1,10 @@
 {
   "year": 2025,
   "yearlyTotals": {
-    "csl_rs_browser": 27224,
-    "csl_rs_nodejs": 27494,
-    "whisky_js_browser": 1828,
-    "whisky_js_nodejs": 1799
+    "csl_rs_browser": 27453,
+    "csl_rs_nodejs": 27727,
+    "whisky_js_browser": 1856,
+    "whisky_js_nodejs": 1827
   },
   "monthlyDownloads": {
     "csl_rs_browser": [
@@ -35,7 +35,7 @@
       },
       {
         "month": "June",
-        "downloads": 3336,
+        "downloads": 3565,
         "trend": "📉"
       },
       {
@@ -97,7 +97,7 @@
       },
       {
         "month": "June",
-        "downloads": 3346,
+        "downloads": 3579,
         "trend": "📉"
       },
       {
@@ -159,7 +159,7 @@
       },
       {
         "month": "June",
-        "downloads": 503,
+        "downloads": 531,
         "trend": "📉"
       },
       {
@@ -221,7 +221,7 @@
       },
       {
         "month": "June",
-        "downloads": 503,
+        "downloads": 531,
         "trend": "📉"
       },
       {
@@ -290,7 +290,7 @@
     {
       "month": "June",
       "projects": 2,
-      "files": 51,
+      "files": 53,
       "repositories": 236
     },
     {
@@ -348,5 +348,5 @@
       "downloads": 686
     }
   },
-  "lastUpdated": "2025-06-23T07:59:40.000Z"
+  "lastUpdated": "2025-06-24T08:29:28.667Z"
 }
