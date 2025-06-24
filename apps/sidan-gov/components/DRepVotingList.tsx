@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import styles from '../styles/Voting.module.css';
-import { formatDate } from '../utils/dateUtils';
 import ProposalModal from './ProposalModal';
 
 interface VoteData {
@@ -47,7 +46,7 @@ const getLatestVotes = (votes: VoteData[]): VoteData[] => {
     return Array.from(voteMap.values());
 };
 
-export default function DRepVotingList({ votes, onRowClick }: DRepVotingListProps) {
+export default function DRepVotingList({ votes }: DRepVotingListProps) {
     const [selectedProposal, setSelectedProposal] = useState<VoteData | null>(null);
     const latestVotes = getLatestVotes(votes);
 

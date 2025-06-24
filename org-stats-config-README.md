@@ -6,45 +6,99 @@ This document explains how to configure the organization stats scripts to work w
 
 The main configuration file is `org-stats-config.json` located in the root of the repository. This file contains all the configurable values that the scripts use.
 
-## Configuration Structure
+## How to Update the Configuration File
 
-### Organization Settings
+### Step 1: Basic Organization Information
+
+Update the organization section with your GitHub organization details:
+
 ```json
 {
   "organization": {
-    "name": "MeshJS",           // GitHub organization name (used in API calls)
-    "displayName": "MeshJS"     // Display name (used in console logs)
+    "name": "your-github-org-name",     // GitHub organization name (used in API calls)
+    "displayName": "Your Display Name"  // Display name (used in console logs and UI)
   }
 }
 ```
 
-### Repository Settings
+**Example:**
+```json
+{
+  "organization": {
+    "name": "sidan-lab",
+    "displayName": "Sidan"
+  }
+}
+```
+
+### Step 2: Repository Configuration
+
+Configure your main repositories:
+
 ```json
 {
   "repositories": {
-    "main": "mesh",                    // Main repository name
-    "governance": "governance",        // Governance repository name
-    "dependentsCountRepo": "mesh"      // Repository used for dependents count
+    "main": "your-main-repo",                    // Your primary repository name
+    "governance": "your-governance-repo",        // Governance repository name
+    "dependentsCountRepo": "your-main-repo"      // Repository used for dependents count
   }
 }
 ```
 
-### NPM Package Settings
+**Example:**
+```json
+{
+  "repositories": {
+    "main": "whisky",
+    "governance": "DRep",
+    "dependentsCountRepo": "whisky"
+  }
+}
+```
+
+### Step 3: NPM Package Configuration
+
+Add your NPM packages that you want to track:
+
 ```json
 {
   "npmPackages": {
-    "core": "@meshsdk/core",
-    "react": "@meshsdk/react",
-    "transaction": "@meshsdk/transaction",
-    "wallet": "@meshsdk/wallet",
-    "provider": "@meshsdk/provider",
-    "coreCsl": "@meshsdk/core-csl",
-    "coreCst": "@meshsdk/core-cst"
+    "package_key": "@your-org/package-name",
+    "another_package": "@your-org/another-package"
   }
 }
 ```
 
-### Output Path Settings
+**Example:**
+```json
+{
+  "npmPackages": {
+    "csl_rs_browser": "@sidan-lab/sidan-csl-rs-browser",
+    "csl_rs_nodejs": "@sidan-lab/sidan-csl-rs-nodejs",
+    "whisky_js_browser": "@sidan-lab/whisky-js-browser",
+    "whisky_js_nodejs": "@sidan-lab/whisky-js-nodejs"
+  }
+}
+```
+
+### Step 4: Output Directory Configuration
+
+Configure where the generated files should be saved:
+
+```json
+{
+  "outputPaths": {
+    "baseDir": "your-org-updates",           // Base directory for all outputs
+    "statsDir": "your-org-stats",            // Directory for statistics
+    "contributionsDir": "contributions",     // Directory for contribution data
+    "drepVotingDir": "drep-voting",         // Directory for DRep voting data
+    "catalystProposalsDir": "catalyst-proposals", // Directory for Catalyst proposals
+    "discordStatsDir": "discord-stats"       // Directory for Discord statistics
+  }
+}
+```
+
+**Example:**
 ```json
 {
   "outputPaths": {
@@ -58,32 +112,150 @@ The main configuration file is `org-stats-config.json` located in the root of th
 }
 ```
 
-### GitHub URL Settings
+### Step 5: GitHub URLs Configuration
+
+Update the GitHub dependents URL for your main repository:
+
 ```json
 {
   "githubUrls": {
-    "dependentsUrl": "https://github.com/MeshJS/mesh/network/dependents?dependent_type=REPOSITORY&package_id=UGFja2FnZS0zNDczNjUyOTU4"
+    "dependentsUrl": "https://github.com/your-org/your-main-repo/network/dependents"
   }
 }
 ```
 
-## Usage
+**Example:**
+```json
+{
+  "githubUrls": {
+    "dependentsUrl": "https://github.com/sidan-lab/whisky/network/dependents"
+  }
+}
+```
 
-### For Different Organizations
+### Step 6: Builder Projects (Optional)
 
-To use these scripts with a different GitHub organization:
+Configure builder projects that will be displayed in the UI:
 
-1. Update the `organization.name` and `organization.displayName` fields
-2. Update the `repositories` section with the correct repository names
-3. Update the `npmPackages` section with the correct package names
-4. Update the `githubUrls.dependentsUrl` with the correct repository URL
+```json
+{
+  "builderProjects": [
+    {
+      "id": "unique_id",
+      "icon": "/path-to-icon.png",
+      "url": "https://project-website.com/"
+    }
+  ]
+}
+```
 
-### Example: For a Different Organization
+**Example:**
+```json
+{
+  "builderProjects": [
+    {
+      "id": "b1",
+      "icon": "/blink-labs.png",
+      "url": "https://blinklabs.io/"
+    },
+    {
+      "id": "b2",
+      "icon": "/nmkr.png",
+      "url": "https://www.nmkr.io/"
+    }
+  ]
+}
+```
+
+### Step 7: Highlighted Projects (Optional)
+
+Configure projects you want to highlight:
+
+```json
+{
+  "highlightedProjects": [
+    {
+      "id": "project-id",
+      "name": "Project Name",
+      "description": "Project description",
+      "icon": "/path-to-icon.png",
+      "url": "https://github.com/org/repo"
+    }
+  ]
+}
+```
+
+**Example:**
+```json
+{
+  "highlightedProjects": [
+    {
+      "id": "MeshJS mesh-core",
+      "name": "MeshJS mesh-core",
+      "description": "Collection of comprehensive TypeScript libraries for blockchain development on Cardano.",
+      "icon": "/logo-mesh-white-512x512.png",
+      "url": "https://github.com/MeshJS/mesh-core"
+    }
+  ]
+}
+```
+
+### Step 8: Showcase Repositories (Optional)
+
+Configure repositories to showcase:
+
+```json
+{
+  "showcaseRepos": [
+    {
+      "name": "repo-name",
+      "description": "Repository description",
+      "icon": "/path-to-icon.png",
+      "url": "https://github.com/org/repo"
+    }
+  ]
+}
+```
+
+**Example:**
+```json
+{
+  "showcaseRepos": [
+    {
+      "name": "cardano-bar",
+      "description": "Cardano development tool set across frameworks & libraries.",
+      "icon": "/180250645.png",
+      "url": "https://github.com/sidan-lab/cardano-bar"
+    }
+  ]
+}
+```
+
+### Step 9: DRep ID (Optional)
+
+If you're tracking DRep voting, add your DRep ID:
+
+```json
+{
+  "drepId": "your-drep-id-here"
+}
+```
+
+**Example:**
+```json
+{
+  "drepId": "drep1yfjez5zup0gystdvc933w2mn8k64hcy3krvc2namluwjxdcfhm8wd"
+}
+```
+
+## Complete Configuration Example
+
+Here's a complete example of how your configuration file should look:
 
 ```json
 {
   "organization": {
-    "name": "YourOrg",
+    "name": "your-org",
     "displayName": "Your Organization"
   },
   "repositories": {
@@ -94,11 +266,7 @@ To use these scripts with a different GitHub organization:
   "npmPackages": {
     "core": "@yourorg/core",
     "react": "@yourorg/react",
-    "transaction": "@yourorg/transaction",
-    "wallet": "@yourorg/wallet",
-    "provider": "@yourorg/provider",
-    "coreCsl": "@yourorg/core-csl",
-    "coreCst": "@yourorg/core-cst"
+    "utils": "@yourorg/utils"
   },
   "outputPaths": {
     "baseDir": "your-org-updates",
@@ -109,14 +277,39 @@ To use these scripts with a different GitHub organization:
     "discordStatsDir": "discord-stats"
   },
   "githubUrls": {
-    "dependentsUrl": "https://github.com/YourOrg/your-main-repo/network/dependents?dependent_type=REPOSITORY&package_id=YOUR_PACKAGE_ID"
-  }
+    "dependentsUrl": "https://github.com/your-org/your-main-repo/network/dependents"
+  },
+  "builderProjects": [
+    {
+      "id": "b1",
+      "icon": "/project1.png",
+      "url": "https://project1.com/"
+    }
+  ],
+  "highlightedProjects": [
+    {
+      "id": "main-project",
+      "name": "Main Project",
+      "description": "Your main project description",
+      "icon": "/main-project.png",
+      "url": "https://github.com/your-org/main-project"
+    }
+  ],
+  "showcaseRepos": [
+    {
+      "name": "awesome-repo",
+      "description": "An awesome repository",
+      "icon": "/repo-icon.png",
+      "url": "https://github.com/your-org/awesome-repo"
+    }
+  ],
+  "drepId": "your-drep-id-if-applicable"
 }
 ```
 
-## Testing Configuration
+## Testing Your Configuration
 
-You can test your configuration by running:
+After updating the configuration file, you can test it by running:
 
 ```bash
 cd apps/sidan-gov
@@ -125,9 +318,13 @@ node scripts/org-stats/test-config.js
 
 This will load and display the configuration to verify it's working correctly.
 
-## GitHub Actions
+## Important Notes
 
-The GitHub Actions workflow automatically copies the config file to the working directory before running the scripts. Make sure the config file is in the root of the repository.
+1. **File Location**: The configuration file must be in the root directory of the repository
+2. **JSON Format**: Ensure the JSON is valid - use a JSON validator if needed
+3. **GitHub Actions**: The GitHub Actions workflow automatically copies the config file to the working directory before running the scripts
+4. **Icon Paths**: Icon paths should be relative to the public directory in your Next.js app
+5. **URLs**: Make sure all URLs are accessible and correct
 
 ## Scripts That Use This Config
 

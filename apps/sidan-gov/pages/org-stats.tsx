@@ -1,24 +1,17 @@
 import OrgStatsView from '../components/OrgStatsView';
 import { useData } from '../contexts/DataContext';
 import styles from '../styles/OrgStats.module.css';
-import { useMemo } from 'react';
 import PageHeader from '../components/PageHeader';
+import config from '../config';
 
 export default function MeshStatsPage() {
     const { orgData, discordStats, contributorsData, contributorStats, isLoading, error } = useData();
-
-    // Version subtitle for PageHeader
-    const versionSubtitle = useMemo(() => {
-        return orgData?.currentStats?.npm?.latest_version
-            ? `Latest Version: ${orgData.currentStats.npm.latest_version}`
-            : undefined;
-    }, [orgData]);
 
     if (isLoading) {
         return (
             <div className={styles.container}>
                 <div className={styles.stat}>
-                    <p>Loading mesh statistics...</p>
+                    <p>Loading statistics...</p>
                 </div>
             </div>
         );
@@ -38,7 +31,7 @@ export default function MeshStatsPage() {
         return (
             <div className={styles.container}>
                 <div className={styles.stat}>
-                    <p>No mesh statistics available</p>
+                    <p>No statistics available</p>
                 </div>
             </div>
         );
@@ -47,8 +40,7 @@ export default function MeshStatsPage() {
     return (
         <div className={styles.container}>
             <PageHeader
-                title={<>Mesh SDK <span>Statistics</span></>}
-                subtitle={versionSubtitle}
+                title={<>{config.organization.displayName} SDK <span>Statistics</span></>}
             />
 
             <OrgStatsView

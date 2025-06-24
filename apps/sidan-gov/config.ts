@@ -2,6 +2,28 @@
 import config from '../../org-stats-config.json';
 
 // Type definitions for the config
+interface BuilderProject {
+    id: string;
+    icon: string;
+    url: string;
+}
+
+interface HighlightedProject {
+    id: string;
+    name: string;
+    description: string;
+    icon: string;
+    url: string;
+    category?: string;
+}
+
+interface ShowcaseRepo {
+    name: string;
+    description: string;
+    icon: string;
+    url: string;
+}
+
 interface OrgStatsConfig {
     organization: {
         name: string;
@@ -26,6 +48,9 @@ interface OrgStatsConfig {
     githubUrls: {
         dependentsUrl: string;
     };
+    builderProjects: BuilderProject[];
+    highlightedProjects: HighlightedProject[];
+    showcaseRepos: ShowcaseRepo[];
     drepId: string;
 }
 

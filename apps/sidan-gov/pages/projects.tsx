@@ -1,8 +1,97 @@
 import { useData } from '../contexts/DataContext';
-import styles from "../styles/page.module.css";
+import styles from '../styles/Projects.module.css';
+import PageHeader from '../components/PageHeader';
+import Link from 'next/link';
+import Image from 'next/image';
+import config from '../config';
+
+// Interface for project data
+interface Project {
+    id: string;
+    name: string;
+    description: string;
+    icon?: string;  // Make icon optional
+    url: string;
+    category?: string;  // Make category optional
+}
+
+// Add this interface near the top with other interfaces
+interface ShowcaseRepo {
+    name: string;
+    description: string;
+    icon?: string;  // Make icon optional
+    url: string;
+}
+
+// Spotlight Card Component
+const SpotlightCard = ({ project }: { project: Project }) => {
+    return (
+        <div className={styles.projectCard}>
+            <div className={styles.projectHeader}>
+                {project.icon && (
+                    <div className={styles.projectIcon}>
+                        <Image
+                            src={project.icon}
+                            alt={`${project.name} icon`}
+                            width={40}
+                            height={40}
+                        />
+                    </div>
+                )}
+                <h3 className={styles.projectName}>{project.name}</h3>
+            </div>
+            <p className={styles.projectDescription}>{project.description}</p>
+            <Link
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.projectLink}
+            >
+                View Project
+            </Link>
+        </div>
+    );
+};
+
+// Showcase Repo Card
+const ShowcaseRepoCard = ({ repo }: { repo: ShowcaseRepo }) => (
+    <div className={styles.projectCard}>
+        <div className={styles.projectHeader}>
+            {repo.icon && (
+                <div className={styles.projectIcon}>
+                    <Image
+                        src={repo.icon}
+                        alt={`${repo.name} icon`}
+                        width={40}
+                        height={40}
+                    />
+                </div>
+            )}
+            <h3 className={styles.projectName}>{repo.name}</h3>
+        </div>
+        <p className={styles.projectDescription}>{repo.description}</p>
+        <Link
+            href={repo.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.projectLink}
+        >
+            View Repository
+        </Link>
+    </div>
+);
 
 export default function Projects() {
     const { orgData, isLoading, error } = useData();
+    console.log(orgData)
+
+    // Extract repository name from dependents URL
+    const getRepoNameFromUrl = (url: string): string => {
+        const match = url.match(/github\.com\/[^\/]+\/([^\/]+)/);
+        return match ? match[1] : config.organization.displayName; 
+    };
+
+    const repoName = getRepoNameFromUrl(config.githubUrls.dependentsUrl);
 
     if (isLoading) {
         return (
@@ -20,102 +109,82 @@ export default function Projects() {
         );
     }
 
-    const currentStats = orgData?.currentStats;
-    const contributors = currentStats?.contributors?.contributors || [];
+    const githubUsage = orgData?.currentStats?.github?.core_in_repositories || 0;
+    const totalReferences = orgData?.currentStats?.github?.core_in_any_file || 0;
 
-    // Extract unique repositories from contributors
-    const allRepositories = contributors.flatMap(contributor =>
-        contributor.repositories.map(repo => ({
-            name: repo.name,
-            commits: repo.commits,
-            pull_requests: repo.pull_requests,
-            contributions: repo.contributions
-        }))
-    );
-
-    // Group repositories by name and sum their stats
-    const repositoryStats = allRepositories.reduce((acc, repo) => {
-        if (acc[repo.name]) {
-            acc[repo.name].commits += repo.commits;
-            acc[repo.name].pull_requests += repo.pull_requests;
-            acc[repo.name].contributions += repo.contributions;
-        } else {
-            acc[repo.name] = { ...repo };
-        }
-        return acc;
-    }, {} as Record<string, { name: string; commits: number; pull_requests: number; contributions: number }>);
-
-    const repositories = Object.values(repositoryStats).sort((a, b) => b.contributions - a.contributions);
+    // Extract showcaseRepos from config
+    const showcaseRepos: ShowcaseRepo[] = (config as { showcaseRepos?: ShowcaseRepo[] }).showcaseRepos || [];
 
     return (
-        <div className={styles.page}>
-            <main className={styles.main}>
-                <div className={styles.hero}>
-                    <h1 className={styles.title}>Projects</h1>
-                    <p className={styles.subtitle}>
-                        Explore Sidan's open source projects and repositories
-                    </p>
-                </div>
+        <div className={styles.container}>
+            <PageHeader
+                title={<>{config.organization.displayName} <span>Projects</span></>}
+                subtitle={`Projects using ${config.organization.displayName} in their GitHub repositories`}
+            />
 
-                {/* Stats Section */}
-                <div className={styles.stats}>
-                    <div className={styles.statCard}>
-                        <h3>Total Repositories</h3>
-                        <div className={styles.statNumber}>{repositories.length}</div>
-                    </div>
-                    <div className={styles.statCard}>
-                        <h3>Total Commits</h3>
-                        <div className={styles.statNumber}>
-                            {repositories.reduce((sum, repo) => sum + repo.commits, 0).toLocaleString()}
-                        </div>
-                    </div>
-                    <div className={styles.statCard}>
-                        <h3>Total Pull Requests</h3>
-                        <div className={styles.statNumber}>
-                            {repositories.reduce((sum, repo) => sum + repo.pull_requests, 0).toLocaleString()}
-                        </div>
-                    </div>
+            <div className={styles.stats}>
+                <div className={styles.stat}>
+                    <h3>Total Repos using {repoName}</h3>
+                    <p>{githubUsage}</p>
                 </div>
-
-                {/* Repositories Section */}
-                <div className={styles.quickActions}>
-                    <h2>Repositories</h2>
-                    <div className={styles.actionGrid}>
-                        {repositories.map((repo, index) => (
-                            <div key={index} className={styles.actionCard}>
-                                <h3>{repo.name}</h3>
-                                <p><strong>Commits:</strong> {repo.commits.toLocaleString()}</p>
-                                <p><strong>Pull Requests:</strong> {repo.pull_requests.toLocaleString()}</p>
-                                <p><strong>Total Contributions:</strong> {repo.contributions.toLocaleString()}</p>
-                                <p><strong>GitHub:</strong> <a href={`https://github.com/Sidan-DRep/${repo.name}`} target="_blank" rel="noopener noreferrer">View Repository</a></p>
-                            </div>
-                        ))}
-                    </div>
+                <div className={styles.stat}>
+                    <h3>Total References</h3>
+                    <p>{totalReferences}</p>
                 </div>
+            </div>
 
-                {/* Package Information */}
-                {currentStats && (
-                    <div className={styles.quickActions}>
-                        <h2>NPM Packages</h2>
-                        <div className={styles.actionGrid}>
-                            {Object.entries(currentStats.npm).map(([key, pkg]) => (
-                                typeof pkg === 'object' && pkg.downloads && pkg.latest_version !== undefined && pkg.dependents_count !== undefined ? (
-                                    <div className={styles.actionCard} key={key}>
-                                        <h3>{key.replace(/_/g, '-')}</h3>
-                                        <p><strong>Last 12 Months:</strong> {pkg.downloads.last_12_months.toLocaleString()}</p>
-                                        <p><strong>Last Day:</strong> {pkg.downloads.last_day.toLocaleString()}</p>
-                                        <p><strong>Last Week:</strong> {pkg.downloads.last_week.toLocaleString()}</p>
-                                        <p><strong>Last Month:</strong> {pkg.downloads.last_month.toLocaleString()}</p>
-                                        <p><strong>Last Year:</strong> {pkg.downloads.last_year.toLocaleString()}</p>
-                                        <p><strong>Latest Version:</strong> {pkg.latest_version}</p>
-                                        <p><strong>Dependents:</strong> {pkg.dependents_count}</p>
-                                    </div>
-                                ) : null
-                            ))}
-                        </div>
-                    </div>
-                )}
-            </main>
+            <div className={styles.moreSection} style={{ justifyContent: 'flex-start' }}>
+                <a href={config.githubUrls.dependentsUrl} className={styles.moreButton} target="_blank" rel="noopener noreferrer">
+                    View all Projects
+                </a>
+            </div>
+
+            <div className={styles.sectionHeader}>
+                <h2 className={styles.sectionTitle}>{config.organization.displayName} Lab Open Source Showcase</h2>
+                <p className={styles.sectionDescription}>Featured open source projects from {config.organization.displayName} Lab</p>
+            </div>
+            <div className={styles.projectsGrid}>
+                {showcaseRepos.map((repo) => (
+                    <ShowcaseRepoCard key={repo.name} repo={repo} />
+                ))}
+            </div>
+
+            <div className={styles.sectionHeader}>
+                <h2 className={styles.sectionTitle}>Spotlight</h2>
+                <p className={styles.sectionDescription}>Highlighting a few innovative projects using {config.organization.displayName} at their projects. Give it a look, maybe get inspired...</p>
+            </div>
+
+            <div className={styles.highlightedGrid}>
+                {config.highlightedProjects.map((project) => (
+                    <SpotlightCard key={project.name} project={project} />
+                ))}
+            </div>
+
+            <div className={styles.sectionHeader}>
+                <h2 className={styles.sectionTitle}>Trusted by Builders</h2>
+                <p className={styles.sectionDescription}>Awesome projects and organizations building with Mesh</p>
+            </div>
+
+            <div className={styles.buildersGallery}>
+                {config.builderProjects.map(project => (
+                    <Link
+                        key={project.id}
+                        href={project.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.builderItem}
+                    >
+                        {project.icon && (
+                            <Image
+                                src={project.icon}
+                                alt={`${project.id} icon`}
+                                width={100}
+                                height={40}
+                            />
+                        )}
+                    </Link>
+                ))}
+            </div>
         </div>
     );
 } 
