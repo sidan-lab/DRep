@@ -8,6 +8,8 @@
         "governance": "DRep",
         "dependentsCountRepo": "whisky"
     },
+    "poolId": "pool1wnrrg33lw9fxcn0h3x3vexh78up660ajgk7pvrlrz5kkcgh9khs",
+    "drepId": "drep1yfjez5zup0gystdvc933w2mn8k64hcy3krvc2namluwjxdcfhm8wd",
     "npmPackages": {
         "csl_rs_browser": "@sidan-lab/sidan-csl-rs-browser",
         "csl_rs_nodejs": "@sidan-lab/sidan-csl-rs-nodejs",
@@ -20,7 +22,8 @@
         "contributionsDir": "contributions",
         "drepVotingDir": "drep-voting",
         "catalystProposalsDir": "catalyst-proposals",
-        "discordStatsDir": "discord-stats"
+        "discordStatsDir": "discord-stats",
+        "stakePoolDir": "stake-pool"
     },
     "githubUrls": {
         "dependentsUrl": "https://github.com/sidan-lab/whisky/network/dependents"
@@ -107,6 +110,5 @@
             "icon": "/180250645.png",
             "url": "https://github.com/sidan-lab/gin"
         }
-    ],
-    "drepId": "drep1yfjez5zup0gystdvc933w2mn8k64hcy3krvc2namluwjxdcfhm8wd"
+    ]
 }

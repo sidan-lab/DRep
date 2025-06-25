@@ -1,0 +1,52 @@
+name: Stake Pool Information Action
+
+on:
+  schedule:
+    - cron: '30 0 * * 1'  # Runs at 00:30 UTC every Monday
+    - cron: '30 0 * * 4'  # Runs at 00:30 UTC every Thursday
+  workflow_dispatch:
+    
+permissions:
+  contents: write      # allow GITHUB_TOKEN to push
+jobs:
+  fetch-stake-pool-info:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        
+    - name: Install dependencies
+      run: npm install
+      working-directory: scripts/sidan-gov
+      
+    - name: Run stake pool info script
+      env:
+        KOIOS_API_KEY: ${{ secrets.KOIOS_API_KEY }}
+      run: npm run stake-pool-info
+      working-directory: scripts/sidan-gov
+
+    - name: Check for changes
+      id: git-check
+      run: |
+        git status --porcelain
+        echo "changes=$(git status --porcelain | wc -l)" >> $GITHUB_OUTPUT
+
+    - name: Commit files
+      if: steps.git-check.outputs.changes > 0
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add sidan-gov-updates/stake-pool/stake-pool-info.json
+        git commit -m "Update stake pool information"
+        
+    - name: Push changes
+      if: steps.git-check.outputs.changes > 0
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: ${{ github.ref }} 
