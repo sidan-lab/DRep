@@ -526,6 +526,44 @@ async function main() {
     fs.writeFileSync(outputPath, JSON.stringify(existingData, null, 2));
     console.log(`\nStake pool information, history, and votes saved to ${outputPath}`);
 
+    // Save yearly pool history files
+    const historyByYear = {};
+    poolHistory.forEach(record => {
+        const year = record.epoch_no ? Math.floor(record.epoch_no / 365) + 2020 : new Date().getFullYear();
+        if (!historyByYear[year]) {
+            historyByYear[year] = [];
+        }
+        historyByYear[year].push(record);
+    });
+
+    Object.entries(historyByYear).forEach(([year, history]) => {
+        const yearlyHistoryPath = path.join(repoRoot, config.outputPaths.baseDir, config.outputPaths.stakePoolDir, `pool-history-${year}.json`);
+        const yearlyHistoryData = {
+            poolId: poolId,
+            year: parseInt(year),
+            history: history,
+            lastUpdated: new Date().toISOString(),
+            currentEpoch: currentEpoch
+        };
+        fs.writeFileSync(yearlyHistoryPath, JSON.stringify(yearlyHistoryData, null, 2));
+        console.log(`Pool history for ${year} saved to ${yearlyHistoryPath}`);
+    });
+
+    // Save yearly pool votes files
+    Object.entries(poolVotes).forEach(([year, votes]) => {
+        const yearlyVotesPath = path.join(repoRoot, config.outputPaths.baseDir, config.outputPaths.stakePoolDir, `pool-votes-${year}.json`);
+        const yearlyVotesData = {
+            poolId: poolId,
+            year: parseInt(year),
+            votes: votes,
+            voteCount: votes.length,
+            lastUpdated: new Date().toISOString(),
+            currentEpoch: currentEpoch
+        };
+        fs.writeFileSync(yearlyVotesPath, JSON.stringify(yearlyVotesData, null, 2));
+        console.log(`Pool votes for ${year} saved to ${yearlyVotesPath}`);
+    });
+
     // Log summary
     console.log('\nStake Pool Summary:');
     console.log(`- Current Epoch: ${currentEpoch}`);

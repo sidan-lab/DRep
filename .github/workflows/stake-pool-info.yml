@@ -42,7 +42,9 @@ jobs:
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
         git add sidan-gov-updates/stake-pool/stake-pool-info.json
-        git commit -m "Update stake pool information"
+        git add sidan-gov-updates/stake-pool/pool-history-*.json
+        git add sidan-gov-updates/stake-pool/pool-votes-*.json
+        git commit -m "Update stake pool information and yearly data"
         
     - name: Push changes
       if: steps.git-check.outputs.changes > 0
