@@ -328,16 +328,35 @@ async function main() {
 
     console.log(`Current block time: ${currentBlockTime} (${new Date(currentBlockTime * 1000).toISOString()})`);
 
-    // Calculate epoch-to-year mapping
-    // Each epoch lasts 5 days (5 * 24 * 60 * 60 = 432000 seconds)
-    const epochDurationSeconds = 5 * 24 * 60 * 60;
-    const currentEpochStartTime = currentBlockTime - (currentEpoch * epochDurationSeconds);
+    // Cardano Genesis Parameters (from /genesis endpoint)
+    // systemstart: 1506203091 (September 23, 2017, 21:44:51 UTC)
+    // epochlength: 432000 (5 days in seconds)
+    const GENESIS_TIMESTAMP = 1506203091;
+    const EPOCH_LENGTH_SECONDS = 432000; // 5 days
+
+    // Function to get epoch start time for a given epoch number
+    const getEpochStartTime = (epochNo) => {
+        return GENESIS_TIMESTAMP + (epochNo * EPOCH_LENGTH_SECONDS);
+    };
 
     // Function to get year for a given epoch
     const getYearForEpoch = (epochNo) => {
-        const epochStartTime = currentEpochStartTime + (epochNo * epochDurationSeconds);
+        const epochStartTime = getEpochStartTime(epochNo);
         return new Date(epochStartTime * 1000).getFullYear();
     };
+
+    // Function to get epoch number for a given timestamp
+    const getEpochForTimestamp = (timestamp) => {
+        return Math.floor((timestamp - GENESIS_TIMESTAMP) / EPOCH_LENGTH_SECONDS);
+    };
+
+    // Validate our calculations
+    const calculatedCurrentEpoch = getEpochForTimestamp(currentBlockTime);
+    console.log(`Validating epoch calculation:`);
+    console.log(`- API Current Epoch: ${currentEpoch}`);
+    console.log(`- Calculated Current Epoch: ${calculatedCurrentEpoch}`);
+    console.log(`- Genesis Timestamp: ${GENESIS_TIMESTAMP} (${new Date(GENESIS_TIMESTAMP * 1000).toISOString()})`);
+    console.log(`- Epoch Length: ${EPOCH_LENGTH_SECONDS} seconds (${EPOCH_LENGTH_SECONDS / 86400} days)`);
 
     // Read existing JSON file
     const outputPath = path.join(repoRoot, config.outputPaths.baseDir, config.outputPaths.stakePoolDir, 'stake-pool-info.json');
@@ -394,7 +413,7 @@ async function main() {
     fs.writeFileSync(outputPath, JSON.stringify(existingData, null, 2));
     console.log(`\nStake pool information saved to ${outputPath}`);
 
-    // Save yearly pool history files using block_time-based year calculation
+    // Save yearly pool history files using correct epoch-to-year calculation
     const historyByYear = {};
     poolHistory.forEach(record => {
         const year = record.epoch_no ? getYearForEpoch(record.epoch_no) : new Date().getFullYear();
