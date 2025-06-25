@@ -341,7 +341,7 @@ async function main() {
 
     // Read existing JSON file
     const outputPath = path.join(repoRoot, config.outputPaths.baseDir, config.outputPaths.stakePoolDir, 'stake-pool-info.json');
-    let existingData = { poolInfo: null, poolHistory: [], poolVotes: {}, lastUpdated: null };
+    let existingData = { poolInfo: null, lastUpdated: null };
     try {
         if (fs.existsSync(outputPath)) {
             existingData = JSON.parse(fs.readFileSync(outputPath, 'utf8'));
@@ -350,7 +350,7 @@ async function main() {
         console.error('Error reading existing JSON file:', error.message);
     }
 
-    // Update pool info
+    // Update pool info only
     existingData.poolInfo = {
         pool_id_bech32: poolInfo?.pool_id_bech32 || poolId,
         pool_id_hex: poolInfo?.pool_id_hex || 'N/A',
@@ -381,12 +381,6 @@ async function main() {
         voting_power: poolInfo?.voting_power || null
     };
 
-    // Update pool history
-    existingData.poolHistory = poolHistory;
-
-    // Update pool votes
-    existingData.poolVotes = poolVotes;
-
     existingData.lastUpdated = new Date().toISOString();
     existingData.currentEpoch = currentEpoch;
 
@@ -398,7 +392,7 @@ async function main() {
 
     // Save to JSON file
     fs.writeFileSync(outputPath, JSON.stringify(existingData, null, 2));
-    console.log(`\nStake pool information, history, and votes saved to ${outputPath}`);
+    console.log(`\nStake pool information saved to ${outputPath}`);
 
     // Save yearly pool history files using block_time-based year calculation
     const historyByYear = {};
@@ -411,11 +405,14 @@ async function main() {
     });
 
     Object.entries(historyByYear).forEach(([year, history]) => {
+        // Sort history by epoch_no in ascending order
+        const sortedHistory = history.sort((a, b) => (a.epoch_no || 0) - (b.epoch_no || 0));
+
         const yearlyHistoryPath = path.join(repoRoot, config.outputPaths.baseDir, config.outputPaths.stakePoolDir, `pool-history-${year}.json`);
         const yearlyHistoryData = {
             poolId: poolId,
             year: parseInt(year),
-            history: history,
+            history: sortedHistory,
             lastUpdated: new Date().toISOString(),
             currentEpoch: currentEpoch
         };
