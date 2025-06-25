@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import fetchData from '../lib/fetchData';
-import { OrgData, CatalystContextData, DRepVotingData, YearlyStats, DiscordStats, ContributorStats, DataContextType, ContributorsData } from '../types';
+import { OrgData, CatalystContextData, DRepVotingData, YearlyStats, DiscordStats, ContributorStats, DataContextType, ContributorsData, StakePoolContextData, PoolHistoryData, PoolVotesData } from '../types';
 import { aggregateContributorStats } from '../utils/contributorStats';
 import config from '../config';
 
@@ -16,6 +16,7 @@ const DREP_VOTING_STORAGE_KEY = 'drepVotingData';
 const DISCORD_STATS_STORAGE_KEY = 'discordStats';
 const CONTRIBUTOR_STATS_STORAGE_KEY = 'contributorStats';
 const CONTRIBUTORS_DATA_STORAGE_KEY = 'contributorsData';
+const STAKE_POOL_STORAGE_KEY = 'stakePoolData';
 
 // Get configuration values
 const ORGANIZATION_NAME = config.organization.name;
@@ -63,6 +64,7 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
     const [discordStats, setDiscordStats] = useState<DiscordStats | null>(null);
     const [contributorStats, setContributorStats] = useState<Record<number, ContributorStats> | null>(null);
     const [contributorsData, setContributorsData] = useState<ContributorsData | null>(null);
+    const [stakePoolData, setStakePoolData] = useState<StakePoolContextData | null>(null);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
 
@@ -301,6 +303,73 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
         }
     };
 
+    const fetchStakePoolData = async () => {
+        try {
+            const currentYear = getCurrentYear();
+            const startYear = 2024;
+            const years = Array.from({ length: currentYear - startYear + 1 }, (_, i) => startYear + i);
+
+            // Fetch pool info
+            let poolInfo = null;
+            try {
+                poolInfo = await fetchData(`${BASE_URL}/${config.outputPaths.stakePoolDir}/stake-pool-info.json`);
+            } catch (error) {
+                console.warn('Failed to fetch stake pool info:', error);
+            }
+
+            // Fetch yearly pool history
+            const poolHistoryPromises = years.map(year =>
+                fetchData(`${BASE_URL}/${config.outputPaths.stakePoolDir}/pool-history-${year}.json`)
+                    .catch(error => {
+                        console.warn(`Failed to fetch pool history for year ${year}:`, error);
+                        return null;
+                    })
+            );
+
+            const poolHistoryResults = await Promise.all(poolHistoryPromises);
+
+            // Create poolHistory object, filtering out null results
+            const poolHistory = years.reduce((acc, year, index) => {
+                if (poolHistoryResults[index] !== null) {
+                    acc[year] = poolHistoryResults[index];
+                }
+                return acc;
+            }, {} as Record<number, PoolHistoryData>);
+
+            // Fetch yearly pool votes
+            const poolVotesPromises = years.map(year =>
+                fetchData(`${BASE_URL}/${config.outputPaths.stakePoolDir}/pool-votes-${year}.json`)
+                    .catch(error => {
+                        console.warn(`Failed to fetch pool votes for year ${year}:`, error);
+                        return null;
+                    })
+            );
+
+            const poolVotesResults = await Promise.all(poolVotesPromises);
+
+            // Create poolVotes object, filtering out null results
+            const poolVotes = years.reduce((acc, year, index) => {
+                if (poolVotesResults[index] !== null) {
+                    acc[year] = poolVotesResults[index];
+                }
+                return acc;
+            }, {} as Record<number, PoolVotesData>);
+
+            const newData: StakePoolContextData = {
+                poolInfo,
+                poolHistory,
+                poolVotes,
+                lastFetched: Date.now()
+            };
+
+            safeSetItem(STAKE_POOL_STORAGE_KEY, JSON.stringify(newData));
+            setStakePoolData(newData);
+        } catch (err) {
+            console.error('Error fetching stake pool data:', err);
+            setStakePoolData(null);
+        }
+    };
+
     const loadData = async () => {
         setIsLoading(true);
         setError(null);
@@ -314,7 +383,8 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
                     fetchCatalystData(),
                     fetchDRepVotingData(),
                     fetchDiscordStats(),
-                    fetchContributorStats()
+                    fetchContributorStats(),
+                    fetchStakePoolData()
                 ]);
                 setIsLoading(false);
                 return;
@@ -326,6 +396,7 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
             const cachedDiscordStats = safeGetItem(DISCORD_STATS_STORAGE_KEY);
             const cachedContributorStats = safeGetItem(CONTRIBUTOR_STATS_STORAGE_KEY);
             const cachedContributorsData = safeGetItem(CONTRIBUTORS_DATA_STORAGE_KEY);
+            const cachedStakePoolData = safeGetItem(STAKE_POOL_STORAGE_KEY);
 
             // First handle sidan data
             if (cachedOrgData) {
@@ -377,6 +448,14 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
                 }
             }
 
+            if (cachedStakePoolData) {
+                const parsed = JSON.parse(cachedStakePoolData);
+                const cacheAge = Date.now() - parsed.lastFetched;
+                if (cacheAge < CACHE_DURATION) {
+                    setStakePoolData(parsed);
+                }
+            }
+
             // Fetch fresh data if cache is expired or missing
             const fetchPromises = [];
 
@@ -397,6 +476,9 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
             }
             if (!cachedContributorStats || Date.now() - JSON.parse(cachedContributorStats).lastFetched >= CACHE_DURATION) {
                 fetchPromises.push(fetchContributorStats());
+            }
+            if (!cachedStakePoolData || Date.now() - JSON.parse(cachedStakePoolData).lastFetched >= CACHE_DURATION) {
+                fetchPromises.push(fetchStakePoolData());
             }
 
             await Promise.all(fetchPromises);
@@ -419,13 +501,14 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
             fetchCatalystData(),
             fetchDRepVotingData(),
             fetchDiscordStats(),
-            fetchContributorStats()
+            fetchContributorStats(),
+            fetchStakePoolData()
         ]);
         setIsLoading(false);
     };
 
     return (
-        <DataContext.Provider value={{ orgData, catalystData, drepVotingData, discordStats, contributorStats, contributorsData, isLoading, error, refetchData }}>
+        <DataContext.Provider value={{ orgData, catalystData, drepVotingData, discordStats, contributorStats, contributorsData, stakePoolData, isLoading, error, refetchData }}>
             {children}
         </DataContext.Provider>
     );

@@ -2,8 +2,7 @@ name: Stake Pool Information Action
 
 on:
   schedule:
-    - cron: '30 0 * * 1'  # Runs at 00:30 UTC every Monday
-    - cron: '30 0 * * 4'  # Runs at 00:30 UTC every Thursday
+    - cron: '0 23 * * *'  # Runs at 23:00 UTC every day
   workflow_dispatch:
     
 permissions:
@@ -11,9 +10,29 @@ permissions:
 jobs:
   fetch-stake-pool-info:
     runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     
     steps:
     - uses: actions/checkout@v4
+    
+    - name: Read config and set expected repository
+      id: config
+      run: |
+        CONFIG=$(cat org-stats-config.json)
+        ORG_NAME=$(echo "$CONFIG" | jq -r '.organization.name')
+        GOV_REPO=$(echo "$CONFIG" | jq -r '.repositories.governance')
+        EXPECTED_REPO="$ORG_NAME/$GOV_REPO"
+        echo "expected_repo=$EXPECTED_REPO" >> $GITHUB_OUTPUT
+        echo "Current repository: ${{ github.repository }}"
+        echo "Expected repository: $EXPECTED_REPO"
+    
+    - name: Check repository
+      if: github.repository != steps.config.outputs.expected_repo
+      run: |
+        echo "This workflow is designed to run only in ${{ steps.config.outputs.expected_repo }}"
+        echo "Current repository: ${{ github.repository }}"
+        exit 1
     
     - name: Setup Node.js
       uses: actions/setup-node@v4

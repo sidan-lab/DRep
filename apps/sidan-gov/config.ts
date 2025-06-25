@@ -44,6 +44,7 @@ interface OrgStatsConfig {
         drepVotingDir: string;
         catalystProposalsDir: string;
         discordStatsDir: string;
+        stakePoolDir: string;
     };
     githubUrls: {
         dependentsUrl: string;

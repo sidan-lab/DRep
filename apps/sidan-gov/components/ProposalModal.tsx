@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import styles from '../styles/ProposalModal.module.css';
+import config from '../config';
 
 interface ProposalModalProps {
     proposal: {
@@ -18,9 +19,10 @@ interface ProposalModalProps {
         rationale: string;
     };
     onClose: () => void;
+    context?: 'drep' | 'stakePool';
 }
 
-export default function ProposalModal({ proposal, onClose }: ProposalModalProps) {
+export default function ProposalModal({ proposal, onClose, context = 'drep' }: ProposalModalProps) {
     const modalRef = useRef<HTMLDivElement>(null);
     const [copiedHash, setCopiedHash] = useState<string | null>(null);
     const [isSmallScreen, setIsSmallScreen] = useState(false);
@@ -73,6 +75,23 @@ export default function ProposalModal({ proposal, onClose }: ProposalModalProps)
             document.body.style.overflow = 'unset';
         };
     }, [onClose]);
+
+    // Determine the appropriate title based on context
+    const getRationaleTitle = () => {
+        const displayName = config.organization.displayName;
+        if (context === 'stakePool') {
+            return `${displayName} Stake Pool Vote Rationale`;
+        }
+        return `${displayName} DRep Vote Rationale`;
+    };
+
+    const getVoteTitle = () => {
+        const displayName = config.organization.displayName;
+        if (context === 'stakePool') {
+            return `${displayName} Stake Pool Vote`;
+        }
+        return `${displayName} DRep Vote`;
+    };
 
     return (
         <div className={styles.overlay} onClick={onClose}>
@@ -127,12 +146,12 @@ export default function ProposalModal({ proposal, onClose }: ProposalModalProps)
                     </div>
 
                     <div className={styles.section}>
-                        <h3 className={styles.sectionTitle}>Mesh DRep Vote Rationale</h3>
+                        <h3 className={styles.sectionTitle}>{getRationaleTitle()}</h3>
                         <p className={styles.rationale}>{proposal.rationale}</p>
                     </div>
 
                     <div className={styles.section}>
-                        <h3 className={styles.sectionTitle}>Mesh DRep Vote</h3>
+                        <h3 className={styles.sectionTitle}>{getVoteTitle()}</h3>
                         <span className={`${styles.vote} ${styles[proposal.vote.toLowerCase()]}`}>
                             {proposal.vote}
                         </span>
