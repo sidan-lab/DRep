@@ -88,147 +88,6 @@ async function getProposalDetails(poolId) {
     }
 }
 
-// Function to fetch rationale from SIDAN Lab DRep repository
-async function fetchGovernanceRationale(proposalId, year = null, epoch = null) {
-    try {
-        const baseUrl = `https://raw.githubusercontent.com/${config.organization.name}/${config.repositories.governance}/refs/heads/main/voting-history`;
-        console.log(`\nFetching rationale for proposal ${proposalId} from SIDAN Lab DRep repository`);
-
-        // Try to find the rationale by searching through ga folders
-        // We'll search through a reasonable range of ga numbers (ga01 to ga50)
-        for (let gaNumber = 1; gaNumber <= 50; gaNumber++) {
-            const gaFolder = `ga${gaNumber.toString().padStart(2, '0')}`;
-            const rationaleUrl = `${baseUrl}/${gaFolder}/${gaFolder}-rationale.md`;
-
-            try {
-                const response = await axios.get(rationaleUrl);
-                if (response.data) {
-                    const markdownContent = response.data;
-
-                    // Parse the markdown table to extract information
-                    const lines = markdownContent.split('\n');
-                    let actionId = null;
-                    let rationale = null;
-                    let hash = null;
-
-                    for (const line of lines) {
-                        // Extract Action ID
-                        if (line.includes('Action ID') && line.includes('gov_action')) {
-                            const actionIdMatch = line.match(/gov_action[a-zA-Z0-9]+/);
-                            if (actionIdMatch) {
-                                actionId = actionIdMatch[0];
-                            }
-                        }
-
-                        // Extract Rational - handle both spaced and non-spaced pipe characters
-                        if (line.includes('Rational') && !line.includes('| Rational |')) {
-                            // Try to match the rational content on the same line first
-                            const rationalMatch = line.match(/\| Rational\s*\|\s*(.+?)\s*\|/);
-                            if (rationalMatch) {
-                                rationale = rationalMatch[1].trim();
-                            } else {
-                                // Try without spaces around pipe
-                                const rationalMatch2 = line.match(/\|Rational\s*\|\s*(.+?)\s*\|/);
-                                if (rationalMatch2) {
-                                    rationale = rationalMatch2[1].trim();
-                                } else {
-                                    // Try pattern that doesn't require ending pipe
-                                    const rationalMatch3 = line.match(/\| Rational\s*\|\s*(.+)$/);
-                                    if (rationalMatch3) {
-                                        rationale = rationalMatch3[1].trim();
-                                    } else {
-                                        const rationalMatch4 = line.match(/\|Rational\s*\|\s*(.+)$/);
-                                        if (rationalMatch4) {
-                                            rationale = rationalMatch4[1].trim();
-
-                                            // Check if this is the start of multi-line content
-                                            if (line.trim().endsWith(' ') || line.trim().endsWith('')) {
-                                                let multiLineRational = rationale;
-                                                let lineIndex = lines.indexOf(line) + 1;
-                                                while (lineIndex < lines.length) {
-                                                    const nextLine = lines[lineIndex];
-                                                    // Stop if we hit another table row (starts and ends with |)
-                                                    if (nextLine.trim().startsWith('|') && nextLine.trim().endsWith('|') && nextLine.includes('|')) {
-                                                        break;
-                                                    }
-                                                    // Stop if we hit an empty line followed by a table row
-                                                    if (nextLine.trim() === '' && lineIndex + 1 < lines.length) {
-                                                        const nextNextLine = lines[lineIndex + 1];
-                                                        if (nextNextLine.trim().startsWith('|') && nextNextLine.trim().endsWith('|')) {
-                                                            break;
-                                                        }
-                                                    }
-                                                    multiLineRational += ' ' + nextLine.trim();
-                                                    lineIndex++;
-                                                }
-                                                rationale = multiLineRational.trim();
-                                            }
-                                        } else {
-                                            // If no content on same line, look for multi-line content
-                                            const rationalMatch5 = line.match(/\| Rational\s*\|\s*$/);
-                                            const rationalMatch6 = line.match(/\|Rational\s*\|\s*$/);
-                                            if (rationalMatch5 || rationalMatch6) {
-                                                // Start collecting multi-line content
-                                                let multiLineRational = '';
-                                                let lineIndex = lines.indexOf(line) + 1;
-                                                while (lineIndex < lines.length) {
-                                                    const nextLine = lines[lineIndex];
-                                                    if (nextLine.trim().startsWith('|') && nextLine.trim().endsWith('|')) {
-                                                        // End of multi-line content
-                                                        break;
-                                                    }
-                                                    multiLineRational += nextLine + '\n';
-                                                    lineIndex++;
-                                                }
-                                                rationale = multiLineRational.trim();
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-
-                        // Extract Hash for verification - handle both spaced and non-spaced pipe characters
-                        if (line.includes('Hash') && !line.includes('| Hash |')) {
-                            const hashMatch = line.match(/\| Hash\s*\|\s*([a-fA-F0-9]+)/);
-                            if (hashMatch) {
-                                hash = hashMatch[1];
-                            } else {
-                                // Try without spaces around pipe
-                                const hashMatch2 = line.match(/\|Hash\s*\|\s*([a-fA-F0-9]+)/);
-                                if (hashMatch2) {
-                                    hash = hashMatch2[1];
-                                }
-                            }
-                        }
-                    }
-
-                    // Check if this rationale matches our proposal
-                    // We can match by action ID or by hash (removing the '00' suffix from proposal hash)
-                    if (actionId && rationale) {
-                        const proposalHashWithoutSuffix = proposalId.replace('00', '');
-
-                        // Check if the action ID or hash matches our proposal
-                        if (actionId === proposalId || (hash && hash.includes(proposalHashWithoutSuffix))) {
-                            console.log(`Found matching rationale in ${gaFolder} for proposal ${proposalId}`);
-                            return rationale;
-                        }
-                    }
-                }
-            } catch (error) {
-                // Continue to next ga folder if this one doesn't exist or fails
-                continue;
-            }
-        }
-
-        console.log(`No matching rationale found for proposal ${proposalId}`);
-        return null;
-    } catch (error) {
-        console.warn(`Could not fetch rationale from SIDAN Lab DRep repository for proposal ${proposalId}:`, error.message);
-        return null;
-    }
-}
-
 async function getStakePoolInfo(poolId) {
     try {
         const apiKey = process.env.KOIOS_API_KEY;
@@ -385,13 +244,6 @@ async function getPoolVotes(poolId) {
                 rationale = metadata.body.comment;
                 console.log(`Fetching rationale from metadata: ${rationale}`);
             }
-            // Finally try governance repository as last resort
-            else {
-                const year = new Date(processedVote.blockTime).getFullYear();
-                const epoch = proposal.proposed_epoch;
-                rationale = await fetchGovernanceRationale(vote.proposal_id, year, epoch);
-                console.log(`Fetching rationale from SIDAN Lab DRep repository: ${rationale}`);
-            }
 
             // Add proposal details to vote
             let proposalTitle = proposal.meta_json?.body?.title;
@@ -431,7 +283,7 @@ async function getPoolVotes(poolId) {
     }
 }
 
-async function getCurrentEpoch() {
+async function getChainTip() {
     try {
         const apiKey = process.env.KOIOS_API_KEY;
         if (!apiKey) {
@@ -449,21 +301,43 @@ async function getCurrentEpoch() {
             throw new Error('Invalid response format from tip endpoint');
         }
 
-        return response.data[0].epoch_no;
+        const tipData = response.data[0];
+        return {
+            epochNo: tipData.epoch_no,
+            blockTime: tipData.block_time
+        };
     } catch (error) {
-        console.error('Error fetching current epoch:', error.message);
+        console.error('Error fetching chain tip:', error.message);
         if (error.response) {
             console.error('API Response:', error.response.data);
         }
-        return 0;
+        return {
+            epochNo: 0,
+            blockTime: Math.floor(Date.now() / 1000) // Fallback to current time
+        };
     }
 }
 
 async function main() {
     const poolInfo = await getStakePoolInfo(poolId);
-    const currentEpoch = await getCurrentEpoch();
+    const chainTip = await getChainTip();
+    const currentEpoch = chainTip.epochNo;
+    const currentBlockTime = chainTip.blockTime;
     const poolHistory = await getPoolHistory(poolId);
     const poolVotes = await getPoolVotes(poolId);
+
+    console.log(`Current block time: ${currentBlockTime} (${new Date(currentBlockTime * 1000).toISOString()})`);
+
+    // Calculate epoch-to-year mapping
+    // Each epoch lasts 5 days (5 * 24 * 60 * 60 = 432000 seconds)
+    const epochDurationSeconds = 5 * 24 * 60 * 60;
+    const currentEpochStartTime = currentBlockTime - (currentEpoch * epochDurationSeconds);
+
+    // Function to get year for a given epoch
+    const getYearForEpoch = (epochNo) => {
+        const epochStartTime = currentEpochStartTime + (epochNo * epochDurationSeconds);
+        return new Date(epochStartTime * 1000).getFullYear();
+    };
 
     // Read existing JSON file
     const outputPath = path.join(repoRoot, config.outputPaths.baseDir, config.outputPaths.stakePoolDir, 'stake-pool-info.json');
@@ -526,10 +400,10 @@ async function main() {
     fs.writeFileSync(outputPath, JSON.stringify(existingData, null, 2));
     console.log(`\nStake pool information, history, and votes saved to ${outputPath}`);
 
-    // Save yearly pool history files
+    // Save yearly pool history files using block_time-based year calculation
     const historyByYear = {};
     poolHistory.forEach(record => {
-        const year = record.epoch_no ? Math.floor(record.epoch_no / 365) + 2020 : new Date().getFullYear();
+        const year = record.epoch_no ? getYearForEpoch(record.epoch_no) : new Date().getFullYear();
         if (!historyByYear[year]) {
             historyByYear[year] = [];
         }
