@@ -23,6 +23,9 @@ const ORGANIZATION_NAME = config.organization.name;
 const GOVERNANCE_REPO = config.repositories.governance;
 const BASE_URL = `https://raw.githubusercontent.com/${ORGANIZATION_NAME}/${GOVERNANCE_REPO}/main/${config.outputPaths.baseDir}`;
 
+// GitHub API base URL
+const GITHUB_API_BASE = `https://api.github.com/repos/${ORGANIZATION_NAME}/${GOVERNANCE_REPO}/contents/${config.outputPaths.baseDir}`;
+
 // Utility function to check if localStorage is available
 const isLocalStorageAvailable = (): boolean => {
     try {
@@ -303,11 +306,47 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
         }
     };
 
+    const getAvailableStakePoolFiles = async (): Promise<{ poolHistoryFiles: string[], poolVotesFiles: string[] }> => {
+        try {
+            const stakePoolDirPath = `${config.outputPaths.stakePoolDir}`;
+            const response = await fetch(`${GITHUB_API_BASE}/${stakePoolDirPath}`);
+
+            if (!response.ok) {
+                console.warn('Failed to fetch stake pool directory contents:', response.status);
+                return { poolHistoryFiles: [], poolVotesFiles: [] };
+            }
+
+            const contents = await response.json();
+
+            if (!Array.isArray(contents)) {
+                console.warn('Unexpected response format from GitHub API');
+                return { poolHistoryFiles: [], poolVotesFiles: [] };
+            }
+
+            const poolHistoryFiles: string[] = [];
+            const poolVotesFiles: string[] = [];
+
+            contents.forEach((item: { type: string; name: string }) => {
+                if (item.type === 'file' && item.name) {
+                    if (item.name.startsWith('pool-history-') && item.name.endsWith('.json')) {
+                        poolHistoryFiles.push(item.name);
+                    } else if (item.name.startsWith('pool-votes-') && item.name.endsWith('.json')) {
+                        poolVotesFiles.push(item.name);
+                    }
+                }
+            });
+
+            return { poolHistoryFiles, poolVotesFiles };
+        } catch (error) {
+            console.warn('Error fetching stake pool directory contents:', error);
+            return { poolHistoryFiles: [], poolVotesFiles: [] };
+        }
+    };
+
     const fetchStakePoolData = async () => {
         try {
-            const currentYear = getCurrentYear();
-            const startYear = 2024;
-            const years = Array.from({ length: currentYear - startYear + 1 }, (_, i) => startYear + i);
+            // First, get the list of available files from GitHub
+            const { poolHistoryFiles, poolVotesFiles } = await getAvailableStakePoolFiles();
 
             // Fetch pool info
             let poolInfo = null;
@@ -317,40 +356,50 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
                 console.warn('Failed to fetch stake pool info:', error);
             }
 
-            // Fetch yearly pool history
-            const poolHistoryPromises = years.map(year =>
-                fetchData(`${BASE_URL}/${config.outputPaths.stakePoolDir}/pool-history-${year}.json`)
+            // Fetch pool history files that actually exist
+            const poolHistoryPromises = poolHistoryFiles.map(filename =>
+                fetchData(`${BASE_URL}/${config.outputPaths.stakePoolDir}/${filename}`)
                     .catch(error => {
-                        console.warn(`Failed to fetch pool history for year ${year}:`, error);
+                        console.warn(`Failed to fetch pool history file ${filename}:`, error);
                         return null;
                     })
             );
 
             const poolHistoryResults = await Promise.all(poolHistoryPromises);
 
-            // Create poolHistory object, filtering out null results
-            const poolHistory = years.reduce((acc, year, index) => {
-                if (poolHistoryResults[index] !== null) {
-                    acc[year] = poolHistoryResults[index];
+            // Create poolHistory object, filtering out null results and extracting year from filename
+            const poolHistory = poolHistoryResults.reduce((acc, data, index) => {
+                if (data !== null) {
+                    const filename = poolHistoryFiles[index];
+                    const yearMatch = filename.match(/pool-history-(\d{4})\.json/);
+                    if (yearMatch) {
+                        const year = parseInt(yearMatch[1], 10);
+                        acc[year] = data;
+                    }
                 }
                 return acc;
             }, {} as Record<number, PoolHistoryData>);
 
-            // Fetch yearly pool votes
-            const poolVotesPromises = years.map(year =>
-                fetchData(`${BASE_URL}/${config.outputPaths.stakePoolDir}/pool-votes-${year}.json`)
+            // Fetch pool votes files that actually exist
+            const poolVotesPromises = poolVotesFiles.map(filename =>
+                fetchData(`${BASE_URL}/${config.outputPaths.stakePoolDir}/${filename}`)
                     .catch(error => {
-                        console.warn(`Failed to fetch pool votes for year ${year}:`, error);
+                        console.warn(`Failed to fetch pool votes file ${filename}:`, error);
                         return null;
                     })
             );
 
             const poolVotesResults = await Promise.all(poolVotesPromises);
 
-            // Create poolVotes object, filtering out null results
-            const poolVotes = years.reduce((acc, year, index) => {
-                if (poolVotesResults[index] !== null) {
-                    acc[year] = poolVotesResults[index];
+            // Create poolVotes object, filtering out null results and extracting year from filename
+            const poolVotes = poolVotesResults.reduce((acc, data, index) => {
+                if (data !== null) {
+                    const filename = poolVotesFiles[index];
+                    const yearMatch = filename.match(/pool-votes-(\d{4})\.json/);
+                    if (yearMatch) {
+                        const year = parseInt(yearMatch[1], 10);
+                        acc[year] = data;
+                    }
                 }
                 return acc;
             }, {} as Record<number, PoolVotesData>);
