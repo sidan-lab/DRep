@@ -275,6 +275,107 @@ export interface ContributorStats {
     total_contributions: number;
 }
 
+// Stake Pool Types
+export interface StakePoolInfo {
+    pool_id_bech32: string;
+    pool_id_hex: string;
+    active_epoch_no: number | null;
+    vrf_key_hash: string | null;
+    margin: number | null;
+    fixed_cost: string | null;
+    pledge: string | null;
+    deposit: string | null;
+    reward_addr: string | null;
+    reward_addr_delegated_drep: string | null;
+    owners: string[] | null;
+    relays: Array<{
+        dns?: string;
+        dns_srv?: string;
+        ipv4?: string;
+        ipv6?: string;
+        port?: number;
+    }>;
+    meta_url: string | null;
+    meta_hash: string | null;
+    meta_json: {
+        name?: string;
+        ticker?: string;
+        description?: string;
+        homepage?: string;
+    } | null;
+    pool_status: string;
+    retiring_epoch: number | null;
+    op_cert: string | null;
+    op_cert_counter: number | null;
+    active_stake: string | null;
+    sigma: number | null;
+    block_count: number | null;
+    live_pledge: string | null;
+    live_stake: string | null;
+    live_delegators: number;
+    live_saturation: number | null;
+    voting_power: string | null;
+}
+
+export interface StakePoolData {
+    poolInfo: StakePoolInfo | null;
+    lastUpdated: string;
+    currentEpoch: number;
+}
+
+export interface PoolHistoryRecord {
+    epoch_no: number;
+    active_stake: string | null;
+    block_cnt: number | null;
+    delegator_cnt: number | null;
+    fixed_cost: string | null;
+    margin: number | null;
+    pledge: string | null;
+    pool_fees: string | null;
+    pool_rewards: string | null;
+    saturation: number | null;
+}
+
+export interface PoolHistoryData {
+    poolId: string;
+    year: number;
+    history: PoolHistoryRecord[];
+    lastUpdated: string;
+    currentEpoch: number;
+}
+
+export interface PoolVote {
+    proposalId: string;
+    proposalTxHash: string;
+    proposalIndex: number;
+    voteTxHash: string;
+    blockTime: string;
+    vote: 'Yes' | 'No' | 'Abstain';
+    metaUrl: string | null;
+    metaHash: string | null;
+    proposalTitle: string;
+    proposalType: string;
+    proposedEpoch: number;
+    expirationEpoch: number;
+    rationale: string;
+}
+
+export interface PoolVotesData {
+    poolId: string;
+    year: number;
+    votes: PoolVote[];
+    voteCount: number;
+    lastUpdated: string;
+    currentEpoch: number;
+}
+
+export interface StakePoolContextData {
+    poolInfo: StakePoolData | null;
+    poolHistory: Record<number, PoolHistoryData>;
+    poolVotes: Record<number, PoolVotesData>;
+    lastFetched: number;
+}
+
 export interface DataContextType {
     orgData: OrgData | null;
     catalystData: CatalystContextData | null;
@@ -282,6 +383,7 @@ export interface DataContextType {
     discordStats: DiscordStats | null;
     contributorStats: Record<number, ContributorStats> | null;
     contributorsData: ContributorsData | null;
+    stakePoolData: StakePoolContextData | null;
     isLoading: boolean;
     error: string | null;
     refetchData: () => Promise<void>;

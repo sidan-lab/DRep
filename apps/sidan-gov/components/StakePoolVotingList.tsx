@@ -1,25 +1,10 @@
 import { useState } from 'react';
 import styles from '../styles/Voting.module.css';
 import ProposalModal from './ProposalModal';
+import { PoolVote } from '../types';
 
-interface VoteData {
-    proposalId: string;
-    proposalTxHash: string;
-    proposalIndex: number;
-    voteTxHash: string;
-    blockTime: string;
-    vote: 'Yes' | 'No' | 'Abstain';
-    metaUrl: string | null;
-    metaHash: string | null;
-    proposalTitle: string;
-    proposalType: string;
-    proposedEpoch: number;
-    expirationEpoch: number;
-    rationale: string;
-}
-
-interface DRepVotingListProps {
-    votes: VoteData[];
+interface StakePoolVotingListProps {
+    votes: PoolVote[];
     onRowClick?: (proposalId: string) => void;
 }
 
@@ -33,8 +18,8 @@ const truncateText = (text: string, maxLength: number = 100) => {
     return text.substring(0, lastSpace) + '...';
 };
 
-const getLatestVotes = (votes: VoteData[]): VoteData[] => {
-    const voteMap = new Map<string, VoteData>();
+const getLatestVotes = (votes: PoolVote[]): PoolVote[] => {
+    const voteMap = new Map<string, PoolVote>();
 
     votes.forEach(vote => {
         const existingVote = voteMap.get(vote.proposalId);
@@ -46,11 +31,11 @@ const getLatestVotes = (votes: VoteData[]): VoteData[] => {
     return Array.from(voteMap.values());
 };
 
-export default function DRepVotingList({ votes }: DRepVotingListProps) {
-    const [selectedProposal, setSelectedProposal] = useState<VoteData | null>(null);
+export default function StakePoolVotingList({ votes }: StakePoolVotingListProps) {
+    const [selectedProposal, setSelectedProposal] = useState<PoolVote | null>(null);
     const latestVotes = getLatestVotes(votes);
 
-    const handleCardClick = (vote: VoteData, e: React.MouseEvent) => {
+    const handleCardClick = (vote: PoolVote, e: React.MouseEvent) => {
         e.preventDefault();
         e.stopPropagation();
         setSelectedProposal(vote);
@@ -93,7 +78,7 @@ export default function DRepVotingList({ votes }: DRepVotingListProps) {
                 <ProposalModal
                     proposal={selectedProposal}
                     onClose={() => setSelectedProposal(null)}
-                    context="drep"
+                    context="stakePool"
                 />
             )}
 
