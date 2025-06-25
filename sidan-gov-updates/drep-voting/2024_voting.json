@@ -1,0 +1,47 @@
+[
+  {
+    "proposalId": "gov_action1llcd7ezdx299xeep9azm4dvsvz7783qfrhykcu3sv2ykl4sewv2qq4myfpk",
+    "proposalTxHash": "fff0df644d328a5367212f45bab59060bde3c4091dc96c723062896fd619731400",
+    "proposalIndex": 0,
+    "voteTxHash": "12897fdd18afed3e8d0dedf8e5e1075065e9a4ed5ebf970fb688e5edc31975ca",
+    "blockTime": "2024-12-17T03:48:25.000Z",
+    "vote": "Yes",
+    "metaUrl": "https://raw.githubusercontent.com/sidan-lab/DRep/refs/heads/main/voting-history/ga04/ga04-rationale.jsonld",
+    "metaHash": "8542c3653a9a5f66ec6e42b42563b4894ae77822d425b531be3d4611e34b3645",
+    "proposalTitle": "Rename the Chang 2 Hard Fork to the Plomin Hard Fork",
+    "proposalType": "InfoAction",
+    "proposedEpoch": 522,
+    "expirationEpoch": 529,
+    "rationale": "SIDAN Lab is voting yes to the info action Rename the Chang 2 Hard Fork to the Plomin Hard Fork as Plomin founder at Mehen is an outstanding contributor to the Cardano Ecosystem. His unexpected passing on November 14th, 2024 will leave a void in the Community. SIDAN Lab endorses paying tribute to Matthew and honoring his work and achievements. |Link|https://adastat.net/transactions/12897fdd18afed3e8d0dedf8e5e1075065e9a4ed5ebf970fb688e5edc31975ca"
+  },
+  {
+    "proposalId": "gov_action10lty9xka3unprtvdfrqvcjgsz33sjwhv9p06afqzar8au782trtsq7dhd95",
+    "proposalTxHash": "7fd6429add8f2611ad8d48c0cc49101463093aec285faea402e8cfde78ea58d700",
+    "proposalIndex": 0,
+    "voteTxHash": "af7b6a7b73c7374546524d792ae89a48bf55406c3c97c71d86dbb09e7a7409e9",
+    "blockTime": "2024-11-05T12:32:33.000Z",
+    "vote": "Abstain",
+    "metaUrl": "https://raw.githubusercontent.com/sidan-lab/DRep/refs/heads/main/voting-history/ga03/ga03-rationale.jsonld",
+    "metaHash": "c0da953ee1620f7fe902f5be85d9c6e18f543331f92ebd14450fb1de7e3e5bad",
+    "proposalTitle": "Should K increased?",
+    "proposalType": "InfoAction",
+    "proposedEpoch": 514,
+    "expirationEpoch": 521,
+    "rationale": "The proposed increase in parameter k is expected to have the following effects:\n- Stake pools will reach saturation more quickly, increasing the likelihood of ADA migration to smaller stake pools.\n- The creation of new stake pools will improve the network's decentralization.\n- Rewards received by stake pools will decrease, potentially impacting the incentives and sustainability of stake pool operators.\nAdditionally, this governance action records information on-chain without producing any dire"
+  },
+  {
+    "proposalId": "gov_action1t87n2vjnavthuggyarerafxx8c7n9mu4c7r96qlfp5uggsjdc8dsqymg588",
+    "proposalTxHash": "59fd353253eb177e2104e8f23ea4c63e3d32ef95c7865d03e90d3884424dc1db00",
+    "proposalIndex": 0,
+    "voteTxHash": "a1975590f12e1e51ac45e2067f7d89b43c922112e8f529e195a9617692a67bbb",
+    "blockTime": "2024-10-20T07:53:23.000Z",
+    "vote": "Abstain",
+    "metaUrl": "https://raw.githubusercontent.com/sidan-lab/DRep/refs/heads/main/voting-history/ga02-rationale.jsonId",
+    "metaHash": "ae2a9b8021f70c94de58a0b53d6d112ac8450273aae98dc6aba698b9e93f7984",
+    "proposalTitle": "Cardanoの生きがい - Ikigai -",
+    "proposalType": "InfoAction",
+    "proposedEpoch": 510,
+    "expirationEpoch": 517,
+    "rationale": "SIDAN Lab abstains from voting on the Info Action titled \"Cardanoの生きがい - Ikigai -\" for the following reasons: - The info governance action records information on-chain without causing any direct on-chain effects. - The governance action does not directly or indirectly affect the future governance action that can be enacted on-chain. - The governance action does not request withdrawal from the treasury. |Link|https://adastat.net/transactions/a1975590f12e1e51ac45e2067f7d89b43c922112e8f529e195a9617692a67bbb"
+  }
+]
