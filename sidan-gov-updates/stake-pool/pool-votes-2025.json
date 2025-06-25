@@ -1,0 +1,24 @@
+{
+  "poolId": "pool1wnrrg33lw9fxcn0h3x3vexh78up660ajgk7pvrlrz5kkcgh9khs",
+  "year": 2025,
+  "votes": [
+    {
+      "proposalId": "gov_action1pvv5wmjqhwa4u85vu9f4ydmzu2mgt8n7et967ph2urhx53r70xusqnmm525",
+      "proposalTxHash": "0b19476e40bbbb5e1e8ce153523762e2b6859e7ecacbaf06eae0ee6a447e79b900",
+      "proposalIndex": 0,
+      "voteTxHash": "d97a6df621382ef195263c7582074f14b979249d754fc40dcb85deb7e5558d38",
+      "blockTime": "2025-01-04T11:28:02.000Z",
+      "vote": "Yes",
+      "metaUrl": null,
+      "metaHash": null,
+      "proposalTitle": "Hard Fork to Protocol Version 10 (\"Plomin\" Hard Fork)",
+      "proposalType": "HardForkInitiation",
+      "proposedEpoch": 529,
+      "expirationEpoch": 536,
+      "rationale": "No rationale available"
+    }
+  ],
+  "voteCount": 1,
+  "lastUpdated": "2025-06-25T08:55:26.049Z",
+  "currentEpoch": 566
+}
