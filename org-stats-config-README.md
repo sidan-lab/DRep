@@ -16,7 +16,17 @@ Update the organization section with your GitHub organization details:
 {
   "organization": {
     "name": "your-github-org-name",     // GitHub organization name (used in API calls)
-    "displayName": "Your Display Name"  // Display name (used in console logs and UI)
+    "displayName": "Your Display Name", // Display name (used in console logs and UI)
+    "logo": {
+      "src": "/path-to-logo.png",       // Path to your organization logo
+      "width": 40,                      // Logo width in pixels
+      "height": 40                      // Logo height in pixels
+    },
+    "logoWithName": {
+      "src": "/path-to-logo-with-name.png", // Path to logo with organization name
+      "width": 120,                           // Logo width in pixels
+      "height": 120                           // Logo height in pixels
+    }
   }
 }
 ```
@@ -26,7 +36,17 @@ Update the organization section with your GitHub organization details:
 {
   "organization": {
     "name": "sidan-lab",
-    "displayName": "Sidan"
+    "displayName": "Sidan",
+    "logo": {
+      "src": "/180250645.png",
+      "width": 40,
+      "height": 40
+    },
+    "logoWithName": {
+      "src": "/sidan.png",
+      "width": 120,
+      "height": 120
+    }
   }
 }
 ```
@@ -56,7 +76,41 @@ Configure your main repositories:
 }
 ```
 
-### Step 3: NPM Package Configuration
+### Step 3: Stake Pool Configuration (Optional)
+
+If you're tracking stake pool information, add your stake pool ID:
+
+```json
+{
+  "poolId": "your-stake-pool-id-here"
+}
+```
+
+**Example:**
+```json
+{
+  "poolId": "pool1wnrrg33lw9fxcn0h3x3vexh78up660ajgk7pvrlrz5kkcgh9khs"
+}
+```
+
+### Step 4: DRep Configuration (Optional)
+
+If you're tracking DRep voting, add your DRep ID:
+
+```json
+{
+  "drepId": "your-drep-id-here"
+}
+```
+
+**Example:**
+```json
+{
+  "drepId": "drep1yfjez5zup0gystdvc933w2mn8k64hcy3krvc2namluwjxdcfhm8wd"
+}
+```
+
+### Step 5: NPM Package Configuration
 
 Add your NPM packages that you want to track:
 
@@ -81,7 +135,7 @@ Add your NPM packages that you want to track:
 }
 ```
 
-### Step 4: Output Directory Configuration
+### Step 6: Output Directory Configuration
 
 Configure where the generated files should be saved:
 
@@ -93,7 +147,8 @@ Configure where the generated files should be saved:
     "contributionsDir": "contributions",     // Directory for contribution data
     "drepVotingDir": "drep-voting",         // Directory for DRep voting data
     "catalystProposalsDir": "catalyst-proposals", // Directory for Catalyst proposals
-    "discordStatsDir": "discord-stats"       // Directory for Discord statistics
+    "discordStatsDir": "discord-stats",      // Directory for Discord statistics
+    "stakePoolDir": "stake-pool"             // Directory for stake pool data
   }
 }
 ```
@@ -107,12 +162,13 @@ Configure where the generated files should be saved:
     "contributionsDir": "contributions",
     "drepVotingDir": "drep-voting",
     "catalystProposalsDir": "catalyst-proposals",
-    "discordStatsDir": "discord-stats"
+    "discordStatsDir": "discord-stats",
+    "stakePoolDir": "stake-pool"
   }
 }
 ```
 
-### Step 5: GitHub URLs Configuration
+### Step 7: GitHub URLs Configuration
 
 Update the GitHub dependents URL for your main repository:
 
@@ -133,7 +189,50 @@ Update the GitHub dependents URL for your main repository:
 }
 ```
 
-### Step 6: Builder Projects (Optional)
+### Step 8: Social Links Configuration (Optional)
+
+Configure your organization's social media links:
+
+```json
+{
+  "socialLinks": [
+    {
+      "name": "GitHub",
+      "url": "https://github.com/your-org"
+    },
+    {
+      "name": "Twitter",
+      "url": "https://x.com/your-org"
+    },
+    {
+      "name": "Discord",
+      "url": "https://discord.gg/your-invite"
+    }
+  ]
+}
+```
+
+**Example:**
+```json
+{
+  "socialLinks": [
+    {
+      "name": "GitHub",
+      "url": "https://github.com/sidan-lab"
+    },
+    {
+      "name": "Twitter",
+      "url": "https://x.com/sidan_lab"
+    },
+    {
+      "name": "Discord",
+      "url": "https://discord.gg/SN8EYZA8"
+    }
+  ]
+}
+```
+
+### Step 9: Builder Projects (Optional)
 
 Configure builder projects that will be displayed in the UI:
 
@@ -167,7 +266,7 @@ Configure builder projects that will be displayed in the UI:
 }
 ```
 
-### Step 7: Highlighted Projects (Optional)
+### Step 10: Highlighted Projects (Optional)
 
 Configure projects you want to highlight:
 
@@ -200,7 +299,7 @@ Configure projects you want to highlight:
 }
 ```
 
-### Step 8: Showcase Repositories (Optional)
+### Step 11: Showcase Repositories (Optional)
 
 Configure repositories to showcase:
 
@@ -231,23 +330,6 @@ Configure repositories to showcase:
 }
 ```
 
-### Step 9: DRep ID (Optional)
-
-If you're tracking DRep voting, add your DRep ID:
-
-```json
-{
-  "drepId": "your-drep-id-here"
-}
-```
-
-**Example:**
-```json
-{
-  "drepId": "drep1yfjez5zup0gystdvc933w2mn8k64hcy3krvc2namluwjxdcfhm8wd"
-}
-```
-
 ## Complete Configuration Example
 
 Here's a complete example of how your configuration file should look:
@@ -256,13 +338,25 @@ Here's a complete example of how your configuration file should look:
 {
   "organization": {
     "name": "your-org",
-    "displayName": "Your Organization"
+    "displayName": "Your Organization",
+    "logo": {
+      "src": "/logo.png",
+      "width": 40,
+      "height": 40
+    },
+    "logoWithName": {
+      "src": "/logo-with-name.png",
+      "width": 120,
+      "height": 120
+    }
   },
   "repositories": {
     "main": "your-main-repo",
     "governance": "your-governance-repo",
     "dependentsCountRepo": "your-main-repo"
   },
+  "poolId": "your-stake-pool-id-if-applicable",
+  "drepId": "your-drep-id-if-applicable",
   "npmPackages": {
     "core": "@yourorg/core",
     "react": "@yourorg/react",
@@ -274,11 +368,22 @@ Here's a complete example of how your configuration file should look:
     "contributionsDir": "contributions",
     "drepVotingDir": "drep-voting",
     "catalystProposalsDir": "catalyst-proposals",
-    "discordStatsDir": "discord-stats"
+    "discordStatsDir": "discord-stats",
+    "stakePoolDir": "stake-pool"
   },
   "githubUrls": {
     "dependentsUrl": "https://github.com/your-org/your-main-repo/network/dependents"
   },
+  "socialLinks": [
+    {
+      "name": "GitHub",
+      "url": "https://github.com/your-org"
+    },
+    {
+      "name": "Twitter",
+      "url": "https://x.com/your-org"
+    }
+  ],
   "builderProjects": [
     {
       "id": "b1",
@@ -302,8 +407,7 @@ Here's a complete example of how your configuration file should look:
       "icon": "/repo-icon.png",
       "url": "https://github.com/your-org/awesome-repo"
     }
-  ],
-  "drepId": "your-drep-id-if-applicable"
+  ]
 }
 ```
 
@@ -325,6 +429,8 @@ This will load and display the configuration to verify it's working correctly.
 3. **GitHub Actions**: The GitHub Actions workflow automatically copies the config file to the working directory before running the scripts
 4. **Icon Paths**: Icon paths should be relative to the public directory in your Next.js app
 5. **URLs**: Make sure all URLs are accessible and correct
+6. **Logo Images**: Ensure logo images exist in your public directory and match the specified dimensions
+7. **Optional Fields**: Fields marked as "Optional" can be omitted if not needed for your use case
 
 ## Scripts That Use This Config
 

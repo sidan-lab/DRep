@@ -1,7 +1,17 @@
 {
     "organization": {
         "name": "sidan-lab",
-        "displayName": "Sidan"
+        "displayName": "Sidan",
+        "logo": {
+            "src": "/180250645.png",
+            "width": 40,
+            "height": 40
+        },
+        "logoWithName": {
+            "src": "/sidan.png",
+            "width": 120,
+            "height": 120
+        }
     },
     "repositories": {
         "main": "whisky",
@@ -28,6 +38,20 @@
     "githubUrls": {
         "dependentsUrl": "https://github.com/sidan-lab/whisky/network/dependents"
     },
+    "socialLinks": [
+        {
+            "name": "GitHub",
+            "url": "https://github.com/sidan-lab"
+        },
+        {
+            "name": "Twitter",
+            "url": "https://x.com/sidan_lab"
+        },
+        {
+            "name": "Discord",
+            "url": "https://discord.gg/SN8EYZA8"
+        }
+    ],
     "builderProjects": [
         {
             "id": "b1",
