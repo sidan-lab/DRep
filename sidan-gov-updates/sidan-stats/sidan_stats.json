@@ -7,47 +7,47 @@
   "npm": {
     "csl_rs_browser": {
       "downloads": {
-        "last_day": 229,
+        "last_day": 0,
         "last_week": 1045,
         "last_month": 4842,
         "last_year": 25971,
-        "last_12_months": 50916
+        "last_12_months": 51066
       },
       "latest_version": "0.9.21",
-      "dependents_count": 446268
+      "dependents_count": 446602
     },
     "csl_rs_nodejs": {
       "downloads": {
-        "last_day": 233,
+        "last_day": 0,
         "last_week": 1059,
         "last_month": 4740,
         "last_year": 26085,
-        "last_12_months": 51327
+        "last_12_months": 51498
       },
       "latest_version": "0.9.21",
-      "dependents_count": 300996
+      "dependents_count": 301296
     },
     "whisky_js_browser": {
       "downloads": {
-        "last_day": 28,
+        "last_day": 0,
         "last_week": 199,
         "last_month": 613,
         "last_year": 0,
-        "last_12_months": 1856
+        "last_12_months": 1926
       },
       "latest_version": "1.0.8",
-      "dependents_count": 1116433
+      "dependents_count": 1117075
     },
     "whisky_js_nodejs": {
       "downloads": {
-        "last_day": 28,
+        "last_day": 0,
         "last_week": 200,
         "last_month": 610,
         "last_year": 0,
-        "last_12_months": 1827
+        "last_12_months": 1894
       },
       "latest_version": "1.0.8",
-      "dependents_count": 988275
+      "dependents_count": 988895
     }
   },
   "urls": {},
@@ -415,6 +415,21 @@
         ]
       },
       {
+        "login": "Andre-Diamond",
+        "avatar_url": "https://avatars.githubusercontent.com/u/32074058?v=4",
+        "commits": 91,
+        "pull_requests": 3,
+        "contributions": 94,
+        "repositories": [
+          {
+            "name": "DRep",
+            "commits": 91,
+            "pull_requests": 3,
+            "contributions": 94
+          }
+        ]
+      },
+      {
         "login": "crptmppt",
         "avatar_url": "https://avatars.githubusercontent.com/u/58846030?v=4",
         "commits": 84,
@@ -425,21 +440,6 @@
             "name": "CIPs",
             "commits": 84,
             "pull_requests": 0,
-            "contributions": 84
-          }
-        ]
-      },
-      {
-        "login": "Andre-Diamond",
-        "avatar_url": "https://avatars.githubusercontent.com/u/32074058?v=4",
-        "commits": 82,
-        "pull_requests": 2,
-        "contributions": 84,
-        "repositories": [
-          {
-            "name": "DRep",
-            "commits": 82,
-            "pull_requests": 2,
             "contributions": 84
           }
         ]
@@ -685,6 +685,21 @@
         ]
       },
       {
+        "login": "github-actions[bot]",
+        "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+        "commits": 19,
+        "pull_requests": 0,
+        "contributions": 19,
+        "repositories": [
+          {
+            "name": "DRep",
+            "commits": 19,
+            "pull_requests": 0,
+            "contributions": 19
+          }
+        ]
+      },
+      {
         "login": "Ryun1",
         "avatar_url": "https://avatars.githubusercontent.com/u/44342099?v=4",
         "commits": 15,
@@ -706,21 +721,6 @@
         ]
       },
       {
-        "login": "github-actions[bot]",
-        "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
-        "commits": 15,
-        "pull_requests": 0,
-        "contributions": 15,
-        "repositories": [
-          {
-            "name": "DRep",
-            "commits": 15,
-            "pull_requests": 0,
-            "contributions": 15
-          }
-        ]
-      },
-      {
         "login": "Zagita21",
         "avatar_url": "https://avatars.githubusercontent.com/u/86721028?v=4",
         "commits": 13,
@@ -738,6 +738,21 @@
             "commits": 1,
             "pull_requests": 1,
             "contributions": 2
+          }
+        ]
+      },
+      {
+        "login": "actions-user",
+        "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
+        "commits": 14,
+        "pull_requests": 0,
+        "contributions": 14,
+        "repositories": [
+          {
+            "name": "DRep",
+            "commits": 14,
+            "pull_requests": 0,
+            "contributions": 14
           }
         ]
       },
@@ -783,21 +798,6 @@
             "commits": 12,
             "pull_requests": 0,
             "contributions": 12
-          }
-        ]
-      },
-      {
-        "login": "actions-user",
-        "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
-        "commits": 11,
-        "pull_requests": 0,
-        "contributions": 11,
-        "repositories": [
-          {
-            "name": "DRep",
-            "commits": 11,
-            "pull_requests": 0,
-            "contributions": 11
           }
         ]
       },
@@ -2704,8 +2704,8 @@
         ]
       }
     ],
-    "total_pull_requests": 189,
-    "total_commits": 3144,
-    "total_contributions": 3333
+    "total_pull_requests": 190,
+    "total_commits": 3160,
+    "total_contributions": 3350
   }
 }
