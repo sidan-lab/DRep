@@ -3,7 +3,7 @@ import styles from "../styles/page.module.css";
 import Link from 'next/link';
 
 export default function Dashboard() {
-  const { orgData, catalystData, drepVotingData, isLoading, error } = useData();
+  const { orgData, catalystData, drepVotingData, discordStats, stakePoolData, isLoading, error } = useData();
 
   if (isLoading) {
     return (
@@ -24,6 +24,16 @@ export default function Dashboard() {
   const currentStats = orgData?.currentStats;
   const votes = drepVotingData?.votes || [];
   const projects = catalystData?.catalystData?.projects || [];
+
+  // Get latest Discord stats
+  const latestDiscordStats = discordStats?.stats ?
+    Object.values(discordStats.stats).pop() : null;
+
+  // Get stake pool info
+  const poolInfo = stakePoolData?.poolInfo?.poolInfo;
+
+  // Get DRep delegation info
+  const drepDelegation = drepVotingData?.delegationData;
 
   return (
     <div className={styles.page}>
@@ -55,6 +65,35 @@ export default function Dashboard() {
               {currentStats?.contributors?.total_commits?.toLocaleString() || '0'}
             </div>
           </div>
+          {latestDiscordStats && (
+            <div className={styles.statCard}>
+              <h3>Discord Members</h3>
+              <div className={styles.statNumber}>{latestDiscordStats.memberCount.toLocaleString()}</div>
+            </div>
+          )}
+          {poolInfo && (
+            <div className={styles.statCard}>
+              <h3>Live Stake</h3>
+              <div className={styles.statNumber}>
+                {poolInfo.live_stake ?
+                  `₳ ${(parseFloat(poolInfo.live_stake) / 1_000_000 / 1_000_000).toFixed(1)}M` :
+                  'N/A'
+                }
+              </div>
+            </div>
+          )}
+          {drepDelegation && (
+            <div className={styles.statCard}>
+              <h3>DRep Delegators</h3>
+              <div className={styles.statNumber}>{drepDelegation.timeline.total_delegators || 0}</div>
+            </div>
+          )}
+          {poolInfo && (
+            <div className={styles.statCard}>
+              <h3>Pool Delegators</h3>
+              <div className={styles.statNumber}>{poolInfo.live_delegators || 0}</div>
+            </div>
+          )}
         </div>
 
         {/* Quick Actions */}
@@ -73,6 +112,10 @@ export default function Dashboard() {
               <h3>Sidan Stats</h3>
               <p>Comprehensive statistics and metrics for the organization</p>
             </Link>
+            <Link href="/stake-pool" className={styles.actionCard}>
+              <h3>Stake Pool</h3>
+              <p>Monitor Sidan&apos;s stake pool performance and governance participation</p>
+            </Link>
             <Link href="/projects" className={styles.actionCard}>
               <h3>Projects</h3>
               <p>Explore Sidan&apos;s open source projects and repositories</p>
@@ -81,29 +124,6 @@ export default function Dashboard() {
               <h3>Contributors</h3>
               <p>Meet the amazing contributors who make Sidan possible</p>
             </Link>
-          </div>
-        </div>
-
-        {/* Recent Activity */}
-        <div className={styles.quickActions}>
-          <h2>Recent Activity</h2>
-          <div className={styles.actionGrid}>
-            {votes.slice(0, 3).map((vote, index) => (
-              <div key={index} className={styles.actionCard}>
-                <h3>Recent Vote</h3>
-                <p><strong>Proposal:</strong> {vote.proposalTitle || `Proposal ${vote.proposalId}`}</p>
-                <p><strong>Vote:</strong> {vote.vote}</p>
-                <p><strong>Date:</strong> {new Date(vote.blockTime).toLocaleDateString()}</p>
-              </div>
-            ))}
-            {projects.slice(0, 3).map((project, index) => (
-              <div key={`project-${index}`} className={styles.actionCard}>
-                <h3>Catalyst Project</h3>
-                <p><strong>Title:</strong> {project.projectDetails.title}</p>
-                <p><strong>Status:</strong> {project.projectDetails.status}</p>
-                <p><strong>Budget:</strong> {project.projectDetails.budget.toLocaleString()} ADA</p>
-              </div>
-            ))}
           </div>
         </div>
       </main>

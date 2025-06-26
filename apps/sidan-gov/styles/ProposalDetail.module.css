@@ -173,7 +173,8 @@
     transform: translateY(-2px);
 }
 
-.loading, .error {
+.loading,
+.error {
     text-align: center;
     padding: 2rem;
     color: rgba(255, 255, 255, 0.7);
@@ -263,4 +264,4 @@
         width: 100%;
         justify-content: center;
     }
-} 
+}

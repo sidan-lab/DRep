@@ -11,6 +11,7 @@
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -28,6 +29,7 @@
         opacity: 0;
         transform: translateY(-30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -164,6 +166,7 @@
         opacity: 0;
         transform: translateY(40px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -197,21 +200,48 @@
     animation: cardSlideIn 0.6s ease-out both;
 }
 
-.item:nth-child(1) { animation-delay: 0.1s; }
-.item:nth-child(2) { animation-delay: 0.2s; }
-.item:nth-child(3) { animation-delay: 0.3s; }
-.item:nth-child(4) { animation-delay: 0.4s; }
-.item:nth-child(5) { animation-delay: 0.5s; }
-.item:nth-child(6) { animation-delay: 0.6s; }
-.item:nth-child(7) { animation-delay: 0.7s; }
-.item:nth-child(8) { animation-delay: 0.8s; }
-.item:nth-child(9) { animation-delay: 0.9s; }
+.item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.item:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.item:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.item:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.item:nth-child(7) {
+    animation-delay: 0.7s;
+}
+
+.item:nth-child(8) {
+    animation-delay: 0.8s;
+}
+
+.item:nth-child(9) {
+    animation-delay: 0.9s;
+}
 
 @keyframes cardSlideIn {
     from {
         opacity: 0;
         transform: translateY(30px) scale(0.95);
     }
+
     to {
         opacity: 1;
         transform: translateY(0) scale(1);
@@ -876,9 +906,17 @@
     animation: cardSlideIn 0.6s ease-out both;
 }
 
-.infoCard:nth-child(1) { animation-delay: 1.1s; }
-.infoCard:nth-child(2) { animation-delay: 1.2s; }
-.infoCard:nth-child(3) { animation-delay: 1.3s; }
+.infoCard:nth-child(1) {
+    animation-delay: 1.1s;
+}
+
+.infoCard:nth-child(2) {
+    animation-delay: 1.2s;
+}
+
+.infoCard:nth-child(3) {
+    animation-delay: 1.3s;
+}
 
 .infoCard:hover {
     transform: translateY(-5px) scale(1.02);

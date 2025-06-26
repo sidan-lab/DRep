@@ -57,7 +57,7 @@
     }
 
     .headerContainer {
-        margin-top: -3rem;
+        margin-top: 0;
     }
 
     .titleArea {
@@ -81,7 +81,7 @@
 @media (max-width: 480px) {
     .headerContainer {
         margin-bottom: 1.5rem;
-        margin-top: -3rem;
+        margin-top: 0;
     }
 
     .header {

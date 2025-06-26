@@ -31,10 +31,9 @@
 }
 
 .stat {
-    background: linear-gradient(165deg, 
-        rgba(255, 255, 255, 0.05) 0%,
-        rgba(255, 255, 255, 0.02) 100%
-    );
+    background: linear-gradient(165deg,
+            rgba(255, 255, 255, 0.05) 0%,
+            rgba(255, 255, 255, 0.02) 100%);
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
     border-radius: 12px;
@@ -52,9 +51,8 @@
     position: absolute;
     inset: 0;
     background: linear-gradient(165deg,
-        rgba(255, 255, 255, 0.03) 0%,
-        rgba(255, 255, 255, 0) 100%
-    );
+            rgba(255, 255, 255, 0.03) 0%,
+            rgba(255, 255, 255, 0) 100%);
     opacity: 0;
     transition: opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1);
     pointer-events: none;
@@ -64,14 +62,12 @@
     content: '';
     position: absolute;
     inset: -100%;
-    background: linear-gradient(
-        45deg,
-        transparent 0%,
-        rgba(255, 255, 255, 0.03) 30%,
-        rgba(255, 255, 255, 0.06) 50%,
-        rgba(255, 255, 255, 0.03) 70%,
-        transparent 100%
-    );
+    background: linear-gradient(45deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.03) 30%,
+            rgba(255, 255, 255, 0.06) 50%,
+            rgba(255, 255, 255, 0.03) 70%,
+            transparent 100%);
     transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
     transform: translateX(-100%) rotate(45deg);
     pointer-events: none;
@@ -80,7 +76,7 @@
 .stat:hover {
     transform: translateY(-4px) scale(1.01);
     border-color: rgba(255, 255, 255, 0.15);
-    box-shadow: 
+    box-shadow:
         0 8px 32px -4px rgba(0, 0, 0, 0.2),
         0 0 0 1px rgba(255, 255, 255, 0.1) inset;
 }
@@ -105,11 +101,9 @@
 .stat p {
     font-size: 2rem;
     font-weight: 600;
-    background: linear-gradient(
-        120deg,
-        rgba(255, 255, 255, 0.95) 0%,
-        rgba(255, 255, 255, 0.85) 100%
-    );
+    background: linear-gradient(120deg,
+            rgba(255, 255, 255, 0.95) 0%,
+            rgba(255, 255, 255, 0.85) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -129,10 +123,9 @@
 }
 
 .card {
-    background: linear-gradient(165deg, 
-        rgba(255, 255, 255, 0.05) 0%,
-        rgba(255, 255, 255, 0.02) 100%
-    );
+    background: linear-gradient(165deg,
+            rgba(255, 255, 255, 0.05) 0%,
+            rgba(255, 255, 255, 0.02) 100%);
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
     border-radius: 12px;
@@ -148,9 +141,8 @@
     position: absolute;
     inset: 0;
     background: linear-gradient(165deg,
-        rgba(255, 255, 255, 0.03) 0%,
-        rgba(255, 255, 255, 0) 100%
-    );
+            rgba(255, 255, 255, 0.03) 0%,
+            rgba(255, 255, 255, 0) 100%);
     opacity: 0;
     transition: opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1);
     pointer-events: none;
@@ -160,14 +152,12 @@
     content: '';
     position: absolute;
     inset: -100%;
-    background: linear-gradient(
-        45deg,
-        transparent 0%,
-        rgba(255, 255, 255, 0.03) 30%,
-        rgba(255, 255, 255, 0.06) 50%,
-        rgba(255, 255, 255, 0.03) 70%,
-        transparent 100%
-    );
+    background: linear-gradient(45deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.03) 30%,
+            rgba(255, 255, 255, 0.06) 50%,
+            rgba(255, 255, 255, 0.03) 70%,
+            transparent 100%);
     transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
     transform: translateX(-100%) rotate(45deg);
     pointer-events: none;
@@ -176,7 +166,7 @@
 .card:hover {
     transform: translateY(-4px) scale(1.01);
     border-color: rgba(255, 255, 255, 0.15);
-    box-shadow: 
+    box-shadow:
         0 8px 32px -4px rgba(0, 0, 0, 0.2),
         0 0 0 1px rgba(255, 255, 255, 0.1) inset;
     transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
@@ -257,7 +247,8 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     width: 100%;
-    padding-right: 80px; /* Make space for the status badge */
+    padding-right: 80px;
+    /* Make space for the status badge */
 }
 
 .cardContent {
@@ -600,7 +591,8 @@
         gap: 0.375rem;
     }
 
-    .infoBox, .projectIdBox {
+    .infoBox,
+    .projectIdBox {
         padding: 0.3125rem 0.4375rem;
     }
 
@@ -697,9 +689,8 @@
     font-weight: 500;
     color: rgba(255, 255, 255, 0.9);
     background: linear-gradient(165deg,
-        rgba(255, 255, 255, 0.06) 0%,
-        rgba(255, 255, 255, 0.03) 100%
-    );
+            rgba(255, 255, 255, 0.06) 0%,
+            rgba(255, 255, 255, 0.03) 100%);
     border: 1px solid rgba(255, 255, 255, 0.08);
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -719,23 +710,20 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        90deg,
-        transparent 0%,
-        rgba(255, 255, 255, 0.2) 50%,
-        transparent 100%
-    );
+    background: linear-gradient(90deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.2) 50%,
+            transparent 100%);
     transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 1;
 }
 
 .cardButton:hover {
     background: linear-gradient(165deg,
-        rgba(255, 255, 255, 0.1) 0%,
-        rgba(255, 255, 255, 0.05) 100%
-    );
+            rgba(255, 255, 255, 0.1) 0%,
+            rgba(255, 255, 255, 0.05) 100%);
     border-color: rgba(255, 255, 255, 0.2);
-    box-shadow: 
+    box-shadow:
         0 8px 24px -4px rgba(0, 0, 0, 0.3),
         0 0 0 1px rgba(255, 255, 255, 0.15) inset,
         0 0 0 2px rgba(255, 255, 255, 0.05);
@@ -751,16 +739,15 @@
 .cardButton:active {
     transform: translateY(0);
     background: linear-gradient(165deg,
-        rgba(255, 255, 255, 0.08) 0%,
-        rgba(255, 255, 255, 0.04) 100%
-    );
-    box-shadow: 
+            rgba(255, 255, 255, 0.08) 0%,
+            rgba(255, 255, 255, 0.04) 100%);
+    box-shadow:
         0 4px 16px -4px rgba(0, 0, 0, 0.2),
         0 0 0 1px rgba(255, 255, 255, 0.1) inset;
     border-color: rgba(255, 255, 255, 0.15);
 }
 
-.cardButton > * {
+.cardButton>* {
     position: relative;
     z-index: 2;
 }
@@ -867,9 +854,8 @@
     gap: 0.5rem;
     padding: 0.875rem;
     background: linear-gradient(165deg,
-        rgba(255, 255, 255, 0.04) 0%,
-        rgba(255, 255, 255, 0.02) 100%
-    );
+            rgba(255, 255, 255, 0.04) 0%,
+            rgba(255, 255, 255, 0.02) 100%);
     border-radius: 12px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     text-decoration: none;
@@ -934,7 +920,7 @@
     border-radius: 4px;
     overflow: hidden;
     position: relative;
-    box-shadow: 
+    box-shadow:
         inset 0 1px 3px rgba(0, 0, 0, 0.4),
         0 1px 2px rgba(255, 255, 255, 0.05);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -944,12 +930,11 @@
     height: 100%;
     border-radius: 4px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    background: linear-gradient(90deg, 
-        rgba(255, 255, 255, 0.5),
-        rgba(255, 255, 255, 0.7)
-    );
+    background: linear-gradient(90deg,
+            rgba(255, 255, 255, 0.5),
+            rgba(255, 255, 255, 0.7));
     position: relative;
-    box-shadow: 
+    box-shadow:
         0 0 20px rgba(255, 255, 255, 0.2),
         0 0 10px rgba(255, 255, 255, 0.1),
         inset 0 1px rgba(255, 255, 255, 0.3);
@@ -963,23 +948,21 @@
     right: 0;
     bottom: 0;
     background: linear-gradient(90deg,
-        rgba(255, 255, 255, 0) 0%,
-        rgba(255, 255, 255, 0.2) 20%,
-        rgba(255, 255, 255, 0.4) 50%,
-        rgba(255, 255, 255, 0.2) 80%,
-        rgba(255, 255, 255, 0) 100%
-    );
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.2) 20%,
+            rgba(255, 255, 255, 0.4) 50%,
+            rgba(255, 255, 255, 0.2) 80%,
+            rgba(255, 255, 255, 0) 100%);
     transition: opacity 0.3s ease;
     opacity: 0;
 }
 
 .milestoneRow:hover {
     background: linear-gradient(165deg,
-        rgba(255, 255, 255, 0.06) 0%,
-        rgba(255, 255, 255, 0.03) 100%
-    );
+            rgba(255, 255, 255, 0.06) 0%,
+            rgba(255, 255, 255, 0.03) 100%);
     border-color: rgba(255, 255, 255, 0.12);
-    box-shadow: 
+    box-shadow:
         0 8px 32px -4px rgba(0, 0, 0, 0.3),
         0 0 0 1px rgba(255, 255, 255, 0.08) inset;
 }
@@ -1007,18 +990,17 @@
 
 .milestoneRow:hover .milestoneProgressBar {
     background: rgba(0, 0, 0, 0.7);
-    box-shadow: 
+    box-shadow:
         inset 0 1px 4px rgba(0, 0, 0, 0.5),
         0 1px 2px rgba(255, 255, 255, 0.08);
     transform: scale(1.02);
 }
 
 .milestoneRow:hover .milestoneProgressFill {
-    background: linear-gradient(90deg, 
-        rgba(255, 255, 255, 0.6),
-        rgba(255, 255, 255, 0.9)
-    );
-    box-shadow: 
+    background: linear-gradient(90deg,
+            rgba(255, 255, 255, 0.6),
+            rgba(255, 255, 255, 0.9));
+    box-shadow:
         0 0 30px rgba(255, 255, 255, 0.3),
         0 0 20px rgba(255, 255, 255, 0.2),
         0 0 10px rgba(255, 255, 255, 0.1),
@@ -1136,12 +1118,10 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255, 255, 255, 0.2),
-        transparent
-    );
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.2),
+            transparent);
     transition: left 0.5s ease;
 }
 

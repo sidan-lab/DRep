@@ -2,6 +2,11 @@
 import config from '../../org-stats-config.json';
 
 // Type definitions for the config
+interface SocialLink {
+    name: string;
+    url: string;
+}
+
 interface BuilderProject {
     id: string;
     icon: string;
@@ -24,11 +29,20 @@ interface ShowcaseRepo {
     url: string;
 }
 
+interface LogoConfig {
+    src: string;
+    width: number;
+    height: number;
+}
+
 interface OrgStatsConfig {
     organization: {
         name: string;
         displayName: string;
+        logo: LogoConfig;
+        logoWithName: LogoConfig;
     };
+    socialLinks: SocialLink[];
     repositories: {
         main: string;
         governance: string;
