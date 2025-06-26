@@ -231,11 +231,11 @@
       },
       "566": {
         "voting_power_lovelace": "20857974602358",
-        "total_delegators": 28
+        "total_delegators": 29
       }
     },
     "current_epoch": 566,
-    "total_delegators": 28,
+    "total_delegators": 29,
     "total_amount_ada": 20857974.602358
   },
   "drepInfo": {
@@ -249,6 +249,6 @@
     "expires_epoch_no": 582,
     "meta_url": "https://raw.githubusercontent.com/sidan-lab/DRep/main/sidan-lab.jsonld",
     "meta_hash": "0e84662b672077968494f620f91e49e3daaf6c983707ae6bd227709dbd453b56",
-    "last_updated": "2025-06-24T08:25:53.126Z"
+    "last_updated": "2025-06-26T02:23:10.450Z"
   }
 }
