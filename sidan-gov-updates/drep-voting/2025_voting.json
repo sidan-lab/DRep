@@ -1,5 +1,20 @@
 [
   {
+    "proposalId": "gov_action1vrkk4dpuss8l3z9g4uc2rmf8ks0f7j534zvz9v4k85dlc54wa3zsqq68rx0",
+    "proposalTxHash": "60ed6ab43c840ff888a8af30a1ed27b41e9f4a91a89822b2b63d1bfc52aeec4500",
+    "proposalIndex": 0,
+    "voteTxHash": "87e2a55955e69b486002d77a33e5a0ee7b11cd5f2336d06f4f050cbfa5075c82",
+    "blockTime": "2025-06-26T10:28:08.000Z",
+    "vote": "Yes",
+    "metaUrl": "https://most-brass-sun.quicknode-ipfs.com/ipfs/QmVq1agjj9RhQXUqDTKF36uXi3pvx8FFoJJp64ubZss4vH",
+    "metaHash": "95d42117984a1ef481e2cbdf136ec197f3a0bc4ba11fc3df76e164ed0acfab29",
+    "proposalTitle": "Amaru Treasury Withdrawal 2025",
+    "proposalType": "TreasuryWithdrawals",
+    "proposedEpoch": 566,
+    "expirationEpoch": 573,
+    "rationale": "We have already addressed the decision of voting YES on this governance action. Reciting the rationale here: We support this proposal as it directly addresses a long-standing risk in the ecosystem — reliance on a single node implementation — by funding the development of a modular, high-performance alternative written in Rust. \n\nWe believe a second, independently maintained node:\n- Strengthens the resilience and fault tolerance of the network\n- Expands developer accessibility through modern tooling and better observability\n- Enables platform interoperability with WebAssembly\n- Empower Cardano core infrastructure to access to wider talent pool with alternative implementation of a more modern programming language\n\nWe also appreciate the proposal’s financial transparency:\n- Clearly scoped per team member and responsibility\n- Budget guarded by a smart contract with refund logic\n- Quarterly public reporting and demo cadence already in practice\n\nSIDAN Lab is also interested in the possibility of expanding works into alternative Hydra node, where our team can participate in maintenance and collaboration in the future.\n\nFor these reasons, SIDAN Lab votes YES."
+  },
+  {
     "proposalId": "gov_action1u9x73kwufaxa70lfy59g4ynwyrcsaxdcd0gxzzmh67s9fxq4j8hqqk2phgh",
     "proposalTxHash": "e14de8d9dc4f4ddf3fe9250a8a926e20f10e99b86bd0610b77d7a054981591ee00",
     "proposalIndex": 0,
