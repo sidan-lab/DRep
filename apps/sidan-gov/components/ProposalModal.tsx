@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import styles from '../styles/ProposalModal.module.css';
 import config from '../config';
 
@@ -26,6 +27,7 @@ export default function ProposalModal({ proposal, onClose, context = 'drep' }: P
     const modalRef = useRef<HTMLDivElement>(null);
     const [copiedHash, setCopiedHash] = useState<string | null>(null);
     const [isSmallScreen, setIsSmallScreen] = useState(false);
+    const [mounted, setMounted] = useState(false);
 
     const truncateHash = (hash: string) => {
         if (!isSmallScreen) return hash;
@@ -48,6 +50,10 @@ export default function ProposalModal({ proposal, onClose, context = 'drep' }: P
         modalRef.current.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
         modalRef.current.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
     };
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
 
     useEffect(() => {
         const checkScreenSize = () => {
@@ -93,7 +99,7 @@ export default function ProposalModal({ proposal, onClose, context = 'drep' }: P
         return `${displayName} DRep Vote`;
     };
 
-    return (
+    const modalContent = (
         <div className={styles.overlay} onClick={onClose}>
             <div
                 className={styles.modal}
@@ -249,4 +255,7 @@ export default function ProposalModal({ proposal, onClose, context = 'drep' }: P
             </div>
         </div>
     );
+
+    // Use portal to render modal at document root level
+    return mounted ? createPortal(modalContent, document.body) : null;
 } 

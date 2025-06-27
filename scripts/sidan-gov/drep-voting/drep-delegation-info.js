@@ -139,11 +139,41 @@ async function getCurrentEpoch() {
     }
 }
 
+async function getVoterProposalList(drepId) {
+    try {
+        const apiKey = process.env.KOIOS_API_KEY;
+        if (!apiKey) {
+            throw new Error('KOIOS_API_KEY environment variable is not set');
+        }
+
+        const response = await axios.get(`https://api.koios.rest/api/v1/voter_proposal_list?_voter_id=${drepId}`, {
+            headers: {
+                'Authorization': `Bearer ${apiKey}`,
+                'accept': 'application/json'
+            }
+        });
+
+        if (!Array.isArray(response.data)) {
+            throw new Error('Invalid response format: expected an array');
+        }
+
+        console.log(`Found ${response.data.length} governance proposals for DRep ${drepId}`);
+        return response.data;
+    } catch (error) {
+        console.error('Error fetching voter proposal list:', error.message);
+        if (error.response) {
+            console.error('API Response:', error.response.data);
+        }
+        return [];
+    }
+}
+
 async function main() {
     const votingPowerHistory = await getDRepVotingPowerHistory(drepId);
     const currentDelegators = await getDRepDelegators(drepId);
     const drepInfo = await getDRepInfo(drepId);
     const currentEpoch = await getCurrentEpoch();
+    const voterProposals = await getVoterProposalList(drepId);
 
     // Read existing JSON file
     const outputPath = path.join(repoRoot, config.outputPaths.baseDir, config.outputPaths.drepVotingDir, 'drep-delegation-info.json');
@@ -185,7 +215,8 @@ async function main() {
         expires_epoch_no: drepInfo?.expires_epoch_no || 0,
         meta_url: drepInfo?.meta_url || 'N/A',
         meta_hash: drepInfo?.meta_hash || 'N/A',
-        last_updated: new Date().toISOString()
+        last_updated: new Date().toISOString(),
+        total_drep_proposals: voterProposals.length
     };
 
     // Save to JSON file
@@ -203,6 +234,7 @@ async function main() {
     console.log(`- Active: ${drepInfo?.active || false}`);
     console.log(`- Registered: ${drepInfo?.registered || false}`);
     console.log(`- Expires Epoch: ${drepInfo?.expires_epoch_no || 0}`);
+    console.log(`- Total Proposals Available: ${voterProposals.length}`);
 }
 
 main(); 

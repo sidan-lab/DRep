@@ -115,7 +115,6 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-    flex-wrap: wrap;
     cursor: pointer;
     padding: 1rem;
     border-radius: 8px;
@@ -144,8 +143,8 @@
 
 .poolIdText {
     display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
+    align-items: center;
+    gap: 0.5rem;
     flex: 1;
     min-width: 0;
 }
@@ -156,6 +155,7 @@
     font-size: 0.875rem;
     text-transform: uppercase;
     letter-spacing: 0.02em;
+    white-space: nowrap;
 }
 
 .poolIdFull {
@@ -165,6 +165,8 @@
     font-weight: 600;
     word-break: break-all;
     display: block;
+    flex: 1;
+    min-width: 0;
 }
 
 .poolIdShort {
@@ -174,6 +176,8 @@
     font-weight: 600;
     word-break: break-all;
     display: none;
+    flex: 1;
+    min-width: 0;
 }
 
 .copyIcon {
@@ -392,13 +396,12 @@
     }
 
     .poolId {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
+        align-items: center;
+        gap: 0.75rem;
     }
 
     .poolIdText {
-        width: 100%;
+        gap: 0.25rem;
     }
 
     .poolIdFull {

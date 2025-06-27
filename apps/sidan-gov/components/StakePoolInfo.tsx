@@ -155,10 +155,6 @@ const StakePoolInfo: React.FC = () => {
                     <StakePoolVotingList votes={allVotes} />
                 </div>
             )}
-
-            <div className={styles.lastUpdated}>
-                <p><strong>Data Last Updated:</strong> {new Date(stakePoolData.lastFetched).toLocaleString()}</p>
-            </div>
         </div>
     );
 };

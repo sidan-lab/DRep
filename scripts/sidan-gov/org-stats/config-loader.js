@@ -43,12 +43,6 @@ export function loadConfig() {
         if (!config.organization?.name) {
             throw new Error('Config must contain organization.name');
         }
-        if (!config.repositories?.main) {
-            throw new Error('Config must contain repositories.main');
-        }
-        if (!config.npmPackages || Object.keys(config.npmPackages).length === 0) {
-            throw new Error('Config must contain at least one npm package in npmPackages');
-        }
 
         console.log(`Loaded config from: ${configPath}`);
         console.log(`Organization: ${config.organization.name}`);

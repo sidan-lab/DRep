@@ -53,12 +53,11 @@ Update the organization section with your GitHub organization details:
 
 ### Step 2: Repository Configuration
 
-Configure your main repositories:
+Configure your repositories:
 
 ```json
 {
   "repositories": {
-    "main": "your-main-repo",                    // Your primary repository name
     "governance": "your-governance-repo",        // Governance repository name
     "dependentsCountRepo": "your-main-repo"      // Repository used for dependents count
   }
@@ -69,7 +68,6 @@ Configure your main repositories:
 ```json
 {
   "repositories": {
-    "main": "whisky",
     "governance": "DRep",
     "dependentsCountRepo": "whisky"
   }
@@ -168,28 +166,7 @@ Configure where the generated files should be saved:
 }
 ```
 
-### Step 7: GitHub URLs Configuration
-
-Update the GitHub dependents URL for your main repository:
-
-```json
-{
-  "githubUrls": {
-    "dependentsUrl": "https://github.com/your-org/your-main-repo/network/dependents"
-  }
-}
-```
-
-**Example:**
-```json
-{
-  "githubUrls": {
-    "dependentsUrl": "https://github.com/sidan-lab/whisky/network/dependents"
-  }
-}
-```
-
-### Step 8: Social Links Configuration (Optional)
+### Step 7: Social Links Configuration (Optional)
 
 Configure your organization's social media links:
 
@@ -232,7 +209,7 @@ Configure your organization's social media links:
 }
 ```
 
-### Step 9: Builder Projects (Optional)
+### Step 8: Builder Projects (Optional)
 
 Configure builder projects that will be displayed in the UI:
 
@@ -261,12 +238,42 @@ Configure builder projects that will be displayed in the UI:
       "id": "b2",
       "icon": "/nmkr.png",
       "url": "https://www.nmkr.io/"
+    },
+    {
+      "id": "b3",
+      "icon": "/gimbalabs.png",
+      "url": "https://www.gimbalabs.com/gimbalgrid"
+    },
+    {
+      "id": "b4",
+      "icon": "/aiken.png",
+      "url": "https://aiken-lang.org/"
+    },
+    {
+      "id": "b5",
+      "icon": "/socious.png",
+      "url": "https://socious.io/"
+    },
+    {
+      "id": "b6",
+      "icon": "/txpipe.png",
+      "url": "https://txpipe.io/"
+    },
+    {
+      "id": "b7",
+      "icon": "/deltadefi.png",
+      "url": "https://www.deltadefi.io/"
+    },
+    {
+      "id": "b8",
+      "icon": "/mesh-white-txt.png",
+      "url": "https://meshjs.dev/"
     }
   ]
 }
 ```
 
-### Step 10: Highlighted Projects (Optional)
+### Step 9: Highlighted Projects (Optional)
 
 Configure projects you want to highlight:
 
@@ -299,7 +306,7 @@ Configure projects you want to highlight:
 }
 ```
 
-### Step 11: Showcase Repositories (Optional)
+### Step 10: Showcase Repositories (Optional)
 
 Configure repositories to showcase:
 
@@ -325,6 +332,30 @@ Configure repositories to showcase:
       "description": "Cardano development tool set across frameworks & libraries.",
       "icon": "/180250645.png",
       "url": "https://github.com/sidan-lab/cardano-bar"
+    },
+    {
+      "name": "whisky",
+      "description": "An open-source Rust library for easy Cardano transaction building and unit testing.",
+      "icon": "/180250645.png",
+      "url": "https://github.com/sidan-lab/whisky"
+    },
+    {
+      "name": "vodka",
+      "description": "Provide utility function for aiken onchain validation and testing utility.",
+      "icon": "/180250645.png",
+      "url": "https://github.com/sidan-lab/vodka"
+    },
+    {
+      "name": "rum",
+      "description": "A golang library for Cardano development, compatible with Mesh and Whisky types.",
+      "icon": "/180250645.png",
+      "url": "https://github.com/sidan-lab/rum"
+    },
+    {
+      "name": "gin",
+      "description": "A python library for Cardano development, compatible with Mesh and Whisky types.",
+      "icon": "/180250645.png",
+      "url": "https://github.com/sidan-lab/gin"
     }
   ]
 }
@@ -351,7 +382,6 @@ Here's a complete example of how your configuration file should look:
     }
   },
   "repositories": {
-    "main": "your-main-repo",
     "governance": "your-governance-repo",
     "dependentsCountRepo": "your-main-repo"
   },
@@ -370,9 +400,6 @@ Here's a complete example of how your configuration file should look:
     "catalystProposalsDir": "catalyst-proposals",
     "discordStatsDir": "discord-stats",
     "stakePoolDir": "stake-pool"
-  },
-  "githubUrls": {
-    "dependentsUrl": "https://github.com/your-org/your-main-repo/network/dependents"
   },
   "socialLinks": [
     {
@@ -416,8 +443,8 @@ Here's a complete example of how your configuration file should look:
 After updating the configuration file, you can test it by running:
 
 ```bash
-cd apps/sidan-gov
-node scripts/org-stats/test-config.js
+cd scripts/sidan-gov
+node org-stats/config-loader.js
 ```
 
 This will load and display the configuration to verify it's working correctly.

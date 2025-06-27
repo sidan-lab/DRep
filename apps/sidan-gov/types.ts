@@ -190,6 +190,7 @@ export interface DRepInfo {
     registered: boolean;
     expires_epoch_no: number;
     last_updated: string;
+    total_drep_proposals?: number;
 }
 
 export interface DRepMetadata {

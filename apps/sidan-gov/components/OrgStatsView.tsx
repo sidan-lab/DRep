@@ -408,7 +408,7 @@ const OrgStatsView: FC<OrgStatsViewProps> = ({ currentStats, yearlyStats, discor
         // and round to a nice number
         return Math.floor(min * 0.9 / 100) * 100;
     }, [discordStatsData]);
-    console.log(monthlyDataByPackage)
+    
     return (
         <div data-testid="mesh-stats-view">
             {packageData.length > 0 && (
