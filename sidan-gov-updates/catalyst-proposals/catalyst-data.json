@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-06-25T02:21:03.674Z",
+  "timestamp": "2025-06-27T02:18:02.534Z",
   "projects": [
     {
       "projectDetails": {
@@ -260,7 +260,7 @@
           "unique_wallets": 356
         }
       },
-      "milestonesCompleted": 4
+      "milestonesCompleted": 5
     },
     {
       "projectDetails": {
@@ -326,7 +326,7 @@
         "title": "Cardano Builder Fest Asia by Mesh, Socious, SIDAN, Vietnam Cardano",
         "budget": 99016,
         "milestones_qty": 4,
-        "funds_distributed": 84164,
+        "funds_distributed": 99016,
         "project_id": 1300036,
         "challenges": {
           "id": 34,
