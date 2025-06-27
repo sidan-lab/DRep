@@ -27,6 +27,16 @@ export interface CatalystData {
     projects: CatalystProject[];
 }
 
+// Proposal Types Union
+export type ProposalType =
+    | 'ParameterChange'
+    | 'HardForkInitiation'
+    | 'TreasuryWithdrawals'
+    | 'NoConfidence'
+    | 'NewCommittee'
+    | 'NewConstitution'
+    | 'InfoAction';
+
 export interface GovernanceVote {
     proposalId: string;
     proposalTxHash: string;
@@ -37,7 +47,7 @@ export interface GovernanceVote {
     metaUrl: string | null;
     metaHash: string | null;
     proposalTitle: string;
-    proposalType: string;
+    proposalType: ProposalType;
     proposedEpoch: number;
     expirationEpoch: number;
     rationale: string;
@@ -355,7 +365,7 @@ export interface PoolVote {
     metaUrl: string | null;
     metaHash: string | null;
     proposalTitle: string;
-    proposalType: string;
+    proposalType: ProposalType;
     proposedEpoch: number;
     expirationEpoch: number;
     rationale: string;

@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import styles from '../styles/ProposalModal.module.css';
 import config from '../config';
+import { ProposalType } from '../types';
 
 interface ProposalModalProps {
     proposal: {
@@ -14,7 +15,7 @@ interface ProposalModalProps {
         metaUrl: string | null;
         metaHash: string | null;
         proposalTitle: string;
-        proposalType: string;
+        proposalType: ProposalType;
         proposedEpoch: number;
         expirationEpoch: number;
         rationale: string;

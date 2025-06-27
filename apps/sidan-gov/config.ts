@@ -44,7 +44,6 @@ interface OrgStatsConfig {
     };
     socialLinks: SocialLink[];
     repositories: {
-        main: string;
         governance: string;
         dependentsCountRepo: string;
     };
@@ -59,9 +58,6 @@ interface OrgStatsConfig {
         catalystProposalsDir: string;
         discordStatsDir: string;
         stakePoolDir: string;
-    };
-    githubUrls: {
-        dependentsUrl: string;
     };
     builderProjects: BuilderProject[];
     highlightedProjects: HighlightedProject[];
