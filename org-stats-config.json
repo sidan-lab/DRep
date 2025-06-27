@@ -14,7 +14,6 @@
         }
     },
     "repositories": {
-        "main": "whisky",
         "governance": "DRep",
         "dependentsCountRepo": "whisky"
     },
@@ -34,9 +33,6 @@
         "catalystProposalsDir": "catalyst-proposals",
         "discordStatsDir": "discord-stats",
         "stakePoolDir": "stake-pool"
-    },
-    "githubUrls": {
-        "dependentsUrl": "https://github.com/sidan-lab/whisky/network/dependents"
     },
     "socialLinks": [
         {

@@ -83,15 +83,16 @@ const ShowcaseRepoCard = ({ repo }: { repo: ShowcaseRepo }) => (
 
 export default function Projects() {
     const { orgData, isLoading, error } = useData();
-    console.log(orgData)
 
     // Extract repository name from dependents URL
     const getRepoNameFromUrl = (url: string): string => {
         const match = url.match(/github\.com\/[^\/]+\/([^\/]+)/);
-        return match ? match[1] : config.organization.displayName; 
+        return match ? match[1] : config.organization.displayName;
     };
 
-    const repoName = getRepoNameFromUrl(config.githubUrls.dependentsUrl);
+    // Construct the dependents URL using config values
+    const dependentsUrl = `https://github.com/${config.organization.name}/${config.repositories.dependentsCountRepo}/network/dependents`;
+    const repoName = getRepoNameFromUrl(dependentsUrl);
 
     if (isLoading) {
         return (
@@ -134,7 +135,7 @@ export default function Projects() {
             </div>
 
             <div className={styles.moreSection} style={{ justifyContent: 'flex-start' }}>
-                <a href={config.githubUrls.dependentsUrl} className={styles.moreButton} target="_blank" rel="noopener noreferrer">
+                <a href={dependentsUrl} className={styles.moreButton} target="_blank" rel="noopener noreferrer">
                     View all Projects
                 </a>
             </div>

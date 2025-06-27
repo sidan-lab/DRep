@@ -23,19 +23,23 @@ export default function DRepVoting() {
     // Calculate metrics for the overview section
     const drepMetrics = useMemo(() => {
         const delegationData = drepVotingData?.delegationData?.timeline;
+        const drepInfo = drepVotingData?.delegationData?.drepInfo;
         const totalDelegators = delegationData?.total_delegators || 0;
         const totalAdaDelegated = delegationData?.total_amount_ada || 0;
         const totalVotedProposals = votes.length;
+        const totalDrepProposals = drepInfo?.total_drep_proposals || 0;
 
-        // For voting participation, we'll show 100% since we only have data for voted proposals
-        // In a real scenario, this would be calculated against total available proposals
-        const votingParticipationRate = totalVotedProposals > 0 ? 100 : 0;
+        // Calculate actual voting participation rate based on total available proposals
+        const votingParticipationRate = totalDrepProposals > 0
+            ? Math.round((totalVotedProposals / totalDrepProposals) * 100)
+            : 0;
 
         return {
             totalDelegators,
             totalAdaDelegated,
             totalVotedProposals,
-            votingParticipationRate
+            votingParticipationRate,
+            totalDrepProposals
         };
     }, [drepVotingData, votes.length]);
 
@@ -154,7 +158,7 @@ export default function DRepVoting() {
             </div>
         );
     }
-    console.log('drepVotingData', drepVotingData)
+
     return (
         <div className={styles.container}>
             <PageHeader
@@ -219,7 +223,7 @@ export default function DRepVoting() {
                         <VotingTypeDonut typeStats={typeStats} />
                     </div>
                     <div className={styles.donutChartWrapper}>
-                        <VotingParticipationDonut totalProposals={votes.length} votedProposals={votes.length} />
+                        <VotingParticipationDonut totalProposals={drepMetrics.totalDrepProposals} votedProposals={votes.length} />
                     </div>
                 </div>
             </div>
