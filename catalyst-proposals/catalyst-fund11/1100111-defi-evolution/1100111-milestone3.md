@@ -1,7 +1,7 @@
 |Project ID|1100111|
 |-----------|-------------|
 |Link|[Open full project](https://projectcatalyst.io/funds/11/cardano-use-cases-concept/defi-evolution-pioneering-high-frequency-trading-on-cardano)|
-|Milestone|[Milestone 3]([https://milestones.projectcatalyst.io/projects/1100111](https://milestones.projectcatalyst.io/projects/1100111/milestones/3))
+|Milestone|[Milestone 3](https://milestones.projectcatalyst.io/projects/1100111/milestones/3))
 |Challenge|F11: Cardano Use Cases: Concept|
 |Milestone Budget|ADA 20,000.00|
 |Delivered|June 29, 2024|
