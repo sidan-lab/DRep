@@ -125,7 +125,7 @@ export default function VotingParticipationDonut({ totalProposals, votedProposal
         const adjustedAngle = angle < -Math.PI / 2 ? angle + Math.PI * 2 : angle;
         const distance = Math.sqrt(Math.pow(x - centerX, 2) + Math.pow(y - centerY, 2));
         if (distance > innerRadius && distance < radius) {
-            const active = segments.find(segment => 
+            const active = segments.find(segment =>
                 adjustedAngle >= segment.startAngle && adjustedAngle <= segment.endAngle
             );
             setActiveSegment(active ? active.type : null);
@@ -143,15 +143,15 @@ export default function VotingParticipationDonut({ totalProposals, votedProposal
             <div className={styles.chartHeader}>
                 <div className={styles.chartTitle}>Voting Participation</div>
             </div>
-            <canvas 
-                ref={canvasRef} 
+            <canvas
+                ref={canvasRef}
                 className={styles.donutChart}
                 onMouseMove={handleCanvasMouseMove}
                 onMouseLeave={handleCanvasMouseLeave}
             ></canvas>
             <div className={styles.donutLegend}>
                 {data.map(({ type, value }) => (
-                    <div 
+                    <div
                         key={type}
                         className={`${styles.legendItem} ${activeSegment === type ? styles.active : ''}`}
                         onMouseEnter={() => setActiveSegment(type)}

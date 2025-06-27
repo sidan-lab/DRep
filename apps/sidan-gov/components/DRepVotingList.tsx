@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import styles from '../styles/Voting.module.css';
 import ProposalModal from './ProposalModal';
+import { ProposalType } from '../types';
 
 interface VoteData {
     proposalId: string;
@@ -12,7 +13,7 @@ interface VoteData {
     metaUrl: string | null;
     metaHash: string | null;
     proposalTitle: string;
-    proposalType: string;
+    proposalType: ProposalType;
     proposedEpoch: number;
     expirationEpoch: number;
     rationale: string;

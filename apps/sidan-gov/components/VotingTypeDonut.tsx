@@ -10,32 +10,54 @@ const TYPE_GRADIENTS = {
         'rgba(56, 232, 225, 0.95)', // Bright teal
         'rgba(20, 184, 166, 0.85)', // Deep teal
         'rgba(8, 74, 67, 0.8)',     // Very dark teal
-        'rgba(0, 0, 0, 0.9)'        // Black
+        'rgba(0, 0, 0, 0.9)'
     ],
     ParameterChange: [
         'rgba(56, 232, 225, 0.75)', // Lighter teal
         'rgba(20, 184, 166, 0.65)', // Lighter deep teal
         'rgba(8, 74, 67, 0.6)',     // Lighter dark teal
-        'rgba(0, 0, 0, 0.9)'        // Black
+        'rgba(0, 0, 0, 0.9)'
+    ],
+    HardForkInitiation: [
+        'rgba(54, 162, 235, 0.95)', // Blue
+        'rgba(30, 144, 255, 0.85)', // Dodger blue
+        'rgba(8, 74, 67, 0.7)',     // Deep teal for harmony
+        'rgba(0, 0, 0, 0.9)'
+    ],
+    TreasuryWithdrawals: [
+        'rgba(20, 184, 166, 0.85)', // Deep teal
+        'rgba(8, 74, 67, 0.8)',     // Very dark teal
+        'rgba(2, 44, 34, 0.7)',     // Almost black teal
+        'rgba(0, 0, 0, 0.9)'
+    ],
+    NoConfidence: [
+        'rgba(120, 144, 156, 0.85)', // Muted blue-gray
+        'rgba(84, 110, 122, 0.7)',   // Muted blue-gray
+        'rgba(38, 50, 56, 0.6)',     // Dark blue-gray
+        'rgba(0, 0, 0, 0.9)'
+    ],
+    NewCommittee: [
+        'rgba(76, 175, 80, 0.85)', // Green
+        'rgba(20, 184, 166, 0.7)', // Teal
+        'rgba(8, 74, 67, 0.6)',    // Dark teal
+        'rgba(0, 0, 0, 0.9)'
     ],
     NewConstitution: [
         'rgba(56, 232, 225, 0.55)', // Lightest teal
         'rgba(20, 184, 166, 0.45)', // Lightest deep teal
         'rgba(8, 74, 67, 0.4)',     // Lightest dark teal
-        'rgba(0, 0, 0, 0.9)'        // Black
+        'rgba(0, 0, 0, 0.9)'
     ]
 };
 
 const TYPE_LABELS = {
-    InfoAction: 'InfoAction',
-    ParameterChange: 'ParameterChange',
-    NewConstitution: 'NewConstitution'
-};
-
-const TYPE_CLASS = {
-    InfoAction: styles.yes,
-    ParameterChange: styles.yes,
-    NewConstitution: styles.yes
+    InfoAction: 'Informational Action',
+    ParameterChange: 'Parameter Change',
+    HardForkInitiation: 'Hard Fork Initiation',
+    TreasuryWithdrawals: 'Treasury Withdrawals',
+    NoConfidence: 'No Confidence',
+    NewCommittee: 'New Committee',
+    NewConstitution: 'New Constitution'
 };
 
 export default function VotingTypeDonut({ typeStats }: VotingTypeDonutProps) {
@@ -135,7 +157,7 @@ export default function VotingTypeDonut({ typeStats }: VotingTypeDonutProps) {
         const adjustedAngle = angle < -Math.PI / 2 ? angle + Math.PI * 2 : angle;
         const distance = Math.sqrt(Math.pow(x - centerX, 2) + Math.pow(y - centerY, 2));
         if (distance > innerRadius && distance < radius) {
-            const active = segments.find(segment => 
+            const active = segments.find(segment =>
                 adjustedAngle >= segment.startAngle && adjustedAngle <= segment.endAngle
             );
             setActiveSegment(active ? active.type : null);
@@ -151,21 +173,24 @@ export default function VotingTypeDonut({ typeStats }: VotingTypeDonutProps) {
     return (
         <div className={styles.donutChartContainer}>
             <div className={styles.chartTitle}>Proposal Types</div>
-            <canvas 
-                ref={canvasRef} 
+            <canvas
+                ref={canvasRef}
                 className={styles.donutChart}
                 onMouseMove={handleCanvasMouseMove}
                 onMouseLeave={handleCanvasMouseLeave}
             ></canvas>
             <div className={styles.donutLegend}>
                 {data.map(({ type, value }) => (
-                    <div 
+                    <div
                         key={type}
                         className={`${styles.legendItem} ${activeSegment === type ? styles.active : ''}`}
                         onMouseEnter={() => setActiveSegment(type)}
                         onMouseLeave={() => setActiveSegment(null)}
                     >
-                        <span className={`${styles.legendColor} ${TYPE_CLASS[type as keyof typeof TYPE_CLASS]}`}></span>
+                        <span
+                            className={styles.legendColor}
+                            style={{ background: TYPE_GRADIENTS[type as keyof typeof TYPE_GRADIENTS]?.[0] || TYPE_GRADIENTS.InfoAction[0] }}
+                        ></span>
                         <span className={styles.legendLabel}>{TYPE_LABELS[type as keyof typeof TYPE_LABELS]}</span>
                         <span className={styles.legendValue}>{value}</span>
                     </div>
