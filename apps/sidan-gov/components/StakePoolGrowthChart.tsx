@@ -81,7 +81,7 @@ export default function StakePoolGrowthChart({ data }: StakePoolGrowthChartProps
             .call(d3.axisRight(yScaleDelegators)
                 .tickFormat((d: d3.NumberValue) => d3.format('.0f')(d.valueOf())));
 
-        // Add gradients
+        // Add gradients - both lines now white with subtle variations
         const gradientLiveStake = svg.append('defs')
             .append('linearGradient')
             .attr('id', 'gradientLiveStake')
@@ -92,11 +92,11 @@ export default function StakePoolGrowthChart({ data }: StakePoolGrowthChartProps
 
         gradientLiveStake.append('stop')
             .attr('offset', '0%')
-            .attr('stop-color', 'rgba(255, 193, 7, 0.9)');
+            .attr('stop-color', 'rgba(255, 255, 255, 0.9)');
 
         gradientLiveStake.append('stop')
             .attr('offset', '100%')
-            .attr('stop-color', 'rgba(255, 193, 7, 0.9)');
+            .attr('stop-color', 'rgba(255, 255, 255, 0.7)');
 
         const gradientDelegators = svg.append('defs')
             .append('linearGradient')
@@ -108,11 +108,11 @@ export default function StakePoolGrowthChart({ data }: StakePoolGrowthChartProps
 
         gradientDelegators.append('stop')
             .attr('offset', '0%')
-            .attr('stop-color', 'rgba(203, 213, 225, 0.8)');
+            .attr('stop-color', 'rgba(255, 255, 255, 0.8)');
 
         gradientDelegators.append('stop')
             .attr('offset', '100%')
-            .attr('stop-color', 'rgba(203, 213, 225, 0.8)');
+            .attr('stop-color', 'rgba(255, 255, 255, 0.6)');
 
         // Add the lines
         svg.append('path')
@@ -191,8 +191,8 @@ export default function StakePoolGrowthChart({ data }: StakePoolGrowthChartProps
             .attr('transform', `translate(${width / 2 - 60}, -30)`);
 
         const legendData = [
-            { label: 'Live Stake', class: styles.legendLiveStake, color: 'rgba(255, 193, 7, 0.9)' },
-            { label: 'Delegators', class: styles.legendDelegators, color: 'rgba(203, 213, 225, 0.8)' }
+            { label: 'Live Stake', class: styles.legendLiveStake, color: 'rgba(255, 255, 255, 0.9)' },
+            { label: 'Delegators', class: styles.legendDelegators, color: 'rgba(255, 255, 255, 0.7)' }
         ];
 
         legendData.forEach((item, i) => {

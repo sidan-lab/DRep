@@ -75,9 +75,13 @@
     transition: all 0.3s ease;
 }
 
+.lineLiveStake:hover {
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.6)) drop-shadow(0 0 16px rgba(255, 255, 255, 0.3));
+}
+
 .lineLiveStakeActive {
     stroke-width: 4;
-    filter: drop-shadow(0 0 8px rgba(255, 193, 7, 0.6));
+    filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.8)) drop-shadow(0 0 24px rgba(255, 255, 255, 0.4));
 }
 
 .lineDelegators {
@@ -88,9 +92,13 @@
     transition: all 0.3s ease;
 }
 
+.lineDelegators:hover {
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.6)) drop-shadow(0 0 16px rgba(255, 255, 255, 0.3));
+}
+
 .lineDelegatorsActive {
     stroke-width: 4;
-    filter: drop-shadow(0 0 8px rgba(203, 213, 225, 0.6));
+    filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.8)) drop-shadow(0 0 24px rgba(255, 255, 255, 0.4));
 }
 
 .focus {
@@ -98,17 +106,19 @@
 }
 
 .focusCircleLiveStake {
-    fill: rgba(255, 193, 7, 0.9);
+    fill: rgba(255, 255, 255, 0.9);
     stroke: rgba(255, 255, 255, 0.8);
     stroke-width: 2;
     transition: all 0.2s ease;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.6));
 }
 
 .focusCircleDelegators {
-    fill: rgba(203, 213, 225, 0.8);
+    fill: rgba(255, 255, 255, 0.7);
     stroke: rgba(255, 255, 255, 0.8);
     stroke-width: 2;
     transition: all 0.2s ease;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.6));
 }
 
 .overlay {

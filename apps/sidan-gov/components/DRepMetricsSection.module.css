@@ -1,6 +1,7 @@
 .metricsSection {
     margin-bottom: 2rem;
     padding: 1.5rem;
+    background: transparent;
     /* Completely invisible - no visual styling */
     animation: fadeInUp 0.8s ease-out 0.3s both;
 }
@@ -28,9 +29,15 @@
     padding: 1.5rem;
     text-align: center;
     position: relative;
-    /* Completely invisible - no visual styling */
+    background: rgba(255, 255, 255, 0.001);
+    backdrop-filter: blur(20px) saturate(120%);
+    -webkit-backdrop-filter: blur(20px) saturate(120%);
+    border: 1px solid rgba(255, 255, 255, 0.02);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.08);
     animation: slideInScale 0.6s ease-out both;
-    transition: transform 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
 }
 
 .metricCard:nth-child(1) {
@@ -50,16 +57,33 @@
 }
 
 .metricCard::before {
-    /* Removed pseudo-element */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        rgba(255, 255, 255, 0.006),
+        transparent 40%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
 }
 
 .metricCard:hover {
-    /* Removed hover effects */
-    transform: translateY(-5px) scale(1.02);
+    background: rgba(255, 255, 255, 0.003);
+    border-color: rgba(255, 255, 255, 0.035);
+    transform: translateY(-2px) scale(1.01);
 }
 
 .metricCard:hover::before {
-    /* Removed hover effects */
+    opacity: 1;
+}
+
+.metricCard > * {
+    position: relative;
+    z-index: 2;
 }
 
 .metricValue {

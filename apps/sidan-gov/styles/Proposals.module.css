@@ -31,30 +31,28 @@
 }
 
 .stat {
-    background: linear-gradient(165deg,
-            rgba(255, 255, 255, 0.05) 0%,
-            rgba(255, 255, 255, 0.02) 100%);
-    backdrop-filter: blur(20px) saturate(180%);
-    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    background: rgba(255, 255, 255, 0.015);
+    backdrop-filter: blur(25px) saturate(140%);
+    -webkit-backdrop-filter: blur(25px) saturate(140%);
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 2px 12px -1px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.1);
     padding: 1.5rem;
     text-align: center;
     position: relative;
     overflow: hidden;
-    transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .stat::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(165deg,
-            rgba(255, 255, 255, 0.03) 0%,
-            rgba(255, 255, 255, 0) 100%);
+    background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        rgba(255, 255, 255, 0.03),
+        transparent 40%);
     opacity: 0;
-    transition: opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    transition: opacity 0.3s ease;
     pointer-events: none;
 }
 
@@ -74,11 +72,12 @@
 }
 
 .stat:hover {
-    transform: translateY(-4px) scale(1.01);
-    border-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px) scale(1.01);
+    background: rgba(255, 255, 255, 0.025);
+    border-color: rgba(255, 255, 255, 0.1);
     box-shadow:
-        0 8px 32px -4px rgba(0, 0, 0, 0.2),
-        0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+        0 8px 40px -4px rgba(0, 0, 0, 0.15),
+        0 0 0 1px rgba(255, 255, 255, 0.06) inset;
 }
 
 .stat:hover::before {
@@ -123,28 +122,26 @@
 }
 
 .card {
-    background: linear-gradient(165deg,
-            rgba(255, 255, 255, 0.05) 0%,
-            rgba(255, 255, 255, 0.02) 100%);
-    backdrop-filter: blur(20px) saturate(180%);
-    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    background: rgba(255, 255, 255, 0.015);
+    backdrop-filter: blur(25px) saturate(140%);
+    -webkit-backdrop-filter: blur(25px) saturate(140%);
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 2px 12px -1px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     position: relative;
-    transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(165deg,
-            rgba(255, 255, 255, 0.03) 0%,
-            rgba(255, 255, 255, 0) 100%);
+    background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        rgba(255, 255, 255, 0.03),
+        transparent 40%);
     opacity: 0;
-    transition: opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    transition: opacity 0.3s ease;
     pointer-events: none;
 }
 
@@ -164,17 +161,18 @@
 }
 
 .card:hover {
-    transform: translateY(-4px) scale(1.01);
-    border-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-3px) scale(1.01);
+    background: rgba(255, 255, 255, 0.025);
+    border-color: rgba(255, 255, 255, 0.1);
     box-shadow:
-        0 8px 32px -4px rgba(0, 0, 0, 0.2),
-        0 0 0 1px rgba(255, 255, 255, 0.1) inset;
-    transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+        0 12px 40px -4px rgba(0, 0, 0, 0.2),
+        0 0 0 1px rgba(255, 255, 255, 0.06) inset;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card:hover::before {
     opacity: 1;
-    transition: opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    transition: opacity 0.3s ease;
 }
 
 .card:hover::after {
@@ -218,9 +216,10 @@
 }
 
 .statusCompleted {
-    background: rgba(255, 255, 255, 0.12);
-    color: rgba(255, 255, 255, 0.95);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(56, 232, 225, 0.15);
+    color: #38E8E1;
+    border: 1px solid rgba(56, 232, 225, 0.3);
+    box-shadow: 0 0 8px rgba(56, 232, 225, 0.2);
 }
 
 .statusInProgress {
@@ -340,25 +339,28 @@
 }
 
 .actionButton {
-    padding: 0 0.5rem;
-    border-radius: 6px;
-    font-size: 0.6875rem;
-    font-weight: 500;
-    color: var(--text-color);
     background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     cursor: pointer;
-    transition: all 0.2s ease;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.25rem;
-    height: 1.75rem;
+    position: relative;
+    overflow: hidden;
 }
 
 .actionButton:hover {
-    background: rgba(255, 255, 255, 0.04);
-    border-color: rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
 .actionButton:active {
@@ -683,57 +685,52 @@
 }
 
 .cardButton {
-    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 8px;
+    padding: 0.75rem 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
     font-size: 0.875rem;
     font-weight: 500;
-    color: rgba(255, 255, 255, 0.9);
-    background: linear-gradient(165deg,
-            rgba(255, 255, 255, 0.06) 0%,
-            rgba(255, 255, 255, 0.03) 100%);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    text-decoration: none;
-    position: relative;
-    z-index: 2;
-    overflow: hidden;
+    justify-content: center;
+    text-align: center;
 }
 
 .cardButton::before {
     content: '';
     position: absolute;
     top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg,
-            transparent 0%,
-            rgba(255, 255, 255, 0.2) 50%,
-            transparent 100%);
-    transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(400px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        rgba(102, 126, 234, 0.1),
+        transparent 40%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
     z-index: 1;
 }
 
 .cardButton:hover {
-    background: linear-gradient(165deg,
-            rgba(255, 255, 255, 0.1) 0%,
-            rgba(255, 255, 255, 0.05) 100%);
-    border-color: rgba(255, 255, 255, 0.2);
-    box-shadow:
-        0 8px 24px -4px rgba(0, 0, 0, 0.3),
-        0 0 0 1px rgba(255, 255, 255, 0.15) inset,
-        0 0 0 2px rgba(255, 255, 255, 0.05);
-    transform: translateY(-1px);
-    color: rgba(255, 255, 255, 1);
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(102, 126, 234, 0.2);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15),
+                0 0 0 1px rgba(102, 126, 234, 0.1) inset;
 }
 
 .cardButton:hover::before {
-    left: 100%;
+    opacity: 1;
 }
 
 .cardButton:active {
@@ -901,7 +898,10 @@
     text-overflow: ellipsis;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
 }
+
+
 
 .milestoneCount {
     font-family: var(--font-mono, monospace);
@@ -979,8 +979,8 @@
 }
 
 .milestoneRow:hover .projectTitle {
-    color: rgba(255, 255, 255, 1);
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    color: #38E8E1;
+    text-shadow: 0 0 8px rgba(56, 232, 225, 0.4);
 }
 
 .milestoneRow:hover .milestoneCount {
@@ -1010,6 +1010,44 @@
 
 .milestoneRow:hover .milestoneProgressFill::before {
     opacity: 1;
+}
+
+/* Custom tooltip styles */
+.milestoneRow::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(15, 15, 23, 0.95);
+    color: #38E8E1;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    white-space: normal;
+    word-wrap: break-word;
+    line-height: 1.4;
+    box-shadow: 
+        0 4px 20px rgba(0, 0, 0, 0.3),
+        0 0 0 1px rgba(56, 232, 225, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    max-width: 500px;
+    min-width: 200px;
+    text-align: center;
+}
+
+.milestoneRow:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1.02);
 }
 
 @media (min-width: 768px) {
