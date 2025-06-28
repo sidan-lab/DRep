@@ -29,7 +29,8 @@ Host 1 offline centered on introducing and exploring the Cardano ecosystem.
 - https://www.wafflecapital.xyz/blog/cardano-defi-workshop
 
 Host 1 virtual event covering the revised Cardano ecosystem series. For this part, maybe the link attachment from the last submission caused an impression that the virtual is hosted by Socious. Attached is a new Twitter link to show that we are the host and Scious is just a co-host/ administrator who helps us to publish on YouTube. Attached is a new screenshot showing the post on our TG channel. 
-> Note: The any virtual and offline events hosted by us, we will amend the theme in time time-sensitive manner. One of the feedbacks we got from our virtual or offline event is that Hong Kong users want to know what is happening in the ecosystem. What dapps are built on Cardano. That's why we host this F12 Ideafest to let the HK user know. That's also why we put down "revised Cardano ecosystem series as we will constantly provide updates and the objective is to quickly let people know about the ecosystem development, not limited to the deck only otherwise we are very slow compared with Ethereum and Solana pace in Hong Kong. 
+> Note: The any virtual and offline events hosted by us, we will amend the theme in time time-sensitive manner. One of the feedbacks we got from our virtual or offline event is that Hong Kong users want to know what is happening in the ecosystem. What dapps are built on Cardano. That's why we host this F12 Ideafest to let the HK user know. That's also why we put down "revised Cardano ecosystem series as we will constantly provide updates and the objective is to quickly let people know about the ecosystem development, not limited to the deck only otherwise we are very slow compared with Ethereum and Solana pace in Hong Kong.
+
 > Note: Thank you for the reviewer to provide guidelines or raise any questions in the review process.
 
 - https://x.com/sidan_lab/status/1808817394514866510
