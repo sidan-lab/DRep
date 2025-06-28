@@ -5,11 +5,9 @@ interface StakePoolMetricsSectionProps {
     liveDelegators: number;
     blockCount: number | null;
     liveSaturation: number | null;
-    votingPower: string | null;
     margin?: number | null;
     fixedCost?: string | null;
     livePledge?: string | null;
-    deposit?: string | null;
 }
 
 export default function StakePoolMetricsSection({
@@ -17,11 +15,9 @@ export default function StakePoolMetricsSection({
     liveDelegators,
     blockCount,
     liveSaturation,
-    votingPower,
     margin,
     fixedCost,
-    livePledge,
-    deposit
+    livePledge
 }: StakePoolMetricsSectionProps) {
     const formatAda = (amount: string | null) => {
         if (!amount) return 'N/A';
@@ -58,10 +54,6 @@ export default function StakePoolMetricsSection({
                     <div className={styles.metricValue}>{formatPercentage(liveSaturation)}</div>
                     <div className={styles.metricLabel}>Live Saturation</div>
                 </div>
-                <div className={styles.metricCard}>
-                    <div className={styles.metricValue}>₳{formatAda(votingPower)}</div>
-                    <div className={styles.metricLabel}>Voting Power</div>
-                </div>
             </div>
 
             <div className={styles.poolParameters}>
@@ -83,12 +75,6 @@ export default function StakePoolMetricsSection({
                         <span className={styles.parameterLabel}>Pledge</span>
                         <span className={styles.parameterValue}>
                             {livePledge ? `₳${(parseFloat(livePledge) / 1_000_000).toFixed(0)}` : 'N/A'}
-                        </span>
-                    </div>
-                    <div className={styles.parameter}>
-                        <span className={styles.parameterLabel}>Deposit</span>
-                        <span className={styles.parameterValue}>
-                            {deposit ? `₳${(parseFloat(deposit) / 1_000_000).toFixed(0)}` : 'N/A'}
                         </span>
                     </div>
                 </div>

@@ -134,7 +134,7 @@ export default function CatalystProposals() {
         <div className={styles.container}>
             <PageHeader
                 title={<>Catalyst Proposal <span>Dashboard</span></>}
-                subtitle="Mesh received strong support from Ada voters at Cardano's Project Catalyst. We are greatful for every support and want to make sure that our supporters have easy overview and insights on the progress of our funded proposals"
+                subtitle="SIDAN received strong support from Ada voters at Cardano's Project Catalyst. We are grateful for every support and want to make sure that our supporters have easy overview and insights on the progress of our funded proposals"
             />
 
             <SearchFilterBar

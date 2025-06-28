@@ -76,23 +76,23 @@
 .stat {
     flex: 1;
     background: linear-gradient(165deg,
-            rgba(255, 255, 255, 0.05) 0%,
-            rgba(255, 255, 255, 0.02) 100%);
+            rgba(255, 255, 255, 0.002) 0%,
+            rgba(255, 255, 255, 0.001) 100%);
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 2px 12px -1px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.025);
+    box-shadow: 0 2px 12px -1px rgba(0, 0, 0, 0.08);
     padding: 1.25rem;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .stat:hover {
-    transform: translateY(-2px);
-    border-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-1px);
+    border-color: rgba(255, 255, 255, 0.04);
     box-shadow:
-        0 8px 32px -4px rgba(0, 0, 0, 0.2),
-        0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+        0 8px 32px -4px rgba(0, 0, 0, 0.12),
+        0 0 0 1px rgba(255, 255, 255, 0.02) inset;
 }
 
 .stat h3 {
@@ -181,22 +181,20 @@
 }
 
 .item {
-    background: linear-gradient(165deg,
-            rgba(255, 255, 255, 0.03) 0%,
-            rgba(255, 255, 255, 0.01) 100%);
-    backdrop-filter: blur(12px) saturate(180%);
-    -webkit-backdrop-filter: blur(12px) saturate(180%);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.001);
+    backdrop-filter: blur(25px) saturate(140%);
+    -webkit-backdrop-filter: blur(25px) saturate(140%);
+    border: 1px solid rgba(255, 255, 255, 0.02);
     border-radius: 12px;
     cursor: pointer;
-    transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     flex-direction: column;
     position: relative;
     overflow: hidden;
     box-shadow:
-        0 4px 24px -6px rgba(0, 0, 0, 0.3),
-        0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+        0 4px 20px -6px rgba(0, 0, 0, 0.2),
+        0 0 0 1px rgba(255, 255, 255, 0.01) inset;
     animation: cardSlideIn 0.6s ease-out both;
 }
 
@@ -253,7 +251,7 @@
     position: absolute;
     inset: 0;
     background: linear-gradient(165deg,
-            rgba(255, 255, 255, 0.03) 0%,
+            rgba(255, 255, 255, 0.006) 0%,
             rgba(255, 255, 255, 0) 100%);
     opacity: 0;
     transition: opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1);
@@ -266,9 +264,9 @@
     inset: -100%;
     background: linear-gradient(45deg,
             transparent 0%,
-            rgba(255, 255, 255, 0.03) 30%,
-            rgba(255, 255, 255, 0.06) 50%,
-            rgba(255, 255, 255, 0.03) 70%,
+            rgba(255, 255, 255, 0.008) 30%,
+            rgba(255, 255, 255, 0.012) 50%,
+            rgba(255, 255, 255, 0.008) 70%,
             transparent 100%);
     transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
     transform: translateX(-100%) rotate(45deg);
@@ -440,8 +438,8 @@
 }
 
 .item:hover .type {
-    background: rgba(255, 255, 255, 0.05);
-    border-color: rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.002);
+    border-color: rgba(255, 255, 255, 0.025);
 }
 
 .rationale {
@@ -519,8 +517,8 @@
     align-items: center;
     justify-content: center;
     padding: 0.5rem 1rem;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.002);
+    border: 1px solid rgba(255, 255, 255, 0.025);
     border-radius: 8px;
     color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
@@ -532,8 +530,8 @@
 }
 
 .link:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.005);
+    border-color: rgba(255, 255, 255, 0.04);
     color: rgba(255, 255, 255, 1);
     transform: translateY(-1px);
 }
@@ -603,13 +601,13 @@
 .statsCard {
     flex: 1;
     background: linear-gradient(165deg,
-            rgba(255, 255, 255, 0.03) 0%,
-            rgba(255, 255, 255, 0.01) 100%);
+            rgba(255, 255, 255, 0.002) 0%,
+            rgba(255, 255, 255, 0.001) 100%);
     backdrop-filter: blur(12px) saturate(180%);
     -webkit-backdrop-filter: blur(12px) saturate(180%);
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    box-shadow: 0 2px 12px -1px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.02);
+    box-shadow: 0 2px 12px -1px rgba(0, 0, 0, 0.08);
     padding: 1.25rem;
     transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -716,23 +714,48 @@
     gap: 2rem;
     margin: 2rem 0;
     padding: 2rem;
-    background: linear-gradient(165deg,
-            rgba(255, 255, 255, 0.02) 0%,
-            rgba(255, 255, 255, 0.005) 100%);
-    backdrop-filter: blur(20px) saturate(180%);
-    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    background: rgba(255, 255, 255, 0.002);
+    backdrop-filter: blur(25px) saturate(140%);
+    -webkit-backdrop-filter: blur(25px) saturate(140%);
     border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.025);
     box-shadow:
-        0 4px 32px -8px rgba(0, 0, 0, 0.2),
-        0 0 0 1px rgba(255, 255, 255, 0.02) inset;
+        0 8px 40px -8px rgba(0, 0, 0, 0.1),
+        0 0 0 1px rgba(255, 255, 255, 0.01) inset;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     animation: fadeInUp 0.8s ease-out 1.4s both;
+    position: relative;
+    overflow: hidden;
+}
+
+.votingProgress::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        rgba(255, 255, 255, 0.008),
+        transparent 40%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
 }
 
 .votingProgress:hover {
-    transform: translateY(-2px);
-    border-color: rgba(255, 255, 255, 0.08);
+    transform: translateY(-1px);
+    background: rgba(255, 255, 255, 0.005);
+    border-color: rgba(255, 255, 255, 0.04);
+}
+
+.votingProgress:hover::before {
+    opacity: 1;
+}
+
+.votingProgress > * {
+    position: relative;
+    z-index: 2;
 }
 
 .drepStats {
@@ -765,8 +788,10 @@
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 1.5rem;
-    text-align: center;
-    width: 100%;
+    text-align: left;
+    min-height: 2rem;
+    display: flex;
+    align-items: center;
 }
 
 .participationRate {
@@ -783,6 +808,45 @@
     justify-content: flex-start;
     gap: 1.5rem;
     width: 100%;
+    background: rgba(255, 255, 255, 0.001);
+    border: 1px solid rgba(255, 255, 255, 0.02);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(20px) saturate(120%);
+    -webkit-backdrop-filter: blur(20px) saturate(120%);
+    position: relative;
+    overflow: hidden;
+}
+
+.donutChartWrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        rgba(255, 255, 255, 0.006),
+        transparent 40%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.donutChartWrapper:hover {
+    background: rgba(255, 255, 255, 0.003);
+    border-color: rgba(255, 255, 255, 0.035);
+    transform: translateY(-1px);
+}
+
+.donutChartWrapper:hover::before {
+    opacity: 1;
+}
+
+.donutChartWrapper > * {
+    position: relative;
+    z-index: 2;
 }
 
 .statItem {
@@ -894,16 +958,49 @@
 }
 
 .infoCard {
-    background: linear-gradient(165deg,
-            rgba(255, 255, 255, 0.02) 0%,
-            rgba(255, 255, 255, 0.01) 100%);
-    backdrop-filter: blur(16px) saturate(150%);
-    -webkit-backdrop-filter: blur(16px) saturate(150%);
+    background: rgba(255, 255, 255, 0.001);
+    backdrop-filter: blur(25px) saturate(140%);
+    -webkit-backdrop-filter: blur(25px) saturate(140%);
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.02);
     padding: 1.5rem;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     animation: cardSlideIn 0.6s ease-out both;
+    position: relative;
+    overflow: hidden;
+}
+
+.infoCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        rgba(255, 255, 255, 0.006),
+        transparent 40%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.infoCard:hover {
+    transform: translateY(-2px) scale(1.01);
+    background: rgba(255, 255, 255, 0.004);
+    border-color: rgba(255, 255, 255, 0.035);
+    box-shadow:
+        0 8px 40px -8px rgba(0, 0, 0, 0.15),
+        0 0 0 1px rgba(255, 255, 255, 0.02) inset;
+}
+
+.infoCard:hover::before {
+    opacity: 1;
+}
+
+.infoCard > * {
+    position: relative;
+    z-index: 2;
 }
 
 .infoCard:nth-child(1) {
@@ -916,14 +1013,6 @@
 
 .infoCard:nth-child(3) {
     animation-delay: 1.3s;
-}
-
-.infoCard:hover {
-    transform: translateY(-5px) scale(1.02);
-    border-color: rgba(255, 255, 255, 0.1);
-    box-shadow:
-        0 12px 40px -8px rgba(0, 0, 0, 0.3),
-        0 0 0 1px rgba(255, 255, 255, 0.06) inset;
 }
 
 .infoCardTitle {
@@ -949,28 +1038,49 @@
 }
 
 .bioSection {
-    background: linear-gradient(165deg,
-            rgba(255, 255, 255, 0.02) 0%,
-            rgba(255, 255, 255, 0.01) 100%);
-    backdrop-filter: blur(20px) saturate(150%);
-    -webkit-backdrop-filter: blur(20px) saturate(150%);
+    background: rgba(255, 255, 255, 0.001);
+    backdrop-filter: blur(25px) saturate(140%);
+    -webkit-backdrop-filter: blur(25px) saturate(140%);
     border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    box-shadow:
-        0 4px 32px -8px rgba(0, 0, 0, 0.2),
-        0 0 0 1px rgba(255, 255, 255, 0.02) inset;
+    border: 1px solid rgba(255, 255, 255, 0.02);
     padding: 2rem;
-    margin-bottom: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.08);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     animation: fadeInUp 0.8s ease-out 0.8s both;
+    position: relative;
+    overflow: hidden;
+}
+
+.bioSection::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        rgba(255, 255, 255, 0.008),
+        transparent 40%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
 }
 
 .bioSection:hover {
-    transform: translateY(-3px);
-    border-color: rgba(255, 255, 255, 0.08);
-    box-shadow:
-        0 8px 48px -12px rgba(0, 0, 0, 0.3),
-        0 0 0 1px rgba(255, 255, 255, 0.04) inset;
+    transform: translateY(-1px);
+    background: rgba(255, 255, 255, 0.003);
+    border-color: rgba(255, 255, 255, 0.035);
+    box-shadow: 0 8px 40px -8px rgba(0, 0, 0, 0.12);
+}
+
+.bioSection:hover::before {
+    opacity: 1;
+}
+
+.bioSection > * {
+    position: relative;
+    z-index: 2;
 }
 
 .bioTitle {
@@ -1411,25 +1521,49 @@
 }
 
 .chartCard {
-    background: rgba(17, 24, 39, 0.6);
-    backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.001);
+    backdrop-filter: blur(20px) saturate(120%);
+    -webkit-backdrop-filter: blur(20px) saturate(120%);
     border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.02);
     padding: 24px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.08);
     display: flex;
     flex-direction: column;
     height: 100%;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
 }
 
-.chartTitle {
-    color: #fff;
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-    text-align: left;
-    min-height: 2rem;
-    display: flex;
-    align-items: center;
+.chartCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        rgba(255, 255, 255, 0.006),
+        transparent 40%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.chartCard:hover {
+    background: rgba(255, 255, 255, 0.003);
+    border-color: rgba(255, 255, 255, 0.035);
+    transform: translateY(-1px);
+}
+
+.chartCard:hover::before {
+    opacity: 1;
+}
+
+.chartCard > * {
+    position: relative;
+    z-index: 2;
 }
 
 .legendContainer {

@@ -1,9 +1,14 @@
 .section {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.001);
+    border: 1px solid rgba(255, 255, 255, 0.02);
     border-radius: 12px;
     padding: 1.5rem;
     margin-bottom: 1.5rem;
+    backdrop-filter: blur(20px) saturate(120%);
+    -webkit-backdrop-filter: blur(20px) saturate(120%);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
 }
 
 .sectionTitle {
@@ -30,5 +35,70 @@
 
 .link:hover {
     color: rgba(255, 255, 255, 1);
+    text-decoration: underline;
+}
+
+.linksContainer {
+    background: rgba(255, 255, 255, 0.001);
+    border: 1px solid rgba(255, 255, 255, 0.02);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    backdrop-filter: blur(20px) saturate(120%);
+    -webkit-backdrop-filter: blur(20px) saturate(120%);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.linksContainer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        rgba(255, 255, 255, 0.006),
+        transparent 40%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.linksContainer:hover {
+    background: rgba(255, 255, 255, 0.003);
+    border-color: rgba(255, 255, 255, 0.035);
+    transform: translateY(-1px);
+}
+
+.linksContainer:hover::before {
+    opacity: 1;
+}
+
+.linkTitle {
+    font-size: 16px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    margin-bottom: 8px;
+    position: relative;
+    z-index: 2;
+}
+
+.externalLink {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+    transition: color 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.externalLink:hover {
+    color: #38e8e1;
     text-decoration: underline;
 } 

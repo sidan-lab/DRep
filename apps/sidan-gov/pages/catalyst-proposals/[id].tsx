@@ -7,6 +7,8 @@ import { CatalystProject } from '../../types';
 import Link from 'next/link';
 import { ProposalDetails } from '../../components/ProposalDetails';
 import { ExternalLinks } from '../../components/ExternalLinks';
+import CompletedMilestones from '../../components/CompletedMilestones';
+import { MilestoneData } from '../../utils/milestones';
 
 const getFundingRound = (category: string): string => {
     const match = category.match(/Fund \d+/i);
@@ -18,6 +20,8 @@ export default function ProposalDetail() {
     const { id } = router.query;
     const { catalystData, isLoading, error } = useData();
     const [proposal, setProposal] = useState<CatalystProject | null>(null);
+    const [milestones, setMilestones] = useState<MilestoneData[]>([]);
+    const [milestonesLoading, setMilestonesLoading] = useState(false);
 
     useEffect(() => {
         if (catalystData?.catalystData && id) {
@@ -25,9 +29,32 @@ export default function ProposalDetail() {
                 p => p.projectDetails.project_id.toString() === id
             );
             setProposal(foundProposal || null);
-
         }
     }, [catalystData, id]);
+
+    // Fetch milestones data
+    useEffect(() => {
+        if (id && typeof id === 'string') {
+            setMilestonesLoading(true);
+            fetch(`/api/milestones/${id}`)
+                .then(response => {
+                    if (response.ok) {
+                        return response.json();
+                    }
+                    return [];
+                })
+                .then((data: MilestoneData[]) => {
+                    setMilestones(data);
+                })
+                .catch(error => {
+                    console.error('Error fetching milestones:', error);
+                    setMilestones([]);
+                })
+                .finally(() => {
+                    setMilestonesLoading(false);
+                });
+        }
+    }, [id]);
 
     if (isLoading) {
         return (
@@ -75,7 +102,9 @@ export default function ProposalDetail() {
                                 milestonesLink: `https://milestones.projectcatalyst.io/projects/${proposal.projectDetails.project_id}`,
                                 fundingCategory: proposal.projectDetails.category,
                                 proposalBudget: `${proposal.projectDetails.budget} ₳`,
-                                status: proposal.projectDetails.status,
+                                status: proposal.milestonesCompleted === proposal.projectDetails.milestones_qty && proposal.projectDetails.milestones_qty > 0 
+                                    ? 'Completed' 
+                                    : proposal.projectDetails.status,
                                 milestonesCompleted: `${proposal.milestonesCompleted}/${proposal.projectDetails.milestones_qty}`,
                                 fundsDistributed: `${proposal.projectDetails.funds_distributed} of ${proposal.projectDetails.budget}`,
                                 fundingProgress: ''
@@ -90,6 +119,12 @@ export default function ProposalDetail() {
                     )}
 
                     
+
+                    {milestonesLoading ? (
+                        <div className={styles.loading}>Loading milestones...</div>
+                    ) : (
+                        <CompletedMilestones milestones={milestones} />
+                    )}
 
                     <ExternalLinks 
                         projectLink={proposal.projectDetails.url}

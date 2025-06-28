@@ -3,9 +3,6 @@ import { useData } from '../contexts/DataContext';
 import styles from '../styles/StakePool.module.css';
 import StakePoolMetricsSection from './StakePoolMetricsSection';
 import StakePoolGrowthChart from './StakePoolGrowthChart';
-import StakePoolVotingCard from './StakePoolVotingCard';
-import StakePoolVotingList from './StakePoolVotingList';
-import { PoolVote } from '../types';
 import { CopyIcon } from './Icons';
 
 const StakePoolInfo: React.FC = () => {
@@ -63,16 +60,7 @@ const StakePoolInfo: React.FC = () => {
         }
     }, [stakePoolData?.poolHistory]);
 
-    // Get all votes from all years
-    const allVotes = useMemo(() => {
-        if (!stakePoolData?.poolVotes) return [];
 
-        const votes: PoolVote[] = [];
-        Object.values(stakePoolData.poolVotes).forEach(votesData => {
-            votes.push(...votesData.votes);
-        });
-        return votes;
-    }, [stakePoolData?.poolVotes]);
 
     const handleCopyPoolId = () => {
         if (poolInfo?.pool_id_bech32) {
@@ -134,26 +122,13 @@ const StakePoolInfo: React.FC = () => {
                 liveDelegators={poolInfo?.live_delegators || 0}
                 blockCount={poolInfo?.block_count || null}
                 liveSaturation={poolInfo?.live_saturation || null}
-                votingPower={poolInfo?.voting_power || null}
                 margin={poolInfo?.margin || null}
                 fixedCost={poolInfo?.fixed_cost || null}
                 livePledge={poolInfo?.live_pledge || null}
-                deposit={poolInfo?.deposit || null}
             />
 
             {growthChartData.length > 0 && (
                 <StakePoolGrowthChart data={growthChartData} />
-            )}
-
-            {allVotes.length > 0 && (
-                <StakePoolVotingCard votes={allVotes} />
-            )}
-
-            {allVotes.length > 0 && (
-                <div className={styles.votingSection}>
-                    <h2 className={styles.sectionTitle}>Pool Voting History</h2>
-                    <StakePoolVotingList votes={allVotes} />
-                </div>
             )}
         </div>
     );
