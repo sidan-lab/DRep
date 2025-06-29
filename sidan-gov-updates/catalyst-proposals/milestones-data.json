@@ -1,0 +1,1006 @@
+{
+  "timestamp": "2025-06-29T09:09:52.288Z",
+  "milestones": {
+    "1100022": [
+      {
+        "projectId": "1100022",
+        "milestoneNumber": 1,
+        "link": "[Open full project](https://projectcatalyst.io/funds/11/cardano-open-developers/aiken-open-source-smart-contract-library-by-meshjs-and-trustlevel)",
+        "challenge": "F11: Cardano Open: Developers",
+        "budget": "ADA 33,960.00",
+        "deliveredDate": "May 22, 2024",
+        "title": "Milestone Report",
+        "content": "\r\nEach of the 5 contracts of Milestone 1 including Aiken Workspace and Tx Builder can be found in our Github Repository. Additional, you can find the documentation also on our Website www.meshjs.dev:\r\n\r\n### Marketplace:\r\n- https://github.com/MeshJS/mesh/tree/main/packages/contracts/src/marketplace\r\n- https://meshjs.dev/smart-contracts/marketplace\r\n\r\n### Swap/Payment splitter:\r\n\r\n- https://github.com/MeshJS/mesh/tree/main/packages/contracts/src/payment-splitter\r\n- https://meshjs.dev/smart-contracts/payment-splitter\r\n\r\n### Escrow\r\n\r\n- https://github.com/MeshJS/mesh/tree/main/packages/contracts/src/escrow\r\n- https://meshjs.dev/smart-contracts/escrow\r\n\r\n### Vesting\r\n\r\n- https://github.com/MeshJS/mesh/tree/main/packages/contracts/src/vesting\r\n- https://meshjs.dev/smart-contracts/vesting\r\n\r\n### Gift card\r\n\r\n- https://github.com/MeshJS/mesh/tree/main/packages/contracts/src/giftcard\r\n- https://meshjs.dev/smart-contracts/giftcard\r\n\r\n### Video to demonstrate the use of the library:\r\n- https://www.loom.com/share/1ad229892186475ab4c13c609173c130?sid=312de321-522d-4b8c-99af-15fd169358ff\r\n",
+        "outcomes": [],
+        "evidence": []
+      },
+      {
+        "projectId": "1100022",
+        "milestoneNumber": 2,
+        "link": "[Open full project](https://projectcatalyst.io/funds/11/cardano-open-developers/aiken-open-source-smart-contract-library-by-meshjs-and-trustlevel)",
+        "challenge": "F11: Cardano Open: Developers",
+        "budget": "ADA 33,960.00",
+        "deliveredDate": "November 1, 2024",
+        "title": "Milestone Report",
+        "content": "\r\n\t\r\nMilestone 2 includes advanced Smart Contracts, which includes NFT minting, Content ownership with each Oracle Design Patterns. Each contract includes the oracle scripts, Aiken Workspace and Tx Builder and can be found in linked Github Repository. Additional, you can find more about MeshJS and the complete documentation also on our Website www.meshjs.dev.\r\n\r\n### Video to demonstrate the use of the library:\r\n- https://www.dropbox.com/scl/fi/lmrpn9h6dj0g83f3c1iko/Copy-aikenlib-m2.mov?rlkey=36fy2m9ixglmv3fnc5w4ek43f&st=sfbgbys5&dl=0\r\n\r\n### Smart Contract Description:\r\nContent Ownership:\r\n- Documentation: https://meshjs.dev/smart-contracts/content-ownership\r\n- Github Repository: https://github.com/MeshJS/mesh/tree/main/packages/mesh-contract/src/content-ownership\r\n> - Included Oracle Design Pattern:\r\n\r\n### Setup Oracle UTXO: \r\nSends the NFT to the oracle contract locking the datum, which serves as single source of truth\r\n- Create Content Registry\r\n- Create Ownership registry\r\n- Get Oracle Data: Fetch the current state of the registry\r\n- Mint User Token: Mints token so user can create the content\r\n- Create content: Attaches the content to the registry\r\n- Get content: Fetches content data from the registry\r\n  \r\n### Smart Contract NFT Minting:\r\n- Documentation: https://meshjs.dev/smart-contracts/plutus-nft\r\n- Github Repository: https://github.com/MeshJS/mesh/tree/main/packages/mesh-contract/src/plutus-nft\r\n> - Included Oracle Design Pattern:\r\n- Setup Oracle: Mint one-time minting policy to set up the oracle\r\n- Mint Token: Mint NFT that ensures the token name is incremented by a counter\r\n- Get Oracle Data: Fetch the current oracle data to get the current NFT index and other information\r\n",
+        "outcomes": [],
+        "evidence": []
+      },
+      {
+        "projectId": "1100022",
+        "milestoneNumber": 3,
+        "link": "[Open full project](https://projectcatalyst.io/funds/11/cardano-open-developers/aiken-open-source-smart-contract-library-by-meshjs-and-trustlevel)",
+        "challenge": "F11: Cardano Open: Developers",
+        "budget": "ADA 28,300.00",
+        "deliveredDate": "March 25, 2025",
+        "title": "Milestone Report",
+        "content": "Dear MR,\r\nwe’ve updated the repository to address your requested changes:\r\n\r\n### 1. Documentation & Demo Links:\r\nEach of the five “Bad Contracts” includes a README with:\r\n\r\n- A warning that this contract is part of the List of Bad Contracts, created for educational purposes.\r\n- Direct links to both workshop recordings where we demonstrate and explain these contracts in detail.\r\n- Additional documentation about:\r\n-- The working mechanism of each error.\r\n-- Detailed source code illustrating how to fix the error.\r\n-- Evidence of contract testing by using the command “aiken check”.\r\n  \r\n### 2. Workshops\r\nBoth workshops go into detail on how to analyze and learn from these contracts. In addition they are embedded in the Gimbalabs & Andamio Aiken Learning Course, which provides additional structure and context for developers:\r\n\r\n- Youtube Playlist: https://youtube.com/playlist?list=PLCCIAmutGEbemjDkJQLy4nouU9UccK4wq&si=OyqvlxZB7ERYQHb_\r\n- Andamio Platform: https://app.andamio.io/course/aiken-pbl-2024\r\n  \r\n### 3.\tResources:\r\nUpdated Contracts:\r\n- Unbound Value\r\n- Infinite Mint\r\n- Insufficient Stake Control\r\n- Locked Value\r\n- Double Satisfaction Vulnerability\r\nWorkshop Recordings (also embedded in the Gimbalabs Aiken Learning Course):\r\n- Workshop 1\r\n- Workshop 2\r\nRepository Overview:\r\n- https://github.com/MeshJS/mesh/tree/main/packages/mesh-contract#list-of-bad-contracts\r\n",
+        "outcomes": [],
+        "evidence": [
+          "Youtube Playlist: https://youtube.com/playlist?list=PLCCIAmutGEbemjDkJQLy4nouU9UccK4wq&si=OyqvlxZB7ERYQHb_",
+          "https://youtube.com/playlist?list=PLCCIAmutGEbemjDkJQLy4nouU9UccK4wq&si=OyqvlxZB7ERYQHb_",
+          "Andamio Platform: https://app.andamio.io/course/aiken-pbl-2024",
+          "https://app.andamio.io/course/aiken-pbl-2024",
+          "Unbound Value",
+          "Infinite Mint",
+          "Insufficient Stake Control",
+          "Locked Value",
+          "Double Satisfaction Vulnerability",
+          "Workshop 1",
+          "Workshop 2",
+          "https://github.com/MeshJS/mesh/tree/main/packages/mesh-contract#list-of-bad-contracts",
+          "https://github.com/MeshJS/mesh/tree/main/packages/mesh-contract#list-of-bad-contracts"
+        ]
+      },
+      {
+        "projectId": "1100022",
+        "milestoneNumber": 4,
+        "link": "[Open full project](https://projectcatalyst.io/funds/11/cardano-open-developers/aiken-open-source-smart-contract-library-by-meshjs-and-trustlevel)",
+        "challenge": "F11: Cardano Open: Developers",
+        "budget": "ADA 16,980.00",
+        "deliveredDate": "April 20, 2025",
+        "title": "Milestone Report",
+        "content": "\r\n\t\r\n- Close out report: https://docs.google.com/document/d/1xLxBYmSD6ETHI_qypZoZ65k9LiS79Z_WLFGxYfWZJTA/edit?usp=sharing\r\n- Close our video: https://vimeo.com/1077062487?share=copy\r\n",
+        "outcomes": [],
+        "evidence": []
+      }
+    ],
+    "1100111": [
+      {
+        "projectId": "1100111",
+        "milestoneNumber": 1,
+        "link": "[Open full project](https://projectcatalyst.io/funds/11/cardano-use-cases-concept/defi-evolution-pioneering-high-frequency-trading-on-cardano)",
+        "challenge": "F11: Cardano Use Cases: Concept",
+        "budget": "ADA 20,000.00",
+        "deliveredDate": "April 4, 2024",
+        "title": "Milestone Report",
+        "content": "\r\n### 1. Finalised Proposal Onboarding\r\nWe Successfully on boarded our proposal, which can be checked at: https://milestones.projectcatalyst.io/projects/1100111/milestones/1\r\n- Completed and Submitted onboarding form\r\n- Submitted SoM’s\r\n- Confirmed test transaction\r\n\r\n### 2. Fully operational and active Project Lead, Project Management and social accounts.\r\nPublicly announced updates and proposal progress on SIDAN Lab Discord and Twitter.\r\n- SIDAN Lab Twitter: https://twitter.com/sidan_lab\r\n- SIDAN Lab Discord: https://discord.gg/8ZJWrFef9N\r\n\r\n### 3. Conduct a comprehensive analysis of current HFT use cases and identify integration points for Cardano\r\nGather requirements from potential users, \r\n- link: https://drive.google.com/drive/folders/1kyrgFeahlTB_qr0dogXGmsCpcJTcsCoN?usp=drive_link\r\n",
+        "outcomes": [],
+        "evidence": []
+      },
+      {
+        "projectId": "1100111",
+        "milestoneNumber": 2,
+        "link": "[Open full project](https://projectcatalyst.io/funds/11/cardano-use-cases-concept/defi-evolution-pioneering-high-frequency-trading-on-cardano)",
+        "challenge": "F11: Cardano Use Cases: Concept",
+        "budget": "ADA 20,000.00",
+        "deliveredDate": "May 27, 2024",
+        "title": "Milestone Report",
+        "content": "\r\nPrepare all designs on Gitbook.\r\n- https://deltadefi.gitbook.io/documentation/~/changes/zx54PoXWvzGUlZw0I9zp\r\n\r\nGitbook link for Documentation of order types and matching design. \r\n- https://deltadefi.gitbook.io/documentation/~/changes/zx54PoXWvzGUlZw0I9zp/solutions/solution-designs\r\n\r\nFurther graphs as requested by the reviewer:\r\n- https://deltadefi.gitbook.io/documentation/~/changes/bZYymCjqu2I9R6X6wx1l/architecture\r\n> This is close to what we maximally can provide for this milestone, as the current proposal does not cover actual development work.\r\n",
+        "outcomes": [],
+        "evidence": []
+      },
+      {
+        "projectId": "1100111",
+        "milestoneNumber": 3,
+        "link": "[Open full project](https://projectcatalyst.io/funds/11/cardano-use-cases-concept/defi-evolution-pioneering-high-frequency-trading-on-cardano)",
+        "challenge": "F11: Cardano Use Cases: Concept",
+        "budget": "ADA 20,000.00",
+        "deliveredDate": "June 29, 2024",
+        "title": "Milestone Report",
+        "content": "\r\n\r\nDear reviewer,\r\n\r\nFirst of all, it is highly unrecommended to leave any subjective argument (point 1) as part of the rejection reason. Please remember that you are representing the community in reviewing our milestone. Our team does not expect the commitment of a prototype for this milestone and has just tried to quickly compose the prototype source code to fulfill the extra delivery request as per the last comment.\r\n\r\nIn the current dispute, we have reached out team at IOG, Emurgo, and community members such as Cardano Ambassadors. We acknowledge that the dispute comes from the milestone expectation difference that in current F11: Cardano Use Cases: Concept each project should deliver a prototype as the project output. While at the beginning our team was not aware of this category's overall expectation. That’s why we have not written/proposed any commitment to building a prototype anywhere in the project milestone outputs/acceptance criteria and evidence. However, summarizing all the comments we obtained from multiple channels:\r\n\r\n1. We all agree that the Catalyst process follows the philosophy of liquid democracy, where each participant shares distinct responsibilities depending on the roles\r\n2. ADA holders have the responsibility to conduct due diligence on each project and team to cast their votes.\r\n3. The project team has the responsibility to define the project scope and propose milestone outputs/acceptance criteria and evidence.\r\n4. Reviewers have the responsibility to safeguard whether the suggested milestone outputs/acceptance criteria and evidence fulfilled the objective and direction of the fund and help revise or approve the milestone outputs/acceptance criteria and evidence as it find fit.\r\n5. The project team has the responsibility to provide evidence of achievement.\r\n6. Reviewers have the responsibility to ensure that the evidence of achievement is submitted adequately.\r\n  \r\nCurrently, we are stuck at step 6. As we might agree that the term “feasibility report” is too vague to judge, we would argue that all the dispute stems from the failure of reviewers’ responsibility back in step 4.\r\n\r\nTo be 100% transparent, our team has proceeded to build a startup - DeltaDeFi on top of the findings from this project. We are working on a production-grade product right now so we do not have anything as a “prototype” internally. As a business, we also do not feel comfortable to open sourcing anything beyond what we have committed.\r\n\r\nAs veterans in the Cardano community, we all act for the good of the community. We are happy to share the know-how to foster growth, but it should not extend to sharing also business logic source code like how we save data fields in the database to protect ourselves as a business. A simple metaphor, Terraform got its open source version and hosted version for business, and they would never make their source code for hosted service public. I want to communicate this point very clearly.\r\n\r\nSo looking back at what we have committed in the current proposal, there is nothing about the source code we committed at the time of writing the proposal. Please respect our commitment. We are more than happy to share more with the community, so that’s what we have planned for the future funding round.\r\n\r\nTo follow up, I acknowledge the purpose of F11: Cardano Use Cases: Concept wishing to have a prototype somewhere. We might produce a more in-depth example in terms of it WITHOUT directly disclosing everything we have at DeltaDeFi (once again because it is out of scope). Since currently it is not included anywhere in our committed milestone outputs/acceptance criteria and evidence, we are also open to aligning a video call to adjust the milestone outputs/acceptance criteria and evidence for the remaining, and see how we can add this back somewhere, as a remedy of both our fault - we overlooked/misinterpreted the F11: Cardano Use Cases: Concept output goal at the beginning & reviewer mishandled milestone setting process (step 4).\r\n\r\nThis is a very good case study of demonstrating exhausting miscommunication that could happen on Catalyst so we proceed with leaving comments in the current resubmission to leave the data permanent for future study.\r\n\r\nThanks & let’s make the system better together.\r\n\r\nBest,\r\n\r\nSIDAN Lab team\r\n\r\nResubmission:\r\n\r\n- Whitepaper: https://docs.google.com/document/d/160s5O5JLdGFocVzD4aX97UEP1afa1I6G0lTeEvItl3g/edit?usp=drive_link\r\n- Team Video: https://drive.google.com/file/d/1OZFqqs3Une7D1eg6B3Uc2_4Vr2OQBS8d/view?usp=drive_link\r\n- Extra evidence - feasibility study: https://docs.google.com/document/d/1ZjGNYmoPGTtMpYsQIEFwmtdGG9o3idirNZt0VmTgIoM/edit?usp=drive_link\r\n- Extra delivery and evidence - HFT tx chaining prototype code base - https://github.com/deltadefi-protocol/hft-tx-chaining-prototype (deployed at - https://hft-tx-chaining-prototype.vercel.app/)\r\n- Extra delivery and evidence - HFT smart contract prototype - https://github.com/deltadefi-protocol/hft-aiken-prototype\r\n",
+        "outcomes": [
+          ". We all agree that the Catalyst process follows the philosophy of liquid democracy, where each participant shares distinct responsibilities depending on the roles",
+          ". ADA holders have the responsibility to conduct due diligence on each project and team to cast their votes.",
+          "Whitepaper: https://docs.google.com/document/d/160s5O5JLdGFocVzD4aX97UEP1afa1I6G0lTeEvItl3g/edit?usp=drive_link",
+          "Team Video: https://drive.google.com/file/d/1OZFqqs3Une7D1eg6B3Uc2_4Vr2OQBS8d/view?usp=drive_link"
+        ],
+        "evidence": []
+      },
+      {
+        "projectId": "1100111",
+        "milestoneNumber": 4,
+        "link": "[Open full project](https://projectcatalyst.io/funds/11/cardano-use-cases-concept/defi-evolution-pioneering-high-frequency-trading-on-cardano)",
+        "challenge": "F11: Cardano Use Cases: Concept",
+        "budget": "ADA 20,000.00",
+        "deliveredDate": "October 7, 2024",
+        "title": "Milestone Report",
+        "content": "\r\n\t\r\nEngage with the subject expertise (e.g. hedge fund, crypto trading firms, centralised crypto exchange, Gimbalabs, Mesh, etc.) and the Cardano community to present the prototype. Gather feedback for refinement and future development. Team Interview recording:\r\n\r\n- Mesh: https://youtu.be/gZ1RxWJv4TU?feature=shared\r\n- Gimbalabs: https://youtu.be/yzvKFu4p_LI?feature=shared\r\n- Waffle Capital:https://youtu.be/E6DhIwTpHeY?feature=shared\r\n  \r\nPrepare interview questions regarding to prototype, such as user experience, improvements etc.\r\n- https://docs.google.com/document/d/1tBd4pdeUnzGJsV_-WMgJBJHU8K_y6I-7lq8zvG8lD5w/edit?usp=sharing\r\n",
+        "outcomes": [],
+        "evidence": []
+      },
+      {
+        "projectId": "1100111",
+        "milestoneNumber": 5,
+        "link": "[Open full project](https://projectcatalyst.io/funds/11/cardano-use-cases-concept/defi-evolution-pioneering-high-frequency-trading-on-cardano)",
+        "challenge": "F11: Cardano Use Cases: Concept",
+        "budget": "ADA 20,000.00",
+        "deliveredDate": "October 18, 2024",
+        "title": "Milestone Report",
+        "content": "\r\n\t\r\nWe would like to show huge appreciation for all the reviewers' efforts. Thank you for your contribution. \r\n\r\nTo the reviewer who rejected our POA, the findings we got are not just a couple of sentences. The objective of the report is to provide a summary of our work in this proposal. We provide a range of findings/insights/feasibilities from business, product, and technical angles. We also provided a demo video: https://youtu.be/gJ9mYrN7bmU to demonstrate the finding results, which is included in the report. The close-out report is separated from the consolidation final report as the close-out report is mostly the requirement from the project catalyst. For simplicity and clarity, we just separated them\r\n\r\nConsolidation Final Report:\r\n\r\n- https://docs.deltadefi.io/project-catalyst-f11-comprehensive-report\r\n- https://docs.google.com/document/d/1CF_yfq3_qPx4aGnx0bSWsoztUSRsFobiiSCRYmi41PM/edit?usp=sharing\r\nFinal Report via recorded team meeting:\r\n- https://drive.google.com/file/d/1sAgjXaIaRXiQJ0Il7HDxxTa-KizN7Lqi/view?usp=sharing\r\n  \r\nClose-out Report:\r\n- https://docs.google.com/document/d/1tXXwH5ESADipLX9VVDdXVCPLXHBrrzGSz76ZA8oj4Zk/edit?usp=sharing\r\n\r\nClose-out Video:\r\n- https://youtu.be/PHukagVUnVU\r\n- Prototype Demo Video: https://youtu.be/gJ9mYrN7bmU\r\n",
+        "outcomes": [],
+        "evidence": []
+      }
+    ],
+    "1100141": [
+      {
+        "projectId": "1100141",
+        "milestoneNumber": 1,
+        "link": "[Open full project](https://projectcatalyst.io/funds/11/cardano-open-developers/gimbalabs-or-genius-x-hong-kong-cardano-developer-series)",
+        "challenge": "F11: Cardano Open: Developers",
+        "budget": "ADA 30,000.00",
+        "deliveredDate": "April 10, 2024",
+        "title": "Milestone Report",
+        "content": "\r\n\t\r\nProof of Achievement\r\n\r\nWe Successfully on-boarded our proposal, which can be checked at: https://milestones.projectcatalyst.io/projects/1100141/milestones \r\n\r\n- Complete onboarding form\r\n- Submit SoM’s\r\n- Confirm test transaction\r\n\r\nAll team members with name and appearance are PUBLIC since F11 voting had begun. Please check our PUBLIC website: https://projectcatalyst.sidan.io/.  We posted on our PUBLIC X (Twitter) page for the team member and formation since 25 January 2024: https://twitter.com/sidan_lab/status/1750521336345297171\r\n\r\nAdditional Info:\r\n\r\nTwitter:\r\n- https://twitter.com/sidan_lab/status/1773022272300650672\r\n- https://twitter.com/sidan_lab/status/1771196234394382778\r\n  \r\nDiscord:\r\n- https://discord.com/channels/1166784293805228061/1197474137640292454/1222581404177793075\r\n- https://discord.com/channels/1166784293805228061/1197474137640292454/1222256857192861727\r\n  \r\nProject leads, timeline tracker, project tool management: \r\n- https://docs.google.com/spreadsheets/d/1MiZ9X08RcSsWnAXkBrwpWWXUkTqgY74yM0CH-8K1Us8/edit?usp=sharing;\r\n- https://discord.com/channels/1166784293805228061/1197474137640292454/1225394035422793749;\r\n- https://twitter.com/sidan_lab/status/1775840271953178682\r\n> This excel sheet is sufficient as all timelines will be updated as well. There is no need to overkill the tool part if this serves it function\r\n\r\nAll perks will be displayed on SIDAN Discord and Twitter. The perks will be displayed when we official launch the application link of the developer series.\r\n\r\n- https://drive.google.com/drive/folders/1gMXJEBCYsUU8izKLz_lNbREB5W9FauFT?usp=sharing\t\r\n",
+        "outcomes": [],
+        "evidence": []
+      },
+      {
+        "projectId": "1100141",
+        "milestoneNumber": 2,
+        "link": "[Open full project](https://projectcatalyst.io/funds/11/cardano-open-developers/gimbalabs-or-genius-x-hong-kong-cardano-developer-series)",
+        "challenge": "F11: Cardano Open: Developers",
+        "budget": "ADA 50,000.00",
+        "deliveredDate": "September 17, 2024",
+        "title": "Milestone Report",
+        "content": "\r\n\t\r\nRe: comment on utxo epochs etc:\r\nWe found that those materials are for non-tech more specifically, so we have included those materials in a non tech starter instead - https://www.andamio.io/course/c2024. These are more for general public, so they are prepare in Chinese.\r\n\r\nBuilding the education materials on Andamio - Hong Kong PBL, covering:\r\n\r\nCardano ecosystem basics and technology overview (Cardano Ouroboros, Epochs, eUTXO, native tokens)\r\n\r\n- Link: https://www.andamio.io/course/hkdevstarter2024\r\n- Screenshot: https://drive.google.com/file/d/1zWWKYZu3Tabw4sPdeNG1OiEofVHvfT0X/view?usp=sharing\r\n  \r\nOnchain code development (in Aiken)\r\n- Link: https://www.andamio.io/course/APBLHK\r\n- Screenshot: https://drive.google.com/file/d/1vij0ebwOx6DCuehORpGQo_U6rm0TCayw/view?usp=sharing\r\n",
+        "outcomes": [],
+        "evidence": []
+      },
+      {
+        "projectId": "1100141",
+        "milestoneNumber": 3,
+        "link": "[Open full project](https://projectcatalyst.io/funds/11/cardano-open-developers/gimbalabs-or-genius-x-hong-kong-cardano-developer-series)",
+        "challenge": "F11: Cardano Open: Developers",
+        "budget": "ADA 30,000.00",
+        "deliveredDate": "October 9, 2024",
+        "title": "Milestone Report",
+        "content": "\r\n\t\r\nComplete MeshPBL material, PDF/ Google link/ Website will be provided. Relevant links will be provided via the PoA\r\n- MeshPBL - https://www.andamio.io/course/meshpbl-hk\r\n  \r\nComplete DappPBL material, PDF/ Google link/ Website will be provided. Relevant links will be provided via the PoA\r\n- DAppPBL - https://www.andamio.io/course/DAPPPBLHK\r\n\r\nHost an offline gathering session, announcing the Cardano Hong Kong developer series, with refreshment and Cardano perks give-away.\r\n- https://x.com/sidan_lab/status/1832435052892057756\r\n- https://drive.google.com/file/d/1nis_W6uZaojS9prbNQlR8CUeEIY3hxaa/view?usp=sharing\r\n- https://drive.google.com/drive/folders/1ytJ67kmSYZ7ZrWeKDklX5Z8mQfjpo2h5?usp=sharing\r\n  \r\nBuild and host a discord channel for the Hong Kong dev community. Discord channel setup. Relevant links will be provided via the PoA\r\n- https://discord.gg/YnxmjWXjjS\r\n- Discord Announcement: https://discord.com/channels/1166784293805228061/1197474137640292454/1273519399118307329\r\n- Discord Announcement Screenshot: https://drive.google.com/file/d/19C0uJ4bBQVst6AY85aL_E9EtI5TOYF-D/view?usp=drive_link\r\n  \r\nRegistered participation list of the course. Relevant links will be provided via the PoA\r\n- Registration link: https://lu.ma/8p7mhtz1\r\n- Registration list: https://drive.google.com/file/d/1jne7lSRt368mH7HabmzY4pWeQ9WuXEPJ/view?usp=drive_link\r\n> (Note: Contact information is hidden due to privacy)\r\n",
+        "outcomes": [],
+        "evidence": []
+      },
+      {
+        "projectId": "1100141",
+        "milestoneNumber": 4,
+        "link": "[Open full project](https://projectcatalyst.io/funds/11/cardano-open-developers/gimbalabs-or-genius-x-hong-kong-cardano-developer-series)",
+        "challenge": "F11: Cardano Open: Developers",
+        "budget": "ADA 30,000.00",
+        "deliveredDate": "October 1, 2024",
+        "title": "Milestone Report",
+        "content": "\r\n\t\r\nUpload all online teaching material as doc/ PDF/ Andamio whichever is more convenient. A link will be provided.\r\n\r\n- https://www.andamio.io/course/APBLHK\r\n- https://www.andamio.io/course/hkdevstarter2024\r\n- https://www.andamio.io/course/meshpbl-hk\r\n- https://www.andamio.io/course/DAPPPBLHK\r\n  \r\nUpload a list of student enrollment participating in the HK PBL in .doc/ PDF whichever is more convenient. A link will be provided\r\n- https://drive.google.com/file/d/1i3vbhrv5f58wIwx8_Wh5tT98GupR4J6l/view?usp=drive_link\r\n> (Personal information needs to be hidden)\r\n\r\nAll offline or virtual events will be recorded and shared on Twitter/ TG/ Discord. YouTube. Additional links will be shared. If there are any restrictions or legal issues on filming due to the requirement of the venue place/ local legal regulations, we will upload photos instead. If there are any sound issues, we will also upload photos instead of videos.\r\n- Announcement: https://x.com/sidan_lab/status/1834428644158320887\r\n- Photos: https://drive.google.com/drive/folders/1gijUyco_AMrKjxkLVYx1cZsC-6FGQBXk?usp=sharing\r\n- Videos: https://drive.google.com/drive/folders/1a7gjh2x-XsJJBsnqy-iJWVBjHXOUU8Z6?usp=drive_link\r\n",
+        "outcomes": [],
+        "evidence": []
+      },
+      {
+        "projectId": "1100141",
+        "milestoneNumber": 5,
+        "link": "[Open full project](https://projectcatalyst.io/funds/11/cardano-open-developers/gimbalabs-or-genius-x-hong-kong-cardano-developer-series)",
+        "challenge": "F11: Cardano Open: Developers",
+        "budget": "ADA 30,000.00",
+        "deliveredDate": "October 8, 2024",
+        "title": "Milestone Report",
+        "content": "\r\n\t\r\nThe registered participation list of the hackathon will be uploaded to Discord\r\n\r\n- https://drive.google.com/file/d/1t5SACuqHB28hBJBVOgkTi7bDL8CyfckY/view?usp=sharing\r\n- Discord announcement Screenshot: https://drive.google.com/file/d/1X0pZ5qy_Z6hbT-rC_BAudfo-WsiuJHc0/view?usp=drive_link\r\n  \r\nHost legal, tokenomics, business seminar. Recorded and uploaded on Developer Series.\r\nVideos: \r\n- https://youtu.be/oIx-LUC-xqs\r\n- https://youtu.be/cMUXUdMc8V0\r\n- https://youtu.be/DefTB_Tn6fE\r\n- https://youtu.be/eSm3or_lpf4\r\n- https://youtu.be/jsSgjAWCN-w\r\n- Registration Link: https://lu.ma/pm86bbol\r\n- Registration List: https://drive.google.com/file/d/16dOfN6RAsDMhx_mxsXfVPCfHTQuMPbIk/view?usp=sharing\r\n  \r\nNote: The purpose of the review is to assess whether the evidence demonstrates the completion of the required tasks, and the evidence provided clearly shows the successful completion of the milestones and activities.\r\n\r\nUpon completion, students can enroll in the hackathon to spin up their ideas\r\n- Hackathon Registration Form: https://forms.gle/UxC37RBmaTGDS4do6\r\n",
+        "outcomes": [],
+        "evidence": [
+          "Hackathon Registration Form: https://forms.gle/UxC37RBmaTGDS4do6",
+          "https://forms.gle/UxC37RBmaTGDS4do6"
+        ]
+      },
+      {
+        "projectId": "1100141",
+        "milestoneNumber": 6,
+        "link": "[Open full project](https://projectcatalyst.io/funds/11/cardano-open-developers/gimbalabs-or-genius-x-hong-kong-cardano-developer-series)",
+        "challenge": "F11: Cardano Open: Developers",
+        "budget": "ADA 30,000.00",
+        "deliveredDate": "October 14, 2024",
+        "title": "Milestone Report",
+        "content": "\r\n\t\r\nOnce again, we would like to show are gratitude for all the effort from the reviewers. Here is the resubmission:\r\n\r\nA list of student/ developer enrollment/ submission of ideas will be provided in doc or Excel\r\n\r\n- Hackathon Registration Form: https://forms.gle/UxC37RBmaTGDS4do6\r\n- Pitch deck from participants: https://drive.google.com/drive/folders/1hNO3aiRgvb0sEX_6uI--bszCi-KvlGRT?usp=drive_link\r\n- Hackathon T&C: https://docs.google.com/document/d/1QtwO8sP4_TeUo4woFEaoBV9BWXwvTNcVjoCeZa_Zdqs/edit?usp=sharing\r\n- Discord Announcement on Participation: https://drive.google.com/file/d/1XqSQZj_bdY-zHqN94K4rdKtGHyMQMZVh/view?usp=sharing\r\n- Link of Discord Announcement on Participation: https://discord.com/channels/1166784293805228061/1197474137640292454/1286525478047580241\r\n  \r\nStudents/ developers signing up for the hackathon. Sign-up details and links will be listed on Twitter/ Discord. The winning teams will be announced on SIDAN Lab's social media channel (Twitter/ Discord). A link will be provided. \r\n\r\nOnboarded the mentors and assigned mentors to teams/ individuals. Technical mentors from SIDAN LAB/ Gimlababs. Business mentors from SIDAN LAB/ Genius X/ Waffle Capital.\r\n\r\n- Team information and mentors: https://docs.google.com/spreadsheets/d/1TYei9sbNrEBPYC3VQJV1MitFGN6TLn3qAoalM5f9hI0/edit?usp=sharing\r\n- Discord announcement: https://drive.google.com/file/d/1Taqgxz8rRKbke1hp-IjXepGu9WH4KJQy/view?usp=drive_link\r\n- Link of Discord announcement: https://discord.com/channels/1166784293805228061/1197474137640292454/1293781544762085456\r\nRecorded and uploaded Event Videos/Photos to YouTube. A link will be provided. \r\n\r\nTo the reviewer who rejected. The term above refers to documented and uploaded event videos OR photos, which is referring to either one option, photos or video, would be sufficient. The reason why we mentioned this as the legal clause in Hong Kong might not allow us to share the video. Therefore, to play safe, that's why we added the option of Photos in case if there are any possible legal issues. The purpose of the photos OR videos is to prove that our hackathon took place. We hope you could understand the situation. Furthermore, the whole developer series progress and photos are announced in SIDAN Lab Twitter, as professors from official universities in Hong Kong are invited as well. (Also the videos are already in the folders of the link provided. It would make no difference whether it is in Google Drive or Youtube as long as the evidence showed that the hackathon is completed, and the file is publicly available). Hugely appreciated for understanding\r\n- Photos of Hackathon: https://drive.google.com/drive/folders/1VHZntqCyr7czypxHt1wKICGHh63YHnq5?usp=sharing\r\n  \r\nTransaction records of kickstarting prices will be provided. A link of transaction. \r\n\r\nThank you for the inquiry reviewer. To address your concerns, here's the reply:\r\n\r\n1. 1 ADA was sent to the wallet address of each participant to ensure they received the ADA and that the wallet provided by them was correct.\r\n2. the amount of ADA transferred depends on the price of ADA during the date and time when we transferred. Therefore together with the 1 ADA, the exact amount of ADA equivalent to the USD value was sent to each winner.\r\n3. We have clearly mentioned in the T&C of our hackathon and the participants all agreed to these terms prior to the hackathon.\r\n4. One team (SwapSphere) request to split the winning reward into 2 separate wallet\r\n   \r\nAttaching the email conversation record and T&C for your reference. The T&C is attached above already.\r\n- https://adastat.net/transactions/da8c599be9de22b01822653889e45049cd1d3cc5bafb6a7c37e96493f408b170\r\n- Propbid Email: https://drive.google.com/file/d/1h10zSYqcYogKaubPS24nTqHEQuW6XEwl/view?usp=sharing\r\n- Remobile Email: https://drive.google.com/file/d/1AKaKFIbNy4LxlAKsgnfjUcBLvVP1CIXQ/view?usp=sharing\r\n- SwapSphere Email: https://drive.google.com/file/d/11k9fNkNblj-__Gtf-MDgXu-HdWYM8Jyj/view?usp=sharing\r\n- SwapSphere Request: https://drive.google.com/file/d/1w2j3--u8k_7ogFvNLLXvwCePsMw9Jx6C/view?usp=sharing\r\n  \r\nClose-out report: \r\n- https://docs.google.com/document/d/1rkJtw1-zfHA6lG8Ew0pR0F7r4Os70-MrX7QDUqlQZaM/edit?usp=sharing\r\n\r\nClose-out video: \r\n- https://youtu.be/H_8vhu0QoW8\r\n\r\nAs there is a screen sharing issue, here is the supplement of the screen sharing part showcasing the material we built:\r\n\r\n- Close-out video additional info: https://youtu.be/bmgdgH6CN18\r\n\r\nTo the reviewer who rejected our submission, it would be great if you could indicate when and which part of POA we mentioned we need to provide an interview video for the first-prize winning team. Thank you very much and appreciate a lot the effort. If that's the case we will contact the winning team to get their agreement.\r\n",
+        "outcomes": [],
+        "evidence": [
+          "Photos of Hackathon: https://drive.google.com/drive/folders/1VHZntqCyr7czypxHt1wKICGHh63YHnq5?usp=sharing",
+          "https://drive.google.com/drive/folders/1VHZntqCyr7czypxHt1wKICGHh63YHnq5?usp=sharing",
+          ". 1 ADA was sent to the wallet address of each participant to ensure they received the ADA and that the wallet provided by them was correct.",
+          ". the amount of ADA transferred depends on the price of ADA during the date and time when we transferred. Therefore together with the 1 ADA, the exact amount of ADA equivalent to the USD value was sent to each winner.",
+          ". We have clearly mentioned in the T&C of our hackathon and the participants all agreed to these terms prior to the hackathon.",
+          ". One team (SwapSphere) request to split the winning reward into 2 separate wallet",
+          "https://adastat.net/transactions/da8c599be9de22b01822653889e45049cd1d3cc5bafb6a7c37e96493f408b170",
+          "https://adastat.net/transactions/da8c599be9de22b01822653889e45049cd1d3cc5bafb6a7c37e96493f408b170",
+          "Propbid Email: https://drive.google.com/file/d/1h10zSYqcYogKaubPS24nTqHEQuW6XEwl/view?usp=sharing",
+          "https://drive.google.com/file/d/1h10zSYqcYogKaubPS24nTqHEQuW6XEwl/view?usp=sharing",
+          "Remobile Email: https://drive.google.com/file/d/1AKaKFIbNy4LxlAKsgnfjUcBLvVP1CIXQ/view?usp=sharing",
+          "https://drive.google.com/file/d/1AKaKFIbNy4LxlAKsgnfjUcBLvVP1CIXQ/view?usp=sharing",
+          "SwapSphere Email: https://drive.google.com/file/d/11k9fNkNblj-__Gtf-MDgXu-HdWYM8Jyj/view?usp=sharing",
+          "https://drive.google.com/file/d/11k9fNkNblj-__Gtf-MDgXu-HdWYM8Jyj/view?usp=sharing",
+          "SwapSphere Request: https://drive.google.com/file/d/1w2j3--u8k_7ogFvNLLXvwCePsMw9Jx6C/view?usp=sharing",
+          "https://drive.google.com/file/d/1w2j3--u8k_7ogFvNLLXvwCePsMw9Jx6C/view?usp=sharing",
+          "https://docs.google.com/document/d/1rkJtw1-zfHA6lG8Ew0pR0F7r4Os70-MrX7QDUqlQZaM/edit?usp=sharing",
+          "https://docs.google.com/document/d/1rkJtw1-zfHA6lG8Ew0pR0F7r4Os70-MrX7QDUqlQZaM/edit?usp=sharing",
+          "https://youtu.be/H_8vhu0QoW8",
+          "https://youtu.be/H_8vhu0QoW8",
+          "Close-out video additional info: https://youtu.be/bmgdgH6CN18",
+          "https://youtu.be/bmgdgH6CN18"
+        ]
+      }
+    ],
+    "1100250": [
+      {
+        "projectId": "1100250",
+        "milestoneNumber": 1,
+        "link": "[Open full project](https://projectcatalyst.io/funds/11/cardano-open-developers/rust-library-for-easy-off-chain-transaction-building)",
+        "challenge": "F11: Cardano Open: Developers",
+        "budget": "ADA 5,000.00",
+        "deliveredDate": "April 2, 2024",
+        "title": "Milestone Report",
+        "content": "\r\nProposal: https://milestones.projectcatalyst.io/projects/1100250/milestones\r\n\r\nOur stated outcomes of this milestone:\r\n\r\nList out all the APIs needed\r\nHave a detailed breakdown of tasks for all the activities covering.(Package delivery / documentation / community education)\r\nProof of Achievements:\r\n\r\n- List out all the APIs in the form of Doc on anyone of Gitbook/ Github/ Google Doc, depending on whichever is more convenient to access. Link: https://github.com/sidan-lab/sidan-csl-rs\r\n- Fully operational and active Project Lead. Fully operational and active Project Management and social accounts. Finalised Proposal Onboarding:\r\n  \r\nWe Successfully on boarded our proposal, which can be checked at: https://milestones.projectcatalyst.io/projects/1100250/milestones\r\n- Complete onboarding form\r\n- Submit SoM’s\r\n- Confirm test transaction\r\n\r\nPublicly announced updates and proposal progress on SIDAN Lab Discord and Twitter:\r\n- X(Twitter) Post 1: https://twitter.com/sidan_lab/status/1769079914802639332\r\n- X (Twitter) Post 2: https://twitter.com/sidan_lab/status/1774512890902659250\r\n- Discord Post 1: https://discord.com/channels/1166784293805228061/1197474095143596072/1218636607721181214\r\n- Discord Post 2: https://discord.com/channels/1166784293805228061/1197474095143596072/1224072402988699799\r\n",
+        "outcomes": [
+          "List out all the APIs in the form of Doc on anyone of Gitbook/ Github/ Google Doc, depending on whichever is more convenient to access. Link: https://github.com/sidan-lab/sidan-csl-rs",
+          "Fully operational and active Project Lead. Fully operational and active Project Management and social accounts. Finalised Proposal Onboarding:",
+          "Complete onboarding form",
+          "Submit SoM’s",
+          "Confirm test transaction",
+          "X(Twitter) Post 1: https://twitter.com/sidan_lab/status/1769079914802639332",
+          "X (Twitter) Post 2: https://twitter.com/sidan_lab/status/1774512890902659250",
+          "Discord Post 1: https://discord.com/channels/1166784293805228061/1197474095143596072/1218636607721181214",
+          "Discord Post 2: https://discord.com/channels/1166784293805228061/1197474095143596072/1224072402988699799"
+        ],
+        "evidence": []
+      },
+      {
+        "projectId": "1100250",
+        "milestoneNumber": 2,
+        "link": "[Open full project](https://projectcatalyst.io/funds/11/cardano-open-developers/rust-library-for-easy-off-chain-transaction-building)",
+        "challenge": "F11: Cardano Open: Developers",
+        "budget": "ADA 9,750.00",
+        "deliveredDate": "May 9, 2024",
+        "title": "Milestone Report",
+        "content": "\r\n\t\r\nThe github link:\r\n- https://github.com/sidan-lab/sidan-csl-rs\r\n\r\nPackage is published on:\r\n- https://crates.io/crates/sidan-csl-rs\r\n",
+        "outcomes": [],
+        "evidence": []
+      },
+      {
+        "projectId": "1100250",
+        "milestoneNumber": 3,
+        "link": "[Open full project](https://projectcatalyst.io/funds/11/cardano-open-developers/rust-library-for-easy-off-chain-transaction-building)",
+        "challenge": "F11: Cardano Open: Developers",
+        "budget": "ADA 9,750.00",
+        "deliveredDate": "July 2, 2024",
+        "title": "Milestone Report",
+        "content": "\r\n\t\r\nThe documentation hosted in Gitbook \r\n- https://whisky.sidan.io/\r\n",
+        "outcomes": [],
+        "evidence": []
+      },
+      {
+        "projectId": "1100250",
+        "milestoneNumber": 4,
+        "link": "[Open full project](https://projectcatalyst.io/funds/11/cardano-open-developers/rust-library-for-easy-off-chain-transaction-building)",
+        "challenge": "F11: Cardano Open: Developers",
+        "budget": "ADA 3,125.00",
+        "deliveredDate": "August 22, 2024",
+        "title": "Milestone Report",
+        "content": "\r\n\t\r\nAll relevant links are provided in the Google link \r\n- https://docs.google.com/document/d/1q85DQduVwC66OGMjjVdT95LFKUay27Qt5c0bVWHywQQ/edit?usp=sharing\r\n\r\nA copy of all relevant links:\r\n\r\n- Featuring whisky course in andamio - https://www.andamio.io/courses \r\n- Finalised course materials - https://www.andamio.io/course/whisky \r\n- Github repository - https://github.com/sidan-lab/whisky \r\n- Inline documentation - https://sidan-lab.github.io/whisky/whisky/\r\n- ﻿Hosted gitbook documentation - https://whisky.sidan.io/ \r\n",
+        "outcomes": [],
+        "evidence": []
+      },
+      {
+        "projectId": "1100250",
+        "milestoneNumber": 5,
+        "link": "[Open full project](https://projectcatalyst.io/funds/11/cardano-open-developers/rust-library-for-easy-off-chain-transaction-building)",
+        "challenge": "F11: Cardano Open: Developers",
+        "budget": "ADA 4,875.00",
+        "deliveredDate": "October 21, 2024",
+        "title": "Milestone Report",
+        "content": "\r\n\t\r\nUpload all online teaching material\r\n- Featuring whisky course in andamio - https://www.andamio.io/courses \r\n- Finalised course materials - https://www.andamio.io/course/whisky \r\n- Github repository - https://github.com/sidan-lab/whisky \r\n- Inline documentation - https://sidan-lab.github.io/whisky/whisky/\r\n- Hosted gitbook documentation - https://whisky.sidan.io/\r\n  \r\nSuccessfully hosted education session. Recorded offline session in video and publicly shared online\r\n- https://youtu.be/GSZiLGe5Sa8?si=kIXNRMfd_R1KOQoA\r\n  \r\nList of student enrollment\r\n- https://drive.google.com/file/d/1W_M9UXIVS85LYnY3SLzqVAjPU5NEF21f/view?usp=sharing\r\n  \r\nClose-out report:\r\n- https://docs.google.com/document/d/133Yah4Xd7hDN8Hjoe-IBLnuczTsDk_cLgLsEjPTNfGU/edit?usp=sharing\r\n  \r\nClose-out video:\r\n- https://youtu.be/T7EJcxV8Xew?feature=shared\r\n",
+        "outcomes": [],
+        "evidence": []
+      }
+    ],
+    "1100257": [
+      {
+        "projectId": "1100257",
+        "milestoneNumber": 1,
+        "link": "[Open full project](https://projectcatalyst.io/funds/11/cardano-open-ecosystem/sidan-or-waffle-hong-kong-cardano-community)",
+        "challenge": "F11: Cardano Open: Ecosystem",
+        "budget": "ADA 33,000.00",
+        "deliveredDate": "April 10, 2024",
+        "title": "Milestone Report",
+        "content": "\r\n### A. Completed project plan document\r\n\r\nWe Successfully on-boarded our proposal, which can be checked at: https://milestones.projectcatalyst.io/projects/1100257/milestones\r\n\r\n- Completed onboarding form\r\n- Submited SoM’s\r\n- Confirmed test transaction\r\n\r\n### B. Partnership, Team formation and assignment of roles, initial communication: \r\n\r\n- 0xU: https://drive.google.com/drive/folders/1eX7nDLEaS6HDdaXEiwo0fyeEgW6a8M8k?usp=drive_link\r\n- 0xU: https://discord.com/channels/1166784293805228061/1197474184809431101/1222256535414247585\r\n- 0xU: https://twitter.com/sidan_lab/status/1772697522575700232\r\n- 0xU Working Group1: https://drive.google.com/drive/folders/1gJXrHgVFscz4-rK0gh-XS6ClZaLd_MeL?usp=drive_link\r\n- 0xU Working Group2: https://discord.gg/q8XPukdDgy\r\n- Gimbalabs: https://twitter.com/sidan_lab/status/1773022272300650672\r\n- Gimbalabs: https://drive.google.com/drive/folders/1Rp8idDSzvg3WTGu8wYOBgW2z_NYvgWvF?usp=drive_link\r\n- Gimbalabs: https://discord.com/channels/1166784293805228061/1197474184809431101/1222581460712685711\r\n- Gimbalabs Working Group1:https://discord.gg/q8XPukdDgy\r\n- Gimbalabs Working Group2:https://drive.google.com/drive/folders/1NYl-5RpMkNBFbb-N1NeWWHRX8fdwaaix?usp=drive_link\r\n- Cardano Spot: https://twitter.com/CardanoSpot/status/1750181640918163795\r\n- Cardano Spot: https://discord.com/channels/1166784293805228061/1197474184809431101/1225851997442539550\r\n- Cardano Spot: https://drive.google.com/drive/folders/1Rp8idDSzvg3WTGu8wYOBgW2z_NYvgWvF?usp=drive_link\r\n- Cardano Spot Working Group1: https://drive.google.com/drive/folders/1HD0Jwu8z7D0_LW4xoNPwxI__NZEck-gL?usp=drive_link\r\n- Cardano Spot Working Group2:https://discord.gg/q8XPukdDgy\r\n- Blockchain Academy: https://drive.google.com/drive/folders/1y-f0Y5F-rEM8DTDfe04Db4gyofFQR5bn?usp=drive_link\r\n- Blockchain Academy: https://t.me/BlockchainAcademyHK/428\r\n- Blockchain Academy partnership launch: https://t.me/CardanoHongKongOfficial/\r\n- Blockchain Academy UniTour Working Group: https://drive.google.com/file/d/1aR8zxCteAN7LRSWAUj6f58owO3t5r427/view?usp=drive_link\r\n- GeniusX: https://drive.google.com/drive/folders/1NLqRUcEb83x2lqm3JqV0CNzF2LVaYJwx?usp=drive_link\r\n- GeniusX Working Group1: https://drive.google.com/drive/folders/1NYl-5RpMkNBFbb-N1NeWWHRX8fdwaaix?usp=drive_link\r\n- GeniusX Working Group2: https://discord.gg/q8XPukdDgy\r\n\r\n### C. All team members with name and appearance are PUBLIC since F11 voting had begun. Please check our PUBLIC website: https://projectcatalyst.sidan.io/.  We posted on our PUBLIC X (Twitter) page for the team member and formation since 25 January 2024: https://twitter.com/sidan_lab/status/1750521336345297171\r\n\r\nAdditional information:\r\n\r\n- Team formation, assignment of roles, timeline: https://drive.google.com/drive/folders/1Ir3UfblfGZB8lV_kxejWP2PcLic6m0Of?usp=drive_link\r\n- Team formation, assignment of roles, timeline Announcement:\r\n- https://discord.com/channels/1166784293805228061/1197474184809431101/1225393099770171392;\r\n- https://twitter.com/sidan_lab/status/1775840271953178682\r\n> MENTIONED IN \"EVIDENCE OF MILESTONE COMPLETION\"\r\n\r\nNote 1: Some entities may not have a company structure setup due to the nature of the organization, such as DAOs, student associations, student groups, and small group study groups, therefore they may not be able to sign a partnership agreement. For ANY entities that failed to sign the partnership agreement, we will ask them to post the collaboration event or announcement on their OFFICIAL OFFICIAL PUBLIC CHANNEL (Discord OR Telegram OR Instagram OR Website) to publicly verify our collaboration.\r\n\r\nNote 2: Some entities may not want to disclose the agreement due to a non-disclosure agreement. This is a very common practice in the business world in Hong Kong. For these entities, we will ask them to post the collaboration event or announcement on their OFFICIAL PUBLIC CHANNEL (Discord OR Telegram OR Instagram OR Website)  to publicly verify our collaboration\r\n\r\nD. Setup telegram and discord group for Cardano Hong Kong updates\r\n\r\nHere is our Telegram channel: https://t.me/CardanoHongKongOfficial\r\n\r\nHere is our Discord channel: https://discord.gg/qU3hbfduJ6\r\n",
+        "outcomes": [],
+        "evidence": [
+          "https://t.me/CardanoHongKongOfficial",
+          "https://discord.gg/qU3hbfduJ6"
+        ]
+      },
+      {
+        "projectId": "1100257",
+        "milestoneNumber": 2,
+        "link": "[Open full project](https://projectcatalyst.io/funds/11/cardano-open-ecosystem/sidan-or-waffle-hong-kong-cardano-community)",
+        "challenge": "F11: Cardano Open: Ecosystem",
+        "budget": "ADA 33,000.00",
+        "deliveredDate": "May 24, 2024",
+        "title": "Milestone Report",
+        "content": "\r\n\t\r\nWell-developed educational materials that are relevant to the program's objectives and provide clear explanations of UTXO, POS, security, Cardano ecosystem overview, wallets, and reward mechanisms.\r\n\r\n- One of the reviewers questioned the details about the length and depth of the content. As most audiences are new to blockchain, we need to deliver the most direct message and information to the audience. To address the concerns of the reviewers, we post the details back to the slide:\r\n- https://docs.google.com/presentation/d/1glwGVUlrR7qMkUyW-sqsFLtqD83iynNMf24BcDcpVOo/edit?usp=sharing\r\n  \r\nSchedule 1 university tour with Blockchain Academy. Prepare marketing materials that effectively communicate the Hong Kong Cardano goals and reach the students at local universities who are interested in the blockchain industry.\r\n- https://drive.google.com/drive/folders/1eUn-7oV6dU0F6kf3yv15GTaeMEF7bk1a?usp=sharing\r\n\r\nHost 1 Business workshop covering Cardano ecosystem business potentials and applications\r\n- https://x.com/sidan_lab/status/1777377206274249038\r\n- https://drive.google.com/drive/folders/1sw4DAs5YEC4OmiIXSpeCFfiAd8jk5SEI?usp=sharing\r\n- https://docs.google.com/presentation/d/1m6wvL3CyxLVpbpEKZNu1FOe-mQl4t3L0/edit?usp=sharing&ouid=100261302913688325586&rtpof=true&sd=true\r\n\r\nHost 1 Virtual event covering the Cardano ecosystem series\r\n- https://twitter.com/sidan_lab/status/1788108584561365377\r\n- https://twitter.com/monsterblockhk/status/1787733450528530752\r\n- https://drive.google.com/drive/folders/1MN8fxpuPxWNBxCQeEhTa5AiERcU3d4-5?usp=drive_link\r\n\r\nHost 1 Offline event centered on introducing and exploring the Cardano ecosystem. Event photos: \r\n- https://drive.google.com/drive/folders/1gTRpdV5Iz8X0FO9SZX-BUjnXFG5mN2jw?usp=sharing\r\n- https://docs.google.com/presentation/d/1glwGVUlrR7qMkUyW-sqsFLtqD83iynNMf24BcDcpVOo/edit?usp=sharing\r\n\r\nWe will prepare a question list to gather feedback from the participants to address the event summaries from an attendance point of view.\r\n- https://drive.google.com/drive/folders/1sgWXUsCeFQvwekfjoh2UfMHvvPECuvih?usp=drive_link\r\n",
+        "outcomes": [],
+        "evidence": []
+      },
+      {
+        "projectId": "1100257",
+        "milestoneNumber": 3,
+        "link": "[Open full project](https://projectcatalyst.io/funds/11/cardano-open-ecosystem/sidan-or-waffle-hong-kong-cardano-community)",
+        "challenge": "F11: Cardano Open: Ecosystem",
+        "budget": "ADA 33,000.00",
+        "deliveredDate": "July 9, 2024",
+        "title": "Milestone Report",
+        "content": "\r\n\t\r\nSuccessfully hosted 1 university tour in Hong Kong for all universities who are interested in the web3 industry, covering the content including UTXO, POS, Cardano ecosystem overview, wallets, and reward mechanism.\r\n\r\nUniversity Name: Hong Kong University of Science and Technology (HKUST)\r\n\r\nExtra completion: University Name: The University of Hong Kong\r\n\r\nhttps://drive.google.com/drive/folders/1aLK2zvdfbZOMq9Rk4rebCWMBj1cJwzKE?usp=drive_link\r\n\r\nWe requested more photos however the former person in charge from Blockchain Academy didn’t respond at all. Please find the screenshot of the conversation here: https://drive.google.com/file/d/112067AeImINEuFN5I-yAPYV6M_Kwz1Lm/view?usp=drive_link\r\n\r\nAs mentioned in the section of “Evidence of milestone completion”, if there are any restrictions or legal issues on filming due to the requirement of the venue place/ local legal regulations, we will upload photos instead. We try to provide all sorts of evidence to show that the whole event happened. We hope that the reviewer can understand it is very hard for us to ask for more photos as Blockchain Academy has tons of operational issues which is out of the scope of our control. We would like to show our deep appreciation to the reviewer for considering this.\r\n\r\nDeck covering the content including UTXO, POS, Cardano ecosystem overview, wallets, and reward mechanism for university and other events (Cardano beginners): https://docs.google.com/presentation/d/1glwGVUlrR7qMkUyW-sqsFLtqD83iynNMf24BcDcpVOo/edit?usp=drive_link\r\n\r\nTour timeline: https://drive.google.com/file/d/13DxEyIZtgugGpk52UIy0M_OR1_Ufl2Rk/view?usp=sharing\r\n\r\nHost 1 offline leisure event for Cardano introductory networking\r\n\r\nhttps://twitter.com/SIDANWhatever/status/1768592384185811205\r\n\r\nhttps://t.me/CardanoHongKongOfficial/1/217\r\n\r\nhttps://discord.com/channels/1166784293805228061/1197474184809431101/1258105348405854309\r\n\r\nHost 1 offline event centered on introducing and exploring the Cardano ecosystem. These events aim to engage newcomers and provide general networking opportunities to people.\r\n\r\nhttps://x.com/Waffle_Capital/status/1780523230375338378\r\n\r\nhttps://x.com/SIDANWhatever/status/1783095035543900261\r\n\r\nhttps://x.com/cwpaulm/status/1786026712880304437\r\n\r\nhttps://www.youtube.com/watch?v=4yG8bOuZ38s&ab_channel=CardanoWithPaul\r\n\r\nhttps://t.me/CardanoHongKongOfficial/260/333\r\n\r\nhttps://discord.com/channels/1166784293805228061/1197474184809431101/1258105348405854309\r\n\r\nHost 1 Virtual event covering the Cardano ecosystem series\r\n\r\nhttps://www.youtube.com/watch?v=1yICLj4t8-E&t=1750s&ab_channel=cryptokafire\r\n\r\nhttps://x.com/cryptokafire/status/1808149012757074129\r\n\r\nHost 1 Business workshop covering Cardano ecosystem business potentials and applications. (Private invite by Belgium-Luxembourg and Dutch Chambers of Commerce)\r\n\r\nhttps://x.com/Waffle_Capital/status/1778647348010508759\r\n\r\nhttps://docs.google.com/presentation/d/1glwGVUlrR7qMkUyW-sqsFLtqD83iynNMf24BcDcpVOo/edit#slide=id.p\r\n\r\nWe will prepare a question list to gather feedback from the participants to address the event summaries from an attendance point of view.\r\n\r\nhttps://docs.google.com/forms/d/e/1FAIpQLSdblTGfyLMhPc5kADdNYd-KX2gQJVpJ8KYP_h7edr8XhBv48g/viewform?usp=pp_url\r\n\r\nDiscord announcement of what we achieved: https://discord.com/channels/1166784293805228061/1197474184809431101/1258105348405854309\r\n\r\nScreenshot of Discord Announcement:\r\n\r\nhttps://drive.google.com/file/d/1A6gst-Aftmh1HOsfBKOFfgzxSNGKqR_Q/view?usp=drive_link\r\n\r\nTelegram announcement of what we achieved:\r\n\r\nhttps://t.me/CardanoHongKongOfficial/1/387\r\n\r\nThank you reviewer for the contribution :)\r\n",
+        "outcomes": [],
+        "evidence": [
+          "https://drive.google.com/drive/folders/1aLK2zvdfbZOMq9Rk4rebCWMBj1cJwzKE?usp=drive_link",
+          "https://drive.google.com/file/d/112067AeImINEuFN5I-yAPYV6M_Kwz1Lm/view?usp=drive_link",
+          "https://docs.google.com/presentation/d/1glwGVUlrR7qMkUyW-sqsFLtqD83iynNMf24BcDcpVOo/edit?usp=drive_link",
+          "https://drive.google.com/file/d/13DxEyIZtgugGpk52UIy0M_OR1_Ufl2Rk/view?usp=sharing",
+          "https://twitter.com/SIDANWhatever/status/1768592384185811205",
+          "https://t.me/CardanoHongKongOfficial/1/217",
+          "https://discord.com/channels/1166784293805228061/1197474184809431101/1258105348405854309",
+          "https://x.com/Waffle_Capital/status/1780523230375338378",
+          "https://x.com/SIDANWhatever/status/1783095035543900261",
+          "https://x.com/cwpaulm/status/1786026712880304437",
+          "https://www.youtube.com/watch?v=4yG8bOuZ38s&ab_channel=CardanoWithPaul",
+          "https://t.me/CardanoHongKongOfficial/260/333",
+          "https://discord.com/channels/1166784293805228061/1197474184809431101/1258105348405854309",
+          "https://www.youtube.com/watch?v=1yICLj4t8-E&t=1750s&ab_channel=cryptokafire",
+          "https://x.com/cryptokafire/status/1808149012757074129",
+          "https://x.com/Waffle_Capital/status/1778647348010508759",
+          "https://docs.google.com/presentation/d/1glwGVUlrR7qMkUyW-sqsFLtqD83iynNMf24BcDcpVOo/edit#slide=id.p",
+          "https://docs.google.com/forms/d/e/1FAIpQLSdblTGfyLMhPc5kADdNYd-KX2gQJVpJ8KYP_h7edr8XhBv48g/viewform?usp=pp_url",
+          "https://discord.com/channels/1166784293805228061/1197474184809431101/1258105348405854309",
+          "https://drive.google.com/file/d/1A6gst-Aftmh1HOsfBKOFfgzxSNGKqR_Q/view?usp=drive_link",
+          "https://t.me/CardanoHongKongOfficial/1/387"
+        ]
+      },
+      {
+        "projectId": "1100257",
+        "milestoneNumber": 4,
+        "link": "[Open full project](https://projectcatalyst.io/funds/11/cardano-open-ecosystem/sidan-or-waffle-hong-kong-cardano-community)",
+        "challenge": "F11: Cardano Open: Ecosystem",
+        "budget": "ADA 33,000.00",
+        "deliveredDate": "July 22, 2024",
+        "title": "Milestone Report",
+        "content": "\r\nFinalised report on course effectiveness. We will prepare a question list to gather feedback from the participants:\r\n- Feedback Form: https://forms.gle/QXdFYy9ugKi3SKoM6\r\n- Feedback Result (We need to hide sensitive information such as contact info to protect the privacy of the participant): https://drive.google.com/file/d/1BloWajxvBO9KTx3z-PmXe4jnqFM9kh47/view?usp=drive_link\r\n\r\nUpdated course materials \r\n- https://docs.google.com/presentation/d/1glwGVUlrR7qMkUyW-sqsFLtqD83iynNMf24BcDcpVOo/edit?usp=sharing\r\n- https://docs.google.com/presentation/d/14VhiMQ0cJCDZoecd_L61h3yY0abBpsToogJX7QecC48/edit?usp=sharing\r\n- https://drive.google.com/file/d/1U2akEUj0uz8lAU8KLOdn5rmFm1aEQACU/view?usp=drive_link\r\n- https://drive.google.com/file/d/1LBEy8ftZu_yELqymozpckfzplOYwCeZ4/view?usp=drive_link\r\n- https://drive.google.com/file/d/1-63W-bBee6YbAdtBf24di3KY54tH3A6v/view?usp=drive_link\r\n- https://drive.google.com/file/d/1IEsZg7Dr7llVTAaM-_MmtM5s-e3zm7ho/view?usp=drive_link\r\n\r\nUpdated and improved course launch schedule (Time and date adjustment)\r\n- https://drive.google.com/file/d/1SxGsyYyI2oFr8CqOquoDfHCmkrpJU0Bi/view?usp=drive_link\r\n\r\nHost 1 offline centered on introducing and exploring the Cardano ecosystem.\r\n- https://drive.google.com/drive/folders/1bsaJrmbid8nW-p6X81SJfz1RjzcQvwTL?usp=drive_link\r\n- https://x.com/Waffle_Capital/status/1801103915989012698\r\n- https://www.wafflecapital.xyz/blog/cardano-defi-workshop\r\n\r\nHost 1 virtual event covering the revised Cardano ecosystem series. For this part, maybe the link attachment from the last submission caused an impression that the virtual is hosted by Socious. Attached is a new Twitter link to show that we are the host and Scious is just a co-host/ administrator who helps us to publish on YouTube. Attached is a new screenshot showing the post on our TG channel. \r\n> Note: The any virtual and offline events hosted by us, we will amend the theme in time time-sensitive manner. One of the feedbacks we got from our virtual or offline event is that Hong Kong users want to know what is happening in the ecosystem. What dapps are built on Cardano. That's why we host this F12 Ideafest to let the HK user know. That's also why we put down \"revised Cardano ecosystem series as we will constantly provide updates and the objective is to quickly let people know about the ecosystem development, not limited to the deck only otherwise we are very slow compared with Ethereum and Solana pace in Hong Kong.\r\n\r\n> Note: Thank you for the reviewer to provide guidelines or raise any questions in the review process.\r\n\r\n- https://x.com/sidan_lab/status/1808817394514866510\r\n- https://drive.google.com/file/d/1S85AgCAmWHrSknbvGKE4Nr2NpSKsUlMl/view?usp=drive_link\r\n- https://t.me/CardanoHongKongOfficial/260/391\r\n- https://www.youtube.com/live/Ej7LkpdP-M8?si=m5M3V57IA3aeZttU\r\n -https://discord.com/channels/1166784293805228061/1197474184809431101/1260203674274369627\r\n\r\nHost 1 business workshop covering the revised Cardano ecosystem, showcasing Defy, xcube.co, Meshjs, DeltaDeFi Applications and logics during the session.\r\n- https://drive.google.com/drive/folders/1PcrVP46nRnIhye1oXMQ355RqndSK8RpP?usp=drive_link\r\n- https://t.me/CardanoHongKongOfficial/260/344\r\n- https://discord.com/channels/1166784293805228061/1197474184809431101/1263435760003186699\r\n\r\nScreenshot of Discord Announcement:\r\n- https://drive.google.com/file/d/1CBZ1CY0Axssc0HZIke2awI_SCxG-KtKu/view?usp=drive_link\r\n\r\nLastly, we want to show our huge appreciation for the effort and advice that our reviewer provided. Thank you\r\n",
+        "outcomes": [],
+        "evidence": []
+      },
+      {
+        "projectId": "1100257",
+        "milestoneNumber": 5,
+        "link": "[Open full project](https://projectcatalyst.io/funds/11/cardano-open-ecosystem/sidan-or-waffle-hong-kong-cardano-community)",
+        "challenge": "F11: Cardano Open: Ecosystem",
+        "budget": "ADA 33,000.00",
+        "deliveredDate": "September 17, 2024",
+        "title": "Milestone Report",
+        "content": "\r\n\t\r\nA portfolio/ list of new partnerships with organizations who want to promote the web3 industry in Hong Kong.\r\n\r\n- Campaign promotion completion: https://drive.google.com/file/d/1ofcAJMkjD0KoChrFSHVNcr7MkeypT7WY/view?usp=sharing\r\n- Partners memorandum of Understanding, stating purpose of organizing workshops, meetups, and hackathons by coordinating with the SIDAN Lab team and external participants:\r\n- https://docs.google.com/document/d/1ASXy97D2Wctd6RlTH_6sEIlYeTy7g2cR1XWO-kiqfM4/edit?usp=drive_link\r\n- https://docs.google.com/document/d/1nt9WzJECSRSBm1W-IGBBjztL3D-AhrutnoYli7ZKMEg/edit?usp=drive_link\r\n- https://docs.google.com/document/d/1NkAoW29X9uA8_IxHvXlO5U7EzvTp3iw1kHfWZFx2i0Y/edit?usp=drive_link\r\n- https://docs.google.com/document/d/19wHA2-KEk_McByfEzjQSXlLwRLU1ULdllG4AgZNs_Tw/edit?usp=drive_link\r\n- Partner Logos: https://drive.google.com/drive/folders/15-JQ2JPwRyTE59AxYvmJx9DjDNGDkIy7?usp=sharing\r\n  \r\nA clearly defined future roadmap, outlining strategic directions and objectives.\r\n- https://drive.google.com/file/d/17-TnZCuYhwUM3KMAZn_wPYD4-BT-0Z8X/view?usp=drive_link\r\n- Roadmap announcement on TG: https://t.me/CardanoHongKongOfficial/1/404\r\n- Roadmap announcement on Discord: https://discord.com/channels/1166784293805228061/1197474184809431101/1281119458684829791\r\n- Screenshot of announcement: https://drive.google.com/file/d/1WUuxinw18oXUX4TI2IdZU2PJnVOv31v3/view?usp=sharing\r\n- Screenshot of announcement: https://drive.google.com/file/d/1fAFM2qpiMRiimtJDi2tDU4NWjr2NQrfr/view?usp=drive_link\r\n\r\nHost 1 Offline event:\r\n- Event photos: https://drive.google.com/drive/folders/1gY4E1UwML3ZfaWL5sf5aveM_SI6ETRQu?usp=drive_link\r\n\r\nHost 1 Virtual event:\r\n- https://youtu.be/G5GW2mG1Ubk?si=0gjwA25qv5DxOk3i\r\n\r\nHost 1 Business workshop:\r\n- Event photos: https://drive.google.com/drive/folders/1x7ZkShWQiAfBoJuxZQjVx0MO_ernkm0W?usp=drive_link\r\n- Registration Link: https://lu.ma/cklexuhc\r\n\r\nFeedback form: https://forms.gle/1H1xCfn3Pzrjkbmp6\r\n- Feedback form replies (Please note sensitive contact info must be hidden to avoid leakage of personal private information): https://drive.google.com/file/d/1MmHmVl1Dplc33YNJ6y41qh68A2XQ8Ua3/view?usp=drive_link \r\n\r\nMonthly AMA space update for all F11 proposals: https://x.com/sidan_lab/status/1831662498527019124\r\n\r\nAnnouncement on TG and Discord:\r\n- https://t.me/CardanoHongKongOfficial/1/411\r\n- https://discord.com/channels/1166784293805228061/1197474184809431101/1283268197394677813\r\n- Screenshot of Discord announcement: https://drive.google.com/file/d/1e8WwTRrsuM1lQ2YAKDtbNXyYSt-ABTqY/view?usp=sharing\r\n",
+        "outcomes": [],
+        "evidence": [
+          "Partners memorandum of Understanding, stating purpose of organizing workshops, meetups, and hackathons by coordinating with the SIDAN Lab team and external participants:",
+          "https://docs.google.com/document/d/1ASXy97D2Wctd6RlTH_6sEIlYeTy7g2cR1XWO-kiqfM4/edit?usp=drive_link",
+          "https://docs.google.com/document/d/1ASXy97D2Wctd6RlTH_6sEIlYeTy7g2cR1XWO-kiqfM4/edit?usp=drive_link",
+          "https://docs.google.com/document/d/1nt9WzJECSRSBm1W-IGBBjztL3D-AhrutnoYli7ZKMEg/edit?usp=drive_link",
+          "https://docs.google.com/document/d/1nt9WzJECSRSBm1W-IGBBjztL3D-AhrutnoYli7ZKMEg/edit?usp=drive_link",
+          "https://docs.google.com/document/d/1NkAoW29X9uA8_IxHvXlO5U7EzvTp3iw1kHfWZFx2i0Y/edit?usp=drive_link",
+          "https://docs.google.com/document/d/1NkAoW29X9uA8_IxHvXlO5U7EzvTp3iw1kHfWZFx2i0Y/edit?usp=drive_link",
+          "https://docs.google.com/document/d/19wHA2-KEk_McByfEzjQSXlLwRLU1ULdllG4AgZNs_Tw/edit?usp=drive_link",
+          "https://docs.google.com/document/d/19wHA2-KEk_McByfEzjQSXlLwRLU1ULdllG4AgZNs_Tw/edit?usp=drive_link",
+          "Partner Logos: https://drive.google.com/drive/folders/15-JQ2JPwRyTE59AxYvmJx9DjDNGDkIy7?usp=sharing",
+          "https://drive.google.com/drive/folders/15-JQ2JPwRyTE59AxYvmJx9DjDNGDkIy7?usp=sharing",
+          "https://drive.google.com/file/d/17-TnZCuYhwUM3KMAZn_wPYD4-BT-0Z8X/view?usp=drive_link",
+          "https://drive.google.com/file/d/17-TnZCuYhwUM3KMAZn_wPYD4-BT-0Z8X/view?usp=drive_link",
+          "Roadmap announcement on TG: https://t.me/CardanoHongKongOfficial/1/404",
+          "https://t.me/CardanoHongKongOfficial/1/404",
+          "Roadmap announcement on Discord: https://discord.com/channels/1166784293805228061/1197474184809431101/1281119458684829791",
+          "https://discord.com/channels/1166784293805228061/1197474184809431101/1281119458684829791",
+          "Screenshot of announcement: https://drive.google.com/file/d/1WUuxinw18oXUX4TI2IdZU2PJnVOv31v3/view?usp=sharing",
+          "https://drive.google.com/file/d/1WUuxinw18oXUX4TI2IdZU2PJnVOv31v3/view?usp=sharing",
+          "Screenshot of announcement: https://drive.google.com/file/d/1fAFM2qpiMRiimtJDi2tDU4NWjr2NQrfr/view?usp=drive_link",
+          "https://drive.google.com/file/d/1fAFM2qpiMRiimtJDi2tDU4NWjr2NQrfr/view?usp=drive_link",
+          "Event photos: https://drive.google.com/drive/folders/1gY4E1UwML3ZfaWL5sf5aveM_SI6ETRQu?usp=drive_link",
+          "https://drive.google.com/drive/folders/1gY4E1UwML3ZfaWL5sf5aveM_SI6ETRQu?usp=drive_link",
+          "https://youtu.be/G5GW2mG1Ubk?si=0gjwA25qv5DxOk3i",
+          "https://youtu.be/G5GW2mG1Ubk?si=0gjwA25qv5DxOk3i",
+          "Event photos: https://drive.google.com/drive/folders/1x7ZkShWQiAfBoJuxZQjVx0MO_ernkm0W?usp=drive_link",
+          "https://drive.google.com/drive/folders/1x7ZkShWQiAfBoJuxZQjVx0MO_ernkm0W?usp=drive_link",
+          "Registration Link: https://lu.ma/cklexuhc",
+          "https://lu.ma/cklexuhc",
+          "https://forms.gle/1H1xCfn3Pzrjkbmp6",
+          "Feedback form replies (Please note sensitive contact info must be hidden to avoid leakage of personal private information): https://drive.google.com/file/d/1MmHmVl1Dplc33YNJ6y41qh68A2XQ8Ua3/view?usp=drive_link",
+          "https://drive.google.com/file/d/1MmHmVl1Dplc33YNJ6y41qh68A2XQ8Ua3/view?usp=drive_link",
+          "https://x.com/sidan_lab/status/1831662498527019124",
+          "https://t.me/CardanoHongKongOfficial/1/411",
+          "https://t.me/CardanoHongKongOfficial/1/411",
+          "https://discord.com/channels/1166784293805228061/1197474184809431101/1283268197394677813",
+          "https://discord.com/channels/1166784293805228061/1197474184809431101/1283268197394677813",
+          "Screenshot of Discord announcement: https://drive.google.com/file/d/1e8WwTRrsuM1lQ2YAKDtbNXyYSt-ABTqY/view?usp=sharing",
+          "https://drive.google.com/file/d/1e8WwTRrsuM1lQ2YAKDtbNXyYSt-ABTqY/view?usp=sharing"
+        ]
+      },
+      {
+        "projectId": "1100257",
+        "milestoneNumber": 6,
+        "link": "[Open full project](https://projectcatalyst.io/funds/11/cardano-open-ecosystem/sidan-or-waffle-hong-kong-cardano-community)",
+        "challenge": "F11: Cardano Open: Ecosystem",
+        "budget": "ADA 35,000.00",
+        "deliveredDate": "October 30, 2024",
+        "title": "Milestone Report",
+        "content": "\r\nHost 1 Offline event covering the Cardano ecosystem series for introductory and networking\r\n- https://drive.google.com/drive/folders/1fW70RPyXTQ_k37HCdUponyvi_pOLyRAs?usp=sharing\r\n\r\nHost 2 Virtual events covering the Cardano ecosystem series\r\n\r\n﻿1st Virtual Token 2049 Meetup\r\n\r\n- Minswap: https://youtu.be/SGhEuTyRehg\r\n- Danogo: https://youtu.be/tc47bvTN_-A\r\n\r\n2nd Virtual Ecosystem Contributor\r\n- Smurfy: https://youtu.be/jCssd8ES0ok\r\n- Sheldon Hunt Emurgo: https://youtu.be/_uLzPqthg1M\r\n\r\nHost 2 Business workshops covering Cardano ecosystem business potentials and applications.\r\n- Workshop 1: https://drive.google.com/drive/folders/1iH2k6bfPMqlH7qbBnWdRKOxcV6l4fVXm?usp=sharing\r\n- Workshop 2: https://drive.google.com/drive/folders/1BScp96xLHVsS0zjXB3cUez5zbDP4a4A_?usp=sharing\r\n\r\nResubmission of the ready to print version:\r\n\r\nSubmission of Cardano Basic for Beginner:\r\n- https://drive.google.com/file/d/1T2vgeGRxfHrgk62M5xtcSU1okgcLZYTJ/view?usp=drive_link\r\n\r\nAiken for Non-tech:\r\n- https://drive.google.com/file/d/1h25-PHG4AzED5M05QRLKMHD4b5e5e16z/view?usp=drive_link\r\n\r\nGimbalabs dev starter course: https://www.andamio.io/course/hkdevstarter2024\r\n- Gimbalabs proposal course: https://www.andamio.io/course/APBLHK\r\n\r\nThe report on spending and evaluation form\r\n- https://docs.google.com/document/d/1ZCf4IBftO3dMAc0U3p6RcSW9695s31ADRx2ewXb04tQ/edit?usp=sharing\r\n\r\nDiscord Announcement Link\r\n- https://discord.com/channels/1166784293805228061/1197474184809431101/1295632118281408532\r\n\r\nDiscord Announcement Screenshot\r\n- https://drive.google.com/file/d/1azt41zQkI4x_ceNopw8byM4RrUtafk9G/view?usp=sharing\r\n\r\nScreenshot showing one of our members got the admin access\r\n- https://drive.google.com/file/d/1rn1klvEZzJqxYCotIi5WcI9w_96Kw1MC/view?usp=sharing\r\n- https://drive.google.com/file/d/1sU1lWL6oDoLyaG94zfYHI2UjoMvYyLTI/view?usp=drive_link\r\n- SIDAN Lab Twitter: https://x.com/sidan_lab\r\n- TG: https://t.me/CardanoHongKongOfficial/260\r\n- Cardano HK Discord: https://discord.gg/q8XPukdDgy\r\n\r\nClose-out report\r\n- https://docs.google.com/document/d/1JXllQxyW4NVZm3gq1D77ErTdYvTKr8LzjBY3nAUpMnw/edit?usp=sharing\r\n\r\nClose-out Video\r\n- https://youtu.be/sNwXbIUUEG4\r\n",
+        "outcomes": [],
+        "evidence": []
+      }
+    ],
+    "1200096": [
+      {
+        "projectId": "1200096",
+        "milestoneNumber": 1,
+        "link": "[Open full project](https://projectcatalyst.io/funds/12/f12-cardano-open-developers/deltadefi-open-source-libraries-for-high-frequency-trading)",
+        "challenge": "F11: Cardano Open: Developers",
+        "budget": "ADA 60,000.00",
+        "deliveredDate": "September 26, 2024",
+        "title": "Milestone Report",
+        "content": "\r\n\t\r\nA list of core team members and advisors will be provided with public link on SIDAN Lab dedicated Discord Channel.\r\n- https://drive.google.com/file/d/1k0P8T9etyZ3UjrwVGbi9fJkEVaKz0n6O/view?usp=drive_link\r\n  \r\nA public link will be provided for the access to review the project management tools and systems set up on SIDAN Lab dedicated Discord Channel. The project management tool could be Github or Google sheet whichever is more convenient.\r\n- https://docs.google.com/spreadsheets/d/17Mvr4rvdbWGFJrJd_aUhezvFJo0bGSxkxIEeogYgr3o/edit?usp=sharing\r\n\r\nDiscord Announcement: \r\n- https://drive.google.com/file/d/1hVc8CyNezFTZ12SU4ubNnrVCwauCklGj/view?usp=drive_link\r\n\r\nGithub: https://github.com/deltadefi-protocol\r\n",
+        "outcomes": [],
+        "evidence": []
+      },
+      {
+        "projectId": "1200096",
+        "milestoneNumber": 2,
+        "link": "[Open full project](https://projectcatalyst.io/funds/12/f12-cardano-open-developers/deltadefi-open-source-libraries-for-high-frequency-trading)",
+        "challenge": "F11: Cardano Open: Developers",
+        "budget": "ADA 60,000.00",
+        "deliveredDate": "June 21, 2025",
+        "title": "Milestone Report",
+        "content": "\r\nSorry for the delayed update of the milestone progress since we have refactored the backend apis. We have decided to revise the SDK after revising the backend APIs.\r\n\r\nPlease find the updated python and typescript SDKs and demo output in below public github repos:\r\n\r\nTypescript SDK: https://github.com/deltadefi-protocol/typescript-sdk\r\n\r\nPython SDK: https://github.com/deltadefi-protocol/python-sdk\r\n\r\nsdks-demo: https://github.com/deltadefi-protocol/sdks-demo\r\n\r\nIn the sdks-demo, there are screenshot of example output of the SDK:\r\n\r\nPython SDK: https://github.com/deltadefi-protocol/sdks-demo/tree/main/python/demo-output\r\n- accounts.png shows the example outputs of account related APIs\r\n- markets.png shows the example outputs of markets related APIs\r\n- orders.png shows the example outputs of orders related APIs\r\n\r\nTypescript SDK: https://github.com/deltadefi-protocol/sdks-demo/tree/main/typescript/demo-output\r\n- accounts_1.png shows the example outputs of account related APIs\r\n- accounts_2.png shows the example outputs of account related APIs\r\n- markets.png shows the example outputs of markets related APIs\r\n- orders.png shows the example outputs of orders related APIs\r\n",
+        "outcomes": [],
+        "evidence": []
+      }
+    ],
+    "1200097": [
+      {
+        "projectId": "1200097",
+        "milestoneNumber": 1,
+        "link": "[Open full project](https://projectcatalyst.io/funds/12/f12-cardano-use-cases-mvp/deltadefi-pioneering-high-frequency-trading-on-cardano)",
+        "challenge": "F12: Cardano Use Cases: MVP",
+        "budget": "ADA 60,000.00",
+        "deliveredDate": "September 26, 2024",
+        "title": "Milestone Report",
+        "content": "\r\n\t\r\nTeam Formation\r\n- Legal entity established. A public link or screenshot will be provided to view the legal entity established.\r\n- https://drive.google.com/file/d/1MDNlPE1oV4upLempVgNhoXihXbIj9rAo/view?usp=sharing\r\n- A list of core team members with roles will be provided with a public link on SIDAN Lab dedicated Discord Channel.\r\n- https://drive.google.com/file/d/1sFntxS7HSc6tfY8g7UpNF3aDpRZRKhIm/view?usp=sharing\r\n\r\nProject Management Tools Setup\r\n- Google sheet or Github will be set up. A public link will be provided and announce in SIDAN Discord group under DeltaDeFi channel.\r\n- https://docs.google.com/spreadsheets/d/1BduhPvTqNi897oCbZRjsTjf0VHtjJykBU-yUSa4pJis/edit?usp=sharing\r\n- Announcement in Discord: https://drive.google.com/file/d/1E9fxJ-c9MyBm4klrzUxwBz5KAmRd41AB/view?usp=sharing\r\n- A screenshot of the backend service hosting account will be provided. (NOTE: Billing details, and address will be hidden as payment details are highly confidential and we are avoiding all the potential risks of scams or fraud)\r\n- https://drive.google.com/file/d/1f6N4X4z8SlvdX5Ncm9huJcSM7YpJY4YS/view?usp=sharing\r\n\r\nGithub link of DeltaDeFi will be provided\r\n- https://github.com/deltadefi-protocol\r\n",
+        "outcomes": [],
+        "evidence": []
+      },
+      {
+        "projectId": "1200097",
+        "milestoneNumber": 2,
+        "link": "[Open full project](https://projectcatalyst.io/funds/12/f12-cardano-use-cases-mvp/deltadefi-pioneering-high-frequency-trading-on-cardano)",
+        "challenge": "F12: Cardano Use Cases: MVP",
+        "budget": "ADA 60,000.00",
+        "deliveredDate": "November 9, 2024",
+        "title": "Milestone Report",
+        "content": "\r\n\t\r\n**Technical Architecture Document:**\r\n\r\nThe public gitbook documentation (https://docs.deltadefi.io/project-catalyst-f12-milestone-reporting/technical-architecture) illustrates the technical architecture of DeltaDeFi including both off-chain and on-chain components. In response to the comment from Catalyst Team reviewer, I have supplemented the system architecture illustrating both off-chain and on-chain components of DeltaDeFi.\r\n\r\n**Smart Contract Design Document:**\r\n\r\nThe public gitbook documentation (https://docs.deltadefi.io/project-catalyst-f12-milestone-reporting/smart-contract-design-document) illustrates the detailed logic and structure of the smart contracts. In response to the comment from Catalyst Team reviewer, I have supplemented the detailed logic, structure and pseudocode for DeltaDeFi.\r\n\r\n**UI/UX Design Document:**\r\n\r\nThe public gitbook documentation (https://docs.deltadefi.io/project-catalyst-f12-milestone-reporting/user-flow-diagram-and-wireframes) illustrates the wireframes and mockups detailing the user interface and experience of the platform.\r\n",
+        "outcomes": [],
+        "evidence": []
+      },
+      {
+        "projectId": "1200097",
+        "milestoneNumber": 3,
+        "link": "[Open full project](https://projectcatalyst.io/funds/12/f12-cardano-use-cases-mvp/deltadefi-pioneering-high-frequency-trading-on-cardano)",
+        "challenge": "F12: Cardano Use Cases: MVP",
+        "budget": "ADA 60,000.00",
+        "deliveredDate": "December 16, 2024",
+        "title": "Milestone Report",
+        "content": "\r\n\t\r\nSmart Contract Source Code & Open Source Repository: \r\n- https://github.com/deltadefi-protocol/aiken-virtual-dex\r\n\r\nSmart Contract Specification Document: \r\n- https://github.com/deltadefi-protocol/aiken-virtual-dex/tree/main/specs\r\n\r\nCommunity Audit Evidence: \r\n- Screenshots shown in https://docs.google.com/document/d/1xayG3aeC18FdBuJPa9nf3sNcpUJ1Iue7rqkh92kWFAw/edit?tab=t.0 \r\n\r\nrelated to deltadefi-mvp channel shows there are couple of comments on deltadefi smart contract for the past 2 weeks community audit event. Our engineer has managed to commit fix on those issues. These evidence shows the audit engagement evidence.\r\n",
+        "outcomes": [],
+        "evidence": [
+          "Screenshots shown in https://docs.google.com/document/d/1xayG3aeC18FdBuJPa9nf3sNcpUJ1Iue7rqkh92kWFAw/edit?tab=t.0",
+          "https://docs.google.com/document/d/1xayG3aeC18FdBuJPa9nf3sNcpUJ1Iue7rqkh92kWFAw/edit?tab=t.0"
+        ]
+      },
+      {
+        "projectId": "1200097",
+        "milestoneNumber": 4,
+        "link": "[Open full project](https://projectcatalyst.io/funds/12/f12-cardano-use-cases-mvp/deltadefi-pioneering-high-frequency-trading-on-cardano)",
+        "challenge": "F12: Cardano Use Cases: MVP",
+        "budget": "ADA 45,000.00",
+        "deliveredDate": "January 23, 2025",
+        "title": "Milestone Report",
+        "content": "\r\nRegarding feedback from catalyst team on milestone 2, I believe it might be a mistake by catalyst team reviewer to request for same evidence again during milestone 4 review. The comments are mostly same wordings I have seen in milestone 2 review in which I have already supplemented the missing evidence and received approval on milestone 2 proof of achievement reviews. Please let me know if there is any misunderstanding here. Thanks a lot!\r\n\r\nRegarding feedback from catalyst team on milestone 4, please find below responses::\r\n\r\nRegarding the documentation of the API related to overview of the API, endpoint description, usage instructions, and examples, I have revised the swagger.yaml file to supplement all these information. The revised swagger.yaml file includes below information for each api function:\r\n\r\n- API path e.g. /accounts/signin\r\n- API method e.g. post\r\n- Summary (A short sentence summarising the api objective)\r\n- Description (A short paragraph illustrating the api usage instructions)\r\n- Parameter (if the api requires request parameter, the swagger doc illustrates the data type and provide an example of it)\r\n- responses (The swagger doc illustrate the example response of successful and unsuccessful api request)\r\n- Schema of the parameters are shown in the swagger doc as well\r\n\r\nRegarding the documentation of the public repository, I have revised the readme.file to reflect the overview of the repo. It should be sufficient enough for public users to understand the repo structure and navigate the repo efficiently to utilize the api functions.\r\n\r\nPlease find the revised materials in:\r\n- swagger.yaml file: https://github.com/deltadefi-protocol/deltadefi-backend/blob/master/internal/api/swagger.yaml\r\n- readme file: https://github.com/deltadefi-protocol/deltadefi-backend/tree/master\r\n",
+        "outcomes": [],
+        "evidence": [
+          "API path e.g. /accounts/signin",
+          "API method e.g. post",
+          "Summary (A short sentence summarising the api objective)",
+          "Description (A short paragraph illustrating the api usage instructions)",
+          "Parameter (if the api requires request parameter, the swagger doc illustrates the data type and provide an example of it)",
+          "responses (The swagger doc illustrate the example response of successful and unsuccessful api request)",
+          "Schema of the parameters are shown in the swagger doc as well",
+          "swagger.yaml file: https://github.com/deltadefi-protocol/deltadefi-backend/blob/master/internal/api/swagger.yaml",
+          "https://github.com/deltadefi-protocol/deltadefi-backend/blob/master/internal/api/swagger.yaml",
+          "readme file: https://github.com/deltadefi-protocol/deltadefi-backend/tree/master",
+          "https://github.com/deltadefi-protocol/deltadefi-backend/tree/master"
+        ]
+      },
+      {
+        "projectId": "1200097",
+        "milestoneNumber": 5,
+        "link": "[Open full project](https://projectcatalyst.io/funds/12/f12-cardano-use-cases-mvp/deltadefi-pioneering-high-frequency-trading-on-cardano)",
+        "challenge": "F12: Cardano Use Cases: MVP",
+        "budget": "ADA 30,000.00",
+        "deliveredDate": "April 14, 2025",
+        "title": "Milestone Report",
+        "content": "\t\r\nPlease find the evidence of milestone completion in \r\n- https://docs.google.com/document/d/1lykAi5SvD8Zi0g8V_AWU6UXlHQ4_TquhsWbA4PuCuUI/edit?tab=t.0.\r\n",
+        "outcomes": [],
+        "evidence": [
+          "https://docs.google.com/document/d/1lykAi5SvD8Zi0g8V_AWU6UXlHQ4_TquhsWbA4PuCuUI/edit?tab=t.0.",
+          "https://docs.google.com/document/d/1lykAi5SvD8Zi0g8V_AWU6UXlHQ4_TquhsWbA4PuCuUI/edit?tab=t.0."
+        ]
+      }
+    ],
+    "1200148": [
+      {
+        "projectId": "1200148",
+        "milestoneNumber": 1,
+        "link": "[Open full project](https://projectcatalyst.io/funds/12/f12-cardano-use-cases-concept/mesh-software-as-a-service)",
+        "challenge": "F12: Cardano Use Cases: Concept",
+        "budget": "ADA 20,000.00",
+        "deliveredDate": "October 1, 2024",
+        "title": "Milestone 1 Report",
+        "content": "\r\n\t\r\nHey there milestone reviewers & anyone following our proposal implementation 🙂\r\n\r\nHere we are, reporting on the successful completion of our first Milestone of this proposal.\r\n\r\nThe milestone outcomes have been stated as:\r\n\r\n- Fully deployed cloud infrastructure\r\n- License cloud infrastructure under an open source license on MeshJS github\r\nAnd here we go:\r\n\r\n#### Fully deployed cloud infrastructure\r\nHas been successfully completed and is available on our Mesh Github at:  \r\n- https://github.com/MeshJS/mesh-saas/blob/main/backend/yaci/src/index.ts\r\n#### License cloud infrastructure under an open source license on MeshJS github\r\nThe cloud infrastructure has been added under an open source license which you can find at:\r\n- https://github.com/MeshJS/mesh-saas\r\n  \r\nAnd that's already it, short and concise.\r\nWe are working on Milestone 2 now.\r\n",
+        "outcomes": [
+          "Fully deployed cloud infrastructure",
+          "License cloud infrastructure under an open source license on MeshJS github",
+          "https://github.com/MeshJS/mesh-saas/blob/main/backend/yaci/src/index.ts",
+          "https://github.com/MeshJS/mesh-saas"
+        ],
+        "evidence": []
+      },
+      {
+        "projectId": "1200148",
+        "milestoneNumber": 2,
+        "link": "[Open full project](https://projectcatalyst.io/funds/12/f12-cardano-use-cases-concept/mesh-software-as-a-service)",
+        "challenge": "F12: Cardano Use Cases: Concept",
+        "budget": "ADA 20,000.00",
+        "deliveredDate": "March 13, 2025",
+        "title": "Milestone Report",
+        "content": "  \r\nHey there Milestone reviewers.\r\nWe apologise for the heavy delay on this milestone, guess we simply had a little bit too much on our todo list and had a few challenges in delivering this Milestone. Anyway, here we are, getting back on track with the proposal and are glad to have completed the second Milestone.\r\n\r\nThe acceptance criteria have been stated as:\r\n- Finalised Server application code - exposing the json to transaction endpoint\r\n- Finalised Server application code - Mesh utils\r\n- All code licensed under open source licenses on MeshJS github\r\n\r\nHere the evidence of the completion.\r\n\r\n### Finalised Server application code - exposing the json to transaction endpoint\r\n- the server application code which exposes the json to transaction endpoint has been successfully completed, find the respective code at:\r\n- https://github.com/MeshJS/mesh-saas/blob/main/backend/express/src/controllers/usersJsonToTxController/usersJsonToTxController.ts \r\n\r\n### Finalised Server application code - Mesh utils\r\n- the server application code at Mesh utils has been finalised and completed, find the respective code at:\r\n- https://github.com/MeshJS/mesh-saas/tree/main/backend/express/src/controllers/usersMeshUtilitiesController\r\n  \r\n### All code licensed under open source licenses on MeshJS github\r\n- All code is hosted under the MeshJS/mesh-saas repository which is set under an Apache 2.0 open source licence, \r\n- find the repository at: https://github.com/MeshJS/mesh-saas/tree/main\r\n- find the respective open source licence at: https://github.com/MeshJS/mesh-saas/tree/main?tab=Apache-2.0-1-ov-file#readme\r\n\r\n  We hope that all work done satisfies the review and assessment criteria.\r\n",
+        "outcomes": [
+          "Finalised Server application code - exposing the json to transaction endpoint",
+          "Finalised Server application code - Mesh utils",
+          "All code licensed under open source licenses on MeshJS github"
+        ],
+        "evidence": [
+          "the server application code which exposes the json to transaction endpoint has been successfully completed, find the respective code at:",
+          "https://github.com/MeshJS/mesh-saas/blob/main/backend/express/src/controllers/usersJsonToTxController/usersJsonToTxController.ts",
+          "https://github.com/MeshJS/mesh-saas/blob/main/backend/express/src/controllers/usersJsonToTxController/usersJsonToTxController.ts",
+          "the server application code at Mesh utils has been finalised and completed, find the respective code at:",
+          "https://github.com/MeshJS/mesh-saas/tree/main/backend/express/src/controllers/usersMeshUtilitiesController",
+          "https://github.com/MeshJS/mesh-saas/tree/main/backend/express/src/controllers/usersMeshUtilitiesController",
+          "All code is hosted under the MeshJS/mesh-saas repository which is set under an Apache 2.0 open source licence,",
+          "find the repository at: https://github.com/MeshJS/mesh-saas/tree/main",
+          "https://github.com/MeshJS/mesh-saas/tree/main",
+          "find the respective open source licence at: https://github.com/MeshJS/mesh-saas/tree/main?tab=Apache-2.0-1-ov-file#readme",
+          "https://github.com/MeshJS/mesh-saas/tree/main?tab=Apache-2.0-1-ov-file#readme"
+        ]
+      },
+      {
+        "projectId": "1200148",
+        "milestoneNumber": 3,
+        "link": "[Open full project](https://projectcatalyst.io/funds/12/f12-cardano-use-cases-concept/mesh-software-as-a-service)",
+        "challenge": "F12: Cardano Use Cases: Concept",
+        "budget": "ADA 20,000.00",
+        "deliveredDate": "April 7, 2025",
+        "title": "Mesh Software as a Service: Milestone 3",
+        "content": "https://milestones.projectcatalyst.io/projects/1200148/milestones/3\r\n\r\n## Acceptance criteria #1\r\n\r\n> Finalised Server application code - user-defined transaction building (what parameters are supplied, how to get info) -> expose dedicated endpoints for customized transactions (Note: the code has to be seen more as a developer tools, not end user tool. These transaction building is used to support frameworks and projects that has not have access to cardano serialization where developers / projects can define a certain JSON format, to build those transactions.)\r\n\r\nTo create user-define transaction is easy. User simply define the custom transaction in the form of JSON. Our hosted endpoint will convert the JSON to a valid Cardano transaction and return the transaction CBOR. This is useful for developers who wants to build transactions on any platform and this method does not need to integrate with any Cardano library.\r\n\r\nFor instance, developers create a transaction defined in JSON like:\r\n```\r\n{\r\n  \"inputs\": [\r\n    {\r\n      \"type\": \"PubKey\",\r\n      \"txIn\": {\r\n        \"txHash\": \"e93177a68356dc4bfdec2ec8ac48efe4c43c2d8a5fa8a9ebbc4437943c695438\",\r\n        \"txIndex\": 0,\r\n        \"amount\": [{ \"unit\": \"lovelace\", \"quantity\": \"2833223\" }],\r\n        \"address\": \"addr_test1qr3a9rrclgf9rx90lmll2qnfzfwgrw35ukvgjrk36pmlzu0jemqwylc286744g0tnqkrvu0dkl8r48k0upkfmg7mncpqf0672w\"\r\n      }\r\n    },\r\n    {\r\n      \"type\": \"PubKey\",\r\n      \"txIn\": {\r\n        \"txHash\": \"fb9324c5461693f729b0a7fdab1646a79b8f439b50dc9bc85458d3ee1ca2b40b\",\r\n        \"txIndex\": 0,\r\n        \"amount\": [{ \"unit\": \"lovelace\", \"quantity\": \"2306918390\" }],\r\n        \"address\": \"addr_test1qr3a9rrclgf9rx90lmll2qnfzfwgrw35ukvgjrk36pmlzu0jemqwylc286744g0tnqkrvu0dkl8r48k0upkfmg7mncpqf0672w\"\r\n      }\r\n    }\r\n  ],\r\n  \"changeAddress\": \"addr_test1qr3a9rrclgf9rx90lmll2qnfzfwgrw35ukvgjrk36pmlzu0jemqwylc286744g0tnqkrvu0dkl8r48k0upkfmg7mncpqf0672w\",\r\n  \"selectionConfig\": {\r\n    \"threshold\": \"0\",\r\n    \"strategy\": \"experimental\",\r\n    \"includeTxFees\": true\r\n  },\r\n  \"network\": \"preprod\"\r\n}\r\n```\r\n\r\nAnd post the data to the endpoint, [https://cloud.meshjs.dev/transaction](https://cloud.meshjs.dev/transaction) with the JSON payload. The endpoint will return the transaction CBOR.\r\n\r\n![Screenshot 2025-03-21 at 9.28.41 AM](https://hackmd.io/_uploads/rJ7JMS5hJg.png)\r\n\r\n## Acceptance criteria #2\r\n\r\n> All code licensed under open source licenses on MeshJS github \r\n\r\nThe source code can be found on GitHub https://github.com/MeshJS/mesh-saas\r\n",
+        "outcomes": [],
+        "evidence": []
+      },
+      {
+        "projectId": "1200148",
+        "milestoneNumber": 4,
+        "link": "[Open full project](https://projectcatalyst.io/funds/12/f12-cardano-use-cases-concept/mesh-software-as-a-service)",
+        "challenge": "F12: Cardano Use Cases: Concept",
+        "budget": "ADA 20,000.00",
+        "deliveredDate": "April 20, 2025",
+        "title": "Mesh Software as a Service: Milestone 4",
+        "content": "https://milestones.projectcatalyst.io/projects/1200148/milestones/4\r\n\r\n## Acceptance criteria #1\r\n\r\n> Finalised Server application code - hosted wallet / private key for signing\r\n\r\nThere are 2 types of wallet:\r\n- user-controlled wallet\r\n- developer-controlled wallet\r\n\r\n### User controlled wallet\r\nUsers can create a non-custodial wallet using social logins, no extra software or mnemonic phrases required.\r\n\r\nFor developers, it is easy to intergrate too. Here is an example of how to use the user-controlled wallet:\r\n\r\n```javascript\r\nimport {\r\n  InitWeb3WalletOptions,\r\n  Web3Wallet,\r\n} from \"@meshsdk/web3-sdk\";\r\nimport { BlockfrostProvider } from \"@meshsdk/provider\";\r\n \r\nconst provider = new BlockfrostProvider('YOUR-API-KEY');\r\n \r\nconst _options: InitWeb3WalletOptions = {\r\n  networkId: 0, // 0: testnet, 1: mainnet\r\n  fetcher: provider,\r\n  submitter: provider,\r\n  projectId: \"your_project_id\",\r\n};\r\n \r\nconst wallet = await Web3Wallet.enable(_options);\r\n```\r\n\r\n### Developer controlled wallet\r\n\r\nDevelopers can create wallets on behalf of users, and manage the private keys. Here is an example of how to use the developer-controlled wallet:\r\n\r\n```javascript\r\nimport { Web3Sdk } from \"@meshsdk/web3-sdk\";\r\n \r\nconst sdk = new Web3Sdk({\r\n  projectId: \"11111111-2222-3333-4444-555555555555\",\r\n  apiKey: \"11111111-2222-3333-4444-555555555555\",\r\n  networkId: 0, // 0: testnet, 1: mainnet\r\n  privateKey: \"ENTITY_SECRET_PRIVATE_KEY_HERE\",\r\n});\r\n\r\nconst wallet = await sdk.wallet.createWallet();\r\n```\r\n\r\n### Wallet API\r\n\r\nHere are a few endpoints you can use with the wallet:\r\n\r\n#### Get change address\r\n\r\nGet a change address for the wallet.\r\n\r\n```javascript\r\nconst changeAddress = await wallet.getChangeAddress();\r\n```\r\n\r\n#### Get wallet's UTXO\r\n\r\nGet all UTXOs for the wallet.\r\n\r\n```javascript\r\nconst utxos = await wallet.getUtxos();\r\n```\r\n\r\n#### Sign transaction\r\n\r\n```javascript\r\nconst signedTx = await wallet.signTx(tx, partialSign?);\r\n```\r\n\r\n## Acceptance criteria #2\r\n\r\n> Public url on MeshJS Github at: https://github.com/MeshJS \r\n\r\nAll source code can be found in Mesh's Repo, specifically for this milestone, the start of these functions can be found in these files:\r\n- https://github.com/MeshJS/web3-sdk/blob/main/src/wallet-user-controlled/index.ts\r\n- https://github.com/MeshJS/web3-sdk/blob/main/src/sdk/wallet-developer-controlled/index.ts\r\n- https://github.com/MeshJS/web3-sdk/blob/main/src/sdk/index.ts\r\n\r\n## Acceptance criteria #3\r\n\r\n> Code licensed under open source licence on MeshJS GitHub\r\n\r\nAll source code is licensed under the Apache License, which can be found in the root of the repository: https://github.com/MeshJS/web3-sdk/tree/main?tab=Apache-2.0-1-ov-file#readme\r\n",
+        "outcomes": [
+          "user-controlled wallet",
+          "developer-controlled wallet",
+          "https://github.com/MeshJS/web3-sdk/blob/main/src/wallet-user-controlled/index.ts",
+          "https://github.com/MeshJS/web3-sdk/blob/main/src/sdk/wallet-developer-controlled/index.ts",
+          "https://github.com/MeshJS/web3-sdk/blob/main/src/sdk/index.ts"
+        ],
+        "evidence": []
+      }
+    ],
+    "1200201": [
+      {
+        "projectId": "1200201",
+        "milestoneNumber": 1,
+        "link": "[Open full project](https://projectcatalyst.io/funds/12/f12-cardano-open-developers/sidan-or-meshjs-advance-cardano-sdk-in-rust)",
+        "challenge": "F12: Cardano Open: Developerst",
+        "budget": "ADA 60,000.00",
+        "deliveredDate": "October 7, 2024",
+        "title": "Milestone Report",
+        "content": "\r\nProject management tools and systems set up. Instead of Github link, for easier accessibility, we will use Google sheet instead while the features and project management ability is still the same.\r\n\r\nInitial Documentation\r\n- https://docs.google.com/spreadsheets/d/1O0ynVTyZ7FwI-9i_5SPA5chq7aAnHH1UbcGHVxVtTfs/edit?usp=sharing\r\n\r\nList out all the APIs needed\r\n- https://github.com/sidan-lab/whisky/tree/master/packages/whisky/src/builder\r\n\r\nA list of team members responsible for the development will be public. A link will be provided\r\n- https://drive.google.com/file/d/1RzlJGJq15OgDzadI2ykZ7kPjF7Yf9lCj/view?usp=sharing\r\n\r\nTo the reviewer who rejected our milestone 1 submission,\r\n\r\nMilestone one is mainly for the purpose of setting up an operational organization, and assigning tasks to team members. The document we provided showed all the involved team member, and the roles and responsibilities of each person, with an additional Gantt chart timeline. This showed that the tool perfectly performed what it meant to do, i.e. tracking the project's progress and disclosing the team to all community members\r\n\r\nTen APIs are listed in the builder folder in the Whiskey repo, and the feature targets for the SDK development are set going forward. This further showed we have completed all the commitments that we promised in milestone one. Please approve the milestone one submission\r\n",
+        "outcomes": [],
+        "evidence": []
+      },
+      {
+        "projectId": "1200201",
+        "milestoneNumber": 2,
+        "link": "[Open full project](https://projectcatalyst.io/funds/12/f12-cardano-open-developers/sidan-or-meshjs-advance-cardano-sdk-in-rust)",
+        "challenge": "F12: Cardano Open: Developerst",
+        "budget": "ADA 60,000.00",
+        "deliveredDate": "October 9, 2024",
+        "title": "Milestone Report",
+        "content": "\r\nRoot directory:\r\n- WASM package - https://github.com/sidan-lab/whisky/tree/master/packages/sidan-csl-rs\r\n- Rust package - https://github.com/sidan-lab/whisky/tree/master/packages/whisky\r\n\r\ncrate.io:\r\n- https://crates.io/crates/whisky\r\n\r\nnpm registry:\r\n- browser: https://www.npmjs.com/package/@sidan-lab/sidan-csl-rs-browser\r\n- nodejs: https://www.npmjs.com/package/@sidan-lab/sidan-csl-rs-nodejs\r\n",
+        "outcomes": [],
+        "evidence": []
+      },
+      {
+        "projectId": "1200201",
+        "milestoneNumber": 3,
+        "link": "[Open full project](https://projectcatalyst.io/funds/12/f12-cardano-open-developers/sidan-or-meshjs-advance-cardano-sdk-in-rust)",
+        "challenge": "F12: Cardano Open: Developerst",
+        "budget": "ADA 30,000.00",
+        "deliveredDate": "October 10, 2024",
+        "title": "Milestone Report",
+        "content": "\r\nRoot directory of mesh-csl package (i.e. mesh-core-csl)\r\n- https://github.com/MeshJS/mesh/tree/main/packages/mesh-core-csl\r\n\r\nnpm registry on published mesh-csl:\r\n- https://www.npmjs.com/package/@meshsdk/core-csl\r\n\r\nThe mesh-csl is well integrated with mesh-core as indicated here:\r\n- https://github.com/MeshJS/mesh/blob/main/packages/mesh-core/src/core.ts\r\n\r\nAs part of the update, the mesh-core library has nearly removed all raw csl syntax for better maintainability\r\n",
+        "outcomes": [],
+        "evidence": []
+      },
+      {
+        "projectId": "1200201",
+        "milestoneNumber": 4,
+        "link": "[Open full project](https://projectcatalyst.io/funds/12/f12-cardano-open-developers/sidan-or-meshjs-advance-cardano-sdk-in-rust)",
+        "challenge": "F12: Cardano Open: Developerst",
+        "budget": "ADA 10,000.00",
+        "deliveredDate": "April 11, 2025",
+        "title": "Milestone Report",
+        "content": "\r\n\t\r\nDevelop the off-node transaction evaluation\r\n- The core logic of offnode transaction evaluation is implemented\r\n- https://github.com/sidan-lab/whisky/blob/master/packages/whisky-csl/src/utils/evaluator.rs\r\n\r\nDevelop blockchain provider implementation and integration with Maestro & Blockfrost\r\n- Maestro provider: https://github.com/sidan-lab/whisky/tree/master/packages/whisky/src/providers/maestro\r\n- Blockfrost provider: https://github.com/sidan-lab/whisky/tree/master/packages/whisky/src/providers/blockfrost\r\n\r\nNew features available with documentation available in published rust package in crates.io\r\n- Rust package v1.0.0: https://crates.io/crates/whisky\r\n- Provider documentation: https://whisky.sidan.io/services/providers\r\n\r\nNew features available with documentation available in mesh core package\r\n- Mesh integration implementation: https://github.com/MeshJS/mesh/blob/main/packages/mesh-core-csl/src/offline-providers/offline-evaluator.ts\r\n- Mesh offline evaluator integration documentation: https://meshjs.dev/providers/offline-evaluator\r\n\r\n\r\n",
+        "outcomes": [],
+        "evidence": []
+      },
+      {
+        "projectId": "1200201",
+        "milestoneNumber": 5,
+        "link": "[Open full project](https://projectcatalyst.io/funds/12/f12-cardano-open-developers/sidan-or-meshjs-advance-cardano-sdk-in-rust)",
+        "challenge": "F12: Cardano Open: Developerst",
+        "budget": "ADA 10,000.00",
+        "deliveredDate": "June 19, 2025",
+        "title": "Milestone Report",
+        "content": "\r\n\t\r\nEvidence of milestone completionNew features available with documentation available in published rust package in crates.io\r\n\r\nDevelop the backward transaction parser - getting the transaction hex and parsing back to rust object\r\n- Implementation - https://github.com/sidan-lab/whisky/blob/master/packages/whisky/src/parser/mod.rs\r\n- Documentation - https://whisky.sidan.io/tx-parser/parse-transaction-cbor\r\n\r\nDevelop the offchain code unit testing framework on top of the transaction parser, introducing a brand new developer experience on unit testing offchain code on Cardano\r\n- Implementation - https://github.com/sidan-lab/whisky/blob/master/packages/whisky-common/src/tx_tester/mod.rs\r\n- Documentation - https://whisky.sidan.io/tx-parser/unit-testing-transaction\r\n\r\nNew features available with documentation available in mesh core package\r\n- The tx parser functionality is exported to Mesh through wasm\r\n- https://github.com/MeshJS/mesh/blob/main/packages/mesh-core-csl/src/parser/index.ts\r\n\r\nDocumentation\r\n- https://meshjs.dev/apis/txparser/basics\r\n- https://meshjs.dev/apis/txparser/txtester\r\n\r\n",
+        "outcomes": [],
+        "evidence": [
+          "Implementation - https://github.com/sidan-lab/whisky/blob/master/packages/whisky/src/parser/mod.rs",
+          "https://github.com/sidan-lab/whisky/blob/master/packages/whisky/src/parser/mod.rs",
+          "Documentation - https://whisky.sidan.io/tx-parser/parse-transaction-cbor",
+          "https://whisky.sidan.io/tx-parser/parse-transaction-cbor",
+          "Implementation - https://github.com/sidan-lab/whisky/blob/master/packages/whisky-common/src/tx_tester/mod.rs",
+          "https://github.com/sidan-lab/whisky/blob/master/packages/whisky-common/src/tx_tester/mod.rs",
+          "Documentation - https://whisky.sidan.io/tx-parser/unit-testing-transaction",
+          "https://whisky.sidan.io/tx-parser/unit-testing-transaction",
+          "The tx parser functionality is exported to Mesh through wasm",
+          "https://github.com/MeshJS/mesh/blob/main/packages/mesh-core-csl/src/parser/index.ts",
+          "https://github.com/MeshJS/mesh/blob/main/packages/mesh-core-csl/src/parser/index.ts",
+          "https://meshjs.dev/apis/txparser/basics",
+          "https://meshjs.dev/apis/txparser/basics",
+          "https://meshjs.dev/apis/txparser/txtester",
+          "https://meshjs.dev/apis/txparser/txtester"
+        ]
+      },
+      {
+        "projectId": "1200201",
+        "milestoneNumber": 6,
+        "link": "[Open full project](https://projectcatalyst.io/funds/12/f12-cardano-open-developers/sidan-or-meshjs-advance-cardano-sdk-in-rust)",
+        "challenge": "F12: Cardano Open: Developers",
+        "budget": "ADA 30,000.00",
+        "deliveredDate": "June 23, 2025",
+        "title": "Milestone Report",
+        "content": "\r\nNote for resubmission\r\n- PCR revised according to the funding documentation\r\n- PCV revised to following flows:\r\n- Quick demo on using NextJS + whisky as a backend\r\n- Code base walk through\r\n- Highlights of PCR - challenge KPIs, key achievements, next steps + lessons we learnt\r\n\r\nSubmission\r\nA full set of public documentation on all new features and changes brought by this project\r\n- https://whisky.sidan.io/\r\n\r\nSetup a dedicated channel in SIDAN Lab discord server in regards to the project deliverables. Link(s) will be provided covering the project deliverables\r\n- https://discord.gg/55Z25r3QfC\r\n\r\nAn announcement in MeshJS discord server about all new features provided by this project. Link(s) will be provided in the announcement\r\n- https://discord.com/channels/907191435864977459/907225368807735296/1385307289225003069\r\n\r\nAll feedback, and questions are on Discord. Link(s) will be provided for the feedback and questions.\r\nIn both sidan and mesh discord\r\n\r\nPublicly available project close-out report and video\r\n- Link to final closeout report - https://docs.google.com/document/d/1xyredEHtBaob2G783_X_fOWuu6eksPmiZDvK_lT3h8I/edit?usp=sharing\r\n- Link to final closeout video - https://youtu.be/dk4KoLnksRY\r\n",
+        "outcomes": [],
+        "evidence": [
+          "https://discord.gg/55Z25r3QfC",
+          "https://discord.gg/55Z25r3QfC",
+          "https://discord.com/channels/907191435864977459/907225368807735296/1385307289225003069",
+          "https://discord.com/channels/907191435864977459/907225368807735296/1385307289225003069",
+          "Link to final closeout report - https://docs.google.com/document/d/1xyredEHtBaob2G783_X_fOWuu6eksPmiZDvK_lT3h8I/edit?usp=sharing",
+          "https://docs.google.com/document/d/1xyredEHtBaob2G783_X_fOWuu6eksPmiZDvK_lT3h8I/edit?usp=sharing",
+          "Link to final closeout video - https://youtu.be/dk4KoLnksRY",
+          "https://youtu.be/dk4KoLnksRY"
+        ]
+      }
+    ],
+    "1200202": [
+      {
+        "projectId": "1200202",
+        "milestoneNumber": 1,
+        "link": "[Open full project](https://projectcatalyst.io/funds/12/f12-cardano-open-developers/sidan-or-meshjs-cardano-service-layer-framework-for-dapps)",
+        "challenge": "F12: Cardano Open: Developerst",
+        "budget": "ADA 60,000.00",
+        "deliveredDate": "September 29, 2024",
+        "title": "Milestone Report",
+        "content": "\r\n\t\r\nProject management tools and systems set up. Project management tools/ Google sheet/ Github link whichever is more convenient, efficient and transparent will be public\r\n- https://docs.google.com/spreadsheets/d/1WqUF8H8ABSTlLEwxYC5bdIwHwjxkf5_RUOp0_hHUDUg/edit?usp=sharing\r\n\r\nTeam members, roles and responsibilities will be public\r\n- https://drive.google.com/file/d/1JwAEybfGN6TRD3WQgjEKiUMynjcb6hN2/view?usp=sharing\r\n\r\nPublicly accessible link breaking down all activities\r\n- https://docs.google.com/spreadsheets/d/1WqUF8H8ABSTlLEwxYC5bdIwHwjxkf5_RUOp0_hHUDUg/edit?usp=sharing\r\n\r\nPublicly accessible Github repository link\r\n- https://github.com/MeshJS/mesh\r\n> (Note: repos of future outputs and evidence will be provided and updated when project continues)\r\n\r\nDiscord Announcement:\r\n- https://drive.google.com/file/d/1d4nGPqDDBzRBvB20AtxpRZ8Rq-BqdIfK/view?usp=sharing\r\n",
+        "outcomes": [],
+        "evidence": [
+          "https://drive.google.com/file/d/1d4nGPqDDBzRBvB20AtxpRZ8Rq-BqdIfK/view?usp=sharing",
+          "https://drive.google.com/file/d/1d4nGPqDDBzRBvB20AtxpRZ8Rq-BqdIfK/view?usp=sharing"
+        ]
+      },
+      {
+        "projectId": "1200202",
+        "milestoneNumber": 2,
+        "link": "[Open full project](https://projectcatalyst.io/funds/12/f12-cardano-open-developers/sidan-or-meshjs-cardano-service-layer-framework-for-dapps)",
+        "challenge": "F12: Cardano Open: Developerst",
+        "budget": "ADA 60,000.00",
+        "deliveredDate": "October 29, 2024",
+        "title": "Milestone Report",
+        "content": "\t\r\nA markdown file in the public Github repository, stating the exact flow of starting the network, building transaction and submitting transaction.\r\n- https://cloud.meshjs.dev/\r\n- https://github.com/MeshJS/mesh-saas\r\n",
+        "outcomes": [],
+        "evidence": []
+      },
+      {
+        "projectId": "1200202",
+        "milestoneNumber": 3,
+        "link": "[Open full project](https://projectcatalyst.io/funds/12/f12-cardano-open-developers/sidan-or-meshjs-cardano-service-layer-framework-for-dapps)",
+        "challenge": "F12: Cardano Open: Developerst",
+        "budget": "ADA 30,000.00",
+        "deliveredDate": "May 23, 2025",
+        "title": "Milestone Report",
+        "content": "Cardano Service Layer Framework for DApps Milestone 3: https://hackmd.io/@jingles/HJgZKtTZlg\r\n\r\n---\r\n\r\nCardano Service Layer Framework for DApps\r\nMilestone 3: Customized Protocol Parameters\r\nHey there Milestone reviewers, voters and really anyone who is following the progress of this proposal. Here we are, reporting on the successful completion of Milestone 3. We got into quite some delay, but, here we are catching up.\r\n\r\n- https://milestones.projectcatalyst.io/projects/1200202/milestones/3\r\n\r\nObjective: To introduce customized protocol parameters feature with the parallel Cardano blockchain\r\n\r\n### Acceptance criteria\r\nResearch and develop the approach to exposing altering protocol parameters at the time of starting the parallel Cardano network (e.g. fees and stakepools keys rotation)\r\nUpgrade MeshJS to support customized protocol parameters\r\n\r\n### Evidence of milestone completion\r\nA markdown file in the public Github repository, stating the exact flow of starting the network, building transaction and submitting transaction with customized protocol parameters.\r\nA published meshsdk/core node module public visitable in on npm registry with documentation on how to interact with customized protocol parameter\r\n\r\n### Report\r\nAnd here the successful completed developments of the milestone deliverables:\r\n\r\nMeshJS has been updated to support customized protocol parameters, it can be easily done by doing:\r\n\r\nconst provider = new YaciProvider(\"YACI_URL\");\r\nconst pp = await provider.fetchProtocolParameters();\r\n\r\nconst txBuilder = new MeshTxBuilder({\r\n  fetcher: provider,\r\n  params: pp,\r\n});\r\n\r\n\r\nHere we use the YaciProvider to query Yaci instance, and get the protocol parameters, then we pass it to the MeshTxBuilder. See docs: https://meshjs.dev/apis/txbuilder/basics#customProtocolParameter\r\n\r\nThe flow to starting network and building transaction with customized protocol parameters is as follows:\r\n\r\n1. start a devnet with zero fees, run the following command from yaci-cli: yaci-cli:>create-node -o --genesis-profile zero_fee --start\r\n2. start a devnet with 30 slots per epoch, run the following command from yaci-cli: yaci-cli:>create-node -o -e 30 --start\r\n3. if you want to perform more configuration to the devnet, go to config/node.properties and make changes to the properties file, then run the following command from yaci-cli: yaci-cli:>create-node -o --start\r\n\r\nThese steps are also documented and described on our Mesh website at: https://meshjs.dev/yaci/getting-started#start\r\n\r\nYou can find more detailed track records of the development at the respective github files at: https://github.com/MeshJS/mesh/tree/main/apps/playground/src/pages/yaci\r\n\r\nAll code is fully open source, you can find the respective open source license at: https://github.com/MeshJS/mesh?tab=Apache-2.0-1-ov-file#readme\r\n\r\nAnd thats it for this Milestone. We are also finishing Milestone 4 which we will submit once Milestone 3 has been reviewed and accepted.\r\n",
+        "outcomes": [],
+        "evidence": [
+          "https://milestones.projectcatalyst.io/projects/1200202/milestones/3",
+          "https://milestones.projectcatalyst.io/projects/1200202/milestones/3",
+          "https://meshjs.dev/apis/txbuilder/basics#customProtocolParameter",
+          ". start a devnet with zero fees, run the following command from yaci-cli: yaci-cli:>create-node -o --genesis-profile zero_fee --start",
+          ". start a devnet with 30 slots per epoch, run the following command from yaci-cli: yaci-cli:>create-node -o -e 30 --start",
+          ". if you want to perform more configuration to the devnet, go to config/node.properties and make changes to the properties file, then run the following command from yaci-cli: yaci-cli:>create-node -o --start",
+          "https://meshjs.dev/yaci/getting-started#start",
+          "https://github.com/MeshJS/mesh/tree/main/apps/playground/src/pages/yaci",
+          "https://github.com/MeshJS/mesh?tab=Apache-2.0-1-ov-file#readme"
+        ]
+      },
+      {
+        "projectId": "1200202",
+        "milestoneNumber": 4,
+        "link": "[Open full project](https://projectcatalyst.io/funds/12/f12-cardano-open-developers/sidan-or-meshjs-cardano-service-layer-framework-for-dapps)",
+        "challenge": "F12: Cardano Open: Developerst",
+        "budget": "ADA 10,000.00",
+        "deliveredDate": "May 29, 2025",
+        "title": "Milestone Report",
+        "content": "\r\n\t\r\nDuring our research and development, we have identified that the instance will stop responding to requests after a certain period. The reason is due to the fact that Yaci was designed to be a lightweight devnet and not for persistent. Yaci DevKit's default indexer uses an embedded H2 database. In order to achieve persistence, Yaci was upgraded to support PostgreSQL. See https://github.com/bloxbean/yaci-devkit/releases/tag/v0.10.0-preview2.\r\n\r\nEdit config/application.properties and uncomment the following properties to set PostgreSQL database details:\r\n- yaci.store.db.url=jdbc:postgresql://<dbhost>:<dbport>/<dbname>?currentSchema=<schema_name>\r\n- yaci.store.db.username=user\r\n- yaci.store.db.password=password\r\n\r\nDocumentation for starting the network, building transaction and submitting transaction can be found on Mesh website:\r\n- https://meshjs.dev/yaci/getting-started, see \"Support external PostgreSQL database for indexer\"\r\n- https://meshjs.dev/yaci/transactions\r\n\r\nFull link:\r\n- https://hackmd.io/@jingles/SkWOYtTZxe \r\n",
+        "outcomes": [],
+        "evidence": []
+      },
+      {
+        "projectId": "1200202",
+        "milestoneNumber": 5,
+        "link": "[Open full project](https://projectcatalyst.io/funds/12/f12-cardano-open-developers/sidan-or-meshjs-cardano-service-layer-framework-for-dapps)",
+        "challenge": "F12: Cardano Open: Developerst",
+        "budget": "ADA 10,000.00",
+        "deliveredDate": "June 10, 2025",
+        "title": "Milestone Report",
+        "content": "\r\n\t\r\nhttps://hackmd.io/@jingles/S19l89TZxl#Report\r\n\r\nYaci has been packaged and easily set up with multiple nodes.\r\n\r\nThere are three configuration files available in the docker folder:\r\n- env - Environment variables like JAVA_OPTS\r\n- application.properties - Contains application specific properties. (e.g; Cardano node host, port, database info, store configuration etc.)\r\n- application-aggr.properties - Contains Aggregation application specific properties.\r\n\r\nThere are three out-of-the-box applications available in the Yaci Store repository:\r\n- Yaci Store Utxo Indexer : Includes Utxo Store, Epoch Store, and Submit component\r\n- Yaci Store All : Includes all stores\r\n- Yaci Store Aggregation : Aggregates account balances\r\n\r\nYou can run out-of-the-box applications with Docker Compose. The Docker Compose YAML files for the applications are inside the docker folder in GitHub repository.\r\n\r\n- Please clone the repository to access the Docker Compose files.\r\n- Verify compose yaml file are pointing to the correct application image version.\r\n  \r\nRun Utxo Indexer application\r\n- The Utxo Indexer application consists of the utxo store, epoch store, and submit component.\r\n- By default, the submit endpoint is disabled. You can refer to the Enable Submit Endpoint section for instructions on how to enable it.\r\n- docker compose -f yaci-store-utxo-indexer-monolith.yml up -d\r\n\r\nRun Aggregation App to calculate account balances\r\n- Aggregation App is a separate application that calculates account balances by aggregating the UTXO store data.\r\n- docker compose -f yaci-store-aggregation-monolith.yml up -d\r\n\r\nDefy’s application customized service layer\r\nOur publicly accessible deployment of Defy’s application customized service layer can be found here:\r\n- https://cloud.meshjs.dev/yaci/usage\r\n- https://cloud.meshjs.dev/yaci/faucet\r\n\r\nAnd the entire deployment flow can be found on Mesh website:\r\n- https://meshjs.dev/yaci\r\n  \r\nWe hope the deliverables are to your satisfaction. We are now preparing the completion of the final milestone.\r\n",
+        "outcomes": [],
+        "evidence": []
+      }
+    ],
+    "1200244": [
+      {
+        "projectId": "1200244",
+        "milestoneNumber": 1,
+        "link": "[Open full project](https://projectcatalyst.io/funds/12/f12-cardano-open-ecosystem/waffle-or-sidan-hong-kong-cardano-community)",
+        "challenge": "F12: Cardano Open: Ecosystem",
+        "budget": "ADA 30,000.00",
+        "deliveredDate": "December 18, 2024",
+        "title": "Milestone Report",
+        "content": "\r\nLuma Link: https://lu.ma/1wz46pic\r\n\r\nLink to Photos Videos: https://drive.google.com/drive/folders/1o1BS0kWHzIg3mAiQPUPre_LQYfmVF9vs\r\n\r\nTwitter Posts: https://x.com/Waffle_Capital/status/1854188155504841072 (Waffle Capital)\r\n\r\nhttps://x.com/sidan_lab/status/1857347962109899132 (SIDAN)\r\n\r\nLinkedIn Post: https://www.linkedin.com/feed/update/urn:li:activity:7260555421529055232/\r\n\r\nWaffle Capital Blog Post: https://www.wafflecapital.xyz/blog/blockchain-governance-a-new-paradigm-of-human-interaction\r\n\r\nFollow-up email sent to all attendees of the event (We can BCC someone from the Catalyst team as evidence). You have acknowledged receipt of this\r\n\r\nThe link to photos and videos above includes a file to the entire 45 minute panel discussion. It's also now on Youtube shared by Dapp_Central (https://www.youtube.com/watch?v=GF8_Ca-DgME&t=215s)\r\n\r\nDocumentation proving that 5 companies participated, along with illustrative images.\r\n\r\nRegarding this point, if you read our acceptance criteria, it clearly outlines “Number of Organizations in Crypto to join: Minimum 5”, the word participated was never mentioned and join was used to indicate attendance and networking. Images with linkedin, job title, etc added in the like below. https://docs.google.com/spreadsheets/d/1jZmZOnqBh9CF9vaggBgvowqaBk0Weg8fuAjlw9fobKE/edit?usp=sharing\r\n\r\n50 Attendees\r\n\r\nLu.ma CSV shared as a google sheet in the link below, column highlighted showing 52 checked in\r\n\r\nGuest emails and phone numbers omitted for privacy preservation\r\n\r\nhttps://docs.google.com/spreadsheets/d/1jZmZOnqBh9CF9vaggBgvowqaBk0Weg8fuAjlw9fobKE/edit?usp=sharing \r\n\r\nVideo Recording\r\n\r\nThe event began at 6pm and ended at 10pm\r\n\r\nThe panel ran from 7pm-8pm and guests stayed back for networking\r\n\r\nIt sounds ridiculous to record people entering and people networking so we did not do this.\r\n",
+        "outcomes": [],
+        "evidence": [
+          "https://www.youtube.com/watch?v=GF8_Ca-DgME&t=215s"
+        ]
+      },
+      {
+        "projectId": "1200244",
+        "milestoneNumber": 2,
+        "link": "[Open full project](https://projectcatalyst.io/funds/12/f12-cardano-open-ecosystem/waffle-or-sidan-hong-kong-cardano-community)",
+        "challenge": "F12: Cardano Open: Ecosystem",
+        "budget": "ADA 30,000.00",
+        "deliveredDate": "March 7, 2025",
+        "title": "Milestone Report",
+        "content": "\r\n\t\r\nPhotos:\r\n\r\nhttps://drive.google.com/drive/folders/1ILvbnRIRJPKSqZgHTxvYTtmdKka11eSH\r\n\r\nVideos:\r\n\r\nhttps://drive.google.com/drive/folders/1aLRwYKzth5FrWo7Q1KQPSZgbSm-KIAa1\r\n\r\nLuma Link: \r\n\r\nhttps://lu.ma/vsh1thaq\r\n\r\nTwitter Posts: \r\n\r\nhttps://x.com/Waffle_Capital/status/1896469621756305724\r\n\r\nhttps://x.com/Waffle_Capital/status/1894416498464350587\r\n\r\nhttps://x.com/Waffle_Capital/status/1892856347277815919\r\n\r\nhttps://x.com/Waffle_Capital/status/1892606879089533098\r\n\r\nhttps://x.com/sidan_lab/status/1892818694205768164\r\n\r\nhttps://x.com/DeltaDeFi/status/1893681417131069471\r\n\r\nhttps://x.com/ElRaulito_cnft/status/1894686103317426447\r\n\r\nhttps://x.com/MONROE_XIV/status/1892747545199206770\r\n\r\nhttps://x.com/stanmangostan/status/1896508851522011589\r\n\r\nhttps://x.com/sidanjackal/status/1894666102191657278\r\n\r\nhttps://x.com/ElRaulito_cnft/status/1892900543821205671\r\n\r\nLinkedIn Posts:\r\n\r\nhttps://www.linkedin.com/feed/update/urn:li:activity:7302236287439159296\r\n\r\nhttps://www.linkedin.com/feed/update/urn:li:activity:7300714142120783872\r\n\r\nhttps://www.linkedin.com/feed/update/urn:li:activity:7299627824452120577\r\n\r\nBlog Post: \r\n\r\nhttps://www.wafflecapital.xyz/blog/event-recap-defi-2.0-bitcoin-cardano-unite\r\n\r\nFollow up email: \r\n\r\nIt has already been sent to the catalyst team via email.\r\n",
+        "outcomes": [],
+        "evidence": []
+      }
+    ],
+    "1300036": [
+      {
+        "projectId": "1300036",
+        "milestoneNumber": 1,
+        "link": "[Open full project](https://projectcatalyst.io/funds/10/f13-cardano-open-ecosystem/cardano-builder-fest-asia-by-mesh-socious-sidan-vietnam-cardano)",
+        "challenge": "F13: Cardano Open: Ecosystem",
+        "budget": "ADA 29,705",
+        "deliveredDate": "February 13, 2025",
+        "title": "Milestone Report",
+        "content": "\r\nHey there Milestone Reviewer, voters and anyone following the progress of this proposal.\r\n\r\nHere we are reporting on the successful competition of our first Milestone.\r\n\r\n---\r\n\r\nThe acceptance criteria has been stated as:\r\n\r\n- Links to social media announcements and website updates\r\nScreenshots or URLs showing published event posts and announcements.\r\n\r\n- Interest list reports or sign-up data\r\nA visible sign-up form and a brief report (e.g., spreadsheet, database count) demonstrating how many individuals have expressed \t\t\tinterest.\r\n\r\n- Link to the event website\r\n- Event program available online\r\n---\r\n\r\nAnd here the evidence of completed deliverables.\r\n\r\nLinks to social media announcements and website updates\r\n\r\nPre-registration announcement link on Twitter: https://x.com/buidler_fest/status/1882035490368442391\r\n\r\nPre-registration announcement link on Cardano Forum: https://forum.cardano.org/t/cardano-buidler-fest-asia-2025/143155 \r\n\r\nCheck Buidler Fest twitter account of general updates: https://x.com/buidler_fest \r\n\r\nInterest list reports or sign-up data\r\n\r\n> A visible sign-up form and a brief report (e.g., spreadsheet, database count) demonstrating how many individuals have expressed interest.\r\n\r\nTo best follow the registrations, you can simply check the addr1 to which attendees have to send 150 Ada in order to book their ticket: (check registration page which also displays the addr1)\r\n\r\naddr1zyzpenlg0vywj7zdh9dzdeggaer94zvckfncv9c3886c36yafhxhu32dys6pvn6wlw8dav6cmp4pmtv7cc3yel9uu0nqhcjd29 \r\n\r\nView on Cardanoscan!\r\n\r\nhttps://cardanoscan.io/address/11041ccfe87b08e9784db95a26e508ee465a8998b26786171139f588e89d4dcd7e454d2434164f4efb8edeb358d86a1dad9ec6224cfcbce3e6 \r\n\r\nLink to the event website: https://buidlerfest.github.io/register/\r\n\r\nEvent program available online: https://buidlerfest.github.io/agenda/\r\n\r\nWe are in good progress. The proposal team is well coordinated and in full swing already working on completing items on the second milestone.\r\n",
+        "outcomes": [
+          "Links to social media announcements and website updates",
+          "Interest list reports or sign-up data",
+          "Link to the event website",
+          "Event program available online",
+          "--"
+        ],
+        "evidence": [
+          "https://x.com/buidler_fest/status/1882035490368442391",
+          "https://forum.cardano.org/t/cardano-buidler-fest-asia-2025/143155",
+          "https://x.com/buidler_fest",
+          "https://cardanoscan.io/address/11041ccfe87b08e9784db95a26e508ee465a8998b26786171139f588e89d4dcd7e454d2434164f4efb8edeb358d86a1dad9ec6224cfcbce3e6",
+          "https://buidlerfest.github.io/register/",
+          "https://buidlerfest.github.io/agenda/"
+        ]
+      },
+      {
+        "projectId": "1300036",
+        "milestoneNumber": 2,
+        "link": "[Open full project](https://projectcatalyst.io/funds/10/f13-cardano-open-ecosystem/cardano-builder-fest-asia-by-mesh-socious-sidan-vietnam-cardano)",
+        "challenge": "F13: Cardano Open: Ecosystem",
+        "budget": "ADA 29,705",
+        "deliveredDate": "March 11, 2025",
+        "title": "",
+        "content": "|Project ID|1300036|\r\n|-----------|-------------|\r\n|Link|[Open full project](https://projectcatalyst.io/funds/10/f13-cardano-open-ecosystem/cardano-builder-fest-asia-by-mesh-socious-sidan-vietnam-cardano)|\r\n|Milestone|[Milestone 2](https://milestones.projectcatalyst.io/projects/1300036/milestones/2)\r\n|Challenge|F13: Cardano Open: Ecosystem|\r\n|Milestone Budget|ADA 29,705|\r\n|Delivered|March 11, 2025|\r\n\r\n## Cardano Builder Fest Asia\r\nMilestone 2 Report\r\nhttps://milestones.projectcatalyst.io/projects/1300036/milestones/2 \r\n\r\nHere the respective evidence of the deliverables:\r\n\r\n### 1) Venue confirmation documents > provide a confirmation email from the venue\r\n\r\nThe event venue has been confirmed, find the respective document as PDF at:\r\n\r\n- https://drive.google.com/file/d/1ZMtKlBK_0kkDu8_EPSAvhNhGGpJq-IoF/view?usp=sharing and,\r\n- https://drive.google.com/file/d/1qTc0leOwQ2oBBTGxetGhoBcnwFUIujRN/view?usp=sharing \r\n\r\n### 2) Public communication of dates \r\n\r\nA simple website which displays the event dates has been set up, find the link at:\r\n- https://buidlerfest.github.io/\r\n- \r\nIn addition, announcements to communicate the dates via social media (X)from team members have been shared to ensure a wider outreach:\r\n\r\n- https://x.com/buidler_fest/status/1892801410753859701 \r\n- https://x.com/Hahero7/status/1891763988742144296 \r\n- https://x.com/jinglescode/status/1889271948376739965 \r\n- https://x.com/KinsonSIDAN/status/1887815420679434326\r\n  \r\n### 3) Link to venue booking invoice > provide a link to the venue booking invoice\r\nThe venue has been booked and the payment to reserve the venue has been done, find the confirming document at:\r\n- https://drive.google.com/file/d/1YtqQNrNOBDPfiddQmKU3pozGJY0uREzG/view?usp=sharing \r\n",
+        "outcomes": [],
+        "evidence": [
+          "https://drive.google.com/file/d/1ZMtKlBK_0kkDu8_EPSAvhNhGGpJq-IoF/view?usp=sharing and,",
+          "https://drive.google.com/file/d/1ZMtKlBK_0kkDu8_EPSAvhNhGGpJq-IoF/view?usp=sharing",
+          "https://drive.google.com/file/d/1qTc0leOwQ2oBBTGxetGhoBcnwFUIujRN/view?usp=sharing",
+          "https://drive.google.com/file/d/1qTc0leOwQ2oBBTGxetGhoBcnwFUIujRN/view?usp=sharing",
+          "https://buidlerfest.github.io/",
+          "https://buidlerfest.github.io/",
+          "",
+          "https://x.com/buidler_fest/status/1892801410753859701",
+          "https://x.com/buidler_fest/status/1892801410753859701",
+          "https://x.com/Hahero7/status/1891763988742144296",
+          "https://x.com/Hahero7/status/1891763988742144296",
+          "https://x.com/jinglescode/status/1889271948376739965",
+          "https://x.com/jinglescode/status/1889271948376739965",
+          "https://x.com/KinsonSIDAN/status/1887815420679434326",
+          "https://x.com/KinsonSIDAN/status/1887815420679434326",
+          "https://drive.google.com/file/d/1YtqQNrNOBDPfiddQmKU3pozGJY0uREzG/view?usp=sharing",
+          "https://drive.google.com/file/d/1YtqQNrNOBDPfiddQmKU3pozGJY0uREzG/view?usp=sharing"
+        ]
+      },
+      {
+        "projectId": "1300036",
+        "milestoneNumber": 3,
+        "link": "[Open full project](https://projectcatalyst.io/funds/10/f13-cardano-open-ecosystem/cardano-builder-fest-asia-by-mesh-socious-sidan-vietnam-cardano)",
+        "challenge": "F13: Cardano Open: Ecosystem",
+        "budget": "ADA 24,754",
+        "deliveredDate": "March 24, 2025",
+        "title": "",
+        "content": "|Project ID|1300036|\r\n|-----------|-------------|\r\n|Link|[Open full project](https://projectcatalyst.io/funds/10/f13-cardano-open-ecosystem/cardano-builder-fest-asia-by-mesh-socious-sidan-vietnam-cardano)|\r\n|Milestone|[Milestone 3](https://milestones.projectcatalyst.io/projects/1300036/milestones/3)\r\n|Challenge|F13: Cardano Open: Ecosystem|\r\n|Milestone Budget|ADA 24,754|\r\n|Delivered|March 24, 2025|\r\n\r\n\t\r\n## Cardano Builder Fest Asia - Milestone 3 Report\r\nhttps://milestones.projectcatalyst.io/projects/1300036/milestones/3 \r\n\r\nHey there again Milestone Reviewers. Since the previous milestone is now successfully signed off by the Catalyst Team, here the resubmission of the PoA. Previous requests from Milestone Reviewers have been implemented. \r\n\r\n### 1) Registration platform or sign-up list\r\n\r\n> Links to the public registration portal, plus a report (e.g., number of tickets claimed or sign-ups received).\r\n\r\n\r\nThe public registration has been integrated to the website and can be accessed via:\r\n- https://buidlerfest.github.io/register/\r\n  \r\nThe report on received and confirmed sign ups can be found at this link:\r\n- https://docs.google.com/document/d/1z7PCFJREL_QU1MTJLabsLW7mh63ko8yssSXrm0kPr64/edit?tab=t.0\r\n  \r\n### 2) Final event schedule\r\n\r\n> A publicly viewable agenda on the official website or a downloadable PDF confirming session times and topics.\r\n\r\nThe publicly viewable agenda has been added on the Buidler Fest website and can be accessed at:\r\n- https://buidlerfest.github.io/agenda/ \r\n- The respective Speakers for the workshop have been added to the table on the above page at Agenda\r\n  \r\nWe hope that all requirements are met. The further planning for the event execution is in full progress and we are confident in the successful \r\n",
+        "outcomes": [],
+        "evidence": []
+      },
+      {
+        "projectId": "1300036",
+        "milestoneNumber": 4,
+        "link": "[Open full project](https://projectcatalyst.io/funds/10/f13-cardano-open-ecosystem/cardano-builder-fest-asia-by-mesh-socious-sidan-vietnam-cardano)",
+        "challenge": "F13: Cardano Open: Ecosystem",
+        "budget": "ADA 14,852",
+        "deliveredDate": "May 25, 2025",
+        "title": "",
+        "content": "|Project ID|1300036|\r\n|-----------|-------------|\r\n|Link|[Open full project](https://projectcatalyst.io/funds/10/f13-cardano-open-ecosystem/cardano-builder-fest-asia-by-mesh-socious-sidan-vietnam-cardano)|\r\n|Milestone|[Milestone 4](https://milestones.projectcatalyst.io/projects/1300036/milestones/4)\r\n|Challenge|F13: Cardano Open: Ecosystem|\r\n|Milestone Budget|ADA 14,852|\r\n|Delivered|May 25, 2025|\r\n\r\n---\r\n\r\nHey there Milestone Reviewers, voters and anyone who is following the progress of this proposal.\r\nHere we are, reporting on the successful completion of the last milestone and with that, closing the successful completion of the proposal.\r\n\r\nThe deliverables of the last Milestone have been stated as:\r\n\r\nCompleted event: Hosted successfully\r\nBoth days run according to plan with active participation from speakers, sponsors, and attendees\r\n\r\nCompleted close-out report:\r\nincluding reporting key event metrics, such as;\r\n- Total amount of participants (envisioned at least 50)\r\n- Total amount of speakers and sessions (envisioned at least 2 per day)\r\n- All relevant close out report requirements are included in the report\r\n\r\nCompleted close-out video:\r\n- All relevant close out video requirements are included in the video\r\n\r\nEvent testimonials\r\n- Created a page on BuilderFest 2 website to show testimonials from event participants which will help to evaluate the received value by event participants\r\n\r\n---\r\n\r\n### And here our report and evidence of completion for all envisioned deliverables:\r\n\r\n---\r\n\r\n**Completed event: Hosted successfully**\r\nBoth days run according to plan with active participation from speakers, sponsors, and attendees.\r\n\r\nThe event has been successfully hosted, turnouts exceeded our expectations and the event was a full success for everyone included. Relevant context and details are provided in the close out report\r\n\r\n**Completed close-out report:**\r\nincluding reporting key event metrics, such as;\r\n- Total amount of participants (envisioned at least 50)\r\n- Total amount of speakers and sessions (envisioned at least 2 per day)\r\n- All relevant close out report requirements are included in the report*\r\n\r\n\r\nAll metrics have been successfully reached, with:\r\n- Total amount of participants 121\r\n- Total amount of speakers: 38\r\n- Total amount of sessions + panel discussions: 22\r\nAll relevant close out report requirements are included in the report*\r\n\r\n---\r\n\r\n**The close out report is available at:**\r\n- https://drive.google.com/file/d/1bwvDFIWoR3O4oz2F7xVBX162bc0G3518/view?usp=sharing\r\n\r\n---\r\n\r\n**Completed close-out video:**\r\nThe close out video has been completed and can be found at:\r\n- Youtube: https://youtu.be/TWIB-QIJioI \r\n- Vimeo: https://vimeo.com/1087291384?share=copy \r\n\r\n---\r\n\r\n**Event testimonials**\r\nWe collected event attendees feedback on X/Twitter and setup a page on the builder fest #2 website to display the tweets and impressions, available at:\r\nhttps://buidlerfest.github.io/testimonials/ \r\n\r\n---\r\n\r\nAnd thats it.\r\nWe are glad to have delivered and completed successful execution of the event. Was definitely worth its efforts. Also thanks to the Catalyst Team for a seamless onboarding and execution process of this proposal. An overall seamless and smooth experience and a great example of the impact and relevance of funding community events via Project Catalyst proposals.  \r\n",
+        "outcomes": [],
+        "evidence": [
+          "Total amount of participants (envisioned at least 50)",
+          "Total amount of speakers and sessions (envisioned at least 2 per day)",
+          "All relevant close out report requirements are included in the report",
+          "All relevant close out video requirements are included in the video",
+          "Created a page on BuilderFest 2 website to show testimonials from event participants which will help to evaluate the received value by event participants",
+          "--",
+          "--",
+          "*Completed event: Hosted successfully**",
+          "*Completed close-out report:**",
+          "Total amount of participants (envisioned at least 50)",
+          "Total amount of speakers and sessions (envisioned at least 2 per day)",
+          "All relevant close out report requirements are included in the report*",
+          "Total amount of participants 121",
+          "Total amount of speakers: 38",
+          "Total amount of sessions + panel discussions: 22",
+          "--",
+          "*The close out report is available at:**",
+          "https://drive.google.com/file/d/1bwvDFIWoR3O4oz2F7xVBX162bc0G3518/view?usp=sharing",
+          "https://drive.google.com/file/d/1bwvDFIWoR3O4oz2F7xVBX162bc0G3518/view?usp=sharing",
+          "--",
+          "*Completed close-out video:**",
+          "Youtube: https://youtu.be/TWIB-QIJioI",
+          "https://youtu.be/TWIB-QIJioI",
+          "Vimeo: https://vimeo.com/1087291384?share=copy",
+          "https://vimeo.com/1087291384?share=copy",
+          "--",
+          "*Event testimonials**",
+          "https://buidlerfest.github.io/testimonials/",
+          "--"
+        ]
+      }
+    ],
+    "1300171": [
+      {
+        "projectId": "1300171",
+        "milestoneNumber": 1,
+        "link": "[Open full project](https://projectcatalyst.io/funds/10/f13-cardano-use-cases-concept/sidan-or-knightsafe-self-custodial-vault-for-defi-trading)",
+        "challenge": "F13: Cardano Use Cases: Concept",
+        "budget": "ADA 37,500.00",
+        "deliveredDate": "March 3, 2025",
+        "title": "Milestone Report",
+        "content": "\r\n\t\r\nDocumentation of the legal entity setup (e.g., registration certificate or equivalent). A public link to the documentation will be provided\r\n- https://drive.google.com/file/d/1WDQjHvr5VyS5eRRQwPg8hPDqVuPGaGe6/view?usp=drive_link\r\n\r\nPublic announcement link will be provided on SIDAN Lab Discord channel\r\n- https://discord.com/channels/1166784293805228061/1346154440327172106/1346167412722110556\r\n\r\nPublic project management link will be provided (It could be either one of Google sheet, Trello, or Notion depending on whichever is convenient to track)\r\n- https://docs.google.com/spreadsheets/d/1CDP-e9uktFim68QG-JCe50_eOR5YRKxZsY-9RUZ760I/edit?usp=sharing\r\n",
+        "outcomes": [],
+        "evidence": []
+      },
+      {
+        "projectId": "1300171",
+        "milestoneNumber": 2,
+        "link": "[Open full project](https://projectcatalyst.io/funds/10/f13-cardano-use-cases-concept/sidan-or-knightsafe-self-custodial-vault-for-defi-trading)",
+        "challenge": "F13: Cardano Use Cases: Concept",
+        "budget": "ADA 37,500.00",
+        "deliveredDate": "March 28, 2025",
+        "title": "Milestone Report",
+        "content": "\r\nWe have completed the architecture design, the initial user workflow diagrams, and the system interaction flows. All documents have been thoroughly prepared to meet the specified milestone outputs and acceptance criteria and are now available on our GitHub repository for public viewing and feedback.\r\n- https://github.com/knight-safe/defi-trading-vault/tree/main/docs\r\n\r\nArchitecture Design: \r\n- https://github.com/knight-safe/defi-trading-vault/blob/main/docs/ArchitectureDesign.pdf\r\n\r\nUser workflow diagrams and system interaction flows: \r\n- https://github.com/knight-safe/defi-trading-vault/blob/main/docs/UserWorkflowAndSystemInteractionFlows.pdf\r\n",
+        "outcomes": [
+          "https://github.com/knight-safe/defi-trading-vault/tree/main/docs",
+          "https://github.com/knight-safe/defi-trading-vault/blob/main/docs/ArchitectureDesign.pdf",
+          "https://github.com/knight-safe/defi-trading-vault/blob/main/docs/UserWorkflowAndSystemInteractionFlows.pdf"
+        ],
+        "evidence": []
+      },
+      {
+        "projectId": "1300171",
+        "milestoneNumber": 3,
+        "link": "[Open full project](https://projectcatalyst.io/funds/10/f13-cardano-use-cases-concept/sidan-or-knightsafe-self-custodial-vault-for-defi-trading)",
+        "challenge": "F13: Cardano Use Cases: Concept",
+        "budget": "ADA 37,500.00",
+        "deliveredDate": "May 12, 2025",
+        "title": "Milestone Report",
+        "content": "\r\n\t\r\nWe have completed the prototype-level design and development of the smart contract. The data flow and script execution have been properly compiled, tested, and validated. Supporting documentation has been prepared in accordance with the specified milestone outputs and acceptance criteria. All relevant materials are now available on our public GitHub repository for open access and community feedback.\r\n\r\nSmart Contract Repository: Smart_contract\r\n- https://github.com/knight-safe/defi-trading-vault/tree/main/smart_contract\r\n  \r\nSmart Contract Documentation & Readme: Documentation.md\r\n- https://github.com/knight-safe/defi-trading-vault/blob/main/smart_contract/Documentation.md\r\n\r\nTest Cases for Core Logic Readme: Accessible via the GitHub repository\r\n- https://github.com/knight-safe/defi-trading-vault/blob/main/smart_contract/README.md\r\n",
+        "outcomes": [
+          "https://github.com/knight-safe/defi-trading-vault/tree/main/smart_contract",
+          "https://github.com/knight-safe/defi-trading-vault/blob/main/smart_contract/Documentation.md",
+          "https://github.com/knight-safe/defi-trading-vault/blob/main/smart_contract/README.md"
+        ],
+        "evidence": []
+      },
+      {
+        "projectId": "1300171",
+        "milestoneNumber": 4,
+        "link": "[Open full project](https://projectcatalyst.io/funds/10/f13-cardano-use-cases-concept/sidan-or-knightsafe-self-custodial-vault-for-defi-trading)",
+        "challenge": "F13: Cardano Use Cases: Concept",
+        "budget": "ADA 37,500.00",
+        "deliveredDate": "June 19, 2025",
+        "title": "Milestone Report",
+        "content": "\r\n\t\r\nWe have completed the smart contract deployment, the website with the features for users to interact with, a close-out report documentation as well as the close-out video. All documents have been thoroughly prepared to meet the specified milestone outputs and acceptance criteria and are now available on our GitHub repository for public viewing and feedback.\r\n\r\nA public Github link for smart contract deployment: \r\n- https://github.com/knight-safe/defi-trading-vault/tree/main/smart_contract\r\n\r\nA public link for the website with the features: \r\n- https://self-custodial-vault.knightsafe.io/\r\n\r\nThe close-out report document: \r\n- https://github.com/knight-safe/defi-trading-vault/blob/main/docs/CloseOutReport.pdf\r\n\r\nThe close-out video on vimeo including the demo for the user interaction:  \r\n- https://vimeo.com/1094284378/0a3632730b\r\n",
+        "outcomes": [
+          "https://github.com/knight-safe/defi-trading-vault/tree/main/smart_contract",
+          "https://self-custodial-vault.knightsafe.io/",
+          "https://github.com/knight-safe/defi-trading-vault/blob/main/docs/CloseOutReport.pdf",
+          "https://vimeo.com/1094284378/0a3632730b"
+        ],
+        "evidence": []
+      }
+    ]
+  }
+}
