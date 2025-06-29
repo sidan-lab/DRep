@@ -42,7 +42,7 @@ export default function Contributors() {
         return (
             <div className={styles.container}>
                 <PageHeader
-                    title={<>Mesh <span>Contributors</span></>}
+                    title={<>SIDAN <span>Contributors</span></>}
                     subtitle="Error loading contributor data"
                 />
                 <div className={styles.errorContainer}>
@@ -56,7 +56,7 @@ export default function Contributors() {
         return (
             <div className={styles.container}>
                 <PageHeader
-                    title={<>Mesh <span>Contributors</span></>}
+                    title={<>SIDAN <span>Contributors</span></>}
                     subtitle="No contributor data available"
                 />
                 <div className={styles.errorContainer}>
@@ -82,8 +82,8 @@ export default function Contributors() {
     return (
         <div className={styles.container}>
             <PageHeader
-                title={<>Mesh <span>Contributors</span></>}
-                subtitle="Mesh is build by many minds and hands, here our Contributors"
+                title={<>SIDAN <span>Contributors</span></>}
+                subtitle="SIDAN Lab is build by many minds and hands, here our Contributors"
             />
 
             <div className={styles.summaryContainer}>

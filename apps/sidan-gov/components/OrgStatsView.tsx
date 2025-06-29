@@ -9,6 +9,20 @@ const formatNumber = (num: number | undefined): string => {
     return new Intl.NumberFormat('en-US').format(num);
 };
 
+// Function to filter out leading zero months before the first non-zero month
+const filterLeadingZeroMonths = (monthlyData: Array<{month: string; downloads: number; trend: "➡️" | "📈" | "📉" | "🔥"}>): Array<{month: string; downloads: number; trend: "➡️" | "📈" | "📉" | "🔥"}> => {
+    if (!Array.isArray(monthlyData)) return [];
+    
+    // Find the first month with non-zero downloads
+    const firstNonZeroIndex = monthlyData.findIndex(month => month.downloads > 0);
+    
+    // If no non-zero months found, return empty array
+    if (firstNonZeroIndex === -1) return [];
+    
+    // Return data starting from the first non-zero month
+    return monthlyData.slice(firstNonZeroIndex);
+};
+
 const CustomTooltip = ({ active, payload, label, chartId }: TooltipProps<number, string> & { chartId?: string }) => {
     if (active && payload && payload.length && payload[0].value !== undefined) {
         const unit = chartId === 'repositories' ? 'repositories' :
@@ -427,14 +441,22 @@ const OrgStatsView: FC<OrgStatsViewProps> = ({ currentStats, yearlyStats, discor
 
             {monthlyDataByPackage.length > 0 && (
                 <div className={styles.chartsGrid}>
-                    {monthlyDataByPackage.map(([pkgKey, monthlyData]) => (
-                        <div className={styles.chartSection} key={pkgKey}>
-                            <h2>{pkgKey.replace(/_/g, '-')} Monthly Downloads ({latestYear})</h2>
-                            <div className={styles.chart}>
-                                <CustomBarChart data={Array.isArray(monthlyData) ? monthlyData : [monthlyData]} chartId={`monthly-${pkgKey}`} />
+                    {monthlyDataByPackage.map(([pkgKey, monthlyData]) => {
+                        // Filter out leading zero months for packages that show zeros before first release
+                        const filteredData = filterLeadingZeroMonths(Array.isArray(monthlyData) ? monthlyData : [monthlyData]);
+                        
+                        // Only display chart if there's actual data after filtering
+                        if (filteredData.length === 0) return null;
+                        
+                        return (
+                            <div className={styles.chartSection} key={pkgKey}>
+                                <h2>{pkgKey.replace(/_/g, '-')} Monthly Downloads ({latestYear})</h2>
+                                <div className={styles.chart}>
+                                    <CustomBarChart data={filteredData} chartId={`monthly-${pkgKey}`} />
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        );
+                    })}
                 </div>
             )}
 

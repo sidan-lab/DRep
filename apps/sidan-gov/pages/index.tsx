@@ -3,7 +3,7 @@ import styles from "../styles/page.module.css";
 import Link from 'next/link';
 
 export default function Dashboard() {
-  const { orgData, catalystData, drepVotingData, discordStats, stakePoolData, isLoading, error } = useData();
+  const { isLoading, error } = useData();
 
   if (isLoading) {
     return (
@@ -21,111 +21,98 @@ export default function Dashboard() {
     );
   }
 
-  const currentStats = orgData?.currentStats;
-  const votes = drepVotingData?.votes || [];
-  const projects = catalystData?.catalystData?.projects || [];
-
-  // Get latest Discord stats
-  const latestDiscordStats = discordStats?.stats ?
-    Object.values(discordStats.stats).pop() : null;
-
-  // Get stake pool info
-  const poolInfo = stakePoolData?.poolInfo?.poolInfo;
-
-  // Get DRep delegation info
-  const drepDelegation = drepVotingData?.delegationData;
-
   return (
     <div className={styles.page}>
       <main className={styles.main}>
         <div className={styles.hero}>
-          <h1 className={styles.title}>Sidan Governance</h1>
+          <h1 className={styles.title}>SIDAN LAB Dashboard</h1>
           <p className={styles.subtitle}>
-            Comprehensive governance dashboard for the Sidan organization
+            Overview and insights on SIDAN LAB contributions and activities at the Cardano ecosystem
           </p>
         </div>
 
-        {/* Overview Stats */}
-        <div className={styles.stats}>
-          <div className={styles.statCard}>
-            <h3>Total Contributors</h3>
-            <div className={styles.statNumber}>{currentStats?.contributors?.unique_count || 0}</div>
-          </div>
-          <div className={styles.statCard}>
-            <h3>DRep Votes</h3>
-            <div className={styles.statNumber}>{votes.length}</div>
-          </div>
-          <div className={styles.statCard}>
-            <h3>Catalyst Projects</h3>
-            <div className={styles.statNumber}>{projects.length}</div>
-          </div>
-          <div className={styles.statCard}>
-            <h3>Total Commits</h3>
-            <div className={styles.statNumber}>
-              {currentStats?.contributors?.total_commits?.toLocaleString() || '0'}
+        {/* Page Navigation Cards */}
+        <div className={styles.pageGrid}>
+          <Link href="/drep-voting" className={styles.pageCard}>
+            <div className={styles.pageCardContent}>
+              <h3 className={styles.pageTitle}>DRep Voting</h3>
             </div>
-          </div>
-          {latestDiscordStats && (
-            <div className={styles.statCard}>
-              <h3>Discord Members</h3>
-              <div className={styles.statNumber}>{latestDiscordStats.memberCount.toLocaleString()}</div>
+            <div className={styles.pageImageContainer}>
+              <img 
+                src="/drep-voting-preview.png" 
+                alt="DRep Voting Preview" 
+                className={styles.pageImage}
+              />
             </div>
-          )}
-          {poolInfo && (
-            <div className={styles.statCard}>
-              <h3>Live Stake</h3>
-              <div className={styles.statNumber}>
-                {poolInfo.live_stake ?
-                  `₳ ${(parseFloat(poolInfo.live_stake) / 1_000_000 / 1_000_000).toFixed(1)}M` :
-                  'N/A'
-                }
-              </div>
+          </Link>
+
+          <Link href="/catalyst-proposals" className={styles.pageCard}>
+            <div className={styles.pageCardContent}>
+              <h3 className={styles.pageTitle}>Catalyst Proposals</h3>
             </div>
-          )}
-          {drepDelegation && (
-            <div className={styles.statCard}>
-              <h3>DRep Delegators</h3>
-              <div className={styles.statNumber}>{drepDelegation.timeline.total_delegators || 0}</div>
+            <div className={styles.pageImageContainer}>
+              <img 
+                src="/cyalyst-proposals-preview.png" 
+                alt="Catalyst Proposals Preview" 
+                className={styles.pageImage}
+              />
             </div>
-          )}
-          {poolInfo && (
-            <div className={styles.statCard}>
-              <h3>Pool Delegators</h3>
-              <div className={styles.statNumber}>{poolInfo.live_delegators || 0}</div>
+          </Link>
+
+          <Link href="/org-stats" className={styles.pageCard}>
+            <div className={styles.pageCardContent}>
+              <h3 className={styles.pageTitle}>Sidan Stats</h3>
             </div>
-          )}
+            <div className={styles.pageImageContainer}>
+              <img 
+                src="/sidan-stats-preview.png" 
+                alt="Sidan Stats Preview" 
+                className={styles.pageImage}
+              />
+            </div>
+          </Link>
+
+          <Link href="/stake-pool" className={styles.pageCard}>
+            <div className={styles.pageCardContent}>
+              <h3 className={styles.pageTitle}>Stake Pool</h3>
+            </div>
+            <div className={styles.pageImageContainer}>
+              <img 
+                src="/stake-pool-preview.png" 
+                alt="Stake Pool Preview" 
+                className={styles.pageImage}
+              />
+            </div>
+          </Link>
+
+          <Link href="/projects" className={styles.pageCard}>
+            <div className={styles.pageCardContent}>
+              <h3 className={styles.pageTitle}>Projects</h3>
+            </div>
+            <div className={styles.pageImageContainer}>
+              <img 
+                src="/project-preview.png" 
+                alt="Projects Preview" 
+                className={styles.pageImage}
+              />
+            </div>
+          </Link>
+
+          <Link href="/contributors" className={styles.pageCard}>
+            <div className={styles.pageCardContent}>
+              <h3 className={styles.pageTitle}>Contributors</h3>
+            </div>
+            <div className={styles.pageImageContainer}>
+              <img 
+                src="/contributors-preview.png" 
+                alt="Contributors Preview" 
+                className={styles.pageImage}
+              />
+            </div>
+          </Link>
         </div>
 
-        {/* Quick Actions */}
-        <div className={styles.quickActions}>
-          <h2>Quick Actions</h2>
-          <div className={styles.actionGrid}>
-            <Link href="/drep-voting" className={styles.actionCard}>
-              <h3>DRep Voting</h3>
-              <p>Track Sidan&apos;s DRep voting activity and delegation information</p>
-            </Link>
-            <Link href="/catalyst-proposals" className={styles.actionCard}>
-              <h3>Catalyst Proposals</h3>
-              <p>View Sidan&apos;s participation in Cardano Catalyst funding rounds</p>
-            </Link>
-            <Link href="/sidan-stats" className={styles.actionCard}>
-              <h3>Sidan Stats</h3>
-              <p>Comprehensive statistics and metrics for the organization</p>
-            </Link>
-            <Link href="/stake-pool" className={styles.actionCard}>
-              <h3>Stake Pool</h3>
-              <p>Monitor Sidan&apos;s stake pool performance and governance participation</p>
-            </Link>
-            <Link href="/projects" className={styles.actionCard}>
-              <h3>Projects</h3>
-              <p>Explore Sidan&apos;s open source projects and repositories</p>
-            </Link>
-            <Link href="/contributors" className={styles.actionCard}>
-              <h3>Contributors</h3>
-              <p>Meet the amazing contributors who make Sidan possible</p>
-            </Link>
-          </div>
-        </div>
+
       </main>
     </div>
   );

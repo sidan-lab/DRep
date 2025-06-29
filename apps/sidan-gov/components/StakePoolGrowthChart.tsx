@@ -15,7 +15,6 @@ interface StakePoolGrowthChartProps {
 
 export default function StakePoolGrowthChart({ data }: StakePoolGrowthChartProps) {
     const chartRef = useRef<HTMLDivElement>(null);
-    const [hovered, setHovered] = useState<'liveStake' | 'delegators' | null>(null);
     const [hoveredData, setHoveredData] = useState<StakePoolDataPoint | null>(null);
     const [mousePosition, setMousePosition] = useState<{ x: number; y: number } | null>(null);
 
@@ -27,8 +26,8 @@ export default function StakePoolGrowthChart({ data }: StakePoolGrowthChartProps
         // Clear any existing SVG
         d3.select(chartRef.current).selectAll('*').remove();
 
-        // Set up dimensions
-        const margin = { top: 40, right: 60, bottom: 30, left: 60 };
+        // Set up dimensions - remove top margin since we moved legend outside
+        const margin = { top: 20, right: 60, bottom: 30, left: 60 };
         const width = chartRef.current.clientWidth - margin.left - margin.right;
         const height = 300 - margin.top - margin.bottom;
 
@@ -81,7 +80,7 @@ export default function StakePoolGrowthChart({ data }: StakePoolGrowthChartProps
             .call(d3.axisRight(yScaleDelegators)
                 .tickFormat((d: d3.NumberValue) => d3.format('.0f')(d.valueOf())));
 
-        // Add gradients - both lines now white with subtle variations
+        // Add gradients - normal white gradients
         const gradientLiveStake = svg.append('defs')
             .append('linearGradient')
             .attr('id', 'gradientLiveStake')
@@ -114,16 +113,49 @@ export default function StakePoolGrowthChart({ data }: StakePoolGrowthChartProps
             .attr('offset', '100%')
             .attr('stop-color', 'rgba(255, 255, 255, 0.6)');
 
+        // Add hover gradients with teal color
+        const gradientLiveStakeHover = svg.append('defs')
+            .append('linearGradient')
+            .attr('id', 'gradientLiveStakeHover')
+            .attr('x1', '0%')
+            .attr('y1', '0%')
+            .attr('x2', '100%')
+            .attr('y2', '0%');
+
+        gradientLiveStakeHover.append('stop')
+            .attr('offset', '0%')
+            .attr('stop-color', 'rgba(56, 232, 225, 0.9)');
+
+        gradientLiveStakeHover.append('stop')
+            .attr('offset', '100%')
+            .attr('stop-color', 'rgba(56, 232, 225, 0.7)');
+
+        const gradientDelegatorsHover = svg.append('defs')
+            .append('linearGradient')
+            .attr('id', 'gradientDelegatorsHover')
+            .attr('x1', '0%')
+            .attr('y1', '0%')
+            .attr('x2', '100%')
+            .attr('y2', '0%');
+
+        gradientDelegatorsHover.append('stop')
+            .attr('offset', '0%')
+            .attr('stop-color', 'rgba(56, 232, 225, 0.8)');
+
+        gradientDelegatorsHover.append('stop')
+            .attr('offset', '100%')
+            .attr('stop-color', 'rgba(56, 232, 225, 0.6)');
+
         // Add the lines
-        svg.append('path')
+        const liveStakeLine = svg.append('path')
             .datum(data)
-            .attr('class', `${styles.lineLiveStake}${hovered === 'liveStake' ? ' ' + styles.lineLiveStakeActive : ''}`)
+            .attr('class', styles.lineLiveStake)
             .attr('d', lineLiveStake)
             .style('stroke', 'url(#gradientLiveStake)');
 
-        svg.append('path')
+        const delegatorsLine = svg.append('path')
             .datum(data)
-            .attr('class', `${styles.lineDelegators}${hovered === 'delegators' ? ' ' + styles.lineDelegatorsActive : ''}`)
+            .attr('class', styles.lineDelegators)
             .attr('d', lineDelegators)
             .style('stroke', 'url(#gradientDelegators)');
 
@@ -152,12 +184,20 @@ export default function StakePoolGrowthChart({ data }: StakePoolGrowthChartProps
             .on('mouseover', () => focus.style('display', null))
             .on('mouseout', () => {
                 focus.style('display', 'none');
-                setHovered(null);
+
+                // Reset line styles to default
+                liveStakeLine
+                    .style('stroke', 'url(#gradientLiveStake)')
+                    .classed(styles.lineLiveStakeActive, false);
+                delegatorsLine
+                    .style('stroke', 'url(#gradientDelegators)')
+                    .classed(styles.lineDelegatorsActive, false);
+
                 setHoveredData(null);
                 setMousePosition(null);
             })
             .on('mousemove', (event: MouseEvent) => {
-                const [mouseX] = d3.pointer(event);
+                const [mouseX, mouseY] = d3.pointer(event);
                 const x0 = xScale.invert(mouseX);
                 const bisectDate = d3.bisector<StakePoolDataPoint, Date>((d: StakePoolDataPoint) => d.date).left;
                 const i = bisectDate(data, x0, 1);
@@ -173,6 +213,31 @@ export default function StakePoolGrowthChart({ data }: StakePoolGrowthChartProps
                 const yLiveStake = yScaleStake(d.liveStake);
                 const yDelegators = yScaleDelegators(d.delegators);
 
+                // Determine which line is closer to the mouse
+                const distanceToLiveStake = Math.abs(mouseY - yLiveStake);
+                const distanceToDelegators = Math.abs(mouseY - yDelegators);
+                const closestLine = distanceToLiveStake < distanceToDelegators ? 'liveStake' : 'delegators';
+
+                // Update line styles directly with D3
+                if (closestLine === 'liveStake') {
+                    liveStakeLine
+                        .style('stroke', 'url(#gradientLiveStakeHover)')
+                        .classed(styles.lineLiveStakeActive, true);
+                    delegatorsLine
+                        .style('stroke', 'url(#gradientDelegators)')
+                        .classed(styles.lineDelegatorsActive, false);
+                } else {
+                    delegatorsLine
+                        .style('stroke', 'url(#gradientDelegatorsHover)')
+                        .classed(styles.lineDelegatorsActive, true);
+                    liveStakeLine
+                        .style('stroke', 'url(#gradientLiveStake)')
+                        .classed(styles.lineLiveStakeActive, false);
+                }
+
+                // Set hover state for tooltip
+                setHoveredData(d);
+
                 focus.select(`.${styles.focusCircleLiveStake}`)
                     .attr('cx', x)
                     .attr('cy', yLiveStake);
@@ -181,47 +246,26 @@ export default function StakePoolGrowthChart({ data }: StakePoolGrowthChartProps
                     .attr('cx', x)
                     .attr('cy', yDelegators);
 
-                setHoveredData(d);
                 setMousePosition({ x: mouseX + margin.left, y: event.offsetY });
             });
 
-        // Add legend
-        const legend = svg.append('g')
-            .attr('class', styles.legend)
-            .attr('transform', `translate(${width / 2 - 60}, -30)`);
-
-        const legendData = [
-            { label: 'Live Stake', class: styles.legendLiveStake, color: 'rgba(255, 255, 255, 0.9)' },
-            { label: 'Delegators', class: styles.legendDelegators, color: 'rgba(255, 255, 255, 0.7)' }
-        ];
-
-        legendData.forEach((item, i) => {
-            const legendItem = legend.append('g')
-                .attr('class', item.class)
-                .attr('transform', `translate(0, ${i * 20})`);
-
-            legendItem.append('line')
-                .attr('x1', 0)
-                .attr('x2', 20)
-                .attr('y1', 0)
-                .attr('y2', 0)
-                .style('stroke', item.color)
-                .style('stroke-width', 2);
-
-            legendItem.append('text')
-                .attr('x', 25)
-                .attr('y', 0)
-                .attr('dy', '0.35em')
-                .style('fill', 'rgba(255, 255, 255, 0.8)')
-                .style('font-size', '12px')
-                .text(item.label);
-        });
-
-    }, [data, hovered]);
+    }, [data]);
 
     return (
         <div className={styles.chartContainer}>
-            <h3 className={styles.chartTitle}>Stake Pool Growth Over Time</h3>
+            <div className={styles.chartHeader}>
+                <h3 className={styles.chartTitle}>Stake Pool Growth Over Time</h3>
+                <div className={styles.legendContainer}>
+                    <div className={styles.legendItem}>
+                        <div className={styles.legendLine} style={{ backgroundColor: 'rgba(255, 255, 255, 0.9)' }}></div>
+                        <span className={styles.legendLabel}>Live Stake</span>
+                    </div>
+                    <div className={styles.legendItem}>
+                        <div className={styles.legendLine} style={{ backgroundColor: 'rgba(255, 255, 255, 0.7)' }}></div>
+                        <span className={styles.legendLabel}>Delegators</span>
+                    </div>
+                </div>
+            </div>
             <div ref={chartRef} className={styles.chart} style={{ position: 'relative' }}>
                 {hoveredData && mousePosition && (
                     <div

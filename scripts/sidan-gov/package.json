@@ -5,6 +5,7 @@
     "type": "module",
     "scripts": {
         "update-catalyst-docs": "node catalyst-proposals/update-catalyst-docs.js",
+        "generate-milestones-data": "node catalyst-proposals/generate-milestones-data.js",
         "generate-org-stats": "node org-stats/generate-org-stats.js",
         "generate-yearly-stats": "node org-stats/generate-yearly-stats.js",
         "fetch-org-stats-data": "node org-stats/fetch-org-stats-data.js",

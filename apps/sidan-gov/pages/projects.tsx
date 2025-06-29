@@ -5,16 +5,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import config from '../config';
 
-// Interface for project data
-interface Project {
-    id: string;
-    name: string;
-    description: string;
-    icon?: string;  // Make icon optional
-    url: string;
-    category?: string;  // Make category optional
-}
-
 // Add this interface near the top with other interfaces
 interface ShowcaseRepo {
     name: string;
@@ -22,36 +12,6 @@ interface ShowcaseRepo {
     icon?: string;  // Make icon optional
     url: string;
 }
-
-// Spotlight Card Component
-const SpotlightCard = ({ project }: { project: Project }) => {
-    return (
-        <div className={styles.projectCard}>
-            <div className={styles.projectHeader}>
-                {project.icon && (
-                    <div className={styles.projectIcon}>
-                        <Image
-                            src={project.icon}
-                            alt={`${project.name} icon`}
-                            width={40}
-                            height={40}
-                        />
-                    </div>
-                )}
-                <h3 className={styles.projectName}>{project.name}</h3>
-            </div>
-            <p className={styles.projectDescription}>{project.description}</p>
-            <Link
-                href={project.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.projectLink}
-            >
-                View Project
-            </Link>
-        </div>
-    );
-};
 
 // Showcase Repo Card
 const ShowcaseRepoCard = ({ repo }: { repo: ShowcaseRepo }) => (
@@ -78,6 +38,68 @@ const ShowcaseRepoCard = ({ repo }: { repo: ShowcaseRepo }) => (
         >
             View Repository
         </Link>
+    </div>
+);
+
+// Cardano Bar Component Card
+const CardanoBarCard = ({ mainRepo, childRepos }: { mainRepo: ShowcaseRepo, childRepos: ShowcaseRepo[] }) => (
+    <div className={styles.cardanoBarContainer}>
+        <div className={styles.mainProjectCard}>
+            <div className={styles.projectHeader}>
+                {mainRepo.icon && (
+                    <div className={styles.projectIcon}>
+                        <Image
+                            src={mainRepo.icon}
+                            alt={`${mainRepo.name} icon`}
+                            width={40}
+                            height={40}
+                        />
+                    </div>
+                )}
+                <h3 className={styles.projectName}>{mainRepo.name}</h3>
+            </div>
+            <p className={styles.projectDescription}>{mainRepo.description}</p>
+            <Link
+                href={mainRepo.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.projectLink}
+            >
+                View Repository
+            </Link>
+        </div>
+        
+        <div className={styles.childProjectsContainer}>
+            <div className={styles.connectionLine}></div>
+            <div className={styles.childProjectsGrid}>
+                {childRepos.map((repo) => (
+                    <div key={repo.name} className={styles.childProjectCard}>
+                        <div className={styles.projectHeader}>
+                            {repo.icon && (
+                                <div className={styles.projectIcon}>
+                                    <Image
+                                        src={repo.icon}
+                                        alt={`${repo.name} icon`}
+                                        width={32}
+                                        height={32}
+                                    />
+                                </div>
+                            )}
+                            <h4 className={styles.childProjectName}>{repo.name}</h4>
+                        </div>
+                        <p className={styles.childProjectDescription}>{repo.description}</p>
+                        <Link
+                            href={repo.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles.childProjectLink}
+                        >
+                            View Repository
+                        </Link>
+                    </div>
+                ))}
+            </div>
+        </div>
     </div>
 );
 
@@ -113,8 +135,27 @@ export default function Projects() {
     const githubUsage = orgData?.currentStats?.github?.core_in_repositories || 0;
     const totalReferences = orgData?.currentStats?.github?.core_in_any_file || 0;
 
-    // Extract showcaseRepos from config
+    // Extract showcaseRepos from config and group them
     const showcaseRepos: ShowcaseRepo[] = (config as { showcaseRepos?: ShowcaseRepo[] }).showcaseRepos || [];
+    
+    // Separate cardano-bar and its child projects
+    const cardanoBar = showcaseRepos.find(repo => repo.name === 'cardano-bar');
+    const cardanoBarLibraries = showcaseRepos.filter(repo => 
+        ['whisky', 'rum', 'gin', 'vodka'].includes(repo.name)
+    );
+    
+    // Combine other repos with highlighted projects (like MeshJS mesh-core)
+    const otherRepos = [
+        ...showcaseRepos.filter(repo => 
+            repo.name !== 'cardano-bar' && !['whisky', 'rum', 'gin', 'vodka'].includes(repo.name)
+        ),
+        ...config.highlightedProjects.map(project => ({
+            name: project.name,
+            description: project.description,
+            icon: project.icon,
+            url: project.url
+        }))
+    ];
 
     return (
         <div className={styles.container}>
@@ -141,51 +182,59 @@ export default function Projects() {
             </div>
 
             <div className={styles.sectionHeader}>
-                <h2 className={styles.sectionTitle}>{config.organization.displayName} Lab Open Source Showcase</h2>
-                <p className={styles.sectionDescription}>Featured open source projects from {config.organization.displayName} Lab</p>
+                <h2 className={styles.sectionTitle}>SIDAN Lab open source</h2>
+                <p className={styles.sectionDescription}>our development & contributions to the cardano open source developer ecosystem</p>
             </div>
-            <div className={styles.projectsGrid}>
-                {showcaseRepos.map((repo) => (
-                    <ShowcaseRepoCard key={repo.name} repo={repo} />
-                ))}
+
+            <div className={styles.showcaseContainer}>
+                {/* Cardano Bar with its libraries */}
+                {cardanoBar && (
+                    <CardanoBarCard 
+                        mainRepo={cardanoBar} 
+                        childRepos={cardanoBarLibraries}
+                    />
+                )}
+                
+                {/* Other standalone repositories */}
+                {otherRepos.length > 0 && (
+                    <div className={styles.otherProjectsGrid}>
+                        {otherRepos.map((repo) => (
+                            <ShowcaseRepoCard key={repo.name} repo={repo} />
+                        ))}
+                    </div>
+                )}
             </div>
 
             <div className={styles.sectionHeader}>
-                <h2 className={styles.sectionTitle}>Spotlight</h2>
-                <p className={styles.sectionDescription}>Highlighting a few innovative projects using {config.organization.displayName} at their projects. Give it a look, maybe get inspired...</p>
+                <h2 className={styles.sectionTitle}>Products</h2>
+                <p className={styles.sectionDescription}>Commercial products and services built by SIDAN Lab</p>
             </div>
 
-            <div className={styles.highlightedGrid}>
-                {config.highlightedProjects.map((project) => (
-                    <SpotlightCard key={project.name} project={project} />
-                ))}
+            <div className={styles.productsGrid}>
+                <div className={styles.productCard}>
+                    <div className={styles.productLogoContainer}>
+                        <Image
+                            src="/deltadefi.png"
+                            alt="DeltaDefi icon"
+                            width={80}
+                            height={80}
+                        />
+                    </div>
+                    <div className={styles.productContent}>
+                        <h3 className={styles.productName}>DeltaDefi</h3>
+                        <p className={styles.productDescription}>High-Frequency Trading Gateway for Cardano</p>
+                        <Link
+                            href="https://github.com/deltadefi-protocol"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles.projectLink}
+                        >
+                            View Repository
+                        </Link>
+                    </div>
+                </div>
             </div>
 
-            <div className={styles.sectionHeader}>
-                <h2 className={styles.sectionTitle}>Trusted by Builders</h2>
-                <p className={styles.sectionDescription}>Awesome projects and organizations building with Mesh</p>
-            </div>
-
-            <div className={styles.buildersGallery}>
-                {config.builderProjects.map(project => (
-                    <Link
-                        key={project.id}
-                        href={project.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={styles.builderItem}
-                    >
-                        {project.icon && (
-                            <Image
-                                src={project.icon}
-                                alt={`${project.id} icon`}
-                                width={100}
-                                height={40}
-                            />
-                        )}
-                    </Link>
-                ))}
-            </div>
         </div>
     );
 } 

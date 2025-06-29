@@ -45,21 +45,14 @@ export default function DRepVoting() {
 
     // Process delegation data for the growth chart
     const delegationTimelineData = useMemo(() => {
-        // console.log('Raw delegation data:', drepVotingData?.delegationData?.timeline);
-
         if (!drepVotingData?.delegationData?.timeline?.epochs) {
-            // console.log('No epochs data found');
             return [];
         }
 
         const currentEpoch = drepVotingData?.delegationData?.timeline?.current_epoch;
         if (!currentEpoch) {
-            // console.log('No current epoch found');
             return [];
         }
-
-        // console.log('Current epoch:', currentEpoch);
-        // console.log('Available epochs:', Object.keys(drepVotingData.delegationData.timeline.epochs));
 
         const EPOCH_LENGTH_DAYS = 5;
         const MS_PER_DAY = 24 * 60 * 60 * 1000;
@@ -68,15 +61,8 @@ export default function DRepVoting() {
             // Convert the timeline data into the format needed for the chart
             const timelineData = Object.entries(drepVotingData.delegationData.timeline.epochs)
                 .map(([epochStr, data]) => {
-                    // console.log(`Processing epoch ${epochStr}:`, {
-                    //     rawVotingPower: data.voting_power_lovelace,
-                    //     rawDelegators: data.total_delegators,
-                    //     votingPowerInAda: parseFloat(data.voting_power_lovelace) / 1_000_000
-                    // });
-
                     const epochNumber = parseInt(epochStr);
                     if (isNaN(epochNumber)) {
-                        // console.log(`Invalid epoch number: ${epochStr}`);
                         return null;
                     }
 
@@ -97,17 +83,11 @@ export default function DRepVoting() {
                         totalAdaDelegated,
                         totalDelegators: data.total_delegators || 0
                     };
-                    // console.log(`Processed data point for epoch ${epochStr}:`, result);
                     return result;
                 })
                 .filter((item): item is NonNullable<typeof item> => item !== null)
                 .sort((a, b) => a.date.getTime() - b.date.getTime());
 
-            // console.log('Final timeline data (sorted by date):', timelineData.map(d => ({
-            //     date: d.date.toISOString(),
-            //     totalAdaDelegated: d.totalAdaDelegated.toLocaleString(),
-            //     totalDelegators: d.totalDelegators
-            // })));
             return timelineData;
         } catch (error) {
             console.error('Error processing delegation timeline data:', error);
@@ -173,12 +153,7 @@ export default function DRepVoting() {
                 votingParticipationRate={drepMetrics.votingParticipationRate}
             />
 
-            <div className={styles.bioSection}>
-                <h2 className={styles.bioTitle}>{config.organization.displayName} DRep Motivation</h2>
-                <p className={styles.bioContent}>
-                    {drepVotingData?.delegationData?.metadata?.motivations ||
-                        'No motivations data available from blockchain'}
-                </p>
+            <div className={styles.drepIdSection}>
                 <div className={styles.drepId} onClick={handleCopyDrepId}>
                     <span className={styles.drepIdIndicator}></span>
                     <span className={styles.drepIdText}>
@@ -192,7 +167,18 @@ export default function DRepVoting() {
                 </div>
             </div>
 
+            {delegationTimelineData.length > 0 && (
+                <DelegationGrowthChart data={delegationTimelineData} />
+            )}
+
             <div className={styles.infoCardsSection}>
+                <div className={styles.infoCard}>
+                    <h3 className={styles.infoCardTitle}>Motivation</h3>
+                    <p className={styles.infoCardContent}>
+                        {drepVotingData?.delegationData?.metadata?.motivations ||
+                            'No motivations data available from blockchain'}
+                    </p>
+                </div>
                 <div className={styles.infoCard}>
                     <h3 className={styles.infoCardTitle}>Objectives</h3>
                     <p className={styles.infoCardContent}>
@@ -208,10 +194,6 @@ export default function DRepVoting() {
                     </p>
                 </div>
             </div>
-
-            {delegationTimelineData.length > 0 && (
-                <DelegationGrowthChart data={delegationTimelineData} />
-            )}
 
             <div className={styles.votingProgress}>
                 <h2 className={styles.sectionTitle}>{config.organization.displayName} DRep votes and rationales</h2>
