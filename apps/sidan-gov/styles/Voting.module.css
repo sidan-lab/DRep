@@ -951,10 +951,13 @@
 
 .infoCardsSection {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
     margin-bottom: 2rem;
     animation: fadeInUp 0.8s ease-out 1s both;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .infoCard {
@@ -1100,11 +1103,17 @@
     max-width: 80ch;
 }
 
+.drepIdSection {
+    display: flex;
+    justify-content: flex-start;
+    margin: 2rem 0;
+    animation: fadeInUp 0.8s ease-out 0.8s both;
+}
+
 .drepId {
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    margin-top: 1.5rem;
     padding: 1rem 1.25rem;
     background: linear-gradient(165deg,
             rgba(255, 255, 255, 0.03) 0%,
@@ -1116,7 +1125,6 @@
     color: rgba(255, 255, 255, 0.7);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
-    width: 100%;
     max-width: 100%;
     overflow-wrap: break-word;
     word-wrap: break-word;
@@ -1347,11 +1355,13 @@
         padding-top: 1.25rem;
     }
 
+    .drepIdSection {
+        margin: 1.5rem 0;
+    }
+
     .drepId {
-        font-size: 0.75rem;
-        padding: 0.75rem 1rem;
-        gap: 0.5rem;
-        align-items: center;
+        padding: 0.875rem 1rem;
+        font-size: 0.8rem;
     }
 
     .drepIdText {
@@ -1393,9 +1403,16 @@
 }
 
 @media (max-width: 480px) {
+    .drepIdSection {
+        margin: 1rem 0;
+    }
+
     .drepId {
-        font-size: 0.7rem;
-        padding: 0.5rem 0.75rem;
+        padding: 0.75rem 0.875rem;
+        font-size: 0.75rem;
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
     }
 
     .drepIdIndicator {
@@ -1604,7 +1621,8 @@
 
 @media (max-width: 1024px) {
     .infoCardsSection {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1.25rem;
     }
 }
 
@@ -1612,6 +1630,7 @@
     .infoCardsSection {
         grid-template-columns: 1fr;
         gap: 1rem;
+        margin-bottom: 1.5rem;
     }
 
     .infoCard {
@@ -1629,6 +1648,11 @@
 }
 
 @media (max-width: 480px) {
+    .infoCardsSection {
+        gap: 0.75rem;
+        margin-bottom: 1rem;
+    }
+
     .infoCard {
         padding: 1rem;
     }

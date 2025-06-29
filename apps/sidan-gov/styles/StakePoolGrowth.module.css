@@ -21,13 +21,44 @@
         0 0 0 1px rgba(255, 255, 255, 0.1) inset;
 }
 
+.chartHeader {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 1.5rem;
+    gap: 2rem;
+}
+
 .chartTitle {
     font-size: 1.5rem;
     font-weight: 600;
     color: rgba(255, 255, 255, 0.95);
-    margin-bottom: 1.5rem;
-    text-align: center;
+    margin: 0;
     letter-spacing: -0.01em;
+}
+
+.legendContainer {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.legendItem {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.legendLine {
+    width: 20px;
+    height: 3px;
+    border-radius: 2px;
+}
+
+.legendLabel {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
 }
 
 .chart {
@@ -76,12 +107,12 @@
 }
 
 .lineLiveStake:hover {
-    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.6)) drop-shadow(0 0 16px rgba(255, 255, 255, 0.3));
+    filter: drop-shadow(0 0 8px rgba(56, 232, 225, 0.6)) drop-shadow(0 0 16px rgba(56, 232, 225, 0.3));
 }
 
 .lineLiveStakeActive {
     stroke-width: 4;
-    filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.8)) drop-shadow(0 0 24px rgba(255, 255, 255, 0.4));
+    filter: drop-shadow(0 0 12px rgba(56, 232, 225, 0.8)) drop-shadow(0 0 24px rgba(56, 232, 225, 0.4));
 }
 
 .lineDelegators {
@@ -93,12 +124,12 @@
 }
 
 .lineDelegators:hover {
-    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.6)) drop-shadow(0 0 16px rgba(255, 255, 255, 0.3));
+    filter: drop-shadow(0 0 8px rgba(56, 232, 225, 0.6)) drop-shadow(0 0 16px rgba(56, 232, 225, 0.3));
 }
 
 .lineDelegatorsActive {
     stroke-width: 4;
-    filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.8)) drop-shadow(0 0 24px rgba(255, 255, 255, 0.4));
+    filter: drop-shadow(0 0 12px rgba(56, 232, 225, 0.8)) drop-shadow(0 0 24px rgba(56, 232, 225, 0.4));
 }
 
 .focus {
@@ -106,19 +137,19 @@
 }
 
 .focusCircleLiveStake {
-    fill: rgba(255, 255, 255, 0.9);
-    stroke: rgba(255, 255, 255, 0.8);
+    fill: rgba(56, 232, 225, 0.9);
+    stroke: rgba(56, 232, 225, 0.8);
     stroke-width: 2;
     transition: all 0.2s ease;
-    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.6));
+    filter: drop-shadow(0 0 8px rgba(56, 232, 225, 0.6));
 }
 
 .focusCircleDelegators {
-    fill: rgba(255, 255, 255, 0.7);
-    stroke: rgba(255, 255, 255, 0.8);
+    fill: rgba(56, 232, 225, 0.7);
+    stroke: rgba(56, 232, 225, 0.8);
     stroke-width: 2;
     transition: all 0.2s ease;
-    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.6));
+    filter: drop-shadow(0 0 8px rgba(56, 232, 225, 0.6));
 }
 
 .overlay {
@@ -187,9 +218,18 @@
         margin-bottom: 1.5rem;
     }
 
+    .chartHeader {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
     .chartTitle {
         font-size: 1.25rem;
-        margin-bottom: 1rem;
+    }
+
+    .legendContainer {
+        gap: 1rem;
     }
 
     .chart {
@@ -207,8 +247,20 @@
         padding: 1rem;
     }
 
+    .chartHeader {
+        margin-bottom: 1rem;
+    }
+
     .chartTitle {
         font-size: 1.125rem;
+    }
+
+    .legendContainer {
+        flex-wrap: wrap;
+    }
+
+    .legendLabel {
+        font-size: 0.8rem;
     }
 
     .chart {

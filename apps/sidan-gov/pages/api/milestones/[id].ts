@@ -1,5 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import config from '../../../config';
+import fs from 'fs';
+import path from 'path';
 
 // Get configuration values
 const ORGANIZATION_NAME = config.organization.name;
@@ -18,16 +20,30 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
 
     try {
-        // Fetch milestones data from GitHub
-        const response = await fetch(`${BASE_URL}/${config.outputPaths.catalystProposalsDir}/milestones-data.json`);
+        let data;
         
-        if (!response.ok) {
-            console.error('Failed to fetch milestones data:', response.status, response.statusText);
-            return res.status(500).json({ message: 'Failed to fetch milestones data' });
+        // Try to read local file first (for development)
+        const localFilePath = path.join(process.cwd(), '..', '..', 'sidan-gov-updates', 'catalyst-proposals', 'milestones-data.json');
+        
+        if (fs.existsSync(localFilePath)) {
+            console.log('Reading milestone data from local file:', localFilePath);
+            const localData = fs.readFileSync(localFilePath, 'utf-8');
+            data = JSON.parse(localData);
+        } else {
+            // Fallback to GitHub for production
+            console.log('Reading milestone data from GitHub:', `${BASE_URL}/${config.outputPaths.catalystProposalsDir}/milestones-data.json`);
+            const response = await fetch(`${BASE_URL}/${config.outputPaths.catalystProposalsDir}/milestones-data.json`);
+            
+            if (!response.ok) {
+                console.error('Failed to fetch milestones data from GitHub:', response.status, response.statusText);
+                return res.status(500).json({ message: 'Failed to fetch milestones data' });
+            }
+            
+            data = await response.json();
         }
         
-        const data = await response.json();
         const milestones = data.milestones[id] || [];
+        console.log(`Found ${milestones.length} milestones for project ${id}`);
         
         return res.status(200).json(milestones);
     } catch (error) {
