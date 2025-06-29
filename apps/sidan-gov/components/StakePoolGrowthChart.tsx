@@ -15,7 +15,6 @@ interface StakePoolGrowthChartProps {
 
 export default function StakePoolGrowthChart({ data }: StakePoolGrowthChartProps) {
     const chartRef = useRef<HTMLDivElement>(null);
-    const [hovered, setHovered] = useState<'liveStake' | 'delegators' | null>(null);
     const [hoveredData, setHoveredData] = useState<StakePoolDataPoint | null>(null);
     const [mousePosition, setMousePosition] = useState<{ x: number; y: number } | null>(null);
 
@@ -185,7 +184,7 @@ export default function StakePoolGrowthChart({ data }: StakePoolGrowthChartProps
             .on('mouseover', () => focus.style('display', null))
             .on('mouseout', () => {
                 focus.style('display', 'none');
-                
+
                 // Reset line styles to default
                 liveStakeLine
                     .style('stroke', 'url(#gradientLiveStake)')
@@ -193,8 +192,7 @@ export default function StakePoolGrowthChart({ data }: StakePoolGrowthChartProps
                 delegatorsLine
                     .style('stroke', 'url(#gradientDelegators)')
                     .classed(styles.lineDelegatorsActive, false);
-                
-                setHovered(null);
+
                 setHoveredData(null);
                 setMousePosition(null);
             })
@@ -238,7 +236,7 @@ export default function StakePoolGrowthChart({ data }: StakePoolGrowthChartProps
                 }
 
                 // Set hover state for tooltip
-                setHovered(closestLine);
+                setHoveredData(d);
 
                 focus.select(`.${styles.focusCircleLiveStake}`)
                     .attr('cx', x)
@@ -248,7 +246,6 @@ export default function StakePoolGrowthChart({ data }: StakePoolGrowthChartProps
                     .attr('cx', x)
                     .attr('cy', yDelegators);
 
-                setHoveredData(d);
                 setMousePosition({ x: mouseX + margin.left, y: event.offsetY });
             });
 

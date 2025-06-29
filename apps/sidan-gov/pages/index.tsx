@@ -3,7 +3,7 @@ import styles from "../styles/page.module.css";
 import Link from 'next/link';
 
 export default function Dashboard() {
-  const { orgData, catalystData, drepVotingData, discordStats, stakePoolData, isLoading, error } = useData();
+  const { isLoading, error } = useData();
 
   if (isLoading) {
     return (
@@ -20,20 +20,6 @@ export default function Dashboard() {
       </div>
     );
   }
-
-  const currentStats = orgData?.currentStats;
-  const votes = drepVotingData?.votes || [];
-  const projects = catalystData?.catalystData?.projects || [];
-
-  // Get latest Discord stats
-  const latestDiscordStats = discordStats?.stats ?
-    Object.values(discordStats.stats).pop() : null;
-
-  // Get stake pool info
-  const poolInfo = stakePoolData?.poolInfo?.poolInfo;
-
-  // Get DRep delegation info
-  const drepDelegation = drepVotingData?.delegationData;
 
   return (
     <div className={styles.page}>

@@ -5,16 +5,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import config from '../config';
 
-// Interface for project data
-interface Project {
-    id: string;
-    name: string;
-    description: string;
-    icon?: string;  // Make icon optional
-    url: string;
-    category?: string;  // Make category optional
-}
-
 // Add this interface near the top with other interfaces
 interface ShowcaseRepo {
     name: string;
@@ -22,8 +12,6 @@ interface ShowcaseRepo {
     icon?: string;  // Make icon optional
     url: string;
 }
-
-
 
 // Showcase Repo Card
 const ShowcaseRepoCard = ({ repo }: { repo: ShowcaseRepo }) => (
