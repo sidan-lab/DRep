@@ -39,13 +39,51 @@
     line-height: 1.6;
 }
 
-/* Page Navigation Grid */
+/* Page Navigation Grid - Masonry Style */
 .pageGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 24px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, minmax(200px, auto));
+    gap: 20px;
     margin-bottom: 48px;
-    grid-auto-rows: auto;
+    height: 70vh;
+    max-height: 600px;
+}
+
+/* Specific card positioning for optimal layout */
+.pageGrid > :nth-child(1) { /* DRep Voting */
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.pageGrid > :nth-child(2) { /* Catalyst Proposals */
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.pageGrid > :nth-child(3) { /* Sidan Stats */
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.pageGrid > :nth-child(4) { /* Stake Pool */
+    grid-column: 4;
+    grid-row: 1;
+}
+
+.pageGrid > :nth-child(5) { /* Projects */
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.pageGrid > :nth-child(6) { /* Contributors */
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.pageGrid > :nth-child(7) { /* Constitutional Committee */
+    grid-column: 3 / 5;
+    grid-row: 2;
 }
 
 .pageCard {
@@ -94,15 +132,17 @@
 .pageImageContainer {
     position: relative;
     width: 100%;
+    height: 140px;
     overflow: hidden;
     border-radius: 0 0 16px 16px;
     z-index: 2;
-    flex-grow: 1;
+    flex-shrink: 0;
 }
 
 .pageImage {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     display: block;
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -112,7 +152,7 @@
 }
 
 .pageCardContent {
-    padding: 20px 24px;
+    padding: 16px 20px;
     z-index: 2;
     position: relative;
     display: flex;
@@ -120,6 +160,7 @@
     justify-content: center;
     border-radius: 16px 16px 0 0;
     background: rgba(255, 255, 255, 0.01);
+    min-height: 60px;
 }
 
 .pageTitle {
@@ -187,6 +228,25 @@
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .pageGrid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, minmax(200px, auto));
+        gap: 18px;
+        height: auto;
+        max-height: none;
+    }
+    
+    /* 3-column layout positioning */
+    .pageGrid > :nth-child(1) { grid-column: 1; grid-row: 1; }
+    .pageGrid > :nth-child(2) { grid-column: 2; grid-row: 1; }
+    .pageGrid > :nth-child(3) { grid-column: 3; grid-row: 1; }
+    .pageGrid > :nth-child(4) { grid-column: 1; grid-row: 2; }
+    .pageGrid > :nth-child(5) { grid-column: 2; grid-row: 2; }
+    .pageGrid > :nth-child(6) { grid-column: 3; grid-row: 2; }
+    .pageGrid > :nth-child(7) { grid-column: 1 / 4; grid-row: 3; }
+}
+
 @media (max-width: 768px) {
     .main {
         gap: 32px;
@@ -206,9 +266,21 @@
     }
 
     .pageGrid {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, minmax(180px, auto));
+        gap: 16px;
+        height: auto;
+        max-height: none;
     }
+    
+    /* Responsive card positioning for tablet */
+    .pageGrid > :nth-child(1) { grid-column: 1; grid-row: 1; }
+    .pageGrid > :nth-child(2) { grid-column: 2; grid-row: 1; }
+    .pageGrid > :nth-child(3) { grid-column: 1; grid-row: 2; }
+    .pageGrid > :nth-child(4) { grid-column: 2; grid-row: 2; }
+    .pageGrid > :nth-child(5) { grid-column: 1; grid-row: 3; }
+    .pageGrid > :nth-child(6) { grid-column: 2; grid-row: 3; }
+    .pageGrid > :nth-child(7) { grid-column: 1 / 3; grid-row: 4; }
 
     .pageCard {
         border-radius: 16px;
@@ -216,6 +288,7 @@
 
     .pageImageContainer {
         border-radius: 0 0 12px 12px;
+        height: 120px;
     }
 
     .pageCardContent {
@@ -230,6 +303,27 @@
 }
 
 @media (max-width: 480px) {
+    .pageGrid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(7, minmax(160px, auto));
+        gap: 12px;
+        height: auto;
+        max-height: none;
+    }
+    
+    /* Mobile card positioning - single column */
+    .pageGrid > :nth-child(1) { grid-column: 1; grid-row: 1; }
+    .pageGrid > :nth-child(2) { grid-column: 1; grid-row: 2; }
+    .pageGrid > :nth-child(3) { grid-column: 1; grid-row: 3; }
+    .pageGrid > :nth-child(4) { grid-column: 1; grid-row: 4; }
+    .pageGrid > :nth-child(5) { grid-column: 1; grid-row: 5; }
+    .pageGrid > :nth-child(6) { grid-column: 1; grid-row: 6; }
+    .pageGrid > :nth-child(7) { grid-column: 1; grid-row: 7; }
+    
+    .pageImageContainer {
+        height: 100px;
+    }
+
     .title {
         font-size: 1.75rem;
     }

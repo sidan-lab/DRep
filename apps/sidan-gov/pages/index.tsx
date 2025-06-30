@@ -110,6 +110,19 @@ export default function Dashboard() {
               />
             </div>
           </Link>
+
+          <Link href="/constitutional-committee" className={styles.pageCard}>
+            <div className={styles.pageCardContent}>
+              <h3 className={styles.pageTitle}>Constitutional Committee</h3>
+            </div>
+            <div className={styles.pageImageContainer}>
+              <img 
+                src="/cc-preview.png" 
+                alt="Constitutional Committee Preview" 
+                className={styles.pageImage}
+              />
+            </div>
+          </Link>
         </div>
 
 
