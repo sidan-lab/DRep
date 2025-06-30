@@ -1,10 +1,10 @@
 {
   "year": 2025,
   "yearlyTotals": {
-    "csl_rs_browser": 27657,
-    "csl_rs_nodejs": 27945,
-    "whisky_js_browser": 1926,
-    "whisky_js_nodejs": 1894
+    "csl_rs_browser": 28823,
+    "csl_rs_nodejs": 29101,
+    "whisky_js_browser": 2071,
+    "whisky_js_nodejs": 2036
   },
   "monthlyDownloads": {
     "csl_rs_browser": [
@@ -35,8 +35,8 @@
       },
       {
         "month": "June",
-        "downloads": 3769,
-        "trend": "📉"
+        "downloads": 4935,
+        "trend": "📈"
       },
       {
         "month": "July",
@@ -97,8 +97,8 @@
       },
       {
         "month": "June",
-        "downloads": 3797,
-        "trend": "📉"
+        "downloads": 4953,
+        "trend": "📈"
       },
       {
         "month": "July",
@@ -150,7 +150,7 @@
       {
         "month": "April",
         "downloads": 712,
-        "trend": "🔥"
+        "trend": "📈"
       },
       {
         "month": "May",
@@ -159,8 +159,8 @@
       },
       {
         "month": "June",
-        "downloads": 601,
-        "trend": "📉"
+        "downloads": 746,
+        "trend": "🔥"
       },
       {
         "month": "July",
@@ -212,7 +212,7 @@
       {
         "month": "April",
         "downloads": 686,
-        "trend": "🔥"
+        "trend": "📈"
       },
       {
         "month": "May",
@@ -221,8 +221,8 @@
       },
       {
         "month": "June",
-        "downloads": 598,
-        "trend": "📉"
+        "downloads": 740,
+        "trend": "🔥"
       },
       {
         "month": "July",
@@ -290,7 +290,7 @@
     {
       "month": "June",
       "projects": 2,
-      "files": 53,
+      "files": 56,
       "repositories": 236
     },
     {
@@ -340,13 +340,13 @@
       "downloads": 5362
     },
     "whisky_js_browser": {
-      "name": "April",
-      "downloads": 712
+      "name": "June",
+      "downloads": 746
     },
     "whisky_js_nodejs": {
-      "name": "April",
-      "downloads": 686
+      "name": "June",
+      "downloads": 740
     }
   },
-  "lastUpdated": "2025-06-26T01:22:01.650Z"
+  "lastUpdated": "2025-06-30T10:33:43.077Z"
 }
