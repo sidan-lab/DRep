@@ -6,6 +6,7 @@ import RepoDonutChart from './RepoDonutChart';
 import { IoClose } from 'react-icons/io5';
 import { FaGithub, FaCode, FaCodeBranch, FaCodePullRequest } from 'react-icons/fa6';
 import ContributionTimeline from './ContributionTimeline';
+import config from '../config';
 
 interface ContributorModalProps {
     contributor: Contributor;
@@ -128,7 +129,7 @@ export const ContributorModal: React.FC<ContributorModalProps> = ({
                                     <tr key={repo.name}>
                                         <td>
                                             <a
-                                                href={`https://github.com/MeshJS/${repo.name}`}
+                                                href={`https://github.com/${config.organization.name}/${repo.name}`}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                             >

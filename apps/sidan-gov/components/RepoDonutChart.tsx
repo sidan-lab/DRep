@@ -1,5 +1,6 @@
-import { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styles from '../styles/ContributorModal.module.css';
+import config from '../config';
 
 interface ContributorRepository {
     name: string;
@@ -206,7 +207,7 @@ const RepoDonutChart: React.FC<RepoDonutChartProps> = ({ repositories }) => {
                 {data.map((repo) => (
                     <a
                         key={repo.name}
-                        href={repo.name === 'Others' ? 'https://github.com/MeshJS' : `https://github.com/MeshJS/${repo.name}`}
+                        href={repo.name === 'Others' ? `https://github.com/${config.organization.name}` : `https://github.com/${config.organization.name}/${repo.name}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className={styles.legendItem}
