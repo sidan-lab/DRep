@@ -116,7 +116,7 @@ export default function ConstitutionalCommittee() {
                 <div className={styles.timelineCard}>
                   <h3 className={styles.timelineTitle}>Our Motivations for the CC</h3>
                   <p className={styles.timelineText}>
-                    We already take governance seriously as a DRep and we see the CC as a natural next step to protect and uphold the Cardano Constitution. The Constitution is what enables decentralized governance to exist, and the CC's job is responsible for ensuring that the Constitution's principles are upheld and enforced. That is a responsibility we are ready to take on.
+                    We already take governance seriously as a DRep and we see the CC as a natural next step to protect and uphold the Cardano Constitution. The Constitution is what enables decentralized governance to exist, and the CC&lsquo;s job is responsible for ensuring that the Constitution&lsquo;s principles are upheld and enforced. That is a responsibility we are ready to take on.
                   </p>
                   <p className={styles.timelineText}>
                     To have hands-on experience at Cardano core governance, to build serious expertise & understanding and to learn and train ourselves at the hardest of all governance roles.
@@ -134,7 +134,7 @@ export default function ConstitutionalCommittee() {
                 <div className={styles.timelineCard}>
                   <h3 className={styles.timelineTitle}>What to Expect from Us</h3>
                   <p className={styles.timelineText}>
-                    We will investigate each proposal's constitutionality with care and without shortcuts. We will maintain full transparency by publishing all rationales, votes, and activity through a new open-source repository on GitHub, as we already do for our DRep actions. We commit uncapped time to due diligence. No vote will be cast without a proper review.
+                    We will investigate each proposal&lsquo;s constitutionality with care and without shortcuts. We will maintain full transparency by publishing all rationales, votes, and activity through a new open-source repository on GitHub, as we already do for our DRep actions. We commit uncapped time to due diligence. No vote will be cast without a proper review.
                   </p>
                 </div>
               </div>
