@@ -68,7 +68,7 @@ const CardanoBarCard = ({ mainRepo, childRepos }: { mainRepo: ShowcaseRepo, chil
                 View Repository
             </Link>
         </div>
-        
+
         <div className={styles.childProjectsContainer}>
             <div className={styles.connectionLine}></div>
             <div className={styles.childProjectsGrid}>
@@ -137,16 +137,16 @@ export default function Projects() {
 
     // Extract showcaseRepos from config and group them
     const showcaseRepos: ShowcaseRepo[] = (config as { showcaseRepos?: ShowcaseRepo[] }).showcaseRepos || [];
-    
+
     // Separate cardano-bar and its child projects
     const cardanoBar = showcaseRepos.find(repo => repo.name === 'cardano-bar');
-    const cardanoBarLibraries = showcaseRepos.filter(repo => 
+    const cardanoBarLibraries = showcaseRepos.filter(repo =>
         ['whisky', 'rum', 'gin', 'vodka'].includes(repo.name)
     );
-    
-    // Combine other repos with highlighted projects (like MeshJS mesh-core)
+
+    // Combine other repos with highlighted projects
     const otherRepos = [
-        ...showcaseRepos.filter(repo => 
+        ...showcaseRepos.filter(repo =>
             repo.name !== 'cardano-bar' && !['whisky', 'rum', 'gin', 'vodka'].includes(repo.name)
         ),
         ...config.highlightedProjects.map(project => ({
@@ -189,12 +189,12 @@ export default function Projects() {
             <div className={styles.showcaseContainer}>
                 {/* Cardano Bar with its libraries */}
                 {cardanoBar && (
-                    <CardanoBarCard 
-                        mainRepo={cardanoBar} 
+                    <CardanoBarCard
+                        mainRepo={cardanoBar}
                         childRepos={cardanoBarLibraries}
                     />
                 )}
-                
+
                 {/* Other standalone repositories */}
                 {otherRepos.length > 0 && (
                     <div className={styles.otherProjectsGrid}>

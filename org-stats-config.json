@@ -17,6 +17,20 @@
         "governance": "DRep",
         "dependentsCountRepo": "whisky"
     },
+    "excludedRepositories": [
+        "merkle-patricia-forestry",
+        "CIPs",
+        "awesome-aiken",
+        "cardano-devkit",
+        "mesh-lower-level-api-demo",
+        "next-stitches-mesh",
+        "mesh-express",
+        "mesh-pbl"
+    ],
+    "extendedOrgName": "deltadefi-protocol",
+    "extendedOrgExcludedRepos": [
+        ""
+    ],
     "poolId": "pool1wnrrg33lw9fxcn0h3x3vexh78up660ajgk7pvrlrz5kkcgh9khs",
     "drepId": "drep1yfjez5zup0gystdvc933w2mn8k64hcy3krvc2namluwjxdcfhm8wd",
     "npmPackages": {

@@ -214,9 +214,10 @@ export async function fetchSidanContributors(githubToken) {
     let page = 1;
     let hasMoreRepos = true;
 
+    // Fetch repositories from main organization
     while (hasMoreRepos) {
         try {
-            console.log(`Fetching repositories page ${page}...`);
+            console.log(`Fetching repositories page ${page} from ${config.organization.name}...`);
             const reposResponse = await axios.get(`https://api.github.com/orgs/${config.organization.name}/repos`, {
                 params: {
                     type: 'all',    // Include all repos: public, private, forks, etc.
@@ -241,16 +242,75 @@ export async function fetchSidanContributors(githubToken) {
         }
     }
 
+    // Fetch repositories from extended organization if configured
+    if (config.extendedOrgName && config.extendedOrgName.trim() !== '') {
+        console.log(`\nFetching repositories from extended organization: ${config.extendedOrgName}`);
+        page = 1;
+        hasMoreRepos = true;
+
+        while (hasMoreRepos) {
+            try {
+                console.log(`Fetching repositories page ${page} from ${config.extendedOrgName}...`);
+                const reposResponse = await axios.get(`https://api.github.com/orgs/${config.extendedOrgName}/repos`, {
+                    params: {
+                        type: 'all',    // Include all repos: public, private, forks, etc.
+                        per_page: 100,  // Max allowed per page
+                        page: page
+                    },
+                    headers: {
+                        'Accept': 'application/vnd.github.v3+json',
+                        'Authorization': `token ${githubToken}`
+                    }
+                });
+
+                if (reposResponse.data.length === 0) {
+                    hasMoreRepos = false;
+                } else {
+                    allRepos = allRepos.concat(reposResponse.data);
+                    page++;
+                }
+            } catch (error) {
+                if (error.response && error.response.status === 404) {
+                    console.error(`Extended organization '${config.extendedOrgName}' not found. Please check the organization name in the config.`);
+                } else if (error.response && error.response.status === 403) {
+                    console.error(`Access denied to extended organization '${config.extendedOrgName}'. Please check your GitHub token permissions.`);
+                } else {
+                    console.error(`Error fetching repositories page ${page} from ${config.extendedOrgName}:`, error.message);
+                }
+                hasMoreRepos = false;
+            }
+        }
+    } else if (config.extendedOrgName !== undefined) {
+        console.log(`\nSkipping extended organization: '${config.extendedOrgName}' is empty or invalid`);
+    }
+
     console.log(`Found ${allRepos.length} repositories in the ${config.organization.displayName} organization:`);
     allRepos.forEach(repo => {
         console.log(`- ${repo.name} (${repo.private ? 'private' : 'public'}${repo.fork ? ', fork' : ''})`);
     });
 
+    // Filter out excluded repositories
+    const excludedRepos = Array.isArray(config.excludedRepositories) ? config.excludedRepositories : [];
+    const extendedExcludedRepos = Array.isArray(config.extendedOrgExcludedRepos) ? config.extendedOrgExcludedRepos : [];
+    const allExcludedRepos = [...excludedRepos, ...extendedExcludedRepos];
+    const filteredRepos = allRepos.filter(repo => !allExcludedRepos.includes(repo.name));
+
+    if (allExcludedRepos.length > 0) {
+        console.log(`Excluded repositories from ${config.organization.name}: ${excludedRepos.join(', ')}`);
+        if (config.extendedOrgName && config.extendedOrgName.trim() !== '' && extendedExcludedRepos.length > 0) {
+            console.log(`Excluded repositories from ${config.extendedOrgName}: ${extendedExcludedRepos.join(', ')}`);
+        }
+        console.log(`Processing ${filteredRepos.length} repositories (${allRepos.length - filteredRepos.length} excluded)`);
+    }
+
     const contributorsMap = new Map();
 
-    for (const repo of allRepos) {
+    for (const repo of filteredRepos) {
         console.log(`Fetching contributors for ${repo.name}...`);
         try {
+            // Determine the organization name for this repository
+            const repoOrgName = repo.owner?.login || config.organization.name;
+
             // Fetch commits with timestamps
             console.log(`Fetching commits with timestamps for ${repo.name}...`);
             let commitsPage = 1;
@@ -258,7 +318,7 @@ export async function fetchSidanContributors(githubToken) {
 
             while (hasMoreCommits) {
                 try {
-                    const commitsResponse = await axios.get(`https://api.github.com/repos/${config.organization.name}/${repo.name}/commits`, {
+                    const commitsResponse = await axios.get(`https://api.github.com/repos/${repoOrgName}/${repo.name}/commits`, {
                         params: {
                             per_page: 100,
                             page: commitsPage
@@ -338,7 +398,7 @@ export async function fetchSidanContributors(githubToken) {
             while (hasMorePulls) {
                 try {
                     const pullsResponse = await axios.get(
-                        `https://api.github.com/repos/${config.organization.name}/${repo.name}/pulls`,
+                        `https://api.github.com/repos/${repoOrgName}/${repo.name}/pulls`,
                         {
                             params: {
                                 state: 'closed',  // Get closed PRs (merged ones are a subset of closed)
@@ -382,7 +442,7 @@ export async function fetchSidanContributors(githubToken) {
                 try {
                     // Use the issues endpoint which also lists PRs
                     const issuesResponse = await axios.get(
-                        `https://api.github.com/repos/${config.organization.name}/${repo.name}/issues`,
+                        `https://api.github.com/repos/${repoOrgName}/${repo.name}/issues`,
                         {
                             params: {
                                 state: 'all',

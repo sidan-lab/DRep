@@ -20,9 +20,10 @@ export async function fetchYearlyContributors(githubToken) {
     let hasMoreRepos = true;
     let earliestYear = new Date().getFullYear(); // Initialize with current year
 
+    // Fetch repositories from main organization
     while (hasMoreRepos) {
         try {
-            console.log(`Fetching repositories page ${page}...`);
+            console.log(`Fetching repositories page ${page} from ${config.organization.name}...`);
             const reposResponse = await axios.get(`https://api.github.com/orgs/${config.organization.name}/repos`, {
                 params: {
                     type: 'all',
@@ -54,8 +55,71 @@ export async function fetchYearlyContributors(githubToken) {
         }
     }
 
+    // Fetch repositories from extended organization if configured
+    if (config.extendedOrgName && config.extendedOrgName.trim() !== '') {
+        console.log(`\nFetching repositories from extended organization: ${config.extendedOrgName}`);
+        page = 1;
+        hasMoreRepos = true;
+
+        while (hasMoreRepos) {
+            try {
+                console.log(`Fetching repositories page ${page} from ${config.extendedOrgName}...`);
+                const reposResponse = await axios.get(`https://api.github.com/orgs/${config.extendedOrgName}/repos`, {
+                    params: {
+                        type: 'all',
+                        per_page: 100,
+                        page: page
+                    },
+                    headers: {
+                        'Accept': 'application/vnd.github.v3+json',
+                        'Authorization': `token ${githubToken}`
+                    }
+                });
+
+                if (reposResponse.data.length === 0) {
+                    hasMoreRepos = false;
+                } else {
+                    // Find the earliest repository creation date
+                    reposResponse.data.forEach(repo => {
+                        const createdYear = new Date(repo.created_at).getFullYear();
+                        if (createdYear < earliestYear) {
+                            earliestYear = createdYear;
+                        }
+                    });
+                    allRepos = allRepos.concat(reposResponse.data);
+                    page++;
+                }
+            } catch (error) {
+                if (error.response && error.response.status === 404) {
+                    console.error(`Extended organization '${config.extendedOrgName}' not found. Please check the organization name in the config.`);
+                } else if (error.response && error.response.status === 403) {
+                    console.error(`Access denied to extended organization '${config.extendedOrgName}'. Please check your GitHub token permissions.`);
+                } else {
+                    console.error(`Error fetching repositories page ${page} from ${config.extendedOrgName}:`, error.message);
+                }
+                hasMoreRepos = false;
+            }
+        }
+    } else if (config.extendedOrgName !== undefined) {
+        console.log(`\nSkipping extended organization: '${config.extendedOrgName}' is empty or invalid`);
+    }
+
     console.log(`Found ${allRepos.length} repositories in the ${config.organization.displayName} organization`);
     console.log(`Earliest repository creation year: ${earliestYear}`);
+
+    // Filter out excluded repositories
+    const excludedRepos = Array.isArray(config.excludedRepositories) ? config.excludedRepositories : [];
+    const extendedExcludedRepos = Array.isArray(config.extendedOrgExcludedRepos) ? config.extendedOrgExcludedRepos : [];
+    const allExcludedRepos = [...excludedRepos, ...extendedExcludedRepos];
+    const filteredRepos = allRepos.filter(repo => !allExcludedRepos.includes(repo.name));
+
+    if (allExcludedRepos.length > 0) {
+        console.log(`Excluded repositories from ${config.organization.name}: ${excludedRepos.join(', ')}`);
+        if (config.extendedOrgName && config.extendedOrgName.trim() !== '' && extendedExcludedRepos.length > 0) {
+            console.log(`Excluded repositories from ${config.extendedOrgName}: ${extendedExcludedRepos.join(', ')}`);
+        }
+        console.log(`Processing ${filteredRepos.length} repositories (${allRepos.length - filteredRepos.length} excluded)`);
+    }
 
     // Get existing yearly files
     const existingYears = new Set();
@@ -83,16 +147,19 @@ export async function fetchYearlyContributors(githubToken) {
         console.log(`\nProcessing data for year ${year}...`);
         const contributorsMap = new Map();
 
-        for (const repo of allRepos) {
+        for (const repo of filteredRepos) {
             console.log(`Fetching contributors for ${repo.name}...`);
             try {
+                // Determine the organization name for this repository
+                const repoOrgName = repo.owner?.login || config.organization.name;
+
                 // Fetch commits with timestamps
                 let commitsPage = 1;
                 let hasMoreCommits = true;
 
                 while (hasMoreCommits) {
                     try {
-                        const commitsResponse = await axios.get(`https://api.github.com/repos/${config.organization.name}/${repo.name}/commits`, {
+                        const commitsResponse = await axios.get(`https://api.github.com/repos/${repoOrgName}/${repo.name}/commits`, {
                             params: {
                                 per_page: 100,
                                 page: commitsPage
@@ -177,7 +244,7 @@ export async function fetchYearlyContributors(githubToken) {
                     try {
                         // First try the pulls endpoint
                         const pullsResponse = await axios.get(
-                            `https://api.github.com/repos/${config.organization.name}/${repo.name}/pulls`,
+                            `https://api.github.com/repos/${repoOrgName}/${repo.name}/pulls`,
                             {
                                 params: {
                                     state: 'closed',
@@ -230,7 +297,7 @@ export async function fetchYearlyContributors(githubToken) {
                 while (hasMorePulls) {
                     try {
                         const issuesResponse = await axios.get(
-                            `https://api.github.com/repos/${config.organization.name}/${repo.name}/issues`,
+                            `https://api.github.com/repos/${repoOrgName}/${repo.name}/issues`,
                             {
                                 params: {
                                     state: 'closed',
@@ -257,7 +324,7 @@ export async function fetchYearlyContributors(githubToken) {
                             for (const prIssue of prsFromIssues) {
                                 try {
                                     const prDetails = await axios.get(
-                                        `https://api.github.com/repos/${config.organization.name}/${repo.name}/pulls/${prIssue.number}`,
+                                        `https://api.github.com/repos/${repoOrgName}/${repo.name}/pulls/${prIssue.number}`,
                                         {
                                             headers: {
                                                 'Accept': 'application/vnd.github.v3+json',
