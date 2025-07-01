@@ -1,0 +1,735 @@
+{
+  "year": 2023,
+  "unique_count": 19,
+  "contributors": [
+    {
+      "login": "satran004",
+      "avatar_url": "https://avatars.githubusercontent.com/u/35016438?v=4",
+      "commits": 67,
+      "pull_requests": 0,
+      "contributions": 67,
+      "repositories": [
+        {
+          "name": "yaci-devkit",
+          "commits": 67,
+          "pull_requests": 0,
+          "contributions": 67,
+          "commit_timestamps": [
+            "2023-11-04T05:58:04Z",
+            "2023-10-27T04:33:21Z",
+            "2023-09-27T05:00:49Z",
+            "2023-09-25T09:53:19Z",
+            "2023-08-21T04:22:50Z",
+            "2023-08-20T15:26:48Z",
+            "2023-08-20T15:26:33Z",
+            "2023-08-20T15:22:42Z",
+            "2023-08-20T15:09:42Z",
+            "2023-08-20T14:46:18Z",
+            "2023-08-20T14:11:12Z",
+            "2023-08-20T14:07:20Z",
+            "2023-08-20T13:58:15Z",
+            "2023-08-20T13:54:48Z",
+            "2023-08-20T13:47:38Z",
+            "2023-08-19T06:48:36Z",
+            "2023-08-16T03:45:05Z",
+            "2023-08-16T03:35:09Z",
+            "2023-08-16T03:15:35Z",
+            "2023-08-16T03:05:25Z",
+            "2023-08-16T03:02:46Z",
+            "2023-08-15T11:18:24Z",
+            "2023-08-15T11:15:05Z",
+            "2023-08-15T11:14:42Z",
+            "2023-08-15T11:12:55Z",
+            "2023-08-15T11:05:38Z",
+            "2023-08-11T07:45:13Z",
+            "2023-08-09T06:13:10Z",
+            "2023-08-09T06:01:57Z",
+            "2023-06-28T04:54:20Z",
+            "2023-06-28T04:53:27Z",
+            "2023-06-15T01:21:44Z",
+            "2023-06-14T15:12:29Z",
+            "2023-06-14T14:57:52Z",
+            "2023-06-14T14:56:03Z",
+            "2023-06-14T14:53:43Z",
+            "2023-06-14T14:51:14Z",
+            "2023-06-14T14:49:15Z",
+            "2023-06-13T05:09:44Z",
+            "2023-06-13T05:05:33Z",
+            "2023-06-13T05:04:58Z",
+            "2023-05-03T16:26:44Z",
+            "2023-05-02T04:16:12Z",
+            "2023-05-02T04:15:11Z",
+            "2023-05-02T04:13:28Z",
+            "2023-05-02T04:06:03Z",
+            "2023-05-02T03:33:03Z",
+            "2023-05-02T03:27:52Z",
+            "2023-05-02T03:27:12Z",
+            "2023-05-02T03:13:48Z",
+            "2023-05-02T00:33:16Z",
+            "2023-04-03T10:17:42Z",
+            "2023-04-03T10:16:47Z",
+            "2023-03-05T13:54:33Z",
+            "2023-03-05T13:31:18Z",
+            "2023-03-05T13:24:23Z",
+            "2023-03-05T13:19:04Z",
+            "2023-03-03T02:37:20Z",
+            "2023-03-02T17:19:50Z",
+            "2023-03-02T16:51:33Z",
+            "2023-03-02T16:51:10Z",
+            "2023-03-02T16:50:13Z",
+            "2023-03-02T16:49:26Z",
+            "2023-03-02T16:46:32Z",
+            "2023-03-02T16:36:58Z",
+            "2023-03-02T16:34:45Z",
+            "2023-03-02T15:43:58Z"
+          ],
+          "pr_timestamps": [],
+          "organization": "sidan-lab",
+          "isFork": true
+        }
+      ]
+    },
+    {
+      "login": "twwu123",
+      "avatar_url": "https://avatars.githubusercontent.com/u/45336147?v=4",
+      "commits": 61,
+      "pull_requests": 0,
+      "contributions": 61,
+      "repositories": [
+        {
+          "name": "whisky",
+          "commits": 61,
+          "pull_requests": 0,
+          "contributions": 61,
+          "commit_timestamps": [
+            "2023-12-27T16:14:23Z",
+            "2023-12-27T15:51:45Z",
+            "2023-12-27T15:50:44Z",
+            "2023-12-27T15:48:40Z",
+            "2023-12-27T15:47:46Z",
+            "2023-12-27T15:46:35Z",
+            "2023-12-27T15:45:19Z",
+            "2023-12-27T15:40:10Z",
+            "2023-12-27T15:38:31Z",
+            "2023-12-27T15:36:37Z",
+            "2023-12-27T15:31:43Z",
+            "2023-12-27T15:28:51Z",
+            "2023-12-27T15:19:26Z",
+            "2023-12-27T15:14:40Z",
+            "2023-12-27T10:01:05Z",
+            "2023-12-27T09:59:15Z",
+            "2023-12-27T09:58:29Z",
+            "2023-12-27T09:57:39Z",
+            "2023-12-27T08:09:19Z",
+            "2023-12-27T08:07:33Z",
+            "2023-12-27T08:02:29Z",
+            "2023-12-23T13:21:37Z",
+            "2023-12-22T14:52:52Z",
+            "2023-12-22T14:52:06Z",
+            "2023-12-22T14:07:23Z",
+            "2023-12-22T13:23:47Z",
+            "2023-12-22T12:43:31Z",
+            "2023-12-21T14:18:26Z",
+            "2023-12-20T15:25:15Z",
+            "2023-12-20T15:16:50Z",
+            "2023-12-20T14:34:43Z",
+            "2023-12-20T14:34:01Z",
+            "2023-12-20T14:17:03Z",
+            "2023-12-20T14:01:56Z",
+            "2023-12-20T10:49:31Z",
+            "2023-12-20T10:47:17Z",
+            "2023-12-20T10:47:07Z",
+            "2023-12-20T10:42:08Z",
+            "2023-12-20T10:39:26Z",
+            "2023-12-20T10:25:24Z",
+            "2023-12-20T08:13:26Z",
+            "2023-12-20T04:06:24Z",
+            "2023-12-20T04:06:04Z",
+            "2023-12-18T13:48:44Z",
+            "2023-12-18T13:46:33Z",
+            "2023-12-18T13:45:58Z",
+            "2023-12-18T13:33:50Z",
+            "2023-12-18T10:59:35Z",
+            "2023-12-18T10:41:47Z",
+            "2023-12-18T10:41:25Z",
+            "2023-12-18T05:31:25Z",
+            "2023-12-17T10:38:47Z",
+            "2023-12-17T10:38:31Z",
+            "2023-12-16T08:33:51Z",
+            "2023-12-14T10:14:32Z",
+            "2023-12-13T10:58:21Z",
+            "2023-12-13T10:58:13Z",
+            "2023-12-13T10:57:41Z",
+            "2023-12-12T09:03:32Z",
+            "2023-12-06T08:00:59Z",
+            "2023-12-06T06:06:52Z"
+          ],
+          "pr_timestamps": [],
+          "organization": "sidan-lab",
+          "isFork": false
+        }
+      ]
+    },
+    {
+      "login": "Vardominator",
+      "avatar_url": "https://avatars.githubusercontent.com/u/16459846?v=4",
+      "commits": 51,
+      "pull_requests": 0,
+      "contributions": 51,
+      "repositories": [
+        {
+          "name": "go-sdk",
+          "commits": 46,
+          "pull_requests": 0,
+          "contributions": 46,
+          "commit_timestamps": [
+            "2023-10-29T22:33:36Z",
+            "2023-10-29T16:42:13Z",
+            "2023-10-29T16:24:52Z",
+            "2023-10-29T16:24:35Z",
+            "2023-10-26T04:17:41Z",
+            "2023-10-26T04:17:30Z",
+            "2023-10-26T04:09:38Z",
+            "2023-10-26T04:06:27Z",
+            "2023-10-24T17:10:19Z",
+            "2023-10-13T13:31:36Z",
+            "2023-10-13T13:29:38Z",
+            "2023-10-13T13:29:13Z",
+            "2023-10-11T12:17:04Z",
+            "2023-10-10T18:36:20Z",
+            "2023-09-23T05:21:41Z",
+            "2023-09-19T22:37:17Z",
+            "2023-09-19T22:20:02Z",
+            "2023-09-19T22:19:00Z",
+            "2023-09-19T22:16:31Z",
+            "2023-09-19T22:15:14Z",
+            "2023-09-05T20:51:08Z",
+            "2023-09-05T20:42:08Z",
+            "2023-09-05T20:34:56Z",
+            "2023-09-05T20:29:53Z",
+            "2023-09-05T20:21:19Z",
+            "2023-09-05T20:16:27Z",
+            "2023-09-05T20:10:28Z",
+            "2023-09-05T20:09:36Z",
+            "2023-09-05T19:16:44Z",
+            "2023-09-05T19:15:05Z",
+            "2023-09-01T16:21:53Z",
+            "2023-09-01T16:21:07Z",
+            "2023-09-01T16:20:54Z",
+            "2023-09-01T16:19:35Z",
+            "2023-09-01T15:50:09Z",
+            "2023-09-01T15:48:06Z",
+            "2023-09-01T15:44:14Z",
+            "2023-09-01T15:38:04Z",
+            "2023-09-01T15:35:10Z",
+            "2023-09-01T15:25:09Z",
+            "2023-09-01T15:22:28Z",
+            "2023-09-01T15:15:56Z",
+            "2023-09-01T13:34:16Z",
+            "2023-09-01T13:18:18Z",
+            "2023-04-01T14:56:55Z",
+            "2023-04-01T14:56:38Z"
+          ],
+          "pr_timestamps": [],
+          "organization": "sidan-lab",
+          "isFork": true
+        },
+        {
+          "name": "maestro-rust-sdk",
+          "commits": 5,
+          "pull_requests": 0,
+          "contributions": 5,
+          "commit_timestamps": [
+            "2023-12-05T06:57:23Z",
+            "2023-12-05T00:46:13Z",
+            "2023-12-01T14:10:37Z",
+            "2023-04-01T14:57:34Z",
+            "2023-04-01T14:57:22Z"
+          ],
+          "pr_timestamps": [],
+          "organization": "sidan-lab",
+          "isFork": true
+        }
+      ]
+    },
+    {
+      "login": "HinsonSIDAN",
+      "avatar_url": "https://avatars.githubusercontent.com/u/90688504?v=4",
+      "commits": 48,
+      "pull_requests": 0,
+      "contributions": 48,
+      "repositories": [
+        {
+          "name": "aiken-content-ownership",
+          "commits": 27,
+          "pull_requests": 0,
+          "contributions": 27,
+          "commit_timestamps": [
+            "2023-12-07T13:40:37Z",
+            "2023-12-05T09:01:38Z",
+            "2023-12-05T08:41:50Z",
+            "2023-12-01T09:05:38Z",
+            "2023-12-01T08:53:33Z",
+            "2023-11-29T08:42:00Z",
+            "2023-11-29T07:07:46Z",
+            "2023-11-28T17:31:18Z",
+            "2023-11-28T17:23:14Z",
+            "2023-11-28T14:46:43Z",
+            "2023-11-28T12:28:26Z",
+            "2023-11-28T01:41:44Z",
+            "2023-11-27T10:40:12Z",
+            "2023-11-26T18:09:28Z",
+            "2023-11-26T16:19:37Z",
+            "2023-11-26T13:49:35Z",
+            "2023-11-26T13:47:26Z",
+            "2023-11-26T13:34:03Z",
+            "2023-11-26T13:14:03Z",
+            "2023-11-26T09:05:54Z",
+            "2023-11-22T17:11:21Z",
+            "2023-11-15T16:52:37Z",
+            "2023-11-13T17:32:57Z",
+            "2023-11-13T12:25:44Z",
+            "2023-11-13T12:23:47Z",
+            "2023-11-13T11:21:47Z",
+            "2023-11-09T04:47:59Z"
+          ],
+          "pr_timestamps": [],
+          "organization": "sidan-lab",
+          "isFork": false
+        },
+        {
+          "name": "exunits-research",
+          "commits": 7,
+          "pull_requests": 0,
+          "contributions": 7,
+          "commit_timestamps": [
+            "2023-12-11T18:09:55Z",
+            "2023-12-11T17:46:28Z",
+            "2023-12-11T11:42:21Z",
+            "2023-12-11T11:42:06Z",
+            "2023-12-11T11:40:57Z",
+            "2023-12-09T20:58:24Z",
+            "2023-12-09T20:51:12Z"
+          ],
+          "pr_timestamps": [],
+          "organization": "sidan-lab",
+          "isFork": false
+        },
+        {
+          "name": "next-stitches-csl",
+          "commits": 6,
+          "pull_requests": 0,
+          "contributions": 6,
+          "commit_timestamps": [
+            "2023-08-17T04:19:00Z",
+            "2023-08-16T07:28:54Z",
+            "2023-08-15T16:46:02Z",
+            "2023-08-15T16:44:24Z",
+            "2023-08-14T14:21:33Z",
+            "2023-08-14T14:12:00Z"
+          ],
+          "pr_timestamps": [],
+          "organization": "sidan-lab",
+          "isFork": false
+        },
+        {
+          "name": "whisky",
+          "commits": 4,
+          "pull_requests": 0,
+          "contributions": 4,
+          "commit_timestamps": [
+            "2023-11-30T07:02:39Z",
+            "2023-11-30T03:11:14Z",
+            "2023-11-30T02:50:21Z",
+            "2023-11-30T02:38:55Z"
+          ],
+          "pr_timestamps": [],
+          "organization": "sidan-lab",
+          "isFork": false
+        },
+        {
+          "name": "plutus-dev-container",
+          "commits": 2,
+          "pull_requests": 0,
+          "contributions": 2,
+          "commit_timestamps": [
+            "2023-10-11T15:11:45Z",
+            "2023-10-11T15:03:22Z"
+          ],
+          "pr_timestamps": [],
+          "organization": "sidan-lab",
+          "isFork": false
+        },
+        {
+          "name": "aiken-example",
+          "commits": 2,
+          "pull_requests": 0,
+          "contributions": 2,
+          "commit_timestamps": [
+            "2023-11-22T03:27:33Z",
+            "2023-11-22T03:25:28Z"
+          ],
+          "pr_timestamps": [],
+          "organization": "sidan-lab",
+          "isFork": false
+        }
+      ]
+    },
+    {
+      "login": "nexuscrypt",
+      "avatar_url": "https://avatars.githubusercontent.com/u/100082538?v=4",
+      "commits": 18,
+      "pull_requests": 0,
+      "contributions": 18,
+      "repositories": [
+        {
+          "name": "Projects",
+          "commits": 18,
+          "pull_requests": 0,
+          "contributions": 18,
+          "commit_timestamps": [
+            "2023-04-04T19:37:53Z",
+            "2023-04-04T19:37:24Z",
+            "2023-03-17T18:03:06Z",
+            "2023-03-17T17:58:54Z",
+            "2023-03-17T17:50:44Z",
+            "2023-03-17T17:50:37Z",
+            "2023-03-17T17:49:49Z",
+            "2023-03-17T09:00:12Z",
+            "2023-03-17T08:59:50Z",
+            "2023-02-22T11:56:23Z",
+            "2023-02-15T14:39:26Z",
+            "2023-02-13T10:38:20Z",
+            "2023-02-12T12:20:12Z",
+            "2023-02-12T11:55:22Z",
+            "2023-02-11T10:39:05Z",
+            "2023-02-11T10:38:37Z",
+            "2023-02-11T10:37:57Z",
+            "2023-02-11T10:37:28Z"
+          ],
+          "pr_timestamps": [],
+          "organization": "sidan-lab",
+          "isFork": true
+        }
+      ]
+    },
+    {
+      "login": "ProofOfCardano",
+      "avatar_url": "https://avatars.githubusercontent.com/u/125101020?v=4",
+      "commits": 13,
+      "pull_requests": 0,
+      "contributions": 13,
+      "repositories": [
+        {
+          "name": "Projects",
+          "commits": 13,
+          "pull_requests": 0,
+          "contributions": 13,
+          "commit_timestamps": [
+            "2023-02-11T00:36:33Z",
+            "2023-02-11T00:34:44Z",
+            "2023-02-11T00:34:16Z",
+            "2023-02-11T00:33:45Z",
+            "2023-02-11T00:27:38Z",
+            "2023-02-11T00:27:30Z",
+            "2023-02-11T00:23:34Z",
+            "2023-02-11T00:23:24Z",
+            "2023-02-11T00:23:03Z",
+            "2023-02-11T00:20:46Z",
+            "2023-02-11T00:20:33Z",
+            "2023-02-11T00:19:47Z",
+            "2023-02-11T00:19:33Z"
+          ],
+          "pr_timestamps": [],
+          "organization": "sidan-lab",
+          "isFork": true
+        }
+      ]
+    },
+    {
+      "login": "Salvionied",
+      "avatar_url": "https://avatars.githubusercontent.com/u/79456731?v=4",
+      "commits": 6,
+      "pull_requests": 0,
+      "contributions": 6,
+      "repositories": [
+        {
+          "name": "go-sdk",
+          "commits": 6,
+          "pull_requests": 0,
+          "contributions": 6,
+          "commit_timestamps": [
+            "2023-10-26T08:37:55Z",
+            "2023-10-26T08:35:39Z",
+            "2023-10-11T09:11:14Z",
+            "2023-10-11T09:10:59Z",
+            "2023-09-19T15:17:24Z",
+            "2023-09-19T13:30:09Z"
+          ],
+          "pr_timestamps": [],
+          "organization": "sidan-lab",
+          "isFork": true
+        }
+      ]
+    },
+    {
+      "login": "TwilightDuck",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7328317?v=4",
+      "commits": 4,
+      "pull_requests": 0,
+      "contributions": 4,
+      "repositories": [
+        {
+          "name": "go-sdk",
+          "commits": 4,
+          "pull_requests": 0,
+          "contributions": 4,
+          "commit_timestamps": [
+            "2023-10-13T13:21:29Z",
+            "2023-10-13T11:48:29Z",
+            "2023-10-13T11:47:25Z",
+            "2023-10-10T12:59:56Z"
+          ],
+          "pr_timestamps": [],
+          "organization": "sidan-lab",
+          "isFork": true
+        }
+      ]
+    },
+    {
+      "login": "Mercurial",
+      "avatar_url": "https://avatars.githubusercontent.com/u/585569?v=4",
+      "commits": 2,
+      "pull_requests": 0,
+      "contributions": 2,
+      "repositories": [
+        {
+          "name": "Projects",
+          "commits": 2,
+          "pull_requests": 0,
+          "contributions": 2,
+          "commit_timestamps": [
+            "2023-02-14T22:08:17Z",
+            "2023-02-12T23:49:48Z"
+          ],
+          "pr_timestamps": [],
+          "organization": "sidan-lab",
+          "isFork": true
+        }
+      ]
+    },
+    {
+      "login": "leonlai257",
+      "avatar_url": "https://avatars.githubusercontent.com/u/73750831?v=4",
+      "commits": 1,
+      "pull_requests": 0,
+      "contributions": 1,
+      "repositories": [
+        {
+          "name": "next-stitches-csl",
+          "commits": 1,
+          "pull_requests": 0,
+          "contributions": 1,
+          "commit_timestamps": [
+            "2023-08-19T05:26:23Z"
+          ],
+          "pr_timestamps": [],
+          "organization": "sidan-lab",
+          "isFork": false
+        }
+      ]
+    },
+    {
+      "login": "wolf31o2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/380021?v=4",
+      "commits": 1,
+      "pull_requests": 0,
+      "contributions": 1,
+      "repositories": [
+        {
+          "name": "go-sdk",
+          "commits": 1,
+          "pull_requests": 0,
+          "contributions": 1,
+          "commit_timestamps": [
+            "2023-09-21T21:44:16Z"
+          ],
+          "pr_timestamps": [],
+          "organization": "sidan-lab",
+          "isFork": true
+        }
+      ]
+    },
+    {
+      "login": "MarvinBertin",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10456493?v=4",
+      "commits": 1,
+      "pull_requests": 0,
+      "contributions": 1,
+      "repositories": [
+        {
+          "name": "maestro-rust-sdk",
+          "commits": 1,
+          "pull_requests": 0,
+          "contributions": 1,
+          "commit_timestamps": [
+            "2023-12-05T06:32:04Z"
+          ],
+          "pr_timestamps": [],
+          "organization": "sidan-lab",
+          "isFork": true
+        }
+      ]
+    },
+    {
+      "login": "matiwinnetou",
+      "avatar_url": "https://avatars.githubusercontent.com/u/335933?v=4",
+      "commits": 1,
+      "pull_requests": 0,
+      "contributions": 1,
+      "repositories": [
+        {
+          "name": "yaci-devkit",
+          "commits": 1,
+          "pull_requests": 0,
+          "contributions": 1,
+          "commit_timestamps": [
+            "2023-08-11T07:38:07Z"
+          ],
+          "pr_timestamps": [],
+          "organization": "sidan-lab",
+          "isFork": true
+        }
+      ]
+    },
+    {
+      "login": "MuesliSwapTeam",
+      "avatar_url": "https://avatars.githubusercontent.com/u/91151317?v=4",
+      "commits": 1,
+      "pull_requests": 0,
+      "contributions": 1,
+      "repositories": [
+        {
+          "name": "Projects",
+          "commits": 1,
+          "pull_requests": 0,
+          "contributions": 1,
+          "commit_timestamps": [
+            "2023-05-28T16:12:34Z"
+          ],
+          "pr_timestamps": [],
+          "organization": "sidan-lab",
+          "isFork": true
+        }
+      ]
+    },
+    {
+      "login": "leo42",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4371293?v=4",
+      "commits": 1,
+      "pull_requests": 0,
+      "contributions": 1,
+      "repositories": [
+        {
+          "name": "Projects",
+          "commits": 1,
+          "pull_requests": 0,
+          "contributions": 1,
+          "commit_timestamps": [
+            "2023-03-31T09:45:59Z"
+          ],
+          "pr_timestamps": [],
+          "organization": "sidan-lab",
+          "isFork": true
+        }
+      ]
+    },
+    {
+      "login": "peterVG",
+      "avatar_url": "https://avatars.githubusercontent.com/u/672121?v=4",
+      "commits": 1,
+      "pull_requests": 0,
+      "contributions": 1,
+      "repositories": [
+        {
+          "name": "Projects",
+          "commits": 1,
+          "pull_requests": 0,
+          "contributions": 1,
+          "commit_timestamps": [
+            "2023-03-17T16:57:18Z"
+          ],
+          "pr_timestamps": [],
+          "organization": "sidan-lab",
+          "isFork": true
+        }
+      ]
+    },
+    {
+      "login": "toshicardanomoto",
+      "avatar_url": "https://avatars.githubusercontent.com/u/122866340?v=4",
+      "commits": 1,
+      "pull_requests": 0,
+      "contributions": 1,
+      "repositories": [
+        {
+          "name": "Projects",
+          "commits": 1,
+          "pull_requests": 0,
+          "contributions": 1,
+          "commit_timestamps": [
+            "2023-03-17T15:09:26Z"
+          ],
+          "pr_timestamps": [],
+          "organization": "sidan-lab",
+          "isFork": true
+        }
+      ]
+    },
+    {
+      "login": "nielstron",
+      "avatar_url": "https://avatars.githubusercontent.com/u/20638630?v=4",
+      "commits": 1,
+      "pull_requests": 0,
+      "contributions": 1,
+      "repositories": [
+        {
+          "name": "Projects",
+          "commits": 1,
+          "pull_requests": 0,
+          "contributions": 1,
+          "commit_timestamps": [
+            "2023-03-09T01:45:16Z"
+          ],
+          "pr_timestamps": [],
+          "organization": "sidan-lab",
+          "isFork": true
+        }
+      ]
+    },
+    {
+      "login": "mmahut",
+      "avatar_url": "https://avatars.githubusercontent.com/u/104795?v=4",
+      "commits": 1,
+      "pull_requests": 0,
+      "contributions": 1,
+      "repositories": [
+        {
+          "name": "Projects",
+          "commits": 1,
+          "pull_requests": 0,
+          "contributions": 1,
+          "commit_timestamps": [
+            "2023-02-14T21:28:58Z"
+          ],
+          "pr_timestamps": [],
+          "organization": "sidan-lab",
+          "isFork": true
+        }
+      ]
+    }
+  ],
+  "total_pull_requests": 0,
+  "total_commits": 280,
+  "total_contributions": 280
+}
