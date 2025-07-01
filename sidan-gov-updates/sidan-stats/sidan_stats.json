@@ -7,47 +7,47 @@
   "npm": {
     "csl_rs_browser": {
       "downloads": {
-        "last_day": 0,
+        "last_day": 311,
         "last_week": 1599,
-        "last_month": 4935,
+        "last_month": 5246,
         "last_year": 25971,
-        "last_12_months": 51965
+        "last_12_months": 52099
       },
       "latest_version": "0.9.21",
-      "dependents_count": 447379
+      "dependents_count": 447407
     },
     "csl_rs_nodejs": {
       "downloads": {
-        "last_day": 0,
+        "last_day": 307,
         "last_week": 1607,
-        "last_month": 4953,
+        "last_month": 5260,
         "last_year": 26085,
-        "last_12_months": 52391
+        "last_12_months": 52532
       },
       "latest_version": "0.9.21",
-      "dependents_count": 301951
+      "dependents_count": 301977
     },
     "whisky_js_browser": {
       "downloads": {
-        "last_day": 0,
+        "last_day": 101,
         "last_week": 243,
-        "last_month": 746,
+        "last_month": 847,
         "last_year": 0,
-        "last_12_months": 2071
+        "last_12_months": 2172
       },
       "latest_version": "1.0.9",
-      "dependents_count": 1118468
+      "dependents_count": 1118535
     },
     "whisky_js_nodejs": {
       "downloads": {
-        "last_day": 0,
+        "last_day": 100,
         "last_week": 237,
-        "last_month": 740,
+        "last_month": 840,
         "last_year": 0,
-        "last_12_months": 2036
+        "last_12_months": 2136
       },
       "latest_version": "1.0.9",
-      "dependents_count": 990207
+      "dependents_count": 990269
     }
   },
   "urls": {},
@@ -57,9 +57,9 @@
       {
         "login": "HinsonSIDAN",
         "avatar_url": "https://avatars.githubusercontent.com/u/90688504?v=4",
-        "commits": 974,
+        "commits": 982,
         "pull_requests": 118,
-        "contributions": 1092,
+        "contributions": 1100,
         "repositories": [
           {
             "name": "whisky",
@@ -122,6 +122,12 @@
             "contributions": 20
           },
           {
+            "name": "hibiki",
+            "commits": 20,
+            "pull_requests": 0,
+            "contributions": 20
+          },
+          {
             "name": "cardano-open-bounty",
             "commits": 18,
             "pull_requests": 1,
@@ -150,12 +156,6 @@
             "commits": 14,
             "pull_requests": 0,
             "contributions": 14
-          },
-          {
-            "name": "hibiki",
-            "commits": 12,
-            "pull_requests": 0,
-            "contributions": 12
           },
           {
             "name": "rust-sdk",
@@ -384,15 +384,15 @@
       {
         "login": "Andre-Diamond",
         "avatar_url": "https://avatars.githubusercontent.com/u/32074058?v=4",
-        "commits": 109,
-        "pull_requests": 8,
-        "contributions": 117,
+        "commits": 116,
+        "pull_requests": 10,
+        "contributions": 126,
         "repositories": [
           {
             "name": "DRep",
-            "commits": 109,
-            "pull_requests": 8,
-            "contributions": 117
+            "commits": 116,
+            "pull_requests": 10,
+            "contributions": 126
           }
         ]
       },
@@ -481,6 +481,21 @@
         ]
       },
       {
+        "login": "github-actions[bot]",
+        "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+        "commits": 38,
+        "pull_requests": 0,
+        "contributions": 38,
+        "repositories": [
+          {
+            "name": "DRep",
+            "commits": 38,
+            "pull_requests": 0,
+            "contributions": 38
+          }
+        ]
+      },
+      {
         "login": "GaryHsieh0422",
         "avatar_url": "https://avatars.githubusercontent.com/u/178891824?v=4",
         "commits": 33,
@@ -492,21 +507,6 @@
             "commits": 33,
             "pull_requests": 5,
             "contributions": 38
-          }
-        ]
-      },
-      {
-        "login": "github-actions[bot]",
-        "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
-        "commits": 35,
-        "pull_requests": 0,
-        "contributions": 35,
-        "repositories": [
-          {
-            "name": "DRep",
-            "commits": 35,
-            "pull_requests": 0,
-            "contributions": 35
           }
         ]
       },
@@ -1135,8 +1135,8 @@
         ]
       }
     ],
-    "total_pull_requests": 246,
-    "total_commits": 2940,
-    "total_contributions": 3186
+    "total_pull_requests": 248,
+    "total_commits": 2958,
+    "total_contributions": 3206
   }
 }
