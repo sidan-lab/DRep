@@ -319,80 +319,131 @@ export async function fetchSidanContributors(githubToken) {
             // Determine the organization name for this repository
             const repoOrgName = repo.owner?.login || config.organization.name;
 
-            // Fetch commits with timestamps
-            console.log(`Fetching commits with timestamps for ${repo.name}...`);
-            let commitsPage = 1;
-            let hasMoreCommits = true;
-
-            while (hasMoreCommits) {
+            // --- Forked repo logic ---
+            if (repo.fork && repo.parent) {
+                // Only count commits unique to the fork (not inherited from parent)
+                const parentOwner = repo.parent.owner.login;
+                const parentRepo = repo.parent.name;
+                const parentBranch = repo.parent.default_branch;
+                const forkOwner = repo.owner.login;
+                const forkRepo = repo.name;
+                const forkBranch = repo.default_branch;
+                const compareUrl = `https://api.github.com/repos/${parentOwner}/${parentRepo}/compare/${parentBranch}...${forkOwner}:${forkBranch}`;
+                let compareResp;
                 try {
-                    const commitsResponse = await axios.get(`https://api.github.com/repos/${repoOrgName}/${repo.name}/commits`, {
-                        params: {
-                            per_page: 100,
-                            page: commitsPage
-                        },
+                    compareResp = await axios.get(compareUrl, {
                         headers: {
                             'Accept': 'application/vnd.github.v3+json',
                             'Authorization': `token ${githubToken}`
                         }
                     });
-
-                    if (commitsResponse.data.length === 0) {
-                        hasMoreCommits = false;
+                } catch (error) {
+                    console.error(`Error comparing fork and parent for ${repo.name}:`, error.message);
+                    continue;
+                }
+                const uniqueCommits = compareResp.data.commits || [];
+                for (const commit of uniqueCommits) {
+                    if (!commit.author || !commit.author.login) continue;
+                    const login = commit.author.login;
+                    if (!contributorsMap.has(login)) {
+                        const repoData = {};
+                        repoData[repo.name] = {
+                            commits: 1,
+                            pull_requests: 0,
+                            contributions: 1
+                        };
+                        contributorsMap.set(login, {
+                            login: login,
+                            avatar_url: commit.author.avatar_url,
+                            commits: 1,
+                            pull_requests: 0,
+                            contributions: 1,
+                            repositories: repoData
+                        });
                     } else {
-                        console.log(`  - Processing ${commitsResponse.data.length} commits on page ${commitsPage}`);
-
-                        for (const commit of commitsResponse.data) {
-                            if (!commit.author || !commit.author.login) continue;
-
-                            const login = commit.author.login;
-
-                            if (!contributorsMap.has(login)) {
-                                const repoData = {};
-                                repoData[repo.name] = {
-                                    commits: 1,
-                                    pull_requests: 0,
-                                    contributions: 1
-                                };
-
-                                contributorsMap.set(login, {
-                                    login: login,
-                                    avatar_url: commit.author.avatar_url,
-                                    commits: 1,
-                                    pull_requests: 0,
-                                    contributions: 1,
-                                    repositories: repoData
-                                });
-                            } else {
-                                const existingContributor = contributorsMap.get(login);
-                                existingContributor.commits += 1;
-                                existingContributor.contributions += 1;
-
-                                // Check if contributor already has this repository
-                                if (existingContributor.repositories[repo.name]) {
-                                    existingContributor.repositories[repo.name].commits += 1;
-                                    existingContributor.repositories[repo.name].contributions += 1;
-                                } else {
-                                    existingContributor.repositories[repo.name] = {
+                        const existingContributor = contributorsMap.get(login);
+                        existingContributor.commits += 1;
+                        existingContributor.contributions += 1;
+                        if (existingContributor.repositories[repo.name]) {
+                            existingContributor.repositories[repo.name].commits += 1;
+                            existingContributor.repositories[repo.name].contributions += 1;
+                        } else {
+                            existingContributor.repositories[repo.name] = {
+                                commits: 1,
+                                pull_requests: 0,
+                                contributions: 1
+                            };
+                        }
+                    }
+                }
+            } else {
+                // --- Original logic for non-forks ---
+                // Fetch commits with timestamps
+                console.log(`Fetching commits with timestamps for ${repo.name}...`);
+                let commitsPage = 1;
+                let hasMoreCommits = true;
+                while (hasMoreCommits) {
+                    try {
+                        const commitsResponse = await axios.get(`https://api.github.com/repos/${repoOrgName}/${repo.name}/commits`, {
+                            params: {
+                                per_page: 100,
+                                page: commitsPage
+                            },
+                            headers: {
+                                'Accept': 'application/vnd.github.v3+json',
+                                'Authorization': `token ${githubToken}`
+                            }
+                        });
+                        if (commitsResponse.data.length === 0) {
+                            hasMoreCommits = false;
+                        } else {
+                            console.log(`  - Processing ${commitsResponse.data.length} commits on page ${commitsPage}`);
+                            for (const commit of commitsResponse.data) {
+                                if (!commit.author || !commit.author.login) continue;
+                                const login = commit.author.login;
+                                if (!contributorsMap.has(login)) {
+                                    const repoData = {};
+                                    repoData[repo.name] = {
                                         commits: 1,
                                         pull_requests: 0,
                                         contributions: 1
                                     };
+                                    contributorsMap.set(login, {
+                                        login: login,
+                                        avatar_url: commit.author.avatar_url,
+                                        commits: 1,
+                                        pull_requests: 0,
+                                        contributions: 1,
+                                        repositories: repoData
+                                    });
+                                } else {
+                                    const existingContributor = contributorsMap.get(login);
+                                    existingContributor.commits += 1;
+                                    existingContributor.contributions += 1;
+                                    if (existingContributor.repositories[repo.name]) {
+                                        existingContributor.repositories[repo.name].commits += 1;
+                                        existingContributor.repositories[repo.name].contributions += 1;
+                                    } else {
+                                        existingContributor.repositories[repo.name] = {
+                                            commits: 1,
+                                            pull_requests: 0,
+                                            contributions: 1
+                                        };
+                                    }
                                 }
                             }
+                            commitsPage++;
                         }
-
-                        commitsPage++;
+                    } catch (error) {
+                        if (error.response && error.response.status === 404) {
+                            console.warn(`Repository ${repo.name} might be private or not exist. Skipping commits.`);
+                        } else if (error.response && error.response.status === 403) {
+                            console.warn(`API rate limit exceeded or insufficient permissions for ${repo.name}. Skipping commits.`);
+                        } else {
+                            console.error(`Error fetching commits for ${repo.name} page ${commitsPage}:`, error.message);
+                        }
+                        hasMoreCommits = false;
                     }
-                } catch (error) {
-                    if (error.response && error.response.status === 404) {
-                        console.warn(`Repository ${repo.name} might be private or not exist. Skipping commits.`);
-                    } else if (error.response && error.response.status === 403) {
-                        console.warn(`API rate limit exceeded or insufficient permissions for ${repo.name}. Skipping commits.`);
-                    } else {
-                        console.error(`Error fetching commits for ${repo.name} page ${commitsPage}:`, error.message);
-                    }
-                    hasMoreCommits = false;
                 }
             }
 
