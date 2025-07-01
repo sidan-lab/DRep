@@ -27,7 +27,9 @@
         "mesh-express",
         "mesh-pbl"
     ],
-    "extendedOrgName": "deltadefi-protocol",
+    "extendedOrgName": [
+        "deltadefi-protocol"
+    ],
     "extendedOrgExcludedRepos": [
         ""
     ],
