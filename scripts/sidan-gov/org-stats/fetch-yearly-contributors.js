@@ -161,82 +161,28 @@ export async function fetchYearlyContributors(githubToken) {
 
         for (const repo of filteredRepos) {
             console.log(`Fetching contributors for ${repo.name} (${repo.sourceOrganization})...`);
+
+            // Check if this is a forked repository
+            const isFork = repo.fork;
+            const upstreamOrg = repo.source?.owner?.login;
+
+            if (isFork) {
+                console.log(`  - This is a fork of ${upstreamOrg}/${repo.source?.name}`);
+            } else {
+                console.log(`  - This is an original repository`);
+            }
+
             try {
                 // Determine the organization name for this repository
                 const repoOrgName = repo.owner?.login || repo.sourceOrganization;
 
-                // --- Forked repo logic ---
-                if (repo.fork && repo.parent) {
-                    // Only count commits unique to the fork (not inherited from parent)
-                    const parentOwner = repo.parent.owner.login;
-                    const parentRepo = repo.parent.name;
-                    const parentBranch = repo.parent.default_branch;
-                    const forkOwner = repo.owner.login;
-                    const forkRepo = repo.name;
-                    const forkBranch = repo.default_branch;
-                    const compareUrl = `https://api.github.com/repos/${parentOwner}/${parentRepo}/compare/${parentBranch}...${forkOwner}:${forkBranch}`;
-                    let compareResp;
-                    try {
-                        compareResp = await axios.get(compareUrl, {
-                            headers: {
-                                'Accept': 'application/vnd.github.v3+json',
-                                'Authorization': `token ${githubToken}`
-                            }
-                        });
-                    } catch (error) {
-                        console.error(`Error comparing fork and parent for ${repo.name}:`, error.message);
-                        continue;
-                    }
-                    const uniqueCommits = compareResp.data.commits || [];
-                    for (const commit of uniqueCommits) {
-                        if (!commit.author || !commit.author.login) continue;
-                        const commitDate = new Date(commit.commit.author.date);
-                        if (commitDate.getFullYear() !== year) continue;
-                        const login = commit.author.login;
-                        const timestamp = commit.commit.author.date;
-                        if (!contributorsMap.has(login)) {
-                            const repoData = {};
-                            repoData[repo.name] = {
-                                commits: 1,
-                                pull_requests: 0,
-                                contributions: 1,
-                                commit_timestamps: [timestamp],
-                                pr_timestamps: [],
-                                organization: repo.sourceOrganization
-                            };
-                            contributorsMap.set(login, {
-                                login: login,
-                                avatar_url: commit.author.avatar_url,
-                                commits: 1,
-                                pull_requests: 0,
-                                contributions: 1,
-                                repositories: repoData
-                            });
-                        } else {
-                            const existingContributor = contributorsMap.get(login);
-                            existingContributor.commits += 1;
-                            existingContributor.contributions += 1;
-                            if (existingContributor.repositories[repo.name]) {
-                                existingContributor.repositories[repo.name].commits += 1;
-                                existingContributor.repositories[repo.name].contributions += 1;
-                                existingContributor.repositories[repo.name].commit_timestamps.push(timestamp);
-                            } else {
-                                existingContributor.repositories[repo.name] = {
-                                    commits: 1,
-                                    pull_requests: 0,
-                                    contributions: 1,
-                                    commit_timestamps: [timestamp],
-                                    pr_timestamps: [],
-                                    organization: repo.sourceOrganization
-                                };
-                            }
-                        }
-                    }
-                } else {
-                    // --- Original logic for non-forks ---
+                // For forked repositories, only fetch commits made to our fork
+                // For original repositories, fetch all commits
+                if (!isFork || (isFork && repoOrgName === repo.sourceOrganization)) {
                     // Fetch commits with timestamps
                     let commitsPage = 1;
                     let hasMoreCommits = true;
+
                     while (hasMoreCommits) {
                         try {
                             const commitsResponse = await axios.get(`https://api.github.com/repos/${repoOrgName}/${repo.name}/commits`, {
@@ -249,15 +195,19 @@ export async function fetchYearlyContributors(githubToken) {
                                     'Authorization': `token ${githubToken}`
                                 }
                             });
+
                             if (commitsResponse.data.length === 0) {
                                 hasMoreCommits = false;
                             } else {
                                 for (const commit of commitsResponse.data) {
                                     if (!commit.author || !commit.author.login) continue;
+
                                     const commitDate = new Date(commit.commit.author.date);
                                     if (commitDate.getFullYear() !== year) continue;
+
                                     const login = commit.author.login;
                                     const timestamp = commit.commit.author.date;
+
                                     if (!contributorsMap.has(login)) {
                                         const repoData = {};
                                         repoData[repo.name] = {
@@ -266,8 +216,11 @@ export async function fetchYearlyContributors(githubToken) {
                                             contributions: 1,
                                             commit_timestamps: [timestamp],
                                             pr_timestamps: [],
-                                            organization: repo.sourceOrganization
+                                            organization: repo.sourceOrganization,
+                                            isFork: isFork,
+                                            upstreamOrg: upstreamOrg
                                         };
+
                                         contributorsMap.set(login, {
                                             login: login,
                                             avatar_url: commit.author.avatar_url,
@@ -280,6 +233,7 @@ export async function fetchYearlyContributors(githubToken) {
                                         const existingContributor = contributorsMap.get(login);
                                         existingContributor.commits += 1;
                                         existingContributor.contributions += 1;
+
                                         if (existingContributor.repositories[repo.name]) {
                                             existingContributor.repositories[repo.name].commits += 1;
                                             existingContributor.repositories[repo.name].contributions += 1;
@@ -291,7 +245,9 @@ export async function fetchYearlyContributors(githubToken) {
                                                 contributions: 1,
                                                 commit_timestamps: [timestamp],
                                                 pr_timestamps: [],
-                                                organization: repo.sourceOrganization
+                                                organization: repo.sourceOrganization,
+                                                isFork: isFork,
+                                                upstreamOrg: upstreamOrg
                                             };
                                         }
                                     }
@@ -311,183 +267,311 @@ export async function fetchYearlyContributors(githubToken) {
                     }
                 }
 
-                // Fetch pull requests from both pulls and issues endpoints
-                let page = 1;
-                let pullsData = [];
-                let hasMorePulls = true;
-                let processedPRs = new Set(); // Track processed PRs to avoid duplicates
+                // Handle pull requests based on repository type
+                if (isFork) {
+                    // For forked repositories, only fetch PRs made FROM our fork TO the upstream repo
+                    console.log(`  - Fetching pull requests made FROM our fork TO upstream ${upstreamOrg}/${repo.source?.name}`);
 
-                while (hasMorePulls) {
-                    try {
-                        // First try the pulls endpoint
-                        const pullsResponse = await axios.get(
-                            `https://api.github.com/repos/${repoOrgName}/${repo.name}/pulls`,
-                            {
-                                params: {
-                                    state: 'closed',
-                                    per_page: 100,
-                                    page: page
-                                },
-                                headers: {
-                                    'Accept': 'application/vnd.github.v3+json',
-                                    'Authorization': `token ${githubToken}`
+                    // Get PRs made from our fork to upstream
+                    let page = 1;
+                    let pullsData = [];
+                    let hasMorePulls = true;
+                    let processedPRs = new Set();
+
+                    while (hasMorePulls) {
+                        try {
+                            // Fetch PRs made from our fork to the upstream repository
+                            const pullsResponse = await axios.get(
+                                `https://api.github.com/repos/${upstreamOrg}/${repo.source?.name}/pulls`,
+                                {
+                                    params: {
+                                        state: 'closed',
+                                        per_page: 100,
+                                        page: page
+                                    },
+                                    headers: {
+                                        'Accept': 'application/vnd.github.v3+json',
+                                        'Authorization': `token ${githubToken}`
+                                    }
                                 }
-                            }
-                        );
-
-                        if (pullsResponse.data.length === 0) {
-                            hasMorePulls = false;
-                        } else {
-                            const mergedPRs = pullsResponse.data.filter(pr => {
-                                if (!pr.merged_at) return false;
-                                const prDate = new Date(pr.merged_at);
-                                return prDate.getFullYear() === year;
-                            });
-
-                            // Add to processed set and pulls data
-                            mergedPRs.forEach(pr => {
-                                if (!processedPRs.has(pr.number)) {
-                                    processedPRs.add(pr.number);
-                                    pullsData.push(pr);
-                                }
-                            });
-
-                            console.log(`  - Found ${mergedPRs.length} merged PRs on page ${page}`);
-                            page++;
-                        }
-                    } catch (error) {
-                        if (error.response && error.response.status === 404) {
-                            console.warn(`Repository ${repo.name} might be private or not exist. Skipping pulls.`);
-                        } else if (error.response && error.response.status === 403) {
-                            console.warn(`API rate limit exceeded or insufficient permissions for ${repo.name}. Skipping pulls.`);
-                        } else {
-                            console.error(`Error fetching pulls for ${repo.name} page ${page}:`, error.message);
-                        }
-                        hasMorePulls = false;
-                    }
-                }
-
-                // Then try the issues endpoint to catch any PRs missed by the pulls endpoint
-                page = 1;
-                hasMorePulls = true;
-
-                while (hasMorePulls) {
-                    try {
-                        const issuesResponse = await axios.get(
-                            `https://api.github.com/repos/${repoOrgName}/${repo.name}/issues`,
-                            {
-                                params: {
-                                    state: 'closed',
-                                    per_page: 100,
-                                    page: page
-                                },
-                                headers: {
-                                    'Accept': 'application/vnd.github.v3+json',
-                                    'Authorization': `token ${githubToken}`
-                                }
-                            }
-                        );
-
-                        if (issuesResponse.data.length === 0) {
-                            hasMorePulls = false;
-                        } else {
-                            // Filter for pull requests (issues with pull_request field)
-                            const prsFromIssues = issuesResponse.data.filter(issue =>
-                                issue.pull_request &&
-                                !processedPRs.has(issue.number)
                             );
 
-                            // Fetch additional PR details for each PR from issues
-                            for (const prIssue of prsFromIssues) {
-                                try {
-                                    const prDetails = await axios.get(
-                                        `https://api.github.com/repos/${repoOrgName}/${repo.name}/pulls/${prIssue.number}`,
-                                        {
-                                            headers: {
-                                                'Accept': 'application/vnd.github.v3+json',
-                                                'Authorization': `token ${githubToken}`
-                                            }
-                                        }
-                                    );
+                            if (pullsResponse.data.length === 0) {
+                                hasMorePulls = false;
+                            } else {
+                                // Filter PRs that were made from our fork
+                                const ourForkPRs = pullsResponse.data.filter(pr => {
+                                    if (!pr.merged_at) return false;
+                                    const prDate = new Date(pr.merged_at);
+                                    if (prDate.getFullYear() !== year) return false;
 
-                                    if (prDetails.data.merged_at) {
-                                        const prDate = new Date(prDetails.data.merged_at);
-                                        if (prDate.getFullYear() === year) {
-                                            processedPRs.add(prIssue.number);
-                                            pullsData.push(prDetails.data);
-                                        }
+                                    // Check if the PR head repo is our fork
+                                    return pr.head?.repo?.owner?.login === repo.sourceOrganization &&
+                                        pr.head?.repo?.name === repo.name;
+                                });
+
+                                ourForkPRs.forEach(pr => {
+                                    if (!processedPRs.has(pr.number)) {
+                                        processedPRs.add(pr.number);
+                                        pullsData.push(pr);
                                     }
-                                } catch (error) {
-                                    console.warn(`Could not fetch details for PR #${prIssue.number}: ${error.message}`);
-                                }
+                                });
+
+                                console.log(`  - Found ${ourForkPRs.length} PRs from our fork on page ${page}`);
+                                page++;
                             }
-                            page++;
+                        } catch (error) {
+                            if (error.response && error.response.status === 404) {
+                                console.warn(`Upstream repository ${upstreamOrg}/${repo.source?.name} might be private or not exist. Skipping PRs.`);
+                            } else if (error.response && error.response.status === 403) {
+                                console.warn(`API rate limit exceeded or insufficient permissions for upstream repo. Skipping PRs.`);
+                            } else {
+                                console.error(`Error fetching PRs from our fork to upstream page ${page}:`, error.message);
+                            }
+                            hasMorePulls = false;
                         }
-                    } catch (error) {
-                        if (error.response && error.response.status === 404) {
-                            console.warn(`Repository ${repo.name} might be private or not exist. Skipping issues.`);
-                        } else if (error.response && error.response.status === 403) {
-                            console.warn(`API rate limit exceeded or insufficient permissions for ${repo.name}. Skipping issues.`);
-                        } else {
-                            console.error(`Error fetching issues for ${repo.name} page ${page}:`, error.message);
-                        }
-                        hasMorePulls = false;
                     }
-                }
 
-                console.log(`Total merged PRs found for ${repo.name}: ${pullsData.length}`);
+                    console.log(`Total PRs from our fork to upstream: ${pullsData.length}`);
 
-                // Count PRs by user and store timestamps
-                pullsData.forEach(pr => {
-                    if (!pr.user || !pr.user.login) return;
-                    if (!pr.merged_at) return;
+                    // Count PRs by user
+                    pullsData.forEach(pr => {
+                        if (!pr.user || !pr.user.login) return;
+                        if (!pr.merged_at) return;
 
-                    const login = pr.user.login;
-                    const timestamp = pr.merged_at;
+                        const login = pr.user.login;
+                        const timestamp = pr.merged_at;
 
-                    if (!contributorsMap.has(login)) {
-                        // If this user isn't a contributor yet, add them
-                        const repoData = {};
-                        repoData[repo.name] = {
-                            commits: 0,
-                            pull_requests: 1,
-                            contributions: 1,
-                            commit_timestamps: [],
-                            pr_timestamps: [timestamp],
-                            organization: repo.sourceOrganization
-                        };
-
-                        contributorsMap.set(login, {
-                            login: login,
-                            avatar_url: pr.user.avatar_url,
-                            commits: 0,
-                            pull_requests: 1,
-                            contributions: 1,
-                            repositories: repoData
-                        });
-                    } else {
-                        // User exists, increment PR count
-                        const contributor = contributorsMap.get(login);
-                        contributor.pull_requests += 1;
-                        contributor.contributions += 1;
-
-                        // Update repository data
-                        if (contributor.repositories[repo.name]) {
-                            contributor.repositories[repo.name].pull_requests += 1;
-                            contributor.repositories[repo.name].contributions += 1;
-                            contributor.repositories[repo.name].pr_timestamps.push(timestamp);
-                        } else {
-                            contributor.repositories[repo.name] = {
+                        if (!contributorsMap.has(login)) {
+                            const repoData = {};
+                            repoData[repo.name] = {
                                 commits: 0,
                                 pull_requests: 1,
                                 contributions: 1,
                                 commit_timestamps: [],
                                 pr_timestamps: [timestamp],
-                                organization: repo.sourceOrganization
+                                organization: repo.sourceOrganization,
+                                isFork: isFork,
+                                upstreamOrg: upstreamOrg
                             };
+
+                            contributorsMap.set(login, {
+                                login: login,
+                                avatar_url: pr.user.avatar_url,
+                                commits: 0,
+                                pull_requests: 1,
+                                contributions: 1,
+                                repositories: repoData
+                            });
+                        } else {
+                            const contributor = contributorsMap.get(login);
+                            contributor.pull_requests += 1;
+                            contributor.contributions += 1;
+
+                            if (contributor.repositories[repo.name]) {
+                                contributor.repositories[repo.name].pull_requests += 1;
+                                contributor.repositories[repo.name].contributions += 1;
+                                contributor.repositories[repo.name].pr_timestamps.push(timestamp);
+                            } else {
+                                contributor.repositories[repo.name] = {
+                                    commits: 0,
+                                    pull_requests: 1,
+                                    contributions: 1,
+                                    commit_timestamps: [],
+                                    pr_timestamps: [timestamp],
+                                    organization: repo.sourceOrganization,
+                                    isFork: isFork,
+                                    upstreamOrg: upstreamOrg
+                                };
+                            }
+                        }
+                    });
+                } else {
+                    // For original repositories, fetch all PRs made TO our repo
+                    console.log(`  - Fetching all pull requests made TO our original repository`);
+
+                    // Fetch pull requests from both pulls and issues endpoints
+                    let page = 1;
+                    let pullsData = [];
+                    let hasMorePulls = true;
+                    let processedPRs = new Set(); // Track processed PRs to avoid duplicates
+
+                    while (hasMorePulls) {
+                        try {
+                            // First try the pulls endpoint
+                            const pullsResponse = await axios.get(
+                                `https://api.github.com/repos/${repoOrgName}/${repo.name}/pulls`,
+                                {
+                                    params: {
+                                        state: 'closed',
+                                        per_page: 100,
+                                        page: page
+                                    },
+                                    headers: {
+                                        'Accept': 'application/vnd.github.v3+json',
+                                        'Authorization': `token ${githubToken}`
+                                    }
+                                }
+                            );
+
+                            if (pullsResponse.data.length === 0) {
+                                hasMorePulls = false;
+                            } else {
+                                const mergedPRs = pullsResponse.data.filter(pr => {
+                                    if (!pr.merged_at) return false;
+                                    const prDate = new Date(pr.merged_at);
+                                    return prDate.getFullYear() === year;
+                                });
+
+                                // Add to processed set and pulls data
+                                mergedPRs.forEach(pr => {
+                                    if (!processedPRs.has(pr.number)) {
+                                        processedPRs.add(pr.number);
+                                        pullsData.push(pr);
+                                    }
+                                });
+
+                                console.log(`  - Found ${mergedPRs.length} merged PRs on page ${page}`);
+                                page++;
+                            }
+                        } catch (error) {
+                            if (error.response && error.response.status === 404) {
+                                console.warn(`Repository ${repo.name} might be private or not exist. Skipping pulls.`);
+                            } else if (error.response && error.response.status === 403) {
+                                console.warn(`API rate limit exceeded or insufficient permissions for ${repo.name}. Skipping pulls.`);
+                            } else {
+                                console.error(`Error fetching pulls for ${repo.name} page ${page}:`, error.message);
+                            }
+                            hasMorePulls = false;
                         }
                     }
-                });
+
+                    // Then try the issues endpoint to catch any PRs missed by the pulls endpoint
+                    page = 1;
+                    hasMorePulls = true;
+
+                    while (hasMorePulls) {
+                        try {
+                            const issuesResponse = await axios.get(
+                                `https://api.github.com/repos/${repoOrgName}/${repo.name}/issues`,
+                                {
+                                    params: {
+                                        state: 'closed',
+                                        per_page: 100,
+                                        page: page
+                                    },
+                                    headers: {
+                                        'Accept': 'application/vnd.github.v3+json',
+                                        'Authorization': `token ${githubToken}`
+                                    }
+                                }
+                            );
+
+                            if (issuesResponse.data.length === 0) {
+                                hasMorePulls = false;
+                            } else {
+                                // Filter for pull requests (issues with pull_request field)
+                                const prsFromIssues = issuesResponse.data.filter(issue =>
+                                    issue.pull_request &&
+                                    !processedPRs.has(issue.number)
+                                );
+
+                                // Fetch additional PR details for each PR from issues
+                                for (const prIssue of prsFromIssues) {
+                                    try {
+                                        const prDetails = await axios.get(
+                                            `https://api.github.com/repos/${repoOrgName}/${repo.name}/pulls/${prIssue.number}`,
+                                            {
+                                                headers: {
+                                                    'Accept': 'application/vnd.github.v3+json',
+                                                    'Authorization': `token ${githubToken}`
+                                                }
+                                            }
+                                        );
+
+                                        if (prDetails.data.merged_at) {
+                                            const prDate = new Date(prDetails.data.merged_at);
+                                            if (prDate.getFullYear() === year) {
+                                                processedPRs.add(prIssue.number);
+                                                pullsData.push(prDetails.data);
+                                            }
+                                        }
+                                    } catch (error) {
+                                        console.warn(`Could not fetch details for PR #${prIssue.number}: ${error.message}`);
+                                    }
+                                }
+                                page++;
+                            }
+                        } catch (error) {
+                            if (error.response && error.response.status === 404) {
+                                console.warn(`Repository ${repo.name} might be private or not exist. Skipping issues.`);
+                            } else if (error.response && error.response.status === 403) {
+                                console.warn(`API rate limit exceeded or insufficient permissions for ${repo.name}. Skipping issues.`);
+                            } else {
+                                console.error(`Error fetching issues for ${repo.name} page ${page}:`, error.message);
+                            }
+                            hasMorePulls = false;
+                        }
+                    }
+
+                    console.log(`Total merged PRs found for ${repo.name}: ${pullsData.length}`);
+
+                    // Count PRs by user and store timestamps
+                    pullsData.forEach(pr => {
+                        if (!pr.user || !pr.user.login) return;
+                        if (!pr.merged_at) return;
+
+                        const login = pr.user.login;
+                        const timestamp = pr.merged_at;
+
+                        if (!contributorsMap.has(login)) {
+                            // If this user isn't a contributor yet, add them
+                            const repoData = {};
+                            repoData[repo.name] = {
+                                commits: 0,
+                                pull_requests: 1,
+                                contributions: 1,
+                                commit_timestamps: [],
+                                pr_timestamps: [timestamp],
+                                organization: repo.sourceOrganization,
+                                isFork: isFork,
+                                upstreamOrg: upstreamOrg
+                            };
+
+                            contributorsMap.set(login, {
+                                login: login,
+                                avatar_url: pr.user.avatar_url,
+                                commits: 0,
+                                pull_requests: 1,
+                                contributions: 1,
+                                repositories: repoData
+                            });
+                        } else {
+                            // User exists, increment PR count
+                            const contributor = contributorsMap.get(login);
+                            contributor.pull_requests += 1;
+                            contributor.contributions += 1;
+
+                            // Update repository data
+                            if (contributor.repositories[repo.name]) {
+                                contributor.repositories[repo.name].pull_requests += 1;
+                                contributor.repositories[repo.name].contributions += 1;
+                                contributor.repositories[repo.name].pr_timestamps.push(timestamp);
+                            } else {
+                                contributor.repositories[repo.name] = {
+                                    commits: 0,
+                                    pull_requests: 1,
+                                    contributions: 1,
+                                    commit_timestamps: [],
+                                    pr_timestamps: [timestamp],
+                                    organization: repo.sourceOrganization,
+                                    isFork: isFork,
+                                    upstreamOrg: upstreamOrg
+                                };
+                            }
+                        }
+                    });
+                }
             } catch (error) {
                 console.error(`Error fetching data for ${repo.name}:`, error.message);
             }
