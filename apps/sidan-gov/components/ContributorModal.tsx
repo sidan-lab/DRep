@@ -129,7 +129,7 @@ export const ContributorModal: React.FC<ContributorModalProps> = ({
                                     <tr key={repo.name}>
                                         <td>
                                             <a
-                                                href={`https://github.com/${config.organization.name}/${repo.name}`}
+                                                href={`https://github.com/${repo.organization || config.organization.name}/${repo.name}`}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                             >
