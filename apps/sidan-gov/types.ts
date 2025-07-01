@@ -89,6 +89,7 @@ export interface ContributorRepository {
     contributions: number;
     commit_timestamps: string[];
     pr_timestamps: string[];
+    organization?: string;
 }
 
 export interface Contributor {
@@ -279,6 +280,7 @@ export interface ContributorStats {
             contributions: number;
             commit_timestamps: string[];
             pr_timestamps: string[];
+            organization?: string;
         }>;
     }>;
     total_pull_requests: number;

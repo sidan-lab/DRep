@@ -37,7 +37,8 @@ export function aggregateContributorStats(yearlyStats: Record<number, Contributo
                         pull_requests: 0,
                         contributions: 0,
                         commit_timestamps: [],
-                        pr_timestamps: []
+                        pr_timestamps: [],
+                        organization: repoStats.organization
                     };
                     existingContributor.repositories.push(repo);
                 }

@@ -7,6 +7,7 @@ interface ContributorRepository {
     commits: number;
     contributions: number;
     pull_requests: number;
+    organization?: string;
 }
 
 interface RepoDonutChartProps {
@@ -38,26 +39,9 @@ const RepoDonutChart: React.FC<RepoDonutChartProps> = ({ repositories }) => {
         endAngle: number;
     }>>([]);
 
-    // Sort repositories by contribution count and take top 12
-    const topRepos = [...repositories]
-        .sort((a, b) => b.contributions - a.contributions)
-        .slice(0, 12);
-
-    // Combine remaining repositories into "Others"
-    const otherRepos = repositories.slice(12);
-    const otherContributions = otherRepos.reduce((sum, repo) => sum + repo.contributions, 0);
-    const otherCommits = otherRepos.reduce((sum, repo) => sum + repo.commits, 0);
-    const otherPRs = otherRepos.reduce((sum, repo) => sum + repo.pull_requests, 0);
-
-    // Final data for visualization
-    const chartData = otherContributions > 0
-        ? [...topRepos, {
-            name: 'Others',
-            contributions: otherContributions,
-            commits: otherCommits,
-            pull_requests: otherPRs
-        }]
-        : topRepos;
+    // Sort repositories by contribution count and use all repositories
+    const chartData = [...repositories]
+        .sort((a, b) => b.contributions - a.contributions);
 
     // Generate color for each repository (all use the same gradient)
     const data = chartData.map((repo) => {
@@ -66,6 +50,7 @@ const RepoDonutChart: React.FC<RepoDonutChartProps> = ({ repositories }) => {
             value: repo.contributions,
             commits: repo.commits,
             pull_requests: repo.pull_requests,
+            organization: repo.organization || config.organization.name,
             color: LEGEND_GRADIENT
         };
     });
@@ -207,7 +192,7 @@ const RepoDonutChart: React.FC<RepoDonutChartProps> = ({ repositories }) => {
                 {data.map((repo) => (
                     <a
                         key={repo.name}
-                        href={repo.name === 'Others' ? `https://github.com/${config.organization.name}` : `https://github.com/${config.organization.name}/${repo.name}`}
+                        href={`https://github.com/${repo.organization}/${repo.name}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className={styles.legendItem}
