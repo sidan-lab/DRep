@@ -39,12 +39,14 @@ export async function fetchYearlyContributors(githubToken) {
             if (reposResponse.data.length === 0) {
                 hasMoreRepos = false;
             } else {
-                // Find the earliest repository creation date
+                // Find the earliest repository creation date and add organization info
                 reposResponse.data.forEach(repo => {
                     const createdYear = new Date(repo.created_at).getFullYear();
                     if (createdYear < earliestYear) {
                         earliestYear = createdYear;
                     }
+                    // Add organization information to each repository
+                    repo.sourceOrganization = config.organization.name;
                 });
                 allRepos = allRepos.concat(reposResponse.data);
                 page++;
@@ -55,16 +57,26 @@ export async function fetchYearlyContributors(githubToken) {
         }
     }
 
-    // Fetch repositories from extended organization if configured
-    if (config.extendedOrgName && config.extendedOrgName.trim() !== '') {
-        console.log(`\nFetching repositories from extended organization: ${config.extendedOrgName}`);
+    // Handle extended organizations - support both single string and array
+    const extendedOrgs = [];
+    if (config.extendedOrgName) {
+        if (Array.isArray(config.extendedOrgName)) {
+            extendedOrgs.push(...config.extendedOrgName.filter(org => org && org.trim() !== ''));
+        } else if (typeof config.extendedOrgName === 'string' && config.extendedOrgName.trim() !== '') {
+            extendedOrgs.push(config.extendedOrgName);
+        }
+    }
+
+    // Fetch repositories from extended organizations
+    for (const extendedOrg of extendedOrgs) {
+        console.log(`\nFetching repositories from extended organization: ${extendedOrg}`);
         page = 1;
         hasMoreRepos = true;
 
         while (hasMoreRepos) {
             try {
-                console.log(`Fetching repositories page ${page} from ${config.extendedOrgName}...`);
-                const reposResponse = await axios.get(`https://api.github.com/orgs/${config.extendedOrgName}/repos`, {
+                console.log(`Fetching repositories page ${page} from ${extendedOrg}...`);
+                const reposResponse = await axios.get(`https://api.github.com/orgs/${extendedOrg}/repos`, {
                     params: {
                         type: 'all',
                         per_page: 100,
@@ -79,32 +91,32 @@ export async function fetchYearlyContributors(githubToken) {
                 if (reposResponse.data.length === 0) {
                     hasMoreRepos = false;
                 } else {
-                    // Find the earliest repository creation date
+                    // Find the earliest repository creation date and add organization info
                     reposResponse.data.forEach(repo => {
                         const createdYear = new Date(repo.created_at).getFullYear();
                         if (createdYear < earliestYear) {
                             earliestYear = createdYear;
                         }
+                        // Add organization information to each repository
+                        repo.sourceOrganization = extendedOrg;
                     });
                     allRepos = allRepos.concat(reposResponse.data);
                     page++;
                 }
             } catch (error) {
                 if (error.response && error.response.status === 404) {
-                    console.error(`Extended organization '${config.extendedOrgName}' not found. Please check the organization name in the config.`);
+                    console.error(`Extended organization '${extendedOrg}' not found. Please check the organization name in the config.`);
                 } else if (error.response && error.response.status === 403) {
-                    console.error(`Access denied to extended organization '${config.extendedOrgName}'. Please check your GitHub token permissions.`);
+                    console.error(`Access denied to extended organization '${extendedOrg}'. Please check your GitHub token permissions.`);
                 } else {
-                    console.error(`Error fetching repositories page ${page} from ${config.extendedOrgName}:`, error.message);
+                    console.error(`Error fetching repositories page ${page} from ${extendedOrg}:`, error.message);
                 }
                 hasMoreRepos = false;
             }
         }
-    } else if (config.extendedOrgName !== undefined) {
-        console.log(`\nSkipping extended organization: '${config.extendedOrgName}' is empty or invalid`);
     }
 
-    console.log(`Found ${allRepos.length} repositories in the ${config.organization.displayName} organization`);
+    console.log(`Found ${allRepos.length} repositories across all organizations`);
     console.log(`Earliest repository creation year: ${earliestYear}`);
 
     // Filter out excluded repositories
@@ -115,8 +127,8 @@ export async function fetchYearlyContributors(githubToken) {
 
     if (allExcludedRepos.length > 0) {
         console.log(`Excluded repositories from ${config.organization.name}: ${excludedRepos.join(', ')}`);
-        if (config.extendedOrgName && config.extendedOrgName.trim() !== '' && extendedExcludedRepos.length > 0) {
-            console.log(`Excluded repositories from ${config.extendedOrgName}: ${extendedExcludedRepos.join(', ')}`);
+        if (extendedOrgs.length > 0 && extendedExcludedRepos.length > 0) {
+            console.log(`Excluded repositories from extended organizations: ${extendedExcludedRepos.join(', ')}`);
         }
         console.log(`Processing ${filteredRepos.length} repositories (${allRepos.length - filteredRepos.length} excluded)`);
     }
@@ -148,10 +160,10 @@ export async function fetchYearlyContributors(githubToken) {
         const contributorsMap = new Map();
 
         for (const repo of filteredRepos) {
-            console.log(`Fetching contributors for ${repo.name}...`);
+            console.log(`Fetching contributors for ${repo.name} (${repo.sourceOrganization})...`);
             try {
                 // Determine the organization name for this repository
-                const repoOrgName = repo.owner?.login || config.organization.name;
+                const repoOrgName = repo.owner?.login || repo.sourceOrganization;
 
                 // Fetch commits with timestamps
                 let commitsPage = 1;
@@ -189,7 +201,8 @@ export async function fetchYearlyContributors(githubToken) {
                                         pull_requests: 0,
                                         contributions: 1,
                                         commit_timestamps: [timestamp],
-                                        pr_timestamps: []
+                                        pr_timestamps: [],
+                                        organization: repo.sourceOrganization
                                     };
 
                                     contributorsMap.set(login, {
@@ -215,7 +228,8 @@ export async function fetchYearlyContributors(githubToken) {
                                             pull_requests: 0,
                                             contributions: 1,
                                             commit_timestamps: [timestamp],
-                                            pr_timestamps: []
+                                            pr_timestamps: [],
+                                            organization: repo.sourceOrganization
                                         };
                                     }
                                 }
@@ -376,7 +390,8 @@ export async function fetchYearlyContributors(githubToken) {
                             pull_requests: 1,
                             contributions: 1,
                             commit_timestamps: [],
-                            pr_timestamps: [timestamp]
+                            pr_timestamps: [timestamp],
+                            organization: repo.sourceOrganization
                         };
 
                         contributorsMap.set(login, {
@@ -404,7 +419,8 @@ export async function fetchYearlyContributors(githubToken) {
                                 pull_requests: 1,
                                 contributions: 1,
                                 commit_timestamps: [],
-                                pr_timestamps: [timestamp]
+                                pr_timestamps: [timestamp],
+                                organization: repo.sourceOrganization
                             };
                         }
                     }

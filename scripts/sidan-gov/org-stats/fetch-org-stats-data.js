@@ -242,16 +242,26 @@ export async function fetchSidanContributors(githubToken) {
         }
     }
 
-    // Fetch repositories from extended organization if configured
-    if (config.extendedOrgName && config.extendedOrgName.trim() !== '') {
-        console.log(`\nFetching repositories from extended organization: ${config.extendedOrgName}`);
+    // Handle extended organizations - support both single string and array
+    const extendedOrgs = [];
+    if (config.extendedOrgName) {
+        if (Array.isArray(config.extendedOrgName)) {
+            extendedOrgs.push(...config.extendedOrgName.filter(org => org && org.trim() !== ''));
+        } else if (typeof config.extendedOrgName === 'string' && config.extendedOrgName.trim() !== '') {
+            extendedOrgs.push(config.extendedOrgName);
+        }
+    }
+
+    // Fetch repositories from extended organizations
+    for (const extendedOrg of extendedOrgs) {
+        console.log(`\nFetching repositories from extended organization: ${extendedOrg}`);
         page = 1;
         hasMoreRepos = true;
 
         while (hasMoreRepos) {
             try {
-                console.log(`Fetching repositories page ${page} from ${config.extendedOrgName}...`);
-                const reposResponse = await axios.get(`https://api.github.com/orgs/${config.extendedOrgName}/repos`, {
+                console.log(`Fetching repositories page ${page} from ${extendedOrg}...`);
+                const reposResponse = await axios.get(`https://api.github.com/orgs/${extendedOrg}/repos`, {
                     params: {
                         type: 'all',    // Include all repos: public, private, forks, etc.
                         per_page: 100,  // Max allowed per page
@@ -271,20 +281,18 @@ export async function fetchSidanContributors(githubToken) {
                 }
             } catch (error) {
                 if (error.response && error.response.status === 404) {
-                    console.error(`Extended organization '${config.extendedOrgName}' not found. Please check the organization name in the config.`);
+                    console.error(`Extended organization '${extendedOrg}' not found. Please check the organization name in the config.`);
                 } else if (error.response && error.response.status === 403) {
-                    console.error(`Access denied to extended organization '${config.extendedOrgName}'. Please check your GitHub token permissions.`);
+                    console.error(`Access denied to extended organization '${extendedOrg}'. Please check your GitHub token permissions.`);
                 } else {
-                    console.error(`Error fetching repositories page ${page} from ${config.extendedOrgName}:`, error.message);
+                    console.error(`Error fetching repositories page ${page} from ${extendedOrg}:`, error.message);
                 }
                 hasMoreRepos = false;
             }
         }
-    } else if (config.extendedOrgName !== undefined) {
-        console.log(`\nSkipping extended organization: '${config.extendedOrgName}' is empty or invalid`);
     }
 
-    console.log(`Found ${allRepos.length} repositories in the ${config.organization.displayName} organization:`);
+    console.log(`Found ${allRepos.length} repositories across all organizations:`);
     allRepos.forEach(repo => {
         console.log(`- ${repo.name} (${repo.private ? 'private' : 'public'}${repo.fork ? ', fork' : ''})`);
     });
@@ -297,8 +305,8 @@ export async function fetchSidanContributors(githubToken) {
 
     if (allExcludedRepos.length > 0) {
         console.log(`Excluded repositories from ${config.organization.name}: ${excludedRepos.join(', ')}`);
-        if (config.extendedOrgName && config.extendedOrgName.trim() !== '' && extendedExcludedRepos.length > 0) {
-            console.log(`Excluded repositories from ${config.extendedOrgName}: ${extendedExcludedRepos.join(', ')}`);
+        if (extendedOrgs.length > 0 && extendedExcludedRepos.length > 0) {
+            console.log(`Excluded repositories from extended organizations: ${extendedExcludedRepos.join(', ')}`);
         }
         console.log(`Processing ${filteredRepos.length} repositories (${allRepos.length - filteredRepos.length} excluded)`);
     }
