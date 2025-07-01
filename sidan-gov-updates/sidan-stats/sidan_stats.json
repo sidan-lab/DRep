@@ -1,0 +1,938 @@
+{
+  "github": {
+    "core_in_package_json": 2,
+    "core_in_any_file": 57,
+    "core_in_repositories": 236
+  },
+  "npm": {
+    "csl_rs_browser": {
+      "downloads": {
+        "last_day": 311,
+        "last_week": 1599,
+        "last_month": 5246,
+        "last_year": 25971,
+        "last_12_months": 52099
+      },
+      "latest_version": "0.9.21",
+      "dependents_count": 447439
+    },
+    "csl_rs_nodejs": {
+      "downloads": {
+        "last_day": 307,
+        "last_week": 1607,
+        "last_month": 5260,
+        "last_year": 26085,
+        "last_12_months": 52532
+      },
+      "latest_version": "0.9.21",
+      "dependents_count": 302003
+    },
+    "whisky_js_browser": {
+      "downloads": {
+        "last_day": 101,
+        "last_week": 243,
+        "last_month": 847,
+        "last_year": 0,
+        "last_12_months": 2172
+      },
+      "latest_version": "1.0.9",
+      "dependents_count": 1118596
+    },
+    "whisky_js_nodejs": {
+      "downloads": {
+        "last_day": 100,
+        "last_week": 237,
+        "last_month": 840,
+        "last_year": 0,
+        "last_12_months": 2136
+      },
+      "latest_version": "1.0.9",
+      "dependents_count": 990325
+    }
+  },
+  "urls": {},
+  "contributors": {
+    "unique_count": 38,
+    "contributors": [
+      {
+        "login": "HinsonSIDAN",
+        "avatar_url": "https://avatars.githubusercontent.com/u/90688504?v=4",
+        "commits": 812,
+        "pull_requests": 118,
+        "contributions": 930,
+        "repositories": [
+          {
+            "name": "whisky",
+            "commits": 279,
+            "pull_requests": 71,
+            "contributions": 350
+          },
+          {
+            "name": "vodka",
+            "commits": 81,
+            "pull_requests": 23,
+            "contributions": 104
+          },
+          {
+            "name": "typescript-sdk",
+            "commits": 82,
+            "pull_requests": 9,
+            "contributions": 91
+          },
+          {
+            "name": "hk-developer-series-student-examples",
+            "commits": 66,
+            "pull_requests": 0,
+            "contributions": 66
+          },
+          {
+            "name": "plutus-cborhex-automation",
+            "commits": 47,
+            "pull_requests": 10,
+            "contributions": 57
+          },
+          {
+            "name": "python-sdk",
+            "commits": 34,
+            "pull_requests": 0,
+            "contributions": 34
+          },
+          {
+            "name": "aiken-content-ownership",
+            "commits": 28,
+            "pull_requests": 0,
+            "contributions": 28
+          },
+          {
+            "name": "gin",
+            "commits": 21,
+            "pull_requests": 2,
+            "contributions": 23
+          },
+          {
+            "name": "sdks-demo",
+            "commits": 20,
+            "pull_requests": 0,
+            "contributions": 20
+          },
+          {
+            "name": "hibiki",
+            "commits": 20,
+            "pull_requests": 0,
+            "contributions": 20
+          },
+          {
+            "name": "cardano-open-bounty",
+            "commits": 18,
+            "pull_requests": 1,
+            "contributions": 19
+          },
+          {
+            "name": "cardano-bar",
+            "commits": 19,
+            "pull_requests": 0,
+            "contributions": 19
+          },
+          {
+            "name": "rum",
+            "commits": 15,
+            "pull_requests": 0,
+            "contributions": 15
+          },
+          {
+            "name": "cardano-ambassador-tool",
+            "commits": 13,
+            "pull_requests": 2,
+            "contributions": 15
+          },
+          {
+            "name": "go-sdk",
+            "commits": 14,
+            "pull_requests": 0,
+            "contributions": 14
+          },
+          {
+            "name": "rust-sdk",
+            "commits": 11,
+            "pull_requests": 0,
+            "contributions": 11
+          },
+          {
+            "name": "exunits-research",
+            "commits": 7,
+            "pull_requests": 0,
+            "contributions": 7
+          },
+          {
+            "name": "next-stitches-csl",
+            "commits": 6,
+            "pull_requests": 0,
+            "contributions": 6
+          },
+          {
+            "name": "sidan-ui",
+            "commits": 6,
+            "pull_requests": 0,
+            "contributions": 6
+          },
+          {
+            "name": "aiken-poker-game",
+            "commits": 3,
+            "pull_requests": 0,
+            "contributions": 3
+          },
+          {
+            "name": "sidan-partner-network",
+            "commits": 3,
+            "pull_requests": 0,
+            "contributions": 3
+          },
+          {
+            "name": "cardano-open-bounty-web",
+            "commits": 3,
+            "pull_requests": 0,
+            "contributions": 3
+          },
+          {
+            "name": "plutus-dev-container",
+            "commits": 2,
+            "pull_requests": 0,
+            "contributions": 2
+          },
+          {
+            "name": "aiken-example",
+            "commits": 2,
+            "pull_requests": 0,
+            "contributions": 2
+          },
+          {
+            "name": "cardano-sidan-pool",
+            "commits": 2,
+            "pull_requests": 0,
+            "contributions": 2
+          },
+          {
+            "name": "ppbl-2024-aiken-examples",
+            "commits": 2,
+            "pull_requests": 0,
+            "contributions": 2
+          },
+          {
+            "name": "sidan-csl-rs",
+            "commits": 2,
+            "pull_requests": 0,
+            "contributions": 2
+          },
+          {
+            "name": "DRep",
+            "commits": 2,
+            "pull_requests": 0,
+            "contributions": 2
+          },
+          {
+            "name": "yaci-devkit",
+            "commits": 1,
+            "pull_requests": 0,
+            "contributions": 1
+          },
+          {
+            "name": "Projects",
+            "commits": 1,
+            "pull_requests": 0,
+            "contributions": 1
+          },
+          {
+            "name": "brand_assets",
+            "commits": 1,
+            "pull_requests": 0,
+            "contributions": 1
+          },
+          {
+            "name": "sidan-gov",
+            "commits": 1,
+            "pull_requests": 0,
+            "contributions": 1
+          }
+        ]
+      },
+      {
+        "login": "twwu123",
+        "avatar_url": "https://avatars.githubusercontent.com/u/45336147?v=4",
+        "commits": 284,
+        "pull_requests": 44,
+        "contributions": 328,
+        "repositories": [
+          {
+            "name": "whisky",
+            "commits": 245,
+            "pull_requests": 40,
+            "contributions": 285
+          },
+          {
+            "name": "gin",
+            "commits": 22,
+            "pull_requests": 4,
+            "contributions": 26
+          },
+          {
+            "name": "cardano-python-signing-module",
+            "commits": 11,
+            "pull_requests": 0,
+            "contributions": 11
+          },
+          {
+            "name": "cardano-golang-signing-module",
+            "commits": 4,
+            "pull_requests": 0,
+            "contributions": 4
+          },
+          {
+            "name": "typescript-sdk",
+            "commits": 2,
+            "pull_requests": 0,
+            "contributions": 2
+          }
+        ]
+      },
+      {
+        "login": "kenlau666",
+        "avatar_url": "https://avatars.githubusercontent.com/u/98103533?v=4",
+        "commits": 194,
+        "pull_requests": 19,
+        "contributions": 213,
+        "repositories": [
+          {
+            "name": "cardano-open-bounty",
+            "commits": 92,
+            "pull_requests": 7,
+            "contributions": 99
+          },
+          {
+            "name": "cardano-ambassador-tool",
+            "commits": 79,
+            "pull_requests": 6,
+            "contributions": 85
+          },
+          {
+            "name": "go-sdk",
+            "commits": 14,
+            "pull_requests": 1,
+            "contributions": 15
+          },
+          {
+            "name": "python-sdk",
+            "commits": 6,
+            "pull_requests": 1,
+            "contributions": 7
+          },
+          {
+            "name": "vodka",
+            "commits": 3,
+            "pull_requests": 2,
+            "contributions": 5
+          },
+          {
+            "name": "whisky",
+            "commits": 0,
+            "pull_requests": 2,
+            "contributions": 2
+          }
+        ]
+      },
+      {
+        "login": "Andre-Diamond",
+        "avatar_url": "https://avatars.githubusercontent.com/u/32074058?v=4",
+        "commits": 129,
+        "pull_requests": 13,
+        "contributions": 142,
+        "repositories": [
+          {
+            "name": "DRep",
+            "commits": 129,
+            "pull_requests": 13,
+            "contributions": 142
+          }
+        ]
+      },
+      {
+        "login": "AnsonSIDAN",
+        "avatar_url": "https://avatars.githubusercontent.com/u/91122558?v=4",
+        "commits": 77,
+        "pull_requests": 31,
+        "contributions": 108,
+        "repositories": [
+          {
+            "name": "typescript-sdk",
+            "commits": 31,
+            "pull_requests": 27,
+            "contributions": 58
+          },
+          {
+            "name": "DRep",
+            "commits": 37,
+            "pull_requests": 0,
+            "contributions": 37
+          },
+          {
+            "name": "sdks-demo",
+            "commits": 7,
+            "pull_requests": 3,
+            "contributions": 10
+          },
+          {
+            "name": "python-sdk",
+            "commits": 2,
+            "pull_requests": 1,
+            "contributions": 3
+          }
+        ]
+      },
+      {
+        "login": "Technosophorso",
+        "avatar_url": "https://avatars.githubusercontent.com/u/119736053?v=4",
+        "commits": 103,
+        "pull_requests": 3,
+        "contributions": 106,
+        "repositories": [
+          {
+            "name": "DRep",
+            "commits": 103,
+            "pull_requests": 3,
+            "contributions": 106
+          }
+        ]
+      },
+      {
+        "login": "satran004",
+        "avatar_url": "https://avatars.githubusercontent.com/u/35016438?v=4",
+        "commits": 72,
+        "pull_requests": 0,
+        "contributions": 72,
+        "repositories": [
+          {
+            "name": "yaci-devkit",
+            "commits": 72,
+            "pull_requests": 0,
+            "contributions": 72
+          }
+        ]
+      },
+      {
+        "login": "Vardominator",
+        "avatar_url": "https://avatars.githubusercontent.com/u/16459846?v=4",
+        "commits": 58,
+        "pull_requests": 0,
+        "contributions": 58,
+        "repositories": [
+          {
+            "name": "go-sdk",
+            "commits": 50,
+            "pull_requests": 0,
+            "contributions": 50
+          },
+          {
+            "name": "maestro-rust-sdk",
+            "commits": 8,
+            "pull_requests": 0,
+            "contributions": 8
+          }
+        ]
+      },
+      {
+        "login": "github-actions[bot]",
+        "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+        "commits": 47,
+        "pull_requests": 0,
+        "contributions": 47,
+        "repositories": [
+          {
+            "name": "DRep",
+            "commits": 47,
+            "pull_requests": 0,
+            "contributions": 47
+          }
+        ]
+      },
+      {
+        "login": "GaryHsieh0422",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178891824?v=4",
+        "commits": 33,
+        "pull_requests": 5,
+        "contributions": 38,
+        "repositories": [
+          {
+            "name": "cardano-open-bounty",
+            "commits": 33,
+            "pull_requests": 5,
+            "contributions": 38
+          }
+        ]
+      },
+      {
+        "login": "aleeusgr",
+        "avatar_url": "https://avatars.githubusercontent.com/u/36756030?v=4",
+        "commits": 25,
+        "pull_requests": 3,
+        "contributions": 28,
+        "repositories": [
+          {
+            "name": "plutus-cborhex-automation",
+            "commits": 25,
+            "pull_requests": 3,
+            "contributions": 28
+          }
+        ]
+      },
+      {
+        "login": "lisicky",
+        "avatar_url": "https://avatars.githubusercontent.com/u/6154537?v=4",
+        "commits": 14,
+        "pull_requests": 9,
+        "contributions": 23,
+        "repositories": [
+          {
+            "name": "whisky",
+            "commits": 12,
+            "pull_requests": 8,
+            "contributions": 20
+          },
+          {
+            "name": "cardano-python-signing-module",
+            "commits": 2,
+            "pull_requests": 1,
+            "contributions": 3
+          }
+        ]
+      },
+      {
+        "login": "nexuscrypt",
+        "avatar_url": "https://avatars.githubusercontent.com/u/100082538?v=4",
+        "commits": 22,
+        "pull_requests": 0,
+        "contributions": 22,
+        "repositories": [
+          {
+            "name": "Projects",
+            "commits": 22,
+            "pull_requests": 0,
+            "contributions": 22
+          }
+        ]
+      },
+      {
+        "login": "actions-user",
+        "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
+        "commits": 16,
+        "pull_requests": 0,
+        "contributions": 16,
+        "repositories": [
+          {
+            "name": "DRep",
+            "commits": 16,
+            "pull_requests": 0,
+            "contributions": 16
+          }
+        ]
+      },
+      {
+        "login": "workshop-maybe",
+        "avatar_url": "https://avatars.githubusercontent.com/u/68281861?v=4",
+        "commits": 14,
+        "pull_requests": 0,
+        "contributions": 14,
+        "repositories": [
+          {
+            "name": "ppbl-2024-aiken-examples",
+            "commits": 10,
+            "pull_requests": 0,
+            "contributions": 10
+          },
+          {
+            "name": "hk-developer-series-student-examples",
+            "commits": 4,
+            "pull_requests": 0,
+            "contributions": 4
+          }
+        ]
+      },
+      {
+        "login": "ProofOfCardano",
+        "avatar_url": "https://avatars.githubusercontent.com/u/125101020?v=4",
+        "commits": 13,
+        "pull_requests": 0,
+        "contributions": 13,
+        "repositories": [
+          {
+            "name": "Projects",
+            "commits": 13,
+            "pull_requests": 0,
+            "contributions": 13
+          }
+        ]
+      },
+      {
+        "login": "leonlai257",
+        "avatar_url": "https://avatars.githubusercontent.com/u/73750831?v=4",
+        "commits": 12,
+        "pull_requests": 0,
+        "contributions": 12,
+        "repositories": [
+          {
+            "name": "sidan-ui",
+            "commits": 6,
+            "pull_requests": 0,
+            "contributions": 6
+          },
+          {
+            "name": "sidan-partner-network",
+            "commits": 4,
+            "pull_requests": 0,
+            "contributions": 4
+          },
+          {
+            "name": "next-stitches-csl",
+            "commits": 1,
+            "pull_requests": 0,
+            "contributions": 1
+          },
+          {
+            "name": "sidan-gov",
+            "commits": 1,
+            "pull_requests": 0,
+            "contributions": 1
+          }
+        ]
+      },
+      {
+        "login": "b00kdev",
+        "avatar_url": "https://avatars.githubusercontent.com/u/100355203?v=4",
+        "commits": 9,
+        "pull_requests": 0,
+        "contributions": 9,
+        "repositories": [
+          {
+            "name": "maestro-rust-sdk",
+            "commits": 9,
+            "pull_requests": 0,
+            "contributions": 9
+          }
+        ]
+      },
+      {
+        "login": "Defi-kk",
+        "avatar_url": "https://avatars.githubusercontent.com/u/151512134?v=4",
+        "commits": 9,
+        "pull_requests": 0,
+        "contributions": 9,
+        "repositories": [
+          {
+            "name": "DRep",
+            "commits": 9,
+            "pull_requests": 0,
+            "contributions": 9
+          }
+        ]
+      },
+      {
+        "login": "Salvionied",
+        "avatar_url": "https://avatars.githubusercontent.com/u/79456731?v=4",
+        "commits": 7,
+        "pull_requests": 0,
+        "contributions": 7,
+        "repositories": [
+          {
+            "name": "go-sdk",
+            "commits": 7,
+            "pull_requests": 0,
+            "contributions": 7
+          }
+        ]
+      },
+      {
+        "login": "leuhk",
+        "avatar_url": "https://avatars.githubusercontent.com/u/44567291?v=4",
+        "commits": 2,
+        "pull_requests": 4,
+        "contributions": 6,
+        "repositories": [
+          {
+            "name": "typescript-sdk",
+            "commits": 2,
+            "pull_requests": 4,
+            "contributions": 6
+          }
+        ]
+      },
+      {
+        "login": "oskin1",
+        "avatar_url": "https://avatars.githubusercontent.com/u/29578480?v=4",
+        "commits": 5,
+        "pull_requests": 0,
+        "contributions": 5,
+        "repositories": [
+          {
+            "name": "maestro-rust-sdk",
+            "commits": 5,
+            "pull_requests": 0,
+            "contributions": 5
+          }
+        ]
+      },
+      {
+        "login": "sidanlab",
+        "avatar_url": "https://avatars.githubusercontent.com/u/180250645?v=4",
+        "commits": 5,
+        "pull_requests": 0,
+        "contributions": 5,
+        "repositories": [
+          {
+            "name": "DRep-Preview",
+            "commits": 5,
+            "pull_requests": 0,
+            "contributions": 5
+          }
+        ]
+      },
+      {
+        "login": "Newt6611",
+        "avatar_url": "https://avatars.githubusercontent.com/u/45097780?v=4",
+        "commits": 3,
+        "pull_requests": 1,
+        "contributions": 4,
+        "repositories": [
+          {
+            "name": "rum",
+            "commits": 3,
+            "pull_requests": 0,
+            "contributions": 3
+          },
+          {
+            "name": "whisky",
+            "commits": 0,
+            "pull_requests": 1,
+            "contributions": 1
+          }
+        ]
+      },
+      {
+        "login": "TwilightDuck",
+        "avatar_url": "https://avatars.githubusercontent.com/u/7328317?v=4",
+        "commits": 4,
+        "pull_requests": 0,
+        "contributions": 4,
+        "repositories": [
+          {
+            "name": "go-sdk",
+            "commits": 4,
+            "pull_requests": 0,
+            "contributions": 4
+          }
+        ]
+      },
+      {
+        "login": "Zagita21",
+        "avatar_url": "https://avatars.githubusercontent.com/u/86721028?v=4",
+        "commits": 1,
+        "pull_requests": 1,
+        "contributions": 2,
+        "repositories": [
+          {
+            "name": "plutus-cborhex-automation",
+            "commits": 1,
+            "pull_requests": 1,
+            "contributions": 2
+          }
+        ]
+      },
+      {
+        "login": "wafflepool-cardano",
+        "avatar_url": "https://avatars.githubusercontent.com/u/80946800?v=4",
+        "commits": 2,
+        "pull_requests": 0,
+        "contributions": 2,
+        "repositories": [
+          {
+            "name": "aiken-poker-game",
+            "commits": 2,
+            "pull_requests": 0,
+            "contributions": 2
+          }
+        ]
+      },
+      {
+        "login": "nielstron",
+        "avatar_url": "https://avatars.githubusercontent.com/u/20638630?v=4",
+        "commits": 2,
+        "pull_requests": 0,
+        "contributions": 2,
+        "repositories": [
+          {
+            "name": "yaci-devkit",
+            "commits": 1,
+            "pull_requests": 0,
+            "contributions": 1
+          },
+          {
+            "name": "Projects",
+            "commits": 1,
+            "pull_requests": 0,
+            "contributions": 1
+          }
+        ]
+      },
+      {
+        "login": "Ryun1",
+        "avatar_url": "https://avatars.githubusercontent.com/u/44342099?v=4",
+        "commits": 2,
+        "pull_requests": 0,
+        "contributions": 2,
+        "repositories": [
+          {
+            "name": "Projects",
+            "commits": 2,
+            "pull_requests": 0,
+            "contributions": 2
+          }
+        ]
+      },
+      {
+        "login": "Mercurial",
+        "avatar_url": "https://avatars.githubusercontent.com/u/585569?v=4",
+        "commits": 2,
+        "pull_requests": 0,
+        "contributions": 2,
+        "repositories": [
+          {
+            "name": "Projects",
+            "commits": 2,
+            "pull_requests": 0,
+            "contributions": 2
+          }
+        ]
+      },
+      {
+        "login": "wolf31o2",
+        "avatar_url": "https://avatars.githubusercontent.com/u/380021?v=4",
+        "commits": 1,
+        "pull_requests": 0,
+        "contributions": 1,
+        "repositories": [
+          {
+            "name": "go-sdk",
+            "commits": 1,
+            "pull_requests": 0,
+            "contributions": 1
+          }
+        ]
+      },
+      {
+        "login": "MarvinBertin",
+        "avatar_url": "https://avatars.githubusercontent.com/u/10456493?v=4",
+        "commits": 1,
+        "pull_requests": 0,
+        "contributions": 1,
+        "repositories": [
+          {
+            "name": "maestro-rust-sdk",
+            "commits": 1,
+            "pull_requests": 0,
+            "contributions": 1
+          }
+        ]
+      },
+      {
+        "login": "matiwinnetou",
+        "avatar_url": "https://avatars.githubusercontent.com/u/335933?v=4",
+        "commits": 1,
+        "pull_requests": 0,
+        "contributions": 1,
+        "repositories": [
+          {
+            "name": "yaci-devkit",
+            "commits": 1,
+            "pull_requests": 0,
+            "contributions": 1
+          }
+        ]
+      },
+      {
+        "login": "MuesliSwapTeam",
+        "avatar_url": "https://avatars.githubusercontent.com/u/91151317?v=4",
+        "commits": 1,
+        "pull_requests": 0,
+        "contributions": 1,
+        "repositories": [
+          {
+            "name": "Projects",
+            "commits": 1,
+            "pull_requests": 0,
+            "contributions": 1
+          }
+        ]
+      },
+      {
+        "login": "leo42",
+        "avatar_url": "https://avatars.githubusercontent.com/u/4371293?v=4",
+        "commits": 1,
+        "pull_requests": 0,
+        "contributions": 1,
+        "repositories": [
+          {
+            "name": "Projects",
+            "commits": 1,
+            "pull_requests": 0,
+            "contributions": 1
+          }
+        ]
+      },
+      {
+        "login": "peterVG",
+        "avatar_url": "https://avatars.githubusercontent.com/u/672121?v=4",
+        "commits": 1,
+        "pull_requests": 0,
+        "contributions": 1,
+        "repositories": [
+          {
+            "name": "Projects",
+            "commits": 1,
+            "pull_requests": 0,
+            "contributions": 1
+          }
+        ]
+      },
+      {
+        "login": "toshicardanomoto",
+        "avatar_url": "https://avatars.githubusercontent.com/u/122866340?v=4",
+        "commits": 1,
+        "pull_requests": 0,
+        "contributions": 1,
+        "repositories": [
+          {
+            "name": "Projects",
+            "commits": 1,
+            "pull_requests": 0,
+            "contributions": 1
+          }
+        ]
+      },
+      {
+        "login": "mmahut",
+        "avatar_url": "https://avatars.githubusercontent.com/u/104795?v=4",
+        "commits": 1,
+        "pull_requests": 0,
+        "contributions": 1,
+        "repositories": [
+          {
+            "name": "Projects",
+            "commits": 1,
+            "pull_requests": 0,
+            "contributions": 1
+          }
+        ]
+      }
+    ],
+    "total_pull_requests": 251,
+    "total_commits": 1986,
+    "total_contributions": 2237
+  }
+}
