@@ -1,53 +1,53 @@
 {
   "github": {
     "core_in_package_json": 2,
-    "core_in_any_file": 56,
+    "core_in_any_file": 57,
     "core_in_repositories": 236
   },
   "npm": {
     "csl_rs_browser": {
       "downloads": {
-        "last_day": 115,
+        "last_day": 0,
         "last_week": 1599,
-        "last_month": 4842,
+        "last_month": 4935,
         "last_year": 25971,
         "last_12_months": 51965
       },
       "latest_version": "0.9.21",
-      "dependents_count": 447273
+      "dependents_count": 447379
     },
     "csl_rs_nodejs": {
       "downloads": {
-        "last_day": 118,
+        "last_day": 0,
         "last_week": 1607,
-        "last_month": 4740,
+        "last_month": 4953,
         "last_year": 26085,
         "last_12_months": 52391
       },
       "latest_version": "0.9.21",
-      "dependents_count": 301864
+      "dependents_count": 301951
     },
     "whisky_js_browser": {
       "downloads": {
-        "last_day": 14,
+        "last_day": 0,
         "last_week": 243,
-        "last_month": 613,
+        "last_month": 746,
         "last_year": 0,
         "last_12_months": 2071
       },
-      "latest_version": "1.0.8",
-      "dependents_count": 1118258
+      "latest_version": "1.0.9",
+      "dependents_count": 1118468
     },
     "whisky_js_nodejs": {
       "downloads": {
-        "last_day": 14,
+        "last_day": 0,
         "last_week": 237,
-        "last_month": 610,
+        "last_month": 740,
         "last_year": 0,
         "last_12_months": 2036
       },
-      "latest_version": "1.0.8",
-      "dependents_count": 990003
+      "latest_version": "1.0.9",
+      "dependents_count": 990207
     }
   },
   "urls": {},
@@ -57,15 +57,15 @@
       {
         "login": "HinsonSIDAN",
         "avatar_url": "https://avatars.githubusercontent.com/u/90688504?v=4",
-        "commits": 951,
-        "pull_requests": 117,
-        "contributions": 1068,
+        "commits": 974,
+        "pull_requests": 118,
+        "contributions": 1092,
         "repositories": [
           {
             "name": "whisky",
-            "commits": 266,
-            "pull_requests": 70,
-            "contributions": 336
+            "commits": 279,
+            "pull_requests": 71,
+            "contributions": 350
           },
           {
             "name": "mesh",
@@ -81,9 +81,9 @@
           },
           {
             "name": "typescript-sdk",
-            "commits": 79,
+            "commits": 82,
             "pull_requests": 9,
-            "contributions": 88
+            "contributions": 91
           },
           {
             "name": "hk-developer-series-student-examples",
@@ -99,9 +99,9 @@
           },
           {
             "name": "python-sdk",
-            "commits": 32,
+            "commits": 34,
             "pull_requests": 0,
-            "contributions": 32
+            "contributions": 34
           },
           {
             "name": "aiken-content-ownership",
@@ -147,21 +147,21 @@
           },
           {
             "name": "go-sdk",
-            "commits": 13,
+            "commits": 14,
             "pull_requests": 0,
-            "contributions": 13
+            "contributions": 14
           },
           {
             "name": "hibiki",
-            "commits": 10,
+            "commits": 12,
             "pull_requests": 0,
-            "contributions": 10
+            "contributions": 12
           },
           {
             "name": "rust-sdk",
-            "commits": 9,
+            "commits": 11,
             "pull_requests": 0,
-            "contributions": 9
+            "contributions": 11
           },
           {
             "name": "exunits-research",
@@ -384,15 +384,15 @@
       {
         "login": "Andre-Diamond",
         "avatar_url": "https://avatars.githubusercontent.com/u/32074058?v=4",
-        "commits": 107,
-        "pull_requests": 7,
-        "contributions": 114,
+        "commits": 109,
+        "pull_requests": 8,
+        "contributions": 117,
         "repositories": [
           {
             "name": "DRep",
-            "commits": 107,
-            "pull_requests": 7,
-            "contributions": 114
+            "commits": 109,
+            "pull_requests": 8,
+            "contributions": 117
           }
         ]
       },
@@ -498,15 +498,15 @@
       {
         "login": "github-actions[bot]",
         "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
-        "commits": 31,
+        "commits": 35,
         "pull_requests": 0,
-        "contributions": 31,
+        "contributions": 35,
         "repositories": [
           {
             "name": "DRep",
-            "commits": 31,
+            "commits": 35,
             "pull_requests": 0,
-            "contributions": 31
+            "contributions": 35
           }
         ]
       },
@@ -1135,8 +1135,8 @@
         ]
       }
     ],
-    "total_pull_requests": 244,
-    "total_commits": 2911,
-    "total_contributions": 3155
+    "total_pull_requests": 246,
+    "total_commits": 2940,
+    "total_contributions": 3186
   }
 }
