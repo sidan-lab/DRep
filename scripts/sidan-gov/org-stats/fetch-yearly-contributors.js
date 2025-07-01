@@ -208,6 +208,58 @@ export async function fetchYearlyContributors(githubToken) {
                                     const login = commit.author.login;
                                     const timestamp = commit.commit.author.date;
 
+                                    // For forked repositories, only count commits actually made to our fork
+                                    // This prevents counting commits from upstream users that were synced
+                                    if (isFork) {
+                                        // More sophisticated approach: check if the commit was actually made to our fork
+                                        // rather than synced from upstream, regardless of user affiliations
+
+                                        const forkCreatedDate = new Date(repo.created_at);
+                                        const commitDate = new Date(commit.commit.author.date);
+
+                                        // Skip commits that were made before the fork was created
+                                        // These are definitely from the original repository
+                                        if (commitDate < forkCreatedDate) {
+                                            console.log(`  - Skipping commit by ${login} (made before fork creation: ${commitDate.toISOString()})`);
+                                            continue;
+                                        }
+
+                                        // For commits made after fork creation, we need to be more careful
+                                        // Check if this looks like a sync operation rather than actual development
+                                        const commitMessage = commit.commit.message.toLowerCase();
+
+                                        // Look for typical sync/merge commit patterns
+                                        const syncPatterns = [
+                                            /merge.*upstream/i,
+                                            /sync.*upstream/i,
+                                            /pull.*upstream/i,
+                                            /rebase.*upstream/i,
+                                            /merge.*branch.*upstream/i,
+                                            /update.*from.*upstream/i,
+                                            /merge.*remote.*upstream/i
+                                        ];
+
+                                        const isSyncCommit = syncPatterns.some(pattern => pattern.test(commitMessage));
+
+                                        if (isSyncCommit) {
+                                            console.log(`  - Skipping sync commit by ${login}: "${commit.commit.message.substring(0, 50)}..."`);
+                                            continue;
+                                        }
+
+                                        // Additional check: if the commit is from the upstream organization
+                                        // and within a very short time window after fork creation, it's likely a sync
+                                        const timeDiffHours = (commitDate - forkCreatedDate) / (1000 * 60 * 60);
+                                        const isFromUpstreamOrg = login.toLowerCase().includes(upstreamOrg.toLowerCase());
+
+                                        if (isFromUpstreamOrg && timeDiffHours < 2) {
+                                            console.log(`  - Skipping likely sync commit by ${login} (within 2h of fork creation)`);
+                                            continue;
+                                        }
+
+                                        // If we get here, it's likely a legitimate contribution to our fork
+                                        console.log(`  - Counting commit by ${login} (likely legitimate contribution to fork)`);
+                                    }
+
                                     if (!contributorsMap.has(login)) {
                                         const repoData = {};
                                         repoData[repo.name] = {
