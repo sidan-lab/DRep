@@ -32,7 +32,7 @@ jobs:
           exit 1
 
       - name: Run Discord-Stats Action
-        uses: Signius/discord-stats-action@1.0.2
+        uses: Signius/discord-stats-action@1.0.1
         with:
           discord-token: ${{ secrets.DISCORD_TOKEN }}
           guild-id:       ${{ secrets.GUILD_ID }}
