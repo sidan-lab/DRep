@@ -25,7 +25,7 @@ Location: Dan Nang, Vietnam
 Attendees: 121
 Twitter: https://x.com/sidan_lab/status/1917113813729673675 
 
-Title :Cardano Community Summit 2024 Hong Kong 
+Title : Cardano Community Summit 2024 Hong Kong 
 Organiser: Sidan Lab
 Date: October 2024
 Location: Dan Nang, Vietnam
