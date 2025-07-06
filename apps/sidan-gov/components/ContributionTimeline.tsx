@@ -1,5 +1,6 @@
 import { LineChart, Line, Tooltip, ResponsiveContainer } from 'recharts';
 import { useMemo } from 'react';
+import React from 'react';
 
 interface ContributionTimelineProps {
     commitTimestamps: string[];

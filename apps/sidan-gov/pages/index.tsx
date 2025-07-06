@@ -111,14 +111,14 @@ export default function Dashboard() {
             </div>
           </Link>
 
-          <Link href="/constitutional-committee" className={styles.pageCard}>
+          <Link href="/community-events" className={styles.pageCard}>
             <div className={styles.pageCardContent}>
-              <h3 className={styles.pageTitle}>Constitutional Committee</h3>
+              <h3 className={styles.pageTitle}>Community Events</h3>
             </div>
             <div className={styles.pageImageContainer}>
               <img 
-                src="/cc-preview.png" 
-                alt="Constitutional Committee Preview" 
+                src="/community-events-preview.png" 
+                alt="Community Events Preview" 
                 className={styles.pageImage}
               />
             </div>
