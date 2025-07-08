@@ -96,8 +96,6 @@ client.once('ready', async () => {
           if (err.message && err.message.includes('Missing Access')) {
               console.log(`    💡 This forum is likely private. To access it:`)
               console.log(`      1. Make sure the bot has a role with ViewChannel permission`)
-              console.log(`      2. Check if the forum has role-based permissions that exclude the bot`)
-              console.log(`      3. Verify the bot's role is above the @everyone role in the server`)
           }
       }
   }
