@@ -61,7 +61,7 @@
     grid-row: 1;
 }
 
-.pageGrid > :nth-child(3) { /* Sidan Stats */
+.pageGrid > :nth-child(3) { /* SIDAN Stats */
     grid-column: 3;
     grid-row: 1;
 }

@@ -26,7 +26,7 @@ Attendees: 121
 Twitter: https://x.com/sidan_lab/status/1917113813729673675 
 
 Title: Cardano Community Summit 2024 Hong Kong 
-Organiser: Sidan Lab
+Organiser: SIDAN Lab
 Date: October 2024
 Location: Dan Nang, Vietnam
 Attendees: ~50
@@ -37,20 +37,20 @@ Twitter: https://x.com/Cardano_CF/status/1830996737093431760
 
 
 Title: Hong Kong Developer Series Kick Off
-Organiser: Sidan Lab
+Organiser: SIDAN Lab
 Date: September 2024
 Location: Hong Kong
 Twitter: https://x.com/sidan_lab/status/1832435052892057756 
 
 Title: Hong Kong Developer Series Business Seminar
-Organiser: Sidan Lab, Gimbalabs
+Organiser: SIDAN Lab, Gimbalabs
 Date: October 2024
 Location: Hong Kong
 Attendees: 37
 Twitter: https://x.com/sidan_lab/status/1843283766162415690 
 
 Title: Hong Kong Developer Series - building on Cardano
-Organiser: Sidan Lab
+Organiser: SIDAN Lab
 Date: September 2024
 Location: Hong Kong
 Attendees: 20
@@ -58,7 +58,7 @@ Twitter: https://x.com/HinsonSIDAN/status/1835544062465884523
 
 
 Title: Hong Kong Developer Series 
-Organiser: Sidan Lab
+Organiser: SIDAN Lab
 Date: September 2024
 Location: Hong Kong
 Attendees: 8
@@ -66,14 +66,14 @@ Twitter: https://x.com/sidan_lab/status/1833882298711945280
 
 
 Title: Hong Kong Developer Series 
-Organiser: Sidan Lab
+Organiser: SIDAN Lab
 Date: September 2024
 Location: Hong Kong
 Attendees: 28
 Twitter: https://x.com/sidan_lab/status/1829148308163686807 
 
 Title: Cardano DeFi Workshop
-Organiser: Sidan Lab, Waffle Capital
+Organiser: SIDAN Lab, Waffle Capital
 Date: September 2024
 Location: Hong Kong
 Attendees: 10
@@ -85,21 +85,21 @@ Twitter: https://x.com/Waffle_Capital/status/1839140102163018208
 
 
 Title: Cardano Meetup Hong Kong
-Organiser: Sidan Lab
+Organiser: SIDAN Lab
 Date: November 2024
 Location: Hong Kong
 Attendees: 16
 Twitter:https://x.com/sidan_lab/status/1858451269415030939 
 
 Title: Cardano Meetup Hong Kong
-Organiser: Sidan Lab, Waffle Capital
+Organiser: SIDAN Lab, Waffle Capital
 Date: November 2024
 Location: Hong Kong
 Attendees: 36
 Twitter:https://x.com/sidan_lab/status/1857347962109899132 
 
 Title: Cardano X Polkadot Meetup 
-Organiser: Sidan Lab
+Organiser: SIDAN Lab
 Date: March 2025
 Location: Hong Kong
 Attendees: 33
@@ -112,7 +112,7 @@ Attendees: 43
 Twitter:https://x.com/sidan_lab/status/1803831962878251360 
 
 Title: Cardano Meetup Hong Kong 
-Organiser: Sidan Lab
+Organiser: SIDAN Lab
 Date: April 2024
 Location: Hong Kong
 Attendees: 41
@@ -120,7 +120,7 @@ Twitter:https://x.com/sidan_lab/status/1777377206274249038
 
 
 Title: Cardano Meetup Hong Kong #1
-Organiser: Sidan Lab
+Organiser: SIDAN Lab
 Date: March 2024
 Location: Hong Kong
 Attendees: 45

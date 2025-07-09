@@ -19,8 +19,8 @@ function MyApp({ Component, pageProps }: AppProps) {
     return (
         <>
             <Head>
-                <title>Sidan Governance</title>
-                <meta name="description" content="Sidan Governance Platform" />
+                        <title>SIDAN Governance</title>
+        <meta name="description" content="SIDAN Governance Platform" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>

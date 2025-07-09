@@ -41,7 +41,7 @@ export default function StakePoolPage() {
         <div className={styles.container}>
             <PageHeader
                 title={`${config.organization.displayName} Stake Pool`}
-                subtitle="Overview and insights on Sidan - Stake Pool Operator on the Cardano Blockchain"
+                subtitle="Overview and insights on SIDAN - Stake Pool Operator on the Cardano Blockchain"
             />
 
             <StakePoolInfo />
