@@ -31,14 +31,23 @@ jobs:
           echo "Current repository: ${{ github.repository }}"
           exit 1
 
-      - name: Run Discord-Stats Action
-        uses: Signius/discord-stats-action@1.0.2
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          discord-token: ${{ secrets.DISCORD_TOKEN }}
-          guild-id:       ${{ secrets.GUILD_ID }}
-          output-file:    sidan-gov-updates/discord-stats/stats.json
-          backfill:       'false'
-          backfill-year:  '2025'
+          node-version: '18'
+
+      - name: Install dependencies
+        run: |
+          cd scripts/sidan-gov
+          npm install
+
+      - name: Run Discord Stats Script
+        run: |
+          cd scripts/sidan-gov/discord-stats
+          node getStats.js
+        env:
+          DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
+          GUILD_ID: ${{ secrets.GUILD_ID }}
 
       - name: Commit stats.json
         run: |
