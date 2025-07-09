@@ -30,9 +30,12 @@ export default function DRepVoting() {
         const totalDrepProposals = drepInfo?.total_drep_proposals || 0;
 
         // Calculate voting participation rate
-        // Since the DRep votes on all available proposals, show 100% when there are votes
-        // The total_drep_proposals may include proposals not yet available for voting
-        const votingParticipationRate = totalVotedProposals > 0 ? 100 : 0;
+        // SIDAN has missed 1 proposal that doesn't show up in the dashboard yet
+        // So actual participation = voted proposals / (voted proposals + 1 missed proposal)
+        const totalEligibleProposals = totalVotedProposals + 1; // Add 1 for the unvoted proposal
+        const votingParticipationRate = totalVotedProposals > 0 
+            ? Math.round((totalVotedProposals / totalEligibleProposals) * 100 * 10) / 10 // Round to 1 decimal place
+            : 0;
 
         return {
             totalDelegators,

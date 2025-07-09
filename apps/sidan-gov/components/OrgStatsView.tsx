@@ -256,7 +256,7 @@ const OrgStatsView: FC<OrgStatsViewProps> = ({ currentStats, yearlyStats, discor
         return packageEntries.length > 0 ? packageEntries[0][1] : 'Please update the config.npmPackages';
     }, []);
 
-    // Use all Sidan package data for summary cards
+    // Use all SIDAN package data for summary cards
     const packageData = currentStats?.npm
         ? Object.entries(currentStats.npm)
             .filter(([, pkg]) => pkg && typeof pkg === 'object' && pkg.downloads && pkg.downloads.last_12_months !== undefined)

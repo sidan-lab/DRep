@@ -61,12 +61,12 @@ export default function Dashboard() {
 
           <Link href="/org-stats" className={styles.pageCard}>
             <div className={styles.pageCardContent}>
-              <h3 className={styles.pageTitle}>Sidan Stats</h3>
+              <h3 className={styles.pageTitle}>SIDAN Stats</h3>
             </div>
             <div className={styles.pageImageContainer}>
               <img 
                 src="/sidan-stats-preview.png" 
-                alt="Sidan Stats Preview" 
+                alt="SIDAN Stats Preview" 
                 className={styles.pageImage}
               />
             </div>
