@@ -5,9 +5,9 @@
     {
       "login": "HinsonSIDAN",
       "avatar_url": "https://avatars.githubusercontent.com/u/90688504?v=4",
-      "commits": 255,
+      "commits": 259,
       "pull_requests": 21,
-      "contributions": 276,
+      "contributions": 280,
       "repositories": [
         {
           "name": "whisky",
@@ -196,6 +196,68 @@
           "organization": "sidan-lab"
         },
         {
+          "name": "cardano-bar",
+          "commits": 21,
+          "pull_requests": 0,
+          "contributions": 21,
+          "commit_timestamps": [
+            "2025-07-16T17:15:59Z",
+            "2025-07-16T14:49:26Z",
+            "2025-06-20T05:49:39Z",
+            "2025-04-04T06:57:43Z",
+            "2025-04-04T06:53:11Z",
+            "2025-04-01T13:18:43Z",
+            "2025-04-01T13:17:09Z",
+            "2025-04-01T13:02:25Z",
+            "2025-04-01T13:02:13Z",
+            "2025-04-01T06:00:29Z",
+            "2025-04-01T03:04:27Z",
+            "2025-03-31T17:38:26Z",
+            "2025-03-31T17:38:04Z",
+            "2025-03-31T15:40:03Z",
+            "2025-03-31T15:39:13Z",
+            "2025-03-31T15:37:45Z",
+            "2025-03-31T15:33:17Z",
+            "2025-03-31T02:58:02Z",
+            "2025-03-30T10:59:18Z",
+            "2025-03-30T09:02:45Z",
+            "2025-03-27T05:42:02Z"
+          ],
+          "pr_timestamps": [],
+          "organization": "sidan-lab"
+        },
+        {
+          "name": "vodka",
+          "commits": 15,
+          "pull_requests": 5,
+          "contributions": 20,
+          "commit_timestamps": [
+            "2025-07-17T01:27:39Z",
+            "2025-07-16T16:08:52Z",
+            "2025-06-30T08:29:00Z",
+            "2025-06-30T08:26:11Z",
+            "2025-06-30T08:20:43Z",
+            "2025-06-20T05:45:45Z",
+            "2025-03-22T08:21:55Z",
+            "2025-03-22T08:16:50Z",
+            "2025-01-21T16:00:55Z",
+            "2025-01-17T13:33:58Z",
+            "2025-01-17T08:07:29Z",
+            "2025-01-14T02:01:22Z",
+            "2025-01-14T02:00:43Z",
+            "2025-01-14T01:59:46Z",
+            "2025-01-14T01:58:48Z"
+          ],
+          "pr_timestamps": [
+            "2025-03-22T08:21:55Z",
+            "2025-03-22T08:16:50Z",
+            "2025-01-21T16:00:55Z",
+            "2025-01-17T08:07:30Z",
+            "2025-01-14T02:00:43Z"
+          ],
+          "organization": "sidan-lab"
+        },
+        {
           "name": "sdks-demo",
           "commits": 20,
           "pull_requests": 0,
@@ -224,64 +286,6 @@
           ],
           "pr_timestamps": [],
           "organization": "deltadefi-protocol"
-        },
-        {
-          "name": "cardano-bar",
-          "commits": 19,
-          "pull_requests": 0,
-          "contributions": 19,
-          "commit_timestamps": [
-            "2025-06-20T05:49:39Z",
-            "2025-04-04T06:57:43Z",
-            "2025-04-04T06:53:11Z",
-            "2025-04-01T13:18:43Z",
-            "2025-04-01T13:17:09Z",
-            "2025-04-01T13:02:25Z",
-            "2025-04-01T13:02:13Z",
-            "2025-04-01T06:00:29Z",
-            "2025-04-01T03:04:27Z",
-            "2025-03-31T17:38:26Z",
-            "2025-03-31T17:38:04Z",
-            "2025-03-31T15:40:03Z",
-            "2025-03-31T15:39:13Z",
-            "2025-03-31T15:37:45Z",
-            "2025-03-31T15:33:17Z",
-            "2025-03-31T02:58:02Z",
-            "2025-03-30T10:59:18Z",
-            "2025-03-30T09:02:45Z",
-            "2025-03-27T05:42:02Z"
-          ],
-          "pr_timestamps": [],
-          "organization": "sidan-lab"
-        },
-        {
-          "name": "vodka",
-          "commits": 13,
-          "pull_requests": 5,
-          "contributions": 18,
-          "commit_timestamps": [
-            "2025-06-30T08:29:00Z",
-            "2025-06-30T08:26:11Z",
-            "2025-06-30T08:20:43Z",
-            "2025-06-20T05:45:45Z",
-            "2025-03-22T08:21:55Z",
-            "2025-03-22T08:16:50Z",
-            "2025-01-21T16:00:55Z",
-            "2025-01-17T13:33:58Z",
-            "2025-01-17T08:07:29Z",
-            "2025-01-14T02:01:22Z",
-            "2025-01-14T02:00:43Z",
-            "2025-01-14T01:59:46Z",
-            "2025-01-14T01:58:48Z"
-          ],
-          "pr_timestamps": [
-            "2025-03-22T08:21:55Z",
-            "2025-03-22T08:16:50Z",
-            "2025-01-21T16:00:55Z",
-            "2025-01-17T08:07:30Z",
-            "2025-01-14T02:00:43Z"
-          ],
-          "organization": "sidan-lab"
         },
         {
           "name": "typescript-sdk",
@@ -465,9 +469,9 @@
     {
       "login": "kenlau666",
       "avatar_url": "https://avatars.githubusercontent.com/u/98103533?v=4",
-      "commits": 149,
-      "pull_requests": 18,
-      "contributions": 167,
+      "commits": 164,
+      "pull_requests": 21,
+      "contributions": 185,
       "repositories": [
         {
           "name": "cardano-ambassador-tool",
@@ -642,6 +646,35 @@
             "2025-01-02T06:16:00Z"
           ],
           "organization": "sidan-lab"
+        },
+        {
+          "name": "starka",
+          "commits": 15,
+          "pull_requests": 3,
+          "contributions": 18,
+          "commit_timestamps": [
+            "2025-07-17T14:47:17Z",
+            "2025-07-17T14:46:51Z",
+            "2025-07-17T14:29:30Z",
+            "2025-07-17T10:40:16Z",
+            "2025-07-17T10:39:40Z",
+            "2025-07-17T09:59:05Z",
+            "2025-07-17T09:30:32Z",
+            "2025-07-17T09:29:37Z",
+            "2025-07-17T02:46:04Z",
+            "2025-07-16T16:29:53Z",
+            "2025-07-16T09:15:54Z",
+            "2025-07-15T10:13:42Z",
+            "2025-07-14T16:09:12Z",
+            "2025-07-14T10:28:09Z",
+            "2025-07-11T09:15:53Z"
+          ],
+          "pr_timestamps": [
+            "2025-07-17T14:47:17Z",
+            "2025-07-17T10:40:17Z",
+            "2025-07-17T09:30:32Z"
+          ],
+          "organization": "deltadefi-protocol"
         },
         {
           "name": "whisky",
@@ -877,9 +910,9 @@
     {
       "login": "Technosophorso",
       "avatar_url": "https://avatars.githubusercontent.com/u/119736053?v=4",
-      "commits": 115,
+      "commits": 120,
       "pull_requests": 6,
-      "contributions": 121,
+      "contributions": 126,
       "repositories": [
         {
           "name": "DRep",
@@ -1011,6 +1044,21 @@
             "2025-06-29T12:55:21Z",
             "2025-06-28T11:24:29Z"
           ],
+          "organization": "sidan-lab"
+        },
+        {
+          "name": "cardano-ambassador-tool",
+          "commits": 5,
+          "pull_requests": 0,
+          "contributions": 5,
+          "commit_timestamps": [
+            "2025-07-18T05:49:56Z",
+            "2025-07-18T05:48:26Z",
+            "2025-07-18T05:20:11Z",
+            "2025-07-16T09:58:48Z",
+            "2025-07-16T07:49:50Z"
+          ],
+          "pr_timestamps": [],
           "organization": "sidan-lab"
         }
       ]
@@ -1171,16 +1219,27 @@
     {
       "login": "github-actions[bot]",
       "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
-      "commits": 70,
+      "commits": 81,
       "pull_requests": 0,
-      "contributions": 70,
+      "contributions": 81,
       "repositories": [
         {
           "name": "DRep",
-          "commits": 70,
+          "commits": 81,
           "pull_requests": 0,
-          "contributions": 70,
+          "contributions": 81,
           "commit_timestamps": [
+            "2025-07-20T23:07:55Z",
+            "2025-07-19T23:08:23Z",
+            "2025-07-18T23:08:46Z",
+            "2025-07-17T23:09:16Z",
+            "2025-07-17T02:30:33Z",
+            "2025-07-17T01:28:16Z",
+            "2025-07-16T23:08:54Z",
+            "2025-07-15T23:07:58Z",
+            "2025-07-14T23:08:33Z",
+            "2025-07-14T02:33:30Z",
+            "2025-07-14T02:23:45Z",
             "2025-07-13T23:07:42Z",
             "2025-07-12T23:08:04Z",
             "2025-07-11T23:08:36Z",
@@ -1260,9 +1319,9 @@
     {
       "login": "twwu123",
       "avatar_url": "https://avatars.githubusercontent.com/u/45336147?v=4",
-      "commits": 56,
+      "commits": 57,
       "pull_requests": 9,
-      "contributions": 65,
+      "contributions": 66,
       "repositories": [
         {
           "name": "gin",
@@ -1358,10 +1417,11 @@
         },
         {
           "name": "cardano-golang-signing-module",
-          "commits": 5,
+          "commits": 6,
           "pull_requests": 0,
-          "contributions": 5,
+          "contributions": 6,
           "commit_timestamps": [
+            "2025-07-14T08:16:33Z",
             "2025-07-02T09:04:39Z",
             "2025-06-30T03:24:16Z",
             "2025-04-16T07:02:11Z",
@@ -1429,16 +1489,19 @@
     {
       "login": "actions-user",
       "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
-      "commits": 21,
+      "commits": 24,
       "pull_requests": 0,
-      "contributions": 21,
+      "contributions": 24,
       "repositories": [
         {
           "name": "DRep",
-          "commits": 21,
+          "commits": 24,
           "pull_requests": 0,
-          "contributions": 21,
+          "contributions": 24,
           "commit_timestamps": [
+            "2025-07-18T02:26:02Z",
+            "2025-07-16T02:26:25Z",
+            "2025-07-14T02:30:09Z",
             "2025-07-11T02:23:30Z",
             "2025-07-09T02:22:53Z",
             "2025-07-07T02:26:05Z",
@@ -1522,22 +1585,26 @@
     {
       "login": "sawe-daisy",
       "avatar_url": "https://avatars.githubusercontent.com/u/68596969?v=4",
-      "commits": 4,
-      "pull_requests": 3,
-      "contributions": 7,
+      "commits": 6,
+      "pull_requests": 5,
+      "contributions": 11,
       "repositories": [
         {
           "name": "cardano-ambassador-tool",
-          "commits": 4,
-          "pull_requests": 3,
-          "contributions": 7,
+          "commits": 6,
+          "pull_requests": 5,
+          "contributions": 11,
           "commit_timestamps": [
+            "2025-07-16T07:46:54Z",
+            "2025-07-14T03:34:13Z",
             "2025-07-10T19:09:21Z",
             "2025-07-05T09:19:07Z",
             "2025-07-03T19:18:59Z",
             "2025-07-03T18:44:06Z"
           ],
           "pr_timestamps": [
+            "2025-07-16T07:46:54Z",
+            "2025-07-14T03:34:13Z",
             "2025-07-10T19:09:21Z",
             "2025-07-05T09:19:07Z",
             "2025-07-04T03:21:40Z"
@@ -1647,7 +1714,7 @@
       ]
     }
   ],
-  "total_pull_requests": 106,
-  "total_commits": 918,
-  "total_contributions": 1024
+  "total_pull_requests": 111,
+  "total_commits": 959,
+  "total_contributions": 1070
 }
