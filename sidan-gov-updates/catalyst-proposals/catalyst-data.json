@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-07-21T02:34:00.407Z",
+  "timestamp": "2025-07-23T02:29:33.179Z",
   "projects": [
     {
       "projectDetails": {
@@ -152,7 +152,7 @@
         "title": "DeltaDeFi - Open Source Libraries for High Frequency Trading",
         "budget": 200000,
         "milestones_qty": 6,
-        "funds_distributed": 108000,
+        "funds_distributed": 144000,
         "project_id": 1200096,
         "challenges": {
           "id": 27,
@@ -239,7 +239,7 @@
         "title": "SIDAN | MeshJS - Advance Cardano SDK in Rust",
         "budget": 200000,
         "milestones_qty": 6,
-        "funds_distributed": 168000,
+        "funds_distributed": 200000,
         "project_id": 1200201,
         "challenges": {
           "id": 27,
@@ -268,7 +268,7 @@
         "title": "SIDAN | MeshJS - Cardano Service Layer Framework for DApps",
         "budget": 200000,
         "milestones_qty": 6,
-        "funds_distributed": 168000,
+        "funds_distributed": 170000,
         "project_id": 1200202,
         "challenges": {
           "id": 27,
@@ -297,7 +297,7 @@
         "title": "Waffle | SIDAN - Hong Kong Cardano Community",
         "budget": 100000,
         "milestones_qty": 4,
-        "funds_distributed": 78333.34,
+        "funds_distributed": 80833.34,
         "project_id": 1200244,
         "challenges": {
           "id": 28,
@@ -355,7 +355,7 @@
         "title": "SIDAN | KnightSafe - Self-custodial Vault for DeFi Trading",
         "budget": 150000,
         "milestones_qty": 4,
-        "funds_distributed": 112500,
+        "funds_distributed": 150000,
         "project_id": 1300171,
         "challenges": {
           "id": 35,
