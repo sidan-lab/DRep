@@ -533,8 +533,22 @@
       "deleg_rewards": "174768766",
       "member_rewards": "173713070",
       "epoch_ros": 1.150122263
+    },
+    {
+      "epoch_no": 570,
+      "active_stake": "1114809622468",
+      "active_stake_pct": 0.005054304884187293,
+      "saturation_pct": 1.47,
+      "block_cnt": 4,
+      "delegator_cnt": 53,
+      "margin": 0.03,
+      "fixed_cost": "170000000",
+      "pool_fees": "206890983",
+      "deleg_rewards": "1192808455",
+      "member_rewards": "1185410010",
+      "epoch_ros": 8.119376176
     }
   ],
-  "lastUpdated": "2025-07-22T23:08:39.696Z",
-  "currentEpoch": 571
+  "lastUpdated": "2025-07-23T23:09:02.175Z",
+  "currentEpoch": 572
 }
