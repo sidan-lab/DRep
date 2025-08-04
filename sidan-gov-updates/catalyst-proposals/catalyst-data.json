@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-08-01T02:39:54.702Z",
+  "timestamp": "2025-08-04T02:40:53.199Z",
   "projects": [
     {
       "projectDetails": {
@@ -210,7 +210,7 @@
         "title": "Mesh Software as a Service",
         "budget": 100000,
         "milestones_qty": 5,
-        "funds_distributed": 80000,
+        "funds_distributed": 100000,
         "project_id": 1200148,
         "challenges": {
           "id": 29,
