@@ -59,11 +59,11 @@
     "sigma": 0.000039937296737060685,
     "block_count": 223,
     "live_pledge": "5379993776",
-    "live_stake": "994831741142",
+    "live_stake": "996451184225",
     "live_delegators": 55,
     "live_saturation": 1.31,
     "voting_power": "994831741142"
   },
-  "lastUpdated": "2025-08-17T23:07:56.341Z",
+  "lastUpdated": "2025-08-18T23:07:48.484Z",
   "currentEpoch": 577
 }
