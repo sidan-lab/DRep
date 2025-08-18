@@ -1,5 +1,20 @@
 [
   {
+    "proposalId": "gov_action13tfag48nf94rtjcdq7c06vhkslmxxw9h6c88sl7q5g5nnewcsvlzxt5eumh",
+    "proposalTxHash": "8ad3d454f3496a35cb0d07b0fd32f687f66338b7d60e787fc0a22939e5d8833e00",
+    "proposalIndex": 35,
+    "voteTxHash": "da548feb380d1664f7180500ccac6304170c264ebf17058a12367925458656cb",
+    "blockTime": "2025-08-17T18:31:30.000Z",
+    "vote": "Yes",
+    "metaUrl": "ipfs://QmPkMuNRJ3ppL7rgo5Aod7C4Gk9eZKFkiJx4ysj9jfgFjM",
+    "metaHash": "6042f54ad2e249887288a3a986e62bf3b2e3a64f88a4643cc476be5aecad56bd",
+    "proposalTitle": "Withdraw ₳750,000 for Cardano Product Committee: Community-driven 2030 Carda...",
+    "proposalType": "TreasuryWithdrawals",
+    "proposedEpoch": 570,
+    "expirationEpoch": 577,
+    "rationale": "No rationale available"
+  },
+  {
     "proposalId": "gov_action1g7sw0f8e8qa34lppj2erksvzf4j6e9udwaq6efslc8apdqeazygsq2spyyt",
     "proposalTxHash": "47a0e7a4f9383b1afc2192b23b41824d65ac978d7741aca61fc1fa16833d111100",
     "proposalIndex": 0,
