@@ -1,0 +1,176 @@
+{
+    "mainOrganization": {
+        "name": "sidan-lab",
+        "displayName": "Sidan",
+        "logo": {
+            "src": "/180250645.png",
+            "width": 40,
+            "height": 40
+        },
+        "logoWithName": {
+            "src": "/sidan.png",
+            "width": 120,
+            "height": 120
+        },
+        "excludedRepos": [
+            "merkle-patricia-forestry",
+            "CIPs",
+            "awesome-aiken",
+            "cardano-devkit",
+            "mesh-lower-level-api-demo",
+            "next-stitches-mesh",
+            "mesh-express",
+            "mesh",
+            "mesh-pbl"
+        ]
+    },
+    "extendedOrganizations": [
+        {
+            "name": "deltadefi-protocol",
+            "displayName": "DeltaDefi Protocol",
+            "excludedRepos": []
+        }
+    ],
+    "repositories": {
+        "governance": "DRep",
+        "dependentsCountRepo": "whisky"
+    },
+    "poolId": "pool1wnrrg33lw9fxcn0h3x3vexh78up660ajgk7pvrlrz5kkcgh9khs",
+    "drepId": "drep1yfjez5zup0gystdvc933w2mn8k64hcy3krvc2namluwjxdcfhm8wd",
+    "catalystProjectIds": "1100022,1100111,1100141,1100250,1100257,1200096,1200097,1200148,1200201,1200202,1200244,1300036,1300171",
+    "discordGuildId": "1166784293805228061",
+    "discordStats": {
+        "useApiAction": false,
+        "description": "Set to true if your Discord server has more than 500 members to use the API-based action, false for the standard action (default: false)"
+    },
+    "npmPackages": [
+        {
+            "key": "csl_rs_browser",
+            "name": "@sidan-lab/sidan-csl-rs-browser",
+            "github_package_id": ""
+        },
+        {
+            "key": "csl_rs_nodejs",
+            "name": "@sidan-lab/sidan-csl-rs-nodejs",
+            "github_package_id": ""
+        },
+        {
+            "key": "whisky_js_browser",
+            "name": "@sidan-lab/whisky-js-browser",
+            "github_package_id": ""
+        },
+        {
+            "key": "whisky_js_nodejs",
+            "name": "@sidan-lab/whisky-js-nodejs",
+            "github_package_id": ""
+        }
+    ],
+    "socialLinks": [
+        {
+            "name": "GitHub",
+            "url": "https://github.com/sidan-lab"
+        },
+        {
+            "name": "Twitter",
+            "url": "https://x.com/sidan_lab"
+        },
+        {
+            "name": "Discord",
+            "url": "https://discord.gg/SN8EYZA8"
+        }
+    ],
+    "builderProjects": [
+        {
+            "id": "b1",
+            "icon": "/blink-labs.png",
+            "url": "https://blinklabs.io/"
+        },
+        {
+            "id": "b2",
+            "icon": "/nmkr.png",
+            "url": "https://www.nmkr.io/"
+        },
+        {
+            "id": "b3",
+            "icon": "/gimbalabs.png",
+            "url": "https://www.gimbalabs.com/gimbalgrid"
+        },
+        {
+            "id": "b4",
+            "icon": "/aiken.png",
+            "url": "https://aiken-lang.org/"
+        },
+        {
+            "id": "b5",
+            "icon": "/socious.png",
+            "url": "https://socious.io/"
+        },
+        {
+            "id": "b6",
+            "icon": "/txpipe.png",
+            "url": "https://txpipe.io/"
+        },
+        {
+            "id": "b7",
+            "icon": "/deltadefi.png",
+            "url": "https://www.deltadefi.io/"
+        },
+        {
+            "id": "b8",
+            "icon": "/mesh-white-txt.png",
+            "url": "https://meshjs.dev/"
+        }
+    ],
+    "highlightedProjects": [
+        {
+            "id": "MeshJS mesh-core",
+            "name": "MeshJS mesh-core",
+            "description": "Collection of comprehensive TypeScript libraries for blockchain development on Cardano.",
+            "icon": "/logo-mesh-white-512x512.png",
+            "url": "https://github.com/MeshJS/mesh-core",
+            "category": "Development Tool"
+        }
+    ],
+    "showcaseRepos": [
+        {
+            "id": "1",
+            "name": "cardano-bar",
+            "description": "Cardano development tool set across frameworks & libraries.",
+            "icon": "/180250645.png",
+            "url": "https://github.com/sidan-lab/cardano-bar",
+            "category": "Development Tool"
+        },
+        {
+            "id": "2",
+            "name": "whisky",
+            "description": "An open-source Rust library for easy Cardano transaction building and unit testing.",
+            "icon": "/180250645.png",
+            "url": "https://github.com/sidan-lab/whisky",
+            "category": "Development Tool"
+        },
+        {
+            "id": "3",
+            "name": "vodka",
+            "description": "Provide utility function for aiken onchain validation and testing utility.",
+            "icon": "/180250645.png",
+            "url": "https://github.com/sidan-lab/vodka",
+            "category": "Development Tool"
+        },
+        {
+            "id": "4",
+            "name": "rum",
+            "description": "A golang library for Cardano development, compatible with Mesh and Whisky types.",
+            "icon": "/180250645.png",
+            "url": "https://github.com/sidan-lab/rum",
+            "category": "Development Tool"
+        },
+        {
+            "id": "5",
+            "name": "gin",
+            "description": "A python library for Cardano development, compatible with Mesh and Whisky types.",
+            "icon": "/180250645.png",
+            "url": "https://github.com/sidan-lab/gin",
+            "category": "Development Tool"
+        }
+    ]
+}
