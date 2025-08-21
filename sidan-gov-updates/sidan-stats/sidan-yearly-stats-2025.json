@@ -1,10 +1,10 @@
 {
   "year": 2025,
   "yearlyTotals": {
-    "csl_rs_browser": 35641,
-    "csl_rs_nodejs": 36070,
-    "whisky_js_browser": 3716,
-    "whisky_js_nodejs": 3674
+    "csl_rs_browser": 36260,
+    "csl_rs_nodejs": 36734,
+    "whisky_js_browser": 3849,
+    "whisky_js_nodejs": 3809
   },
   "monthlyDownloads": {
     "csl_rs_browser": [
@@ -45,7 +45,7 @@
       },
       {
         "month": "August",
-        "downloads": 1199,
+        "downloads": 1818,
         "trend": "📉"
       },
       {
@@ -107,7 +107,7 @@
       },
       {
         "month": "August",
-        "downloads": 1201,
+        "downloads": 1865,
         "trend": "📉"
       },
       {
@@ -169,7 +169,7 @@
       },
       {
         "month": "August",
-        "downloads": 346,
+        "downloads": 479,
         "trend": "📉"
       },
       {
@@ -231,7 +231,7 @@
       },
       {
         "month": "August",
-        "downloads": 345,
+        "downloads": 480,
         "trend": "📉"
       },
       {
@@ -348,5 +348,5 @@
       "downloads": 1193
     }
   },
-  "lastUpdated": "2025-08-14T01:34:22.826Z"
+  "lastUpdated": "2025-08-21T01:17:44.478Z"
 }
