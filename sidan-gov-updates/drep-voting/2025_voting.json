@@ -1,5 +1,20 @@
 [
   {
+    "proposalId": "gov_action1ypajyms3pcfmkx93r87dxy6jpc8u6pst90ylhxj7t0rwjj43puasq0x9jrw",
+    "proposalTxHash": "207b226e110e13bb18b119fcd313520e0fcd060b2bc9fb9a5e5bc6e94ab10f3b00",
+    "proposalIndex": 0,
+    "voteTxHash": "209b67d279a39c0ed214ea7d0cae43a1bb2a2270a23e1427fbf04fb7bc10fa1e",
+    "blockTime": "2025-08-21T17:03:41.000Z",
+    "vote": "Yes",
+    "metaUrl": null,
+    "metaHash": null,
+    "proposalTitle": "CARDANO BLOCKCHAIN ECOSYSTEM CONSTITUTION v2.0",
+    "proposalType": "NewConstitution",
+    "proposedEpoch": 574,
+    "expirationEpoch": 581,
+    "rationale": "No rationale available"
+  },
+  {
     "proposalId": "gov_action13tfag48nf94rtjcdq7c06vhkslmxxw9h6c88sl7q5g5nnewcsvlzxt5eumh",
     "proposalTxHash": "8ad3d454f3496a35cb0d07b0fd32f687f66338b7d60e787fc0a22939e5d8833e00",
     "proposalIndex": 35,
