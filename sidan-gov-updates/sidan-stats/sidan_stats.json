@@ -1,53 +1,53 @@
 {
   "github": {
     "core_in_package_json": 2,
-    "core_in_any_file": 55,
-    "core_in_repositories": 237
+    "core_in_any_file": 57,
+    "core_in_repositories": 238
   },
   "npm": {
     "csl_rs_browser": {
       "downloads": {
         "last_day": 0,
-        "last_week": 655,
+        "last_week": 865,
         "last_month": 5308,
         "last_year": 25971,
-        "last_12_months": 55879
+        "last_12_months": 56050
       },
       "latest_version": "0.9.21",
-      "dependents_count": 455426
+      "dependents_count": 456498
     },
     "csl_rs_nodejs": {
       "downloads": {
         "last_day": 0,
-        "last_week": 743,
+        "last_week": 875,
         "last_month": 5461,
         "last_year": 26085,
-        "last_12_months": 56456
+        "last_12_months": 56638
       },
       "latest_version": "0.9.21",
-      "dependents_count": 308725
+      "dependents_count": 309627
     },
     "whisky_js_browser": {
       "downloads": {
         "last_day": 0,
-        "last_week": 142,
+        "last_week": 145,
         "last_month": 1198,
         "last_year": 0,
-        "last_12_months": 3849
+        "last_12_months": 3936
       },
       "latest_version": "1.0.10",
-      "dependents_count": 1133821
+      "dependents_count": 1135855
     },
     "whisky_js_nodejs": {
       "downloads": {
         "last_day": 0,
-        "last_week": 146,
+        "last_week": 147,
         "last_month": 1193,
         "last_year": 0,
-        "last_12_months": 3809
+        "last_12_months": 3898
       },
       "latest_version": "1.0.10",
-      "dependents_count": 1004712
+      "dependents_count": 1006639
     }
   },
   "urls": {},
@@ -327,9 +327,9 @@
       {
         "login": "kenlau666",
         "avatar_url": "https://avatars.githubusercontent.com/u/98103533?v=4",
-        "commits": 165,
-        "pull_requests": 22,
-        "contributions": 187,
+        "commits": 178,
+        "pull_requests": 24,
+        "contributions": 202,
         "repositories": [
           {
             "name": "cardano-open-bounty",
@@ -342,6 +342,12 @@
             "commits": 33,
             "pull_requests": 5,
             "contributions": 38
+          },
+          {
+            "name": "khor",
+            "commits": 15,
+            "pull_requests": 2,
+            "contributions": 17
           },
           {
             "name": "go-sdk",
@@ -374,10 +380,16 @@
             "contributions": 6
           },
           {
-            "name": "khor",
-            "commits": 3,
+            "name": "bowmore",
+            "commits": 0,
             "pull_requests": 1,
-            "contributions": 4
+            "contributions": 1
+          },
+          {
+            "name": "delta-defi-local",
+            "commits": 1,
+            "pull_requests": 0,
+            "contributions": 1
           }
         ]
       },
@@ -393,6 +405,21 @@
             "commits": 140,
             "pull_requests": 15,
             "contributions": 155
+          }
+        ]
+      },
+      {
+        "login": "github-actions[bot]",
+        "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+        "commits": 144,
+        "pull_requests": 0,
+        "contributions": 144,
+        "repositories": [
+          {
+            "name": "DRep",
+            "commits": 144,
+            "pull_requests": 0,
+            "contributions": 144
           }
         ]
       },
@@ -444,21 +471,6 @@
             "commits": 1,
             "pull_requests": 0,
             "contributions": 1
-          }
-        ]
-      },
-      {
-        "login": "github-actions[bot]",
-        "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
-        "commits": 132,
-        "pull_requests": 0,
-        "contributions": 132,
-        "repositories": [
-          {
-            "name": "DRep",
-            "commits": 132,
-            "pull_requests": 0,
-            "contributions": 132
           }
         ]
       },
@@ -522,15 +534,15 @@
       {
         "login": "actions-user",
         "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
-        "commits": 38,
+        "commits": 41,
         "pull_requests": 0,
-        "contributions": 38,
+        "contributions": 41,
         "repositories": [
           {
             "name": "DRep",
-            "commits": 38,
+            "commits": 41,
             "pull_requests": 0,
-            "contributions": 38
+            "contributions": 41
           }
         ]
       },
@@ -781,6 +793,27 @@
         ]
       },
       {
+        "login": "DeltaDeFiProtocol",
+        "avatar_url": "https://avatars.githubusercontent.com/u/119332329?v=4",
+        "commits": 4,
+        "pull_requests": 1,
+        "contributions": 5,
+        "repositories": [
+          {
+            "name": "deltadefi-docs",
+            "commits": 3,
+            "pull_requests": 0,
+            "contributions": 3
+          },
+          {
+            "name": "rum",
+            "commits": 1,
+            "pull_requests": 1,
+            "contributions": 2
+          }
+        ]
+      },
+      {
         "login": "Newt6611",
         "avatar_url": "https://avatars.githubusercontent.com/u/45097780?v=4",
         "commits": 3,
@@ -843,27 +876,6 @@
             "commits": 1,
             "pull_requests": 3,
             "contributions": 4
-          }
-        ]
-      },
-      {
-        "login": "DeltaDeFiProtocol",
-        "avatar_url": "https://avatars.githubusercontent.com/u/119332329?v=4",
-        "commits": 2,
-        "pull_requests": 1,
-        "contributions": 3,
-        "repositories": [
-          {
-            "name": "rum",
-            "commits": 1,
-            "pull_requests": 1,
-            "contributions": 2
-          },
-          {
-            "name": "deltadefi-docs",
-            "commits": 1,
-            "pull_requests": 0,
-            "contributions": 1
           }
         ]
       },
@@ -1300,8 +1312,8 @@
         ]
       }
     ],
-    "total_pull_requests": 271,
-    "total_commits": 2211,
-    "total_contributions": 2482
+    "total_pull_requests": 273,
+    "total_commits": 2241,
+    "total_contributions": 2514
   }
 }
