@@ -1,53 +1,53 @@
 {
   "github": {
-    "core_in_package_json": 2,
-    "core_in_any_file": 57,
+    "core_in_package_json": 1,
+    "core_in_any_file": 58,
     "core_in_repositories": 238
   },
   "npm": {
     "csl_rs_browser": {
       "downloads": {
         "last_day": 0,
-        "last_week": 865,
-        "last_month": 5308,
+        "last_week": 850,
+        "last_month": 3271,
         "last_year": 25971,
-        "last_12_months": 56050
+        "last_12_months": 56197
       },
       "latest_version": "0.9.21",
-      "dependents_count": 456498
+      "dependents_count": 457609
     },
     "csl_rs_nodejs": {
       "downloads": {
         "last_day": 0,
-        "last_week": 875,
-        "last_month": 5461,
+        "last_week": 850,
+        "last_month": 3323,
         "last_year": 26085,
-        "last_12_months": 56638
+        "last_12_months": 56800
       },
       "latest_version": "0.9.21",
-      "dependents_count": 309627
+      "dependents_count": 310567
     },
     "whisky_js_browser": {
       "downloads": {
         "last_day": 0,
-        "last_week": 145,
-        "last_month": 1198,
+        "last_week": 122,
+        "last_month": 670,
         "last_year": 0,
-        "last_12_months": 3936
+        "last_12_months": 4130
       },
       "latest_version": "1.0.10",
-      "dependents_count": 1135855
+      "dependents_count": 1137972
     },
     "whisky_js_nodejs": {
       "downloads": {
         "last_day": 0,
-        "last_week": 147,
-        "last_month": 1193,
+        "last_week": 122,
+        "last_month": 673,
         "last_year": 0,
-        "last_12_months": 3898
+        "last_12_months": 4091
       },
       "latest_version": "1.0.10",
-      "dependents_count": 1006639
+      "dependents_count": 1008642
     }
   },
   "urls": {},
@@ -57,9 +57,9 @@
       {
         "login": "HinsonSIDAN",
         "avatar_url": "https://avatars.githubusercontent.com/u/90688504?v=4",
-        "commits": 833,
+        "commits": 895,
         "pull_requests": 119,
-        "contributions": 952,
+        "contributions": 1014,
         "repositories": [
           {
             "name": "whisky",
@@ -75,9 +75,9 @@
           },
           {
             "name": "typescript-sdk",
-            "commits": 84,
+            "commits": 85,
             "pull_requests": 9,
-            "contributions": 93
+            "contributions": 94
           },
           {
             "name": "hk-developer-series-student-examples",
@@ -92,16 +92,22 @@
             "contributions": 57
           },
           {
+            "name": "sdks-demo",
+            "commits": 42,
+            "pull_requests": 0,
+            "contributions": 42
+          },
+          {
+            "name": "python-sdk",
+            "commits": 38,
+            "pull_requests": 0,
+            "contributions": 38
+          },
+          {
             "name": "hibiki",
             "commits": 33,
             "pull_requests": 2,
             "contributions": 35
-          },
-          {
-            "name": "python-sdk",
-            "commits": 34,
-            "pull_requests": 0,
-            "contributions": 34
           },
           {
             "name": "aiken-content-ownership",
@@ -122,10 +128,16 @@
             "contributions": 22
           },
           {
-            "name": "sdks-demo",
+            "name": "go-sdk",
             "commits": 20,
             "pull_requests": 0,
             "contributions": 20
+          },
+          {
+            "name": "rum",
+            "commits": 19,
+            "pull_requests": 0,
+            "contributions": 19
           },
           {
             "name": "cardano-open-bounty",
@@ -134,22 +146,16 @@
             "contributions": 19
           },
           {
-            "name": "rum",
-            "commits": 15,
-            "pull_requests": 0,
-            "contributions": 15
-          },
-          {
-            "name": "go-sdk",
-            "commits": 14,
-            "pull_requests": 0,
-            "contributions": 14
-          },
-          {
             "name": "rust-sdk",
-            "commits": 13,
+            "commits": 18,
             "pull_requests": 0,
-            "contributions": 13
+            "contributions": 18
+          },
+          {
+            "name": "sidan-binance-py",
+            "commits": 16,
+            "pull_requests": 0,
+            "contributions": 16
           },
           {
             "name": "exunits-research",
@@ -183,6 +189,12 @@
           },
           {
             "name": "cardano-open-bounty-web",
+            "commits": 3,
+            "pull_requests": 0,
+            "contributions": 3
+          },
+          {
+            "name": "cardano-dev-tests",
             "commits": 3,
             "pull_requests": 0,
             "contributions": 3
@@ -230,6 +242,12 @@
             "contributions": 2
           },
           {
+            "name": "cardano-golang-signing-module",
+            "commits": 2,
+            "pull_requests": 0,
+            "contributions": 2
+          },
+          {
             "name": "starka",
             "commits": 2,
             "pull_requests": 0,
@@ -249,12 +267,6 @@
           },
           {
             "name": "brand_assets",
-            "commits": 1,
-            "pull_requests": 0,
-            "contributions": 1
-          },
-          {
-            "name": "cardano-golang-signing-module",
             "commits": 1,
             "pull_requests": 0,
             "contributions": 1
@@ -282,9 +294,9 @@
       {
         "login": "twwu123",
         "avatar_url": "https://avatars.githubusercontent.com/u/45336147?v=4",
-        "commits": 307,
+        "commits": 314,
         "pull_requests": 44,
-        "contributions": 351,
+        "contributions": 358,
         "repositories": [
           {
             "name": "whisky",
@@ -293,16 +305,16 @@
             "contributions": 286
           },
           {
+            "name": "delta-defi-local",
+            "commits": 27,
+            "pull_requests": 0,
+            "contributions": 27
+          },
+          {
             "name": "gin",
             "commits": 22,
             "pull_requests": 4,
             "contributions": 26
-          },
-          {
-            "name": "delta-defi-local",
-            "commits": 20,
-            "pull_requests": 0,
-            "contributions": 20
           },
           {
             "name": "cardano-python-signing-module",
@@ -327,9 +339,9 @@
       {
         "login": "kenlau666",
         "avatar_url": "https://avatars.githubusercontent.com/u/98103533?v=4",
-        "commits": 178,
+        "commits": 183,
         "pull_requests": 24,
-        "contributions": 202,
+        "contributions": 207,
         "repositories": [
           {
             "name": "cardano-open-bounty",
@@ -380,16 +392,31 @@
             "contributions": 6
           },
           {
+            "name": "delta-defi-local",
+            "commits": 6,
+            "pull_requests": 0,
+            "contributions": 6
+          },
+          {
             "name": "bowmore",
             "commits": 0,
             "pull_requests": 1,
             "contributions": 1
-          },
+          }
+        ]
+      },
+      {
+        "login": "github-actions[bot]",
+        "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+        "commits": 155,
+        "pull_requests": 0,
+        "contributions": 155,
+        "repositories": [
           {
-            "name": "delta-defi-local",
-            "commits": 1,
+            "name": "DRep",
+            "commits": 155,
             "pull_requests": 0,
-            "contributions": 1
+            "contributions": 155
           }
         ]
       },
@@ -405,21 +432,6 @@
             "commits": 140,
             "pull_requests": 15,
             "contributions": 155
-          }
-        ]
-      },
-      {
-        "login": "github-actions[bot]",
-        "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
-        "commits": 144,
-        "pull_requests": 0,
-        "contributions": 144,
-        "repositories": [
-          {
-            "name": "DRep",
-            "commits": 144,
-            "pull_requests": 0,
-            "contributions": 144
           }
         ]
       },
@@ -534,15 +546,15 @@
       {
         "login": "actions-user",
         "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
-        "commits": 41,
+        "commits": 44,
         "pull_requests": 0,
-        "contributions": 41,
+        "contributions": 44,
         "repositories": [
           {
             "name": "DRep",
-            "commits": 41,
+            "commits": 44,
             "pull_requests": 0,
-            "contributions": 41
+            "contributions": 44
           }
         ]
       },
@@ -1313,7 +1325,7 @@
       }
     ],
     "total_pull_requests": 273,
-    "total_commits": 2241,
-    "total_contributions": 2514
+    "total_commits": 2329,
+    "total_contributions": 2602
   }
 }

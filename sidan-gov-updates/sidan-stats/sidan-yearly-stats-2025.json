@@ -1,10 +1,10 @@
 {
   "year": 2025,
   "yearlyTotals": {
-    "csl_rs_browser": 37016,
-    "csl_rs_nodejs": 37495,
-    "whisky_js_browser": 3936,
-    "whisky_js_nodejs": 3898
+    "csl_rs_browser": 38116,
+    "csl_rs_nodejs": 38604,
+    "whisky_js_browser": 4130,
+    "whisky_js_nodejs": 4091
   },
   "monthlyDownloads": {
     "csl_rs_browser": [
@@ -45,13 +45,13 @@
       },
       {
         "month": "August",
-        "downloads": 2574,
+        "downloads": 3271,
         "trend": "📉"
       },
       {
         "month": "September",
-        "downloads": 0,
-        "trend": "➡️"
+        "downloads": 403,
+        "trend": "📉"
       },
       {
         "month": "October",
@@ -107,13 +107,13 @@
       },
       {
         "month": "August",
-        "downloads": 2626,
+        "downloads": 3323,
         "trend": "📉"
       },
       {
         "month": "September",
-        "downloads": 0,
-        "trend": "➡️"
+        "downloads": 412,
+        "trend": "📉"
       },
       {
         "month": "October",
@@ -169,13 +169,13 @@
       },
       {
         "month": "August",
-        "downloads": 566,
+        "downloads": 670,
         "trend": "📉"
       },
       {
         "month": "September",
-        "downloads": 0,
-        "trend": "➡️"
+        "downloads": 90,
+        "trend": "📉"
       },
       {
         "month": "October",
@@ -231,13 +231,13 @@
       },
       {
         "month": "August",
-        "downloads": 569,
+        "downloads": 673,
         "trend": "📉"
       },
       {
         "month": "September",
-        "downloads": 0,
-        "trend": "➡️"
+        "downloads": 89,
+        "trend": "📉"
       },
       {
         "month": "October",
@@ -307,9 +307,9 @@
     },
     {
       "month": "September",
-      "projects": 0,
-      "files": 0,
-      "repositories": 0
+      "projects": 1,
+      "files": 58,
+      "repositories": 238
     },
     {
       "month": "October",
@@ -348,5 +348,5 @@
       "downloads": 1193
     }
   },
-  "lastUpdated": "2025-08-28T01:16:38.941Z"
+  "lastUpdated": "2025-09-04T01:13:24.445Z"
 }
