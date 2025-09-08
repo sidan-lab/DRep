@@ -288,24 +288,28 @@
       "580": {
         "voting_power_lovelace": "21284610043954",
         "total_delegators": 39
+      },
+      "581": {
+        "voting_power_lovelace": "21333646347089",
+        "total_delegators": 39
       }
     },
-    "current_epoch": 580,
+    "current_epoch": 581,
     "total_delegators": 39,
-    "total_amount_ada": 21284610.043954
+    "total_amount_ada": 21333646.347089
   },
   "drepInfo": {
     "drepId": "drep1yfjez5zup0gystdvc933w2mn8k64hcy3krvc2namluwjxdcfhm8wd",
     "hex": "6591505c0bd0482dacc163172b733db55be091b0d9854fbbff1d2337",
     "has_script": false,
     "deposit": "500000000",
-    "amount": "21284610043954",
+    "amount": "21333646347089",
     "active": true,
     "registered": true,
     "expires_epoch_no": 597,
     "meta_url": "https://raw.githubusercontent.com/sidan-lab/DRep/refs/heads/main/sidan_lab_drep_metadata.jsonld",
     "meta_hash": "6e7632a67312ef08bbde4e2f2414fdbf4ef2fcddf3df7e24a7a0fddb16d031f7",
-    "last_updated": "2025-09-04T01:59:20.521Z",
+    "last_updated": "2025-09-08T02:13:04.323Z",
     "total_drep_proposals": 32
   }
 }
