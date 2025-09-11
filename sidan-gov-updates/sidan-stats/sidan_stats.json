@@ -8,46 +8,46 @@
     "csl_rs_browser": {
       "downloads": {
         "last_day": 0,
-        "last_week": 850,
+        "last_week": 894,
         "last_month": 3271,
         "last_year": 25971,
-        "last_12_months": 56197
+        "last_12_months": 56237
       },
       "latest_version": "0.9.21",
-      "dependents_count": 457609
+      "dependents_count": 458637
     },
     "csl_rs_nodejs": {
       "downloads": {
         "last_day": 0,
-        "last_week": 850,
+        "last_week": 917,
         "last_month": 3323,
         "last_year": 26085,
-        "last_12_months": 56800
+        "last_12_months": 56796
       },
       "latest_version": "0.9.21",
-      "dependents_count": 310567
+      "dependents_count": 311413
     },
     "whisky_js_browser": {
       "downloads": {
         "last_day": 0,
-        "last_week": 122,
+        "last_week": 231,
         "last_month": 670,
         "last_year": 0,
-        "last_12_months": 4130
+        "last_12_months": 4368
       },
       "latest_version": "1.0.10",
-      "dependents_count": 1137972
+      "dependents_count": 1139969
     },
     "whisky_js_nodejs": {
       "downloads": {
         "last_day": 0,
-        "last_week": 122,
+        "last_week": 230,
         "last_month": 673,
         "last_year": 0,
-        "last_12_months": 4091
+        "last_12_months": 4329
       },
       "latest_version": "1.0.10",
-      "dependents_count": 1008642
+      "dependents_count": 1010504
     }
   },
   "urls": {},
@@ -57,9 +57,9 @@
       {
         "login": "HinsonSIDAN",
         "avatar_url": "https://avatars.githubusercontent.com/u/90688504?v=4",
-        "commits": 895,
+        "commits": 897,
         "pull_requests": 119,
-        "contributions": 1014,
+        "contributions": 1016,
         "repositories": [
           {
             "name": "whisky",
@@ -93,9 +93,9 @@
           },
           {
             "name": "sdks-demo",
-            "commits": 42,
+            "commits": 43,
             "pull_requests": 0,
-            "contributions": 42
+            "contributions": 43
           },
           {
             "name": "python-sdk",
@@ -260,6 +260,12 @@
             "contributions": 2
           },
           {
+            "name": ".github",
+            "commits": 2,
+            "pull_requests": 0,
+            "contributions": 2
+          },
+          {
             "name": "yaci-devkit",
             "commits": 1,
             "pull_requests": 0,
@@ -278,12 +284,6 @@
             "contributions": 1
           },
           {
-            "name": ".github",
-            "commits": 1,
-            "pull_requests": 0,
-            "contributions": 1
-          },
-          {
             "name": "deltadefi-docs",
             "commits": 1,
             "pull_requests": 0,
@@ -294,9 +294,9 @@
       {
         "login": "twwu123",
         "avatar_url": "https://avatars.githubusercontent.com/u/45336147?v=4",
-        "commits": 314,
+        "commits": 315,
         "pull_requests": 44,
-        "contributions": 358,
+        "contributions": 359,
         "repositories": [
           {
             "name": "whisky",
@@ -306,9 +306,9 @@
           },
           {
             "name": "delta-defi-local",
-            "commits": 27,
+            "commits": 28,
             "pull_requests": 0,
-            "contributions": 27
+            "contributions": 28
           },
           {
             "name": "gin",
@@ -339,9 +339,9 @@
       {
         "login": "kenlau666",
         "avatar_url": "https://avatars.githubusercontent.com/u/98103533?v=4",
-        "commits": 183,
+        "commits": 187,
         "pull_requests": 24,
-        "contributions": 207,
+        "contributions": 211,
         "repositories": [
           {
             "name": "cardano-open-bounty",
@@ -368,6 +368,12 @@
             "contributions": 15
           },
           {
+            "name": "delta-defi-local",
+            "commits": 10,
+            "pull_requests": 0,
+            "contributions": 10
+          },
+          {
             "name": "vodka",
             "commits": 6,
             "pull_requests": 3,
@@ -392,12 +398,6 @@
             "contributions": 6
           },
           {
-            "name": "delta-defi-local",
-            "commits": 6,
-            "pull_requests": 0,
-            "contributions": 6
-          },
-          {
             "name": "bowmore",
             "commits": 0,
             "pull_requests": 1,
@@ -408,30 +408,30 @@
       {
         "login": "github-actions[bot]",
         "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
-        "commits": 155,
+        "commits": 166,
         "pull_requests": 0,
-        "contributions": 155,
+        "contributions": 166,
         "repositories": [
           {
             "name": "DRep",
-            "commits": 155,
+            "commits": 166,
             "pull_requests": 0,
-            "contributions": 155
+            "contributions": 166
           }
         ]
       },
       {
         "login": "Andre-Diamond",
         "avatar_url": "https://avatars.githubusercontent.com/u/32074058?v=4",
-        "commits": 140,
+        "commits": 142,
         "pull_requests": 15,
-        "contributions": 155,
+        "contributions": 157,
         "repositories": [
           {
             "name": "DRep",
-            "commits": 140,
+            "commits": 142,
             "pull_requests": 15,
-            "contributions": 155
+            "contributions": 157
           }
         ]
       },
@@ -546,15 +546,15 @@
       {
         "login": "actions-user",
         "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
-        "commits": 44,
+        "commits": 47,
         "pull_requests": 0,
-        "contributions": 44,
+        "contributions": 47,
         "repositories": [
           {
             "name": "DRep",
-            "commits": 44,
+            "commits": 47,
             "pull_requests": 0,
-            "contributions": 44
+            "contributions": 47
           }
         ]
       },
@@ -892,6 +892,21 @@
         ]
       },
       {
+        "login": "awcjack",
+        "avatar_url": "https://avatars.githubusercontent.com/u/17763165?v=4",
+        "commits": 3,
+        "pull_requests": 0,
+        "contributions": 3,
+        "repositories": [
+          {
+            "name": "delta-defi-local",
+            "commits": 3,
+            "pull_requests": 0,
+            "contributions": 3
+          }
+        ]
+      },
+      {
         "login": "Zagita21",
         "avatar_url": "https://avatars.githubusercontent.com/u/86721028?v=4",
         "commits": 1,
@@ -1204,7 +1219,7 @@
         ]
       },
       {
-        "login": "ceilican",
+        "login": "Zahnentferner",
         "avatar_url": "https://avatars.githubusercontent.com/u/1809436?v=4",
         "commits": 1,
         "pull_requests": 0,
@@ -1307,25 +1322,10 @@
             "contributions": 1
           }
         ]
-      },
-      {
-        "login": "awcjack",
-        "avatar_url": "https://avatars.githubusercontent.com/u/17763165?v=4",
-        "commits": 1,
-        "pull_requests": 0,
-        "contributions": 1,
-        "repositories": [
-          {
-            "name": "delta-defi-local",
-            "commits": 1,
-            "pull_requests": 0,
-            "contributions": 1
-          }
-        ]
       }
     ],
     "total_pull_requests": 273,
-    "total_commits": 2329,
-    "total_contributions": 2602
+    "total_commits": 2354,
+    "total_contributions": 2627
   }
 }
