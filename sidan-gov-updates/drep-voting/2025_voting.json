@@ -1,5 +1,35 @@
 [
   {
+    "proposalId": "gov_action13836fuy3yttxn4hkeqka398q9qnwsjtmul4sxc3nht7qae8uvejsqm7ukh8",
+    "proposalTxHash": "89e3a4f09122d669d6f6c82dd894e02826e8497be7eb036233bafc0ee4fc666500",
+    "proposalIndex": 0,
+    "voteTxHash": "a418a365204d6168b414277bd6e7badccffa0d592f5c2c0e75d422f6647b7d55",
+    "blockTime": "2025-09-14T06:29:27.000Z",
+    "vote": "No",
+    "metaUrl": null,
+    "metaHash": null,
+    "proposalTitle": "Cardano in Oceania: A community-led strategic plan for investing in growth.",
+    "proposalType": "InfoAction",
+    "proposedEpoch": 579,
+    "expirationEpoch": 586,
+    "rationale": "No rationale available"
+  },
+  {
+    "proposalId": "gov_action1jr84r96lnsvu9yd6c0jhxe9gj5r7vnd2pgkntc6klplxdpyzz4tqqc9uldx",
+    "proposalTxHash": "90cf51975f9c19c291bac3e57364a89507e64daa0a2d35e356f87e668482155600",
+    "proposalIndex": 0,
+    "voteTxHash": "f0f6735d41a60f5b942123384efd44e58e6618ece2c7cb2c311505a48ee0c00a",
+    "blockTime": "2025-09-14T06:25:14.000Z",
+    "vote": "Abstain",
+    "metaUrl": "ipfs://QmNkaqcA1o36RaYki4nzn1cHEkGe9gEVc6ckpFivEckdCG",
+    "metaHash": "b8eedcfb2b9a7a68eb80839828b3d8d0452ca4934d4fdd7f950a133c6b5617b1",
+    "proposalTitle": "Budget: ₳5M Loan for Cardano's Global Listing Expansion - Powered by Snek",
+    "proposalType": "InfoAction",
+    "proposedEpoch": 580,
+    "expirationEpoch": 587,
+    "rationale": "No rationale available"
+  },
+  {
     "proposalId": "gov_action1ypajyms3pcfmkx93r87dxy6jpc8u6pst90ylhxj7t0rwjj43puasq0x9jrw",
     "proposalTxHash": "207b226e110e13bb18b119fcd313520e0fcd060b2bc9fb9a5e5bc6e94ab10f3b00",
     "proposalIndex": 0,
