@@ -11,11 +11,13 @@ import config from '../config';
 interface ContributorModalProps {
     contributor: Contributor;
     onClose: () => void;
+    globalStartDate?: string;
 }
 
 export const ContributorModal: React.FC<ContributorModalProps> = ({
     contributor,
     onClose,
+    globalStartDate
 }) => {
     const modalRef = useRef<HTMLDivElement>(null);
 
@@ -66,7 +68,7 @@ export const ContributorModal: React.FC<ContributorModalProps> = ({
                         className={styles.avatar}
                     />
                     <h2 className={styles.contributorName}>
-                        <a
+                        <a 
                             href={`https://github.com/${contributor.login}`}
                             target="_blank"
                             rel="noopener noreferrer"
@@ -105,6 +107,7 @@ export const ContributorModal: React.FC<ContributorModalProps> = ({
                             prTimestamps={contributor.repositories.flatMap(repo => repo.pr_timestamps)}
                             height={200}
                             showAxis={false}
+                            globalStartDate={globalStartDate}
                         />
                     </div>
 

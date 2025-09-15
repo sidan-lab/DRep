@@ -3,11 +3,16 @@ import styles from '../styles/Contributors.module.css';
 import Image from 'next/image';
 import PageHeader from '../components/PageHeader';
 import ContributorModal from '../components/ContributorModal';
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { Contributor } from '../types';
 import { FaUsers } from 'react-icons/fa';
 import { VscGitCommit, VscGitPullRequest, VscRepo } from 'react-icons/vsc';
 import ContributionTimeline from '../components/ContributionTimeline';
+import type { NextPage } from 'next';
+import type { IconType } from 'react-icons';
+import type { FC, ReactElement, ComponentProps } from 'react';
+import type { ReactNode } from 'react';
+import type { JSX } from 'react';
 
 // Generate a consistent color for a repository
 const getRepoColor = (repoName: string) => {
@@ -20,15 +25,44 @@ const getRepoColor = (repoName: string) => {
     return `hsla(${hue}, 70%, 60%, 0.3)`;
 };
 
-export default function Contributors() {
+interface IconComponentProps {
+    Icon: IconType;
+    className?: string;
+}
+
+const IconComponent = ({ Icon, className }: IconComponentProps): JSX.Element => {
+    return <Icon className={className} />;
+};
+
+const Contributors: NextPage = () => {
     const { contributorsData, isLoading, error } = useData();
     const [selectedContributor, setSelectedContributor] = useState<Contributor | null>(null);
+
+    // Calculate the earliest contribution date across all contributors
+    const earliestContributionDate = useMemo(() => {
+        if (!contributorsData?.contributors) return null;
+
+        let earliestDate: string | null = null;
+
+        contributorsData.contributors.forEach(contributor => {
+            contributor.repositories.forEach(repo => {
+                const allTimestamps = [...(repo.commit_timestamps || []), ...(repo.pr_timestamps || [])];
+                allTimestamps.forEach(timestamp => {
+                    if (!earliestDate || timestamp < earliestDate) {
+                        earliestDate = timestamp;
+                    }
+                });
+            });
+        });
+
+        return earliestDate;
+    }, [contributorsData]);
 
     if (isLoading) {
         return (
             <div className={styles.container}>
                 <PageHeader
-                    title={<>Mesh <span>Contributors</span></>}
+                    title={<>SIDAN <span>Contributors</span></>}
                     subtitle="Loading contributor data..."
                 />
                 <div className={styles.loadingContainer}>
@@ -91,12 +125,12 @@ export default function Contributors() {
                     <div className={`${styles.summaryCard} ${styles.card}`}>
                         <div className={styles.summaryContent}>
                             <div className={styles.statColumn}>
-                                <FaUsers className={styles.summaryIcon} />
+                                <IconComponent Icon={FaUsers} className={styles.summaryIcon} />
                                 <p className={styles.statLabel}>Contributors</p>
                                 <p className={styles.summaryNumber}>{contributorsData.unique_count}</p>
                             </div>
                             <div className={styles.statColumn}>
-                                <VscRepo className={styles.summaryIcon} />
+                                <IconComponent Icon={VscRepo} className={styles.summaryIcon} />
                                 <p className={styles.statLabel}>Repositories</p>
                                 <p className={styles.summaryNumber}>{totalUniqueRepos}</p>
                             </div>
@@ -106,12 +140,12 @@ export default function Contributors() {
                     <div className={`${styles.summaryCard} ${styles.card}`}>
                         <div className={styles.summaryContent}>
                             <div className={styles.statColumn}>
-                                <VscGitCommit className={styles.summaryIcon} />
+                                <IconComponent Icon={VscGitCommit} className={styles.summaryIcon} />
                                 <p className={styles.statLabel}>Commits</p>
                                 <p className={styles.summaryNumber}>{contributorsData.total_commits || 0}</p>
                             </div>
                             <div className={styles.statColumn}>
-                                <VscGitPullRequest className={styles.summaryIcon} />
+                                <IconComponent Icon={VscGitPullRequest} className={styles.summaryIcon} />
                                 <p className={styles.statLabel}>Pull Requests</p>
                                 <p className={styles.summaryNumber}>{contributorsData.total_pull_requests}</p>
                             </div>
@@ -144,7 +178,7 @@ export default function Contributors() {
                             />
                             <h3 className={styles.username}>{contributor.login}</h3>
                         </div>
-                        <div className={styles.contributorStats}>
+                        <div className={styles.stats}>
                             <div className={styles.statItem}>
                                 <span className={styles.statLabel}>Commits</span>
                                 <span className={styles.statValue}>{contributor.commits}</span>
@@ -163,10 +197,11 @@ export default function Contributors() {
                             <ContributionTimeline
                                 commitTimestamps={contributor.repositories.flatMap(repo => repo.commit_timestamps)}
                                 prTimestamps={contributor.repositories.flatMap(repo => repo.pr_timestamps)}
+                                globalStartDate={earliestContributionDate || undefined}
                             />
                         </div>
 
-                        <div className={styles.topRepos}>
+                        <div className={styles.repoList}>
                             {contributor.repositories
                                 .sort((a, b) => b.contributions - a.contributions)
                                 .slice(0, 3)
@@ -190,8 +225,11 @@ export default function Contributors() {
                 <ContributorModal
                     contributor={selectedContributor}
                     onClose={() => setSelectedContributor(null)}
+                    globalStartDate={earliestContributionDate || undefined}
                 />
             )}
         </div>
     );
-} 
+};
+
+export default Contributors; 
