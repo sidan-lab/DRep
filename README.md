@@ -10,4 +10,4 @@
 
 ---
 
-https://sidan-gov.netlify.app/ WIP*
+https://dashboard.sidan.io/ (WIP*)
