@@ -10,8 +10,7 @@ import { VscGitCommit, VscGitPullRequest, VscRepo } from 'react-icons/vsc';
 import ContributionTimeline from '../components/ContributionTimeline';
 import type { NextPage } from 'next';
 import type { IconType } from 'react-icons';
-import type { FC, ReactElement, ComponentProps } from 'react';
-import type { ReactNode } from 'react';
+
 import type { JSX } from 'react';
 
 // Generate a consistent color for a repository
