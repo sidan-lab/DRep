@@ -1,3 +1,4 @@
+import React from 'react';
 import CatalystProposalsList from '../components/CatalystProposalsList';
 import { useData } from '../contexts/DataContext';
 import styles from '../styles/Proposals.module.css';
@@ -11,6 +12,7 @@ import CatalystMilestonesDonut from '../components/CatalystMilestonesDonut';
 import CatalystBudgetDonut from '../components/CatalystBudgetDonut';
 import VotesDonutChart from '../components/VotesDonutChart';
 import { useScrollRestoration } from '../hooks/useScrollRestoration';
+import Link from 'next/link';
 
 export default function CatalystProposals() {
     const router = useRouter();
@@ -136,6 +138,21 @@ export default function CatalystProposals() {
                 title={<>Catalyst Proposal <span>Dashboard</span></>}
                 subtitle="SIDAN received strong support from Ada voters at Cardano's Project Catalyst. We are grateful for every support and want to make sure that our supporters have easy overview and insights on the progress of our funded proposals"
             />
+
+            {/* New Proposals Section */}
+            <div className={styles.newProposalSection}>
+                <div className={styles.sectionHeader}>
+                    <h2 className={styles.sectionTitle}>New Proposals</h2>
+                    <p className={styles.sectionDescription}>
+                        Explore upcoming and recently submitted Catalyst proposals from SIDAN Lab
+                    </p>
+                </div>
+                <div className={styles.sectionActions}>
+                    <Link href="/catalyst-proposals/new-proposals" className={styles.newProposalButton}>
+                        View New Proposals
+                    </Link>
+                </div>
+            </div>
 
             <SearchFilterBar
                 config={filterConfig}

@@ -15,7 +15,6 @@ export const ContributionTimeline: React.FC<ContributionTimelineProps> = ({
     commitTimestamps,
     prTimestamps,
     height = 60,
-    showAxis = false,
     globalStartDate,
     globalEndDate,
 }) => {
@@ -35,7 +34,7 @@ export const ContributionTimeline: React.FC<ContributionTimelineProps> = ({
         const endDate = globalEndDate ? new Date(globalEndDate) : new Date(allTimestamps[allTimestamps.length - 1]);
 
         // Initialize all dates in the range with zero counts
-        let currentDate = new Date(startDate);
+        const currentDate = new Date(startDate);
         while (currentDate <= endDate) {
             const dateStr = currentDate.toISOString().split('T')[0];
             contributionMap.set(dateStr, { commits: 0, prs: 0 });
