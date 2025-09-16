@@ -31,11 +31,12 @@ export default function Dashboard() {
           </p>
         </div>
 
-        {/* Page Navigation Cards */}
+        {/* Page Navigation Cards - Creative Masonry Grid */}
         <div className={styles.pageGrid}>
-          <Link href="/drep-voting" className={styles.pageCard}>
+          <Link href="/drep-voting" className={`${styles.pageCard} ${styles.tallCard}`}>
             <div className={styles.pageCardContent}>
               <h3 className={styles.pageTitle}>DRep Voting</h3>
+              <p className={styles.pageDescription}>Track and analyze SIDAN Lab&apos;s governance participation</p>
             </div>
             <div className={styles.pageImageContainer}>
               <img 
@@ -46,9 +47,25 @@ export default function Dashboard() {
             </div>
           </Link>
 
+          <Link href="/catalyst-proposals/new-proposals" className={`${styles.pageCard} ${styles.featuredCard}`}>
+            <div className={styles.pageCardContent}>
+              <div className={styles.newBadge}>NEW</div>
+              <h3 className={styles.pageTitle}>New Proposals</h3>
+              <p className={styles.pageDescription}>Explore our latest Catalyst Fund 14 proposals</p>
+            </div>
+            <div className={styles.pageImageContainer}>
+              <img 
+                src="/cyalyst-proposals-preview.png" 
+                alt="New Catalyst Proposals Preview" 
+                className={styles.pageImage}
+              />
+            </div>
+          </Link>
+
           <Link href="/catalyst-proposals" className={styles.pageCard}>
             <div className={styles.pageCardContent}>
-              <h3 className={styles.pageTitle}>Catalyst Proposals</h3>
+              <h3 className={styles.pageTitle}>All Proposals</h3>
+              <p className={styles.pageDescription}>Complete history of our Catalyst journey</p>
             </div>
             <div className={styles.pageImageContainer}>
               <img 
@@ -59,9 +76,10 @@ export default function Dashboard() {
             </div>
           </Link>
 
-          <Link href="/org-stats" className={styles.pageCard}>
+          <Link href="/org-stats" className={`${styles.pageCard} ${styles.wideCard}`}>
             <div className={styles.pageCardContent}>
               <h3 className={styles.pageTitle}>SIDAN Stats</h3>
+              <p className={styles.pageDescription}>Comprehensive metrics and performance insights</p>
             </div>
             <div className={styles.pageImageContainer}>
               <img 
@@ -75,6 +93,7 @@ export default function Dashboard() {
           <Link href="/stake-pool" className={styles.pageCard}>
             <div className={styles.pageCardContent}>
               <h3 className={styles.pageTitle}>Stake Pool</h3>
+              <p className={styles.pageDescription}>Monitor pool performance and delegator activity</p>
             </div>
             <div className={styles.pageImageContainer}>
               <img 
@@ -88,6 +107,7 @@ export default function Dashboard() {
           <Link href="/projects" className={styles.pageCard}>
             <div className={styles.pageCardContent}>
               <h3 className={styles.pageTitle}>Projects</h3>
+              <p className={styles.pageDescription}>Open source contributions and development</p>
             </div>
             <div className={styles.pageImageContainer}>
               <img 
@@ -98,9 +118,10 @@ export default function Dashboard() {
             </div>
           </Link>
 
-          <Link href="/contributors" className={styles.pageCard}>
+          <Link href="/contributors" className={`${styles.pageCard} ${styles.tallCard}`}>
             <div className={styles.pageCardContent}>
               <h3 className={styles.pageTitle}>Contributors</h3>
+              <p className={styles.pageDescription}>Meet our talented team and community</p>
             </div>
             <div className={styles.pageImageContainer}>
               <img 
@@ -114,6 +135,7 @@ export default function Dashboard() {
           <Link href="/community-events" className={styles.pageCard}>
             <div className={styles.pageCardContent}>
               <h3 className={styles.pageTitle}>Community Events</h3>
+              <p className={styles.pageDescription}>Workshops, meetups, and ecosystem engagement</p>
             </div>
             <div className={styles.pageImageContainer}>
               <img 
