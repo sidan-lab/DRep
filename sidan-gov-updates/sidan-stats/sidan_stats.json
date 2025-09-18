@@ -1,58 +1,58 @@
 {
   "github": {
     "core_in_package_json": 1,
-    "core_in_any_file": 58,
+    "core_in_any_file": 61,
     "core_in_repositories": 238
   },
   "npm": {
     "csl_rs_browser": {
       "downloads": {
         "last_day": 0,
-        "last_week": 894,
+        "last_week": 886,
         "last_month": 3271,
         "last_year": 25971,
-        "last_12_months": 56237
+        "last_12_months": 56088
       },
       "latest_version": "0.9.21",
-      "dependents_count": 458637
+      "dependents_count": 459695
     },
     "csl_rs_nodejs": {
       "downloads": {
         "last_day": 0,
-        "last_week": 917,
+        "last_week": 921,
         "last_month": 3323,
         "last_year": 26085,
-        "last_12_months": 56796
+        "last_12_months": 56694
       },
       "latest_version": "0.9.21",
-      "dependents_count": 311413
+      "dependents_count": 312277
     },
     "whisky_js_browser": {
       "downloads": {
         "last_day": 0,
-        "last_week": 231,
+        "last_week": 260,
         "last_month": 670,
         "last_year": 0,
-        "last_12_months": 4368
+        "last_12_months": 4622
       },
       "latest_version": "1.0.10",
-      "dependents_count": 1139969
+      "dependents_count": 1142010
     },
     "whisky_js_nodejs": {
       "downloads": {
         "last_day": 0,
-        "last_week": 230,
+        "last_week": 263,
         "last_month": 673,
         "last_year": 0,
-        "last_12_months": 4329
+        "last_12_months": 4587
       },
       "latest_version": "1.0.10",
-      "dependents_count": 1010504
+      "dependents_count": 1012398
     }
   },
   "urls": {},
   "contributors": {
-    "unique_count": 57,
+    "unique_count": 74,
     "contributors": [
       {
         "login": "HinsonSIDAN",
@@ -292,11 +292,32 @@
         ]
       },
       {
+        "login": "katomm",
+        "avatar_url": "https://avatars.githubusercontent.com/u/31965230?v=4",
+        "commits": 567,
+        "pull_requests": 0,
+        "contributions": 567,
+        "repositories": [
+          {
+            "name": "cardano-org",
+            "commits": 566,
+            "pull_requests": 0,
+            "contributions": 566
+          },
+          {
+            "name": "Projects",
+            "commits": 1,
+            "pull_requests": 0,
+            "contributions": 1
+          }
+        ]
+      },
+      {
         "login": "twwu123",
         "avatar_url": "https://avatars.githubusercontent.com/u/45336147?v=4",
-        "commits": 315,
+        "commits": 319,
         "pull_requests": 44,
-        "contributions": 359,
+        "contributions": 363,
         "repositories": [
           {
             "name": "whisky",
@@ -306,9 +327,9 @@
           },
           {
             "name": "delta-defi-local",
-            "commits": 28,
+            "commits": 32,
             "pull_requests": 0,
-            "contributions": 28
+            "contributions": 32
           },
           {
             "name": "gin",
@@ -339,9 +360,9 @@
       {
         "login": "kenlau666",
         "avatar_url": "https://avatars.githubusercontent.com/u/98103533?v=4",
-        "commits": 187,
+        "commits": 189,
         "pull_requests": 24,
-        "contributions": 211,
+        "contributions": 213,
         "repositories": [
           {
             "name": "cardano-open-bounty",
@@ -369,9 +390,9 @@
           },
           {
             "name": "delta-defi-local",
-            "commits": 10,
+            "commits": 12,
             "pull_requests": 0,
-            "contributions": 10
+            "contributions": 12
           },
           {
             "name": "vodka",
@@ -408,15 +429,15 @@
       {
         "login": "github-actions[bot]",
         "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
-        "commits": 166,
+        "commits": 180,
         "pull_requests": 0,
-        "contributions": 166,
+        "contributions": 180,
         "repositories": [
           {
             "name": "DRep",
-            "commits": 166,
+            "commits": 180,
             "pull_requests": 0,
-            "contributions": 166
+            "contributions": 180
           }
         ]
       },
@@ -438,9 +459,9 @@
       {
         "login": "AnsonSIDAN",
         "avatar_url": "https://avatars.githubusercontent.com/u/91122558?v=4",
-        "commits": 100,
+        "commits": 101,
         "pull_requests": 33,
-        "contributions": 133,
+        "contributions": 134,
         "repositories": [
           {
             "name": "typescript-sdk",
@@ -483,21 +504,27 @@
             "commits": 1,
             "pull_requests": 0,
             "contributions": 1
+          },
+          {
+            "name": "cardano-org",
+            "commits": 1,
+            "pull_requests": 0,
+            "contributions": 1
           }
         ]
       },
       {
         "login": "Technosophorso",
         "avatar_url": "https://avatars.githubusercontent.com/u/119736053?v=4",
-        "commits": 115,
-        "pull_requests": 6,
-        "contributions": 121,
+        "commits": 122,
+        "pull_requests": 9,
+        "contributions": 131,
         "repositories": [
           {
             "name": "DRep",
-            "commits": 115,
-            "pull_requests": 6,
-            "contributions": 121
+            "commits": 122,
+            "pull_requests": 9,
+            "contributions": 131
           }
         ]
       },
@@ -546,15 +573,15 @@
       {
         "login": "actions-user",
         "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
-        "commits": 47,
+        "commits": 50,
         "pull_requests": 0,
-        "contributions": 47,
+        "contributions": 50,
         "repositories": [
           {
             "name": "DRep",
-            "commits": 47,
+            "commits": 50,
             "pull_requests": 0,
-            "contributions": 47
+            "contributions": 50
           }
         ]
       },
@@ -569,6 +596,21 @@
             "name": "cardano-open-bounty",
             "commits": 33,
             "pull_requests": 5,
+            "contributions": 38
+          }
+        ]
+      },
+      {
+        "login": "lodl",
+        "avatar_url": "https://avatars.githubusercontent.com/u/44868882?v=4",
+        "commits": 38,
+        "pull_requests": 0,
+        "contributions": 38,
+        "repositories": [
+          {
+            "name": "cardano-org",
+            "commits": 38,
+            "pull_requests": 0,
             "contributions": 38
           }
         ]
@@ -612,6 +654,21 @@
             "commits": 25,
             "pull_requests": 3,
             "contributions": 28
+          }
+        ]
+      },
+      {
+        "login": "gufmar",
+        "avatar_url": "https://avatars.githubusercontent.com/u/13198220?v=4",
+        "commits": 26,
+        "pull_requests": 0,
+        "contributions": 26,
+        "repositories": [
+          {
+            "name": "cardano-org",
+            "commits": 26,
+            "pull_requests": 0,
+            "contributions": 26
           }
         ]
       },
@@ -724,6 +781,21 @@
         ]
       },
       {
+        "login": "RayTracedObserver",
+        "avatar_url": "https://avatars.githubusercontent.com/u/160285742?v=4",
+        "commits": 11,
+        "pull_requests": 0,
+        "contributions": 11,
+        "repositories": [
+          {
+            "name": "cardano-org",
+            "commits": 11,
+            "pull_requests": 0,
+            "contributions": 11
+          }
+        ]
+      },
+      {
         "login": "b00kdev",
         "avatar_url": "https://avatars.githubusercontent.com/u/100355203?v=4",
         "commits": 9,
@@ -771,6 +843,21 @@
             "commits": 0,
             "pull_requests": 1,
             "contributions": 1
+          }
+        ]
+      },
+      {
+        "login": "thenic95",
+        "avatar_url": "https://avatars.githubusercontent.com/u/61423239?v=4",
+        "commits": 6,
+        "pull_requests": 0,
+        "contributions": 6,
+        "repositories": [
+          {
+            "name": "cardano-org",
+            "commits": 6,
+            "pull_requests": 0,
+            "contributions": 6
           }
         ]
       },
@@ -826,6 +913,36 @@
         ]
       },
       {
+        "login": "0xBora",
+        "avatar_url": "https://avatars.githubusercontent.com/u/133051383?v=4",
+        "commits": 5,
+        "pull_requests": 0,
+        "contributions": 5,
+        "repositories": [
+          {
+            "name": "cardano-org",
+            "commits": 5,
+            "pull_requests": 0,
+            "contributions": 5
+          }
+        ]
+      },
+      {
+        "login": "ruyut",
+        "avatar_url": "https://avatars.githubusercontent.com/u/48990452?v=4",
+        "commits": 5,
+        "pull_requests": 0,
+        "contributions": 5,
+        "repositories": [
+          {
+            "name": "cardano-org",
+            "commits": 5,
+            "pull_requests": 0,
+            "contributions": 5
+          }
+        ]
+      },
+      {
         "login": "Newt6611",
         "avatar_url": "https://avatars.githubusercontent.com/u/45097780?v=4",
         "commits": 3,
@@ -877,6 +994,36 @@
         ]
       },
       {
+        "login": "IndividuoDigital",
+        "avatar_url": "https://avatars.githubusercontent.com/u/101335073?v=4",
+        "commits": 4,
+        "pull_requests": 0,
+        "contributions": 4,
+        "repositories": [
+          {
+            "name": "cardano-org",
+            "commits": 4,
+            "pull_requests": 0,
+            "contributions": 4
+          }
+        ]
+      },
+      {
+        "login": "linhdt-teko",
+        "avatar_url": "https://avatars.githubusercontent.com/u/47734766?v=4",
+        "commits": 4,
+        "pull_requests": 0,
+        "contributions": 4,
+        "repositories": [
+          {
+            "name": "cardano-org",
+            "commits": 4,
+            "pull_requests": 0,
+            "contributions": 4
+          }
+        ]
+      },
+      {
         "login": "jackaldeltadefi",
         "avatar_url": "https://avatars.githubusercontent.com/u/172563536?v=4",
         "commits": 1,
@@ -888,6 +1035,51 @@
             "commits": 1,
             "pull_requests": 3,
             "contributions": 4
+          }
+        ]
+      },
+      {
+        "login": "Godspeed-exe",
+        "avatar_url": "https://avatars.githubusercontent.com/u/52638249?v=4",
+        "commits": 3,
+        "pull_requests": 0,
+        "contributions": 3,
+        "repositories": [
+          {
+            "name": "cardano-org",
+            "commits": 3,
+            "pull_requests": 0,
+            "contributions": 3
+          }
+        ]
+      },
+      {
+        "login": "kfkhalili",
+        "avatar_url": "https://avatars.githubusercontent.com/u/1549343?v=4",
+        "commits": 3,
+        "pull_requests": 0,
+        "contributions": 3,
+        "repositories": [
+          {
+            "name": "cardano-org",
+            "commits": 3,
+            "pull_requests": 0,
+            "contributions": 3
+          }
+        ]
+      },
+      {
+        "login": "cf-manuel",
+        "avatar_url": "https://avatars.githubusercontent.com/u/202243996?v=4",
+        "commits": 3,
+        "pull_requests": 0,
+        "contributions": 3,
+        "repositories": [
+          {
+            "name": "cardano-org",
+            "commits": 3,
+            "pull_requests": 0,
+            "contributions": 3
           }
         ]
       },
@@ -1039,6 +1231,36 @@
         ]
       },
       {
+        "login": "tboltondev",
+        "avatar_url": "https://avatars.githubusercontent.com/u/30255942?v=4",
+        "commits": 2,
+        "pull_requests": 0,
+        "contributions": 2,
+        "repositories": [
+          {
+            "name": "cardano-org",
+            "commits": 2,
+            "pull_requests": 0,
+            "contributions": 2
+          }
+        ]
+      },
+      {
+        "login": "opacular",
+        "avatar_url": "https://avatars.githubusercontent.com/u/34973147?v=4",
+        "commits": 2,
+        "pull_requests": 0,
+        "contributions": 2,
+        "repositories": [
+          {
+            "name": "cardano-org",
+            "commits": 2,
+            "pull_requests": 0,
+            "contributions": 2
+          }
+        ]
+      },
+      {
         "login": "MarvinBertin",
         "avatar_url": "https://avatars.githubusercontent.com/u/10456493?v=4",
         "commits": 1,
@@ -1071,21 +1293,6 @@
       {
         "login": "fernweh0",
         "avatar_url": "https://avatars.githubusercontent.com/u/436438?v=4",
-        "commits": 1,
-        "pull_requests": 0,
-        "contributions": 1,
-        "repositories": [
-          {
-            "name": "Projects",
-            "commits": 1,
-            "pull_requests": 0,
-            "contributions": 1
-          }
-        ]
-      },
-      {
-        "login": "katomm",
-        "avatar_url": "https://avatars.githubusercontent.com/u/31965230?v=4",
         "commits": 1,
         "pull_requests": 0,
         "contributions": 1,
@@ -1322,10 +1529,70 @@
             "contributions": 1
           }
         ]
+      },
+      {
+        "login": "Kolovratek",
+        "avatar_url": "https://avatars.githubusercontent.com/u/80057269?v=4",
+        "commits": 1,
+        "pull_requests": 0,
+        "contributions": 1,
+        "repositories": [
+          {
+            "name": "cardano-org",
+            "commits": 1,
+            "pull_requests": 0,
+            "contributions": 1
+          }
+        ]
+      },
+      {
+        "login": "0xj4m35",
+        "avatar_url": "https://avatars.githubusercontent.com/u/36961697?v=4",
+        "commits": 1,
+        "pull_requests": 0,
+        "contributions": 1,
+        "repositories": [
+          {
+            "name": "cardano-org",
+            "commits": 1,
+            "pull_requests": 0,
+            "contributions": 1
+          }
+        ]
+      },
+      {
+        "login": "redoracle",
+        "avatar_url": "https://avatars.githubusercontent.com/u/1196958?v=4",
+        "commits": 1,
+        "pull_requests": 0,
+        "contributions": 1,
+        "repositories": [
+          {
+            "name": "cardano-org",
+            "commits": 1,
+            "pull_requests": 0,
+            "contributions": 1
+          }
+        ]
+      },
+      {
+        "login": "jinglescode",
+        "avatar_url": "https://avatars.githubusercontent.com/u/1694368?v=4",
+        "commits": 1,
+        "pull_requests": 0,
+        "contributions": 1,
+        "repositories": [
+          {
+            "name": "cardano-org",
+            "commits": 1,
+            "pull_requests": 0,
+            "contributions": 1
+          }
+        ]
       }
     ],
-    "total_pull_requests": 273,
-    "total_commits": 2354,
-    "total_contributions": 2627
+    "total_pull_requests": 276,
+    "total_commits": 3067,
+    "total_contributions": 3343
   }
 }
