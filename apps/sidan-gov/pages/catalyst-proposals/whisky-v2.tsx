@@ -72,8 +72,8 @@ const milestones: Milestone[] = [
             "CI/CD pipeline validating new architecture"
         ],
         delivery: "Month 2",
-        cost: "25,000 ADA",
-        progress: 40,
+        cost: "30,000 ADA",
+        progress: 50,
         icon: <MdBuild />,
         color: "rgba(99, 102, 241, 0.15)"
     },
@@ -99,9 +99,9 @@ const milestones: Milestone[] = [
             "Round-trip test results and documentation",
             "Performance benchmarks and stress test reports"
         ],
-        delivery: "Month 2",
-        cost: "25,000 ADA",
-        progress: 70,
+        delivery: "Month 1",
+        cost: "30,000 ADA",
+        progress: 80,
         icon: <MdArchitecture />,
         color: "rgba(34, 197, 94, 0.15)"
     },
@@ -128,7 +128,7 @@ const milestones: Milestone[] = [
             "Community announcements and adoption examples"
         ],
         delivery: "Month 1",
-        cost: "20,000 ADA",
+        cost: "10,000 ADA",
         progress: 90,
         icon: <FaRocket />,
         color: "rgba(168, 85, 247, 0.15)"
