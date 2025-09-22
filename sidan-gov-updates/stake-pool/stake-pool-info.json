@@ -58,12 +58,12 @@
     "active_stake": "1082997822965",
     "sigma": 0.000049682465795482375,
     "block_count": 229,
-    "live_pledge": "5908571108",
-    "live_stake": "1035863968449",
+    "live_pledge": "6096668941",
+    "live_stake": "1030024322388",
     "live_delegators": 55,
-    "live_saturation": 1.36,
+    "live_saturation": 1.35,
     "voting_power": "1036543313562"
   },
-  "lastUpdated": "2025-09-21T23:00:59.602Z",
+  "lastUpdated": "2025-09-22T23:01:02.168Z",
   "currentEpoch": 584
 }
