@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import PageHeader from '../../components/PageHeader';
 import styles from '../../styles/Proposals.module.css';
-import { FaGithub, FaExternalLinkAlt, FaClock, FaCoins, FaUsers, FaCode } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaClock, FaCoins, FaUsers, FaCode, FaPlay } from 'react-icons/fa';
 import { MdDeveloperMode, MdGavel, MdBuild } from 'react-icons/md';
 
 interface Proposal {
@@ -17,6 +17,14 @@ interface Proposal {
     links: string[];
     icon: React.ReactNode;
     themeColor: string;
+}
+
+interface VideoData {
+    id: string;
+    title: string;
+    url: string;
+    embedId: string;
+    category: string;
 }
 
 const proposals: Proposal[] = [
@@ -112,6 +120,37 @@ const proposals: Proposal[] = [
     }
 ];
 
+const videos: VideoData[] = [
+    {
+        id: 'overview',
+        title: 'Overview Video',
+        url: 'https://youtu.be/4El0zHV87Iw',
+        embedId: '4El0zHV87Iw',
+        category: 'Overview'
+    },
+    {
+        id: 'toolings',
+        title: 'Toolings Video',
+        url: 'https://youtu.be/wWvCqVuh7kg',
+        embedId: 'wWvCqVuh7kg',
+        category: 'Developer Tools'
+    },
+    {
+        id: 'events',
+        title: 'Events Video',
+        url: 'https://youtu.be/Yps64eBf0l0',
+        embedId: 'Yps64eBf0l0',
+        category: 'Community'
+    },
+    {
+        id: 'governance',
+        title: 'Governance Video',
+        url: 'https://youtu.be/VZqPd3tGxj0',
+        embedId: 'VZqPd3tGxj0',
+        category: 'Governance'
+    }
+];
+
 const getThemeIcon = (theme: string) => {
     switch (theme) {
         case 'Community':
@@ -126,6 +165,12 @@ const getThemeIcon = (theme: string) => {
 };
 
 export default function NewProposals() {
+    const [activeVideo, setActiveVideo] = React.useState(videos[0]);
+
+    const handleVideoSelect = (video: VideoData) => {
+        setActiveVideo(video);
+    };
+
     return (
         <div className={styles.container}>
             <PageHeader
@@ -134,6 +179,61 @@ export default function NewProposals() {
             
             <div className={styles.proposalDescription}>
                 <p>Explore SIDAN Lab&apos;s latest Catalyst Fund 14 proposals, spanning community building, governance tools, and developer utilities to strengthen the Cardano ecosystem.</p>
+            </div>
+
+            {/* YouTube Videos Section */}
+            <div className={styles.videosSection}>
+                <div className={styles.videoPlayerSection}>
+                    {/* Main Video Player */}
+                    <div className={styles.mainVideoContainer}>
+                        <div className={styles.mainVideoHeader}>
+                            <h3 className={styles.mainVideoTitle}>{activeVideo.title}</h3>
+                            <span className={styles.mainVideoCategory}>
+                                {activeVideo.category}
+                            </span>
+                        </div>
+                        <div className={styles.mainVideoPlayer}>
+                            <iframe
+                                src={`https://www.youtube.com/embed/${activeVideo.embedId}?rel=0&modestbranding=1`}
+                                title={activeVideo.title}
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen
+                                className={styles.mainVideoIframe}
+                            />
+                        </div>
+                    </div>
+
+                    {/* Video Playlist */}
+                    <div className={styles.videoPlaylist}>
+                        <h4 className={styles.playlistTitle}>Video Playlist</h4>
+                        <div className={styles.playlistItems}>
+                            {videos.map((video) => (
+                                <div 
+                                    key={video.id}
+                                    className={`${styles.playlistItem} ${activeVideo.id === video.id ? styles.playlistItemActive : ''}`}
+                                    onClick={() => handleVideoSelect(video)}
+                                >
+                                    <div className={styles.playlistThumbnail}>
+                                        <img
+                                            src={`https://img.youtube.com/vi/${video.embedId}/mqdefault.jpg`}
+                                            alt={video.title}
+                                            className={styles.thumbnailImage}
+                                            loading="lazy"
+                                        />
+                                        <div className={styles.playOverlay}>
+                                            <FaPlay />
+                                        </div>
+                                    </div>
+                                    <div className={styles.playlistItemInfo}>
+                                        <h5 className={styles.playlistItemTitle}>{video.title}</h5>
+                                        <span className={styles.playlistItemCategory}>{video.category}</span>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div className={styles.proposalGrid}>
