@@ -1,5 +1,35 @@
 [
   {
+    "proposalId": "gov_action1u4jrcvlkppjzuv5j9z5ksacwtvv77h6glu0knpcjut8gvjjfu0cqqt3alsy",
+    "proposalTxHash": "e5643c33f608642e329228a968770e5b19ef5f48ff1f698712e2ce864a49e3f000",
+    "proposalIndex": 0,
+    "voteTxHash": "b05ffaf937a423012512da2b5e8418b43883e210cd015f9c75962ecdcc84759a",
+    "blockTime": "2025-09-25T10:38:38.000Z",
+    "vote": "Yes",
+    "metaUrl": "ipfs://QmV3TsB3Xe5bDaCoiBtxnScHdhPzip1KjaHhsorfRtXMkz",
+    "metaHash": "8a564db998fc5848908a7494c65b0f12b33656dd71a6a241c2154b8582498345",
+    "proposalTitle": "Stablecoin DeFi Liquidity Budget",
+    "proposalType": "InfoAction",
+    "proposedEpoch": 582,
+    "expirationEpoch": 589,
+    "rationale": "No rationale available"
+  },
+  {
+    "proposalId": "gov_action1u4jrcvlkppjzuv5j9z5ksacwtvv77h6glu0knpcjut8gvjjfu0cqqt3alsy",
+    "proposalTxHash": "e5643c33f608642e329228a968770e5b19ef5f48ff1f698712e2ce864a49e3f000",
+    "proposalIndex": 0,
+    "voteTxHash": "9b0992048e12bc38ee5f0e9ec3ad381fb9852a3e2372934f71f1199ae46f46fb",
+    "blockTime": "2025-09-25T09:35:51.000Z",
+    "vote": "Yes",
+    "metaUrl": null,
+    "metaHash": null,
+    "proposalTitle": "Stablecoin DeFi Liquidity Budget",
+    "proposalType": "InfoAction",
+    "proposedEpoch": 582,
+    "expirationEpoch": 589,
+    "rationale": "No rationale available"
+  },
+  {
     "proposalId": "gov_action13836fuy3yttxn4hkeqka398q9qnwsjtmul4sxc3nht7qae8uvejsqm7ukh8",
     "proposalTxHash": "89e3a4f09122d669d6f6c82dd894e02826e8497be7eb036233bafc0ee4fc666500",
     "proposalIndex": 0,
