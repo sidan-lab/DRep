@@ -1,10 +1,10 @@
 {
   "year": 2025,
   "yearlyTotals": {
-    "csl_rs_browser": 40598,
-    "csl_rs_nodejs": 41175,
-    "whisky_js_browser": 4918,
-    "whisky_js_nodejs": 4882
+    "csl_rs_browser": 41584,
+    "csl_rs_nodejs": 42178,
+    "whisky_js_browser": 5194,
+    "whisky_js_nodejs": 5156
   },
   "monthlyDownloads": {
     "csl_rs_browser": [
@@ -50,13 +50,13 @@
       },
       {
         "month": "September",
-        "downloads": 2885,
-        "trend": "📉"
+        "downloads": 3871,
+        "trend": "📈"
       },
       {
         "month": "October",
         "downloads": 0,
-        "trend": "➡️"
+        "trend": "📉"
       },
       {
         "month": "November",
@@ -112,13 +112,13 @@
       },
       {
         "month": "September",
-        "downloads": 2983,
-        "trend": "📉"
+        "downloads": 3986,
+        "trend": "📈"
       },
       {
         "month": "October",
         "downloads": 0,
-        "trend": "➡️"
+        "trend": "📉"
       },
       {
         "month": "November",
@@ -174,13 +174,13 @@
       },
       {
         "month": "September",
-        "downloads": 878,
+        "downloads": 1154,
         "trend": "📈"
       },
       {
         "month": "October",
         "downloads": 0,
-        "trend": "➡️"
+        "trend": "📉"
       },
       {
         "month": "November",
@@ -236,13 +236,13 @@
       },
       {
         "month": "September",
-        "downloads": 880,
+        "downloads": 1154,
         "trend": "📈"
       },
       {
         "month": "October",
         "downloads": 0,
-        "trend": "➡️"
+        "trend": "📉"
       },
       {
         "month": "November",
@@ -313,9 +313,9 @@
     },
     {
       "month": "October",
-      "projects": 0,
-      "files": 0,
-      "repositories": 0
+      "projects": 1,
+      "files": 61,
+      "repositories": 238
     },
     {
       "month": "November",
@@ -348,5 +348,5 @@
       "downloads": 1193
     }
   },
-  "lastUpdated": "2025-09-25T01:15:46.190Z"
+  "lastUpdated": "2025-10-02T01:15:10.462Z"
 }
