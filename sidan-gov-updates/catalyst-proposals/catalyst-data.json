@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-17T01:57:34.509Z",
+  "timestamp": "2025-10-08T01:58:29.986Z",
   "projects": [
     {
       "projectDetails": {
@@ -152,7 +152,7 @@
         "title": "DeltaDeFi - Open Source Libraries for High Frequency Trading",
         "budget": 200000,
         "milestones_qty": 6,
-        "funds_distributed": 144000,
+        "funds_distributed": 158000,
         "project_id": 1200096,
         "challenges": {
           "id": 27,
@@ -173,7 +173,7 @@
           "unique_wallets": 360
         }
       },
-      "milestonesCompleted": 2
+      "milestonesCompleted": 3
     },
     {
       "projectDetails": {
