@@ -4,7 +4,20 @@ import path from 'path';
 let config = null;
 
 export function getRepoRoot() {
-    // Get the repository root directory (2 levels up from scripts/sidan-gov directory)
+    // Get the repository root directory
+    // When running from scripts/sidan-gov/discord-stats, we need to go up 3 levels
+    // When running from scripts/sidan-gov, we need to go up 2 levels
+    const currentDir = process.cwd();
+    
+    // Check if we're in a subdirectory of scripts/sidan-gov
+    if (currentDir.includes('scripts/sidan-gov')) {
+        // Find the scripts/sidan-gov directory and go up 2 levels from there
+        const scriptsSidanGovIndex = currentDir.indexOf('scripts/sidan-gov');
+        const scriptsSidanGovPath = currentDir.substring(0, scriptsSidanGovIndex + 'scripts/sidan-gov'.length);
+        return path.resolve(scriptsSidanGovPath, '..', '..');
+    }
+    
+    // Fallback: try going up 2 levels (for scripts/sidan-gov)
     return path.resolve(process.cwd(), '..', '..');
 }
 
