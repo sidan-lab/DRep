@@ -1,53 +1,53 @@
 {
   "github": {
     "core_in_package_json": 1,
-    "core_in_any_file": 61,
+    "core_in_any_file": 63,
     "core_in_repositories": 238
   },
   "npm": {
     "csl_rs_browser": {
       "downloads": {
         "last_day": 0,
-        "last_week": 950,
+        "last_week": 708,
         "last_month": 3871,
         "last_year": 25971,
-        "last_12_months": 57187
+        "last_12_months": 57054
       },
       "latest_version": "0.9.21",
-      "dependents_count": 461627
+      "dependents_count": 462758
     },
     "csl_rs_nodejs": {
       "downloads": {
         "last_day": 0,
-        "last_week": 971,
+        "last_week": 732,
         "last_month": 3986,
         "last_year": 26085,
-        "last_12_months": 57819
+        "last_12_months": 57698
       },
       "latest_version": "0.9.21",
-      "dependents_count": 313825
+      "dependents_count": 314767
     },
     "whisky_js_browser": {
       "downloads": {
         "last_day": 0,
-        "last_week": 289,
+        "last_week": 319,
         "last_month": 1154,
         "last_year": 0,
-        "last_12_months": 5194
+        "last_12_months": 5489
       },
-      "latest_version": "1.0.10",
-      "dependents_count": 1145747
+      "latest_version": "1.0.11",
+      "dependents_count": 1147641
     },
     "whisky_js_nodejs": {
       "downloads": {
         "last_day": 0,
-        "last_week": 289,
+        "last_week": 316,
         "last_month": 1154,
         "last_year": 0,
-        "last_12_months": 5156
+        "last_12_months": 5449
       },
-      "latest_version": "1.0.10",
-      "dependents_count": 1015876
+      "latest_version": "1.0.11",
+      "dependents_count": 1017616
     }
   },
   "urls": {},
@@ -58,8 +58,8 @@
         "login": "HinsonSIDAN",
         "avatar_url": "https://avatars.githubusercontent.com/u/90688504?v=4",
         "commits": 898,
-        "pull_requests": 119,
-        "contributions": 1017,
+        "pull_requests": 147,
+        "contributions": 1045,
         "repositories": [
           {
             "name": "whisky",
@@ -113,6 +113,12 @@
             "name": "aiken-content-ownership",
             "commits": 28,
             "pull_requests": 0,
+            "contributions": 28
+          },
+          {
+            "name": "deltadefi-backend",
+            "commits": 0,
+            "pull_requests": 28,
             "contributions": 28
           },
           {
@@ -315,9 +321,9 @@
       {
         "login": "AnsonSIDAN",
         "avatar_url": "https://avatars.githubusercontent.com/u/91122558?v=4",
-        "commits": 278,
+        "commits": 282,
         "pull_requests": 175,
-        "contributions": 453,
+        "contributions": 457,
         "repositories": [
           {
             "name": "sidan-gov-discord-bot",
@@ -362,6 +368,12 @@
             "contributions": 19
           },
           {
+            "name": "deltadefi-backend",
+            "commits": 4,
+            "pull_requests": 0,
+            "contributions": 4
+          },
+          {
             "name": "python-sdk",
             "commits": 2,
             "pull_requests": 1,
@@ -390,15 +402,15 @@
       {
         "login": "twwu123",
         "avatar_url": "https://avatars.githubusercontent.com/u/45336147?v=4",
-        "commits": 287,
-        "pull_requests": 44,
-        "contributions": 331,
+        "commits": 296,
+        "pull_requests": 45,
+        "contributions": 341,
         "repositories": [
           {
             "name": "whisky",
-            "commits": 246,
-            "pull_requests": 40,
-            "contributions": 286
+            "commits": 255,
+            "pull_requests": 41,
+            "contributions": 296
           },
           {
             "name": "gin",
@@ -429,15 +441,15 @@
       {
         "login": "github-actions[bot]",
         "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
-        "commits": 203,
+        "commits": 215,
         "pull_requests": 0,
-        "contributions": 203,
+        "contributions": 215,
         "repositories": [
           {
             "name": "DRep",
-            "commits": 203,
+            "commits": 215,
             "pull_requests": 0,
-            "contributions": 203
+            "contributions": 215
           }
         ]
       },
@@ -507,15 +519,15 @@
       {
         "login": "Andre-Diamond",
         "avatar_url": "https://avatars.githubusercontent.com/u/32074058?v=4",
-        "commits": 142,
-        "pull_requests": 15,
-        "contributions": 157,
+        "commits": 145,
+        "pull_requests": 16,
+        "contributions": 161,
         "repositories": [
           {
             "name": "DRep",
-            "commits": 142,
-            "pull_requests": 15,
-            "contributions": 157
+            "commits": 145,
+            "pull_requests": 16,
+            "contributions": 161
           }
         ]
       },
@@ -628,6 +640,21 @@
         ]
       },
       {
+        "login": "actions-user",
+        "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
+        "commits": 59,
+        "pull_requests": 0,
+        "contributions": 59,
+        "repositories": [
+          {
+            "name": "DRep",
+            "commits": 59,
+            "pull_requests": 0,
+            "contributions": 59
+          }
+        ]
+      },
+      {
         "login": "Vardominator",
         "avatar_url": "https://avatars.githubusercontent.com/u/16459846?v=4",
         "commits": 58,
@@ -645,21 +672,6 @@
             "commits": 8,
             "pull_requests": 0,
             "contributions": 8
-          }
-        ]
-      },
-      {
-        "login": "actions-user",
-        "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
-        "commits": 56,
-        "pull_requests": 0,
-        "contributions": 56,
-        "repositories": [
-          {
-            "name": "DRep",
-            "commits": 56,
-            "pull_requests": 0,
-            "contributions": 56
           }
         ]
       },
@@ -751,6 +763,33 @@
         ]
       },
       {
+        "login": "leuhk",
+        "avatar_url": "https://avatars.githubusercontent.com/u/44567291?v=4",
+        "commits": 2,
+        "pull_requests": 24,
+        "contributions": 26,
+        "repositories": [
+          {
+            "name": "deltadefi-backend",
+            "commits": 0,
+            "pull_requests": 19,
+            "contributions": 19
+          },
+          {
+            "name": "typescript-sdk",
+            "commits": 2,
+            "pull_requests": 4,
+            "contributions": 6
+          },
+          {
+            "name": "hibiki",
+            "commits": 0,
+            "pull_requests": 1,
+            "contributions": 1
+          }
+        ]
+      },
+      {
         "login": "Mercurial",
         "avatar_url": "https://avatars.githubusercontent.com/u/585569?v=4",
         "commits": 24,
@@ -766,32 +805,17 @@
         ]
       },
       {
-        "login": "nexuscrypt",
-        "avatar_url": "https://avatars.githubusercontent.com/u/100082538?v=4",
-        "commits": 22,
-        "pull_requests": 0,
-        "contributions": 22,
-        "repositories": [
-          {
-            "name": "Projects",
-            "commits": 22,
-            "pull_requests": 0,
-            "contributions": 22
-          }
-        ]
-      },
-      {
         "login": "DeltaDeFiProtocol",
         "avatar_url": "https://avatars.githubusercontent.com/u/119332329?v=4",
-        "commits": 19,
+        "commits": 22,
         "pull_requests": 1,
-        "contributions": 20,
+        "contributions": 23,
         "repositories": [
           {
             "name": "deltadefi-docs",
-            "commits": 14,
+            "commits": 16,
             "pull_requests": 0,
-            "contributions": 14
+            "contributions": 16
           },
           {
             "name": "rum",
@@ -810,6 +834,27 @@
             "commits": 2,
             "pull_requests": 0,
             "contributions": 2
+          },
+          {
+            "name": "deltadefi-scripts",
+            "commits": 1,
+            "pull_requests": 0,
+            "contributions": 1
+          }
+        ]
+      },
+      {
+        "login": "nexuscrypt",
+        "avatar_url": "https://avatars.githubusercontent.com/u/100082538?v=4",
+        "commits": 22,
+        "pull_requests": 0,
+        "contributions": 22,
+        "repositories": [
+          {
+            "name": "Projects",
+            "commits": 22,
+            "pull_requests": 0,
+            "contributions": 22
           }
         ]
       },
@@ -865,6 +910,27 @@
         ]
       },
       {
+        "login": "jackaldeltadefi",
+        "avatar_url": "https://avatars.githubusercontent.com/u/172563536?v=4",
+        "commits": 2,
+        "pull_requests": 10,
+        "contributions": 12,
+        "repositories": [
+          {
+            "name": "deltadefi-backend",
+            "commits": 1,
+            "pull_requests": 7,
+            "contributions": 8
+          },
+          {
+            "name": "hibiki",
+            "commits": 1,
+            "pull_requests": 3,
+            "contributions": 4
+          }
+        ]
+      },
+      {
         "login": "RayTracedObserver",
         "avatar_url": "https://avatars.githubusercontent.com/u/160285742?v=4",
         "commits": 11,
@@ -906,27 +972,6 @@
             "commits": 7,
             "pull_requests": 0,
             "contributions": 7
-          }
-        ]
-      },
-      {
-        "login": "leuhk",
-        "avatar_url": "https://avatars.githubusercontent.com/u/44567291?v=4",
-        "commits": 2,
-        "pull_requests": 5,
-        "contributions": 7,
-        "repositories": [
-          {
-            "name": "typescript-sdk",
-            "commits": 2,
-            "pull_requests": 4,
-            "contributions": 6
-          },
-          {
-            "name": "hibiki",
-            "commits": 0,
-            "pull_requests": 1,
-            "contributions": 1
           }
         ]
       },
@@ -1067,21 +1112,6 @@
             "name": "cardano-org",
             "commits": 4,
             "pull_requests": 0,
-            "contributions": 4
-          }
-        ]
-      },
-      {
-        "login": "jackaldeltadefi",
-        "avatar_url": "https://avatars.githubusercontent.com/u/172563536?v=4",
-        "commits": 1,
-        "pull_requests": 3,
-        "contributions": 4,
-        "repositories": [
-          {
-            "name": "hibiki",
-            "commits": 1,
-            "pull_requests": 3,
             "contributions": 4
           }
         ]
@@ -1624,8 +1654,8 @@
         ]
       }
     ],
-    "total_pull_requests": 431,
-    "total_commits": 3431,
-    "total_contributions": 3862
+    "total_pull_requests": 487,
+    "total_commits": 3466,
+    "total_contributions": 3953
   }
 }
