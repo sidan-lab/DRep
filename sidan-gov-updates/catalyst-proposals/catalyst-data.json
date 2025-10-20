@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-10-17T01:58:56.782Z",
+  "timestamp": "2025-10-20T02:16:26.211Z",
   "projects": [
     {
       "projectDetails": {
@@ -173,7 +173,7 @@
           "unique_wallets": 360
         }
       },
-      "milestonesCompleted": 3
+      "milestonesCompleted": 4
     },
     {
       "projectDetails": {
@@ -181,7 +181,7 @@
         "title": "DeltaDeFi: Pioneering High-Frequency Trading on Cardano",
         "budget": 300000,
         "milestones_qty": 6,
-        "funds_distributed": 255000,
+        "funds_distributed": 260000,
         "project_id": 1200097,
         "challenges": {
           "id": 30,
