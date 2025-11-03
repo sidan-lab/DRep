@@ -1,13 +1,13 @@
 {
   "year": 2025,
-  "unique_count": 38,
+  "unique_count": 39,
   "contributors": [
     {
       "login": "AnsonSIDAN",
       "avatar_url": "https://avatars.githubusercontent.com/u/91122558?v=4",
-      "commits": 266,
-      "pull_requests": 178,
-      "contributions": 444,
+      "commits": 278,
+      "pull_requests": 183,
+      "contributions": 461,
       "repositories": [
         {
           "name": "sidan-gov-discord-bot",
@@ -482,10 +482,12 @@
         },
         {
           "name": "hibiki",
-          "commits": 17,
+          "commits": 19,
           "pull_requests": 2,
-          "contributions": 19,
+          "contributions": 21,
           "commit_timestamps": [
+            "2025-10-24T03:00:41Z",
+            "2025-08-08T03:07:36Z",
             "2025-07-11T08:46:21Z",
             "2025-07-11T07:57:54Z",
             "2025-07-11T07:49:10Z",
@@ -512,16 +514,18 @@
         },
         {
           "name": "deltadefi-backend",
-          "commits": 4,
-          "pull_requests": 7,
-          "contributions": 11,
+          "commits": 5,
+          "pull_requests": 8,
+          "contributions": 13,
           "commit_timestamps": [
+            "2025-10-29T18:39:52Z",
             "2025-10-23T15:44:49Z",
             "2025-10-22T08:25:16Z",
             "2025-10-22T07:44:29Z",
             "2025-10-22T06:58:16Z"
           ],
           "pr_timestamps": [
+            "2025-10-29T18:39:52Z",
             "2025-10-23T15:44:49Z",
             "2025-10-23T15:41:03Z",
             "2025-10-22T08:25:16Z",
@@ -529,6 +533,29 @@
             "2025-10-22T08:23:04Z",
             "2025-10-22T07:44:29Z",
             "2025-10-22T06:58:16Z"
+          ],
+          "organization": "deltadefi-protocol"
+        },
+        {
+          "name": "aiken-virtual-dex",
+          "commits": 8,
+          "pull_requests": 4,
+          "contributions": 12,
+          "commit_timestamps": [
+            "2025-10-30T09:45:57Z",
+            "2025-10-30T09:45:42Z",
+            "2025-10-30T09:44:46Z",
+            "2025-10-29T20:25:45Z",
+            "2025-10-29T20:25:20Z",
+            "2025-10-29T15:32:24Z",
+            "2025-10-29T15:30:36Z",
+            "2025-10-23T15:53:47Z"
+          ],
+          "pr_timestamps": [
+            "2025-10-30T09:45:58Z",
+            "2025-10-30T09:45:42Z",
+            "2025-10-29T20:25:46Z",
+            "2025-10-29T15:32:24Z"
           ],
           "organization": "deltadefi-protocol"
         },
@@ -544,6 +571,19 @@
           ],
           "pr_timestamps": [
             "2025-03-18T06:15:46Z"
+          ],
+          "organization": "deltadefi-protocol"
+        },
+        {
+          "name": "deltadefi-scripts",
+          "commits": 1,
+          "pull_requests": 1,
+          "contributions": 2,
+          "commit_timestamps": [
+            "2025-10-22T08:44:36Z"
+          ],
+          "pr_timestamps": [
+            "2025-10-22T08:57:40Z"
           ],
           "organization": "deltadefi-protocol"
         },
@@ -579,27 +619,95 @@
           ],
           "pr_timestamps": [],
           "organization": "sidan-lab"
-        },
-        {
-          "name": "deltadefi-scripts",
-          "commits": 0,
-          "pull_requests": 1,
-          "contributions": 1,
-          "commit_timestamps": [],
-          "pr_timestamps": [
-            "2025-10-22T08:57:40Z"
-          ],
-          "organization": "deltadefi-protocol"
         }
       ]
     },
     {
       "login": "HinsonSIDAN",
       "avatar_url": "https://avatars.githubusercontent.com/u/90688504?v=4",
-      "commits": 393,
-      "pull_requests": 22,
-      "contributions": 415,
+      "commits": 406,
+      "pull_requests": 27,
+      "contributions": 433,
       "repositories": [
+        {
+          "name": "whisky",
+          "commits": 64,
+          "pull_requests": 4,
+          "contributions": 68,
+          "commit_timestamps": [
+            "2025-10-28T12:32:28Z",
+            "2025-10-28T12:31:28Z",
+            "2025-10-28T12:08:06Z",
+            "2025-10-28T12:07:37Z",
+            "2025-10-28T11:26:31Z",
+            "2025-10-28T11:24:25Z",
+            "2025-10-28T11:03:00Z",
+            "2025-10-28T10:55:19Z",
+            "2025-10-28T10:54:29Z",
+            "2025-10-28T10:53:11Z",
+            "2025-08-08T17:30:18Z",
+            "2025-08-08T17:25:26Z",
+            "2025-08-08T17:24:59Z",
+            "2025-08-07T16:38:22Z",
+            "2025-08-07T14:45:59Z",
+            "2025-08-07T14:41:10Z",
+            "2025-08-07T14:40:34Z",
+            "2025-06-30T12:33:40Z",
+            "2025-06-30T12:09:17Z",
+            "2025-06-30T11:53:38Z",
+            "2025-06-30T11:30:43Z",
+            "2025-06-29T07:28:25Z",
+            "2025-06-29T07:00:22Z",
+            "2025-06-29T06:57:52Z",
+            "2025-06-28T17:10:36Z",
+            "2025-06-28T08:43:07Z",
+            "2025-06-28T08:20:19Z",
+            "2025-06-26T17:05:25Z",
+            "2025-06-26T16:24:22Z",
+            "2025-06-25T15:17:47Z",
+            "2025-06-24T01:51:20Z",
+            "2025-06-24T01:37:44Z",
+            "2025-06-24T01:36:16Z",
+            "2025-06-24T01:34:44Z",
+            "2025-06-23T16:58:32Z",
+            "2025-06-23T06:02:50Z",
+            "2025-06-23T06:00:01Z",
+            "2025-06-20T14:56:59Z",
+            "2025-06-20T05:41:29Z",
+            "2025-06-20T05:34:14Z",
+            "2025-06-20T05:26:00Z",
+            "2025-06-19T15:03:58Z",
+            "2025-06-04T09:53:45Z",
+            "2025-04-22T11:44:15Z",
+            "2025-04-17T05:49:09Z",
+            "2025-04-17T05:48:32Z",
+            "2025-04-16T05:55:49Z",
+            "2025-04-16T05:30:21Z",
+            "2025-04-16T04:01:01Z",
+            "2025-04-12T14:08:36Z",
+            "2025-04-11T12:41:15Z",
+            "2025-04-11T12:39:52Z",
+            "2025-04-11T12:21:54Z",
+            "2025-04-11T12:20:54Z",
+            "2025-04-11T12:10:35Z",
+            "2025-04-11T12:08:49Z",
+            "2025-04-11T10:43:52Z",
+            "2025-02-27T02:30:58Z",
+            "2025-02-27T01:58:15Z",
+            "2025-02-06T04:11:49Z",
+            "2025-02-05T16:56:14Z",
+            "2025-02-05T14:37:09Z",
+            "2025-02-05T14:34:44Z",
+            "2025-02-05T11:17:40Z"
+          ],
+          "pr_timestamps": [
+            "2025-10-28T12:32:28Z",
+            "2025-10-28T12:08:07Z",
+            "2025-10-28T11:26:31Z",
+            "2025-10-28T11:03:00Z"
+          ],
+          "organization": "sidan-lab"
+        },
         {
           "name": "whisky-archive",
           "commits": 54,
@@ -675,70 +783,6 @@
             "2025-02-05T16:56:14Z",
             "2025-02-05T15:20:43Z"
           ],
-          "organization": "sidan-lab"
-        },
-        {
-          "name": "whisky",
-          "commits": 54,
-          "pull_requests": 0,
-          "contributions": 54,
-          "commit_timestamps": [
-            "2025-08-08T17:30:18Z",
-            "2025-08-08T17:25:26Z",
-            "2025-08-08T17:24:59Z",
-            "2025-08-07T16:38:22Z",
-            "2025-08-07T14:45:59Z",
-            "2025-08-07T14:41:10Z",
-            "2025-08-07T14:40:34Z",
-            "2025-06-30T12:33:40Z",
-            "2025-06-30T12:09:17Z",
-            "2025-06-30T11:53:38Z",
-            "2025-06-30T11:30:43Z",
-            "2025-06-29T07:28:25Z",
-            "2025-06-29T07:00:22Z",
-            "2025-06-29T06:57:52Z",
-            "2025-06-28T17:10:36Z",
-            "2025-06-28T08:43:07Z",
-            "2025-06-28T08:20:19Z",
-            "2025-06-26T17:05:25Z",
-            "2025-06-26T16:24:22Z",
-            "2025-06-25T15:17:47Z",
-            "2025-06-24T01:51:20Z",
-            "2025-06-24T01:37:44Z",
-            "2025-06-24T01:36:16Z",
-            "2025-06-24T01:34:44Z",
-            "2025-06-23T16:58:32Z",
-            "2025-06-23T06:02:50Z",
-            "2025-06-23T06:00:01Z",
-            "2025-06-20T14:56:59Z",
-            "2025-06-20T05:41:29Z",
-            "2025-06-20T05:34:14Z",
-            "2025-06-20T05:26:00Z",
-            "2025-06-19T15:03:58Z",
-            "2025-06-04T09:53:45Z",
-            "2025-04-22T11:44:15Z",
-            "2025-04-17T05:49:09Z",
-            "2025-04-17T05:48:32Z",
-            "2025-04-16T05:55:49Z",
-            "2025-04-16T05:30:21Z",
-            "2025-04-16T04:01:01Z",
-            "2025-04-12T14:08:36Z",
-            "2025-04-11T12:41:15Z",
-            "2025-04-11T12:39:52Z",
-            "2025-04-11T12:21:54Z",
-            "2025-04-11T12:20:54Z",
-            "2025-04-11T12:10:35Z",
-            "2025-04-11T12:08:49Z",
-            "2025-04-11T10:43:52Z",
-            "2025-02-27T02:30:58Z",
-            "2025-02-27T01:58:15Z",
-            "2025-02-06T04:11:49Z",
-            "2025-02-05T16:56:14Z",
-            "2025-02-05T14:37:09Z",
-            "2025-02-05T14:34:44Z",
-            "2025-02-05T11:17:40Z"
-          ],
-          "pr_timestamps": [],
           "organization": "sidan-lab"
         },
         {
@@ -846,10 +890,13 @@
         },
         {
           "name": "hibiki",
-          "commits": 33,
-          "pull_requests": 2,
-          "contributions": 35,
+          "commits": 36,
+          "pull_requests": 3,
+          "contributions": 39,
           "commit_timestamps": [
+            "2025-10-30T12:18:28Z",
+            "2025-10-28T13:03:24Z",
+            "2025-10-28T12:52:38Z",
             "2025-08-08T02:06:45Z",
             "2025-08-08T01:43:08Z",
             "2025-07-10T08:43:20Z",
@@ -885,6 +932,7 @@
             "2025-06-24T08:31:25Z"
           ],
           "pr_timestamps": [
+            "2025-10-30T12:18:28Z",
             "2025-08-08T02:06:45Z",
             "2025-08-08T01:43:08Z"
           ],
@@ -1245,16 +1293,28 @@
     {
       "login": "github-actions[bot]",
       "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
-      "commits": 245,
+      "commits": 257,
       "pull_requests": 0,
-      "contributions": 245,
+      "contributions": 257,
       "repositories": [
         {
           "name": "DRep",
-          "commits": 245,
+          "commits": 257,
           "pull_requests": 0,
-          "contributions": 245,
+          "contributions": 257,
           "commit_timestamps": [
+            "2025-11-02T23:01:00Z",
+            "2025-11-01T23:01:12Z",
+            "2025-11-01T03:09:14Z",
+            "2025-10-31T23:08:15Z",
+            "2025-10-30T23:01:02Z",
+            "2025-10-30T02:17:31Z",
+            "2025-10-30T01:23:08Z",
+            "2025-10-29T23:01:15Z",
+            "2025-10-28T23:01:18Z",
+            "2025-10-27T23:01:11Z",
+            "2025-10-27T02:22:38Z",
+            "2025-10-27T02:09:30Z",
             "2025-10-26T23:01:10Z",
             "2025-10-26T16:32:51Z",
             "2025-10-25T23:01:06Z",
@@ -1509,9 +1569,9 @@
     {
       "login": "kenlau666",
       "avatar_url": "https://avatars.githubusercontent.com/u/98103533?v=4",
-      "commits": 165,
-      "pull_requests": 28,
-      "contributions": 193,
+      "commits": 170,
+      "pull_requests": 31,
+      "contributions": 201,
       "repositories": [
         {
           "name": "cardano-open-bounty",
@@ -1704,6 +1764,28 @@
           "organization": "sidan-lab"
         },
         {
+          "name": "hibiki",
+          "commits": 6,
+          "pull_requests": 5,
+          "contributions": 11,
+          "commit_timestamps": [
+            "2025-10-31T02:54:31Z",
+            "2025-10-30T12:52:23Z",
+            "2025-10-30T12:09:21Z",
+            "2025-10-27T02:34:06Z",
+            "2025-10-24T06:13:01Z",
+            "2025-10-21T06:44:45Z"
+          ],
+          "pr_timestamps": [
+            "2025-10-31T03:42:03Z",
+            "2025-10-31T02:54:31Z",
+            "2025-10-27T02:34:06Z",
+            "2025-10-24T06:15:59Z",
+            "2025-10-21T06:44:45Z"
+          ],
+          "organization": "deltadefi-protocol"
+        },
+        {
           "name": "whisky",
           "commits": 10,
           "pull_requests": 0,
@@ -1785,21 +1867,6 @@
           "organization": "sidan-lab"
         },
         {
-          "name": "hibiki",
-          "commits": 2,
-          "pull_requests": 2,
-          "contributions": 4,
-          "commit_timestamps": [
-            "2025-10-24T06:13:01Z",
-            "2025-10-21T06:44:45Z"
-          ],
-          "pr_timestamps": [
-            "2025-10-24T06:15:59Z",
-            "2025-10-21T06:44:45Z"
-          ],
-          "organization": "deltadefi-protocol"
-        },
-        {
           "name": "python-sdk",
           "commits": 2,
           "pull_requests": 1,
@@ -1833,6 +1900,17 @@
           "pr_timestamps": [
             "2025-08-27T03:25:38Z"
           ],
+          "organization": "deltadefi-protocol"
+        },
+        {
+          "name": "deltadefi-scripts",
+          "commits": 1,
+          "pull_requests": 0,
+          "contributions": 1,
+          "commit_timestamps": [
+            "2025-10-30T09:16:32Z"
+          ],
+          "pr_timestamps": [],
           "organization": "deltadefi-protocol"
         }
       ]
@@ -2672,6 +2750,94 @@
       ]
     },
     {
+      "login": "actions-user",
+      "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
+      "commits": 69,
+      "pull_requests": 0,
+      "contributions": 69,
+      "repositories": [
+        {
+          "name": "DRep",
+          "commits": 69,
+          "pull_requests": 0,
+          "contributions": 69,
+          "commit_timestamps": [
+            "2025-10-31T02:04:47Z",
+            "2025-10-29T02:16:41Z",
+            "2025-10-27T02:19:39Z",
+            "2025-10-24T01:56:56Z",
+            "2025-10-22T02:07:40Z",
+            "2025-10-20T02:16:26Z",
+            "2025-10-17T01:58:56Z",
+            "2025-10-15T02:03:31Z",
+            "2025-10-13T02:07:08Z",
+            "2025-10-10T01:58:03Z",
+            "2025-10-08T01:58:30Z",
+            "2025-10-06T02:00:57Z",
+            "2025-10-03T01:55:27Z",
+            "2025-10-01T02:16:02Z",
+            "2025-09-29T02:02:53Z",
+            "2025-09-26T01:57:30Z",
+            "2025-09-24T01:59:43Z",
+            "2025-09-22T02:08:03Z",
+            "2025-09-19T01:58:38Z",
+            "2025-09-17T01:57:34Z",
+            "2025-09-15T02:06:21Z",
+            "2025-09-12T01:54:10Z",
+            "2025-09-10T01:57:31Z",
+            "2025-09-08T02:05:20Z",
+            "2025-09-05T01:57:33Z",
+            "2025-09-03T01:56:25Z",
+            "2025-09-01T02:24:41Z",
+            "2025-08-29T02:00:22Z",
+            "2025-08-27T02:03:24Z",
+            "2025-08-25T02:16:30Z",
+            "2025-08-22T02:04:08Z",
+            "2025-08-20T02:06:55Z",
+            "2025-08-18T02:28:22Z",
+            "2025-08-15T02:20:09Z",
+            "2025-08-13T02:21:04Z",
+            "2025-08-11T02:31:36Z",
+            "2025-08-08T02:29:26Z",
+            "2025-08-06T02:32:28Z",
+            "2025-08-04T02:40:53Z",
+            "2025-08-01T02:39:54Z",
+            "2025-07-30T02:31:56Z",
+            "2025-07-28T02:34:53Z",
+            "2025-07-25T02:25:33Z",
+            "2025-07-23T02:29:33Z",
+            "2025-07-21T02:34:00Z",
+            "2025-07-18T02:26:02Z",
+            "2025-07-16T02:26:25Z",
+            "2025-07-14T02:30:09Z",
+            "2025-07-11T02:23:30Z",
+            "2025-07-09T02:22:53Z",
+            "2025-07-07T02:26:05Z",
+            "2025-07-04T02:17:33Z",
+            "2025-07-02T02:20:15Z",
+            "2025-06-30T02:25:26Z",
+            "2025-06-27T02:18:02Z",
+            "2025-06-25T02:21:03Z",
+            "2025-06-24T08:38:05Z",
+            "2025-06-24T08:33:36Z",
+            "2025-06-23T00:41:24Z",
+            "2025-06-20T08:04:05Z",
+            "2025-06-20T07:53:55Z",
+            "2025-06-20T07:44:29Z",
+            "2025-06-20T07:33:38Z",
+            "2025-06-20T00:38:11Z",
+            "2025-06-19T08:57:34Z",
+            "2025-06-19T08:32:50Z",
+            "2025-06-19T08:21:00Z",
+            "2025-06-19T08:13:52Z",
+            "2025-06-19T08:09:48Z"
+          ],
+          "pr_timestamps": [],
+          "organization": "sidan-lab"
+        }
+      ]
+    },
+    {
       "login": "leonlai257",
       "avatar_url": "https://avatars.githubusercontent.com/u/73750831?v=4",
       "commits": 59,
@@ -2783,87 +2949,110 @@
       ]
     },
     {
-      "login": "actions-user",
-      "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
-      "commits": 66,
-      "pull_requests": 0,
-      "contributions": 66,
+      "login": "DeltaDeFiProtocol",
+      "avatar_url": "https://avatars.githubusercontent.com/u/119332329?v=4",
+      "commits": 36,
+      "pull_requests": 2,
+      "contributions": 38,
       "repositories": [
         {
-          "name": "DRep",
-          "commits": 66,
+          "name": "deltadefi-docs",
+          "commits": 30,
           "pull_requests": 0,
-          "contributions": 66,
+          "contributions": 30,
           "commit_timestamps": [
-            "2025-10-24T01:56:56Z",
-            "2025-10-22T02:07:40Z",
-            "2025-10-20T02:16:26Z",
-            "2025-10-17T01:58:56Z",
-            "2025-10-15T02:03:31Z",
-            "2025-10-13T02:07:08Z",
-            "2025-10-10T01:58:03Z",
-            "2025-10-08T01:58:30Z",
-            "2025-10-06T02:00:57Z",
-            "2025-10-03T01:55:27Z",
-            "2025-10-01T02:16:02Z",
-            "2025-09-29T02:02:53Z",
-            "2025-09-26T01:57:30Z",
-            "2025-09-24T01:59:43Z",
-            "2025-09-22T02:08:03Z",
-            "2025-09-19T01:58:38Z",
-            "2025-09-17T01:57:34Z",
-            "2025-09-15T02:06:21Z",
-            "2025-09-12T01:54:10Z",
-            "2025-09-10T01:57:31Z",
-            "2025-09-08T02:05:20Z",
-            "2025-09-05T01:57:33Z",
-            "2025-09-03T01:56:25Z",
-            "2025-09-01T02:24:41Z",
-            "2025-08-29T02:00:22Z",
-            "2025-08-27T02:03:24Z",
-            "2025-08-25T02:16:30Z",
-            "2025-08-22T02:04:08Z",
-            "2025-08-20T02:06:55Z",
-            "2025-08-18T02:28:22Z",
-            "2025-08-15T02:20:09Z",
-            "2025-08-13T02:21:04Z",
-            "2025-08-11T02:31:36Z",
-            "2025-08-08T02:29:26Z",
-            "2025-08-06T02:32:28Z",
-            "2025-08-04T02:40:53Z",
-            "2025-08-01T02:39:54Z",
-            "2025-07-30T02:31:56Z",
-            "2025-07-28T02:34:53Z",
-            "2025-07-25T02:25:33Z",
-            "2025-07-23T02:29:33Z",
-            "2025-07-21T02:34:00Z",
-            "2025-07-18T02:26:02Z",
-            "2025-07-16T02:26:25Z",
-            "2025-07-14T02:30:09Z",
-            "2025-07-11T02:23:30Z",
-            "2025-07-09T02:22:53Z",
-            "2025-07-07T02:26:05Z",
-            "2025-07-04T02:17:33Z",
-            "2025-07-02T02:20:15Z",
-            "2025-06-30T02:25:26Z",
-            "2025-06-27T02:18:02Z",
-            "2025-06-25T02:21:03Z",
-            "2025-06-24T08:38:05Z",
-            "2025-06-24T08:33:36Z",
-            "2025-06-23T00:41:24Z",
-            "2025-06-20T08:04:05Z",
-            "2025-06-20T07:53:55Z",
-            "2025-06-20T07:44:29Z",
-            "2025-06-20T07:33:38Z",
-            "2025-06-20T00:38:11Z",
-            "2025-06-19T08:57:34Z",
-            "2025-06-19T08:32:50Z",
-            "2025-06-19T08:21:00Z",
-            "2025-06-19T08:13:52Z",
-            "2025-06-19T08:09:48Z"
+            "2025-10-30T10:06:49Z",
+            "2025-10-30T09:02:14Z",
+            "2025-10-29T18:35:32Z",
+            "2025-10-29T18:25:46Z",
+            "2025-10-29T18:18:12Z",
+            "2025-10-29T16:54:42Z",
+            "2025-10-29T16:12:21Z",
+            "2025-10-29T16:11:22Z",
+            "2025-10-29T14:01:50Z",
+            "2025-10-23T15:06:28Z",
+            "2025-10-23T14:02:27Z",
+            "2025-10-16T03:13:16Z",
+            "2025-10-14T02:46:22Z",
+            "2025-10-09T05:48:56Z",
+            "2025-10-08T08:33:00Z",
+            "2025-10-07T09:56:38Z",
+            "2025-10-01T13:44:25Z",
+            "2025-09-29T07:15:44Z",
+            "2025-09-29T07:13:51Z",
+            "2025-09-29T06:53:38Z",
+            "2025-09-20T10:25:14Z",
+            "2025-09-20T09:52:15Z",
+            "2025-09-20T09:44:47Z",
+            "2025-09-20T08:57:19Z",
+            "2025-09-20T08:47:02Z",
+            "2025-09-20T00:42:26Z",
+            "2025-09-19T11:22:55Z",
+            "2025-08-21T04:20:31Z",
+            "2025-08-21T03:47:56Z",
+            "2025-08-17T21:21:01Z"
+          ],
+          "pr_timestamps": [],
+          "organization": "deltadefi-protocol"
+        },
+        {
+          "name": "rum",
+          "commits": 1,
+          "pull_requests": 1,
+          "contributions": 2,
+          "commit_timestamps": [
+            "2025-08-04T03:12:52Z"
+          ],
+          "pr_timestamps": [
+            "2025-08-04T03:12:52Z"
+          ],
+          "organization": "sidan-lab"
+        },
+        {
+          "name": "sidan-gov-frontend-delegate",
+          "commits": 2,
+          "pull_requests": 0,
+          "contributions": 2,
+          "commit_timestamps": [
+            "2025-07-22T15:29:23Z",
+            "2025-07-22T15:15:44Z"
           ],
           "pr_timestamps": [],
           "organization": "sidan-lab"
+        },
+        {
+          "name": "typescript-sdk",
+          "commits": 2,
+          "pull_requests": 0,
+          "contributions": 2,
+          "commit_timestamps": [
+            "2025-09-20T09:27:20Z",
+            "2025-09-19T09:57:14Z"
+          ],
+          "pr_timestamps": [],
+          "organization": "deltadefi-protocol"
+        },
+        {
+          "name": "hibiki",
+          "commits": 0,
+          "pull_requests": 1,
+          "contributions": 1,
+          "commit_timestamps": [],
+          "pr_timestamps": [
+            "2025-10-24T03:00:41Z"
+          ],
+          "organization": "deltadefi-protocol"
+        },
+        {
+          "name": "deltadefi-scripts",
+          "commits": 1,
+          "pull_requests": 0,
+          "contributions": 1,
+          "commit_timestamps": [
+            "2025-10-03T07:43:29Z"
+          ],
+          "pr_timestamps": [],
+          "organization": "deltadefi-protocol"
         }
       ]
     },
@@ -2972,105 +3161,6 @@
       ]
     },
     {
-      "login": "DeltaDeFiProtocol",
-      "avatar_url": "https://avatars.githubusercontent.com/u/119332329?v=4",
-      "commits": 27,
-      "pull_requests": 2,
-      "contributions": 29,
-      "repositories": [
-        {
-          "name": "deltadefi-docs",
-          "commits": 21,
-          "pull_requests": 0,
-          "contributions": 21,
-          "commit_timestamps": [
-            "2025-10-23T15:06:28Z",
-            "2025-10-23T14:02:27Z",
-            "2025-10-16T03:13:16Z",
-            "2025-10-14T02:46:22Z",
-            "2025-10-09T05:48:56Z",
-            "2025-10-08T08:33:00Z",
-            "2025-10-07T09:56:38Z",
-            "2025-10-01T13:44:25Z",
-            "2025-09-29T07:15:44Z",
-            "2025-09-29T07:13:51Z",
-            "2025-09-29T06:53:38Z",
-            "2025-09-20T10:25:14Z",
-            "2025-09-20T09:52:15Z",
-            "2025-09-20T09:44:47Z",
-            "2025-09-20T08:57:19Z",
-            "2025-09-20T08:47:02Z",
-            "2025-09-20T00:42:26Z",
-            "2025-09-19T11:22:55Z",
-            "2025-08-21T04:20:31Z",
-            "2025-08-21T03:47:56Z",
-            "2025-08-17T21:21:01Z"
-          ],
-          "pr_timestamps": [],
-          "organization": "deltadefi-protocol"
-        },
-        {
-          "name": "rum",
-          "commits": 1,
-          "pull_requests": 1,
-          "contributions": 2,
-          "commit_timestamps": [
-            "2025-08-04T03:12:52Z"
-          ],
-          "pr_timestamps": [
-            "2025-08-04T03:12:52Z"
-          ],
-          "organization": "sidan-lab"
-        },
-        {
-          "name": "sidan-gov-frontend-delegate",
-          "commits": 2,
-          "pull_requests": 0,
-          "contributions": 2,
-          "commit_timestamps": [
-            "2025-07-22T15:29:23Z",
-            "2025-07-22T15:15:44Z"
-          ],
-          "pr_timestamps": [],
-          "organization": "sidan-lab"
-        },
-        {
-          "name": "typescript-sdk",
-          "commits": 2,
-          "pull_requests": 0,
-          "contributions": 2,
-          "commit_timestamps": [
-            "2025-09-20T09:27:20Z",
-            "2025-09-19T09:57:14Z"
-          ],
-          "pr_timestamps": [],
-          "organization": "deltadefi-protocol"
-        },
-        {
-          "name": "hibiki",
-          "commits": 0,
-          "pull_requests": 1,
-          "contributions": 1,
-          "commit_timestamps": [],
-          "pr_timestamps": [
-            "2025-10-24T03:00:41Z"
-          ],
-          "organization": "deltadefi-protocol"
-        },
-        {
-          "name": "deltadefi-scripts",
-          "commits": 1,
-          "pull_requests": 0,
-          "contributions": 1,
-          "commit_timestamps": [
-            "2025-10-03T07:43:29Z"
-          ],
-          "pr_timestamps": [],
-          "organization": "deltadefi-protocol"
-        }
-      ]
-    },
-    {
       "login": "Mercurial",
       "avatar_url": "https://avatars.githubusercontent.com/u/585569?v=4",
       "commits": 22,
@@ -3108,6 +3198,43 @@
           ],
           "pr_timestamps": [],
           "organization": "sidan-lab"
+        }
+      ]
+    },
+    {
+      "login": "leuhk",
+      "avatar_url": "https://avatars.githubusercontent.com/u/44567291?v=4",
+      "commits": 9,
+      "pull_requests": 8,
+      "contributions": 17,
+      "repositories": [
+        {
+          "name": "hibiki",
+          "commits": 9,
+          "pull_requests": 8,
+          "contributions": 17,
+          "commit_timestamps": [
+            "2025-10-31T03:49:43Z",
+            "2025-10-31T03:42:03Z",
+            "2025-10-30T16:33:40Z",
+            "2025-10-30T12:51:25Z",
+            "2025-10-30T12:30:36Z",
+            "2025-10-27T02:39:50Z",
+            "2025-10-24T06:17:16Z",
+            "2025-10-24T06:15:59Z",
+            "2025-10-18T06:03:38Z"
+          ],
+          "pr_timestamps": [
+            "2025-10-31T03:49:43Z",
+            "2025-10-30T16:33:40Z",
+            "2025-10-30T12:51:26Z",
+            "2025-10-30T12:30:36Z",
+            "2025-10-27T02:39:50Z",
+            "2025-10-24T06:17:16Z",
+            "2025-10-18T06:03:38Z",
+            "2025-08-08T03:07:36Z"
+          ],
+          "organization": "deltadefi-protocol"
         }
       ]
     },
@@ -3210,42 +3337,20 @@
       ]
     },
     {
-      "login": "0xBora",
-      "avatar_url": "https://avatars.githubusercontent.com/u/133051383?v=4",
-      "commits": 5,
-      "pull_requests": 0,
-      "contributions": 5,
-      "repositories": [
-        {
-          "name": "cardano-org",
-          "commits": 5,
-          "pull_requests": 0,
-          "contributions": 5,
-          "commit_timestamps": [
-            "2025-09-03T15:22:01Z",
-            "2025-08-18T22:45:46Z",
-            "2025-08-04T10:42:52Z",
-            "2025-07-24T08:03:42Z",
-            "2025-07-24T07:45:08Z"
-          ],
-          "pr_timestamps": [],
-          "organization": "sidan-lab"
-        }
-      ]
-    },
-    {
       "login": "jackaldeltadefi",
       "avatar_url": "https://avatars.githubusercontent.com/u/172563536?v=4",
-      "commits": 1,
+      "commits": 3,
       "pull_requests": 4,
-      "contributions": 5,
+      "contributions": 7,
       "repositories": [
         {
           "name": "hibiki",
-          "commits": 1,
+          "commits": 3,
           "pull_requests": 3,
-          "contributions": 4,
+          "contributions": 6,
           "commit_timestamps": [
+            "2025-07-30T03:20:21Z",
+            "2025-07-09T06:09:53Z",
             "2025-07-03T17:17:25Z"
           ],
           "pr_timestamps": [
@@ -3269,27 +3374,26 @@
       ]
     },
     {
-      "login": "leuhk",
-      "avatar_url": "https://avatars.githubusercontent.com/u/44567291?v=4",
-      "commits": 2,
-      "pull_requests": 3,
+      "login": "0xBora",
+      "avatar_url": "https://avatars.githubusercontent.com/u/133051383?v=4",
+      "commits": 5,
+      "pull_requests": 0,
       "contributions": 5,
       "repositories": [
         {
-          "name": "hibiki",
-          "commits": 2,
-          "pull_requests": 3,
+          "name": "cardano-org",
+          "commits": 5,
+          "pull_requests": 0,
           "contributions": 5,
           "commit_timestamps": [
-            "2025-10-24T06:15:59Z",
-            "2025-10-18T06:03:38Z"
+            "2025-09-03T15:22:01Z",
+            "2025-08-18T22:45:46Z",
+            "2025-08-04T10:42:52Z",
+            "2025-07-24T08:03:42Z",
+            "2025-07-24T07:45:08Z"
           ],
-          "pr_timestamps": [
-            "2025-10-24T06:17:16Z",
-            "2025-10-18T06:03:38Z",
-            "2025-08-08T03:07:36Z"
-          ],
-          "organization": "deltadefi-protocol"
+          "pr_timestamps": [],
+          "organization": "sidan-lab"
         }
       ]
     },
@@ -3682,9 +3786,29 @@
           "organization": "sidan-lab"
         }
       ]
+    },
+    {
+      "login": "awcjack",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17763165?v=4",
+      "commits": 1,
+      "pull_requests": 0,
+      "contributions": 1,
+      "repositories": [
+        {
+          "name": "go-sdk",
+          "commits": 1,
+          "pull_requests": 0,
+          "contributions": 1,
+          "commit_timestamps": [
+            "2025-10-29T07:48:33Z"
+          ],
+          "pr_timestamps": [],
+          "organization": "deltadefi-protocol"
+        }
+      ]
     }
   ],
-  "total_pull_requests": 297,
-  "total_commits": 1994,
-  "total_contributions": 2291
+  "total_pull_requests": 315,
+  "total_commits": 2058,
+  "total_contributions": 2373
 }
