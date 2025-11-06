@@ -1,10 +1,10 @@
 {
   "year": 2025,
   "yearlyTotals": {
-    "csl_rs_browser": 46203,
-    "csl_rs_nodejs": 46924,
-    "whisky_js_browser": 6348,
-    "whisky_js_nodejs": 6308
+    "csl_rs_browser": 46872,
+    "csl_rs_nodejs": 47631,
+    "whisky_js_browser": 6636,
+    "whisky_js_nodejs": 6589
   },
   "monthlyDownloads": {
     "csl_rs_browser": [
@@ -55,13 +55,13 @@
       },
       {
         "month": "October",
-        "downloads": 4619,
+        "downloads": 5008,
         "trend": "📈"
       },
       {
         "month": "November",
-        "downloads": 0,
-        "trend": "➡️"
+        "downloads": 280,
+        "trend": "📉"
       },
       {
         "month": "December",
@@ -117,13 +117,13 @@
       },
       {
         "month": "October",
-        "downloads": 4746,
+        "downloads": 5157,
         "trend": "📈"
       },
       {
         "month": "November",
-        "downloads": 0,
-        "trend": "➡️"
+        "downloads": 296,
+        "trend": "📉"
       },
       {
         "month": "December",
@@ -165,7 +165,7 @@
       {
         "month": "July",
         "downloads": 1198,
-        "trend": "🔥"
+        "trend": "📈"
       },
       {
         "month": "August",
@@ -179,13 +179,13 @@
       },
       {
         "month": "October",
-        "downloads": 1154,
-        "trend": "➡️"
+        "downloads": 1285,
+        "trend": "🔥"
       },
       {
         "month": "November",
-        "downloads": 0,
-        "trend": "➡️"
+        "downloads": 157,
+        "trend": "📉"
       },
       {
         "month": "December",
@@ -227,7 +227,7 @@
       {
         "month": "July",
         "downloads": 1193,
-        "trend": "🔥"
+        "trend": "📈"
       },
       {
         "month": "August",
@@ -241,13 +241,13 @@
       },
       {
         "month": "October",
-        "downloads": 1152,
-        "trend": "📉"
+        "downloads": 1277,
+        "trend": "🔥"
       },
       {
         "month": "November",
-        "downloads": 0,
-        "trend": "➡️"
+        "downloads": 156,
+        "trend": "📉"
       },
       {
         "month": "December",
@@ -319,8 +319,8 @@
     },
     {
       "month": "November",
-      "projects": 0,
-      "files": 0,
+      "projects": 1,
+      "files": 73,
       "repositories": 0
     },
     {
@@ -340,13 +340,13 @@
       "downloads": 5461
     },
     "whisky_js_browser": {
-      "name": "July",
-      "downloads": 1198
+      "name": "October",
+      "downloads": 1285
     },
     "whisky_js_nodejs": {
-      "name": "July",
-      "downloads": 1193
+      "name": "October",
+      "downloads": 1277
     }
   },
-  "lastUpdated": "2025-10-30T01:23:08.409Z"
+  "lastUpdated": "2025-11-06T01:22:32.248Z"
 }

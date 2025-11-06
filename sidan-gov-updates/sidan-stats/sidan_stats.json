@@ -8,46 +8,46 @@
     "csl_rs_browser": {
       "downloads": {
         "last_day": 0,
-        "last_week": 535,
-        "last_month": 3871,
+        "last_week": 597,
+        "last_month": 5008,
         "last_year": 25971,
-        "last_12_months": 58746
+        "last_12_months": 58779
       },
       "latest_version": "0.9.21",
-      "dependents_count": 465879
+      "dependents_count": 467200
     },
     "csl_rs_nodejs": {
       "downloads": {
         "last_day": 0,
-        "last_week": 608,
-        "last_month": 3986,
+        "last_week": 660,
+        "last_month": 5157,
         "last_year": 26085,
-        "last_12_months": 59426
+        "last_12_months": 59502
       },
       "latest_version": "0.9.21",
-      "dependents_count": 317322
+      "dependents_count": 318391
     },
     "whisky_js_browser": {
       "downloads": {
         "last_day": 0,
-        "last_week": 259,
-        "last_month": 1154,
+        "last_week": 428,
+        "last_month": 1285,
         "last_year": 0,
-        "last_12_months": 6348
+        "last_12_months": 6636
       },
       "latest_version": "1.0.14",
-      "dependents_count": 1153127
+      "dependents_count": 1155361
     },
     "whisky_js_nodejs": {
       "downloads": {
         "last_day": 0,
-        "last_week": 256,
-        "last_month": 1154,
+        "last_week": 413,
+        "last_month": 1277,
         "last_year": 0,
-        "last_12_months": 6308
+        "last_12_months": 6589
       },
       "latest_version": "1.0.14",
-      "dependents_count": 1022730
+      "dependents_count": 1024802
     }
   },
   "urls": {},
@@ -57,9 +57,9 @@
       {
         "login": "HinsonSIDAN",
         "avatar_url": "https://avatars.githubusercontent.com/u/90688504?v=4",
-        "commits": 1268,
-        "pull_requests": 151,
-        "contributions": 1419,
+        "commits": 1378,
+        "pull_requests": 155,
+        "contributions": 1533,
         "repositories": [
           {
             "name": "whisky-archive",
@@ -72,6 +72,12 @@
             "commits": 296,
             "pull_requests": 4,
             "contributions": 300
+          },
+          {
+            "name": "aiken-virtual-dex",
+            "commits": 107,
+            "pull_requests": 3,
+            "contributions": 110
           },
           {
             "name": "vodka",
@@ -117,9 +123,9 @@
           },
           {
             "name": "hibiki",
-            "commits": 33,
-            "pull_requests": 2,
-            "contributions": 35
+            "commits": 36,
+            "pull_requests": 3,
+            "contributions": 39
           },
           {
             "name": "aiken-content-ownership",
@@ -306,9 +312,9 @@
       {
         "login": "twwu123",
         "avatar_url": "https://avatars.githubusercontent.com/u/45336147?v=4",
-        "commits": 554,
-        "pull_requests": 45,
-        "contributions": 599,
+        "commits": 565,
+        "pull_requests": 46,
+        "contributions": 611,
         "repositories": [
           {
             "name": "whisky-archive",
@@ -327,6 +333,12 @@
             "commits": 22,
             "pull_requests": 4,
             "contributions": 26
+          },
+          {
+            "name": "aiken-virtual-dex",
+            "commits": 11,
+            "pull_requests": 1,
+            "contributions": 12
           },
           {
             "name": "cardano-python-signing-module",
@@ -378,9 +390,9 @@
       {
         "login": "AnsonSIDAN",
         "avatar_url": "https://avatars.githubusercontent.com/u/91122558?v=4",
-        "commits": 295,
-        "pull_requests": 189,
-        "contributions": 484,
+        "commits": 306,
+        "pull_requests": 193,
+        "contributions": 499,
         "repositories": [
           {
             "name": "sidan-gov-discord-bot",
@@ -420,9 +432,9 @@
           },
           {
             "name": "hibiki",
-            "commits": 17,
+            "commits": 19,
             "pull_requests": 2,
-            "contributions": 19
+            "contributions": 21
           },
           {
             "name": "deltadefi-backend",
@@ -431,10 +443,22 @@
             "contributions": 13
           },
           {
+            "name": "aiken-virtual-dex",
+            "commits": 8,
+            "pull_requests": 4,
+            "contributions": 12
+          },
+          {
             "name": "python-sdk",
             "commits": 3,
             "pull_requests": 1,
             "contributions": 4
+          },
+          {
+            "name": "deltadefi-scripts",
+            "commits": 1,
+            "pull_requests": 1,
+            "contributions": 2
           },
           {
             "name": "cardano-sidan-pool",
@@ -453,36 +477,30 @@
             "commits": 1,
             "pull_requests": 0,
             "contributions": 1
-          },
-          {
-            "name": "deltadefi-scripts",
-            "commits": 0,
-            "pull_requests": 1,
-            "contributions": 1
           }
         ]
       },
       {
         "login": "github-actions[bot]",
         "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
-        "commits": 250,
+        "commits": 262,
         "pull_requests": 0,
-        "contributions": 250,
+        "contributions": 262,
         "repositories": [
           {
             "name": "DRep",
-            "commits": 250,
+            "commits": 262,
             "pull_requests": 0,
-            "contributions": 250
+            "contributions": 262
           }
         ]
       },
       {
         "login": "kenlau666",
         "avatar_url": "https://avatars.githubusercontent.com/u/98103533?v=4",
-        "commits": 214,
-        "pull_requests": 31,
-        "contributions": 245,
+        "commits": 218,
+        "pull_requests": 33,
+        "contributions": 251,
         "repositories": [
           {
             "name": "cardano-open-bounty",
@@ -515,6 +533,12 @@
             "contributions": 14
           },
           {
+            "name": "hibiki",
+            "commits": 6,
+            "pull_requests": 5,
+            "contributions": 11
+          },
+          {
             "name": "whisky",
             "commits": 10,
             "pull_requests": 0,
@@ -545,15 +569,15 @@
             "contributions": 7
           },
           {
-            "name": "hibiki",
-            "commits": 3,
-            "pull_requests": 3,
-            "contributions": 6
-          },
-          {
             "name": "bowmore",
             "commits": 0,
             "pull_requests": 1,
+            "contributions": 1
+          },
+          {
+            "name": "deltadefi-scripts",
+            "commits": 1,
+            "pull_requests": 0,
             "contributions": 1
           }
         ]
@@ -684,15 +708,42 @@
       {
         "login": "actions-user",
         "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
-        "commits": 68,
+        "commits": 71,
         "pull_requests": 0,
-        "contributions": 68,
+        "contributions": 71,
         "repositories": [
           {
             "name": "DRep",
-            "commits": 68,
+            "commits": 71,
             "pull_requests": 0,
-            "contributions": 68
+            "contributions": 71
+          }
+        ]
+      },
+      {
+        "login": "leuhk",
+        "avatar_url": "https://avatars.githubusercontent.com/u/44567291?v=4",
+        "commits": 28,
+        "pull_requests": 31,
+        "contributions": 59,
+        "repositories": [
+          {
+            "name": "deltadefi-backend",
+            "commits": 17,
+            "pull_requests": 19,
+            "contributions": 36
+          },
+          {
+            "name": "hibiki",
+            "commits": 9,
+            "pull_requests": 8,
+            "contributions": 17
+          },
+          {
+            "name": "typescript-sdk",
+            "commits": 2,
+            "pull_requests": 4,
+            "contributions": 6
           }
         ]
       },
@@ -714,33 +765,6 @@
             "commits": 8,
             "pull_requests": 0,
             "contributions": 8
-          }
-        ]
-      },
-      {
-        "login": "leuhk",
-        "avatar_url": "https://avatars.githubusercontent.com/u/44567291?v=4",
-        "commits": 21,
-        "pull_requests": 27,
-        "contributions": 48,
-        "repositories": [
-          {
-            "name": "deltadefi-backend",
-            "commits": 17,
-            "pull_requests": 19,
-            "contributions": 36
-          },
-          {
-            "name": "typescript-sdk",
-            "commits": 2,
-            "pull_requests": 4,
-            "contributions": 6
-          },
-          {
-            "name": "hibiki",
-            "commits": 2,
-            "pull_requests": 4,
-            "contributions": 6
           }
         ]
       },
@@ -778,47 +802,17 @@
         ]
       },
       {
-        "login": "GaryHsieh0422",
-        "avatar_url": "https://avatars.githubusercontent.com/u/178891824?v=4",
-        "commits": 33,
-        "pull_requests": 5,
-        "contributions": 38,
-        "repositories": [
-          {
-            "name": "cardano-open-bounty",
-            "commits": 33,
-            "pull_requests": 5,
-            "contributions": 38
-          }
-        ]
-      },
-      {
-        "login": "lodl",
-        "avatar_url": "https://avatars.githubusercontent.com/u/44868882?v=4",
-        "commits": 38,
-        "pull_requests": 0,
-        "contributions": 38,
-        "repositories": [
-          {
-            "name": "cardano-org",
-            "commits": 38,
-            "pull_requests": 0,
-            "contributions": 38
-          }
-        ]
-      },
-      {
         "login": "DeltaDeFiProtocol",
         "avatar_url": "https://avatars.githubusercontent.com/u/119332329?v=4",
-        "commits": 34,
+        "commits": 36,
         "pull_requests": 2,
-        "contributions": 36,
+        "contributions": 38,
         "repositories": [
           {
             "name": "deltadefi-docs",
-            "commits": 28,
+            "commits": 30,
             "pull_requests": 0,
-            "contributions": 28
+            "contributions": 30
           },
           {
             "name": "rum",
@@ -849,6 +843,36 @@
             "commits": 1,
             "pull_requests": 0,
             "contributions": 1
+          }
+        ]
+      },
+      {
+        "login": "GaryHsieh0422",
+        "avatar_url": "https://avatars.githubusercontent.com/u/178891824?v=4",
+        "commits": 33,
+        "pull_requests": 5,
+        "contributions": 38,
+        "repositories": [
+          {
+            "name": "cardano-open-bounty",
+            "commits": 33,
+            "pull_requests": 5,
+            "contributions": 38
+          }
+        ]
+      },
+      {
+        "login": "lodl",
+        "avatar_url": "https://avatars.githubusercontent.com/u/44868882?v=4",
+        "commits": 38,
+        "pull_requests": 0,
+        "contributions": 38,
+        "repositories": [
+          {
+            "name": "cardano-org",
+            "commits": 38,
+            "pull_requests": 0,
+            "contributions": 38
           }
         ]
       },
@@ -915,9 +939,9 @@
       {
         "login": "jackaldeltadefi",
         "avatar_url": "https://avatars.githubusercontent.com/u/172563536?v=4",
-        "commits": 7,
+        "commits": 9,
         "pull_requests": 10,
-        "contributions": 17,
+        "contributions": 19,
         "repositories": [
           {
             "name": "deltadefi-backend",
@@ -927,9 +951,9 @@
           },
           {
             "name": "hibiki",
-            "commits": 1,
+            "commits": 3,
             "pull_requests": 3,
-            "contributions": 4
+            "contributions": 6
           }
         ]
       },
@@ -1723,8 +1747,8 @@
         ]
       }
     ],
-    "total_pull_requests": 516,
-    "total_commits": 4237,
-    "total_contributions": 4753
+    "total_pull_requests": 531,
+    "total_commits": 4399,
+    "total_contributions": 4930
   }
 }
