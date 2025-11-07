@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-11-05T02:14:43.204Z",
+  "timestamp": "2025-11-07T02:05:04.483Z",
   "projects": [
     {
       "projectDetails": {
@@ -152,7 +152,7 @@
         "title": "DeltaDeFi - Open Source Libraries for High Frequency Trading",
         "budget": 200000,
         "milestones_qty": 6,
-        "funds_distributed": 158000,
+        "funds_distributed": 170000,
         "project_id": 1200096,
         "challenges": {
           "id": 27,
@@ -173,7 +173,7 @@
           "unique_wallets": 360
         }
       },
-      "milestonesCompleted": 5
+      "milestonesCompleted": 6
     },
     {
       "projectDetails": {
@@ -268,7 +268,7 @@
         "title": "SIDAN | MeshJS - Cardano Service Layer Framework for DApps",
         "budget": 200000,
         "milestones_qty": 6,
-        "funds_distributed": 170000,
+        "funds_distributed": 200000,
         "project_id": 1200202,
         "challenges": {
           "id": 27,
@@ -318,7 +318,7 @@
           "unique_wallets": 231
         }
       },
-      "milestonesCompleted": 2
+      "milestonesCompleted": 3
     },
     {
       "projectDetails": {
