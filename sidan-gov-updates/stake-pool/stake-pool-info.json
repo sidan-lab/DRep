@@ -53,17 +53,17 @@
     },
     "pool_status": "registered",
     "retiring_epoch": null,
-    "op_cert": "b859bf410d844f5b4db08a94ec998419f5196328411be7d33f9b67dee2f64644",
-    "op_cert_counter": 5,
+    "op_cert": "555b8725cca328105a5d033a626293501f165695854b0a1e4db1301a4fdc45a1",
+    "op_cert_counter": 6,
     "active_stake": "785783152280",
     "sigma": 0.000035906033593522825,
-    "block_count": 241,
+    "block_count": 242,
     "live_pledge": "7401835357",
-    "live_stake": "840870657998",
+    "live_stake": "839609445428",
     "live_delegators": 59,
     "live_saturation": 1.1,
     "voting_power": "840855657998"
   },
-  "lastUpdated": "2025-11-06T23:01:23.358Z",
+  "lastUpdated": "2025-11-07T23:01:17.726Z",
   "currentEpoch": 593
 }
