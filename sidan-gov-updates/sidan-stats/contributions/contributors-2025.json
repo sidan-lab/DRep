@@ -5,9 +5,9 @@
     {
       "login": "AnsonSIDAN",
       "avatar_url": "https://avatars.githubusercontent.com/u/91122558?v=4",
-      "commits": 278,
+      "commits": 280,
       "pull_requests": 183,
-      "contributions": 461,
+      "contributions": 463,
       "repositories": [
         {
           "name": "sidan-gov-discord-bot",
@@ -482,10 +482,12 @@
         },
         {
           "name": "hibiki",
-          "commits": 19,
+          "commits": 21,
           "pull_requests": 2,
-          "contributions": 21,
+          "contributions": 23,
           "commit_timestamps": [
+            "2025-11-07T04:57:36Z",
+            "2025-11-06T11:15:50Z",
             "2025-10-24T03:00:41Z",
             "2025-08-08T03:07:36Z",
             "2025-07-11T08:46:21Z",
@@ -1293,16 +1295,27 @@
     {
       "login": "github-actions[bot]",
       "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
-      "commits": 257,
+      "commits": 268,
       "pull_requests": 0,
-      "contributions": 257,
+      "contributions": 268,
       "repositories": [
         {
           "name": "DRep",
-          "commits": 257,
+          "commits": 268,
           "pull_requests": 0,
-          "contributions": 257,
+          "contributions": 268,
           "commit_timestamps": [
+            "2025-11-09T23:00:57Z",
+            "2025-11-08T23:01:04Z",
+            "2025-11-07T23:01:18Z",
+            "2025-11-06T23:01:23Z",
+            "2025-11-06T02:17:39Z",
+            "2025-11-06T01:22:32Z",
+            "2025-11-05T23:01:10Z",
+            "2025-11-04T23:01:09Z",
+            "2025-11-03T23:01:09Z",
+            "2025-11-03T02:19:57Z",
+            "2025-11-03T02:06:48Z",
             "2025-11-02T23:01:00Z",
             "2025-11-01T23:01:12Z",
             "2025-11-01T03:09:14Z",
@@ -1569,9 +1582,9 @@
     {
       "login": "kenlau666",
       "avatar_url": "https://avatars.githubusercontent.com/u/98103533?v=4",
-      "commits": 170,
-      "pull_requests": 31,
-      "contributions": 201,
+      "commits": 171,
+      "pull_requests": 35,
+      "contributions": 206,
       "repositories": [
         {
           "name": "cardano-open-bounty",
@@ -1739,6 +1752,33 @@
           "organization": "deltadefi-protocol"
         },
         {
+          "name": "hibiki",
+          "commits": 7,
+          "pull_requests": 9,
+          "contributions": 16,
+          "commit_timestamps": [
+            "2025-11-06T06:30:06Z",
+            "2025-10-31T02:54:31Z",
+            "2025-10-30T12:52:23Z",
+            "2025-10-30T12:09:21Z",
+            "2025-10-27T02:34:06Z",
+            "2025-10-24T06:13:01Z",
+            "2025-10-21T06:44:45Z"
+          ],
+          "pr_timestamps": [
+            "2025-11-07T05:01:05Z",
+            "2025-11-07T04:57:36Z",
+            "2025-11-07T04:10:45Z",
+            "2025-11-06T11:15:50Z",
+            "2025-10-31T03:42:03Z",
+            "2025-10-31T02:54:31Z",
+            "2025-10-27T02:34:06Z",
+            "2025-10-24T06:15:59Z",
+            "2025-10-21T06:44:45Z"
+          ],
+          "organization": "deltadefi-protocol"
+        },
+        {
           "name": "whisky-archive",
           "commits": 10,
           "pull_requests": 4,
@@ -1762,28 +1802,6 @@
             "2025-04-11T08:32:13Z"
           ],
           "organization": "sidan-lab"
-        },
-        {
-          "name": "hibiki",
-          "commits": 6,
-          "pull_requests": 5,
-          "contributions": 11,
-          "commit_timestamps": [
-            "2025-10-31T02:54:31Z",
-            "2025-10-30T12:52:23Z",
-            "2025-10-30T12:09:21Z",
-            "2025-10-27T02:34:06Z",
-            "2025-10-24T06:13:01Z",
-            "2025-10-21T06:44:45Z"
-          ],
-          "pr_timestamps": [
-            "2025-10-31T03:42:03Z",
-            "2025-10-31T02:54:31Z",
-            "2025-10-27T02:34:06Z",
-            "2025-10-24T06:15:59Z",
-            "2025-10-21T06:44:45Z"
-          ],
-          "organization": "deltadefi-protocol"
         },
         {
           "name": "whisky",
@@ -2752,16 +2770,19 @@
     {
       "login": "actions-user",
       "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
-      "commits": 69,
+      "commits": 72,
       "pull_requests": 0,
-      "contributions": 69,
+      "contributions": 72,
       "repositories": [
         {
           "name": "DRep",
-          "commits": 69,
+          "commits": 72,
           "pull_requests": 0,
-          "contributions": 69,
+          "contributions": 72,
           "commit_timestamps": [
+            "2025-11-07T02:05:04Z",
+            "2025-11-05T02:14:43Z",
+            "2025-11-03T02:17:33Z",
             "2025-10-31T02:04:47Z",
             "2025-10-29T02:16:41Z",
             "2025-10-27T02:19:39Z",
@@ -3205,14 +3226,14 @@
       "login": "leuhk",
       "avatar_url": "https://avatars.githubusercontent.com/u/44567291?v=4",
       "commits": 9,
-      "pull_requests": 8,
-      "contributions": 17,
+      "pull_requests": 9,
+      "contributions": 18,
       "repositories": [
         {
           "name": "hibiki",
           "commits": 9,
-          "pull_requests": 8,
-          "contributions": 17,
+          "pull_requests": 9,
+          "contributions": 18,
           "commit_timestamps": [
             "2025-10-31T03:49:43Z",
             "2025-10-31T03:42:03Z",
@@ -3225,6 +3246,7 @@
             "2025-10-18T06:03:38Z"
           ],
           "pr_timestamps": [
+            "2025-11-07T09:40:58Z",
             "2025-10-31T03:49:43Z",
             "2025-10-30T16:33:40Z",
             "2025-10-30T12:51:26Z",
@@ -3339,21 +3361,25 @@
     {
       "login": "jackaldeltadefi",
       "avatar_url": "https://avatars.githubusercontent.com/u/172563536?v=4",
-      "commits": 3,
-      "pull_requests": 4,
-      "contributions": 7,
+      "commits": 5,
+      "pull_requests": 6,
+      "contributions": 11,
       "repositories": [
         {
           "name": "hibiki",
-          "commits": 3,
-          "pull_requests": 3,
-          "contributions": 6,
+          "commits": 5,
+          "pull_requests": 5,
+          "contributions": 10,
           "commit_timestamps": [
+            "2025-11-06T10:45:14Z",
+            "2025-11-06T10:30:13Z",
             "2025-07-30T03:20:21Z",
             "2025-07-09T06:09:53Z",
             "2025-07-03T17:17:25Z"
           ],
           "pr_timestamps": [
+            "2025-11-06T10:45:14Z",
+            "2025-11-06T10:30:13Z",
             "2025-07-30T03:20:21Z",
             "2025-07-09T06:09:53Z",
             "2025-07-03T17:17:25Z"
@@ -3808,7 +3834,7 @@
       ]
     }
   ],
-  "total_pull_requests": 315,
-  "total_commits": 2058,
-  "total_contributions": 2373
+  "total_pull_requests": 322,
+  "total_commits": 2077,
+  "total_contributions": 2399
 }
