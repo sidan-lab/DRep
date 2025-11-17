@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-11-14T02:06:55.535Z",
+  "timestamp": "2025-11-17T02:15:28.332Z",
   "projects": [
     {
       "projectDetails": {
@@ -152,7 +152,7 @@
         "title": "DeltaDeFi - Open Source Libraries for High Frequency Trading",
         "budget": 200000,
         "milestones_qty": 6,
-        "funds_distributed": 170000,
+        "funds_distributed": 200000,
         "project_id": 1200096,
         "challenges": {
           "id": 27,
@@ -297,7 +297,7 @@
         "title": "Waffle | SIDAN - Hong Kong Cardano Community",
         "budget": 100000,
         "milestones_qty": 4,
-        "funds_distributed": 80833.34,
+        "funds_distributed": 85000,
         "project_id": 1200244,
         "challenges": {
           "id": 28,
