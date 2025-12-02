@@ -1,5 +1,35 @@
 [
   {
+    "proposalId": "gov_action169kllwhfmp488je5x5rwvufd08p8sztdcf0ghf5sp6ey2gnjdwaqql47xry",
+    "proposalTxHash": "d16dffbae9d86a73cb343506e6712d79c278096dc25e8ba6900eb24522726bba00",
+    "proposalIndex": 0,
+    "voteTxHash": "5ed14753928286b3869a2db365d1fe9f5bec911e69f6e9405248d8cf66e4b869",
+    "blockTime": "2025-12-02T09:55:12.000Z",
+    "vote": "Yes",
+    "metaUrl": null,
+    "metaHash": null,
+    "proposalTitle": "2025 Net Change Limit Extension",
+    "proposalType": "InfoAction",
+    "proposedEpoch": 597,
+    "expirationEpoch": 604,
+    "rationale": "No rationale available"
+  },
+  {
+    "proposalId": "gov_action13a2dqgwxum7d6kjfprcs57cf9733ek2dkt5qnuhqd4ll5ntcwu7sqluwkxd",
+    "proposalTxHash": "8f54d021c6e6fcdd5a4908f10a7b092fa31cd94db2e809f2e06d7ffa4d78773d00",
+    "proposalIndex": 0,
+    "voteTxHash": "622a8df3b5851c1bd122c150be42422484d6a35ffb7309014428b1b2c7077190",
+    "blockTime": "2025-12-02T09:54:00.000Z",
+    "vote": "Yes",
+    "metaUrl": null,
+    "metaHash": null,
+    "proposalTitle": "Cardano Critical Integrations Budget",
+    "proposalType": "InfoAction",
+    "proposedEpoch": 597,
+    "expirationEpoch": 604,
+    "rationale": "No rationale available"
+  },
+  {
     "proposalId": "gov_action1ezp0r9rgf4njx93p9uq7l3kjs9m739jm0ntf26vplcmucec4jc0qqxjlfrc",
     "proposalTxHash": "c882f194684d672316212f01efc6d28177e8965b7cd6956981fe37cc6715961e00",
     "proposalIndex": 0,
