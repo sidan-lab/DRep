@@ -66,7 +66,7 @@
       {
         "month": "December",
         "downloads": 0,
-        "trend": "➡️"
+        "trend": "🔥"
       }
     ],
     "csl_rs_nodejs": [
@@ -128,7 +128,7 @@
       {
         "month": "December",
         "downloads": 0,
-        "trend": "➡️"
+        "trend": "🔥"
       }
     ],
     "whisky_js_browser": [
@@ -190,7 +190,7 @@
       {
         "month": "December",
         "downloads": 0,
-        "trend": "➡️"
+        "trend": "🔥"
       }
     ],
     "whisky_js_nodejs": [
@@ -252,7 +252,7 @@
       {
         "month": "December",
         "downloads": 0,
-        "trend": "➡️"
+        "trend": "🔥"
       }
     ]
   },
@@ -325,8 +325,8 @@
     },
     {
       "month": "December",
-      "projects": 0,
-      "files": 0,
+      "projects": 1,
+      "files": 78,
       "repositories": 0
     }
   ],
@@ -348,5 +348,5 @@
       "downloads": 0
     }
   },
-  "lastUpdated": "2025-11-27T01:21:20.901Z"
+  "lastUpdated": "2025-12-04T01:25:56.626Z"
 }
