@@ -1,5 +1,20 @@
 [
   {
+    "proposalId": "gov_action1fk4nx9zhkcdcyjaudwjtnkd7gagwyhqtth2zypawkc78gvdxkuzqqtvqdkv",
+    "proposalTxHash": "4dab331457b61b824bbc6ba4b9d9be4750e25c0b5dd42207aeb63c7431a6b70400",
+    "proposalIndex": 0,
+    "voteTxHash": "e2b2ac9731afafa6b67dfca2dde799ba1f4715085d54c3853d3ce5bd9506813f",
+    "blockTime": "2025-12-11T13:50:11.000Z",
+    "vote": "Yes",
+    "metaUrl": null,
+    "metaHash": null,
+    "proposalTitle": "Add Constitutional Committee Member",
+    "proposalType": "NewCommittee",
+    "proposedEpoch": 599,
+    "expirationEpoch": 606,
+    "rationale": "No rationale available"
+  },
+  {
     "proposalId": "gov_action169kllwhfmp488je5x5rwvufd08p8sztdcf0ghf5sp6ey2gnjdwaqql47xry",
     "proposalTxHash": "d16dffbae9d86a73cb343506e6712d79c278096dc25e8ba6900eb24522726bba00",
     "proposalIndex": 0,
