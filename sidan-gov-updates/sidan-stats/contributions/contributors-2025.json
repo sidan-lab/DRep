@@ -5,9 +5,9 @@
     {
       "login": "AnsonSIDAN",
       "avatar_url": "https://avatars.githubusercontent.com/u/91122558?v=4",
-      "commits": 290,
-      "pull_requests": 180,
-      "contributions": 470,
+      "commits": 312,
+      "pull_requests": 187,
+      "contributions": 499,
       "repositories": [
         {
           "name": "sidan-gov-discord-bot",
@@ -359,6 +359,56 @@
           "organization": "deltadefi-protocol"
         },
         {
+          "name": "drep-delegator-feedback-system",
+          "commits": 30,
+          "pull_requests": 9,
+          "contributions": 39,
+          "commit_timestamps": [
+            "2025-12-11T10:08:34Z",
+            "2025-12-11T09:07:44Z",
+            "2025-12-10T15:21:43Z",
+            "2025-12-10T14:24:02Z",
+            "2025-12-10T11:59:17Z",
+            "2025-12-10T10:12:34Z",
+            "2025-12-10T10:12:11Z",
+            "2025-12-10T07:47:05Z",
+            "2025-12-10T07:46:40Z",
+            "2025-12-10T06:22:32Z",
+            "2025-12-10T04:19:49Z",
+            "2025-12-09T14:28:47Z",
+            "2025-12-09T14:23:02Z",
+            "2025-12-08T16:01:02Z",
+            "2025-12-08T16:00:19Z",
+            "2025-12-08T14:20:08Z",
+            "2025-12-08T11:05:10Z",
+            "2025-12-08T10:59:14Z",
+            "2025-12-08T10:36:25Z",
+            "2025-12-08T05:15:27Z",
+            "2025-12-07T16:11:03Z",
+            "2025-12-04T05:15:15Z",
+            "2025-12-04T05:14:20Z",
+            "2025-12-04T04:30:00Z",
+            "2025-12-04T04:27:36Z",
+            "2025-12-02T16:51:49Z",
+            "2025-12-02T16:51:28Z",
+            "2025-12-01T06:28:19Z",
+            "2025-12-01T06:11:01Z",
+            "2025-12-01T04:20:57Z"
+          ],
+          "pr_timestamps": [
+            "2025-12-10T12:01:40Z",
+            "2025-12-10T10:12:34Z",
+            "2025-12-10T07:47:05Z",
+            "2025-12-10T06:24:14Z",
+            "2025-12-09T14:28:47Z",
+            "2025-12-08T16:01:02Z",
+            "2025-12-08T14:46:32Z",
+            "2025-12-04T05:15:15Z",
+            "2025-12-04T04:30:01Z"
+          ],
+          "organization": "sidan-lab"
+        },
+        {
           "name": "sdks-demo",
           "commits": 26,
           "pull_requests": 9,
@@ -448,10 +498,11 @@
         },
         {
           "name": "DRep",
-          "commits": 26,
+          "commits": 27,
           "pull_requests": 1,
-          "contributions": 27,
+          "contributions": 28,
           "commit_timestamps": [
+            "2025-12-08T16:08:51Z",
             "2025-12-07T05:38:53Z",
             "2025-12-07T05:16:13Z",
             "2025-07-29T11:20:26Z",
@@ -542,28 +593,6 @@
           "organization": "deltadefi-protocol"
         },
         {
-          "name": "drep-delegator-feedback-system",
-          "commits": 9,
-          "pull_requests": 2,
-          "contributions": 11,
-          "commit_timestamps": [
-            "2025-12-04T05:15:15Z",
-            "2025-12-04T05:14:20Z",
-            "2025-12-04T04:30:00Z",
-            "2025-12-04T04:27:36Z",
-            "2025-12-02T16:51:49Z",
-            "2025-12-02T16:51:28Z",
-            "2025-12-01T06:28:19Z",
-            "2025-12-01T06:11:01Z",
-            "2025-12-01T04:20:57Z"
-          ],
-          "pr_timestamps": [
-            "2025-12-04T05:15:15Z",
-            "2025-12-04T04:30:01Z"
-          ],
-          "organization": "sidan-lab"
-        },
-        {
           "name": "whisky",
           "commits": 4,
           "pull_requests": 2,
@@ -646,9 +675,9 @@
     {
       "login": "HinsonSIDAN",
       "avatar_url": "https://avatars.githubusercontent.com/u/90688504?v=4",
-      "commits": 438,
+      "commits": 440,
       "pull_requests": 29,
-      "contributions": 467,
+      "contributions": 469,
       "repositories": [
         {
           "name": "whisky",
@@ -813,10 +842,11 @@
         },
         {
           "name": "sdks-demo",
-          "commits": 45,
+          "commits": 46,
           "pull_requests": 0,
-          "contributions": 45,
+          "contributions": 46,
           "commit_timestamps": [
+            "2025-12-11T09:53:41Z",
             "2025-11-14T18:53:41Z",
             "2025-09-20T16:55:27Z",
             "2025-09-04T16:10:54Z",
@@ -968,6 +998,46 @@
           "organization": "deltadefi-protocol"
         },
         {
+          "name": "vodka",
+          "commits": 24,
+          "pull_requests": 5,
+          "contributions": 29,
+          "commit_timestamps": [
+            "2025-12-12T10:44:44Z",
+            "2025-11-19T10:41:10Z",
+            "2025-11-19T10:40:50Z",
+            "2025-11-19T10:35:12Z",
+            "2025-11-18T17:29:36Z",
+            "2025-11-18T17:16:08Z",
+            "2025-11-18T17:07:42Z",
+            "2025-11-18T17:06:30Z",
+            "2025-11-18T17:06:21Z",
+            "2025-07-17T01:27:39Z",
+            "2025-07-16T16:08:52Z",
+            "2025-06-30T08:29:00Z",
+            "2025-06-30T08:26:11Z",
+            "2025-06-30T08:20:43Z",
+            "2025-06-20T05:45:45Z",
+            "2025-03-22T08:21:55Z",
+            "2025-03-22T08:16:50Z",
+            "2025-01-21T16:00:55Z",
+            "2025-01-17T13:33:58Z",
+            "2025-01-17T08:07:29Z",
+            "2025-01-14T02:01:22Z",
+            "2025-01-14T02:00:43Z",
+            "2025-01-14T01:59:46Z",
+            "2025-01-14T01:58:48Z"
+          ],
+          "pr_timestamps": [
+            "2025-03-22T08:21:55Z",
+            "2025-03-22T08:16:50Z",
+            "2025-01-21T16:00:55Z",
+            "2025-01-17T08:07:30Z",
+            "2025-01-14T02:00:43Z"
+          ],
+          "organization": "sidan-lab"
+        },
+        {
           "name": "cardano-bar",
           "commits": 28,
           "pull_requests": 1,
@@ -1004,45 +1074,6 @@
           ],
           "pr_timestamps": [
             "2025-11-24T17:13:07Z"
-          ],
-          "organization": "sidan-lab"
-        },
-        {
-          "name": "vodka",
-          "commits": 23,
-          "pull_requests": 5,
-          "contributions": 28,
-          "commit_timestamps": [
-            "2025-11-19T10:41:10Z",
-            "2025-11-19T10:40:50Z",
-            "2025-11-19T10:35:12Z",
-            "2025-11-18T17:29:36Z",
-            "2025-11-18T17:16:08Z",
-            "2025-11-18T17:07:42Z",
-            "2025-11-18T17:06:30Z",
-            "2025-11-18T17:06:21Z",
-            "2025-07-17T01:27:39Z",
-            "2025-07-16T16:08:52Z",
-            "2025-06-30T08:29:00Z",
-            "2025-06-30T08:26:11Z",
-            "2025-06-30T08:20:43Z",
-            "2025-06-20T05:45:45Z",
-            "2025-03-22T08:21:55Z",
-            "2025-03-22T08:16:50Z",
-            "2025-01-21T16:00:55Z",
-            "2025-01-17T13:33:58Z",
-            "2025-01-17T08:07:29Z",
-            "2025-01-14T02:01:22Z",
-            "2025-01-14T02:00:43Z",
-            "2025-01-14T01:59:46Z",
-            "2025-01-14T01:58:48Z"
-          ],
-          "pr_timestamps": [
-            "2025-03-22T08:21:55Z",
-            "2025-03-22T08:16:50Z",
-            "2025-01-21T16:00:55Z",
-            "2025-01-17T08:07:30Z",
-            "2025-01-14T02:00:43Z"
           ],
           "organization": "sidan-lab"
         },
@@ -1359,16 +1390,28 @@
     {
       "login": "github-actions[bot]",
       "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
-      "commits": 313,
+      "commits": 325,
       "pull_requests": 0,
-      "contributions": 313,
+      "contributions": 325,
       "repositories": [
         {
           "name": "DRep",
-          "commits": 313,
+          "commits": 325,
           "pull_requests": 0,
-          "contributions": 313,
+          "contributions": 325,
           "commit_timestamps": [
+            "2025-12-14T23:00:54Z",
+            "2025-12-13T23:01:09Z",
+            "2025-12-12T23:01:02Z",
+            "2025-12-11T23:01:26Z",
+            "2025-12-11T16:47:13Z",
+            "2025-12-11T02:25:23Z",
+            "2025-12-11T01:28:19Z",
+            "2025-12-10T23:01:01Z",
+            "2025-12-09T23:01:18Z",
+            "2025-12-08T23:01:12Z",
+            "2025-12-08T02:21:39Z",
+            "2025-12-08T02:09:12Z",
             "2025-12-07T23:01:06Z",
             "2025-12-06T23:00:40Z",
             "2025-12-05T23:01:11Z",
@@ -1691,9 +1734,9 @@
     {
       "login": "kenlau666",
       "avatar_url": "https://avatars.githubusercontent.com/u/98103533?v=4",
-      "commits": 173,
+      "commits": 174,
       "pull_requests": 35,
-      "contributions": 208,
+      "contributions": 209,
       "repositories": [
         {
           "name": "cardano-open-bounty",
@@ -2008,6 +2051,17 @@
             "2025-01-28T17:58:50Z"
           ],
           "organization": "deltadefi-protocol"
+        },
+        {
+          "name": "drep-delegator-feedback-system",
+          "commits": 1,
+          "pull_requests": 0,
+          "contributions": 1,
+          "commit_timestamps": [
+            "2025-12-10T06:24:14Z"
+          ],
+          "pr_timestamps": [],
+          "organization": "sidan-lab"
         },
         {
           "name": "go-sdk",
@@ -3056,16 +3110,19 @@
     {
       "login": "actions-user",
       "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
-      "commits": 84,
+      "commits": 87,
       "pull_requests": 0,
-      "contributions": 84,
+      "contributions": 87,
       "repositories": [
         {
           "name": "DRep",
-          "commits": 84,
+          "commits": 87,
           "pull_requests": 0,
-          "contributions": 84,
+          "contributions": 87,
           "commit_timestamps": [
+            "2025-12-12T02:20:16Z",
+            "2025-12-10T02:20:44Z",
+            "2025-12-08T02:19:02Z",
             "2025-12-05T02:10:51Z",
             "2025-12-03T02:17:55Z",
             "2025-12-01T02:36:38Z",
@@ -3517,6 +3574,71 @@
       ]
     },
     {
+      "login": "leuhk",
+      "avatar_url": "https://avatars.githubusercontent.com/u/44567291?v=4",
+      "commits": 13,
+      "pull_requests": 11,
+      "contributions": 24,
+      "repositories": [
+        {
+          "name": "hibiki",
+          "commits": 10,
+          "pull_requests": 10,
+          "contributions": 20,
+          "commit_timestamps": [
+            "2025-11-19T02:30:57Z",
+            "2025-10-31T03:49:43Z",
+            "2025-10-31T03:42:03Z",
+            "2025-10-30T16:33:40Z",
+            "2025-10-30T12:51:25Z",
+            "2025-10-30T12:30:36Z",
+            "2025-10-27T02:39:50Z",
+            "2025-10-24T06:17:16Z",
+            "2025-10-24T06:15:59Z",
+            "2025-10-18T06:03:38Z"
+          ],
+          "pr_timestamps": [
+            "2025-11-19T02:30:57Z",
+            "2025-11-07T09:40:58Z",
+            "2025-10-31T03:49:43Z",
+            "2025-10-30T16:33:40Z",
+            "2025-10-30T12:51:26Z",
+            "2025-10-30T12:30:36Z",
+            "2025-10-27T02:39:50Z",
+            "2025-10-24T06:17:16Z",
+            "2025-10-18T06:03:38Z",
+            "2025-08-08T03:07:36Z"
+          ],
+          "organization": "deltadefi-protocol"
+        },
+        {
+          "name": "drep-delegator-feedback-system",
+          "commits": 2,
+          "pull_requests": 0,
+          "contributions": 2,
+          "commit_timestamps": [
+            "2025-12-10T12:01:39Z",
+            "2025-12-08T14:46:32Z"
+          ],
+          "pr_timestamps": [],
+          "organization": "sidan-lab"
+        },
+        {
+          "name": "go-sdk",
+          "commits": 1,
+          "pull_requests": 1,
+          "contributions": 2,
+          "commit_timestamps": [
+            "2025-11-10T17:12:53Z"
+          ],
+          "pr_timestamps": [
+            "2025-11-10T17:12:53Z"
+          ],
+          "organization": "deltadefi-protocol"
+        }
+      ]
+    },
+    {
       "login": "Mercurial",
       "avatar_url": "https://avatars.githubusercontent.com/u/585569?v=4",
       "commits": 22,
@@ -3554,59 +3676,6 @@
           ],
           "pr_timestamps": [],
           "organization": "sidan-lab"
-        }
-      ]
-    },
-    {
-      "login": "leuhk",
-      "avatar_url": "https://avatars.githubusercontent.com/u/44567291?v=4",
-      "commits": 11,
-      "pull_requests": 11,
-      "contributions": 22,
-      "repositories": [
-        {
-          "name": "hibiki",
-          "commits": 10,
-          "pull_requests": 10,
-          "contributions": 20,
-          "commit_timestamps": [
-            "2025-11-19T02:30:57Z",
-            "2025-10-31T03:49:43Z",
-            "2025-10-31T03:42:03Z",
-            "2025-10-30T16:33:40Z",
-            "2025-10-30T12:51:25Z",
-            "2025-10-30T12:30:36Z",
-            "2025-10-27T02:39:50Z",
-            "2025-10-24T06:17:16Z",
-            "2025-10-24T06:15:59Z",
-            "2025-10-18T06:03:38Z"
-          ],
-          "pr_timestamps": [
-            "2025-11-19T02:30:57Z",
-            "2025-11-07T09:40:58Z",
-            "2025-10-31T03:49:43Z",
-            "2025-10-30T16:33:40Z",
-            "2025-10-30T12:51:26Z",
-            "2025-10-30T12:30:36Z",
-            "2025-10-27T02:39:50Z",
-            "2025-10-24T06:17:16Z",
-            "2025-10-18T06:03:38Z",
-            "2025-08-08T03:07:36Z"
-          ],
-          "organization": "deltadefi-protocol"
-        },
-        {
-          "name": "go-sdk",
-          "commits": 1,
-          "pull_requests": 1,
-          "contributions": 2,
-          "commit_timestamps": [
-            "2025-11-10T17:12:53Z"
-          ],
-          "pr_timestamps": [
-            "2025-11-10T17:12:53Z"
-          ],
-          "organization": "deltadefi-protocol"
         }
       ]
     },
@@ -5122,7 +5191,7 @@
       ]
     }
   ],
-  "total_pull_requests": 322,
-  "total_commits": 2406,
-  "total_contributions": 2728
+  "total_pull_requests": 329,
+  "total_commits": 2448,
+  "total_contributions": 2777
 }
