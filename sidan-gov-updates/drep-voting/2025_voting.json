@@ -1,5 +1,20 @@
 [
   {
+    "proposalId": "gov_action18fd7jwa06fksmwumlcvlft8v4guvaa672qsp6xgenekvs4kmvcqsq8cqks4",
+    "proposalTxHash": "3a5be93bafd26d0dbb9bfe19f4acecaa38cef75e50201d19199e6cc856db660100",
+    "proposalIndex": 0,
+    "voteTxHash": "5943fcbb51deff5eedc53e6ff4abba6b7ad94d5773ecaf36093df77b59505dea",
+    "blockTime": "2025-12-21T08:00:32.000Z",
+    "vote": "Yes",
+    "metaUrl": "https://raw.githubusercontent.com/sidan-lab/DRep/refs/heads/main/voting-history/ga81/rationale.jsonld",
+    "metaHash": "df972c8de1542aba7c0479ce6760b67bfdfbe69ed6711a7c7400a8b18c766297",
+    "proposalTitle": "Cardano 2030: Vision, Mission, Strategy Framework and KPIs",
+    "proposalType": "InfoAction",
+    "proposedEpoch": 601,
+    "expirationEpoch": 608,
+    "rationale": "We have attended the workshops and discussed with various community members. After careful consideration, we decided to vote yes for the proposal as we believe the KPIs specified are the key metrics for measuring the success of Cardano in upcoming years."
+  },
+  {
     "proposalId": "gov_action1fk4nx9zhkcdcyjaudwjtnkd7gagwyhqtth2zypawkc78gvdxkuzqqtvqdkv",
     "proposalTxHash": "4dab331457b61b824bbc6ba4b9d9be4750e25c0b5dd42207aeb63c7431a6b70400",
     "proposalIndex": 0,
