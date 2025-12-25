@@ -8,46 +8,46 @@
     "csl_rs_browser": {
       "downloads": {
         "last_day": 0,
-        "last_week": 854,
+        "last_week": 904,
         "last_month": 3602,
         "last_year": 25971,
-        "last_12_months": 54414
+        "last_12_months": 54040
       },
       "latest_version": "0.9.21",
-      "dependents_count": 412690
+      "dependents_count": 413303
     },
     "csl_rs_nodejs": {
       "downloads": {
         "last_day": 0,
-        "last_week": 869,
+        "last_week": 923,
         "last_month": 3711,
         "last_year": 26085,
-        "last_12_months": 55271
+        "last_12_months": 54880
       },
       "latest_version": "0.9.21",
-      "dependents_count": 325527
+      "dependents_count": 326136
     },
     "whisky_js_browser": {
       "downloads": {
         "last_day": 0,
-        "last_week": 244,
+        "last_week": 386,
         "last_month": 974,
         "last_year": 0,
-        "last_12_months": 7881
+        "last_12_months": 8217
       },
       "latest_version": "1.0.17",
-      "dependents_count": 1106547
+      "dependents_count": 1107090
     },
     "whisky_js_nodejs": {
       "downloads": {
         "last_day": 0,
-        "last_week": 247,
+        "last_week": 390,
         "last_month": 982,
         "last_year": 0,
-        "last_12_months": 7848
+        "last_12_months": 8190
       },
       "latest_version": "1.0.17",
-      "dependents_count": 1037942
+      "dependents_count": 1038328
     }
   },
   "urls": {},
@@ -402,9 +402,9 @@
       {
         "login": "AnsonSIDAN",
         "avatar_url": "https://avatars.githubusercontent.com/u/91122558?v=4",
-        "commits": 340,
+        "commits": 341,
         "pull_requests": 197,
-        "contributions": 537,
+        "contributions": 538,
         "repositories": [
           {
             "name": "sidan-gov-discord-bot",
@@ -426,9 +426,9 @@
           },
           {
             "name": "DRep",
-            "commits": 43,
+            "commits": 44,
             "pull_requests": 1,
-            "contributions": 44
+            "contributions": 45
           },
           {
             "name": "drep-delegator-feedback-system",
@@ -501,15 +501,15 @@
       {
         "login": "github-actions[bot]",
         "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
-        "commits": 330,
+        "commits": 342,
         "pull_requests": 0,
-        "contributions": 330,
+        "contributions": 342,
         "repositories": [
           {
             "name": "DRep",
-            "commits": 330,
+            "commits": 342,
             "pull_requests": 0,
-            "contributions": 330
+            "contributions": 342
           }
         ]
       },
@@ -735,15 +735,15 @@
       {
         "login": "actions-user",
         "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
-        "commits": 89,
+        "commits": 92,
         "pull_requests": 0,
-        "contributions": 89,
+        "contributions": 92,
         "repositories": [
           {
             "name": "DRep",
-            "commits": 89,
+            "commits": 92,
             "pull_requests": 0,
-            "contributions": 89
+            "contributions": 92
           }
         ]
       },
@@ -2095,7 +2095,7 @@
         ]
       },
       {
-        "login": "tboltondev",
+        "login": "l3olton",
         "avatar_url": "https://avatars.githubusercontent.com/u/30255942?v=4",
         "commits": 2,
         "pull_requests": 0,
@@ -5396,7 +5396,7 @@
       }
     ],
     "total_pull_requests": 493,
-    "total_commits": 6085,
-    "total_contributions": 6578
+    "total_commits": 6101,
+    "total_contributions": 6594
   }
 }
