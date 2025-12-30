@@ -1,5 +1,20 @@
 [
   {
+    "proposalId": "gov_action15ce4qnwug759939wqv782pvh6qg68khspg8kh02gmex99mcsytwqqqr7jkr",
+    "proposalTxHash": "a633504ddc47a852c4ae033c750597d011a3daf00a0f6bbd48de4c52ef1022dc00",
+    "proposalIndex": 0,
+    "voteTxHash": "75650d4d204df5da20f05df1b7dfcde5c0ce8d297fb1c58fd573dca6e0c0ff33",
+    "blockTime": "2025-12-30T05:52:46.000Z",
+    "vote": "Yes",
+    "metaUrl": "https://most-brass-sun.quicknode-ipfs.com/ipfs/Qmapx4ngpYNDAQEBQR6jePymd3ayBFTiuibziWjuu4z8Pm",
+    "metaHash": "e2239354104a7fd31f631df3b2e61fdd62d0ffb11ae725a3842a41f39479faa1",
+    "proposalTitle": "DeltaDeFi: Hydra Trading Infrastructure Budget (₳1,500,000)",
+    "proposalType": "InfoAction",
+    "proposedEpoch": 603,
+    "expirationEpoch": 610,
+    "rationale": "Please find the detailed rationale in the proposal's metadata."
+  },
+  {
     "proposalId": "gov_action18fd7jwa06fksmwumlcvlft8v4guvaa672qsp6xgenekvs4kmvcqsq8cqks4",
     "proposalTxHash": "3a5be93bafd26d0dbb9bfe19f4acecaa38cef75e50201d19199e6cc856db660100",
     "proposalIndex": 0,
