@@ -8,46 +8,46 @@
     "csl_rs_browser": {
       "downloads": {
         "last_day": 0,
-        "last_week": 904,
-        "last_month": 3602,
-        "last_year": 25971,
-        "last_12_months": 54040
+        "last_week": 521,
+        "last_month": 3164,
+        "last_year": 53358,
+        "last_12_months": 53459
       },
       "latest_version": "0.9.21",
-      "dependents_count": 413303
+      "dependents_count": 414304
     },
     "csl_rs_nodejs": {
       "downloads": {
         "last_day": 0,
-        "last_week": 923,
-        "last_month": 3711,
-        "last_year": 26085,
-        "last_12_months": 54880
+        "last_week": 515,
+        "last_month": 3205,
+        "last_year": 54251,
+        "last_12_months": 54347
       },
       "latest_version": "0.9.21",
-      "dependents_count": 326136
+      "dependents_count": 327034
     },
     "whisky_js_browser": {
       "downloads": {
         "last_day": 0,
-        "last_week": 386,
-        "last_month": 974,
-        "last_year": 0,
-        "last_12_months": 8217
+        "last_week": 46,
+        "last_month": 810,
+        "last_year": 8263,
+        "last_12_months": 8263
       },
       "latest_version": "1.0.17",
-      "dependents_count": 1107090
+      "dependents_count": 1108230
     },
     "whisky_js_nodejs": {
       "downloads": {
         "last_day": 0,
-        "last_week": 390,
-        "last_month": 982,
-        "last_year": 0,
-        "last_12_months": 8190
+        "last_week": 83,
+        "last_month": 854,
+        "last_year": 8269,
+        "last_12_months": 8269
       },
       "latest_version": "1.0.17",
-      "dependents_count": 1038328
+      "dependents_count": 1039247
     }
   },
   "urls": {},
@@ -402,9 +402,9 @@
       {
         "login": "AnsonSIDAN",
         "avatar_url": "https://avatars.githubusercontent.com/u/91122558?v=4",
-        "commits": 341,
-        "pull_requests": 197,
-        "contributions": 538,
+        "commits": 352,
+        "pull_requests": 198,
+        "contributions": 550,
         "repositories": [
           {
             "name": "sidan-gov-discord-bot",
@@ -425,16 +425,16 @@
             "contributions": 62
           },
           {
+            "name": "drep-delegator-feedback-system",
+            "commits": 41,
+            "pull_requests": 10,
+            "contributions": 51
+          },
+          {
             "name": "DRep",
             "commits": 44,
             "pull_requests": 1,
             "contributions": 45
-          },
-          {
-            "name": "drep-delegator-feedback-system",
-            "commits": 30,
-            "pull_requests": 9,
-            "contributions": 39
           },
           {
             "name": "sdks-demo",
@@ -501,15 +501,15 @@
       {
         "login": "github-actions[bot]",
         "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
-        "commits": 342,
+        "commits": 354,
         "pull_requests": 0,
-        "contributions": 342,
+        "contributions": 354,
         "repositories": [
           {
             "name": "DRep",
-            "commits": 342,
+            "commits": 354,
             "pull_requests": 0,
-            "contributions": 342
+            "contributions": 354
           }
         ]
       },
@@ -735,15 +735,15 @@
       {
         "login": "actions-user",
         "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
-        "commits": 92,
+        "commits": 95,
         "pull_requests": 0,
-        "contributions": 92,
+        "contributions": 95,
         "repositories": [
           {
             "name": "DRep",
-            "commits": 92,
+            "commits": 95,
             "pull_requests": 0,
-            "contributions": 92
+            "contributions": 95
           }
         ]
       },
@@ -1065,15 +1065,15 @@
       {
         "login": "leuhk",
         "avatar_url": "https://avatars.githubusercontent.com/u/44567291?v=4",
-        "commits": 15,
-        "pull_requests": 15,
-        "contributions": 30,
+        "commits": 16,
+        "pull_requests": 16,
+        "contributions": 32,
         "repositories": [
           {
             "name": "hibiki",
             "commits": 10,
-            "pull_requests": 10,
-            "contributions": 20
+            "pull_requests": 11,
+            "contributions": 21
           },
           {
             "name": "typescript-sdk",
@@ -1083,9 +1083,9 @@
           },
           {
             "name": "drep-delegator-feedback-system",
-            "commits": 2,
+            "commits": 3,
             "pull_requests": 0,
-            "contributions": 2
+            "contributions": 3
           },
           {
             "name": "go-sdk",
@@ -1416,6 +1416,27 @@
           },
           {
             "name": "cardano-org",
+            "commits": 1,
+            "pull_requests": 0,
+            "contributions": 1
+          }
+        ]
+      },
+      {
+        "login": "awcjack",
+        "avatar_url": "https://avatars.githubusercontent.com/u/17763165?v=4",
+        "commits": 4,
+        "pull_requests": 3,
+        "contributions": 7,
+        "repositories": [
+          {
+            "name": "hibiki",
+            "commits": 3,
+            "pull_requests": 3,
+            "contributions": 6
+          },
+          {
+            "name": "go-sdk",
             "commits": 1,
             "pull_requests": 0,
             "contributions": 1
@@ -2928,21 +2949,6 @@
         "repositories": [
           {
             "name": "cardano-org",
-            "commits": 1,
-            "pull_requests": 0,
-            "contributions": 1
-          }
-        ]
-      },
-      {
-        "login": "awcjack",
-        "avatar_url": "https://avatars.githubusercontent.com/u/17763165?v=4",
-        "commits": 1,
-        "pull_requests": 0,
-        "contributions": 1,
-        "repositories": [
-          {
-            "name": "go-sdk",
             "commits": 1,
             "pull_requests": 0,
             "contributions": 1
@@ -5395,8 +5401,8 @@
         ]
       }
     ],
-    "total_pull_requests": 493,
-    "total_commits": 6101,
-    "total_contributions": 6594
+    "total_pull_requests": 498,
+    "total_commits": 6131,
+    "total_contributions": 6629
   }
 }
