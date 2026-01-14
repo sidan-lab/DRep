@@ -1,0 +1,22 @@
+{
+  "poolId": "pool1wnrrg33lw9fxcn0h3x3vexh78up660ajgk7pvrlrz5kkcgh9khs",
+  "year": 2026,
+  "history": [
+    {
+      "epoch_no": 605,
+      "active_stake": "371479515964",
+      "active_stake_pct": 0.0017364325678869694,
+      "saturation_pct": 0.48,
+      "block_cnt": 0,
+      "delegator_cnt": 60,
+      "margin": 0.03,
+      "fixed_cost": "170000000",
+      "pool_fees": "0",
+      "deleg_rewards": "0",
+      "member_rewards": "0",
+      "epoch_ros": 0
+    }
+  ],
+  "lastUpdated": "2026-01-14T23:08:55.475Z",
+  "currentEpoch": 607
+}
