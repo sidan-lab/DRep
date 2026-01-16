@@ -1,5 +1,20 @@
 [
   {
+    "proposalId": "gov_action1jxne7hynfd7frcczwumd2eggps4kvy0msjztz9t0mutpy870ksgqqp6vp3p",
+    "proposalTxHash": "91a79f5c934b7c91e3027736d565080c2b6611fb8484b1156fdf16121fcfb41000",
+    "proposalIndex": 0,
+    "voteTxHash": "273204f07bf1bc376fc96d05f62100542c6ad937cb3607c381dea6b8e5023dc8",
+    "blockTime": "2026-01-16T06:46:05.000Z",
+    "vote": "Yes",
+    "metaUrl": "https://most-brass-sun.quicknode-ipfs.com/ipfs/Qmbd4RYkm8CXJ5RpkMUoaG6PfgKHYmwJzQDSn3kUJDNgu6",
+    "metaHash": "c1bd131c26ba6e18c039c69396c52d86214a9db7dea06bedcb7ac4cabe139e4a",
+    "proposalTitle": "CARDANO BLOCKCHAIN ECOSYSTEM CONSTITUTION v2.4",
+    "proposalType": "NewConstitution",
+    "proposedEpoch": 601,
+    "expirationEpoch": 608,
+    "rationale": "SIDAN Lab is voting YES on adopting Constitution v2.4 because it improves clarity, enforceability, and governance integrity.\nv2.4 removes non-binding aspirational clauses that are difficult to enforce, adds clearer defined terms, and strengthens trust by requiring proposal documents to be immutable after submission. It also consolidates accountability safeguards into Treasury Withdrawal standards, putting audit/oversight expectations where funds actually move. Finally, it incorporates major stakeholder feedback to preserve broad legitimacy while refining the Constitution based on early governance experience."
+  },
+  {
     "proposalId": "gov_action1m3xx08yv788vfxqh6nfvrjtvmqpwezsy0ggaczctkyjmttc2wmxsq4jsr7q",
     "proposalTxHash": "dc4c679c8cf1cec49817d4d2c1c96cd802ec8a047a11dc0b0bb125b5af0a76cd00",
     "proposalIndex": 0,
