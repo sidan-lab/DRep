@@ -1,13 +1,199 @@
 {
   "year": 2026,
-  "unique_count": 10,
+  "unique_count": 14,
   "contributors": [
+    {
+      "login": "HinsonSIDAN",
+      "avatar_url": "https://avatars.githubusercontent.com/u/90688504?v=4",
+      "commits": 76,
+      "pull_requests": 9,
+      "contributions": 85,
+      "repositories": [
+        {
+          "name": "hydra-issues",
+          "commits": 17,
+          "pull_requests": 0,
+          "contributions": 17,
+          "commit_timestamps": [
+            "2026-01-15T17:00:39Z",
+            "2026-01-15T16:57:03Z",
+            "2026-01-15T06:43:06Z",
+            "2026-01-15T06:07:48Z",
+            "2026-01-13T02:59:51Z",
+            "2026-01-12T14:15:44Z",
+            "2026-01-12T12:38:08Z",
+            "2026-01-12T09:29:17Z",
+            "2026-01-09T10:52:16Z",
+            "2026-01-09T10:21:04Z",
+            "2026-01-08T07:23:28Z",
+            "2026-01-08T03:34:12Z",
+            "2026-01-07T17:15:48Z",
+            "2026-01-07T16:23:55Z",
+            "2026-01-07T16:05:56Z",
+            "2026-01-02T08:24:26Z",
+            "2026-01-02T08:20:11Z"
+          ],
+          "pr_timestamps": [],
+          "organization": "deltadefi-protocol"
+        },
+        {
+          "name": "whisky",
+          "commits": 15,
+          "pull_requests": 0,
+          "contributions": 15,
+          "commit_timestamps": [
+            "2026-01-19T01:10:29Z",
+            "2026-01-19T01:09:01Z",
+            "2026-01-19T01:07:43Z",
+            "2026-01-18T06:37:45Z",
+            "2026-01-18T06:36:00Z",
+            "2026-01-18T06:35:16Z",
+            "2026-01-18T06:02:26Z",
+            "2026-01-17T12:56:10Z",
+            "2026-01-17T12:27:01Z",
+            "2026-01-17T12:15:55Z",
+            "2026-01-17T12:11:37Z",
+            "2026-01-14T07:52:01Z",
+            "2026-01-08T09:33:37Z",
+            "2026-01-07T08:06:05Z",
+            "2026-01-07T07:15:13Z"
+          ],
+          "pr_timestamps": [],
+          "organization": "sidan-lab"
+        },
+        {
+          "name": "hibiki",
+          "commits": 8,
+          "pull_requests": 6,
+          "contributions": 14,
+          "commit_timestamps": [
+            "2026-01-15T11:33:35Z",
+            "2026-01-15T09:17:41Z",
+            "2026-01-15T09:02:09Z",
+            "2026-01-15T08:58:03Z",
+            "2026-01-15T08:55:03Z",
+            "2026-01-15T08:30:16Z",
+            "2026-01-15T08:21:26Z",
+            "2026-01-14T08:13:09Z"
+          ],
+          "pr_timestamps": [
+            "2026-01-15T11:36:43Z",
+            "2026-01-15T11:35:31Z",
+            "2026-01-15T11:34:33Z",
+            "2026-01-15T09:19:19Z",
+            "2026-01-14T08:16:03Z",
+            "2026-01-14T08:15:02Z"
+          ],
+          "organization": "deltadefi-protocol"
+        },
+        {
+          "name": "deltadefi-scripts",
+          "commits": 10,
+          "pull_requests": 3,
+          "contributions": 13,
+          "commit_timestamps": [
+            "2026-01-15T07:46:20Z",
+            "2026-01-15T07:31:47Z",
+            "2026-01-14T03:21:07Z",
+            "2026-01-14T03:19:16Z",
+            "2026-01-13T17:37:43Z",
+            "2026-01-13T17:37:17Z",
+            "2026-01-06T02:45:42Z",
+            "2026-01-05T17:14:31Z",
+            "2026-01-05T17:09:26Z",
+            "2026-01-01T08:04:57Z"
+          ],
+          "pr_timestamps": [
+            "2026-01-15T07:47:37Z",
+            "2026-01-15T07:46:20Z",
+            "2026-01-14T03:19:16Z"
+          ],
+          "organization": "deltadefi-protocol"
+        },
+        {
+          "name": "typescript-sdk",
+          "commits": 9,
+          "pull_requests": 0,
+          "contributions": 9,
+          "commit_timestamps": [
+            "2026-01-13T08:23:08Z",
+            "2026-01-13T08:19:48Z",
+            "2026-01-11T09:46:19Z",
+            "2026-01-11T09:44:47Z",
+            "2026-01-11T08:56:16Z",
+            "2026-01-11T08:51:16Z",
+            "2026-01-11T08:32:11Z",
+            "2026-01-11T07:50:09Z",
+            "2026-01-11T07:47:40Z"
+          ],
+          "pr_timestamps": [],
+          "organization": "deltadefi-protocol"
+        },
+        {
+          "name": "rust-sdk",
+          "commits": 9,
+          "pull_requests": 0,
+          "contributions": 9,
+          "commit_timestamps": [
+            "2026-01-15T09:52:13Z",
+            "2026-01-15T09:50:16Z",
+            "2026-01-14T19:35:35Z",
+            "2026-01-14T19:04:23Z",
+            "2026-01-14T18:57:42Z",
+            "2026-01-11T09:47:56Z",
+            "2026-01-11T09:44:15Z",
+            "2026-01-11T09:30:55Z",
+            "2026-01-11T08:56:13Z"
+          ],
+          "pr_timestamps": [],
+          "organization": "deltadefi-protocol"
+        },
+        {
+          "name": "cardano-bar",
+          "commits": 3,
+          "pull_requests": 0,
+          "contributions": 3,
+          "commit_timestamps": [
+            "2026-01-17T12:37:36Z",
+            "2026-01-17T12:27:07Z",
+            "2026-01-17T08:51:22Z"
+          ],
+          "pr_timestamps": [],
+          "organization": "sidan-lab"
+        },
+        {
+          "name": "python-sdk",
+          "commits": 3,
+          "pull_requests": 0,
+          "contributions": 3,
+          "commit_timestamps": [
+            "2026-01-11T09:46:19Z",
+            "2026-01-11T09:44:33Z",
+            "2026-01-11T08:57:52Z"
+          ],
+          "pr_timestamps": [],
+          "organization": "deltadefi-protocol"
+        },
+        {
+          "name": "go-sdk",
+          "commits": 2,
+          "pull_requests": 0,
+          "contributions": 2,
+          "commit_timestamps": [
+            "2026-01-11T09:44:45Z",
+            "2026-01-11T08:51:01Z"
+          ],
+          "pr_timestamps": [],
+          "organization": "deltadefi-protocol"
+        }
+      ]
+    },
     {
       "login": "twwu123",
       "avatar_url": "https://avatars.githubusercontent.com/u/45336147?v=4",
-      "commits": 31,
+      "commits": 32,
       "pull_requests": 2,
-      "contributions": 33,
+      "contributions": 34,
       "repositories": [
         {
           "name": "whisky",
@@ -52,6 +238,17 @@
             "2026-01-05T15:31:16Z"
           ],
           "organization": "sidan-lab"
+        },
+        {
+          "name": "deltadefi-scripts",
+          "commits": 1,
+          "pull_requests": 0,
+          "contributions": 1,
+          "commit_timestamps": [
+            "2026-01-14T03:03:47Z"
+          ],
+          "pr_timestamps": [],
+          "organization": "deltadefi-protocol"
         }
       ]
     },
@@ -120,115 +317,31 @@
       ]
     },
     {
-      "login": "HinsonSIDAN",
-      "avatar_url": "https://avatars.githubusercontent.com/u/90688504?v=4",
-      "commits": 28,
-      "pull_requests": 0,
-      "contributions": 28,
-      "repositories": [
-        {
-          "name": "hydra-issues",
-          "commits": 9,
-          "pull_requests": 0,
-          "contributions": 9,
-          "commit_timestamps": [
-            "2026-01-09T10:52:16Z",
-            "2026-01-09T10:21:04Z",
-            "2026-01-08T07:23:28Z",
-            "2026-01-08T03:34:12Z",
-            "2026-01-07T17:15:48Z",
-            "2026-01-07T16:23:55Z",
-            "2026-01-07T16:05:56Z",
-            "2026-01-02T08:24:26Z",
-            "2026-01-02T08:20:11Z"
-          ],
-          "pr_timestamps": [],
-          "organization": "deltadefi-protocol"
-        },
-        {
-          "name": "typescript-sdk",
-          "commits": 7,
-          "pull_requests": 0,
-          "contributions": 7,
-          "commit_timestamps": [
-            "2026-01-11T09:46:19Z",
-            "2026-01-11T09:44:47Z",
-            "2026-01-11T08:56:16Z",
-            "2026-01-11T08:51:16Z",
-            "2026-01-11T08:32:11Z",
-            "2026-01-11T07:50:09Z",
-            "2026-01-11T07:47:40Z"
-          ],
-          "pr_timestamps": [],
-          "organization": "deltadefi-protocol"
-        },
-        {
-          "name": "rust-sdk",
-          "commits": 4,
-          "pull_requests": 0,
-          "contributions": 4,
-          "commit_timestamps": [
-            "2026-01-11T09:47:56Z",
-            "2026-01-11T09:44:15Z",
-            "2026-01-11T09:30:55Z",
-            "2026-01-11T08:56:13Z"
-          ],
-          "pr_timestamps": [],
-          "organization": "deltadefi-protocol"
-        },
-        {
-          "name": "whisky",
-          "commits": 3,
-          "pull_requests": 0,
-          "contributions": 3,
-          "commit_timestamps": [
-            "2026-01-08T09:33:37Z",
-            "2026-01-07T08:06:05Z",
-            "2026-01-07T07:15:13Z"
-          ],
-          "pr_timestamps": [],
-          "organization": "sidan-lab"
-        },
-        {
-          "name": "python-sdk",
-          "commits": 3,
-          "pull_requests": 0,
-          "contributions": 3,
-          "commit_timestamps": [
-            "2026-01-11T09:46:19Z",
-            "2026-01-11T09:44:33Z",
-            "2026-01-11T08:57:52Z"
-          ],
-          "pr_timestamps": [],
-          "organization": "deltadefi-protocol"
-        },
-        {
-          "name": "go-sdk",
-          "commits": 2,
-          "pull_requests": 0,
-          "contributions": 2,
-          "commit_timestamps": [
-            "2026-01-11T09:44:45Z",
-            "2026-01-11T08:51:01Z"
-          ],
-          "pr_timestamps": [],
-          "organization": "deltadefi-protocol"
-        }
-      ]
-    },
-    {
       "login": "github-actions[bot]",
       "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
-      "commits": 17,
+      "commits": 30,
       "pull_requests": 0,
-      "contributions": 17,
+      "contributions": 30,
       "repositories": [
         {
           "name": "DRep",
-          "commits": 17,
+          "commits": 30,
           "pull_requests": 0,
-          "contributions": 17,
+          "contributions": 30,
           "commit_timestamps": [
+            "2026-01-18T23:08:57Z",
+            "2026-01-17T23:01:11Z",
+            "2026-01-16T23:01:07Z",
+            "2026-01-16T16:45:25Z",
+            "2026-01-15T23:01:17Z",
+            "2026-01-15T02:29:04Z",
+            "2026-01-15T01:29:49Z",
+            "2026-01-14T23:08:55Z",
+            "2026-01-14T16:47:53Z",
+            "2026-01-13T23:09:32Z",
+            "2026-01-12T23:07:38Z",
+            "2026-01-12T02:35:31Z",
+            "2026-01-12T02:28:17Z",
             "2026-01-11T23:08:25Z",
             "2026-01-10T23:01:10Z",
             "2026-01-09T23:01:11Z",
@@ -253,11 +366,59 @@
       ]
     },
     {
+      "login": "leuhk",
+      "avatar_url": "https://avatars.githubusercontent.com/u/44567291?v=4",
+      "commits": 19,
+      "pull_requests": 0,
+      "contributions": 19,
+      "repositories": [
+        {
+          "name": "deltadefi-docs",
+          "commits": 18,
+          "pull_requests": 0,
+          "contributions": 18,
+          "commit_timestamps": [
+            "2026-01-13T06:34:31Z",
+            "2026-01-13T06:19:13Z",
+            "2026-01-13T05:55:32Z",
+            "2026-01-13T04:30:18Z",
+            "2026-01-13T04:29:40Z",
+            "2026-01-13T04:28:34Z",
+            "2026-01-13T04:27:48Z",
+            "2026-01-13T04:27:45Z",
+            "2026-01-13T04:27:17Z",
+            "2026-01-13T04:23:24Z",
+            "2026-01-13T04:21:52Z",
+            "2026-01-13T04:21:13Z",
+            "2026-01-13T04:18:39Z",
+            "2026-01-13T04:18:05Z",
+            "2026-01-13T04:18:02Z",
+            "2026-01-13T04:17:42Z",
+            "2026-01-13T04:17:20Z",
+            "2026-01-13T04:16:24Z"
+          ],
+          "pr_timestamps": [],
+          "organization": "deltadefi-protocol"
+        },
+        {
+          "name": "hibiki",
+          "commits": 1,
+          "pull_requests": 0,
+          "contributions": 1,
+          "commit_timestamps": [
+            "2026-01-15T11:34:32Z"
+          ],
+          "pr_timestamps": [],
+          "organization": "deltadefi-protocol"
+        }
+      ]
+    },
+    {
       "login": "kenlau666",
       "avatar_url": "https://avatars.githubusercontent.com/u/98103533?v=4",
-      "commits": 6,
+      "commits": 11,
       "pull_requests": 5,
-      "contributions": 11,
+      "contributions": 16,
       "repositories": [
         {
           "name": "hibiki",
@@ -279,6 +440,50 @@
             "2026-01-02T08:56:57Z",
             "2026-01-02T08:55:40Z"
           ],
+          "organization": "deltadefi-protocol"
+        },
+        {
+          "name": "deltadefi-scripts",
+          "commits": 5,
+          "pull_requests": 0,
+          "contributions": 5,
+          "commit_timestamps": [
+            "2026-01-05T07:30:34Z",
+            "2026-01-02T10:42:33Z",
+            "2026-01-02T04:24:15Z",
+            "2026-01-02T03:23:41Z",
+            "2026-01-02T03:05:20Z"
+          ],
+          "pr_timestamps": [],
+          "organization": "deltadefi-protocol"
+        }
+      ]
+    },
+    {
+      "login": "vrom911",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8126674?v=4",
+      "commits": 10,
+      "pull_requests": 0,
+      "contributions": 10,
+      "repositories": [
+        {
+          "name": "hydra",
+          "commits": 10,
+          "pull_requests": 0,
+          "contributions": 10,
+          "commit_timestamps": [
+            "2026-01-13T10:57:32Z",
+            "2026-01-13T10:32:17Z",
+            "2026-01-12T15:15:27Z",
+            "2026-01-12T13:26:54Z",
+            "2026-01-12T08:36:06Z",
+            "2026-01-09T14:58:18Z",
+            "2026-01-09T11:27:05Z",
+            "2026-01-09T11:12:26Z",
+            "2026-01-09T11:09:26Z",
+            "2026-01-07T17:17:23Z"
+          ],
+          "pr_timestamps": [],
           "organization": "deltadefi-protocol"
         }
       ]
@@ -346,18 +551,60 @@
       ]
     },
     {
+      "login": "awcjack",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17763165?v=4",
+      "commits": 6,
+      "pull_requests": 3,
+      "contributions": 9,
+      "repositories": [
+        {
+          "name": "hibiki",
+          "commits": 5,
+          "pull_requests": 3,
+          "contributions": 8,
+          "commit_timestamps": [
+            "2026-01-15T09:19:19Z",
+            "2026-01-14T08:15:02Z",
+            "2026-01-06T06:27:28Z",
+            "2026-01-06T03:47:50Z",
+            "2026-01-02T08:55:40Z"
+          ],
+          "pr_timestamps": [
+            "2026-01-15T09:23:53Z",
+            "2026-01-15T09:20:26Z",
+            "2026-01-06T06:29:11Z"
+          ],
+          "organization": "deltadefi-protocol"
+        },
+        {
+          "name": "hydra",
+          "commits": 1,
+          "pull_requests": 0,
+          "contributions": 1,
+          "commit_timestamps": [
+            "2026-01-06T00:07:23Z"
+          ],
+          "pr_timestamps": [],
+          "organization": "deltadefi-protocol"
+        }
+      ]
+    },
+    {
       "login": "actions-user",
       "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
-      "commits": 4,
+      "commits": 7,
       "pull_requests": 0,
-      "contributions": 4,
+      "contributions": 7,
       "repositories": [
         {
           "name": "DRep",
-          "commits": 4,
+          "commits": 7,
           "pull_requests": 0,
-          "contributions": 4,
+          "contributions": 7,
           "commit_timestamps": [
+            "2026-01-16T02:25:19Z",
+            "2026-01-14T02:32:05Z",
+            "2026-01-12T02:32:43Z",
             "2026-01-09T02:24:33Z",
             "2026-01-07T02:26:19Z",
             "2026-01-05T02:37:21Z",
@@ -369,36 +616,27 @@
       ]
     },
     {
-      "login": "awcjack",
-      "avatar_url": "https://avatars.githubusercontent.com/u/17763165?v=4",
-      "commits": 3,
-      "pull_requests": 1,
-      "contributions": 4,
-      "repositories": [
-        {
-          "name": "hibiki",
-          "commits": 3,
-          "pull_requests": 1,
-          "contributions": 4,
-          "commit_timestamps": [
-            "2026-01-06T06:27:28Z",
-            "2026-01-06T03:47:50Z",
-            "2026-01-02T08:55:40Z"
-          ],
-          "pr_timestamps": [
-            "2026-01-06T06:29:11Z"
-          ],
-          "organization": "deltadefi-protocol"
-        }
-      ]
-    },
-    {
       "login": "DeltaDeFiProtocol",
       "avatar_url": "https://avatars.githubusercontent.com/u/119332329?v=4",
-      "commits": 2,
+      "commits": 7,
       "pull_requests": 0,
-      "contributions": 2,
+      "contributions": 7,
       "repositories": [
+        {
+          "name": "deltadefi-docs",
+          "commits": 5,
+          "pull_requests": 0,
+          "contributions": 5,
+          "commit_timestamps": [
+            "2026-01-14T06:34:50Z",
+            "2026-01-13T06:39:33Z",
+            "2026-01-13T06:17:00Z",
+            "2026-01-13T05:56:27Z",
+            "2026-01-13T03:54:50Z"
+          ],
+          "pr_timestamps": [],
+          "organization": "deltadefi-protocol"
+        },
         {
           "name": "drep-delegator-feedback-system",
           "commits": 2,
@@ -410,6 +648,28 @@
           ],
           "pr_timestamps": [],
           "organization": "sidan-lab"
+        }
+      ]
+    },
+    {
+      "login": "noonio",
+      "avatar_url": "https://avatars.githubusercontent.com/u/170540034?v=4",
+      "commits": 3,
+      "pull_requests": 0,
+      "contributions": 3,
+      "repositories": [
+        {
+          "name": "hydra",
+          "commits": 3,
+          "pull_requests": 0,
+          "contributions": 3,
+          "commit_timestamps": [
+            "2026-01-08T09:19:03Z",
+            "2026-01-08T09:05:58Z",
+            "2026-01-07T16:02:46Z"
+          ],
+          "pr_timestamps": [],
+          "organization": "deltadefi-protocol"
         }
       ]
     },
@@ -432,9 +692,29 @@
           "organization": "sidan-lab"
         }
       ]
+    },
+    {
+      "login": "locallycompact",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1267527?v=4",
+      "commits": 1,
+      "pull_requests": 0,
+      "contributions": 1,
+      "repositories": [
+        {
+          "name": "hydra",
+          "commits": 1,
+          "pull_requests": 0,
+          "contributions": 1,
+          "commit_timestamps": [
+            "2026-01-08T18:34:51Z"
+          ],
+          "pr_timestamps": [],
+          "organization": "deltadefi-protocol"
+        }
+      ]
     }
   ],
-  "total_pull_requests": 16,
-  "total_commits": 126,
-  "total_contributions": 142
+  "total_pull_requests": 27,
+  "total_commits": 237,
+  "total_contributions": 264
 }
