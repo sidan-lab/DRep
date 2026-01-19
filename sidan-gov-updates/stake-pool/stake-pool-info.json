@@ -55,15 +55,15 @@
     "retiring_epoch": null,
     "op_cert": "555b8725cca328105a5d033a626293501f165695854b0a1e4db1301a4fdc45a1",
     "op_cert_counter": 6,
-    "active_stake": "521079864936",
-    "sigma": 0.000024343848187878664,
+    "active_stake": "521226691911",
+    "sigma": 0.000024296352978505195,
     "block_count": 252,
     "live_pledge": "5379632234",
-    "live_stake": "598788942674",
+    "live_stake": "598788775061",
     "live_delegators": 60,
     "live_saturation": 0.78,
-    "voting_power": "621226691911"
+    "voting_power": "698788775061"
   },
-  "lastUpdated": "2026-01-18T23:08:57.120Z",
-  "currentEpoch": 607
+  "lastUpdated": "2026-01-19T23:09:04.739Z",
+  "currentEpoch": 608
 }
