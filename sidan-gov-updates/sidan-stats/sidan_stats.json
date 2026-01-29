@@ -8,46 +8,46 @@
     "csl_rs_browser": {
       "downloads": {
         "last_day": 0,
-        "last_week": 683,
+        "last_week": 623,
         "last_month": 3344,
         "last_year": 53538,
-        "last_12_months": 52834
+        "last_12_months": 52273
       },
       "latest_version": "0.9.21",
-      "dependents_count": 419615
+      "dependents_count": 421595
     },
     "csl_rs_nodejs": {
       "downloads": {
         "last_day": 0,
-        "last_week": 769,
+        "last_week": 690,
         "last_month": 3394,
         "last_year": 54440,
-        "last_12_months": 53803
+        "last_12_months": 53279
       },
       "latest_version": "0.9.21",
-      "dependents_count": 331290
+      "dependents_count": 332898
     },
     "whisky_js_browser": {
       "downloads": {
         "last_day": 0,
-        "last_week": 299,
+        "last_week": 701,
         "last_month": 824,
         "last_year": 8277,
-        "last_12_months": 9217
+        "last_12_months": 9741
       },
-      "latest_version": "1.0.23",
-      "dependents_count": 1115062
+      "latest_version": "1.0.24",
+      "dependents_count": 1118026
     },
     "whisky_js_nodejs": {
       "downloads": {
         "last_day": 0,
-        "last_week": 307,
+        "last_week": 702,
         "last_month": 869,
         "last_year": 8284,
-        "last_12_months": 9228
+        "last_12_months": 9743
       },
-      "latest_version": "1.0.23",
-      "dependents_count": 1045281
+      "latest_version": "1.0.24",
+      "dependents_count": 1047917
     }
   },
   "urls": {},
@@ -114,9 +114,9 @@
       {
         "login": "HinsonSIDAN",
         "avatar_url": "https://avatars.githubusercontent.com/u/90688504?v=4",
-        "commits": 1567,
+        "commits": 1570,
         "pull_requests": 139,
-        "contributions": 1706,
+        "contributions": 1709,
         "repositories": [
           {
             "name": "whisky-archive",
@@ -126,15 +126,15 @@
           },
           {
             "name": "whisky",
-            "commits": 318,
+            "commits": 320,
             "pull_requests": 5,
-            "contributions": 323
+            "contributions": 325
           },
           {
             "name": "deltadefi-scripts",
-            "commits": 143,
+            "commits": 144,
             "pull_requests": 3,
-            "contributions": 146
+            "contributions": 147
           },
           {
             "name": "vodka",
@@ -450,15 +450,15 @@
       {
         "login": "twwu123",
         "avatar_url": "https://avatars.githubusercontent.com/u/45336147?v=4",
-        "commits": 653,
-        "pull_requests": 49,
-        "contributions": 702,
+        "commits": 656,
+        "pull_requests": 50,
+        "contributions": 706,
         "repositories": [
           {
             "name": "whisky",
-            "commits": 343,
-            "pull_requests": 3,
-            "contributions": 346
+            "commits": 346,
+            "pull_requests": 4,
+            "contributions": 350
           },
           {
             "name": "whisky-archive",
@@ -636,15 +636,15 @@
       {
         "login": "github-actions[bot]",
         "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
-        "commits": 389,
+        "commits": 400,
         "pull_requests": 0,
-        "contributions": 389,
+        "contributions": 400,
         "repositories": [
           {
             "name": "DRep",
-            "commits": 389,
+            "commits": 400,
             "pull_requests": 0,
-            "contributions": 389
+            "contributions": 400
           }
         ]
       },
@@ -672,9 +672,9 @@
       {
         "login": "kenlau666",
         "avatar_url": "https://avatars.githubusercontent.com/u/98103533?v=4",
-        "commits": 243,
-        "pull_requests": 42,
-        "contributions": 285,
+        "commits": 257,
+        "pull_requests": 48,
+        "contributions": 305,
         "repositories": [
           {
             "name": "cardano-open-bounty",
@@ -690,21 +690,21 @@
           },
           {
             "name": "hibiki",
-            "commits": 13,
-            "pull_requests": 14,
-            "contributions": 27
+            "commits": 17,
+            "pull_requests": 17,
+            "contributions": 34
+          },
+          {
+            "name": "deltadefi-scripts",
+            "commits": 24,
+            "pull_requests": 2,
+            "contributions": 26
           },
           {
             "name": "khor",
             "commits": 15,
             "pull_requests": 2,
             "contributions": 17
-          },
-          {
-            "name": "deltadefi-scripts",
-            "commits": 16,
-            "pull_requests": 0,
-            "contributions": 16
           },
           {
             "name": "go-sdk",
@@ -747,6 +747,12 @@
             "commits": 6,
             "pull_requests": 1,
             "contributions": 7
+          },
+          {
+            "name": "rum",
+            "commits": 2,
+            "pull_requests": 1,
+            "contributions": 3
           },
           {
             "name": "drep-delegator-feedback-system",
@@ -885,15 +891,15 @@
       {
         "login": "actions-user",
         "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
-        "commits": 104,
+        "commits": 107,
         "pull_requests": 0,
-        "contributions": 104,
+        "contributions": 107,
         "repositories": [
           {
             "name": "DRep",
-            "commits": 104,
+            "commits": 107,
             "pull_requests": 0,
-            "contributions": 104
+            "contributions": 107
           }
         ]
       },
@@ -1050,15 +1056,15 @@
       {
         "login": "DeltaDeFiProtocol",
         "avatar_url": "https://avatars.githubusercontent.com/u/119332329?v=4",
-        "commits": 53,
+        "commits": 56,
         "pull_requests": 2,
-        "contributions": 55,
+        "contributions": 58,
         "repositories": [
           {
             "name": "deltadefi-docs",
-            "commits": 43,
+            "commits": 46,
             "pull_requests": 0,
-            "contributions": 43
+            "contributions": 46
           },
           {
             "name": "DRep",
@@ -1107,15 +1113,15 @@
       {
         "login": "leuhk",
         "avatar_url": "https://avatars.githubusercontent.com/u/44567291?v=4",
-        "commits": 35,
-        "pull_requests": 16,
-        "contributions": 51,
+        "commits": 36,
+        "pull_requests": 19,
+        "contributions": 55,
         "repositories": [
           {
             "name": "hibiki",
             "commits": 11,
-            "pull_requests": 11,
-            "contributions": 22
+            "pull_requests": 12,
+            "contributions": 23
           },
           {
             "name": "deltadefi-docs",
@@ -1133,6 +1139,12 @@
             "name": "drep-delegator-feedback-system",
             "commits": 3,
             "pull_requests": 0,
+            "contributions": 3
+          },
+          {
+            "name": "deltadefi-scripts",
+            "commits": 1,
+            "pull_requests": 2,
             "contributions": 3
           },
           {
@@ -6163,8 +6175,8 @@
         ]
       }
     ],
-    "total_pull_requests": 526,
-    "total_commits": 18496,
-    "total_contributions": 19022
+    "total_pull_requests": 536,
+    "total_commits": 18534,
+    "total_contributions": 19070
   }
 }
