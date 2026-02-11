@@ -1,5 +1,20 @@
 [
   {
+    "proposalId": "gov_action1cgdsp7g0rr7wgqp7maptpvx525fxuqwfgm5qe3f5r20ew5x2772sq0m5y83",
+    "proposalTxHash": "c21b00f90f18fce4003edf42b0b0d455126e01c946e80cc5341a9f9750caf79500",
+    "proposalIndex": 0,
+    "voteTxHash": "9cbefd76057957444974b695825a30afeef7450171e7e5f5a1401ddbb64b87ed",
+    "blockTime": "2026-02-11T03:04:56.000Z",
+    "vote": "No",
+    "metaUrl": "https://raw.githubusercontent.com/sidan-lab/DRep/refs/heads/main/voting-history/ga84/rationale.jsonld",
+    "metaHash": "59df20bc9b73910486f23d238a3dd1e3eaaece4357127635d89d93ad053b4407",
+    "proposalTitle": "Increase Transaction and Block Memory Units (Part 1 of 2)",
+    "proposalType": "ParameterChange",
+    "proposedEpoch": 606,
+    "expirationEpoch": 613,
+    "rationale": "Generally if someone reaches the current limits, there are workarounds and improvements that can be made to stay within the limits. More efficient code or tricks to make on-chain computation less intensive. Relaxing the computation limits reduces this incentive. It doesn't feel like a 25% increase enables anything that wasn't previously possible."
+  },
+  {
     "proposalId": "gov_action1jxne7hynfd7frcczwumd2eggps4kvy0msjztz9t0mutpy870ksgqqp6vp3p",
     "proposalTxHash": "91a79f5c934b7c91e3027736d565080c2b6611fb8484b1156fdf16121fcfb41000",
     "proposalIndex": 0,
