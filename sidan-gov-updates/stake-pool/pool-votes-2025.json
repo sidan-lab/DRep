@@ -11,10 +11,10 @@
       "vote": "Yes",
       "metaUrl": null,
       "metaHash": null,
-      "proposalTitle": "Unknown Proposal",
-      "proposalType": "Unknown",
-      "proposedEpoch": "N/A",
-      "expirationEpoch": "N/A",
+      "proposalTitle": "Replace Interim Constitutional Committee",
+      "proposalType": "NewCommittee",
+      "proposedEpoch": 573,
+      "expirationEpoch": 580,
       "rationale": "No rationale available"
     },
     {
@@ -26,14 +26,14 @@
       "vote": "Yes",
       "metaUrl": null,
       "metaHash": null,
-      "proposalTitle": "Unknown Proposal",
-      "proposalType": "Unknown",
-      "proposedEpoch": "N/A",
-      "expirationEpoch": "N/A",
+      "proposalTitle": "Hard Fork to Protocol Version 10 (\"Plomin\" Hard Fork)",
+      "proposalType": "HardForkInitiation",
+      "proposedEpoch": 529,
+      "expirationEpoch": 536,
       "rationale": "No rationale available"
     }
   ],
   "voteCount": 2,
-  "lastUpdated": "2026-02-20T23:16:25.808Z",
-  "currentEpoch": 0
+  "lastUpdated": "2026-02-21T23:11:56.260Z",
+  "currentEpoch": 614
 }
