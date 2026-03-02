@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-27T02:47:40.451Z",
+  "timestamp": "2026-03-02T02:51:46.843Z",
   "projects": [
     {
       "projectDetails": {
@@ -297,7 +297,7 @@
         "title": "Waffle | SIDAN - Hong Kong Cardano Community",
         "budget": 100000,
         "milestones_qty": 4,
-        "funds_distributed": 85000,
+        "funds_distributed": 100000,
         "project_id": 1200244,
         "challenges": {
           "id": 28,
