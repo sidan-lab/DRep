@@ -1,5 +1,35 @@
 [
   {
+    "proposalId": "gov_action19uhuy5uame2s60yrh6n8cyds8ps5q7tkh05dqlzmpcfy429p9w4qq5ll3g0",
+    "proposalTxHash": "2f2fc2539dde550d3c83bea67c11b03861407976bbe8d07c5b0e124aa8a12baa00",
+    "proposalIndex": 0,
+    "voteTxHash": "b11a64489fa627e2c3609fa44e1189089b1615694e9ddfa478c6c1396975f2b3",
+    "blockTime": "2026-03-06T09:39:27.000Z",
+    "vote": "Yes",
+    "metaUrl": null,
+    "metaHash": null,
+    "proposalTitle": "Amaru Treasury Withdrawal 2026",
+    "proposalType": "TreasuryWithdrawals",
+    "proposedEpoch": 614,
+    "expirationEpoch": 621,
+    "rationale": "No rationale available"
+  },
+  {
+    "proposalId": "gov_action1wwjwkg2g0qwr0mehey9r8gwn6qz3r28wl6wdl2s75kfmpy8j87tqqtft9tp",
+    "proposalTxHash": "73a4eb2148781c37ef37c90a33a1d3d00511a8eefe9cdfaa1ea593b090f23f9600",
+    "proposalIndex": 0,
+    "voteTxHash": "24d1dae271daad1267797e5cb9f28276dea2b83eaf4d7aefee18bf383b7f9530",
+    "blockTime": "2026-03-06T09:30:46.000Z",
+    "vote": "Yes",
+    "metaUrl": null,
+    "metaHash": null,
+    "proposalTitle": "Net Change Limit of 300 Million ADA for Epochs 613–713",
+    "proposalType": "InfoAction",
+    "proposedEpoch": 611,
+    "expirationEpoch": 618,
+    "rationale": "No rationale available"
+  },
+  {
     "proposalId": "gov_action1cgdsp7g0rr7wgqp7maptpvx525fxuqwfgm5qe3f5r20ew5x2772sq0m5y83",
     "proposalTxHash": "c21b00f90f18fce4003edf42b0b0d455126e01c946e80cc5341a9f9750caf79500",
     "proposalIndex": 0,
