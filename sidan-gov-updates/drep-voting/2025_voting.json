@@ -8,10 +8,10 @@
     "vote": "Yes",
     "metaUrl": "https://most-brass-sun.quicknode-ipfs.com/ipfs/Qmapx4ngpYNDAQEBQR6jePymd3ayBFTiuibziWjuu4z8Pm",
     "metaHash": "e2239354104a7fd31f631df3b2e61fdd62d0ffb11ae725a3842a41f39479faa1",
-    "proposalTitle": "Unknown Proposal",
-    "proposalType": "Unknown",
-    "proposedEpoch": "N/A",
-    "expirationEpoch": "N/A",
+    "proposalTitle": "DeltaDeFi: Hydra Trading Infrastructure Budget (₳1,500,000)",
+    "proposalType": "InfoAction",
+    "proposedEpoch": 603,
+    "expirationEpoch": 610,
     "rationale": "Please find the detailed rationale in the proposal's metadata."
   },
   {
@@ -23,10 +23,10 @@
     "vote": "Yes",
     "metaUrl": "https://raw.githubusercontent.com/sidan-lab/DRep/refs/heads/main/voting-history/ga81/rationale.jsonld",
     "metaHash": "df972c8de1542aba7c0479ce6760b67bfdfbe69ed6711a7c7400a8b18c766297",
-    "proposalTitle": "Unknown Proposal",
-    "proposalType": "Unknown",
-    "proposedEpoch": "N/A",
-    "expirationEpoch": "N/A",
+    "proposalTitle": "Cardano 2030: Vision, Mission, Strategy Framework and KPIs",
+    "proposalType": "InfoAction",
+    "proposedEpoch": 601,
+    "expirationEpoch": 608,
     "rationale": "We have attended the workshops and discussed with various community members. After careful consideration, we decided to vote yes for the proposal as we believe the KPIs specified are the key metrics for measuring the success of Cardano in upcoming years."
   },
   {
@@ -38,10 +38,10 @@
     "vote": "Yes",
     "metaUrl": null,
     "metaHash": null,
-    "proposalTitle": "Unknown Proposal",
-    "proposalType": "Unknown",
-    "proposedEpoch": "N/A",
-    "expirationEpoch": "N/A",
+    "proposalTitle": "Add Constitutional Committee Member",
+    "proposalType": "NewCommittee",
+    "proposedEpoch": 599,
+    "expirationEpoch": 606,
     "rationale": "No rationale available"
   },
   {
@@ -53,10 +53,10 @@
     "vote": "Yes",
     "metaUrl": null,
     "metaHash": null,
-    "proposalTitle": "Unknown Proposal",
-    "proposalType": "Unknown",
-    "proposedEpoch": "N/A",
-    "expirationEpoch": "N/A",
+    "proposalTitle": "2025 Net Change Limit Extension",
+    "proposalType": "InfoAction",
+    "proposedEpoch": 597,
+    "expirationEpoch": 604,
     "rationale": "No rationale available"
   },
   {
@@ -68,10 +68,10 @@
     "vote": "Yes",
     "metaUrl": null,
     "metaHash": null,
-    "proposalTitle": "Unknown Proposal",
-    "proposalType": "Unknown",
-    "proposedEpoch": "N/A",
-    "expirationEpoch": "N/A",
+    "proposalTitle": "Cardano Critical Integrations Budget",
+    "proposalType": "InfoAction",
+    "proposedEpoch": 597,
+    "expirationEpoch": 604,
     "rationale": "No rationale available"
   },
   {
@@ -83,10 +83,10 @@
     "vote": "Yes",
     "metaUrl": null,
     "metaHash": null,
-    "proposalTitle": "Unknown Proposal",
-    "proposalType": "Unknown",
-    "proposedEpoch": "N/A",
-    "expirationEpoch": "N/A",
+    "proposalTitle": "CARDANO BLOCKCHAIN ECOSYSTEM CONSTITUTION v2.3",
+    "proposalType": "NewConstitution",
+    "proposedEpoch": 586,
+    "expirationEpoch": 593,
     "rationale": "No rationale available"
   },
   {
@@ -98,10 +98,10 @@
     "vote": "Abstain",
     "metaUrl": null,
     "metaHash": null,
-    "proposalTitle": "Unknown Proposal",
-    "proposalType": "Unknown",
-    "proposedEpoch": "N/A",
-    "expirationEpoch": "N/A",
+    "proposalTitle": "Withdraw ₳1,150,000 for GovTool 12 months active maintenance and development",
+    "proposalType": "TreasuryWithdrawals",
+    "proposedEpoch": 584,
+    "expirationEpoch": 591,
     "rationale": "No rationale available"
   },
   {
@@ -113,10 +113,10 @@
     "vote": "No",
     "metaUrl": "ipfs://Qmf5fH2NLv1cVLEgbKDAHN881uL6je3zANgdjvk1EYaVF8",
     "metaHash": "4ee054959e2adfc688df0d6ba02efc292cc7971e8cc0600cd58db7737f20a022",
-    "proposalTitle": "Unknown Proposal",
-    "proposalType": "Unknown",
-    "proposedEpoch": "N/A",
-    "expirationEpoch": "N/A",
+    "proposalTitle": "Defining the Cardano 2030 Vision & Strategy",
+    "proposalType": "InfoAction",
+    "proposedEpoch": 583,
+    "expirationEpoch": 590,
     "rationale": "No rationale available"
   },
   {
@@ -128,10 +128,10 @@
     "vote": "Yes",
     "metaUrl": "ipfs://QmV3TsB3Xe5bDaCoiBtxnScHdhPzip1KjaHhsorfRtXMkz",
     "metaHash": "8a564db998fc5848908a7494c65b0f12b33656dd71a6a241c2154b8582498345",
-    "proposalTitle": "Unknown Proposal",
-    "proposalType": "Unknown",
-    "proposedEpoch": "N/A",
-    "expirationEpoch": "N/A",
+    "proposalTitle": "Stablecoin DeFi Liquidity Budget",
+    "proposalType": "InfoAction",
+    "proposedEpoch": 582,
+    "expirationEpoch": 589,
     "rationale": "No rationale available"
   },
   {
@@ -143,10 +143,10 @@
     "vote": "Yes",
     "metaUrl": null,
     "metaHash": null,
-    "proposalTitle": "Unknown Proposal",
-    "proposalType": "Unknown",
-    "proposedEpoch": "N/A",
-    "expirationEpoch": "N/A",
+    "proposalTitle": "Stablecoin DeFi Liquidity Budget",
+    "proposalType": "InfoAction",
+    "proposedEpoch": 582,
+    "expirationEpoch": 589,
     "rationale": "No rationale available"
   },
   {
@@ -158,10 +158,10 @@
     "vote": "No",
     "metaUrl": null,
     "metaHash": null,
-    "proposalTitle": "Unknown Proposal",
-    "proposalType": "Unknown",
-    "proposedEpoch": "N/A",
-    "expirationEpoch": "N/A",
+    "proposalTitle": "Cardano in Oceania: A community-led strategic plan for investing in growth.",
+    "proposalType": "InfoAction",
+    "proposedEpoch": 579,
+    "expirationEpoch": 586,
     "rationale": "No rationale available"
   },
   {
@@ -173,10 +173,10 @@
     "vote": "Abstain",
     "metaUrl": "ipfs://QmNkaqcA1o36RaYki4nzn1cHEkGe9gEVc6ckpFivEckdCG",
     "metaHash": "b8eedcfb2b9a7a68eb80839828b3d8d0452ca4934d4fdd7f950a133c6b5617b1",
-    "proposalTitle": "Unknown Proposal",
-    "proposalType": "Unknown",
-    "proposedEpoch": "N/A",
-    "expirationEpoch": "N/A",
+    "proposalTitle": "Budget: ₳5M Loan for Cardano's Global Listing Expansion - Powered by Snek",
+    "proposalType": "InfoAction",
+    "proposedEpoch": 580,
+    "expirationEpoch": 587,
     "rationale": "No rationale available"
   },
   {
@@ -188,10 +188,10 @@
     "vote": "Yes",
     "metaUrl": null,
     "metaHash": null,
-    "proposalTitle": "Unknown Proposal",
-    "proposalType": "Unknown",
-    "proposedEpoch": "N/A",
-    "expirationEpoch": "N/A",
+    "proposalTitle": "CARDANO BLOCKCHAIN ECOSYSTEM CONSTITUTION v2.0",
+    "proposalType": "NewConstitution",
+    "proposedEpoch": 574,
+    "expirationEpoch": 581,
     "rationale": "No rationale available"
   },
   {
@@ -203,10 +203,10 @@
     "vote": "Yes",
     "metaUrl": "ipfs://QmPkMuNRJ3ppL7rgo5Aod7C4Gk9eZKFkiJx4ysj9jfgFjM",
     "metaHash": "6042f54ad2e249887288a3a986e62bf3b2e3a64f88a4643cc476be5aecad56bd",
-    "proposalTitle": "Unknown Proposal",
-    "proposalType": "Unknown",
-    "proposedEpoch": "N/A",
-    "expirationEpoch": "N/A",
+    "proposalTitle": "Withdraw ₳750,000 for Cardano Product Committee: Community-driven 2030 Carda...",
+    "proposalType": "TreasuryWithdrawals",
+    "proposedEpoch": 570,
+    "expirationEpoch": 577,
     "rationale": "No rationale available"
   },
   {
@@ -218,10 +218,10 @@
     "vote": "Yes",
     "metaUrl": null,
     "metaHash": null,
-    "proposalTitle": "Unknown Proposal",
-    "proposalType": "Unknown",
-    "proposedEpoch": "N/A",
-    "expirationEpoch": "N/A",
+    "proposalTitle": "Replace Interim Constitutional Committee",
+    "proposalType": "NewCommittee",
+    "proposedEpoch": 573,
+    "expirationEpoch": 580,
     "rationale": "No rationale available"
   },
   {
@@ -233,10 +233,10 @@
     "vote": "No",
     "metaUrl": null,
     "metaHash": null,
-    "proposalTitle": "Unknown Proposal",
-    "proposalType": "Unknown",
-    "proposedEpoch": "N/A",
-    "expirationEpoch": "N/A",
+    "proposalTitle": "Cardano Global Listing Expansion - Powered by Snek",
+    "proposalType": "TreasuryWithdrawals",
+    "proposedEpoch": 573,
+    "expirationEpoch": 580,
     "rationale": "No rationale available"
   },
   {
@@ -248,10 +248,10 @@
     "vote": "No",
     "metaUrl": null,
     "metaHash": null,
-    "proposalTitle": "Unknown Proposal",
-    "proposalType": "Unknown",
-    "proposedEpoch": "N/A",
-    "expirationEpoch": "N/A",
+    "proposalTitle": "Withdraw ₳5M for Cardano's Global Listing Expansion - Powered by Snek",
+    "proposalType": "TreasuryWithdrawals",
+    "proposedEpoch": 573,
+    "expirationEpoch": 580,
     "rationale": "No rationale available"
   },
   {
@@ -263,10 +263,10 @@
     "vote": "No",
     "metaUrl": null,
     "metaHash": null,
-    "proposalTitle": "Unknown Proposal",
-    "proposalType": "Unknown",
-    "proposedEpoch": "N/A",
-    "expirationEpoch": "N/A",
+    "proposalTitle": "Withdraw ₳750,000 for Cardano Product Committee: Community-driven 2030 Carda...",
+    "proposalType": "TreasuryWithdrawals",
+    "proposedEpoch": 570,
+    "expirationEpoch": 577,
     "rationale": "No rationale available"
   },
   {
@@ -278,10 +278,10 @@
     "vote": "No",
     "metaUrl": null,
     "metaHash": null,
-    "proposalTitle": "Unknown Proposal",
-    "proposalType": "Unknown",
-    "proposedEpoch": "N/A",
-    "expirationEpoch": "N/A",
+    "proposalTitle": "Withdraw ₳3,000,000 for High-yield RWA Asset for Cardano: Tokenized Real Estate",
+    "proposalType": "TreasuryWithdrawals",
+    "proposedEpoch": 570,
+    "expirationEpoch": 577,
     "rationale": "No rationale available"
   },
   {
@@ -293,10 +293,10 @@
     "vote": "No",
     "metaUrl": null,
     "metaHash": null,
-    "proposalTitle": "Unknown Proposal",
-    "proposalType": "Unknown",
-    "proposedEpoch": "N/A",
-    "expirationEpoch": "N/A",
+    "proposalTitle": "Withdraw ₳889,500 for Cardano Ecosystem Pavilions at Exhibitions",
+    "proposalType": "TreasuryWithdrawals",
+    "proposedEpoch": 570,
+    "expirationEpoch": 577,
     "rationale": "No rationale available"
   },
   {
@@ -308,10 +308,10 @@
     "vote": "Yes",
     "metaUrl": "ipfs://QmemRWDe4r2PeQ1oEhLdm6xzzqNbVSZqoVJZoMht848Wvp",
     "metaHash": "338bffbea60aef83beacfbea5f146c8dba4b419dfd35ce522fce44b01eacece9",
-    "proposalTitle": "Unknown Proposal",
-    "proposalType": "Unknown",
-    "proposedEpoch": "N/A",
-    "expirationEpoch": "N/A",
+    "proposalTitle": "Withdraw ₳3,126,000 for Ecosystem Exchange Listing and Market Making service...",
+    "proposalType": "TreasuryWithdrawals",
+    "proposedEpoch": 570,
+    "expirationEpoch": 577,
     "rationale": "No rationale available"
   },
   {
@@ -323,10 +323,10 @@
     "vote": "No",
     "metaUrl": null,
     "metaHash": null,
-    "proposalTitle": "Unknown Proposal",
-    "proposalType": "Unknown",
-    "proposedEpoch": "N/A",
-    "expirationEpoch": "N/A",
+    "proposalTitle": "Withdraw ₳592,780 for Beyond Minimum Viable Governance: Iteratively Improvin....",
+    "proposalType": "TreasuryWithdrawals",
+    "proposedEpoch": 570,
+    "expirationEpoch": 577,
     "rationale": "No rationale available"
   },
   {
@@ -338,10 +338,10 @@
     "vote": "Yes",
     "metaUrl": "ipfs://QmcWd8znqZh2kPBk33isgWLq76D3f2QcLEwhRKJPCTMBiX",
     "metaHash": "98151a826ce4ef4ea505eb6ec4f8442d39ab2dcc53c4b178c3aecda351a24981",
-    "proposalTitle": "Unknown Proposal",
-    "proposalType": "Unknown",
-    "proposedEpoch": "N/A",
-    "expirationEpoch": "N/A",
+    "proposalTitle": "Withdraw ₳12,000,000 for Cardano Builder DAO administered by Intersect",
+    "proposalType": "TreasuryWithdrawals",
+    "proposedEpoch": 570,
+    "expirationEpoch": 577,
     "rationale": "No rationale available"
   },
   {
@@ -353,10 +353,10 @@
     "vote": "Yes",
     "metaUrl": "ipfs://bafkreieanomlr5im3xm7okq2ijjcznhwejlaji53cmtunotp2ufx7pefku",
     "metaHash": "8ca19a14557f10cf8b9d3dab78e8851455d42515a3968ce9e045cfb306edc400",
-    "proposalTitle": "Unknown Proposal",
-    "proposalType": "Unknown",
-    "proposedEpoch": "N/A",
-    "expirationEpoch": "N/A",
+    "proposalTitle": "Withdraw ₳1,500,000 for Complement Catalyst: Extended Quadratic Funding---Zer...",
+    "proposalType": "TreasuryWithdrawals",
+    "proposedEpoch": 570,
+    "expirationEpoch": 577,
     "rationale": "No rationale available"
   },
   {
@@ -368,10 +368,10 @@
     "vote": "No",
     "metaUrl": null,
     "metaHash": null,
-    "proposalTitle": "Unknown Proposal",
-    "proposalType": "Unknown",
-    "proposedEpoch": "N/A",
-    "expirationEpoch": "N/A",
+    "proposalTitle": "Withdraw ₳605,000 for A free Native Asset CDN for Cardano Developers",
+    "proposalType": "TreasuryWithdrawals",
+    "proposedEpoch": 570,
+    "expirationEpoch": 577,
     "rationale": "No rationale available"
   },
   {
@@ -383,10 +383,10 @@
     "vote": "Yes",
     "metaUrl": "ipfs://QmdEXsfBYfs2FyxYLad981grnWNv5U5n9C71Gc4Ho7pkkp",
     "metaHash": "a773515d4921a81844686df74f304b97f1df674a2a1dbe819ca4e9fe44a1ab58",
-    "proposalTitle": "Unknown Proposal",
-    "proposalType": "Unknown",
-    "proposedEpoch": "N/A",
-    "expirationEpoch": "N/A",
+    "proposalTitle": "Withdraw ₳6,000,000 for Unveiling the First Unified Global Events Marketing S...",
+    "proposalType": "TreasuryWithdrawals",
+    "proposedEpoch": 570,
+    "expirationEpoch": 577,
     "rationale": "No rationale available"
   },
   {
@@ -398,10 +398,10 @@
     "vote": "Yes",
     "metaUrl": "https://most-brass-sun.quicknode-ipfs.com/ipfs/QmVq1agjj9RhQXUqDTKF36uXi3pvx8FFoJJp64ubZss4vH",
     "metaHash": "95d42117984a1ef481e2cbdf136ec197f3a0bc4ba11fc3df76e164ed0acfab29",
-    "proposalTitle": "Unknown Proposal",
-    "proposalType": "Unknown",
-    "proposedEpoch": "N/A",
-    "expirationEpoch": "N/A",
+    "proposalTitle": "Amaru Treasury Withdrawal 2025",
+    "proposalType": "TreasuryWithdrawals",
+    "proposedEpoch": 566,
+    "expirationEpoch": 573,
     "rationale": "We have already addressed the decision of voting YES on this governance action. Reciting the rationale here: We support this proposal as it directly addresses a long-standing risk in the ecosystem — reliance on a single node implementation — by funding the development of a modular, high-performance alternative written in Rust. \n\nWe believe a second, independently maintained node:\n- Strengthens the resilience and fault tolerance of the network\n- Expands developer accessibility through modern tooling and better observability\n- Enables platform interoperability with WebAssembly\n- Empower Cardano core infrastructure to access to wider talent pool with alternative implementation of a more modern programming language\n\nWe also appreciate the proposal’s financial transparency:\n- Clearly scoped per team member and responsibility\n- Budget guarded by a smart contract with refund logic\n- Quarterly public reporting and demo cadence already in practice\n\nSIDAN Lab is also interested in the possibility of expanding works into alternative Hydra node, where our team can participate in maintenance and collaboration in the future.\n\nFor these reasons, SIDAN Lab votes YES."
   },
   {
@@ -413,10 +413,10 @@
     "vote": "No",
     "metaUrl": "https://most-brass-sun.quicknode-ipfs.com/ipfs/QmNY29VNnfuwNKitpjr4wfDFNDdWpYnyP1mHqgLmEGexLr",
     "metaHash": "bc924b4c2d2f06fdc7daf536af1ef3075d2dbee7dfe4c37c333f866335d228af",
-    "proposalTitle": "Unknown Proposal",
-    "proposalType": "Unknown",
-    "proposedEpoch": "N/A",
-    "expirationEpoch": "N/A",
+    "proposalTitle": "Cardano Blockchain Ecosystem Budget - 275M ada Administered by Intersect",
+    "proposalType": "InfoAction",
+    "proposedEpoch": 557,
+    "expirationEpoch": 564,
     "rationale": "SIDAN Lab is voting NO on governance action “Cardano Blockchain Ecosystem Budget - 275M ada Administered by Intersect”\n\n- **Too large and bundled**\n\n39 proposals combined in one GA limits DRep discretion. We support some, not all.\n\n- **Sets risky precedent**\n\nApproving this signals that we’re comfortable with large, bundled budgets before proving the effectiveness of constitutional governance. DReps may have supported it to avoid blocking the budgeting process, rather than out of genuine support for a high spending limit.\n\nWe acknowledge the efforts Intersect has made and recognize its role within the ecosystem. However, based on past performance, there remain areas where execution has not fully aligned with community expectations. While we believe Intersect is continuing to grow in capacity and experience, we have reservations about its current readiness to administer a budget of this size and complexity effectively."
   },
   {
@@ -428,10 +428,10 @@
     "vote": "No",
     "metaUrl": "https://most-brass-sun.quicknode-ipfs.com/ipfs/QmTGw4S124fhQ4WgFxCCjk9yNiVkJiHY18LkKn5Ny6fW7U",
     "metaHash": "3b23339656b1be250fa1cabf531ceec3aae73f1177dc7d13b7b64709fc454437",
-    "proposalTitle": "Unknown Proposal",
-    "proposalType": "Unknown",
-    "proposedEpoch": "N/A",
-    "expirationEpoch": "N/A",
+    "proposalTitle": "2025 Cardano Blockchain Ecosystem Budget - 7.5M ₳ for community builders",
+    "proposalType": "InfoAction",
+    "proposedEpoch": 556,
+    "expirationEpoch": 563,
     "rationale": "SIDAN Lab votes No on 2025 Cardano Blockchain Ecosystem Budget – 7.5M ₳ for Community Builders\n\n- **Bundling Risk and Coordination Complexity**\n    \n    While the total requested funding (7.5M ₳) is relatively small, bundling proposals into a single governance action introduces risk. As the number of projects grouped together increases, so does the complexity of coordinating delivery timelines, reporting standards, and fund oversight. This approach may set an undesirable examples for future governance actions.\n    \n- **Support for the Projects, But Reservations on Process**\n    \n    We recognize the significance of the included projects and the strong community support they’ve received during prior temperature checks.\n    \n- **Lack of Constitutional Compliance on Oversight**\n    \n    The proposal does not meet the oversight standards required by the **Cardano Constitution, Article IV, Section 2.** \n    \n    It fails to outline any type of administrator or process for how oversight would be carried out.\n    \n    Due to the unresolved constitutional and structural concerns, we are unable to vote yes on the proposal in its current form. We would welcome a revised submission that provides clearer oversight mechanisms and better aligns with governance expectations."
   },
   {
@@ -443,10 +443,10 @@
     "vote": "Yes",
     "metaUrl": "https://most-brass-sun.quicknode-ipfs.com/ipfs/QmXheqKJeFiQuQtkJUHQwVoWjKKC2kirzDLzPiUCgdrkNC",
     "metaHash": "a042465148d54dd0aaaa37957955dc3efbba7a55c723d92555616f8eec33c352",
-    "proposalTitle": "Unknown Proposal",
-    "proposalType": "Unknown",
-    "proposedEpoch": "N/A",
-    "expirationEpoch": "N/A",
+    "proposalTitle": "Set a 300 million ADA Net Change Limit for Epochs 563–635",
+    "proposalType": "InfoAction",
+    "proposedEpoch": 556,
+    "expirationEpoch": 563,
     "rationale": "**SIDAN Lab is voting YES on the proposal to set a 300M ADA Net Change Limit (NCL) for Epochs 563–635.**\n\n🟦 **Not ideal, but better than 350M**\n\nThe previously approved 350M ADA NCL felt excessive given the current state of oversight. 300M ADA is still high, but more aligned with expected treasury inflows and far less aggressive. It reflects some moderation.\n\n🟦 **200M proposal was our first choice — but it didn’t pass**\n\nWe previously supported the 200M NCL because it promoted discipline and encouraged focused spending. But with that option off the table, 300M is the more cautious choice left.\n\n🟦 **One-year scope makes sense**\n\nA fixed 12-month window provides predictability for proposers while allowing the community to reassess and adjust before locking in the future.\n\n🟦 **Governance is still early**\n\nUntil we see stronger safeguards or maturity, lower limits should be the default."
   },
   {
@@ -459,9 +459,9 @@
     "metaUrl": null,
     "metaHash": null,
     "proposalTitle": "Unknown Proposal",
-    "proposalType": "Unknown",
-    "proposedEpoch": "N/A",
-    "expirationEpoch": "N/A",
+    "proposalType": "InfoAction",
+    "proposedEpoch": 556,
+    "expirationEpoch": 563,
     "rationale": "SIDAN Lab is voting NO as the governance action is invalid and there are invalid metadata."
   },
   {
@@ -473,10 +473,10 @@
     "vote": "Yes",
     "metaUrl": "https://most-brass-sun.quicknode-ipfs.com/ipfs/QmQ5FVgx5BUBQEWsjX6KxpFa1by9brot4z8YoLS7f6WAZa",
     "metaHash": "ba449a41c4e3199e3605c2dd2bb7c82acb603ae2b76eb1abbc4eec17c4648fa9",
-    "proposalTitle": "Unknown Proposal",
-    "proposalType": "Unknown",
-    "proposedEpoch": "N/A",
-    "expirationEpoch": "N/A",
+    "proposalTitle": "Cardano Blockchain Ecosystem Budget: Amaru Node Development 2025",
+    "proposalType": "InfoAction",
+    "proposedEpoch": 556,
+    "expirationEpoch": 563,
     "rationale": "We support this proposal as it directly addresses a long-standing risk in the ecosystem — reliance on a single node implementation — by funding the development of a modular, high-performance alternative written in Rust.\n\nWe believe a second, independently maintained node:\n\n- Strengthens the resilience and fault tolerance of the network\n- Expands developer accessibility through modern tooling and better observability\n- Reduces hardware costs for SPOs, improving participation at the edge\n- Enables platform interoperability with WebAssembly\n- Empower Cardano core infrastructure to access to wider talent pool with alternative implementation of a more modern programming language\n\nWe also appreciate the proposal’s financial transparency:\n\n- Clearly scoped per team member and responsibility\n- Budget guarded by a smart contract with refund logic\n- Quarterly public reporting and demo cadence already in practice\n\nSIDAN Lab is also interested in the possibility of expanding works into alternative Hydra node, where our team can participate in maintenance and collaboration in the future."
   },
   {
@@ -488,10 +488,10 @@
     "vote": "Yes",
     "metaUrl": "https://raw.githubusercontent.com/sidan-lab/DRep/refs/heads/main/voting-history/ga12/ga12-rationale.jsonld",
     "metaHash": "8aa61a6e017b54b1d05fd6cfa2fd56782999967dd0d4985327805e3ca8f17c7e",
-    "proposalTitle": "Unknown Proposal",
-    "proposalType": "Unknown",
-    "proposedEpoch": "N/A",
-    "expirationEpoch": "N/A",
+    "proposalTitle": "2025 Cardano NCL",
+    "proposalType": "InfoAction",
+    "proposedEpoch": 554,
+    "expirationEpoch": 561,
     "rationale": "SIDAN Lab is voting YES on this proposal to set the 2025 Net Change Limit at 200M ADA.\nThis decision reflects our belief that fiscal responsibility, clear prioritization, and trust-building are critical in this early phase of Cardano’s on-chain governance.\nWhy we support this proposal:\n- Capping spending at 200M ADA remains within that safe range, ensuring we do not draw down reserves prematurely.\n- The NCL is not a mandatory budget — it’s a maximum cap, and does not prevent the funding of high-quality proposals. It simply creates a ceiling that encourages discipline and focus.\n- Governance is still stabilizing. At this stage, we believe it's better to proceed cautiously and prove the treasury model works with smaller, more transparent allocations.\n- Without a cap, or with a higher cap, the treasury could be used inefficiently. A 200M limit forces the community to ask: What is essential? What delivers real value?\n- If more funding is genuinely needed later, the NCL can be adjusted through a future governance action. We see this as a checkpoint, not a final lock.\nWe understand this limit may not satisfy all funding ambitions for 2025. However, we believe it will strengthen confidence in the governance process, reduce potential ADA market impact, and provide a more structured budgeting environment for proposals moving forward.\nSIDAN Lab supports strategic investment in Cardano’s growth — but only when paired with clear, predictable, and measured spending limits. For that reason, we vote YES on this NCL proposal."
   },
   {
@@ -503,10 +503,10 @@
     "vote": "Abstain",
     "metaUrl": "https://raw.githubusercontent.com/sidan-lab/DRep/refs/heads/main/voting-history/ga11/ga11-rationale.jsonld",
     "metaHash": "1420b0ffa2d051946acba5542b625353181978d6390e30b685c98c508385e420",
-    "proposalTitle": "Unknown Proposal",
-    "proposalType": "Unknown",
-    "proposedEpoch": "N/A",
-    "expirationEpoch": "N/A",
+    "proposalTitle": "2025 Net Change Limit",
+    "proposalType": "InfoAction",
+    "proposedEpoch": 547,
+    "expirationEpoch": 554,
     "rationale": "SIDAN Lab has chosen to abstain from voting on the 350M ADA Net Change Limit (NCL) proposal for 2025.\nWe recognize and agree with many of the key arguments in favor of this proposal:\n- Sell pressure concerns are likely overstated, as treasury disbursement and proposal execution occur in phases over time.\n- Setting an NCL is essential to unlock treasury funding and enable proposal review and budgeting under the new governance model.. A delayed NCL or failed vote could cause a 60-day funding freeze, stalling community innovation and disproportionately benefiting large entities with early proposal traction.\nAt the same time, we share several concerns raised by those who voted NO:\n- We believe more governance infrastructure is needed—including clearer treasury oversight, tracking, and community visibility—before approving higher NCLs.\nA Yes vote could be seen as endorsing the current treasury governance structure without addressing its known shortcomings.\nA No vote could unintentionally delay needed funding, harming the same community builders we aim to support.\nGiven the above, SIDAN Lab is abstaining as a signal that:\n- We value progress and funding continuity, but also expect clearer NCL modeling and stronger oversight mechanisms in future treasury actions.\n- We will continue participating actively in treasury governance discussions, and support community-led initiatives to improve transparency, accountability, and access to funding."
   },
   {
@@ -519,9 +519,9 @@
     "metaUrl": "https://raw.githubusercontent.com/sidan-lab/DRep/refs/heads/main/voting-history/ga10/ga10-rationale.jsonld",
     "metaHash": "10814f5ef66a81e0a7d0f95ec7670f1caeffdc7c71a6ce06616774c3fa011198",
     "proposalTitle": "Unknown Proposal",
-    "proposalType": "Unknown",
-    "proposedEpoch": "N/A",
-    "expirationEpoch": "N/A",
+    "proposalType": "InfoAction",
+    "proposedEpoch": 546,
+    "expirationEpoch": 553,
     "rationale": "SIDAN Lab will vote NO on this proposal—not because we disagree with its intent, but because we believe that including 2026 at this stage is premature.\n\nWe fully support the rationale behind setting a Net Change Limit (NCL) for 2025. Cardano’s governance and funding systems are still maturing, and setting a hard cap a full year in advance limits flexibility without the benefit of real-world learning from 2025.\n\nWe are also concerned that including a second year:\n- Complicates implementation and creates constitutional uncertainty if multiple NCL proposals pass.\n- May unintentionally lock us into figures that are no longer appropriate when 2026 planning begins.\n\nWe encourage a revised proposal that:\n- Focuses on 2025 alone, based on current conditions and treasury projections.\n- Defers the 2026 limit for a separate governance action, informed by actual data and ecosystem needs."
   },
   {
@@ -533,10 +533,10 @@
     "vote": "Yes",
     "metaUrl": "https://raw.githubusercontent.com/sidan-lab/DRep/refs/heads/main/voting-history/ga09/ga09-rationale.jsonld",
     "metaHash": "89b73d8aeb1bd11f661ad1fa9a94941d444c6a2fcf1d5b22a9599f83837e11d5",
-    "proposalTitle": "Unknown Proposal",
-    "proposalType": "Unknown",
-    "proposedEpoch": "N/A",
-    "expirationEpoch": "N/A",
+    "proposalTitle": "Defining the Cardano Vision and Roadmap for 2025 and beyond",
+    "proposalType": "InfoAction",
+    "proposedEpoch": 542,
+    "expirationEpoch": 549,
     "rationale": "SIDAN Lab Votes YES on the Cardano 2025 Vision & Roadmap SIDAN Lab supports this governance action as it provides a clear direction for Cardano’s growth by focusing on scalability, developer experience, interoperability, and governance improvements. Key Rationale for Supporting the goernance action:\n- L1 & L2 Scalability: Hydra, Leios and Midgard improve transaction throughput and efficiency.\n- Developer & Ecosystem Support: Stronger APIs, tools, and funding for dApp growth.\n- Governance & Decentralization: SPO incentives and multiple node implementations strengthen network resilience."
   },
   {
@@ -548,10 +548,10 @@
     "vote": "Yes",
     "metaUrl": "https://raw.githubusercontent.com/sidan-lab/DRep/refs/heads/main/voting-history/ga08/ga08-rationale.jsonId",
     "metaHash": "c020583827eb26d12a6a6f52cef24e16c62daf3b24db54821c5112e30c9f952c",
-    "proposalTitle": "Unknown Proposal",
-    "proposalType": "Unknown",
-    "proposedEpoch": "N/A",
-    "expirationEpoch": "N/A",
+    "proposalTitle": "Decrease Treasury Tax from 20% to 10%",
+    "proposalType": "ParameterChange",
+    "proposedEpoch": 539,
+    "expirationEpoch": 546,
     "rationale": "SIDAN Lab is voting YES on governance action Decrease Treasury Tax from 20% to 10%. Below are the key reasons supporting this decision:\n\nOptimizing Treasury Management & Budget Efficiency\n\nThe Cardano treasury has accumulated significant funds, yet there is no proven track record of effective fund utilization. Without a clear, efficient use of treasury funds, continuing to accumulate excessive reserves is unnecessary.\nTaxation should be set at the minimum level necessary to sustain the network while ensuring proper allocation of resources.\n\nEnhancing Staking Incentives & Network Security\n\nIncreasing staking rewards encourages more ADA holders to participate in staking, reinforcing network decentralization and security.\nA higher return on staking could attract new users to Cardano, strengthening overall ecosystem growth.\nThis change promotes a sustainable and decentralized governance model, ensuring that resources are distributed efficiently rather than centralized in the treasury.\n\nBy reducing the treasury cut to 10%, we strike a better balance between staking incentives and treasury sustainability."
   },
   {
@@ -563,10 +563,10 @@
     "vote": "Yes",
     "metaUrl": "https://raw.githubusercontent.com/sidan-lab/DRep/refs/heads/main/voting-history/ga07/ga07-rationale.jsonld",
     "metaHash": "2c1079c6ebeaa74636312fa7f2a31804dfef20b7ba9522ccce1593d889f86ede",
-    "proposalTitle": "Unknown Proposal",
-    "proposalType": "Unknown",
-    "proposedEpoch": "N/A",
-    "expirationEpoch": "N/A",
+    "proposalTitle": "Cardano Constitution to Replace the Interim Constitution",
+    "proposalType": "NewConstitution",
+    "proposedEpoch": 537,
+    "expirationEpoch": 544,
     "rationale": "The biggest difference between this and the Interim Constitution is the community participation that shaped it. This wasn’t created behind closed doors—it was the result of:The Cardano Constitutional Conventions in Argentina & Keny and 63+ global workshops where people could provide input with discussions and revisions. Meaningful Improvements Over the Interim Constitution. Several key enhancements make this Constitution a significant upgrade: Clear guiding principles to align future governance actions, better treasury oversight to reduce single points of failure and a governance process that prioritizes participation and transparency.This Constitution is a major improvement over the Interim version, and it sets the stage for further governance evolution. Voting Yes was the responsible choice to ensure progress continues."
   }
 ]
