@@ -518,7 +518,7 @@
     "vote": "No",
     "metaUrl": "https://raw.githubusercontent.com/sidan-lab/DRep/refs/heads/main/voting-history/ga10/ga10-rationale.jsonld",
     "metaHash": "10814f5ef66a81e0a7d0f95ec7670f1caeffdc7c71a6ce06616774c3fa011198",
-    "proposalTitle": "Unknown Proposal",
+    "proposalTitle": "Set 2025 Net Change Limit of 300M ADA, 2026 Net Change Limit of 250M ADA",
     "proposalType": "InfoAction",
     "proposedEpoch": 546,
     "expirationEpoch": 553,
