@@ -1,0 +1,56 @@
+{
+  "@context": {
+    "CIP100": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0100/README.md#",
+    "hashAlgorithm": "CIP100:hashAlgorithm",
+    "body": {
+      "@id": "CIP100:body",
+      "@context": {
+        "references": {
+          "@id": "CIP100:references",
+          "@container": "@set",
+          "@context": {
+            "GovernanceMetadata": "CIP100:GovernanceMetadataReference",
+            "Other": "CIP100:OtherReference",
+            "label": "CIP100:reference-label",
+            "uri": "CIP100:reference-uri",
+            "referenceHash": {
+              "@id": "CIP100:referenceHash",
+              "@context": {
+                "hashDigest": "CIP100:hashDigest",
+                "hashAlgorithm": "CIP100:hashAlgorithm"
+              }
+            }
+          }
+        },
+        "comment": "CIP100:comment",
+        "externalUpdates": {
+          "@id": "CIP100:externalUpdates",
+          "@context": {
+            "title": "CIP100:update-title",
+            "uri": "CIP100:uri"
+          }
+        }
+      }
+    },
+    "authors": {
+      "@id": "CIP100:authors",
+      "@container": "@set",
+      "@context": {
+        "name": "http://xmlns.com/foaf/0.1/name",
+        "witness": {
+          "@id": "CIP100:witness",
+          "@context": {
+            "witnessAlgorithm": "CIP100:witnessAlgorithm",
+            "publicKey": "CIP100:publicKey",
+            "signature": "CIP100:signature"
+          }
+        }
+      }
+    }
+  },
+  "authors": [],
+  "body": {
+    "comment": "# SIDAN Lab — Vote Rationale: Cardano x Draper Dragon: Orion Fund\n\n**Vote: YES**\n\n**Disclosure:** SIDAN Lab operates DeltaDeFi, a Cardano-native DEX on Hydra. We are a potential beneficiary of this fund's ecosystem activities and disclose this accordingly.\n\nSIDAN Lab is voting YES on Tranche 1.\n\nWe don't take this lightly. As a team that builds on Cardano daily, we've watched promising builders fade out or leave the ecosystem over the past year. We feel the same pressure ourselves. TVL sits below $500M. Existing funding serves important purposes, but none of it gives builders access to growth capital, exchange listings, or the kind of institutional networks needed to scale.\n\nOther ecosystems — Solana, Sui, Avalanche — used foundation-backed investment vehicles to bootstrap this kind of infrastructure early. It's a proven approach across the industry. Cardano hasn't done it, and the gap shows.\n\nThis proposal isn't a grant. It's structured to return capital to the treasury, which is a model we think the treasury needs to move toward. We also see value in having a fund that can connect Cardano-native projects to external capital markets — something the ecosystem currently lacks entirely.\n\nWe acknowledge the concerns raised by No voters — GP discretion, deal confidentiality, and no named auditor. These are real. However, unlike proposals we've previously rejected on Article IV grounds (e.g. the 7.5M community builders budget), this one does designate administrators and allocates audit funding. The tranche structure also keeps DRep authority over future funding intact.\n\nOur decision on Tranche 2 will be made independently from this vote. If the fund is approved, we will evaluate Tranche 1 execution on two fronts: (1) community commitment — whether audit, reporting, and oversight disclosures follow through as described in the proposal, and (2) investment decision quality — our team includes members with traditional finance backgrounds, and we are capable of forming an independent view on whether the risk-return profile of the fund's deployment justifies continued treasury support.\n\nFor these reasons, SIDAN Lab votes YES."
+  },
+  "hashAlgorithm": "blake2b-256"
+}
