@@ -1,5 +1,20 @@
 [
   {
+    "proposalId": "gov_action13qr78nhrhetywapvx2wpm63y9uxpc2dc45zsu9gkncasxqhuhltqqqfu32x",
+    "proposalTxHash": "8807e3cee3be5647742c329c1dea242f0c1c29b8ad050e15169e3b0302fcbfd600",
+    "proposalIndex": 0,
+    "voteTxHash": "b2f6d2202145bb4f4bef539cc5546242ee212eaee72c92f8a8a24ddf44eb0b43",
+    "blockTime": "2026-03-27T03:14:52.000Z",
+    "vote": "Yes",
+    "metaUrl": "https://raw.githubusercontent.com/sidan-lab/DRep/refs/heads/main/voting-history/ga93/rationale.jsonld",
+    "metaHash": "84efce5be149cfcca93af175038be38fc6bff6a94d41fcf03835fac0f4506d9f",
+    "proposalTitle": "Cardano x Draper Dragon: Orion Fund",
+    "proposalType": "TreasuryWithdrawals",
+    "proposedEpoch": 618,
+    "expirationEpoch": 625,
+    "rationale": "# SIDAN Lab — Vote Rationale: Cardano x Draper Dragon: Orion Fund\n\n**Vote: YES**\n\n**Disclosure:** SIDAN Lab operates DeltaDeFi, a Cardano-native DEX on Hydra. We are a potential beneficiary of this fund's ecosystem activities and disclose this accordingly.\n\nSIDAN Lab is voting YES on Tranche 1.\n\nWe don't take this lightly. As a team that builds on Cardano daily, we've watched promising builders fade out or leave the ecosystem over the past year. We feel the same pressure ourselves. TVL sits below $500M. Existing funding serves important purposes, but none of it gives builders access to growth capital, exchange listings, or the kind of institutional networks needed to scale.\n\nOther ecosystems — Solana, Sui, Avalanche — used foundation-backed investment vehicles to bootstrap this kind of infrastructure early. It's a proven approach across the industry. Cardano hasn't done it, and the gap shows.\n\nThis proposal isn't a grant. It's structured to return capital to the treasury, which is a model we think the treasury needs to move toward. We also see value in having a fund that can connect Cardano-native projects to external capital markets — something the ecosystem currently lacks entirely.\n\nWe acknowledge the concerns raised by No voters — GP discretion, deal confidentiality, and no named auditor. These are real. However, unlike proposals we've previously rejected on Article IV grounds (e.g. the 7.5M community builders budget), this one does designate administrators and allocates audit funding. The tranche structure also keeps DRep authority over future funding intact.\n\nOur decision on Tranche 2 will be made independently from this vote. If the fund is approved, we will evaluate Tranche 1 execution on two fronts: (1) community commitment — whether audit, reporting, and oversight disclosures follow through as described in the proposal, and (2) investment decision quality — our team includes members with traditional finance backgrounds, and we are capable of forming an independent view on whether the risk-return profile of the fund's deployment justifies continued treasury support.\n\nFor these reasons, SIDAN Lab votes YES."
+  },
+  {
     "proposalId": "gov_action19uhuy5uame2s60yrh6n8cyds8ps5q7tkh05dqlzmpcfy429p9w4qq5ll3g0",
     "proposalTxHash": "2f2fc2539dde550d3c83bea67c11b03861407976bbe8d07c5b0e124aa8a12baa00",
     "proposalIndex": 0,
