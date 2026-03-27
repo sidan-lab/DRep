@@ -1,5 +1,35 @@
 [
   {
+    "proposalId": "gov_action1uhzd06a26qavzflvrx3gvcz6rzxkl6su2ns8t3seef5e8dl6nlgsqcgtufg",
+    "proposalTxHash": "e5c4d7ebaad03ac127ec19a286605a188d6fea1c54e075c619ca6993b7fa9fd100",
+    "proposalIndex": 0,
+    "voteTxHash": "0c3f862686258bcff1f16274c40046522ade66dc9d0e2ecbe34826a823b3d786",
+    "blockTime": "2026-03-27T16:37:37.000Z",
+    "vote": "Yes",
+    "metaUrl": "https://ipfs.io/ipfs/QmWH8ZxE8CnRqQoE95B6GQ9sBKoeHhLDWF3VxEDHeuiRQQ",
+    "metaHash": "cffd00df708f3cf38ed00921ca08893c5d8c3392ac60bd4b59673a7bbf8a157f",
+    "proposalTitle": "Cardano Defi Liquidity Budget - Withdrawal 1",
+    "proposalType": "TreasuryWithdrawals",
+    "proposedEpoch": 617,
+    "expirationEpoch": 624,
+    "rationale": "No rationale available"
+  },
+  {
+    "proposalId": "gov_action1uhzd06a26qavzflvrx3gvcz6rzxkl6su2ns8t3seef5e8dl6nlgsqcgtufg",
+    "proposalTxHash": "e5c4d7ebaad03ac127ec19a286605a188d6fea1c54e075c619ca6993b7fa9fd100",
+    "proposalIndex": 0,
+    "voteTxHash": "323dd7da0761406a0156d46fff662b478c01fd01f49f2b7f0dd61bb9a0f3b96b",
+    "blockTime": "2026-03-27T16:03:10.000Z",
+    "vote": "Yes",
+    "metaUrl": null,
+    "metaHash": null,
+    "proposalTitle": "Cardano Defi Liquidity Budget - Withdrawal 1",
+    "proposalType": "TreasuryWithdrawals",
+    "proposedEpoch": 617,
+    "expirationEpoch": 624,
+    "rationale": "No rationale available"
+  },
+  {
     "proposalId": "gov_action13qr78nhrhetywapvx2wpm63y9uxpc2dc45zsu9gkncasxqhuhltqqqfu32x",
     "proposalTxHash": "8807e3cee3be5647742c329c1dea242f0c1c29b8ad050e15169e3b0302fcbfd600",
     "proposalIndex": 0,
