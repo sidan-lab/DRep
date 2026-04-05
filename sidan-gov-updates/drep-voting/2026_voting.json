@@ -1,5 +1,20 @@
 [
   {
+    "proposalId": "gov_action1k5vwlfrxtyusd2ec37tckd54gjvqn2kd72xj4t6wkkapdv7zfg0qq468n2r",
+    "proposalTxHash": "b518efa466593906ab388f978b3695449809aacdf28d2aaf4eb5ba16b3c24a1e00",
+    "proposalIndex": 0,
+    "voteTxHash": "d4abaa6698de2827b0b9e5a9eafcc9de3384cd12a2cc9067f365c4ebf5631768",
+    "blockTime": "2026-04-05T16:41:28.000Z",
+    "vote": "Yes",
+    "metaUrl": null,
+    "metaHash": null,
+    "proposalTitle": "Approve Cardano Foundation as New Managing Entity of Project Catalyst",
+    "proposalType": "InfoAction",
+    "proposedEpoch": 619,
+    "expirationEpoch": 626,
+    "rationale": "No rationale available"
+  },
+  {
     "proposalId": "gov_action1uhzd06a26qavzflvrx3gvcz6rzxkl6su2ns8t3seef5e8dl6nlgsqcgtufg",
     "proposalTxHash": "e5c4d7ebaad03ac127ec19a286605a188d6fea1c54e075c619ca6993b7fa9fd100",
     "proposalIndex": 0,
