@@ -5,7 +5,7 @@
     {
       "epoch_no": 532,
       "active_stake": "3391881226228",
-      "active_stake_pct": 0.015546636161356176,
+      "active_stake_pct": null,
       "saturation_pct": 4.52,
       "block_cnt": 1,
       "delegator_cnt": 38,
@@ -19,7 +19,7 @@
     {
       "epoch_no": 533,
       "active_stake": "3364658464455",
-      "active_stake_pct": 0.01544555347244361,
+      "active_stake_pct": null,
       "saturation_pct": 4.48,
       "block_cnt": 6,
       "delegator_cnt": 37,
@@ -33,7 +33,7 @@
     {
       "epoch_no": 534,
       "active_stake": "3370277707456",
-      "active_stake_pct": 0.01544971870017899,
+      "active_stake_pct": null,
       "saturation_pct": 4.49,
       "block_cnt": 4,
       "delegator_cnt": 38,
@@ -47,7 +47,7 @@
     {
       "epoch_no": 535,
       "active_stake": "3370652970774",
-      "active_stake_pct": 0.015462488560675832,
+      "active_stake_pct": null,
       "saturation_pct": 4.49,
       "block_cnt": 3,
       "delegator_cnt": 38,
@@ -61,7 +61,7 @@
     {
       "epoch_no": 536,
       "active_stake": "3488131464140",
-      "active_stake_pct": 0.016026229489059813,
+      "active_stake_pct": null,
       "saturation_pct": 4.64,
       "block_cnt": 5,
       "delegator_cnt": 38,
@@ -75,7 +75,7 @@
     {
       "epoch_no": 537,
       "active_stake": "3480330309471",
-      "active_stake_pct": 0.016015218580052597,
+      "active_stake_pct": null,
       "saturation_pct": 4.63,
       "block_cnt": 3,
       "delegator_cnt": 40,
@@ -89,7 +89,7 @@
     {
       "epoch_no": 538,
       "active_stake": "3481527831184",
-      "active_stake_pct": 0.016019842357066886,
+      "active_stake_pct": null,
       "saturation_pct": 4.63,
       "block_cnt": 4,
       "delegator_cnt": 40,
@@ -103,7 +103,7 @@
     {
       "epoch_no": 539,
       "active_stake": "3588134117546",
-      "active_stake_pct": 0.016492976513119973,
+      "active_stake_pct": null,
       "saturation_pct": 4.77,
       "block_cnt": 2,
       "delegator_cnt": 43,
@@ -117,7 +117,7 @@
     {
       "epoch_no": 540,
       "active_stake": "3589278857022",
-      "active_stake_pct": 0.016436530010299003,
+      "active_stake_pct": null,
       "saturation_pct": 4.77,
       "block_cnt": 3,
       "delegator_cnt": 44,
@@ -131,7 +131,7 @@
     {
       "epoch_no": 541,
       "active_stake": "3644673102641",
-      "active_stake_pct": 0.01667731172002924,
+      "active_stake_pct": null,
       "saturation_pct": 4.84,
       "block_cnt": 3,
       "delegator_cnt": 44,
@@ -145,7 +145,7 @@
     {
       "epoch_no": 542,
       "active_stake": "3659521408712",
-      "active_stake_pct": 0.016731448459990122,
+      "active_stake_pct": null,
       "saturation_pct": 4.86,
       "block_cnt": 4,
       "delegator_cnt": 43,
@@ -159,7 +159,7 @@
     {
       "epoch_no": 543,
       "active_stake": "3635623395861",
-      "active_stake_pct": 0.016679971209822026,
+      "active_stake_pct": null,
       "saturation_pct": 4.83,
       "block_cnt": 3,
       "delegator_cnt": 44,
@@ -173,7 +173,7 @@
     {
       "epoch_no": 544,
       "active_stake": "3703350310004",
-      "active_stake_pct": 0.016969550814897028,
+      "active_stake_pct": null,
       "saturation_pct": 4.92,
       "block_cnt": 5,
       "delegator_cnt": 44,
@@ -187,7 +187,7 @@
     {
       "epoch_no": 545,
       "active_stake": "3451715883457",
-      "active_stake_pct": 0.015926162098538966,
+      "active_stake_pct": null,
       "saturation_pct": 4.58,
       "block_cnt": 4,
       "delegator_cnt": 44,
@@ -201,7 +201,7 @@
     {
       "epoch_no": 546,
       "active_stake": "3450810875115",
-      "active_stake_pct": 0.01594804136711506,
+      "active_stake_pct": null,
       "saturation_pct": 4.58,
       "block_cnt": 3,
       "delegator_cnt": 44,
@@ -215,7 +215,7 @@
     {
       "epoch_no": 547,
       "active_stake": "3576382871428",
-      "active_stake_pct": 0.016514891639143072,
+      "active_stake_pct": null,
       "saturation_pct": 4.74,
       "block_cnt": 3,
       "delegator_cnt": 44,
@@ -229,7 +229,7 @@
     {
       "epoch_no": 548,
       "active_stake": "3588086956190",
-      "active_stake_pct": 0.016515112445736547,
+      "active_stake_pct": null,
       "saturation_pct": 4.76,
       "block_cnt": 6,
       "delegator_cnt": 44,
@@ -243,7 +243,7 @@
     {
       "epoch_no": 549,
       "active_stake": "3596954930725",
-      "active_stake_pct": 0.016525513036468542,
+      "active_stake_pct": null,
       "saturation_pct": 4.77,
       "block_cnt": 2,
       "delegator_cnt": 44,
@@ -257,7 +257,7 @@
     {
       "epoch_no": 550,
       "active_stake": "3585031577977",
-      "active_stake_pct": 0.016435680975639036,
+      "active_stake_pct": null,
       "saturation_pct": 4.75,
       "block_cnt": 7,
       "delegator_cnt": 44,
@@ -271,7 +271,7 @@
     {
       "epoch_no": 551,
       "active_stake": "3586889673232",
-      "active_stake_pct": 0.01642370372355661,
+      "active_stake_pct": null,
       "saturation_pct": 4.75,
       "block_cnt": 5,
       "delegator_cnt": 44,
@@ -285,7 +285,7 @@
     {
       "epoch_no": 552,
       "active_stake": "3587610319292",
-      "active_stake_pct": 0.016432159008041493,
+      "active_stake_pct": null,
       "saturation_pct": 4.75,
       "block_cnt": 2,
       "delegator_cnt": 44,
@@ -299,7 +299,7 @@
     {
       "epoch_no": 553,
       "active_stake": "3590130099033",
-      "active_stake_pct": 0.016491373942549927,
+      "active_stake_pct": null,
       "saturation_pct": 4.75,
       "block_cnt": 4,
       "delegator_cnt": 44,
@@ -313,7 +313,7 @@
     {
       "epoch_no": 554,
       "active_stake": "3704682215521",
-      "active_stake_pct": 0.01697448382385105,
+      "active_stake_pct": null,
       "saturation_pct": 4.9,
       "block_cnt": 6,
       "delegator_cnt": 44,
@@ -327,7 +327,7 @@
     {
       "epoch_no": 555,
       "active_stake": "3676314851708",
-      "active_stake_pct": 0.016673059062920714,
+      "active_stake_pct": null,
       "saturation_pct": 4.86,
       "block_cnt": 5,
       "delegator_cnt": 45,
@@ -341,7 +341,7 @@
     {
       "epoch_no": 556,
       "active_stake": "3684097703100",
-      "active_stake_pct": 0.016704818395930437,
+      "active_stake_pct": null,
       "saturation_pct": 4.87,
       "block_cnt": 0,
       "delegator_cnt": 46,
@@ -355,7 +355,7 @@
     {
       "epoch_no": 557,
       "active_stake": "3704245612226",
-      "active_stake_pct": 0.016775575796518172,
+      "active_stake_pct": null,
       "saturation_pct": 4.9,
       "block_cnt": 0,
       "delegator_cnt": 46,
@@ -369,7 +369,7 @@
     {
       "epoch_no": 558,
       "active_stake": "3707402163512",
-      "active_stake_pct": 0.016786823140939516,
+      "active_stake_pct": null,
       "saturation_pct": 4.9,
       "block_cnt": 5,
       "delegator_cnt": 46,
@@ -383,7 +383,7 @@
     {
       "epoch_no": 559,
       "active_stake": "3738157321414",
-      "active_stake_pct": 0.0169298181366179,
+      "active_stake_pct": null,
       "saturation_pct": 4.94,
       "block_cnt": 2,
       "delegator_cnt": 46,
@@ -397,7 +397,7 @@
     {
       "epoch_no": 560,
       "active_stake": "3765525323428",
-      "active_stake_pct": 0.017049298516726652,
+      "active_stake_pct": null,
       "saturation_pct": 4.97,
       "block_cnt": 1,
       "delegator_cnt": 46,
@@ -411,7 +411,7 @@
     {
       "epoch_no": 561,
       "active_stake": "3734984677491",
-      "active_stake_pct": 0.016893191677756814,
+      "active_stake_pct": null,
       "saturation_pct": 4.93,
       "block_cnt": 7,
       "delegator_cnt": 46,
@@ -425,7 +425,7 @@
     {
       "epoch_no": 562,
       "active_stake": "3885943631720",
-      "active_stake_pct": 0.017618740498261776,
+      "active_stake_pct": null,
       "saturation_pct": 5.13,
       "block_cnt": 3,
       "delegator_cnt": 48,
@@ -439,7 +439,7 @@
     {
       "epoch_no": 563,
       "active_stake": "1651740338894",
-      "active_stake_pct": 0.0075218280317352485,
+      "active_stake_pct": null,
       "saturation_pct": 2.18,
       "block_cnt": 0,
       "delegator_cnt": 48,
@@ -453,7 +453,7 @@
     {
       "epoch_no": 564,
       "active_stake": "1656214598540",
-      "active_stake_pct": 0.007554911229828009,
+      "active_stake_pct": null,
       "saturation_pct": 2.19,
       "block_cnt": 2,
       "delegator_cnt": 50,
@@ -467,7 +467,7 @@
     {
       "epoch_no": 565,
       "active_stake": "1650284856435",
-      "active_stake_pct": 0.00751563880493029,
+      "active_stake_pct": null,
       "saturation_pct": 2.18,
       "block_cnt": 2,
       "delegator_cnt": 50,
@@ -481,7 +481,7 @@
     {
       "epoch_no": 566,
       "active_stake": "1658502672315",
-      "active_stake_pct": 0.007569885196021472,
+      "active_stake_pct": null,
       "saturation_pct": 2.19,
       "block_cnt": 1,
       "delegator_cnt": 50,
@@ -495,7 +495,7 @@
     {
       "epoch_no": 567,
       "active_stake": "1652771340572",
-      "active_stake_pct": 0.007542990994718071,
+      "active_stake_pct": null,
       "saturation_pct": 2.18,
       "block_cnt": 1,
       "delegator_cnt": 50,
@@ -509,7 +509,7 @@
     {
       "epoch_no": 568,
       "active_stake": "1117762662789",
-      "active_stake_pct": 0.00507544976175839,
+      "active_stake_pct": null,
       "saturation_pct": 1.47,
       "block_cnt": 1,
       "delegator_cnt": 49,
@@ -523,7 +523,7 @@
     {
       "epoch_no": 569,
       "active_stake": "1115563319888",
-      "active_stake_pct": 0.005062679152205368,
+      "active_stake_pct": null,
       "saturation_pct": 1.47,
       "block_cnt": 1,
       "delegator_cnt": 49,
@@ -537,7 +537,7 @@
     {
       "epoch_no": 570,
       "active_stake": "1114809622468",
-      "active_stake_pct": 0.005054304884187293,
+      "active_stake_pct": null,
       "saturation_pct": 1.47,
       "block_cnt": 4,
       "delegator_cnt": 49,
@@ -551,7 +551,7 @@
     {
       "epoch_no": 571,
       "active_stake": "1085160915153",
-      "active_stake_pct": 0.004926159254809483,
+      "active_stake_pct": null,
       "saturation_pct": 1.43,
       "block_cnt": 1,
       "delegator_cnt": 49,
@@ -565,7 +565,7 @@
     {
       "epoch_no": 572,
       "active_stake": "1117386823259",
-      "active_stake_pct": 0.005095699695201429,
+      "active_stake_pct": null,
       "saturation_pct": 1.47,
       "block_cnt": 0,
       "delegator_cnt": 49,
@@ -579,7 +579,7 @@
     {
       "epoch_no": 573,
       "active_stake": "1127709580393",
-      "active_stake_pct": 0.00515179553543028,
+      "active_stake_pct": null,
       "saturation_pct": 1.48,
       "block_cnt": 0,
       "delegator_cnt": 50,
@@ -593,7 +593,7 @@
     {
       "epoch_no": 574,
       "active_stake": "927336988842",
-      "active_stake_pct": 0.004234677841099255,
+      "active_stake_pct": null,
       "saturation_pct": 1.22,
       "block_cnt": 0,
       "delegator_cnt": 48,
@@ -607,7 +607,7 @@
     {
       "epoch_no": 575,
       "active_stake": "874238292034",
-      "active_stake_pct": 0.00399276659715021,
+      "active_stake_pct": null,
       "saturation_pct": 1.15,
       "block_cnt": 0,
       "delegator_cnt": 48,
@@ -621,7 +621,7 @@
     {
       "epoch_no": 576,
       "active_stake": "873304134216",
-      "active_stake_pct": 0.003991493115853176,
+      "active_stake_pct": null,
       "saturation_pct": 1.15,
       "block_cnt": 0,
       "delegator_cnt": 49,
@@ -635,7 +635,7 @@
     {
       "epoch_no": 577,
       "active_stake": "874519771451",
-      "active_stake_pct": 0.003993729673706069,
+      "active_stake_pct": null,
       "saturation_pct": 1.15,
       "block_cnt": 1,
       "delegator_cnt": 51,
@@ -649,7 +649,7 @@
     {
       "epoch_no": 578,
       "active_stake": "994831741142",
-      "active_stake_pct": 0.004551429401900605,
+      "active_stake_pct": null,
       "saturation_pct": 1.31,
       "block_cnt": 0,
       "delegator_cnt": 51,
@@ -663,7 +663,7 @@
     {
       "epoch_no": 579,
       "active_stake": "937457831451",
-      "active_stake_pct": 0.00428094375147445,
+      "active_stake_pct": null,
       "saturation_pct": 1.23,
       "block_cnt": 1,
       "delegator_cnt": 51,
@@ -677,7 +677,7 @@
     {
       "epoch_no": 580,
       "active_stake": "927644260422",
-      "active_stake_pct": 0.004238305290138492,
+      "active_stake_pct": null,
       "saturation_pct": 1.22,
       "block_cnt": 0,
       "delegator_cnt": 51,
@@ -691,7 +691,7 @@
     {
       "epoch_no": 581,
       "active_stake": "961669908169",
-      "active_stake_pct": 0.004393773743925408,
+      "active_stake_pct": null,
       "saturation_pct": 1.26,
       "block_cnt": 1,
       "delegator_cnt": 51,
@@ -705,7 +705,7 @@
     {
       "epoch_no": 582,
       "active_stake": "1006421496420",
-      "active_stake_pct": 0.004588622409199617,
+      "active_stake_pct": null,
       "saturation_pct": 1.32,
       "block_cnt": 2,
       "delegator_cnt": 51,
@@ -719,7 +719,7 @@
     {
       "epoch_no": 583,
       "active_stake": "1058374705253",
-      "active_stake_pct": 0.0048499309690316445,
+      "active_stake_pct": null,
       "saturation_pct": 1.39,
       "block_cnt": 1,
       "delegator_cnt": 51,
@@ -733,7 +733,7 @@
     {
       "epoch_no": 584,
       "active_stake": "1082997822965",
-      "active_stake_pct": 0.0049682465795482375,
+      "active_stake_pct": null,
       "saturation_pct": 1.42,
       "block_cnt": 1,
       "delegator_cnt": 51,
@@ -747,7 +747,7 @@
     {
       "epoch_no": 585,
       "active_stake": "1036543313562",
-      "active_stake_pct": 0.004752874066878621,
+      "active_stake_pct": null,
       "saturation_pct": 1.36,
       "block_cnt": 3,
       "delegator_cnt": 51,
@@ -761,7 +761,7 @@
     {
       "epoch_no": 586,
       "active_stake": "959359302432",
-      "active_stake_pct": 0.004414311249098845,
+      "active_stake_pct": null,
       "saturation_pct": 1.26,
       "block_cnt": 0,
       "delegator_cnt": 51,
@@ -775,7 +775,7 @@
     {
       "epoch_no": 587,
       "active_stake": "966888119258",
-      "active_stake_pct": 0.004447276170147208,
+      "active_stake_pct": null,
       "saturation_pct": 1.27,
       "block_cnt": 2,
       "delegator_cnt": 51,
@@ -789,7 +789,7 @@
     {
       "epoch_no": 588,
       "active_stake": "964212378406",
-      "active_stake_pct": 0.0044327479500619145,
+      "active_stake_pct": null,
       "saturation_pct": 1.26,
       "block_cnt": 1,
       "delegator_cnt": 52,
@@ -803,7 +803,7 @@
     {
       "epoch_no": 589,
       "active_stake": "963215047213",
-      "active_stake_pct": 0.004425259779249592,
+      "active_stake_pct": null,
       "saturation_pct": 1.26,
       "block_cnt": 0,
       "delegator_cnt": 52,
@@ -817,7 +817,7 @@
     {
       "epoch_no": 590,
       "active_stake": "984927315837",
-      "active_stake_pct": 0.004510919988513702,
+      "active_stake_pct": null,
       "saturation_pct": 1.29,
       "block_cnt": 1,
       "delegator_cnt": 52,
@@ -831,7 +831,7 @@
     {
       "epoch_no": 591,
       "active_stake": "884352592997",
-      "active_stake_pct": 0.004068401011038538,
+      "active_stake_pct": null,
       "saturation_pct": 1.16,
       "block_cnt": 4,
       "delegator_cnt": 52,
@@ -845,7 +845,7 @@
     {
       "epoch_no": 592,
       "active_stake": "884809723364",
-      "active_stake_pct": 0.004064697933061127,
+      "active_stake_pct": null,
       "saturation_pct": 1.16,
       "block_cnt": 0,
       "delegator_cnt": 52,
@@ -859,7 +859,7 @@
     {
       "epoch_no": 593,
       "active_stake": "785783152280",
-      "active_stake_pct": 0.0035906033593522822,
+      "active_stake_pct": null,
       "saturation_pct": 1.03,
       "block_cnt": 1,
       "delegator_cnt": 52,
@@ -873,7 +873,7 @@
     {
       "epoch_no": 594,
       "active_stake": "840855657998",
-      "active_stake_pct": 0.0038577477233326263,
+      "active_stake_pct": null,
       "saturation_pct": 1.1,
       "block_cnt": 1,
       "delegator_cnt": 55,
@@ -887,7 +887,7 @@
     {
       "epoch_no": 595,
       "active_stake": "742321180096",
-      "active_stake_pct": 0.0034090444258354532,
+      "active_stake_pct": null,
       "saturation_pct": 0.97,
       "block_cnt": 2,
       "delegator_cnt": 55,
@@ -901,7 +901,7 @@
     {
       "epoch_no": 596,
       "active_stake": "728986893166",
-      "active_stake_pct": 0.003348066456745555,
+      "active_stake_pct": null,
       "saturation_pct": 0.95,
       "block_cnt": 1,
       "delegator_cnt": 54,
@@ -915,7 +915,7 @@
     {
       "epoch_no": 597,
       "active_stake": "662750619293",
-      "active_stake_pct": 0.00309255981813129,
+      "active_stake_pct": null,
       "saturation_pct": 0.87,
       "block_cnt": 0,
       "delegator_cnt": 55,
@@ -929,7 +929,7 @@
     {
       "epoch_no": 598,
       "active_stake": "743759499893",
-      "active_stake_pct": 0.003484759548295188,
+      "active_stake_pct": null,
       "saturation_pct": 0.97,
       "block_cnt": 1,
       "delegator_cnt": 56,
@@ -943,7 +943,7 @@
     {
       "epoch_no": 599,
       "active_stake": "703474243831",
-      "active_stake_pct": 0.0032749515038315285,
+      "active_stake_pct": null,
       "saturation_pct": 0.92,
       "block_cnt": 1,
       "delegator_cnt": 56,
@@ -957,7 +957,7 @@
     {
       "epoch_no": 600,
       "active_stake": "699024430323",
-      "active_stake_pct": 0.0032667064311746093,
+      "active_stake_pct": null,
       "saturation_pct": 0.91,
       "block_cnt": 3,
       "delegator_cnt": 56,
@@ -971,7 +971,7 @@
     {
       "epoch_no": 601,
       "active_stake": "698673063506",
-      "active_stake_pct": 0.0032737924175520673,
+      "active_stake_pct": null,
       "saturation_pct": 0.91,
       "block_cnt": 0,
       "delegator_cnt": 56,
@@ -985,7 +985,7 @@
     {
       "epoch_no": 602,
       "active_stake": "699446313629",
-      "active_stake_pct": 0.0032605840033996907,
+      "active_stake_pct": null,
       "saturation_pct": 0.91,
       "block_cnt": 0,
       "delegator_cnt": 56,
@@ -999,7 +999,7 @@
     {
       "epoch_no": 603,
       "active_stake": "522257846012",
-      "active_stake_pct": 0.002431910920674071,
+      "active_stake_pct": null,
       "saturation_pct": 0.68,
       "block_cnt": 0,
       "delegator_cnt": 56,
@@ -1013,7 +1013,7 @@
     {
       "epoch_no": 604,
       "active_stake": "474326287104",
-      "active_stake_pct": 0.002218469190785119,
+      "active_stake_pct": null,
       "saturation_pct": 0.62,
       "block_cnt": 0,
       "delegator_cnt": 56,
@@ -1025,6 +1025,6 @@
       "epoch_ros": 0
     }
   ],
-  "lastUpdated": "2026-04-10T23:22:55.021Z",
+  "lastUpdated": "2026-04-11T23:20:40.511Z",
   "currentEpoch": 624
 }
