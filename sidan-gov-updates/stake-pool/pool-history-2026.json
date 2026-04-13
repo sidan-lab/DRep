@@ -5,7 +5,7 @@
     {
       "epoch_no": 605,
       "active_stake": "371479515964",
-      "active_stake_pct": 0.0017364325678869694,
+      "active_stake_pct": null,
       "saturation_pct": 0.48,
       "block_cnt": 0,
       "delegator_cnt": 56,
@@ -19,7 +19,7 @@
     {
       "epoch_no": 606,
       "active_stake": "366304304864",
-      "active_stake_pct": 0.0017128766063682706,
+      "active_stake_pct": null,
       "saturation_pct": 0.48,
       "block_cnt": 0,
       "delegator_cnt": 56,
@@ -33,7 +33,7 @@
     {
       "epoch_no": 607,
       "active_stake": "521079864936",
-      "active_stake_pct": 0.0024343848187878664,
+      "active_stake_pct": null,
       "saturation_pct": 0.68,
       "block_cnt": 1,
       "delegator_cnt": 55,
@@ -47,7 +47,7 @@
     {
       "epoch_no": 608,
       "active_stake": "521226691911",
-      "active_stake_pct": 0.0024296352978505193,
+      "active_stake_pct": null,
       "saturation_pct": 0.68,
       "block_cnt": 1,
       "delegator_cnt": 55,
@@ -61,7 +61,7 @@
     {
       "epoch_no": 609,
       "active_stake": "598788775061",
-      "active_stake_pct": 0.0027832485985944655,
+      "active_stake_pct": null,
       "saturation_pct": 0.78,
       "block_cnt": 1,
       "delegator_cnt": 55,
@@ -75,7 +75,7 @@
     {
       "epoch_no": 610,
       "active_stake": "482780956533",
-      "active_stake_pct": 0.0022381088719168603,
+      "active_stake_pct": null,
       "saturation_pct": 0.63,
       "block_cnt": 0,
       "delegator_cnt": 55,
@@ -89,7 +89,7 @@
     {
       "epoch_no": 611,
       "active_stake": "571611827874",
-      "active_stake_pct": 0.0026516894902249067,
+      "active_stake_pct": null,
       "saturation_pct": 0.74,
       "block_cnt": 1,
       "delegator_cnt": 55,
@@ -103,7 +103,7 @@
     {
       "epoch_no": 612,
       "active_stake": "598430475027",
-      "active_stake_pct": 0.0028050734633751698,
+      "active_stake_pct": null,
       "saturation_pct": 0.78,
       "block_cnt": 0,
       "delegator_cnt": 55,
@@ -117,7 +117,7 @@
     {
       "epoch_no": 613,
       "active_stake": "696252098199",
-      "active_stake_pct": 0.0032639475357804696,
+      "active_stake_pct": null,
       "saturation_pct": 0.91,
       "block_cnt": 3,
       "delegator_cnt": 55,
@@ -131,7 +131,7 @@
     {
       "epoch_no": 614,
       "active_stake": "694331008119",
-      "active_stake_pct": 0.0032274361383579737,
+      "active_stake_pct": null,
       "saturation_pct": 0.9,
       "block_cnt": 0,
       "delegator_cnt": 55,
@@ -145,7 +145,7 @@
     {
       "epoch_no": 615,
       "active_stake": "719053008119",
-      "active_stake_pct": 0.003340771303588491,
+      "active_stake_pct": null,
       "saturation_pct": 0.93,
       "block_cnt": 0,
       "delegator_cnt": 55,
@@ -159,7 +159,7 @@
     {
       "epoch_no": 616,
       "active_stake": "670371956693",
-      "active_stake_pct": 0.003107609779954869,
+      "active_stake_pct": null,
       "saturation_pct": 0.87,
       "block_cnt": 1,
       "delegator_cnt": 55,
@@ -173,7 +173,7 @@
     {
       "epoch_no": 617,
       "active_stake": "599575942491",
-      "active_stake_pct": 0.0027566209818906447,
+      "active_stake_pct": null,
       "saturation_pct": 0.78,
       "block_cnt": 0,
       "delegator_cnt": 59,
@@ -207,10 +207,10 @@
       "delegator_cnt": 58,
       "margin": 0.03,
       "fixed_cost": "170000000",
-      "pool_fees": "174351024",
-      "deleg_rewards": "140683102",
-      "member_rewards": "139358141",
-      "epoch_ros": 1.508517913
+      "pool_fees": null,
+      "deleg_rewards": null,
+      "member_rewards": null,
+      "epoch_ros": 0
     },
     {
       "epoch_no": 620,
@@ -255,6 +255,6 @@
       "epoch_ros": 0
     }
   ],
-  "lastUpdated": "2026-04-12T23:21:47.959Z",
+  "lastUpdated": "2026-04-13T23:31:51.362Z",
   "currentEpoch": 624
 }
