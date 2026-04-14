@@ -1,5 +1,20 @@
 [
   {
+    "proposalId": "gov_action1ky2j077de82par6f0hny5q56rpnn5hh0csfhrpzeq3hsk7s6vetqquz3scv",
+    "proposalTxHash": "b11527fbcdc9d41e8f497de64a029a18673a5eefc413718459046f0b7a1a665600",
+    "proposalIndex": 0,
+    "voteTxHash": "70f0032a67dded4fdfe3ab84097a031aeee142f615a555a43db91a2ceb4350d3",
+    "blockTime": "2026-04-14T04:12:44.000Z",
+    "vote": "Yes",
+    "metaUrl": null,
+    "metaHash": null,
+    "proposalTitle": "Pebble + Gerolamo - HLabs 2026 Budget",
+    "proposalType": "TreasuryWithdrawals",
+    "proposedEpoch": 621,
+    "expirationEpoch": 628,
+    "rationale": "No rationale available"
+  },
+  {
     "proposalId": "gov_action1k5vwlfrxtyusd2ec37tckd54gjvqn2kd72xj4t6wkkapdv7zfg0qq468n2r",
     "proposalTxHash": "b518efa466593906ab388f978b3695449809aacdf28d2aaf4eb5ba16b3c24a1e00",
     "proposalIndex": 0,
