@@ -1,58 +1,58 @@
 {
   "github": {
     "core_in_package_json": 1,
-    "core_in_any_file": 73,
+    "core_in_any_file": 74,
     "core_in_repositories": 21
   },
   "npm": {
     "csl_rs_browser": {
       "downloads": {
         "last_day": 0,
-        "last_week": 1006,
+        "last_week": 1297,
         "last_month": 4279,
         "last_year": 53538,
-        "last_12_months": 49188
+        "last_12_months": 49778
       },
       "latest_version": "0.9.21",
-      "dependents_count": 459746
+      "dependents_count": 463092
     },
     "csl_rs_nodejs": {
       "downloads": {
         "last_day": 0,
-        "last_week": 1027,
+        "last_week": 1329,
         "last_month": 4400,
         "last_year": 54440,
-        "last_12_months": 50121
+        "last_12_months": 50680
       },
       "latest_version": "0.9.21",
-      "dependents_count": 360430
+      "dependents_count": 362839
     },
     "whisky_js_browser": {
       "downloads": {
         "last_day": 0,
-        "last_week": 266,
+        "last_week": 249,
         "last_month": 1142,
         "last_year": 8277,
-        "last_12_months": 12677
+        "last_12_months": 12819
       },
       "latest_version": "1.0.28-beta.1",
-      "dependents_count": 1171932
+      "dependents_count": 1176396
     },
     "whisky_js_nodejs": {
       "downloads": {
         "last_day": 0,
-        "last_week": 333,
+        "last_week": 253,
         "last_month": 1132,
         "last_year": 8284,
-        "last_12_months": 12613
+        "last_12_months": 12756
       },
       "latest_version": "1.0.28-beta.1",
-      "dependents_count": 1092917
+      "dependents_count": 1096599
     }
   },
   "urls": {},
   "contributors": {
-    "unique_count": 5031,
+    "unique_count": 5030,
     "contributors": [
       {
         "login": "g1nt0ki",
@@ -219,9 +219,9 @@
       {
         "login": "HinsonSIDAN",
         "avatar_url": "https://avatars.githubusercontent.com/u/90688504?v=4",
-        "commits": 1674,
-        "pull_requests": 147,
-        "contributions": 1821,
+        "commits": 1677,
+        "pull_requests": 148,
+        "contributions": 1825,
         "repositories": [
           {
             "name": "whisky-archive",
@@ -356,16 +356,16 @@
             "contributions": 16
           },
           {
+            "name": "sidanclaw-tools",
+            "commits": 13,
+            "pull_requests": 2,
+            "contributions": 15
+          },
+          {
             "name": "deltadefi-docs",
             "commits": 13,
             "pull_requests": 0,
             "contributions": 13
-          },
-          {
-            "name": "sidanclaw-tools",
-            "commits": 11,
-            "pull_requests": 1,
-            "contributions": 12
           },
           {
             "name": "gov",
@@ -399,9 +399,9 @@
           },
           {
             "name": "sidanclaw-kb-template",
-            "commits": 3,
+            "commits": 4,
             "pull_requests": 1,
-            "contributions": 4
+            "contributions": 5
           },
           {
             "name": "aiken-poker-game",
@@ -985,6 +985,21 @@
         ]
       },
       {
+        "login": "github-actions[bot]",
+        "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+        "commits": 549,
+        "pull_requests": 0,
+        "contributions": 549,
+        "repositories": [
+          {
+            "name": "DRep",
+            "commits": 549,
+            "pull_requests": 0,
+            "contributions": 549
+          }
+        ]
+      },
+      {
         "login": "treeoflife2",
         "avatar_url": "https://avatars.githubusercontent.com/u/203208332?v=4",
         "commits": 545,
@@ -1002,36 +1017,6 @@
             "commits": 13,
             "pull_requests": 0,
             "contributions": 13
-          }
-        ]
-      },
-      {
-        "login": "github-actions[bot]",
-        "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
-        "commits": 538,
-        "pull_requests": 0,
-        "contributions": 538,
-        "repositories": [
-          {
-            "name": "DRep",
-            "commits": 538,
-            "pull_requests": 0,
-            "contributions": 538
-          }
-        ]
-      },
-      {
-        "login": "locallycompact",
-        "avatar_url": "https://avatars.githubusercontent.com/u/1267527?v=4",
-        "commits": 535,
-        "pull_requests": 0,
-        "contributions": 535,
-        "repositories": [
-          {
-            "name": "hydra",
-            "commits": 535,
-            "pull_requests": 0,
-            "contributions": 535
           }
         ]
       },
@@ -1491,15 +1476,15 @@
       {
         "login": "actions-user",
         "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
-        "commits": 143,
+        "commits": 146,
         "pull_requests": 0,
-        "contributions": 143,
+        "contributions": 146,
         "repositories": [
           {
             "name": "DRep",
-            "commits": 143,
+            "commits": 146,
             "pull_requests": 0,
-            "contributions": 143
+            "contributions": 146
           }
         ]
       },
@@ -2401,6 +2386,21 @@
         ]
       },
       {
+        "login": "locallycompact",
+        "avatar_url": "https://avatars.githubusercontent.com/u/1267527?v=4",
+        "commits": 52,
+        "pull_requests": 0,
+        "contributions": 52,
+        "repositories": [
+          {
+            "name": "hydra",
+            "commits": 52,
+            "pull_requests": 0,
+            "contributions": 52
+          }
+        ]
+      },
+      {
         "login": "gtwototoo",
         "avatar_url": "https://avatars.githubusercontent.com/u/230312943?v=4",
         "commits": 52,
@@ -2655,6 +2655,51 @@
             "commits": 42,
             "pull_requests": 0,
             "contributions": 42
+          }
+        ]
+      },
+      {
+        "login": "yyy-tom",
+        "avatar_url": "https://avatars.githubusercontent.com/u/154948854?v=4",
+        "commits": 36,
+        "pull_requests": 5,
+        "contributions": 41,
+        "repositories": [
+          {
+            "name": "hummingbot-strategies",
+            "commits": 20,
+            "pull_requests": 0,
+            "contributions": 20
+          },
+          {
+            "name": "hummingbot",
+            "commits": 11,
+            "pull_requests": 1,
+            "contributions": 12
+          },
+          {
+            "name": "typescript-sdk",
+            "commits": 2,
+            "pull_requests": 1,
+            "contributions": 3
+          },
+          {
+            "name": "python-sdk",
+            "commits": 1,
+            "pull_requests": 1,
+            "contributions": 2
+          },
+          {
+            "name": "go-sdk",
+            "commits": 1,
+            "pull_requests": 1,
+            "contributions": 2
+          },
+          {
+            "name": "rust-sdk",
+            "commits": 1,
+            "pull_requests": 1,
+            "contributions": 2
           }
         ]
       },
@@ -2958,51 +3003,6 @@
             "commits": 6,
             "pull_requests": 0,
             "contributions": 6
-          }
-        ]
-      },
-      {
-        "login": "yyy-tom",
-        "avatar_url": "https://avatars.githubusercontent.com/u/154948854?v=4",
-        "commits": 31,
-        "pull_requests": 5,
-        "contributions": 36,
-        "repositories": [
-          {
-            "name": "hummingbot-strategies",
-            "commits": 15,
-            "pull_requests": 0,
-            "contributions": 15
-          },
-          {
-            "name": "hummingbot",
-            "commits": 11,
-            "pull_requests": 1,
-            "contributions": 12
-          },
-          {
-            "name": "typescript-sdk",
-            "commits": 2,
-            "pull_requests": 1,
-            "contributions": 3
-          },
-          {
-            "name": "python-sdk",
-            "commits": 1,
-            "pull_requests": 1,
-            "contributions": 2
-          },
-          {
-            "name": "go-sdk",
-            "commits": 1,
-            "pull_requests": 1,
-            "contributions": 2
-          },
-          {
-            "name": "rust-sdk",
-            "commits": 1,
-            "pull_requests": 1,
-            "contributions": 2
           }
         ]
       },
@@ -23335,21 +23335,6 @@
         ]
       },
       {
-        "login": "vitalii427",
-        "avatar_url": "https://avatars.githubusercontent.com/u/36993863?v=4",
-        "commits": 4,
-        "pull_requests": 0,
-        "contributions": 4,
-        "repositories": [
-          {
-            "name": "DefiLlama-Adapters",
-            "commits": 4,
-            "pull_requests": 0,
-            "contributions": 4
-          }
-        ]
-      },
-      {
         "login": "gouravnaik",
         "avatar_url": "https://avatars.githubusercontent.com/u/8254713?v=4",
         "commits": 4,
@@ -42121,7 +42106,7 @@
         ]
       },
       {
-        "login": "danielfarrelly",
+        "login": "dfar-sga",
         "avatar_url": "https://avatars.githubusercontent.com/u/98325361?v=4",
         "commits": 2,
         "pull_requests": 0,
@@ -80476,8 +80461,8 @@
         ]
       }
     ],
-    "total_pull_requests": 617,
-    "total_commits": 83916,
-    "total_contributions": 84533
+    "total_pull_requests": 618,
+    "total_commits": 83451,
+    "total_contributions": 84069
   }
 }
