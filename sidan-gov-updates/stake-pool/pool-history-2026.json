@@ -173,7 +173,7 @@
     {
       "epoch_no": 617,
       "active_stake": "599575942491",
-      "active_stake_pct": 0.0027566209818906447,
+      "active_stake_pct": null,
       "saturation_pct": 0.78,
       "block_cnt": 0,
       "delegator_cnt": 59,
@@ -339,6 +339,6 @@
       "epoch_ros": 1.587967005
     }
   ],
-  "lastUpdated": "2026-05-09T23:33:44.566Z",
+  "lastUpdated": "2026-05-10T23:37:25.466Z",
   "currentEpoch": 630
 }
