@@ -173,7 +173,7 @@
     {
       "epoch_no": 617,
       "active_stake": "599575942491",
-      "active_stake_pct": null,
+      "active_stake_pct": 0.0027566209818906447,
       "saturation_pct": 0.78,
       "block_cnt": 0,
       "delegator_cnt": 59,
@@ -337,8 +337,22 @@
       "deleg_rewards": "134883977",
       "member_rewards": "133681016",
       "epoch_ros": 1.587967005
+    },
+    {
+      "epoch_no": 629,
+      "active_stake": "625103802730",
+      "active_stake_pct": 0.0028717126107823967,
+      "saturation_pct": 0.81,
+      "block_cnt": 0,
+      "delegator_cnt": 59,
+      "margin": 0.03,
+      "fixed_cost": "170000000",
+      "pool_fees": "0",
+      "deleg_rewards": "0",
+      "member_rewards": "0",
+      "epoch_ros": 0
     }
   ],
-  "lastUpdated": "2026-05-13T23:44:30.647Z",
-  "currentEpoch": 630
+  "lastUpdated": "2026-05-14T23:42:32.089Z",
+  "currentEpoch": 631
 }
