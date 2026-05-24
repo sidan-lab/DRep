@@ -1,5 +1,20 @@
 [
   {
+    "proposalId": "gov_action1ggr2uz7prwn5l84cdn2krwngfez0p7wluy4u3u3ez9pz5ls2whesqnsjly8",
+    "proposalTxHash": "4206ae0bc11ba74f9eb86cd561ba684e44f0f9dfe12bc8f23911422a7e0a75f300",
+    "proposalIndex": 0,
+    "voteTxHash": "ab80ae0f96accd126bb570b3fbf155ba9080771485bfaac09a910df46b4b5e69",
+    "blockTime": "2026-05-24T04:15:12.000Z",
+    "vote": "Yes",
+    "metaUrl": null,
+    "metaHash": null,
+    "proposalTitle": "Pebble & Ecosystem maintenance: TypeScript core of Cardano",
+    "proposalType": "TreasuryWithdrawals",
+    "proposedEpoch": 629,
+    "expirationEpoch": 636,
+    "rationale": "No rationale available"
+  },
+  {
     "proposalId": "gov_action1w0shrfxqwv95kk0v4cn34wylz25a2cmqkq5jpc0e2yrahhqava3qqfu3vtv",
     "proposalTxHash": "73e171a4c0730b4b59ecae271ab89f12a9d56360b02920e1f95107dbdc1d676200",
     "proposalIndex": 0,
