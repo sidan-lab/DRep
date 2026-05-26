@@ -1,5 +1,20 @@
 [
   {
+    "proposalId": "gov_action19avrmrhm0gqa4qwlgvh4vxj6nwe02ay42h828cva2zt6n0asddfqqtgph5d",
+    "proposalTxHash": "2f583d8efb7a01da81df432f561a5a9bb2f5749555cea3e19d5097a9bfb06b5200",
+    "proposalIndex": 0,
+    "voteTxHash": "fb85f3e277f792a11a9fc379c5e86733ce309f428a942c20833f3ec19391078e",
+    "blockTime": "2026-05-26T17:43:54.000Z",
+    "vote": "No",
+    "metaUrl": null,
+    "metaHash": null,
+    "proposalTitle": "[OriLife × TonFarm] Identifying 180 Million Durians Without Physical Labels",
+    "proposalType": "TreasuryWithdrawals",
+    "proposedEpoch": 628,
+    "expirationEpoch": 635,
+    "rationale": "No rationale available"
+  },
+  {
     "proposalId": "gov_action1ggr2uz7prwn5l84cdn2krwngfez0p7wluy4u3u3ez9pz5ls2whesqnsjly8",
     "proposalTxHash": "4206ae0bc11ba74f9eb86cd561ba684e44f0f9dfe12bc8f23911422a7e0a75f300",
     "proposalIndex": 0,
