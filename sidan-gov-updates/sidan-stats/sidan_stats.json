@@ -2,57 +2,57 @@
   "github": {
     "core_in_package_json": 1,
     "core_in_any_file": 78,
-    "core_in_repositories": 21
+    "core_in_repositories": 22
   },
   "npm": {
     "csl_rs_browser": {
       "downloads": {
         "last_day": 0,
-        "last_week": 1063,
+        "last_week": 2134,
         "last_month": 4533,
         "last_year": 53538,
-        "last_12_months": 50234
+        "last_12_months": 53327
       },
       "latest_version": "0.9.21",
-      "dependents_count": 469493
+      "dependents_count": 475747
     },
     "csl_rs_nodejs": {
       "downloads": {
         "last_day": 0,
-        "last_week": 988,
+        "last_week": 2212,
         "last_month": 4617,
         "last_year": 54440,
-        "last_12_months": 51024
+        "last_12_months": 54356
       },
       "latest_version": "0.9.21",
-      "dependents_count": 367076
+      "dependents_count": 370957
     },
     "whisky_js_browser": {
       "downloads": {
         "last_day": 0,
-        "last_week": 235,
+        "last_week": 157,
         "last_month": 1017,
         "last_year": 8277,
-        "last_12_months": 13007
+        "last_12_months": 13054
       },
       "latest_version": "1.0.28-beta.1",
-      "dependents_count": 1185433
+      "dependents_count": 1194469
     },
     "whisky_js_nodejs": {
       "downloads": {
         "last_day": 0,
-        "last_week": 278,
+        "last_week": 193,
         "last_month": 1106,
         "last_year": 8284,
-        "last_12_months": 13053
+        "last_12_months": 13071
       },
       "latest_version": "1.0.28-beta.1",
-      "dependents_count": 1103812
+      "dependents_count": 1110853
     }
   },
   "urls": {},
   "contributors": {
-    "unique_count": 5034,
+    "unique_count": 5035,
     "contributors": [
       {
         "login": "g1nt0ki",
@@ -198,9 +198,9 @@
       {
         "login": "HinsonSIDAN",
         "avatar_url": "https://avatars.githubusercontent.com/u/90688504?v=4",
-        "commits": 1745,
+        "commits": 1749,
         "pull_requests": 148,
-        "contributions": 1893,
+        "contributions": 1897,
         "repositories": [
           {
             "name": "whisky-archive",
@@ -246,9 +246,9 @@
           },
           {
             "name": "cardano-ambassador-tool",
-            "commits": 63,
+            "commits": 65,
             "pull_requests": 0,
-            "contributions": 63
+            "contributions": 65
           },
           {
             "name": "plutus-cborhex-automation",
@@ -335,6 +335,12 @@
             "contributions": 19
           },
           {
+            "name": "gov",
+            "commits": 17,
+            "pull_requests": 0,
+            "contributions": 17
+          },
+          {
             "name": "sidan-binance-py",
             "commits": 16,
             "pull_requests": 0,
@@ -344,12 +350,6 @@
             "name": "sidanclaw-tools",
             "commits": 13,
             "pull_requests": 2,
-            "contributions": 15
-          },
-          {
-            "name": "gov",
-            "commits": 15,
-            "pull_requests": 0,
             "contributions": 15
           },
           {
@@ -972,9 +972,9 @@
       {
         "login": "kenlau666",
         "avatar_url": "https://avatars.githubusercontent.com/u/98103533?v=4",
-        "commits": 509,
-        "pull_requests": 88,
-        "contributions": 597,
+        "commits": 514,
+        "pull_requests": 90,
+        "contributions": 604,
         "repositories": [
           {
             "name": "starka",
@@ -996,9 +996,9 @@
           },
           {
             "name": "khor",
-            "commits": 72,
-            "pull_requests": 12,
-            "contributions": 84
+            "commits": 76,
+            "pull_requests": 14,
+            "contributions": 90
           },
           {
             "name": "hibiki",
@@ -1067,10 +1067,31 @@
             "contributions": 1
           },
           {
+            "name": "rust-sdk",
+            "commits": 1,
+            "pull_requests": 0,
+            "contributions": 1
+          },
+          {
             "name": "bowmore",
             "commits": 0,
             "pull_requests": 1,
             "contributions": 1
+          }
+        ]
+      },
+      {
+        "login": "github-actions[bot]",
+        "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+        "commits": 595,
+        "pull_requests": 0,
+        "contributions": 595,
+        "repositories": [
+          {
+            "name": "DRep",
+            "commits": 595,
+            "pull_requests": 0,
+            "contributions": 595
           }
         ]
       },
@@ -1092,21 +1113,6 @@
             "commits": 34,
             "pull_requests": 0,
             "contributions": 34
-          }
-        ]
-      },
-      {
-        "login": "github-actions[bot]",
-        "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
-        "commits": 569,
-        "pull_requests": 0,
-        "contributions": 569,
-        "repositories": [
-          {
-            "name": "DRep",
-            "commits": 569,
-            "pull_requests": 0,
-            "contributions": 569
           }
         ]
       },
@@ -1488,15 +1494,15 @@
       {
         "login": "actions-user",
         "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
-        "commits": 152,
+        "commits": 158,
         "pull_requests": 0,
-        "contributions": 152,
+        "contributions": 158,
         "repositories": [
           {
             "name": "DRep",
-            "commits": 152,
+            "commits": 158,
             "pull_requests": 0,
-            "contributions": 152
+            "contributions": 158
           }
         ]
       },
@@ -1945,14 +1951,14 @@
         "login": "leuhk",
         "avatar_url": "https://avatars.githubusercontent.com/u/44567291?v=4",
         "commits": 41,
-        "pull_requests": 41,
-        "contributions": 82,
+        "pull_requests": 42,
+        "contributions": 83,
         "repositories": [
           {
             "name": "hibiki",
             "commits": 11,
-            "pull_requests": 15,
-            "contributions": 26
+            "pull_requests": 16,
+            "contributions": 27
           },
           {
             "name": "hydra",
@@ -2548,6 +2554,51 @@
         ]
       },
       {
+        "login": "yyy-tom",
+        "avatar_url": "https://avatars.githubusercontent.com/u/154948854?v=4",
+        "commits": 43,
+        "pull_requests": 5,
+        "contributions": 48,
+        "repositories": [
+          {
+            "name": "hummingbot-strategies",
+            "commits": 27,
+            "pull_requests": 0,
+            "contributions": 27
+          },
+          {
+            "name": "hummingbot",
+            "commits": 11,
+            "pull_requests": 1,
+            "contributions": 12
+          },
+          {
+            "name": "typescript-sdk",
+            "commits": 2,
+            "pull_requests": 1,
+            "contributions": 3
+          },
+          {
+            "name": "python-sdk",
+            "commits": 1,
+            "pull_requests": 1,
+            "contributions": 2
+          },
+          {
+            "name": "go-sdk",
+            "commits": 1,
+            "pull_requests": 1,
+            "contributions": 2
+          },
+          {
+            "name": "rust-sdk",
+            "commits": 1,
+            "pull_requests": 1,
+            "contributions": 2
+          }
+        ]
+      },
+      {
         "login": "rphair",
         "avatar_url": "https://avatars.githubusercontent.com/u/2572798?v=4",
         "commits": 47,
@@ -2664,51 +2715,6 @@
             "commits": 2,
             "pull_requests": 1,
             "contributions": 3
-          }
-        ]
-      },
-      {
-        "login": "yyy-tom",
-        "avatar_url": "https://avatars.githubusercontent.com/u/154948854?v=4",
-        "commits": 39,
-        "pull_requests": 5,
-        "contributions": 44,
-        "repositories": [
-          {
-            "name": "hummingbot-strategies",
-            "commits": 23,
-            "pull_requests": 0,
-            "contributions": 23
-          },
-          {
-            "name": "hummingbot",
-            "commits": 11,
-            "pull_requests": 1,
-            "contributions": 12
-          },
-          {
-            "name": "typescript-sdk",
-            "commits": 2,
-            "pull_requests": 1,
-            "contributions": 3
-          },
-          {
-            "name": "python-sdk",
-            "commits": 1,
-            "pull_requests": 1,
-            "contributions": 2
-          },
-          {
-            "name": "go-sdk",
-            "commits": 1,
-            "pull_requests": 1,
-            "contributions": 2
-          },
-          {
-            "name": "rust-sdk",
-            "commits": 1,
-            "pull_requests": 1,
-            "contributions": 2
           }
         ]
       },
@@ -13954,7 +13960,7 @@
         ]
       },
       {
-        "login": "denaria-finance",
+        "login": "denaria-team",
         "avatar_url": "https://avatars.githubusercontent.com/u/202669222?v=4",
         "commits": 6,
         "pull_requests": 0,
@@ -19255,7 +19261,7 @@
         ]
       },
       {
-        "login": "chase-manning",
+        "login": "chase-9234",
         "avatar_url": "https://avatars.githubusercontent.com/u/53957795?v=4",
         "commits": 5,
         "pull_requests": 0,
@@ -31591,7 +31597,7 @@
         ]
       },
       {
-        "login": "cyan-inkk",
+        "login": "dennischi99",
         "avatar_url": "https://avatars.githubusercontent.com/u/93210266?v=4",
         "commits": 3,
         "pull_requests": 0,
@@ -37444,6 +37450,27 @@
         ]
       },
       {
+        "login": "nj-capybaralabs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/284860220?v=4",
+        "commits": 2,
+        "pull_requests": 0,
+        "contributions": 2,
+        "repositories": [
+          {
+            "name": "DefiLlama-Adapters",
+            "commits": 1,
+            "pull_requests": 0,
+            "contributions": 1
+          },
+          {
+            "name": "dimension-adapters",
+            "commits": 1,
+            "pull_requests": 0,
+            "contributions": 1
+          }
+        ]
+      },
+      {
         "login": "ricomiles",
         "avatar_url": "https://avatars.githubusercontent.com/u/120778516?v=4",
         "commits": 2,
@@ -42124,7 +42151,7 @@
         ]
       },
       {
-        "login": "fulirockx",
+        "login": "WarwickGeorge326",
         "avatar_url": "https://avatars.githubusercontent.com/u/92199640?v=4",
         "commits": 2,
         "pull_requests": 0,
@@ -45844,7 +45871,7 @@
         ]
       },
       {
-        "login": "rax667",
+        "login": "0xAtaraxos",
         "avatar_url": "https://avatars.githubusercontent.com/u/192471008?v=4",
         "commits": 2,
         "pull_requests": 0,
@@ -75004,7 +75031,7 @@
         ]
       },
       {
-        "login": "webridechef",
+        "login": "webribechef",
         "avatar_url": "https://avatars.githubusercontent.com/u/98139674?v=4",
         "commits": 1,
         "pull_requests": 0,
@@ -79384,7 +79411,7 @@
         ]
       },
       {
-        "login": "serebryany-art",
+        "login": "p-serebryany",
         "avatar_url": "https://avatars.githubusercontent.com/u/282836087?v=4",
         "commits": 1,
         "pull_requests": 0,
@@ -80539,8 +80566,8 @@
         ]
       }
     ],
-    "total_pull_requests": 621,
-    "total_commits": 83258,
-    "total_contributions": 83879
+    "total_pull_requests": 624,
+    "total_commits": 83305,
+    "total_contributions": 83929
   }
 }
