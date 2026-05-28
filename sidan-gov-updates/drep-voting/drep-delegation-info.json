@@ -514,10 +514,10 @@
     "amount": "21046029324340",
     "active": true,
     "registered": false,
-    "expires_epoch_no": 652,
+    "expires_epoch_no": 653,
     "meta_url": "https://raw.githubusercontent.com/sidan-lab/DRep/refs/heads/main/sidan_lab_drep_metadata.jsonld",
     "meta_hash": "6e7632a67312ef08bbde4e2f2414fdbf4ef2fcddf3df7e24a7a0fddb16d031f7",
-    "last_updated": "2026-05-25T04:54:32.045Z",
-    "total_drep_proposals": 56
+    "last_updated": "2026-05-28T04:45:21.464Z",
+    "total_drep_proposals": 60
   }
 }
