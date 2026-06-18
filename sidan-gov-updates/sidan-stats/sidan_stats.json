@@ -8,51 +8,51 @@
     "csl_rs_browser": {
       "downloads": {
         "last_day": 0,
-        "last_week": 1896,
+        "last_week": 1881,
         "last_month": 8583,
         "last_year": 53538,
-        "last_12_months": 53937
+        "last_12_months": 55124
       },
       "latest_version": "0.9.21",
-      "dependents_count": 479573
+      "dependents_count": 486884
     },
     "csl_rs_nodejs": {
       "downloads": {
         "last_day": 0,
-        "last_week": 1843,
+        "last_week": 2037,
         "last_month": 8563,
         "last_year": 54440,
-        "last_12_months": 54909
+        "last_12_months": 56545
       },
       "latest_version": "0.9.21",
-      "dependents_count": 373443
+      "dependents_count": 378236
     },
     "whisky_js_browser": {
       "downloads": {
         "last_day": 0,
-        "last_week": 217,
+        "last_week": 214,
         "last_month": 945,
         "last_year": 8277,
-        "last_12_months": 13237
+        "last_12_months": 13372
       },
       "latest_version": "1.0.28-beta.1",
-      "dependents_count": 1199177
+      "dependents_count": 1208791
     },
     "whisky_js_nodejs": {
       "downloads": {
         "last_day": 0,
-        "last_week": 319,
+        "last_week": 309,
         "last_month": 1103,
         "last_year": 8284,
-        "last_12_months": 13360
+        "last_12_months": 13622
       },
       "latest_version": "1.0.28-beta.1",
-      "dependents_count": 1114494
+      "dependents_count": 1122018
     }
   },
   "urls": {},
   "contributors": {
-    "unique_count": 5035,
+    "unique_count": 5033,
     "contributors": [
       {
         "login": "g1nt0ki",
@@ -196,11 +196,32 @@
         ]
       },
       {
+        "login": "realdealshaman",
+        "avatar_url": "https://avatars.githubusercontent.com/u/85087525?v=4",
+        "commits": 1884,
+        "pull_requests": 0,
+        "contributions": 1884,
+        "repositories": [
+          {
+            "name": "DefiLlama-Adapters",
+            "commits": 1788,
+            "pull_requests": 0,
+            "contributions": 1788
+          },
+          {
+            "name": "dimension-adapters",
+            "commits": 96,
+            "pull_requests": 0,
+            "contributions": 96
+          }
+        ]
+      },
+      {
         "login": "HinsonSIDAN",
         "avatar_url": "https://avatars.githubusercontent.com/u/90688504?v=4",
-        "commits": 1749,
-        "pull_requests": 148,
-        "contributions": 1897,
+        "commits": 1732,
+        "pull_requests": 145,
+        "contributions": 1877,
         "repositories": [
           {
             "name": "whisky-archive",
@@ -347,12 +368,6 @@
             "contributions": 16
           },
           {
-            "name": "sidanclaw-tools",
-            "commits": 13,
-            "pull_requests": 2,
-            "contributions": 15
-          },
-          {
             "name": "deltadefi-docs",
             "commits": 13,
             "pull_requests": 0,
@@ -381,12 +396,6 @@
             "commits": 6,
             "pull_requests": 0,
             "contributions": 6
-          },
-          {
-            "name": "sidanclaw-kb-template",
-            "commits": 4,
-            "pull_requests": 1,
-            "contributions": 5
           },
           {
             "name": "aiken-poker-game",
@@ -507,27 +516,6 @@
             "commits": 1,
             "pull_requests": 0,
             "contributions": 1
-          }
-        ]
-      },
-      {
-        "login": "realdealshaman",
-        "avatar_url": "https://avatars.githubusercontent.com/u/85087525?v=4",
-        "commits": 1884,
-        "pull_requests": 0,
-        "contributions": 1884,
-        "repositories": [
-          {
-            "name": "DefiLlama-Adapters",
-            "commits": 1788,
-            "pull_requests": 0,
-            "contributions": 1788
-          },
-          {
-            "name": "dimension-adapters",
-            "commits": 96,
-            "pull_requests": 0,
-            "contributions": 96
           }
         ]
       },
@@ -865,6 +853,21 @@
         ]
       },
       {
+        "login": "github-actions[bot]",
+        "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+        "commits": 625,
+        "pull_requests": 0,
+        "contributions": 625,
+        "repositories": [
+          {
+            "name": "DRep",
+            "commits": 625,
+            "pull_requests": 0,
+            "contributions": 625
+          }
+        ]
+      },
+      {
         "login": "AnsonSIDAN",
         "avatar_url": "https://avatars.githubusercontent.com/u/91122558?v=4",
         "commits": 402,
@@ -966,21 +969,6 @@
             "commits": 1,
             "pull_requests": 0,
             "contributions": 1
-          }
-        ]
-      },
-      {
-        "login": "github-actions[bot]",
-        "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
-        "commits": 605,
-        "pull_requests": 0,
-        "contributions": 605,
-        "repositories": [
-          {
-            "name": "DRep",
-            "commits": 605,
-            "pull_requests": 0,
-            "contributions": 605
           }
         ]
       },
@@ -1462,6 +1450,21 @@
         ]
       },
       {
+        "login": "actions-user",
+        "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
+        "commits": 167,
+        "pull_requests": 0,
+        "contributions": 167,
+        "repositories": [
+          {
+            "name": "DRep",
+            "commits": 167,
+            "pull_requests": 0,
+            "contributions": 167
+          }
+        ]
+      },
+      {
         "login": "0xStrobe",
         "avatar_url": "https://avatars.githubusercontent.com/u/107649472?v=4",
         "commits": 167,
@@ -1473,21 +1476,6 @@
             "commits": 167,
             "pull_requests": 0,
             "contributions": 167
-          }
-        ]
-      },
-      {
-        "login": "actions-user",
-        "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
-        "commits": 161,
-        "pull_requests": 0,
-        "contributions": 161,
-        "repositories": [
-          {
-            "name": "DRep",
-            "commits": 161,
-            "pull_requests": 0,
-            "contributions": 161
           }
         ]
       },
@@ -10540,7 +10528,7 @@
         ]
       },
       {
-        "login": "RodeRickIsWatching",
+        "login": "roderick7890",
         "avatar_url": "https://avatars.githubusercontent.com/u/43104791?v=4",
         "commits": 9,
         "pull_requests": 0,
@@ -19261,7 +19249,7 @@
         ]
       },
       {
-        "login": "chase-9234",
+        "login": "chase-mew",
         "avatar_url": "https://avatars.githubusercontent.com/u/53957795?v=4",
         "commits": 5,
         "pull_requests": 0,
@@ -34560,21 +34548,6 @@
       {
         "login": "muhammadabubakar7526",
         "avatar_url": "https://avatars.githubusercontent.com/u/81152955?v=4",
-        "commits": 2,
-        "pull_requests": 0,
-        "contributions": 2,
-        "repositories": [
-          {
-            "name": "DefiLlama-Adapters",
-            "commits": 2,
-            "pull_requests": 0,
-            "contributions": 2
-          }
-        ]
-      },
-      {
-        "login": "ra2-alfred-g",
-        "avatar_url": "https://avatars.githubusercontent.com/u/266683264?v=4",
         "commits": 2,
         "pull_requests": 0,
         "contributions": 2,
@@ -52441,7 +52414,7 @@
         ]
       },
       {
-        "login": "newtoontv",
+        "login": "mrnewtoon",
         "avatar_url": "https://avatars.githubusercontent.com/u/85729914?v=4",
         "commits": 1,
         "pull_requests": 0,
@@ -56776,7 +56749,7 @@
         ]
       },
       {
-        "login": "weitude",
+        "login": "ericcwlin",
         "avatar_url": "https://avatars.githubusercontent.com/u/98746868?v=4",
         "commits": 1,
         "pull_requests": 0,
@@ -59446,7 +59419,7 @@
         ]
       },
       {
-        "login": "siddhidotfun",
+        "login": "hopedotfun",
         "avatar_url": "https://avatars.githubusercontent.com/u/182729078?v=4",
         "commits": 1,
         "pull_requests": 0,
@@ -80146,21 +80119,6 @@
         ]
       },
       {
-        "login": "zfesd",
-        "avatar_url": "https://avatars.githubusercontent.com/u/83671949?v=4",
-        "commits": 1,
-        "pull_requests": 0,
-        "contributions": 1,
-        "repositories": [
-          {
-            "name": "dimension-adapters",
-            "commits": 1,
-            "pull_requests": 0,
-            "contributions": 1
-          }
-        ]
-      },
-      {
         "login": "rencryptofish",
         "avatar_url": "https://avatars.githubusercontent.com/u/84360463?v=4",
         "commits": 1,
@@ -80566,8 +80524,8 @@
         ]
       }
     ],
-    "total_pull_requests": 624,
-    "total_commits": 83317,
-    "total_contributions": 83941
+    "total_pull_requests": 621,
+    "total_commits": 83323,
+    "total_contributions": 83944
   }
 }
