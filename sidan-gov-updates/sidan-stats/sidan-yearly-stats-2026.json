@@ -46,7 +46,7 @@
       {
         "month": "August",
         "downloads": 0,
-        "trend": "➡️"
+        "trend": "🔥"
       },
       {
         "month": "September",
@@ -108,7 +108,7 @@
       {
         "month": "August",
         "downloads": 0,
-        "trend": "➡️"
+        "trend": "🔥"
       },
       {
         "month": "September",
@@ -170,7 +170,7 @@
       {
         "month": "August",
         "downloads": 0,
-        "trend": "➡️"
+        "trend": "🔥"
       },
       {
         "month": "September",
@@ -232,7 +232,7 @@
       {
         "month": "August",
         "downloads": 0,
-        "trend": "➡️"
+        "trend": "🔥"
       },
       {
         "month": "September",
@@ -301,9 +301,9 @@
     },
     {
       "month": "August",
-      "projects": 0,
-      "files": 0,
-      "repositories": 0
+      "projects": 1,
+      "files": 91,
+      "repositories": 24
     },
     {
       "month": "September",
@@ -348,5 +348,5 @@
       "downloads": 0
     }
   },
-  "lastUpdated": "2026-07-30T02:16:00.438Z"
+  "lastUpdated": "2026-08-13T01:59:35.978Z"
 }
