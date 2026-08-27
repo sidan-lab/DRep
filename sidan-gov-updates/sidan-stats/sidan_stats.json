@@ -8,46 +8,46 @@
     "csl_rs_browser": {
       "downloads": {
         "last_day": 0,
-        "last_week": 1703,
+        "last_week": 1603,
         "last_month": 8858,
         "last_year": 53538,
-        "last_12_months": 62387
+        "last_12_months": 63061
       },
       "latest_version": "0.9.21",
-      "dependents_count": 519004
+      "dependents_count": 524646
     },
     "csl_rs_nodejs": {
       "downloads": {
         "last_day": 0,
-        "last_week": 1199,
+        "last_week": 1597,
         "last_month": 9665,
         "last_year": 54440,
-        "last_12_months": 64596
+        "last_12_months": 65248
       },
       "latest_version": "0.9.21",
-      "dependents_count": 394892
+      "dependents_count": 397977
     },
     "whisky_js_browser": {
       "downloads": {
         "last_day": 0,
-        "last_week": 223,
+        "last_week": 291,
         "last_month": 1382,
         "last_year": 8277,
-        "last_12_months": 13662
+        "last_12_months": 13851
       },
       "latest_version": "1.0.28-beta.1",
-      "dependents_count": 1256454
+      "dependents_count": 1263246
     },
     "whisky_js_nodejs": {
       "downloads": {
         "last_day": 0,
-        "last_week": 272,
+        "last_week": 289,
         "last_month": 1040,
         "last_year": 8284,
-        "last_12_months": 13768
+        "last_12_months": 13958
       },
       "latest_version": "1.0.28-beta.1",
-      "dependents_count": 1156682
+      "dependents_count": 1161163
     }
   },
   "urls": {},
@@ -825,15 +825,15 @@
       {
         "login": "github-actions[bot]",
         "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
-        "commits": 714,
+        "commits": 724,
         "pull_requests": 0,
-        "contributions": 714,
+        "contributions": 724,
         "repositories": [
           {
             "name": "DRep",
-            "commits": 714,
+            "commits": 724,
             "pull_requests": 0,
-            "contributions": 714
+            "contributions": 724
           }
         ]
       },
@@ -1371,15 +1371,15 @@
       {
         "login": "actions-user",
         "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
-        "commits": 194,
+        "commits": 197,
         "pull_requests": 0,
-        "contributions": 194,
+        "contributions": 197,
         "repositories": [
           {
             "name": "DRep",
-            "commits": 194,
+            "commits": 197,
             "pull_requests": 0,
-            "contributions": 194
+            "contributions": 197
           }
         ]
       },
@@ -10018,7 +10018,7 @@
         ]
       },
       {
-        "login": "backgroundjun",
+        "login": "5-4-1",
         "avatar_url": "https://avatars.githubusercontent.com/u/93336448?v=4",
         "commits": 9,
         "pull_requests": 0,
@@ -31852,7 +31852,7 @@
         ]
       },
       {
-        "login": "snehilms",
+        "login": "snehil-scrypt",
         "avatar_url": "https://avatars.githubusercontent.com/u/42109401?v=4",
         "commits": 3,
         "pull_requests": 0,
@@ -59851,7 +59851,7 @@
         ]
       },
       {
-        "login": "zxselimcan",
+        "login": "scnozdemir",
         "avatar_url": "https://avatars.githubusercontent.com/u/116464051?v=4",
         "commits": 1,
         "pull_requests": 0,
@@ -80417,7 +80417,7 @@
       }
     ],
     "total_pull_requests": 623,
-    "total_commits": 83452,
-    "total_contributions": 84075
+    "total_commits": 83465,
+    "total_contributions": 84088
   }
 }
