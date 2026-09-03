@@ -8,46 +8,46 @@
     "csl_rs_browser": {
       "downloads": {
         "last_day": 0,
-        "last_week": 1603,
-        "last_month": 8858,
+        "last_week": 1540,
+        "last_month": 7012,
         "last_year": 53538,
-        "last_12_months": 63061
+        "last_12_months": 63435
       },
       "latest_version": "0.9.21",
-      "dependents_count": 524646
+      "dependents_count": 530025
     },
     "csl_rs_nodejs": {
       "downloads": {
         "last_day": 0,
-        "last_week": 1597,
-        "last_month": 9665,
+        "last_week": 1504,
+        "last_month": 6484,
         "last_year": 54440,
-        "last_12_months": 65248
+        "last_12_months": 65585
       },
       "latest_version": "0.9.21",
-      "dependents_count": 397977
+      "dependents_count": 401176
     },
     "whisky_js_browser": {
       "downloads": {
         "last_day": 0,
-        "last_week": 291,
-        "last_month": 1382,
+        "last_week": 227,
+        "last_month": 1075,
         "last_year": 8277,
-        "last_12_months": 13851
+        "last_12_months": 13931
       },
       "latest_version": "1.0.28-beta.1",
-      "dependents_count": 1263246
+      "dependents_count": 1269698
     },
     "whisky_js_nodejs": {
       "downloads": {
         "last_day": 0,
-        "last_week": 289,
-        "last_month": 1040,
+        "last_week": 231,
+        "last_month": 1036,
         "last_year": 8284,
-        "last_12_months": 13958
+        "last_12_months": 14036
       },
       "latest_version": "1.0.28-beta.1",
-      "dependents_count": 1161163
+      "dependents_count": 1165727
     }
   },
   "urls": {},
@@ -760,6 +760,21 @@
         ]
       },
       {
+        "login": "github-actions[bot]",
+        "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+        "commits": 735,
+        "pull_requests": 0,
+        "contributions": 735,
+        "repositories": [
+          {
+            "name": "DRep",
+            "commits": 735,
+            "pull_requests": 0,
+            "contributions": 735
+          }
+        ]
+      },
+      {
         "login": "twwu123",
         "avatar_url": "https://avatars.githubusercontent.com/u/45336147?v=4",
         "commits": 671,
@@ -819,21 +834,6 @@
             "commits": 1,
             "pull_requests": 0,
             "contributions": 1
-          }
-        ]
-      },
-      {
-        "login": "github-actions[bot]",
-        "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
-        "commits": 724,
-        "pull_requests": 0,
-        "contributions": 724,
-        "repositories": [
-          {
-            "name": "DRep",
-            "commits": 724,
-            "pull_requests": 0,
-            "contributions": 724
           }
         ]
       },
@@ -1371,15 +1371,15 @@
       {
         "login": "actions-user",
         "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
-        "commits": 197,
+        "commits": 200,
         "pull_requests": 0,
-        "contributions": 197,
+        "contributions": 200,
         "repositories": [
           {
             "name": "DRep",
-            "commits": 197,
+            "commits": 200,
             "pull_requests": 0,
-            "contributions": 197
+            "contributions": 200
           }
         ]
       },
@@ -4939,27 +4939,6 @@
         ]
       },
       {
-        "login": "kappayield",
-        "avatar_url": "https://avatars.githubusercontent.com/u/131840920?v=4",
-        "commits": 19,
-        "pull_requests": 0,
-        "contributions": 19,
-        "repositories": [
-          {
-            "name": "DefiLlama-Adapters",
-            "commits": 16,
-            "pull_requests": 0,
-            "contributions": 16
-          },
-          {
-            "name": "dimension-adapters",
-            "commits": 3,
-            "pull_requests": 0,
-            "contributions": 3
-          }
-        ]
-      },
-      {
         "login": "ngfam",
         "avatar_url": "https://avatars.githubusercontent.com/u/57862573?v=4",
         "commits": 19,
@@ -6078,6 +6057,27 @@
             "commits": 7,
             "pull_requests": 0,
             "contributions": 7
+          }
+        ]
+      },
+      {
+        "login": "kappayield",
+        "avatar_url": "https://avatars.githubusercontent.com/u/131840920?v=4",
+        "commits": 15,
+        "pull_requests": 0,
+        "contributions": 15,
+        "repositories": [
+          {
+            "name": "DefiLlama-Adapters",
+            "commits": 12,
+            "pull_requests": 0,
+            "contributions": 12
+          },
+          {
+            "name": "dimension-adapters",
+            "commits": 3,
+            "pull_requests": 0,
+            "contributions": 3
           }
         ]
       },
@@ -26332,6 +26332,21 @@
         ]
       },
       {
+        "login": "theyashgupta",
+        "avatar_url": "https://avatars.githubusercontent.com/u/40074110?v=4",
+        "commits": 3,
+        "pull_requests": 0,
+        "contributions": 3,
+        "repositories": [
+          {
+            "name": "DefiLlama-Adapters",
+            "commits": 3,
+            "pull_requests": 0,
+            "contributions": 3
+          }
+        ]
+      },
+      {
         "login": "ersanyakit",
         "avatar_url": "https://avatars.githubusercontent.com/u/10724463?v=4",
         "commits": 3,
@@ -28738,21 +28753,6 @@
         ]
       },
       {
-        "login": "smartcookie0501",
-        "avatar_url": "https://avatars.githubusercontent.com/u/77334394?v=4",
-        "commits": 3,
-        "pull_requests": 0,
-        "contributions": 3,
-        "repositories": [
-          {
-            "name": "DefiLlama-Adapters",
-            "commits": 3,
-            "pull_requests": 0,
-            "contributions": 3
-          }
-        ]
-      },
-      {
         "login": "b2b-money-org",
         "avatar_url": "https://avatars.githubusercontent.com/u/148764962?v=4",
         "commits": 3,
@@ -29995,7 +29995,7 @@
         ]
       },
       {
-        "login": "DyT9qC",
+        "login": "staticcall",
         "avatar_url": "https://avatars.githubusercontent.com/u/104480715?v=4",
         "commits": 3,
         "pull_requests": 0,
@@ -30406,7 +30406,7 @@
         ]
       },
       {
-        "login": "Sparky-mech",
+        "login": "0xmech",
         "avatar_url": "https://avatars.githubusercontent.com/u/84999895?v=4",
         "commits": 3,
         "pull_requests": 0,
@@ -31809,21 +31809,6 @@
       {
         "login": "nazihkalo",
         "avatar_url": "https://avatars.githubusercontent.com/u/49926988?v=4",
-        "commits": 3,
-        "pull_requests": 0,
-        "contributions": 3,
-        "repositories": [
-          {
-            "name": "dimension-adapters",
-            "commits": 3,
-            "pull_requests": 0,
-            "contributions": 3
-          }
-        ]
-      },
-      {
-        "login": "jyustecastell",
-        "avatar_url": "https://avatars.githubusercontent.com/u/1263509?v=4",
         "commits": 3,
         "pull_requests": 0,
         "contributions": 3,
@@ -35808,21 +35793,6 @@
       {
         "login": "baonguyen1904",
         "avatar_url": "https://avatars.githubusercontent.com/u/151540392?v=4",
-        "commits": 2,
-        "pull_requests": 0,
-        "contributions": 2,
-        "repositories": [
-          {
-            "name": "DefiLlama-Adapters",
-            "commits": 2,
-            "pull_requests": 0,
-            "contributions": 2
-          }
-        ]
-      },
-      {
-        "login": "theyashgupta",
-        "avatar_url": "https://avatars.githubusercontent.com/u/40074110?v=4",
         "commits": 2,
         "pull_requests": 0,
         "contributions": 2,
@@ -46533,6 +46503,21 @@
       {
         "login": "chef-plankton",
         "avatar_url": "https://avatars.githubusercontent.com/u/107023631?v=4",
+        "commits": 2,
+        "pull_requests": 0,
+        "contributions": 2,
+        "repositories": [
+          {
+            "name": "dimension-adapters",
+            "commits": 2,
+            "pull_requests": 0,
+            "contributions": 2
+          }
+        ]
+      },
+      {
+        "login": "jyustecastell",
+        "avatar_url": "https://avatars.githubusercontent.com/u/1263509?v=4",
         "commits": 2,
         "pull_requests": 0,
         "contributions": 2,
@@ -59566,7 +59551,7 @@
         ]
       },
       {
-        "login": "gWhy-j",
+        "login": "dylanghj",
         "avatar_url": "https://avatars.githubusercontent.com/u/73211553?v=4",
         "commits": 1,
         "pull_requests": 0,
@@ -65733,6 +65718,21 @@
       {
         "login": "chadle-git",
         "avatar_url": "https://avatars.githubusercontent.com/u/60274638?v=4",
+        "commits": 1,
+        "pull_requests": 0,
+        "contributions": 1,
+        "repositories": [
+          {
+            "name": "DefiLlama-Adapters",
+            "commits": 1,
+            "pull_requests": 0,
+            "contributions": 1
+          }
+        ]
+      },
+      {
+        "login": "smartcookie0501",
+        "avatar_url": "https://avatars.githubusercontent.com/u/77334394?v=4",
         "commits": 1,
         "pull_requests": 0,
         "contributions": 1,
@@ -80417,7 +80417,7 @@
       }
     ],
     "total_pull_requests": 623,
-    "total_commits": 83465,
-    "total_contributions": 84088
+    "total_commits": 83473,
+    "total_contributions": 84096
   }
 }
