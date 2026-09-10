@@ -8,51 +8,51 @@
     "csl_rs_browser": {
       "downloads": {
         "last_day": 0,
-        "last_week": 1540,
+        "last_week": 806,
         "last_month": 7012,
         "last_year": 53538,
-        "last_12_months": 63435
+        "last_12_months": 63314
       },
       "latest_version": "0.9.21",
-      "dependents_count": 530025
+      "dependents_count": 535523
     },
     "csl_rs_nodejs": {
       "downloads": {
         "last_day": 0,
-        "last_week": 1504,
+        "last_week": 518,
         "last_month": 6484,
         "last_year": 54440,
-        "last_12_months": 65585
+        "last_12_months": 65156
       },
       "latest_version": "0.9.21",
-      "dependents_count": 401176
+      "dependents_count": 404471
     },
     "whisky_js_browser": {
       "downloads": {
         "last_day": 0,
-        "last_week": 227,
+        "last_week": 75,
         "last_month": 1075,
         "last_year": 8277,
-        "last_12_months": 13931
+        "last_12_months": 13759
       },
       "latest_version": "1.0.28-beta.1",
-      "dependents_count": 1269698
+      "dependents_count": 1276360
     },
     "whisky_js_nodejs": {
       "downloads": {
         "last_day": 0,
-        "last_week": 231,
+        "last_week": 112,
         "last_month": 1036,
         "last_year": 8284,
-        "last_12_months": 14036
+        "last_12_months": 13903
       },
       "latest_version": "1.0.28-beta.1",
-      "dependents_count": 1165727
+      "dependents_count": 1170440
     }
   },
   "urls": {},
   "contributors": {
-    "unique_count": 5027,
+    "unique_count": 5026,
     "contributors": [
       {
         "login": "g1nt0ki",
@@ -762,15 +762,15 @@
       {
         "login": "github-actions[bot]",
         "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
-        "commits": 735,
+        "commits": 746,
         "pull_requests": 0,
-        "contributions": 735,
+        "contributions": 746,
         "repositories": [
           {
             "name": "DRep",
-            "commits": 735,
+            "commits": 746,
             "pull_requests": 0,
-            "contributions": 735
+            "contributions": 746
           }
         ]
       },
@@ -1371,15 +1371,15 @@
       {
         "login": "actions-user",
         "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
-        "commits": 200,
+        "commits": 203,
         "pull_requests": 0,
-        "contributions": 200,
+        "contributions": 203,
         "repositories": [
           {
             "name": "DRep",
-            "commits": 200,
+            "commits": 203,
             "pull_requests": 0,
-            "contributions": 200
+            "contributions": 203
           }
         ]
       },
@@ -15898,7 +15898,7 @@
         ]
       },
       {
-        "login": "linhdt-teko",
+        "login": "zur0-1",
         "avatar_url": "https://avatars.githubusercontent.com/u/47734766?v=4",
         "commits": 5,
         "pull_requests": 0,
@@ -20962,7 +20962,7 @@
         ]
       },
       {
-        "login": "GalaxySciTech",
+        "login": "RunlaiDeng",
         "avatar_url": "https://avatars.githubusercontent.com/u/30950645?v=4",
         "commits": 4,
         "pull_requests": 0,
@@ -23442,21 +23442,6 @@
       {
         "login": "RusSatellite",
         "avatar_url": "https://avatars.githubusercontent.com/u/100784721?v=4",
-        "commits": 4,
-        "pull_requests": 0,
-        "contributions": 4,
-        "repositories": [
-          {
-            "name": "DefiLlama-Adapters",
-            "commits": 4,
-            "pull_requests": 0,
-            "contributions": 4
-          }
-        ]
-      },
-      {
-        "login": "tomdoeverything",
-        "avatar_url": "https://avatars.githubusercontent.com/u/87769796?v=4",
         "commits": 4,
         "pull_requests": 0,
         "contributions": 4,
@@ -65731,7 +65716,7 @@
         ]
       },
       {
-        "login": "smartcookie0501",
+        "login": "drvlad0914",
         "avatar_url": "https://avatars.githubusercontent.com/u/77334394?v=4",
         "commits": 1,
         "pull_requests": 0,
@@ -67621,7 +67606,7 @@
         ]
       },
       {
-        "login": "shinobu1729",
+        "login": "shinoworks",
         "avatar_url": "https://avatars.githubusercontent.com/u/123061580?v=4",
         "commits": 1,
         "pull_requests": 0,
@@ -80417,7 +80402,7 @@
       }
     ],
     "total_pull_requests": 623,
-    "total_commits": 83473,
-    "total_contributions": 84096
+    "total_commits": 83483,
+    "total_contributions": 84106
   }
 }
