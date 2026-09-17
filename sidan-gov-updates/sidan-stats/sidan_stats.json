@@ -8,51 +8,51 @@
     "csl_rs_browser": {
       "downloads": {
         "last_day": 0,
-        "last_week": 806,
+        "last_week": 598,
         "last_month": 7012,
         "last_year": 53538,
-        "last_12_months": 63314
+        "last_12_months": 62978
       },
       "latest_version": "0.9.21",
-      "dependents_count": 535523
+      "dependents_count": 540501
     },
     "csl_rs_nodejs": {
       "downloads": {
         "last_day": 0,
-        "last_week": 518,
+        "last_week": 598,
         "last_month": 6484,
         "last_year": 54440,
-        "last_12_months": 65156
+        "last_12_months": 64798
       },
       "latest_version": "0.9.21",
-      "dependents_count": 404471
+      "dependents_count": 407361
     },
     "whisky_js_browser": {
       "downloads": {
         "last_day": 0,
-        "last_week": 75,
+        "last_week": 134,
         "last_month": 1075,
         "last_year": 8277,
-        "last_12_months": 13759
+        "last_12_months": 13612
       },
       "latest_version": "1.0.28-beta.1",
-      "dependents_count": 1276360
+      "dependents_count": 1282684
     },
     "whisky_js_nodejs": {
       "downloads": {
         "last_day": 0,
-        "last_week": 112,
+        "last_week": 204,
         "last_month": 1036,
         "last_year": 8284,
-        "last_12_months": 13903
+        "last_12_months": 13823
       },
       "latest_version": "1.0.28-beta.1",
-      "dependents_count": 1170440
+      "dependents_count": 1175020
     }
   },
   "urls": {},
   "contributors": {
-    "unique_count": 5026,
+    "unique_count": 5030,
     "contributors": [
       {
         "login": "g1nt0ki",
@@ -762,15 +762,15 @@
       {
         "login": "github-actions[bot]",
         "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
-        "commits": 746,
+        "commits": 757,
         "pull_requests": 0,
-        "contributions": 746,
+        "contributions": 757,
         "repositories": [
           {
             "name": "DRep",
-            "commits": 746,
+            "commits": 757,
             "pull_requests": 0,
-            "contributions": 746
+            "contributions": 757
           }
         ]
       },
@@ -1371,15 +1371,15 @@
       {
         "login": "actions-user",
         "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
-        "commits": 203,
+        "commits": 206,
         "pull_requests": 0,
-        "contributions": 203,
+        "contributions": 206,
         "repositories": [
           {
             "name": "DRep",
-            "commits": 203,
+            "commits": 206,
             "pull_requests": 0,
-            "contributions": 203
+            "contributions": 206
           }
         ]
       },
@@ -1807,27 +1807,6 @@
         ]
       },
       {
-        "login": "vrtnd",
-        "avatar_url": "https://avatars.githubusercontent.com/u/31341205?v=4",
-        "commits": 95,
-        "pull_requests": 0,
-        "contributions": 95,
-        "repositories": [
-          {
-            "name": "DefiLlama-Adapters",
-            "commits": 57,
-            "pull_requests": 0,
-            "contributions": 57
-          },
-          {
-            "name": "dimension-adapters",
-            "commits": 38,
-            "pull_requests": 0,
-            "contributions": 38
-          }
-        ]
-      },
-      {
         "login": "shinitakunai",
         "avatar_url": "https://avatars.githubusercontent.com/u/87251045?v=4",
         "commits": 93,
@@ -1917,6 +1896,42 @@
             "commits": 89,
             "pull_requests": 0,
             "contributions": 89
+          }
+        ]
+      },
+      {
+        "login": "rober-m",
+        "avatar_url": "https://avatars.githubusercontent.com/u/48034748?v=4",
+        "commits": 86,
+        "pull_requests": 0,
+        "contributions": 86,
+        "repositories": [
+          {
+            "name": "devx-updates",
+            "commits": 86,
+            "pull_requests": 0,
+            "contributions": 86
+          }
+        ]
+      },
+      {
+        "login": "vrtnd",
+        "avatar_url": "https://avatars.githubusercontent.com/u/31341205?v=4",
+        "commits": 85,
+        "pull_requests": 0,
+        "contributions": 85,
+        "repositories": [
+          {
+            "name": "DefiLlama-Adapters",
+            "commits": 47,
+            "pull_requests": 0,
+            "contributions": 47
+          },
+          {
+            "name": "dimension-adapters",
+            "commits": 38,
+            "pull_requests": 0,
+            "contributions": 38
           }
         ]
       },
@@ -50626,7 +50641,7 @@
         ]
       },
       {
-        "login": "gfenney",
+        "login": "mosscipher",
         "avatar_url": "https://avatars.githubusercontent.com/u/6164206?v=4",
         "commits": 1,
         "pull_requests": 0,
@@ -80399,10 +80414,55 @@
             "contributions": 1
           }
         ]
+      },
+      {
+        "login": "dmitrystas",
+        "avatar_url": "https://avatars.githubusercontent.com/u/17676541?v=4",
+        "commits": 1,
+        "pull_requests": 0,
+        "contributions": 1,
+        "repositories": [
+          {
+            "name": "devx-updates",
+            "commits": 1,
+            "pull_requests": 0,
+            "contributions": 1
+          }
+        ]
+      },
+      {
+        "login": "paulobressan",
+        "avatar_url": "https://avatars.githubusercontent.com/u/28896880?v=4",
+        "commits": 1,
+        "pull_requests": 0,
+        "contributions": 1,
+        "repositories": [
+          {
+            "name": "devx-updates",
+            "commits": 1,
+            "pull_requests": 0,
+            "contributions": 1
+          }
+        ]
+      },
+      {
+        "login": "Unisay",
+        "avatar_url": "https://avatars.githubusercontent.com/u/1009751?v=4",
+        "commits": 1,
+        "pull_requests": 0,
+        "contributions": 1,
+        "repositories": [
+          {
+            "name": "devx-updates",
+            "commits": 1,
+            "pull_requests": 0,
+            "contributions": 1
+          }
+        ]
       }
     ],
     "total_pull_requests": 623,
-    "total_commits": 83483,
-    "total_contributions": 84106
+    "total_commits": 83576,
+    "total_contributions": 84199
   }
 }
