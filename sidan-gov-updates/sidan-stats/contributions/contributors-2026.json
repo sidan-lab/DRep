@@ -1,20 +1,31 @@
 {
   "year": 2026,
-  "unique_count": 349,
+  "unique_count": 353,
   "contributors": [
     {
       "login": "github-actions[bot]",
       "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
-      "commits": 398,
+      "commits": 409,
       "pull_requests": 0,
-      "contributions": 398,
+      "contributions": 409,
       "repositories": [
         {
           "name": "DRep",
-          "commits": 398,
+          "commits": 409,
           "pull_requests": 0,
-          "contributions": 398,
+          "contributions": 409,
           "commit_timestamps": [
+            "2026-09-21T00:34:39Z",
+            "2026-09-20T00:27:20Z",
+            "2026-09-19T00:43:25Z",
+            "2026-09-18T00:50:54Z",
+            "2026-09-17T05:00:37Z",
+            "2026-09-17T03:26:05Z",
+            "2026-09-17T00:55:27Z",
+            "2026-09-16T00:51:16Z",
+            "2026-09-15T01:00:23Z",
+            "2026-09-14T05:03:14Z",
+            "2026-09-14T04:42:18Z",
             "2026-09-14T00:29:52Z",
             "2026-09-13T00:27:58Z",
             "2026-09-12T00:43:54Z",
@@ -2048,16 +2059,19 @@
     {
       "login": "actions-user",
       "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
-      "commits": 109,
+      "commits": 112,
       "pull_requests": 0,
-      "contributions": 109,
+      "contributions": 112,
       "repositories": [
         {
           "name": "DRep",
-          "commits": 109,
+          "commits": 112,
           "pull_requests": 0,
-          "contributions": 109,
+          "contributions": 112,
           "commit_timestamps": [
+            "2026-09-18T04:30:54Z",
+            "2026-09-16T04:44:29Z",
+            "2026-09-14T04:48:19Z",
             "2026-09-11T04:26:22Z",
             "2026-09-09T04:35:37Z",
             "2026-09-07T04:29:41Z",
@@ -2512,6 +2526,111 @@
             "2026-01-08T09:19:03Z",
             "2026-01-08T09:05:58Z",
             "2026-01-07T16:02:46Z"
+          ],
+          "pr_timestamps": [],
+          "organization": "deltadefi-protocol"
+        }
+      ]
+    },
+    {
+      "login": "rober-m",
+      "avatar_url": "https://avatars.githubusercontent.com/u/48034748?v=4",
+      "commits": 86,
+      "pull_requests": 0,
+      "contributions": 86,
+      "repositories": [
+        {
+          "name": "devx-updates",
+          "commits": 86,
+          "pull_requests": 0,
+          "contributions": 86,
+          "commit_timestamps": [
+            "2026-09-08T15:22:47Z",
+            "2026-09-08T15:20:47Z",
+            "2026-09-07T15:49:18Z",
+            "2026-09-07T15:49:12Z",
+            "2026-09-07T08:06:11Z",
+            "2026-08-31T08:06:30Z",
+            "2026-08-26T15:18:10Z",
+            "2026-08-26T15:17:42Z",
+            "2026-08-24T08:14:21Z",
+            "2026-08-19T12:58:29Z",
+            "2026-08-19T12:57:08Z",
+            "2026-08-19T12:00:15Z",
+            "2026-08-19T09:34:30Z",
+            "2026-08-19T09:33:52Z",
+            "2026-08-18T21:11:35Z",
+            "2026-08-18T19:52:33Z",
+            "2026-08-17T08:12:36Z",
+            "2026-08-12T10:13:58Z",
+            "2026-08-12T09:57:53Z",
+            "2026-08-11T17:32:29Z",
+            "2026-08-10T08:30:32Z",
+            "2026-08-09T15:28:49Z",
+            "2026-08-07T11:34:32Z",
+            "2026-08-06T16:41:52Z",
+            "2026-08-06T16:27:50Z",
+            "2026-08-06T16:19:01Z",
+            "2026-08-06T16:19:01Z",
+            "2026-08-06T16:01:25Z",
+            "2026-08-06T15:37:49Z",
+            "2026-08-05T11:21:29Z",
+            "2026-08-04T21:59:42Z",
+            "2026-08-04T15:54:33Z",
+            "2026-08-04T12:17:34Z",
+            "2026-08-04T11:47:37Z",
+            "2026-08-04T11:47:05Z",
+            "2026-08-04T11:20:16Z",
+            "2026-08-04T08:18:52Z",
+            "2026-08-03T09:03:51Z",
+            "2026-08-02T11:49:51Z",
+            "2026-08-02T10:09:21Z",
+            "2026-08-01T17:20:36Z",
+            "2026-07-31T12:09:30Z",
+            "2026-07-31T09:56:06Z",
+            "2026-07-30T17:54:00Z",
+            "2026-07-29T22:41:22Z",
+            "2026-07-29T19:33:30Z",
+            "2026-07-28T20:01:05Z",
+            "2026-07-27T21:52:46Z",
+            "2026-07-27T20:43:00Z",
+            "2026-07-27T20:26:48Z",
+            "2026-07-27T20:26:09Z",
+            "2026-07-27T20:19:00Z",
+            "2026-07-27T20:13:34Z",
+            "2026-07-27T11:33:34Z",
+            "2026-07-27T09:04:05Z",
+            "2026-07-25T09:13:17Z",
+            "2026-07-24T15:56:17Z",
+            "2026-07-24T11:24:49Z",
+            "2026-07-22T17:26:20Z",
+            "2026-07-22T12:46:54Z",
+            "2026-07-22T10:10:26Z",
+            "2026-07-21T21:45:50Z",
+            "2026-07-20T14:22:18Z",
+            "2026-07-18T09:27:53Z",
+            "2026-07-17T10:57:11Z",
+            "2026-07-17T10:38:51Z",
+            "2026-07-17T09:54:46Z",
+            "2026-07-16T21:38:57Z",
+            "2026-07-16T19:38:38Z",
+            "2026-07-15T19:31:42Z",
+            "2026-07-15T18:54:55Z",
+            "2026-07-15T18:49:44Z",
+            "2026-07-15T18:47:21Z",
+            "2026-07-15T18:34:35Z",
+            "2026-07-15T18:29:51Z",
+            "2026-07-15T17:48:20Z",
+            "2026-07-15T17:38:41Z",
+            "2026-07-10T21:21:24Z",
+            "2026-07-09T15:55:01Z",
+            "2026-07-09T15:34:31Z",
+            "2026-07-09T14:22:31Z",
+            "2026-07-09T14:12:08Z",
+            "2026-07-08T13:37:54Z",
+            "2026-07-08T13:13:36Z",
+            "2026-07-08T09:12:57Z",
+            "2026-07-07T18:29:03Z"
           ],
           "pr_timestamps": [],
           "organization": "deltadefi-protocol"
@@ -7270,7 +7389,7 @@
       ]
     },
     {
-      "login": "gfenney",
+      "login": "mosscipher",
       "avatar_url": "https://avatars.githubusercontent.com/u/6164206?v=4",
       "commits": 1,
       "pull_requests": 0,
@@ -8950,7 +9069,7 @@
       ]
     },
     {
-      "login": "DaniiRix",
+      "login": "ccipherx",
       "avatar_url": "https://avatars.githubusercontent.com/u/105014295?v=4",
       "commits": 1,
       "pull_requests": 0,
@@ -11188,9 +11307,69 @@
           "organization": "deltadefi-protocol"
         }
       ]
+    },
+    {
+      "login": "dmitrystas",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17676541?v=4",
+      "commits": 1,
+      "pull_requests": 0,
+      "contributions": 1,
+      "repositories": [
+        {
+          "name": "devx-updates",
+          "commits": 1,
+          "pull_requests": 0,
+          "contributions": 1,
+          "commit_timestamps": [
+            "2026-07-31T18:23:11Z"
+          ],
+          "pr_timestamps": [],
+          "organization": "deltadefi-protocol"
+        }
+      ]
+    },
+    {
+      "login": "paulobressan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/28896880?v=4",
+      "commits": 1,
+      "pull_requests": 0,
+      "contributions": 1,
+      "repositories": [
+        {
+          "name": "devx-updates",
+          "commits": 1,
+          "pull_requests": 0,
+          "contributions": 1,
+          "commit_timestamps": [
+            "2026-07-29T18:24:38Z"
+          ],
+          "pr_timestamps": [],
+          "organization": "deltadefi-protocol"
+        }
+      ]
+    },
+    {
+      "login": "Unisay",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1009751?v=4",
+      "commits": 1,
+      "pull_requests": 0,
+      "contributions": 1,
+      "repositories": [
+        {
+          "name": "devx-updates",
+          "commits": 1,
+          "pull_requests": 0,
+          "contributions": 1,
+          "commit_timestamps": [
+            "2026-07-27T17:25:05Z"
+          ],
+          "pr_timestamps": [],
+          "organization": "deltadefi-protocol"
+        }
+      ]
     }
   ],
   "total_pull_requests": 125,
-  "total_commits": 3366,
-  "total_contributions": 3491
+  "total_commits": 3469,
+  "total_contributions": 3594
 }
